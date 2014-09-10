@@ -1,7 +1,12 @@
-<h3>Prototype me - A boilerplate for prototyping Angular Apps. </h3>
+<h3>fadeit.dk - website front-end source</h3>
+<hr/>
+
 <p>
-A clean framework for developing application prototypes based on AngularJS (just client side).<br/>
-This is just some code I put together in a few hours, inspired by the Angular app structure found at <a href="http://meanjs.org/">meanjs.org</a>
-</p> 
+<img src="http://fadeit.dk/about/img/fadeit-logo@2x.png" alt="The fadeit logo"/><br/>
+The fadeit.dk website built on top of <a href="https://github.com/dandaniel/prototype_me">the prototype AngularJS boilerplate</a>
+</p>
+<hr/>
 
-
+<h4>About fadeit</h4>
+<p>We love and are really good at designing &amp; developing beautiful software, web and mobile applications.<br/>
+See more at <a href="http://fadeit.dk/about">fadeit.dk</a></p>
