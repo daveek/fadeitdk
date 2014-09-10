@@ -12,6 +12,8 @@
 		"angular-bootstrap": "*",
 		"angular-ui-utils": "*",
 		"angular-ui-router": "*",
-		"ngUpload": "*"
+		"ngUpload": "*",
+		"animate.css": "3.2.0",
+		"wowjs": "1.0.1"
 	}
 }

@@ -6,4 +6,5 @@ www/*
 /tests/.gradle/
 /node_modules/
 /lib/
+/twitter-api/
 .DS_Store
