@@ -1,0 +1,9 @@
+www/*
+/modules/contrib/
+/libraries/
+/themes/contrib/
+/tests/build/
+/tests/.gradle/
+/node_modules/
+/lib/
+.DS_Store

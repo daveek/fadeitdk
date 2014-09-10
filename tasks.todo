@@ -1,0 +1,4 @@
+Bootstrap:
+  ✔ add global_styles to grunt (LESS) @done (14-07-30 19:45)
+  ☐ Add retinajs - integrate with current setup
+  ☐ Compress images to sprites w/ grunt

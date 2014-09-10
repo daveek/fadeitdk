@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Dan Mindru -- Web Developer -- @mindrudan
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, AngularJS, LESS, Grunt, Bower

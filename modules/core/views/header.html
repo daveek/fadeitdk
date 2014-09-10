@@ -1,0 +1,22 @@
+<div class="container-fluid" data-ng-controller="HomeController">
+	<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a href="/#!/" class="navbar-brand">Application Prototype</a>
+	</div>
+	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+		<ul class="nav navbar-nav">
+			<!-- Link example
+			<li ui-route="/users" ng-class="{active: $uiRoute}">
+				<a href="#!/users">Users</a>
+			</li> -->
+			<li data-ng-repeat="item in menu" ui-route="{{item.uiRoute}}" ng-class="{active: $uiRoute}">
+				<a href="/#!/{{item.link}}">{{item.title}}</a>
+			</li>
+		</ul>
+	</nav>
+</div>

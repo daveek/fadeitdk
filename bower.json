@@ -1,0 +1,17 @@
+{
+	"name": "Prototype_me",
+	"version": "0.2.2",
+	"description": "Prototype setup with AngularJS.",
+	"dependencies": {
+		"bootstrap": "*",
+		"angular": "~1.2",
+		"angular-cookies": "*",
+		"angular-resource": "*",
+		"angular-animate": "*",
+		"angular-mocks": "*",
+		"angular-bootstrap": "*",
+		"angular-ui-utils": "*",
+		"angular-ui-router": "*",
+		"ngUpload": "*"
+	}
+}
