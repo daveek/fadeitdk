@@ -1,15 +1,25 @@
 <section class="container-fluid main-container" data-ng-controller="HomeController" data-ng-init="loadNews()">
+  <nav class="main-menu">
+    <a href="#!">
+      <img src="img/brand/fadeit_logo.svg" alt="fadeit logo" class="fadeit-logo-small"/>
+    </a>
+    <ul class="menu-link-list">
+      <li class="menu-link-item" data-ng-repeat="item in menuItems" data-ng-class="{'active-menu-item': $uiRoute}" ui-route="item.uiRoute">
+        <a href="#!/{{item.link}}" class="menu-anchor">
+          {{item.title}}
+        </a>
+      </li>
+    </ul>
+  </nav>
+
   <section class="row-fluid home-fluid clearfix">
-    <section class="half-background"></section>
     <header class="logo-news-container col-xs-12">
-      <!-- fixed center dot -->
-      <figure class="center-dot"></figure>
       <!-- large fadeit logo -->
-      <a href="#!">
+      <a href="#!" class="fadeit-logo-link">
         <img src="img/brand/fadeit_logo.svg" alt="fadeit logo" class="fadeit-logo wow animate fadeInLeft" data-wow-delay="{{anim.header.delay}}" data-wow-duration="{{anim.header.duration}}"/>
       </a>
       <!-- news updates -->
-      <section class="time-text-container" data-ng-class="news.newsClasses">
+      <section class="time-text-container" data-ng-class="cssClasses.newsClasses">
         <section class="inner-time-text-container">
           <time class="news-relative-time">
             {{news.updateTime}}
@@ -21,7 +31,15 @@
   </section>
   <!-- end home-fluid -->
   <section class="row-fluid project-fluid clearfix">
-    <section class="half-background light-green-background"></section>
+    <section class="half-background wow animate fadeIn" data-wow-offset="100" data-wow-delay="{{anim.header.delayLong}}" data-wow-duration="{{anim.header.duration}}"></section>
+    <section class="half-background light-green-background wow animate fadeIn" data-wow-offset="100" data-wow-delay="{{anim.header.delayMedium}}" data-wow-duration="{{anim.header.duration}}" du-parallax y="anim.lightGreen"></section>
+    <section class="half-background dark-green-background wow animate fadeIn" data-wow-offset="100" data-wow-delay="{{anim.header.delay}}" data-wow-duration="{{anim.header.duration}}" du-parallax y="anim.darkGreen"></section>
+    <section class="half-background last-green-background wow animate fadeIn" data-wow-offset="100" data-wow-duration="{{anim.header.duration}}" du-parallax y="anim.lastGreen"></section>
   </section>
   <!-- end project-fluid -->
+
+  <!-- abs center dot -->
+  <section class="row-fluid dot-fluid clearfix">
+    <figure class="center-dot"></figure>
+  </section>
 </section>
