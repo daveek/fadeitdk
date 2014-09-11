@@ -9,6 +9,7 @@ UX:
   ☐ add loader for latest news
   ☐ add loading (with delay for projects)
   ☐ handle loading error for tweets (both phh & js)
+  ☐ display news images next to the text update
  Graphic Design:
   ☐ change fiveico with dot
   ☐ make loader gif
@@ -16,7 +17,8 @@ UX:
 Other fun things:
   ☐ make 404 page
   ☐ replace jquery with ng-modules?
-  ☐ combine libraries to make less requests OR use require.js?
+  ☐ combine js libraries to make less requests OR use require.js?
+  ☐ combine css libraries into a single resource for less requests
 
  Important Notes:
    - modified linkify library to not display anything before '//' 

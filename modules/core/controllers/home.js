@@ -31,8 +31,18 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'amMomen
   $scope.anim.lastGreen = parallaxHelper.createAnimator(-0.6);
 
   $scope.goToProjects = function(){
-  	 $location.hash('projects');
-  	 $anchorScroll();
+  	//remove current hash 
+  	$location.hash('');
+		$location.hash('projects');
+		$anchorScroll();
+
+		//move body 90px lower to place the gray line under the fadeit logo
+		var projectsOffset = angular.element('#projects').offset();
+		angular.element('body').animate({
+			scrollTop: projectsOffset.top - 90
+		}, {
+			duration: 100
+		});
   };
 
 	$scope.loadNews = function(){
