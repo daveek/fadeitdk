@@ -1,4 +1,14 @@
 Bootstrap:
-  ✔ add global_styles to grunt (LESS) @done (14-07-30 19:45)
-  ☐ Add retinajs - integrate with current setup
-  ☐ Compress images to sprites w/ grunt
+  ☐ Add twitterOAuth as a dependency
+  ☐ Move all resources to src, including images, compile with grunt
+UX:
+  ☐ check for twitter updates and automatically display them using transitions
+  ☐ add loader for latest news and handle loading error
+ Graphic Design:
+  ☐ change fiveico with dot
+  ☐ make loader gif
+
+
+ Important Notes:
+   - modified linkify to not display anything before // 
+       -> line 17  |    anch.innerHTML = url.replace( /.*?:\/\//g, '');

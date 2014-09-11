@@ -1,18 +1,27 @@
-<section class="row-fluid home-fluid jumbotron" data-ng-controller="HomeController">  
-  <section class="alert alert-info">
-    <p>This is the default application prototype home page.</p>
-    <small>The data is loaded from the core module: services/core.js</small>
+<section class="container-fluid main-container" data-ng-controller="HomeController" data-ng-init="loadNews()">
+  <section class="row-fluid home-fluid clearfix">
+    <section class="half-background"></section>
+    <header class="logo-news-container col-xs-12">
+      <!-- fixed center dot -->
+      <figure class="center-dot"></figure>
+      <!-- large fadeit logo -->
+      <a href="#!">
+        <img src="img/brand/fadeit_logo.svg" alt="fadeit logo" class="fadeit-logo wow animate fadeInLeft" data-wow-delay="{{anim.header.delay}}" data-wow-duration="{{anim.header.duration}}"/>
+      </a>
+      <!-- news updates -->
+      <section class="time-text-container" data-ng-class="news.newsClasses">
+        <section class="inner-time-text-container">
+          <time class="news-relative-time">
+            {{news.updateTime}}
+          </time>
+          <span class="news-text" ng-bind-html="news.text"></span>
+        </section>
+      </section>
+    </header>
   </section>
-
-  <div class="list-group">
-		<input type="text" class="form-control" ng-show="userdata" ng-model="usersearch.$" placeholder="Search all users...">
-
-    <div data-ng-repeat="user in userdata | filter:usersearch" class="list-group-item">
-        <small class="list-group-item-text">Registered: {{user.created | date:'medium'}}</small>
-        <br/><br/>
-        <h4 class="list-group-item-heading">{{user.firstName}} {{user.lastName}}</h4>
-        <p class="list-group-item-text"><a target="_blank" href="mailto:{{user.email}}">{{user.email}}</a></p>
-        <p class="list-group-item-text">{{user.bio}}</p>
-    </div>
-	</div>
+  <!-- end home-fluid -->
+  <section class="row-fluid project-fluid clearfix">
+    <section class="half-background light-green-background"></section>
+  </section>
+  <!-- end project-fluid -->
 </section>

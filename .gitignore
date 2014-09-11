@@ -6,5 +6,5 @@ www/*
 /tests/.gradle/
 /node_modules/
 /lib/
-/twitter-api/
+/twitter-api/keys.php
 .DS_Store

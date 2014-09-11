@@ -48,9 +48,11 @@
 	<meta name="msapplication-TileColor" content="#2d89ef">
 	<meta name="msapplication-TileImage" content="img/brand/favicon/mstile-144x144.png">
 
-	<!-- Bootstrap CSS -->
+	<!-- Vendor CSS -->
 	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="lib/animate.css/animate.min.css">
+	<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
 
 	<!-- Application CSS -->
 	<link rel="stylesheet" href="css/css.min.css">
@@ -59,6 +61,27 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
+	<!-- facebook website pixel -->
+	<script>(function() {
+	  var _fbq = window._fbq || (window._fbq = []);
+	  if (!_fbq.loaded) {
+	    var fbds = document.createElement('script');
+	    fbds.async = true;
+	    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(fbds, s);
+	    _fbq.loaded = true;
+	  }
+		  _fbq.push(['addPixelId', '373769812775947']);
+		})();
+		window._fbq = window._fbq || [];
+		window._fbq.push(['track', 'PixelInitialized', {}]);
+	</script>
+	<noscript>
+		<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=373769812775947&amp;ev=PixelInitialized" />
+	</noscript>
+	<!-- end facebook website pixel -->
 </head>
 
 <body class="ng-cloak">
@@ -82,19 +105,22 @@
 	</script>
 	<div id="fb-root"></div>
 	<!--! end facebook init-->
+	
+	<!-- fb-like example
+
 	<div
 	  class="fb-like"
 	  data-share="true"
 	  data-width="450"
 	  data-show-faces="true">
-	</div>
+	</div>-->
+	
+	<!-- all page & template content -->
+	<data-ui-view></data-ui-view>
+	<!-- end all page & tempate content -->
 
-	<nav data-ng-include="'modules/core/views/header.html'" class="navbar navbar-default"></nav>
-	<section class="content">
-		<section class="container-fluid">
-			<section data-ui-view></section>
-		</section>
-	</section>
+	<!-- 3rd party libraries-->
+	<script type="text/javascript" src="lib/moment/min/moment.min.js"></script>
 
 	<!--AngularJS-->
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
@@ -107,6 +133,9 @@
 	<script type="text/javascript" src="lib/angular-ui-utils/ui-utils.js"></script>
 	<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
 	<script type="text/javascript" src="lib/ngUpload/ng-upload.min.js"></script>
+	<script type="text/javascript" src="lib/angular-moment/angular-moment.min.js"></script>
+	<script type="text/javascript" src="src/versioned/angular-linkify.min.js"></script>
+	<script type="text/javascript" src="lib/wowjs/dist/wow.min.js"></script>
 
 	<!--Application Config-->
 	<script type="text/javascript" src="config/config.js"></script>

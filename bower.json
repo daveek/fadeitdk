@@ -1,19 +1,22 @@
 {
-	"name": "Prototype_me",
-	"version": "0.2.2",
-	"description": "Prototype setup with AngularJS.",
-	"dependencies": {
-		"bootstrap": "*",
-		"angular": "~1.2",
-		"angular-cookies": "*",
-		"angular-resource": "*",
-		"angular-animate": "*",
-		"angular-mocks": "*",
-		"angular-bootstrap": "*",
-		"angular-ui-utils": "*",
-		"angular-ui-router": "*",
-		"ngUpload": "*",
-		"animate.css": "3.2.0",
-		"wowjs": "1.0.1"
-	}
+  "name": "Prototype_me",
+  "version": "0.1",
+  "description": "Prototype setup with AngularJS.",
+  "dependencies": {
+    "bootstrap": "*",
+    "angular": "~1.2",
+    "angular-cookies": "*",
+    "angular-resource": "*",
+    "angular-animate": "*",
+    "angular-mocks": "*",
+    "angular-bootstrap": "*",
+    "angular-ui-utils": "*",
+    "angular-ui-router": "*",
+    "ngUpload": "*",
+    "animate.css": "~3.2.0",
+    "wowjs": "~1.0.1",
+    "angular-moment": "~0.8.2",
+    "angular-linkify": "~0.4.0",
+    "font-awesome": "~4.2.0"
+  }
 }
