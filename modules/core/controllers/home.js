@@ -2,13 +2,10 @@
 /*global moment:false, WOW:false; */
 //ignoring the above globals, moment() is available through the amMoment service
 
-angular.module('core').controller('HomeController', ['$scope', '$http', 'amMoment', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'MenuData', function ($scope, $http, amMoment, linkify, $sce, $log, parallaxHelper, $document, MenuData) {
-  //home controller logic
-  //initialize animations
-  new WOW().init();
-
+angular.module('core').controller('HomeController', ['$scope', '$http', 'amMoment', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'MenuData', 'ProjectPreview', '$location', '$anchorScroll', function ($scope, $http, amMoment, linkify, $sce, $log, parallaxHelper, $document, MenuData, ProjectPreview, $location, $anchorScroll) {
   //load services
   $scope.menuItems = MenuData;
+  $scope.projectPreviews = ProjectPreview;
 
   //news variables
   $scope.currentNewsPosition = 0;
@@ -20,6 +17,8 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'amMomen
   $scope.cssClasses = [];
 
   //animations
+  new WOW().init();
+  
   $scope.anim = [];
   $scope.anim.header = [];
   $scope.anim.header.duration 				= '0.3s';
@@ -30,6 +29,11 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'amMomen
   $scope.anim.lightGreen = parallaxHelper.createAnimator(-0.2);
   $scope.anim.darkGreen = parallaxHelper.createAnimator(-0.4);
   $scope.anim.lastGreen = parallaxHelper.createAnimator(-0.6);
+
+  $scope.goToProjects = function(){
+  	 $location.hash('projects');
+  	 $anchorScroll();
+  };
 
 	$scope.loadNews = function(){
 		$log.info('Trying to load news...');
@@ -98,6 +102,32 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'amMomen
 
 		//save text to scope, after converting t.co urls
 		$scope.news.text = $sce.trustAsHtml(linkify.twitter(text));
+	};
+
+	$scope.generateClass = function(activeCover, isDummy){
+		var cssClass;
+
+		switch(activeCover){
+			case 'sm':
+				cssClass = 'col-xs-3';
+			break;
+			case 'md':
+				cssClass = 'col-xs-6';
+			break;
+			case 'lg':
+				cssClass = 'col-xs-12';
+			break;
+			default:
+				cssClass = 'col-xs-12';
+			break;
+		}
+
+		//if it's just a dummy project, append one more identifier class
+		if(isDummy){
+			cssClass += ' dummy-project';
+		}
+
+		return cssClass;
 	};
 
 	//observe scroll

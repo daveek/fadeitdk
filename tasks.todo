@@ -2,13 +2,19 @@ Bootstrap:
   ☐ Add twitterOAuth as a dependency
   ☐ Move all resources to src, including images, compile with grunt
 UX:
-  ☐ check for twitter updates and automatically display them using transitions
-  ☐ add loader for latest news and handle loading error
+  ✔ check for twitter updates and automatically display them using transitions @done (14-09-11 17:32)
+  ☐ add loader for latest news
+  ☐ add loading (with delay for projects)
+  ☐ handle loading error for tweets (both phh & js)
  Graphic Design:
   ☐ change fiveico with dot
   ☐ make loader gif
 
+Other fun things:
+  ☐ make 404 page
+  ☐ replace jquery with ng-modules?
+  ☐ combine libraries to make less requests OR use require.js?
 
  Important Notes:
-   - modified linkify to not display anything before // 
+   - modified linkify library to not display anything before '//' 
        -> line 17  |    anch.innerHTML = url.replace( /.*?:\/\//g, '');

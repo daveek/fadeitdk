@@ -23,6 +23,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		state('contact', {
 			url: '/contact',
 			templateUrl: 'modules/core/views/contact.html'
+		}).
+		state('projects', {
+			url: '/project/:projectId',
+			templateUrl: 'modules/core/views/projects.html'
 		});
 	}
 ]);
