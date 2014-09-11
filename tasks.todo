@@ -1,6 +1,9 @@
+Mandatory:
+  ☐ Add cookie prompter
 Bootstrap:
   ☐ Add twitterOAuth as a dependency
   ☐ Move all resources to src, including images, compile with grunt
+  ☐ Create an assets folder (add to git ignore) where all css, img & scripts will be compiled
 UX:
   ✔ check for twitter updates and automatically display them using transitions @done (14-09-11 17:32)
   ☐ add loader for latest news
