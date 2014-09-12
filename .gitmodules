@@ -1,0 +1,3 @@
+[submodule "modules/core/services/data"]
+	path = modules/core/services/data
+	url = git@bitbucket.org:fadeit/fadeitdk-data.git
