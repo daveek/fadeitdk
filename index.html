@@ -62,26 +62,10 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<!-- facebook website pixel -->
-	<script>(function() {
-	  var _fbq = window._fbq || (window._fbq = []);
-	  if (!_fbq.loaded) {
-	    var fbds = document.createElement('script');
-	    fbds.async = true;
-	    fbds.src = '//connect.facebook.net/en_US/fbds.js';
-	    var s = document.getElementsByTagName('script')[0];
-	    s.parentNode.insertBefore(fbds, s);
-	    _fbq.loaded = true;
-	  }
-		  _fbq.push(['addPixelId', '373769812775947']);
-		})();
-		window._fbq = window._fbq || [];
-		window._fbq.push(['track', 'PixelInitialized', {}]);
-	</script>
 	<noscript>
 		<img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=373769812775947&amp;ev=PixelInitialized" />
 	</noscript>
-	<!-- end facebook website pixel -->
+
 </head>
 
 <body class="ng-cloak">
@@ -119,36 +103,7 @@
 	<data-ui-view></data-ui-view>
 	<!-- end all page & tempate content -->
 
-	<!-- 3rd party libraries that should be loaded before ng-->
-	<script type="text/javascript" src="lib/moment/min/moment.min.js"></script>
-	<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
-
-	<!--AngularJS-->
-	<script type="text/javascript" src="lib/angular/angular.js"></script>
-	<script type="text/javascript" src="lib/angular-resource/angular-resource.js"></script>
-	<script type="text/javascript" src="lib/angular-cookies/angular-cookies.js"></script>
-	<script type="text/javascript" src="lib/angular-animate/angular-animate.js"></script>
-
-	<!--Angular UI-->
-	<script type="text/javascript" src="lib/angular-bootstrap/ui-bootstrap.js"></script>
-	<script type="text/javascript" src="lib/angular-ui-utils/ui-utils.js"></script>
-	<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
-	<script type="text/javascript" src="lib/ngUpload/ng-upload.min.js"></script>
-	<script type="text/javascript" src="lib/angular-moment/angular-moment.min.js"></script>
-	<script type="text/javascript" src="lib/angular-linkify-fadeit/angular-linkify.min.js"></script>
-	<script type="text/javascript" src="lib/wowjs/dist/wow.min.js"></script>
-	<script type="text/javascript" src="lib/angular-scroll/angular-scroll.min.js"></script>
-	<script type="text/javascript" src="lib/ng-parallax/angular-parallax.min.js"></script>
-
-	<!--Application Config-->
-	<script type="text/javascript" src="config/config.js"></script>
-
-	<!--Application Modules-->
-	<script type="text/javascript" src="modules/core/core.js"></script>
-	<script type="text/javascript" src="modules/core/config/routes.js"></script>
-	<script type="text/javascript" src="modules/core/controllers/home.js"></script>
-	<script type="text/javascript" src="modules/core/controllers/project.js"></script>
-	<script type="text/javascript" src="modules/core/services/core.js"></script>
+	<script data-main="config/requireConfig" src="lib/requirejs/require.js"></script>
 
 	<!--Livereload script rendered -->
 	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>

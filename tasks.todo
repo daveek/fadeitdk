@@ -1,21 +1,24 @@
 Mandatory:
   ☐ Add cookie prompter
 Bootstrap:
-  ☐ Add twitterOAuth as a dependency
+  ✔ Add twitterOAuth as a dependency @done (14-09-12 23:59)
   ☐ Move all resources to src, including images, compile with grunt
   ☐ Create an assets folder (add to git ignore) where all css, img & scripts will be compiled
 UX:
   ✔ check for twitter updates and automatically display them using transitions @done (14-09-11 17:32)
   ☐ add loader for latest news
-  ☐ add loading (with delay for projects)
-  ☐ handle loading error for tweets (both phh & js)
+  ✔ handle loading error for tweets (both phh & js) @done (14-09-13 00:00)
   ☐ display news images next to the text update
- Graphic Design:
+  ☐ add background to logo (should not get mixed up with menu on very low heights)
+Graphic Design:
   ☐ change fiveico with dot
   ☐ make loader gif
+Performance:
+  ✔ load js files using requirejs @done (14-09-13 01:12)
 
 Other fun things:
   ☐ make 404 page
+  ☐ Move 'data' to bitbucket submodule, ignore core.js services (replace with base)
   ☐ replace jquery with ng-modules?
   ☐ combine js libraries to make less requests OR use require.js?
   ☐ combine css libraries into a single resource for less requests

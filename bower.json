@@ -15,10 +15,12 @@
     "ngUpload": "*",
     "animate.css": "~3.2.0",
     "wowjs": "~1.0.1",
-    "angular-moment": "~0.8.2",
+    "angular-moment-fadeit": "fadeit/angular-moment#correct-define-and-cleaned",
     "angular-linkify-fadeit": "fadeit/angular-linkify#http-strip",
     "font-awesome": "~4.2.0",
     "angular-scroll": "~0.6.2",
-    "ng-parallax": "~0.1.8"
+    "ng-parallax": "~0.1.8",
+    "requirejs": "~2.1.15",
+    "momentjs": "~2.8.3"
   }
 }

@@ -71,7 +71,7 @@ module.exports = function(grunt) {
       },
       js_other: {
         src: 'src/*.js',
-        dest: 'js_other/js.min.js',
+        dest: 'scripts/js.min.js',
       },
 		}
 	});

@@ -2,7 +2,7 @@
 /*global moment:false, WOW:false; */
 //ignoring the above globals, moment() is available through the amMoment service
 
-angular.module('core').controller('HomeController', ['$scope', '$http', 'amMoment', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'MenuData', 'ProjectPreview', '$location', '$anchorScroll', function ($scope, $http, amMoment, linkify, $sce, $log, parallaxHelper, $document, MenuData, ProjectPreview, $location, $anchorScroll) {
+angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'MenuData', 'ProjectPreview', '$location', '$anchorScroll', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, MenuData, ProjectPreview, $location, $anchorScroll) {
   //load services
   $scope.menuItems = MenuData;
   $scope.projectPreviews = ProjectPreview;

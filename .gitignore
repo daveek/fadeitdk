@@ -6,6 +6,8 @@ www/*
 /tests/.gradle/
 /node_modules/
 /lib/
+/scripts/
+/data/
 /twitter-api/keys.php
 .DS_Store
 
