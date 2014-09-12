@@ -16,7 +16,7 @@
     "animate.css": "~3.2.0",
     "wowjs": "~1.0.1",
     "angular-moment": "~0.8.2",
-    "angular-linkify": "~0.4.0",
+    "angular-linkify-fadeit": "fadeit/angular-linkify#http-strip",
     "font-awesome": "~4.2.0",
     "angular-scroll": "~0.6.2",
     "ng-parallax": "~0.1.8"
