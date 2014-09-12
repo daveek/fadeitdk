@@ -1,4 +1,4 @@
-<article class="project-preview-container clearfix" data-ng-repeat="project in projectPreviews" data-ng-class="generateClass(project.activeCover, project.dummy)" data-ng-if="!project.dummy">
+<article class="project-preview-container clearfix" data-ng-repeat="project in projectPreviews" data-ng-class="generateClass(project.activeCover, project.dummy)">
 	<figure class="project-preview" data-ng-if="!project.dummy">
 		<img data-ng-src='img/projects/{{project.id}}/cover_{{project.activeCover}}@2x.png' alt="project.title" class="project-cover size-{{project.activeCover}}"/>
 	</figure>
