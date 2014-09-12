@@ -8,3 +8,7 @@ www/*
 /lib/
 /twitter-api/keys.php
 .DS_Store
+
+# Composer stuff
+/vendor/
+composer.phar

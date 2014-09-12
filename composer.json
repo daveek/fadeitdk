@@ -1,0 +1,13 @@
+{
+    "name": "fadeit/fadeitdk",
+    "description": "fadeit.dk website",
+    "require": {
+        "abraham/twitteroauth": "dev-master"
+    },
+    "authors": [
+        {
+            "name": "Justas Azna",
+            "email": "ja@fadeit.dk"
+        }
+    ]
+}
