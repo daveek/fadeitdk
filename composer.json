@@ -6,8 +6,15 @@
     },
     "authors": [
         {
+            "name": "Dan Mindru",
+            "email": "dm@fadeit.dk"
+        },
+        {
             "name": "Justas Azna",
             "email": "ja@fadeit.dk"
         }
-    ]
+    ],
+    "autoload": {
+        "files": ["vendor/abraham/twitteroauth/twitteroauth/twitteroauth.php"]
+    }
 }
