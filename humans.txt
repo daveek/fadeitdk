@@ -4,6 +4,7 @@
 # TEAM
 
     Dan Mindru -- Web Developer -- @mindrudan
+    Justas Azna -- Software Developer -- @reederz
 
 # TECHNOLOGY COLOPHON
 
