@@ -68,6 +68,114 @@ angular.module('core').factory('ProjectPreview', function() {
 		{
 			dummy: true,
 			activeCover: 'sm'
+		},
+		{
+			id: 'ols',
+			title: 'OLS',
+			link: 'projects/ols',
+			uiRoute: '/projects/ols',
+			covers:{
+				cover_md: true
+			},
+			activeCover: 'md',
+			shortDescription: '',
+			tags: {
+				0: 'Python',
+				1: 'AngularJS',
+				2: 'iOS'
+			} //max 3 tags
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			id: 'aleris-hamlet',
+			title: 'Aleris/Hamlet',
+			link: 'projects/aleris-hamlet',
+			uiRoute: '/projects/aleris-hamlet',
+			covers:{
+				cover_md: true
+			},
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Drupal',
+				1: 'Responsive',
+				2: 'AngularJS'
+			} //max 3 tags
+		},
+		{
+			id: 'aleris-hamlet',
+			title: 'Aleris/Hamlet',
+			link: 'projects/aleris-hamlet',
+			uiRoute: '/projects/aleris-hamlet',
+			covers:{
+				cover_md: true
+			},
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Drupal',
+				1: 'Responsive',
+				2: 'AngularJS'
+			} //max 3 tags
+		},
+		{
+			id: 'aleris-hamlet',
+			title: 'Aleris/Hamlet',
+			link: 'projects/aleris-hamlet',
+			uiRoute: '/projects/aleris-hamlet',
+			covers:{
+				cover_md: true
+			},
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Drupal',
+				1: 'Responsive',
+				2: 'AngularJS'
+			} //max 3 tags
+		},
+		{
+			id: 'aleris-hamlet',
+			title: 'Aleris/Hamlet',
+			link: 'projects/aleris-hamlet',
+			uiRoute: '/projects/aleris-hamlet',
+			covers:{
+				cover_md: true
+			},
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Drupal',
+				1: 'Responsive',
+				2: 'AngularJS'
+			} //max 3 tags
+		},
+		{
+			id: 'aleris-hamlet',
+			title: 'Aleris/Hamlet',
+			link: 'projects/aleris-hamlet',
+			uiRoute: '/projects/aleris-hamlet',
+			covers:{
+				cover_md: true
+			},
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Drupal',
+				1: 'Responsive',
+				2: 'AngularJS'
+			} //max 3 tags
 		}];
 
 	return projectPreviewData;

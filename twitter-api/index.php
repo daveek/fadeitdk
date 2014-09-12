@@ -6,7 +6,7 @@
  * The first PHP Library to support OAuth for Twitter's REST API.
  *
 */
-include "../src/versioned/twitteroauth/twitteroauth/twitteroauth.php";
+include "../src/versioned/twitteroauth_lib/twitteroauth/twitteroauth.php";
 include "keys.php";
 
 /*
