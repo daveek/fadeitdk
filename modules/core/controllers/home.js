@@ -144,12 +144,12 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$document.on('scroll', function() {
 		//btw: gave up on using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better
     if(parseInt($document[0].body.scrollTop) > 150){
-    	angular.element(document.querySelector('.fadeit-logo-link')).addClass('hidden-logo-link');
-    	angular.element(document.querySelector('.fadeit-logo-small')).addClass('visibile-fixed-logo');
+    	angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
+    	angular.element('.fadeit-logo-small').addClass('visibile-fixed-logo');
     }
     else{
-    	angular.element(document.querySelector('.fadeit-logo-link')).removeClass('hidden-logo-link');
-    	angular.element(document.querySelector('.fadeit-logo-small')).removeClass('visibile-fixed-logo');
+    	angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
+    	angular.element('.fadeit-logo-small').removeClass('visibile-fixed-logo');
     }
   });
 }]);
