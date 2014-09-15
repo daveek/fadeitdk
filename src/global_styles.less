@@ -51,7 +51,7 @@
 	@w_c:								#E7E7E7;
 	@b:									#000000;
 
-	//grays
+	//grays - built as a parallel to the logo underline shades
 	@col_fadeit_gray:				@w_c;
 	@col_light_green_gray:	darken(@w_c, 10%);
 	@col_dark_green_gray:		darken(@w_c, 20%);;
@@ -63,6 +63,7 @@
 	@animation_time:					500ms;
 	@animation_time_medium:		800ms;
 	@animation_time_long:			1000ms;
+	@animation_time_vlong:		1500ms;
 	@transition_default:			ease-in-out;
 	
 	/*fonts*/
@@ -96,9 +97,15 @@
 	@sidebar_left_width: 300px;
 	@logo_width_full:	150px;
 	@logo_height_full: @logo_width_full / 2.7027027027;
+	@project_fluid_padding_right: 15px;
 	@dot_width_height:	60px;
 	@dot_base:					5px;
 	@dot_border:				(@dot_width_height / 10)*2 + @dot_base;
+
+	/*shared with Angular*/
+	//home controller
+	@projects_offset: 90px; //$scope.projectOffset
+	@news_section_height: 300px; //$scope.newsSectionHeight
 
 	/*rwd breakpoints*/
 	//to come
@@ -490,8 +497,13 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	height:100%;
 }
 
-.home-fluid{
-	height:100%;
+.news-fluid{
+	height:@news_section_height;
+	background-color: @col_last_green_gray;
+	margin-left:-15px!important;
+	margin-right:-15px!important;
+	.dropshadow( inset 0px -4px 15px -2px rgba(0, 0, 0, 0.3));
+	.animate(@animation_time_vlong, @transition_default);
 }
 
 .fadeit-logo-link{
@@ -529,13 +541,37 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	margin-top:@header_top;
 }
 
+.transparent-whitebar{
+	.fix();
+	width: 100%;
+	height: @projects_offset + @news_section_height;
+	margin-top:-@news_section_height;
+	left: 0;
+	background: @w;
+	border-bottom: @bst @col_light_gray;
+	z-index: -1; //otherwise it will be on top of the full logo
+	.animate(@animation_time_short, @transition_default);
+}
+
+#news-link{
+	.abs();
+	bottom:0;
+	right:@header_news_text_padding + @project_fluid_padding_right;
+	line-height:@projects_offset;
+}
+
+.hidden-whitebar{
+	margin-top:-@projects_offset - @news_section_height;
+}
+
 .time-text-container{
-	color:@col_fadeit;
+	color:@w;
 	max-width:@max_p_width;
 	.fr();
 	.ta-r();
-	padding-right:@header_news_text_padding;
-	border-right:@bst @col_fadeit_c;
+	padding-right: @header_news_text_padding;
+	margin-right:@project_fluid_padding_right;
+	border-right:@bst @w_c;
 	height:100%;
 	opacity: 1;
 	.animate(@animation_time_short, @transition_default);
@@ -561,12 +597,12 @@ body, p, span, section, article, time, header, footer, aside, nav{
 		.abs();
 		bottom:0;
 		right:0;
-		padding-right: @header_news_text_padding;
+		padding-right: @header_news_text_padding + @project_fluid_padding_right;
 		max-width: @max_p_width;
 		width:35%;
 
 		a{
-			color:@col_fadeit_c;
+			color:@w_c;
 		}
 	}
 }
@@ -673,9 +709,8 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	height:auto;
 	padding-left:@sidebar_left_width;
 	padding-top:30px;
-	border-top: @bst @col_light_gray;
 	padding-bottom:700px;
-	padding-right:15px;
+	padding-right:@project_fluid_padding_right;
 }
 
 .project-preview-container{
@@ -689,15 +724,6 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	}
 }
 
-.project-preview-container-sm{
-}
-
-.project-preview-container-md{
-}
-
-.project-preview-container-lg{
-}
-
 .dummy-project{
 	background: @col_light_gray;
 
@@ -709,6 +735,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 .service-fluid{
 	.rel();
+	z-index:3; //more than the menu
 	height:100%;
 	margin-top:20%;
 	margin-left: -15px;
@@ -733,6 +760,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .main-menu{
 	.fix();
 	top:0;
+	z-index:1;
 	height:100%;
 
 	.menu-link-list{
@@ -743,21 +771,22 @@ body, p, span, section, article, time, header, footer, aside, nav{
 		list-style-type: none;
 
 		.menu-link-item{
-			text-transform: lowercase;
-			font-size:@fs_h5;
 			line-height:40px;
-			
-			.menu-anchor{
-				color:@col_dark_gray;
-				.animate(@animation_time_short, @transition_default);
-
-				&:hover{
-					color:@b;
-					text-decoration: none;
-					.animate(@animation_time_short, @transition_default);
-				}
-			}
 		}
+	}
+}
+
+//menu anchor should be styled outside the ul/li parent to have effect on single links outside the main menu
+.menu-anchor{
+	text-transform: lowercase;
+	font-size:@fs_h5;
+	color:@col_dark_gray;
+	.animate(@animation_time_short, @transition_default);
+
+	&:hover{
+		color:@b;
+		text-decoration: none;
+		.animate(@animation_time_short, @transition_default);
 	}
 }
 /*end fadeit styles*/

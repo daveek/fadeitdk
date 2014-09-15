@@ -3,10 +3,6 @@
 // Users service used for communicating with the users REST endpoint
 angular.module('core').factory('MenuData', function() {
 	var menuItems = [{
-			title: 'News',
-			link: '#news',
-			uiRoute: '/#news'
-		}, {
 			title: 'About us',
 			link: 'about',
 			uiRoute: '/about'

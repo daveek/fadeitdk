@@ -26,22 +26,30 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
   $scope.anim.header.delayMedium			= '0.5s';
   $scope.anim.header.delayLong				= '0.7s';
   $scope.anim.header.delayVeryLong		= '0.9s';
-  $scope.anim.lightGreen = parallaxHelper.createAnimator(-0.2);
-  $scope.anim.darkGreen = parallaxHelper.createAnimator(-0.4);
-  $scope.anim.lastGreen = parallaxHelper.createAnimator(-0.6);
+  $scope.anim.lightGreen 							= parallaxHelper.createAnimator(+0.5);
+  $scope.anim.projectContainer				= 0;
+  $scope.currentScrollPosition				= 0;
+  $scope.isAnimating									= false;
+  
+  //less variables - duplicated
+  //also NEED to match the global_styles LESS file
+  $scope.projectOffset		= -90;
+  $scope.newsSectionHeight = 300;
 
   $scope.goToProjects = function(){
-  	//remove current hash 
-  	$location.hash('');
-		$location.hash('projects');
-		$anchorScroll();
-
 		//move body 90px lower to place the gray line under the fadeit logo
-		var projectsOffset = angular.element('#projects').offset();
+		$scope.anim.projectContainer = angular.element('#projects').offset();
+		$scope.isAnimating = true;
+
 		angular.element('body').animate({
-			scrollTop: projectsOffset.top - 90
+			scrollTop: $scope.anim.projectContainer.top + $scope.projectOffset	
 		}, {
-			duration: 100
+			duration: 200,
+			complete: function(){
+				$scope.isAnimating = false;
+				//remove the class that makes the news with opacity 0 (show the news but don't scroll to it)
+				angular.element('#news-section').removeClass('transparent-always');
+			}
 		});
   };
 
@@ -141,15 +149,34 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	};
 
 	//observe scroll
-	$document.on('scroll', function() {
-		//btw: gave up on using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better
-    if(parseInt($document[0].body.scrollTop) > 150){
+	$document.on('scroll mousewheel DOMMouseScroll MozMousePixelScroll MouseScrollEvent', function() {
+		//btw: gave up on using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
+		$scope.currentScrollPosition = parseInt($document[0].body.scrollTop);
+    if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset){
     	angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
     	angular.element('.fadeit-logo-small').addClass('visibile-fixed-logo');
+    	angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
     }
     else{
     	angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
     	angular.element('.fadeit-logo-small').removeClass('visibile-fixed-logo');
-    }
+    	angular.element('.transparent-whitebar').addClass('hidden-whitebar');
+    } 
   });
+}]);
+
+angular.module('core').directive('newsAction', ['$location', '$anchorScroll', function($location, $anchorScroll){
+	return {
+		restrict: 'C',
+		link: function(scope, element, attrs){
+			element.bind('click', function(){
+				var old = $location.hash();
+				$location.hash('news');
+				$anchorScroll();
+				//reset to old to keep any additional routing logic from kicking in
+				$location.hash(old);
+				return false;
+			});
+		}
+	};
 }]);
