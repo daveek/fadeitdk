@@ -1,27 +1,28 @@
 {
-	"name": "prototype_me",
-	"description": "Prototype setup with AngularJS.",
-	"private": false,
-	"author": "https://github.com/dandaniel",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dandaniel/prototype_me"
-	},
-	"scripts": {
-		"start": "grunt",
-		"test": "grunt test",
-		"postinstall": "bower install --config.interactive=false"
-	},
-	"dependencies": {
-		"bower": "*",
-		"grunt-cli": "*"
-	},
-	"devDependencies": {
-		"grunt-env": "~0.4.1",
-		"grunt-contrib-watch": "~0.6.1",
-		"grunt-contrib-jshint": "~0.10.0",
-		"grunt-contrib-less": "*",
-		"grunt-concurrent": "~0.5.0",
-		"grunt-contrib-uglify": "*"
-	}
+  "name": "prototype_me",
+  "description": "Prototype setup with AngularJS.",
+  "private": false,
+  "author": "https://github.com/dandaniel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dandaniel/prototype_me"
+  },
+  "scripts": {
+    "start": "grunt",
+    "test": "grunt test",
+    "postinstall": "bower install --config.interactive=false"
+  },
+  "dependencies": {
+    "bower": "*",
+    "grunt-cli": "*"
+  },
+  "devDependencies": {
+    "grunt-env": "~0.4.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-less": "*",
+    "grunt-concurrent": "~0.5.0",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-concat": "^0.5.0"
+  }
 }

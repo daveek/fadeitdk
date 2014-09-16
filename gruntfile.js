@@ -12,15 +12,8 @@ module.exports = function(grunt) {
 				}
 			},
 			clientJS: {
-				files: ['js/**/*.js', 'modules/**/*.js'],
-				tasks: ['jshint'],
-				options: {
-					livereload: true,
-				}
-			},
-			otherJS: {
-				files: ['src/*.js'],
-				tasks: ['jshint', 'uglify'],
+				files: ['js/**/*.js', 'modules/**/*.js', 'src/*.js', 'config/*.js'],
+				tasks: ['jshint', 'concat', 'uglify'],
 				options: {
 					livereload: true,
 				}
@@ -41,7 +34,7 @@ module.exports = function(grunt) {
 		},
 		less: {
       options: {
-        banner: '/* prototype css compiled with less <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        banner: '/* fadeit css compiled with less <%= grunt.template.today("yyyy-mm-dd") %> */\n',
         compress: true
       },
       shared: {
@@ -63,16 +56,30 @@ module.exports = function(grunt) {
 				logConcurrentOutput: true
 			}
 		},
+		concat:{
+			appScripts:{
+				src: ['lib/momentjs/min/moment.min.js', 'lib/jquery/dist/jquery.min.js', 'lib/angular/angular.js', 'lib/angular-resource/angular-resource.js', 'lib/angular-cookies/angular-cookies.js', 'lib/angular-animate/angular-animate.js', 'lib/angular-bootstrap/ui-bootstrap.js', 'lib/angular-ui-utils/ui-utils.js', 'lib/angular-ui-router/release/angular-ui-router.js', 'lib/ngUpload/ng-upload.min.js', 'lib/angular-moment-fadeit/angular-moment.js', 'lib/angular-linkify-fadeit/angular-linkify.min.js', 'lib/wowjs/dist/wow.min.js', 'lib/angular-scroll/angular-scroll.min.js', 'lib/ng-parallax/angular-parallax.min.js', 'scripts/other.min.js'],
+				dest: 'scripts/app.js'
+			},
+			appModules:{
+				src: ['moduleRegistration/*.js', 'modules/**/*.js', 'src/*.js'],
+				dest: 'scripts/modules.js'
+			}
+		},
 		uglify: {
       //options: { beautify: true, mangle: false, compress: false, }, // <-- DEBUG MODE
       options: {
-      	banner: '/* prototype js compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+      	banner: '/* fadeit js compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
       	compress: true,
       },
-      js_other: {
-        src: 'src/*.js',
-        dest: 'scripts/js.min.js',
+      appScripts: {
+      	src: ['scripts/app.js'],
+      	dest: 'scripts/app.min.js'
       },
+      appModules:{
+      	src: ['scripts/modules.js'],
+      	dest: 'scripts/modules.min.js'
+      }
 		}
 	});
 
@@ -82,11 +89,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-concurrent');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-env');
 
 	//Making grunt default to force in order not to break the project.
 	grunt.option('force', true);
 
 	//Default task(s).
-	grunt.registerTask('default', ['jshint', 'concurrent', 'uglify']);
+	grunt.registerTask('default', ['jshint', 'concurrent', 'concat', 'uglify']);
 };

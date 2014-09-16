@@ -18,7 +18,7 @@ require.config({
 		angularWow: '../lib/wowjs/dist/wow.min',
 		angularScroll: '../lib/angular-scroll/angular-scroll.min',
 		angularParallax: '../lib/ng-parallax/angular-parallax.min',
-		otherJS: '../scripts/js.min',
+		otherJS: '../scripts/other.min',
 		/*Application Config*/
 		appConfig: '../config/config',
 		/*Application Modules*/

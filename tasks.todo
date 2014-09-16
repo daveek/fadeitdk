@@ -15,9 +15,10 @@ Graphic Design:
   ☐ make loader gif
 Performance:
   ✔ load js files using requirejs @done (14-09-13 01:12)
-  ☐ reduce image size (jpeg interlaced - progressive)
-  ☐ kill of twitter api block
-  ☐ remove animation from cover image
+  ✔ reduce image size (jpeg interlaced - progressive) @done (14-09-16 22:32)
+  ✔ kill off twitter api block @done (14-09-16 22:32)
+  ✔ remove animation from cover image @done (14-09-16 22:32)
+  ☐ remove live reload script if not on localhost
 
 Other fun things:
   ☐ make 404 page
