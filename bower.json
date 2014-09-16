@@ -12,7 +12,6 @@
     "angular-bootstrap": "*",
     "angular-ui-utils": "*",
     "angular-ui-router": "*",
-    "ngUpload": "*",
     "animate.css": "~3.2.0",
     "wowjs": "~1.0.1",
     "angular-moment-fadeit": "fadeit/angular-moment#correct-define-and-cleaned",

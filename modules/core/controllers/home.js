@@ -44,7 +44,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		angular.element('body').animate({
 			scrollTop: $scope.anim.projectContainer.top + $scope.projectOffset	
 		}, {
-			duration: 200,
+			duration: 1,
 			complete: function(){
 				$scope.isAnimating = false;
 				//get news
@@ -58,7 +58,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$scope.loadNews = function(){
 		$log.info('Trying to load news...');
 		//make a request to the api
-		$http.get('twitter-api').success(function(newsData){
+		$http.get('twitter-api/').success(function(newsData){
 			if(newsData && newsData !== 'null' && typeof(newsData) !== 'undefined' && !newsData.errors){
 				/* 
 				 * if there is no news data, display the next item from the news (older)

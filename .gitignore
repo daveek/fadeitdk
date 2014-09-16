@@ -7,6 +7,8 @@ www/*
 /node_modules/
 /lib/
 /scripts/
+/css/
+/fonts/
 /data/
 /twitter-api/keys.php
 .DS_Store
