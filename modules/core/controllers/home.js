@@ -47,6 +47,8 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 			duration: 200,
 			complete: function(){
 				$scope.isAnimating = false;
+				//get news
+				$scope.loadNews();
 				//remove the class that makes the news with opacity 0 (show the news but don't scroll to it)
 				angular.element('#news-section').removeClass('transparent-always');
 			}
