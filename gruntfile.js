@@ -76,6 +76,10 @@ module.exports = function(grunt) {
       	src: ['scripts/app.js'],
       	dest: 'scripts/app.min.js'
       },
+      config:{
+      	src: ['config/config.js'],
+      	dest: 'scripts/config.min.js'
+      },
       appModules:{
       	src: ['scripts/modules.js'],
       	dest: 'scripts/modules.min.js'
