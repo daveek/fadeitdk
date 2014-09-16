@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 			}
 		},
 		concurrent: {
-			tasks: ['jshint', 'concat', 'uglify', 'cssmin', 'copy'],
+			tasks: ['concat', 'jshint', 'uglify', 'copy', 'less', 'cssmin'],
 			options: {
 				logConcurrentOutput: true,
 				limit: 10
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 		},
 		cssmin: {
 			options: {
-				banner: '/* fadeit css compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+				banner: '/* fadeit vendor css compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 			},
 			vendorCss: {
 				src: ['css/vendor.css'],
