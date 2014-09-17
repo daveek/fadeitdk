@@ -44,7 +44,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		angular.element('body').animate({
 			scrollTop: $scope.anim.projectContainer.top + $scope.projectOffset	
 		}, {
-			duration: 1,
+			duration: 100,
 			complete: function(){
 				$scope.isAnimating = false;
 				//get news

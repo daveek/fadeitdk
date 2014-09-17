@@ -14,6 +14,7 @@ UX:
   ☐ display news images next to the text update
   ☐ add background to logo (should not get mixed up with menu on very low heights)
   ☐ Fix initial loading layout jump
+  ☐ Fix twitter truncated text broken link issue 
 Graphic Design:
   ☐ change fiveico with dot
   ☐ make loader gif
