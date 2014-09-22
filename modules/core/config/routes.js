@@ -26,7 +26,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		}).
 		state('projects', {
 			url: '/project/:projectId',
-			templateUrl: 'modules/core/views/projects.html'
+			templateUrl: 'modules/core/views/single-project.html'
 		});
 	}
 ]);

@@ -708,7 +708,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	height:auto;
 	padding-left:@sidebar_left_width;
 	padding-top:30px;
-	padding-bottom:700px;
+	padding-bottom:100px;
 	padding-right:@project_fluid_padding_right;
 }
 
@@ -729,11 +729,12 @@ body, p, span, section, article, time, header, footer, aside, nav{
 }
 
 .dummy-project{
-	background: @col_light_gray;
+	//debug-> background: @col_light_gray;
 
 	.project-preview{
 		height:100%;
 		width:100%;
+		opacity:0;
 	}
 }
 
@@ -776,6 +777,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 		.menu-link-item{
 			line-height:40px;
+			.rel();
 		}
 	}
 }
@@ -787,10 +789,44 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	color:@col_dark_gray;
 	.animate(@animation_time_short, @transition_default);
 
+	&:after{
+		content:'';
+		height:1px;
+		width:0px;
+		background:@col_fadeit;
+		.abs();
+		left:0;
+		top:50%;
+		margin-top:-1px;
+		.animate(@animation_time_short, @transition_default);
+	}
+
 	&:hover{
-		color:@b;
+		color:@col_fadeit;
 		text-decoration: none;
 		.animate(@animation_time_short, @transition_default);
+
+		&:after{
+			width:20%;
+			.animate(@animation_time_short, @transition_default);
+		}
+	}
+}
+
+.activeMenu{
+	.menu-anchor{
+		color:@col_last_green_gray;
+
+		&:after{
+			content:'';
+			height:1px;
+			width:20%;
+			background:@col_last_green_gray;
+			.abs();
+			left:0;
+			top:50%;
+			margin-top:-1px;
+		}
 	}
 }
 /*end fadeit styles*/

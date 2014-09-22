@@ -3,14 +3,21 @@
 // Users service used for communicating with the users REST endpoint
 angular.module('core').factory('MenuData', function() {
 	var menuItems = [{
+			title: 'Projects',
+			link: '',
+			uiRoute: '/'
+		},
+		{
 			title: 'About us',
 			link: 'about',
 			uiRoute: '/about'
-		}, {
+		},
+		{
 			title: 'Services',
 			link: 'services',
 			uiRoute: '/services'
-		}, {
+		},
+		{
 			title: 'Contact',
 			link: 'contact',
 			uiRoute: '/contact'
@@ -26,9 +33,6 @@ angular.module('core').factory('ProjectPreview', function() {
 			title: 'Portal',
 			link: 'projects/portal',
 			uiRoute: '/projects/portal',
-			covers:{
-				cover_sm: true
-			},
 			activeCover: 'lg',
 			shortDescription: '',
 			tags: {
@@ -50,9 +54,6 @@ angular.module('core').factory('ProjectPreview', function() {
 			title: 'yMobile',
 			link: 'projects/ymobile',
 			uiRoute: '/projects/ymobile',
-			covers:{
-				cover_sm: true
-			},
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
@@ -70,9 +71,6 @@ angular.module('core').factory('ProjectPreview', function() {
 			title: 'OLS',
 			link: 'projects/ols',
 			uiRoute: '/projects/ols',
-			covers:{
-				cover_md: true
-			},
 			activeCover: 'md',
 			shortDescription: '',
 			tags: {
@@ -98,9 +96,6 @@ angular.module('core').factory('ProjectPreview', function() {
 			title: 'Aleris/Hamlet',
 			link: 'projects/aleris-hamlet',
 			uiRoute: '/projects/aleris-hamlet',
-			covers:{
-				cover_md: true
-			},
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
@@ -108,7 +103,75 @@ angular.module('core').factory('ProjectPreview', function() {
 				1: 'Responsive',
 				2: 'AngularJS'
 			} //max 3 tags
-		}];
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			id: 'portal',
+			title: 'Portal',
+			link: 'projects/portal',
+			uiRoute: '/projects/portal',
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Drupal',
+				1: 'UX Design',
+				2: 'Responsive'
+			} //max 3 tags
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			id: 'ols',
+			title: 'OLS',
+			link: 'projects/ols',
+			uiRoute: '/projects/ols',
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Python',
+				1: 'AngularJS',
+				2: 'iOS'
+			} //max 3 tags
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			id: 'ymobile',
+			title: 'yMobile',
+			link: 'projects/ymobile',
+			uiRoute: '/projects/ymobile',
+			activeCover: 'md',
+			shortDescription: '',
+			tags: {
+				0: 'Drupal',
+				1: 'CMS',
+				2: 'Responsive'
+			} //max 3 tags
+		},
+	];
 
 	return projectPreviewData;
 });
