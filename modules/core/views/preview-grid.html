@@ -1,11 +1,11 @@
-<a href="#!/project/{{project.id}}" class="project-preview-container clearfix" data-ng-repeat="project in projectPreviews" data-ng-class="generateClass(project.activeCover, project.dummy)">
-	<figure class="project-preview" data-ng-if="$index === 0 && !project.dummy">
+<article class="project-preview-container clearfix animate wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="{{anim.header.durationMedium}}" data-ng-repeat="project in projectPreviews" data-ng-class="generateClass(project.activeCover, project.dummy)">
+	<a href="#!/project/{{project.id}}" class="project-preview" data-ng-if="$index === 0 && !project.dummy">
 		<img data-ng-src='img/projects/{{project.id}}/cover_{{project.activeCover}}@2x.jpg' alt="project.title" class="project-cover main-cover size-{{project.activeCover}}"/>
-	</figure>
+	</a>
 
-	<figure class="project-preview animated wow fadeInUp" data-wow-delay="{{$index*0.1}}s" data-wow-duration="{{anim.header.duration}}" data-ng-if="!project.dummy && $index !== 0">
+	<a href="#!/project/{{project.id}}" class="project-preview" data-ng-if="!project.dummy && $index !== 0">
 		<img data-ng-src='img/projects/{{project.id}}/cover_{{project.activeCover}}@2x.jpg' alt="project.title" class="project-cover size-{{project.activeCover}}"/>
-	</figure>
+	</a>
 
 	<figure data-ng-if="project.dummy">
 		<img data-ng-src='img/projects/dummy_cover.png' class="project-cover size-{{project.activeCover}} project-preview"/>

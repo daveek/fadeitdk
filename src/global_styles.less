@@ -445,14 +445,14 @@
 	//will have to change this to something beautiful, until then UX will suffer :( 
 }
 
-body {
+/*body {
 	height: 100%;
 	width: 100%;
-	.abs();
+	//.abs();
 }
 
 .container-fluid,
-.row-fluid { height: inherit; }
+.row-fluid { height: inherit; }*/
 
 h1{
 	font-size: @fs_h1;
@@ -789,6 +789,20 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	color:@col_dark_gray;
 	.animate(@animation_time_short, @transition_default);
 
+	&:hover{
+		color:@col_fadeit;
+		text-decoration: none;
+		.animate(@animation_time_short, @transition_default);
+	}
+}
+
+.activeMenu{
+	.menu-anchor{
+		color:@col_last_green_gray;
+	}
+}
+
+.main-menu-anchor{
 	&:after{
 		content:'';
 		height:1px;
@@ -802,10 +816,6 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	}
 
 	&:hover{
-		color:@col_fadeit;
-		text-decoration: none;
-		.animate(@animation_time_short, @transition_default);
-
 		&:after{
 			width:20%;
 			.animate(@animation_time_short, @transition_default);
@@ -814,9 +824,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 }
 
 .activeMenu{
-	.menu-anchor{
-		color:@col_last_green_gray;
-
+	.main-menu-anchor{
 		&:after{
 			content:'';
 			height:1px;

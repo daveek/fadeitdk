@@ -24,6 +24,7 @@ Performance:
   ✔ kill off twitter api block @done (14-09-16 22:32)
   ✔ remove animation from cover image @done (14-09-16 22:32)
   ☐ remove live reload script if not on localhost
+  ☐ replace the generate class method - load the class data from the model
 
 Other fun things:
   ☐ make 404 page

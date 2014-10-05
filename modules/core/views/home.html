@@ -10,7 +10,7 @@
 
     <ul class="menu-link-list">
       <li class="menu-link-item" data-ng-repeat="item in menuItems" data-ng-class="{'activeMenu': $uiRoute}" ui-route="{{item.uiRoute}}">
-        <a href="#!/{{item.link}}" class="menu-anchor">
+        <a href="#!/{{item.link}}" class="menu-anchor main-menu-anchor">
           {{item.title}}
         </a>
       </li>
@@ -22,7 +22,7 @@
       <!-- large fadeit logo -->
       <aside class="left-sidebar">
         <a href="#!" class="fadeit-logo-link">
-          <img ng-src="img/brand/logo_white.svg" alt="fadeit logo" class="fadeit-logo wow animate fadeInLeft" data-wow-delay="{{anim.header.delay}}" data-wow-duration="{{anim.header.duration}}"/>
+          <img ng-src="img/brand/logo_white.svg" alt="fadeit logo" class="fadeit-logo animate wow fadeInLeft" data-wow-delay="{{anim.header.delay}}" data-wow-duration="{{anim.header.duration}}"/>
         </a>
       </aside>
       <!-- news updates -->

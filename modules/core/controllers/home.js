@@ -17,15 +17,11 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
   $scope.cssClasses = [];
 
   //animations
-  new WOW().init();
-  
   $scope.anim = [];
   $scope.anim.header = [];
   $scope.anim.header.duration 				= '0.3s';
   $scope.anim.header.delay						= '0.3s';
-  $scope.anim.header.delayMedium			= '0.5s';
-  $scope.anim.header.delayLong				= '0.7s';
-  $scope.anim.header.delayVeryLong		= '0.9s';
+  $scope.anim.header.durationMedium		= '0.5s';
   $scope.anim.lightGreen 							= parallaxHelper.createAnimator(+0.5);
   $scope.anim.projectContainer				= 0;
   $scope.currentScrollPosition				= 0;
@@ -35,6 +31,10 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
   //also NEED to match the global_styles LESS file
   $scope.projectOffset		= -90;
   $scope.newsSectionHeight = 300;
+
+  $scope.initWow = function initWow(){
+  	new WOW().init();
+  };
 
   $scope.goToProjects = function(){
 		//move body 90px lower to place the gray line under the fadeit logo
