@@ -152,8 +152,9 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 
 	//observe scroll
 	$document.on('scroll mousewheel DOMMouseScroll MozMousePixelScroll MouseScrollEvent', function() {
-		//btw: gave up on using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
-		$scope.currentScrollPosition = parseInt($document[0].body.scrollTop);
+		//btw: not using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
+
+		$scope.currentScrollPosition = parseInt(angular.element(window).scrollTop());
     if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset){
     	angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
     	angular.element('.fadeit-logo-small').addClass('visibile-fixed-logo');
@@ -182,3 +183,16 @@ angular.module('core').directive('newsAction', ['$location', '$anchorScroll', fu
 		}
 	};
 }]);
+
+angular.module('core').directive('lastItemWatcher', function(){
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs){
+			console.log(scope.$index);
+
+			if (scope.$last){
+				scope.initWow();
+			}
+		}
+	};
+});
