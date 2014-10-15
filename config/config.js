@@ -34,12 +34,16 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 ]);
 
 angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCtrl', ['$scope', '$location', function AppCtrl ( $scope, $location ) {
+	//global variables
 	$scope.pageTitle = '';
+	$scope.currentDate = new Date();
 
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-	    if ( angular.isDefined( toState.data.pageTitle ) ) {
-	      $scope.pageTitle = toState.data.pageTitle ;
-	    }
+		window.scrollTo(0,0);
+
+		if ( angular.isDefined( toState.data.pageTitle ) ) {
+			$scope.pageTitle = toState.data.pageTitle ;
+		}
 	});
 }]);
 

@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 		},
 		concat:{
 			appScripts:{
-				src: ['lib/momentjs/moment.js', 'lib/jquery/dist/jquery.js', 'lib/angular/angular.js', 'lib/angular-resource/angular-resource.js', 'lib/angular-cookies/angular-cookies.js', 'lib/angular-animate/angular-animate.js', 'lib/angular-bootstrap/ui-bootstrap.js', 'lib/angular-ui-utils/ui-utils.js', 'lib/angular-ui-router/release/angular-ui-router.js', 'lib/angular-moment-fadeit/angular-moment.js', 'lib/angular-linkify-fadeit/angular-linkify.js', 'lib/wowjs/dist/wow.js', 'lib/angular-scroll/angular-scroll.js', 'lib/ng-parallax/angular-parallax.js', 'scripts/other.min.js'],
+				src: ['lib/momentjs/moment.js', 'lib/jquery/dist/jquery.js', 'lib/angular/angular.js', 'lib/angular-resource/angular-resource.js', 'lib/angular-cookies/angular-cookies.js', 'lib/angular-animate/angular-animate.js', 'lib/angular-bootstrap/ui-bootstrap.js', 'lib/angular-ui-utils/ui-utils.js', 'lib/angular-ui-router/release/angular-ui-router.js', 'lib/angular-moment-fadeit/angular-moment.js', 'lib/angular-linkify-fadeit/angular-linkify.js', 'lib/wowjs/dist/wow.js', 'lib/angular-scroll/angular-scroll.js', 'lib/ng-parallax/angular-parallax.js', 'lib/skrollr/dist/skrollr.min.js', 'scripts/other.min.js'],
 				dest: 'scripts/app.js'
 			},
 			appModules:{

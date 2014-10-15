@@ -9,12 +9,22 @@
       </aside>
       <!-- news updates -->
       <section class="time-text-container" data-ng-class="cssClasses.newsClasses">
-        <section class="inner-time-text-container">
+        <section class="inner-time-text-container" data-ng-if="news.text">
           <time class="news-relative-time">
             {{news.updateTime}}
           </time>
           <span class="news-text" ng-bind-html="news.text"></span>
         </section>
+
+        <section class="inner-time-text-container" data-ng-if="!news.text">
+          <time class="news-relative-time">
+            just now
+          </time>
+          <span class="news-text">
+            Update {{news.errors}}: our news has been destroyed by a wild pack of squirrels and we are still recovering from the shock.
+          </span>
+        </section>
+
       </section>
     </header>
   </section>
@@ -24,9 +34,4 @@
     <section class="row-fluid project-fluid clearfix" data-ng-include="'modules/core/views/preview-grid.html'"></section>
   </section>
   <!-- end project fluid -->
-
-  <!-- abs center dot 
-  <section class="row-fluid dot-fluid clearfix">
-    <figure class="center-dot"></figure>
-  </section>-->
 </section>

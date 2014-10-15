@@ -19,6 +19,7 @@
     "font-awesome": "~4.2.0",
     "angular-scroll": "~0.6.2",
     "ng-parallax": "~0.1.8",
-    "momentjs": "~2.8.3"
+    "momentjs": "~2.8.3",
+    "skrollr": "~0.6.27"
   }
 }

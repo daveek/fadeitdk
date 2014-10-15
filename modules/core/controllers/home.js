@@ -11,9 +11,12 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$scope.latestNewsId = 0;
 	$scope.maxNewsPosition = 5; //the maximum amount of news (old) that will displayed - rest API allows 10
 	$scope.news = [];
+	$scope.news.errors = 0;
 
-	//css class containers
+	//css class containers & vars
 	$scope.cssClasses = [];
+	$scope.gridSize = 0;
+	$scope.nextElementClass = '';
 
 	//animations
 	$scope.anim = [];
@@ -106,17 +109,21 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 
 				//update latest news id
 				$scope.latestNewsId = newsDataId;
+				//reset the error counter
+				$scope.news.errors = 0;
 			}
 			else{
 				$scope.cssClasses.newsClasses = 'news-fade-out';
 				$log.warn('News data could not be loaded');
 				$log.error(newsData);
+				$scope.news.errors ++;
 			}
 		}).error(function(data){
 			//animate new content & remove hidden class
 			$scope.cssClasses.newsClasses = 'news-fade-out';
 			$log.warn('Could not load news');
 			$log.error(data);
+			$scope.news.errors ++;
 		});
 
 		//check for new data in 30 seconds
@@ -130,27 +137,54 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		$scope.news.text = $sce.trustAsHtml(linkify.twitter(text));
 	};
 
-	$scope.generateClass = function generateClass(activeCover, isDummy){
-		var cssClass;
+	$scope.generateClass = function generateClass(activeCover, isDummy, index){
+		var cssClass,
+				currentGridSize,
+				columnSize;
 
 		switch(activeCover){
 			case 'sm':
-				cssClass = 'col-xs-3 project-size-sm';
+				currentGridSize = 3;
+				columnSize = 3;
 			break;
 			case 'md':
-				cssClass = 'col-xs-6 project-size-md';
+				if($scope.gridSize === 3){
+					currentGridSize = 3; //if it's after col-xs-3 dummy (in the middle)
+				}
+				else if($scope.gridSize === 6){
+					currentGridSize = 6; //if it's at the end of the row, after 2 col-xs-3's
+				}
+				else if($scope.gridSize === 0){
+					currentGridSize = 0; //if it's at the beginning of the row
+				}
+				
+				columnSize = 6;
 			break;
 			case 'lg':
-				cssClass = 'col-xs-12 project-size-lg';
+				currentGridSize = 12;
+				columnSize = 12;
 			break;
 			default:
-				cssClass = 'col-xs-12 project-size-lg';
+				currentGridSize = 12;
+				columnSize = 12;
 			break;
 		}
+
+		cssClass = 'col-xs-' + columnSize + ' project-size-' + activeCover + $scope.nextElementClass;
 
 		//if it's just a dummy project, append one more identifier class
 		if(isDummy){
 			cssClass += ' dummy-project';
+		}
+
+		//keeps track of the column size of grid elements, when it's >=12, it adds a 'clear:both' to the element
+		$scope.gridSize += currentGridSize;
+		if($scope.gridSize >= 12){
+			$scope.nextElementClass += ' clear-preview';
+			$scope.gridSize = 0;
+		}
+		else{
+			$scope.nextElementClass = '';
 		}
 
 		return cssClass;
@@ -160,22 +194,23 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 
 	$document.on('scroll mousewheel DOMMouseScroll MozMousePixelScroll MouseScrollEvent', function() {
 		//btw: not using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
+		if(!$scope.onSecondaryPage){
+			$scope.currentScrollPosition = angular.element(window).scrollTop();
+			if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset && !$scope.newsHeaderShown){
+				angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
+				angular.element('.fadeit-logo-small').addClass('visibile-fixed-logo');
+				angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
 
-		$scope.currentScrollPosition = angular.element(window).scrollTop();
-		if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset && !$scope.newsHeaderShown){
-			angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
-			angular.element('.fadeit-logo-small').addClass('visibile-fixed-logo');
-			angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
+				$scope.newsHeaderShown = true;
+			}
+			else if($scope.currentScrollPosition <= $scope.newsSectionHeight + $scope.projectOffset && $scope.newsHeaderShown){
+				angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
+				angular.element('.fadeit-logo-small').removeClass('visibile-fixed-logo');
+				angular.element('.transparent-whitebar').addClass('hidden-whitebar');
 
-			$scope.newsHeaderShown = true;
+				$scope.newsHeaderShown = false;
+			}
 		}
-		else if($scope.currentScrollPosition <= $scope.newsSectionHeight + $scope.projectOffset && $scope.newsHeaderShown){
-			angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
-			angular.element('.fadeit-logo-small').removeClass('visibile-fixed-logo');
-			angular.element('.transparent-whitebar').addClass('hidden-whitebar');
-
-			$scope.newsHeaderShown = false;
-		} 
 	});
 
 	//init methods
@@ -219,7 +254,7 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 			/*
 			 * Watch looks for changes in the pageTitle bind. Secondary pages will have a title, while others will have an empty string. 
 			 * Changing the binding will cause the whitebar to be hidden
-			 * If on a secondary page, the whitebar will be shown again after 1000ms
+			 * If on a secondary page, the whitebar will be shown again after 500ms
 			 * 
 			 */
 			scope.$watch('pageTitle', function (titleValue) {	
@@ -227,15 +262,21 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 				angular.element('.secondary-page-title').removeClass('visible-secondary-page-title');
 
 				if(titleValue !== '' && typeof titleValue !== 'undefined'){
+					scope.onSecondaryPage = true;
+
 					setTimeout(function showWhitebar(){
+						angular.element('.fadeit-logo-small').removeClass('visibile-fixed-logo');
 						angular.element('#news-link').addClass('transparent-always');
 						angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
 						angular.element('.secondary-page-title').addClass('visible-secondary-page-title');
+						angular.element('#logo-link').addClass('hidden-always');
 						scope.directiveTitle = titleValue;
 						scope.$apply();
-					}, 1000);
+					}, 500);
 				} 
 				else {
+					scope.onSecondaryPage = false;
+					angular.element('#logo-link').removeClass('hidden-always');
 					scope.directiveTitle = '';
 				}
 			});
@@ -243,3 +284,10 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 		templateUrl: 'modules/core/views/left-sidebar-menu.html'
 	};
 }]);
+
+angular.module('core').directive('customFooter', function(){
+	return {
+		restrict: 'E',
+		templateUrl: 'modules/core/views/footer.html'
+	};
+});
