@@ -1,0 +1,22 @@
+<nav class="main-menu left-sidebar">
+  <section class="transparent-whitebar">
+    <a class="menu-anchor newsAction transparent-always" href="#!" id="news-link">News</a>
+    <section class="secondary-page-title" data-ng-show="directiveTitle">
+      <h2 class="page-title">
+        {{directiveTitle}}
+        </h2>
+    </section>
+  </section>
+
+  <a href="#!" id="logo-link">
+    <img ng-src="img/brand/logo_full.svg" alt="fadeit logo" class="fadeit-logo-small"/>
+  </a>
+
+  <ul class="menu-link-list">
+    <li class="menu-link-item" data-ng-repeat="item in menuItems" data-ng-class="{'activeMenu': $uiRoute}" ui-route="{{item.uiRoute}}">
+      <a href="#!/{{item.link}}" class="menu-anchor main-menu-anchor">
+        {{item.title}}
+      </a>
+    </li>
+  </ul>
+</nav>
