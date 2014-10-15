@@ -45,6 +45,11 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 			$scope.pageTitle = toState.data.pageTitle ;
 		}
 	});
+
+	$scope.$on('changedPage', function changedPage(event, pageTitle){
+		console.log(pageTitle);
+		$scope.pageTitle = pageTitle;
+	});
 }]);
 
 //Then define the init function for starting up the application

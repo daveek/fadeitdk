@@ -933,6 +933,12 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 	.row-fluid{
 		margin:30px 0 30px 0;
+		padding-bottom:50px;
+		border-bottom:1px solid whitesmoke;
+
+		&:last-child{
+			border-bottom:none;
+		}
 	}
 
 	@media only screen and (min-width:@bp_xxl){
@@ -957,7 +963,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	}
 
 	img{
-		margin-left:30px;
+		margin-left:50px;
 		float:right;
 	}
 
@@ -1046,3 +1052,16 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	.show-i();
 }
 /*end outstanding*/
+
+/*browser overides*/
+::selection {
+  background: @col_fadeit;
+  opacity: 0;
+  color:white;
+}
+::-moz-selection {
+  background: @col_fadeit;
+  opacity: 0;
+  color:white;
+}
+/*end browser overides*/

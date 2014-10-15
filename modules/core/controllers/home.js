@@ -257,7 +257,7 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 			 * If on a secondary page, the whitebar will be shown again after 500ms
 			 * 
 			 */
-			scope.$watch('pageTitle', function (titleValue) {	
+			scope.$watch('pageTitle', function (titleValue) {
 				angular.element('.transparent-whitebar').addClass('hidden-whitebar');
 				angular.element('.secondary-page-title').removeClass('visible-secondary-page-title');
 

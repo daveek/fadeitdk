@@ -8,4 +8,5 @@ angular.module('core').controller('ProjectController', ['$scope', '$stateParams'
 
   //load services
   $scope.menuItems = MenuData;
+	$scope.$emit('changedPage', $scope.projectId.toUpperCase());
 }]);
