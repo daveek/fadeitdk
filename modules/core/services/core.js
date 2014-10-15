@@ -30,6 +30,7 @@ angular.module('core').factory('MenuData', function() {
 angular.module('core').factory('ProjectPreview', function() {
 	var projectPreviewData = [{
 			id: 'portal',
+			background: '#AFB1B4',
 			title: 'Portal',
 			link: 'projects/portal',
 			uiRoute: '/projects/portal',
@@ -51,6 +52,7 @@ angular.module('core').factory('ProjectPreview', function() {
 		},
 		{
 			id: 'ymobile',
+			background: '#590B0B',
 			title: 'yMobile',
 			link: 'projects/ymobile',
 			uiRoute: '/projects/ymobile',
@@ -68,6 +70,7 @@ angular.module('core').factory('ProjectPreview', function() {
 		},
 		{
 			id: 'ols',
+			background: '#0C7A93',
 			title: 'OLS',
 			link: 'projects/ols',
 			uiRoute: '/projects/ols',
@@ -93,6 +96,7 @@ angular.module('core').factory('ProjectPreview', function() {
 		},
 		{
 			id: 'aleris-hamlet',
+			background: '#319E8F',
 			title: 'Aleris/Hamlet',
 			link: 'projects/aleris-hamlet',
 			uiRoute: '/projects/aleris-hamlet',
@@ -114,6 +118,7 @@ angular.module('core').factory('ProjectPreview', function() {
 		},
 		{
 			id: 'portal',
+			background: '#AFB1B4',
 			title: 'Portal',
 			link: 'projects/portal',
 			uiRoute: '/projects/portal',
@@ -131,6 +136,7 @@ angular.module('core').factory('ProjectPreview', function() {
 		},
 		{
 			id: 'ols',
+			background: '#0C7A93',
 			title: 'OLS',
 			link: 'projects/ols',
 			uiRoute: '/projects/ols',
@@ -160,6 +166,7 @@ angular.module('core').factory('ProjectPreview', function() {
 		},
 		{
 			id: 'ymobile',
+			background: '#590B0B',
 			title: 'yMobile',
 			link: 'projects/ymobile',
 			uiRoute: '/projects/ymobile',
@@ -181,6 +188,7 @@ angular.module('core').factory('ProjectPreview', function() {
 angular.module('core').factory('ProjectData', function() {
 	var projectData = [{
 			id: 'portal',
+			background: '#AFB1B4',
 			title: 'Portal',
 			link: 'projects/portal',
 			uiRoute: '/projects/portal',

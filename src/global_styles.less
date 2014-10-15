@@ -85,6 +85,8 @@
 	@lh_h5: 		24px;
 	@fs_body:		17px;
 	@lh_body:		25px;
+	@fs_medium: 15px;
+	@lh_medium: 20px;
 	@fs_small:	13px;
 	@lh_small:	18px;
 
@@ -94,6 +96,7 @@
 	@header_left:			130px;
 	@header_news_text_padding: 15px;
 	@max_p_width:			680px;
+	@max_tweet_width: 520px;
 	@sidebar_left_width: 300px;
 	@logo_width_full:	150px;
 	@logo_height_full: @logo_width_full / 2.7027027027;
@@ -197,6 +200,22 @@
 		-ms-transform: rotate(@degrees);
 		-o-transform: rotate(@degrees);
 		transform: rotate(@degrees);
+	}
+
+	.translateX(@amount){
+		-webkit-transform: translateX(@amount);
+		-moz-transform: translateX(@amount);
+		-ms-transform: translateX(@amount);
+		-o-transform: translateX(@amount);
+		transform: translateX(@amount);
+	}
+
+	.translateY(@amount){
+		-webkit-transform: translateY(@amount);
+		-moz-transform: translateY(@amount);
+		-ms-transform: translateY(@amount);
+		-o-transform: translateY(@amount);
+		transform: translateY(@amount);
 	}
 
 	.scale(@coeficient){
@@ -445,14 +464,13 @@
 	//will have to change this to something beautiful, until then UX will suffer :( 
 }
 
-/*body {
-	height: 100%;
-	width: 100%;
-	//.abs();
+body {
+	overflow-x: hidden;
 }
-
+/*
 .container-fluid,
-.row-fluid { height: inherit; }*/
+.row-fluid { height: inherit; }
+*/
 
 h1{
 	font-size: @fs_h1;
@@ -546,7 +564,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	height: @projects_offset + @news_section_height;
 	margin-top:-@news_section_height;
 	left: 0;
-	background: @w;
+	background: rgba(255, 255, 255, 0.8);
 	border-bottom: @bst @col_light_gray;
 	z-index: -1; //otherwise it will be on top of the full logo
 	.animate(@animation_time_short, @transition_default);
@@ -597,7 +615,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 		bottom:0;
 		right:0;
 		padding-right: @header_news_text_padding + @project_fluid_padding_right;
-		max-width: @max_p_width;
+		max-width: @max_tweet_width;
 		width:35%;
 
 		a{
@@ -640,7 +658,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .project-fluid{
 	height:auto;
 	padding-left:@sidebar_left_width;
-	padding-top:30px;
+	padding-top:@projects_offset + 30px;
 	padding-bottom:100px;
 	padding-right:@project_fluid_padding_right;
 }
@@ -675,6 +693,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 		.project-tags{
 			.abs();
+			max-height: 45px;
 			left:0;
 			width:100%;
 			text-align:center;
@@ -687,7 +706,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 			.a-project-tag{
 				.inline-block();
 				margin-bottom:1px;
-				padding:10px 10px 10px 10px;
+				padding:10px;
 			}
 		}
 	}
@@ -702,7 +721,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .project-size-lg{
 	&:hover{
 		.project-cover-used{
-			.scale(0.9);
+			.translateY(-10%);
 		}
 	}
 }
@@ -710,7 +729,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .project-size-md{
 	&:hover{
 		.project-cover-used{
-			.scale(0.7);
+			.translateY(-20%);
 		}
 	}
 }
@@ -718,7 +737,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .project-size-sm{
 	&:hover{
 		.project-cover-used{
-			.scale(0.9);
+			.translateY(-30%);
 		}
 	}
 }
@@ -727,6 +746,27 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	&:hover{
 		.project-tags{
 			bottom:10px;
+			opacity: 1;
+			.animate(@animation_time_short, @transition_default);
+		}
+	}	
+}
+
+.project-size-md{
+	.a-project-tag{
+		font-size:@fs_medium;
+	}
+}
+
+.project-size-sm{
+	.a-project-tag{
+		padding:5px;
+		font-size:@fs_medium;
+	}
+
+	&:hover{
+		.project-tags{
+			bottom:5px;
 			opacity: 1;
 			.animate(@animation_time_short, @transition_default);
 		}
@@ -798,6 +838,10 @@ body, p, span, section, article, time, header, footer, aside, nav{
 		color:@col_fadeit;
 		text-decoration: none;
 		.animate(@animation_time_short, @transition_default);
+	}
+
+	&:visited, &:focus{
+		text-decoration: none;
 	}
 }
 

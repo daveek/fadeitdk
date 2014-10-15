@@ -30,8 +30,8 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	
 	//less variables - duplicated
 	//also NEED to match the global_styles LESS file
-	$scope.projectOffset		= -90;
-	$scope.newsSectionHeight = 300;
+	$scope.projectOffset			= 0; //the offset in the css is set to 90, meaning that the automatic load scroll would be 'wrong' (too low) by 90px, which is the desired effect
+	$scope.newsSectionHeight	= 300;
 
 	$scope.initWow = function initWow(){
 		new WOW().init();
