@@ -1,8 +1,8 @@
 'use strict';
 
 // Setting up route
-angular.module('core').config(['$stateProvider', '$urlRouterProvider',
-	function($stateProvider, $urlRouterProvider) {
+angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
+	function($stateProvider, $urlRouterProvider, $locationProvider) {
 		// Redirect to home view when route not found
 		$urlRouterProvider.otherwise('/');
 
@@ -10,23 +10,38 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		$stateProvider.
 		state('home', {
 			url: '/',
-			templateUrl: 'modules/core/views/home.html'
+			templateUrl: 'modules/core/views/home.html',
+			data: {
+				pageTitle: ''
+			}
 		}).
 		state('about', {
 			url: '/about',
-			templateUrl: 'modules/core/views/about.html'
+			templateUrl: 'modules/core/views/about.html',
+			data: {
+				pageTitle: 'About'
+			}
 		}).
 		state('services', {
 			url: '/services',
-			templateUrl: 'modules/core/views/services.html'
+			templateUrl: 'modules/core/views/services.html',
+			data: {
+				pageTitle: 'Services'
+			}
 		}).
 		state('contact', {
 			url: '/contact',
-			templateUrl: 'modules/core/views/contact.html'
+			templateUrl: 'modules/core/views/contact.html',
+			data: {
+				pageTitle: 'Contact'
+			}
 		}).
 		state('projects', {
 			url: '/project/:projectId',
-			templateUrl: 'modules/core/views/single-project.html'
+			templateUrl: 'modules/core/views/single-project.html',
+			data: {
+				pageTitle: ''
+			}
 		});
 	}
 ]);

@@ -1,22 +1,4 @@
-<section class="container-fluid main-container" data-ng-controller="HomeController" id="news">
-  <nav class="main-menu left-sidebar">
-    <section class="transparent-whitebar">
-      <a class="menu-anchor newsAction" href="#!" id="news-link">News</a>
-    </section>
-
-    <a href="#!" id="logo-link">
-      <img ng-src="img/brand/logo_full.svg" alt="fadeit logo" class="fadeit-logo-small"/>
-    </a>
-
-    <ul class="menu-link-list">
-      <li class="menu-link-item" data-ng-repeat="item in menuItems" data-ng-class="{'activeMenu': $uiRoute}" ui-route="{{item.uiRoute}}">
-        <a href="#!/{{item.link}}" class="menu-anchor main-menu-anchor">
-          {{item.title}}
-        </a>
-      </li>
-    </ul>
-  </nav>
-
+<section class="container-fluid main-container home-container" data-ng-controller="HomeController" id="news">
   <section class="row-fluid news-fluid transparent-always clearfix" id="news-section">
     <header class="logo-news-container col-xs-12">
       <!-- large fadeit logo -->

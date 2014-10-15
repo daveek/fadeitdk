@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="AppCtrl">
 
 <head>
-	<title>fadeit - software development agency</title>
+	<title data-ng-if="pageTitle">{{pageTitle}} - fadeit, software development agency</title>
+	<title data-ng-if="!pageTitle">fadeit - software development agency</title>
 
 	<!-- General META -->
 	<meta charset="utf-8">
@@ -11,21 +12,20 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- Semantic META -->
-	<meta name="author" content="Mindru Dan">
 	<meta name="description" content="fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.">
 	<meta name="author" content="Mindru Dan">
 	<meta name="keywords" content="fadeit, software, development, design agency, mobile, web, applications, systems, aarhus, denmark">
 
 	<!-- Facebook META -->
 	<meta property="og:site_name" content="fadeit">
-	<meta property="og:title" content="fadeit">
+	<meta property="og:title" content="{{pageTitle}}">
 	<meta property="og:description" content="fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.">
 	<meta property="og:url" content="http://fadeit.dk">
 	<meta property="og:image" content="img/brand/fadeit_logo_square.png">
 	<meta property="og:type" content="website">
 
 	<!-- Twitter META -->
-	<meta name="twitter:title" content="fadeit">
+	<meta name="twitter:title" content="{{pageTitle}}">
 	<meta name="twitter:description" content="fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.">
 	<meta name="twitter:url" content="http://fadeit.dk">
 	<meta name="twitter:image" content="img/brand/fadeit_logo_square.png">
@@ -97,6 +97,7 @@
 	</div>-->
 	
 	<!-- all page & template content -->
+	<left-sidebar-menu></left-sidebar-menu>
 	<data-ui-view></data-ui-view>
 	<!-- end all page & tempate content -->
 

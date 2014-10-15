@@ -60,6 +60,7 @@
 
 	/*animation*/
 	@animation_time_short:		300ms;
+	@animation_time_short_w_delay:		300ms 500ms;
 	@animation_time:					500ms;
 	@animation_time_medium:		800ms;
 	@animation_time_long:			1000ms;
@@ -160,6 +161,14 @@
 		-o-animation-delay: @time;
 		-ms-animation-delay: @time;
 		animation-delay: @time;
+	}
+
+	.transition-delay(@time){
+		-webkit-transition-delay: @time;
+		-moz-transition-delay: @time;
+		-o-transition-delay: @time;
+		-ms-transition-delay: @time;
+		transition-delay: @time;
 	}
 
 	.no-animation(){
@@ -575,10 +584,12 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	bottom:0;
 	right:@header_news_text_padding + @project_fluid_padding_right;
 	line-height:@projects_offset;
+	.animate(@animation_time_short, @transition_default);
 }
 
 .hidden-whitebar{
 	margin-top:-@projects_offset - @news_section_height;
+	.animate(@animation_time_short, @transition_default);
 }
 
 .time-text-container{
@@ -655,7 +666,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	}
 }
 
-.project-fluid{
+.project-fluid, .about-fluid{
 	height:auto;
 	padding-left:@sidebar_left_width;
 	padding-top:@projects_offset + 30px;
@@ -693,7 +704,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 		.project-tags{
 			.abs();
-			max-height: 45px;
+			max-height: 47px;
 			left:0;
 			width:100%;
 			text-align:center;
@@ -737,7 +748,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .project-size-sm{
 	&:hover{
 		.project-cover-used{
-			.translateY(-30%);
+			.translateY(-35%);
 		}
 	}
 }
@@ -885,6 +896,27 @@ body, p, span, section, article, time, header, footer, aside, nav{
 			margin-top:-1px;
 		}
 	}
+}
+
+.secondary-page-title{
+	.abs();
+	bottom:0;
+	left:0;
+	margin-left:-300px;
+	width:@sidebar_left_width;
+	.ta-c();
+	z-index:10;
+	.animate(@animation_time_short_w_delay, @transition_default);
+
+	.page-title{
+		line-height:@projects_offset;
+		margin:0;
+	}
+}
+
+.visible-secondary-page-title{
+	margin-left:0;
+	.animate(@animation_time_short_w_delay, @transition_default);
 }
 /*end fadeit styles*/
 

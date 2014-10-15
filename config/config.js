@@ -29,8 +29,19 @@ angular.module(ApplicationConfiguration.applicationModuleName, ApplicationConfig
 angular.module(ApplicationConfiguration.applicationModuleName).config(['$locationProvider',
 	function($locationProvider) {
 		$locationProvider.hashPrefix('!');
+		//$locationProvider.html5Mode(true);
 	}
 ]);
+
+angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCtrl', ['$scope', '$location', function AppCtrl ( $scope, $location ) {
+	$scope.pageTitle = '';
+
+  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+	    if ( angular.isDefined( toState.data.pageTitle ) ) {
+	      $scope.pageTitle = toState.data.pageTitle ;
+	    }
+	});
+}]);
 
 //Then define the init function for starting up the application
 angular.element(document).ready(function() {

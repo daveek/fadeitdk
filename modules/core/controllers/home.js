@@ -2,9 +2,8 @@
 /*global moment:false, WOW:false; */
 //ignoring the above globals, moment() is available through the amMoment service
 
-angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'MenuData', 'ProjectPreview', '$location', '$anchorScroll', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, MenuData, ProjectPreview, $location, $anchorScroll) {
+angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'ProjectPreview', '$location', '$anchorScroll', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, ProjectPreview, $location, $anchorScroll) {
 	//load services
-	$scope.menuItems = MenuData;
 	$scope.projectPreviews = ProjectPreview;
 
 	//news variables
@@ -37,7 +36,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		new WOW().init();
 	};
 
-	$scope.goToProjects = function(){
+	$scope.goToProjects = function goToProjects(){
 		//move body 90px lower to place the gray line under the fadeit logo
 		$scope.anim.projectContainer = angular.element('#projects').offset();
 		$scope.isAnimating = true;
@@ -52,14 +51,17 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		});
 	};
 
-	$scope.initNews = function(){
+	$scope.initNews = function initNews(){
 		//one-time news trigger when controller is ready
 		$scope.loadNews();
-		//remove the class that makes the news with opacity 0 (show the news but don't scroll to it)
-		angular.element('#news-section').removeClass('transparent-always');
+		//remove the class that makes the news with opacity 0 (show the news but don't scroll to it) -> use a timeout to make it look smooth. The news top-right link is also hidden until the section is visible
+		setTimeout(function showNews(){
+			angular.element('#news-section').removeClass('transparent-always');
+			angular.element('#news-link').removeClass('transparent-always');
+		}, 1000);
 	};
 
-	$scope.loadNews = function(){
+	$scope.loadNews = function loadNews(){
 		//$log.info('Trying to load news...');
 		//make a request to the api
 		$http.get('twitter-api/').success(function(newsData){
@@ -90,7 +92,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 				}
 
 				//any valid data new or old will invoke a fadein
-				setTimeout(function(){
+				setTimeout(function changeNewsClass(){
 					$scope.cssClasses.newsClasses = 'news-fade-in';
 				}, 1500);
 				
@@ -121,14 +123,14 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		setTimeout($scope.loadNews, 30000);
 	};
 
-	$scope.displayNews = function(time, text){
+	$scope.displayNews = function displayNews(time, text){
 		$scope.news.updateTime = 'news from ' + moment(time, 'dd MMM DD HH:mm:ss ZZ YYYY').fromNow();
 
 		//save text to scope, after converting t.co urls
 		$scope.news.text = $sce.trustAsHtml(linkify.twitter(text));
 	};
 
-	$scope.generateClass = function(activeCover, isDummy){
+	$scope.generateClass = function generateClass(activeCover, isDummy){
 		var cssClass;
 
 		switch(activeCover){
@@ -207,3 +209,37 @@ angular.module('core').directive('lastItemWatcher', function(){
 		}
 	};
 });
+
+angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuData){
+	return {
+		restrict: 'E',
+		link: function(scope, element, attrs){
+			scope.menuItems = MenuData;
+
+			/*
+			 * Watch looks for changes in the pageTitle bind. Secondary pages will have a title, while others will have an empty string. 
+			 * Changing the binding will cause the whitebar to be hidden
+			 * If on a secondary page, the whitebar will be shown again after 1000ms
+			 * 
+			 */
+			scope.$watch('pageTitle', function (titleValue) {	
+				angular.element('.transparent-whitebar').addClass('hidden-whitebar');
+				angular.element('.secondary-page-title').removeClass('visible-secondary-page-title');
+
+				if(titleValue !== '' && typeof titleValue !== 'undefined'){
+					setTimeout(function showWhitebar(){
+						angular.element('#news-link').addClass('transparent-always');
+						angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
+						angular.element('.secondary-page-title').addClass('visible-secondary-page-title');
+						scope.directiveTitle = titleValue;
+						scope.$apply();
+					}, 1000);
+				} 
+				else {
+					scope.directiveTitle = '';
+				}
+			});
+		},
+		templateUrl: 'modules/core/views/left-sidebar-menu.html'
+	};
+}]);
