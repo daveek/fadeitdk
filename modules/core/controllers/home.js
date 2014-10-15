@@ -3,60 +3,64 @@
 //ignoring the above globals, moment() is available through the amMoment service
 
 angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'MenuData', 'ProjectPreview', '$location', '$anchorScroll', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, MenuData, ProjectPreview, $location, $anchorScroll) {
-  //load services
-  $scope.menuItems = MenuData;
-  $scope.projectPreviews = ProjectPreview;
+	//load services
+	$scope.menuItems = MenuData;
+	$scope.projectPreviews = ProjectPreview;
 
-  //news variables
-  $scope.currentNewsPosition = 0;
-  $scope.latestNewsId = 0;
-  $scope.maxNewsPosition = 5; //the maximum amount of news (old) that will displayed - rest API allows 10
-  $scope.news = [];
+	//news variables
+	$scope.currentNewsPosition = 0;
+	$scope.latestNewsId = 0;
+	$scope.maxNewsPosition = 5; //the maximum amount of news (old) that will displayed - rest API allows 10
+	$scope.news = [];
 
-  //css class containers
-  $scope.cssClasses = [];
+	//css class containers
+	$scope.cssClasses = [];
 
-  //animations
-  $scope.anim = [];
-  $scope.anim.header = [];
-  $scope.anim.header.duration 				= '0.3s';
-  $scope.anim.header.delay						= '0.3s';
-  $scope.anim.header.durationMedium		= '0.5s';
-  $scope.anim.lightGreen 							= parallaxHelper.createAnimator(+0.5);
-  $scope.anim.projectContainer				= 0;
-  $scope.currentScrollPosition				= 0;
-  $scope.isAnimating									= false;
-  
-  //less variables - duplicated
-  //also NEED to match the global_styles LESS file
-  $scope.projectOffset		= -90;
-  $scope.newsSectionHeight = 300;
+	//animations
+	$scope.anim = [];
+	$scope.anim.header = [];
+	$scope.anim.header.duration 				= '0.3s';
+	$scope.anim.header.delay						= '0.3s';
+	$scope.anim.header.durationMedium		= '0.5s';
+	$scope.anim.lightGreen 							= parallaxHelper.createAnimator(+0.5);
+	$scope.anim.projectContainer				= 0;
+	$scope.currentScrollPosition				= 0;
+	$scope.isAnimating									= false;
+	$scope.newsHeaderShown							= false;
+	
+	//less variables - duplicated
+	//also NEED to match the global_styles LESS file
+	$scope.projectOffset		= -90;
+	$scope.newsSectionHeight = 300;
 
-  $scope.initWow = function initWow(){
-  	new WOW().init();
-  };
+	$scope.initWow = function initWow(){
+		new WOW().init();
+	};
 
-  $scope.goToProjects = function(){
+	$scope.goToProjects = function(){
 		//move body 90px lower to place the gray line under the fadeit logo
 		$scope.anim.projectContainer = angular.element('#projects').offset();
 		$scope.isAnimating = true;
 
-		angular.element('body').animate({
+		angular.element('body, html').animate({
 			scrollTop: $scope.anim.projectContainer.top + $scope.projectOffset	
 		}, {
 			duration: 100,
 			complete: function(){
 				$scope.isAnimating = false;
-				//get news
-				$scope.loadNews();
-				//remove the class that makes the news with opacity 0 (show the news but don't scroll to it)
-				angular.element('#news-section').removeClass('transparent-always');
 			}
 		});
-  };
+	};
+
+	$scope.initNews = function(){
+		//one-time news trigger when controller is ready
+		$scope.loadNews();
+		//remove the class that makes the news with opacity 0 (show the news but don't scroll to it)
+		angular.element('#news-section').removeClass('transparent-always');
+	};
 
 	$scope.loadNews = function(){
-		$log.info('Trying to load news...');
+		//$log.info('Trying to load news...');
 		//make a request to the api
 		$http.get('twitter-api/').success(function(newsData){
 			if(newsData && newsData !== 'null' && typeof(newsData) !== 'undefined' && !newsData.errors){
@@ -64,23 +68,23 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 				 * if there is no news data, display the next item from the news (older)
 				 * this allows some interactions although the news is not that recent
 				 * the max (oldest) number of tweets is set in the scope -> $scope.currentNewsPosition = 0;
-				 * the max tweets loaded by the API is set in the request URL @ /versioned/twitteroauth/index.php
+				 * the max tweets loaded by the API is set in the request URL @ /twitteroauth/index.php
 				 * all news items are faded out by default
 				 */
 				var newsDataId = newsData[0].id;
 				$scope.cssClasses.newsClasses = 'news-fade-out';
 
 				if ($scope.currentNewsPosition === 0){
-					$log.info('Initial data loaded');
+					//$log.info('Initial news data loaded');
 					//display news and animate containing section
 					$scope.displayNews(newsData[0].created_at, newsData[0].text);
 				}
 				else if($scope.latestNewsId === newsDataId){
-					$log.info('No new data to load, just displaying older items');
+					//$log.info('No new data to load, just displaying older items');
 					$scope.displayNews(newsData[$scope.currentNewsPosition].created_at, newsData[$scope.currentNewsPosition].text);
 				}
 				else{
-					$log.info('Loaded brand new data');
+					//$log.info('Loaded brand new data');
 					//fade out the news for a smooth transition
 					$scope.displayNews(newsData[0].created_at, newsData[0].text);
 				}
@@ -88,7 +92,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 				//any valid data new or old will invoke a fadein
 				setTimeout(function(){
 					$scope.cssClasses.newsClasses = 'news-fade-in';
-				}, 1000);
+				}, 1500);
 				
 				//increase the position of the news (older) or restart
 				if($scope.currentNewsPosition < $scope.maxNewsPosition - 1){
@@ -129,16 +133,16 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 
 		switch(activeCover){
 			case 'sm':
-				cssClass = 'col-xs-3';
+				cssClass = 'col-xs-3 project-size-sm';
 			break;
 			case 'md':
-				cssClass = 'col-xs-6';
+				cssClass = 'col-xs-6 project-size-md';
 			break;
 			case 'lg':
-				cssClass = 'col-xs-12';
+				cssClass = 'col-xs-12 project-size-lg';
 			break;
 			default:
-				cssClass = 'col-xs-12';
+				cssClass = 'col-xs-12 project-size-lg';
 			break;
 		}
 
@@ -151,21 +155,29 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	};
 
 	//observe scroll
+
 	$document.on('scroll mousewheel DOMMouseScroll MozMousePixelScroll MouseScrollEvent', function() {
 		//btw: not using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
 
-		$scope.currentScrollPosition = parseInt(angular.element(window).scrollTop());
-    if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset){
-    	angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
-    	angular.element('.fadeit-logo-small').addClass('visibile-fixed-logo');
-    	angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
-    }
-    else{
-    	angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
-    	angular.element('.fadeit-logo-small').removeClass('visibile-fixed-logo');
-    	angular.element('.transparent-whitebar').addClass('hidden-whitebar');
-    } 
-  });
+		$scope.currentScrollPosition = angular.element(window).scrollTop();
+		if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset && !$scope.newsHeaderShown){
+			angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
+			angular.element('.fadeit-logo-small').addClass('visibile-fixed-logo');
+			angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
+
+			$scope.newsHeaderShown = true;
+		}
+		else if($scope.currentScrollPosition <= $scope.newsSectionHeight + $scope.projectOffset && $scope.newsHeaderShown){
+			angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
+			angular.element('.fadeit-logo-small').removeClass('visibile-fixed-logo');
+			angular.element('.transparent-whitebar').addClass('hidden-whitebar');
+
+			$scope.newsHeaderShown = false;
+		} 
+	});
+
+	//init methods
+	$scope.initNews();
 }]);
 
 angular.module('core').directive('newsAction', ['$location', '$anchorScroll', function($location, $anchorScroll){
@@ -188,9 +200,8 @@ angular.module('core').directive('lastItemWatcher', function(){
 	return {
 		restrict: 'A',
 		link: function(scope, element, attrs){
-			console.log(scope.$index);
-
 			if (scope.$last){
+				scope.goToProjects();
 				scope.initWow();
 			}
 		}
