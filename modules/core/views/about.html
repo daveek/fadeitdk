@@ -1,39 +1,74 @@
 <section class="container-fluid main-container secondary-page-container" data-ng-controller="AboutController">
 	<section class="row-fluid secondary-page-row about-fluid clearfix">
-		<section class="outstanding-container">
+		<section class="outstanding-container clearfix">
 			<section class="default-inner-container">
-			 	<img ng-src="img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
-				<p class="regular-text">
-					We are a software development company that started our voyage in 2013. Since then we have been having fun designing and building applications together with great companies from Aarhus and Copenhagen.
-				</p>
-				<p class="regular-text">
-					We decided to create this company in order to be free to make the right choices. We want to build a strong foundation and use new technologies in order to build efficient, performant and maintanable software.
-				</p>
+				<section class="inner-text">
+					<img ng-src="img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
+					<p class="regular-text">
+						We are a software development company that started our voyage in 2013. Since then we have been having fun designing and building applications together with great companies from Aarhus and Copenhagen.
+					</p>
+					<!--<p class="regular-text">
+						We decided to create this company in order to be free to make the right choices. We want to build a strong foundation and use new technologies in order to build efficient, performant and maintanable software.
+					</p>-->
+				</section>
 			</section>
 		</section>
 
 		<section class="default-inner-container">
-			<h3 class="regular-title">Background</h3>
-			<p class="regular-text">
-				Before fadeit, we have been developing systems for medium-sized telcos in Denmark. Back then, our technology focus was PHP, MySQL, JavaScript. As a CMS system, we were using Drupal and building custom modules for it. We had to also rock the command line and keep our source control game tight. What was outstanding then was our contribution to experience design and general design iterations that not only resulted in beautiful interfaces, but made the HR department's job much easier.
-			</p>
+			<section class="row-fluid clearfix">
+				<section class="col-xs-12 col-sm-12 col-md-9">
+					<h3 class="regular-title">Background</h3>
+					<p class="regular-text">
+						Before fadeit, we were developing systems for medium-sized telcos in Denmark. Back then, our technology focus was PHP, MySQL and JavaScript (we were using Drupal). We had to also rock the command line and keep our source control game tight. We had an outstanding contribution to experience design that not only resulted in beautiful interfaces, but made the HR department's job much easier.
+					</p>
+				</section>
 
-			<figure class="image-container">
-				<img ng-src="img/icons/fadeit_structure.svg" alt="fadeit <3 you"/>
-			</figure>
+				<section class="col-xs-12 col-sm-12 col-md-3">
+					<figure class="image-container">
+						<img ng-src="img/icons/fadeit_bubbles.svg" alt="fadeit logo structure"/>
+					</figure>
+				</section>
+			</section>
 
-			<h3 class="regular-title">Today's world</h3>
-			<p class="regular-text">
-				Since starting up, we have learned a lot. Our systems now are being built with Python and Flask, a mature and light-weight combination. We are using PostgreSQL, Vagrant and puppet to create flexible Virtual Machines that allow fast development. There is much love for JavaScript at fadeit too, we are using Node.js to build, test and automate our code or processes. Our front-ends are powered by AngularJS and our designs became even more thought-through. Lastly, we are now contributing to projects involving IoT and Open Data, we want to develop software that increase the quality of people's lives.
-			</p>
-			<h3 class="regular-title">Our culture</h3>
-			<p class="regular-text">
-				We have been investing plenty of time into sending the right message. Here at fadeit, we have a different perspective on work. We want our projects to be enjoyable and rewarding, not only for us, but for you too. We want to grow together and build awesome software that'll make you and us happy for a long, long time.
-			</p>
+			<section class="row-fluid clearfix">
+				<section class="col-xs-12 col-sm-12 col-md-3">
+					<figure class="image-container">
+						<img ng-src="img/icons/fadeit_terminal.svg" class="icon-image" alt="fadeit terminal image"/>
+					</figure>
+				</section>
+				<section class="col-xs-12 col-sm-12 col-md-9">
+					<h3 class="regular-title">Where we are today</h3>
+					<p class="regular-text">
+						Since starting up, we have learned a lot. Our systems now are being built with Python and Flask, a mature and light-weight combination. We are using PostgreSQL, Vagrant and puppet to create flexible Virtual Machines that allow fast development. There is much love for JavaScript at fadeit too, we are using Node.js to build, test and automate our code or processes. Our front-ends are powered by AngularJS and our designs became even more thought-through. Lastly, we are now contributing to projects involving IoT and Open Data, we want to develop software that increase the quality of people's lives.
+					</p>
+				</section>
+			</section>
 
-			<figure class="image-container">
-				<img ng-src="img/icons/fadeit_heart_love.svg" class="img-heart" alt="fadeit <3 you"/>
-			</figure>
+			<section class="row-fluid clearfix">
+				<section class="col-xs-12 col-sm-12 col-md-7">
+					<h3 class="regular-title">Our culture</h3>
+					<p class="regular-text">
+						We have been investing plenty of time into sending the right message. Here at fadeit, we have a different perspective on work. We want our projects to be enjoyable and rewarding, not only for us, but for you too. We want to grow together and build awesome software that'll make you and us happy for a long, long time.
+					</p>
+				</section>
+				<section class="col-xs-12 col-sm-12 col-md-5">
+					<figure class="image-container">
+						<img ng-src="img/icons/fadeit_structure.svg" alt="fadeit bubbles image"/>
+					</figure>
+				</section>
+			</section>
+
+			<section class="row-fluid clearfix">
+				<section class="col-xs-12">
+					<figure class="image-container img-heart">
+						<img ng-src="img/icons/fadeit_heart_love.svg" class="icon-image" alt="fadeit <3 you"
+						data-center="margin-top:-30px;"
+						data-top-bottom="margin-top:-150px;"
+						data-bottom-top="margin-top:100px;"/>
+					</figure>
+				</section>
+			</section>
+
 		</section>
 	</section>
 </section>
