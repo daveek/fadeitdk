@@ -35,10 +35,6 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$scope.projectOffset			= 0; //the offset in the css is set to 90, meaning that the automatic load scroll would be 'wrong' (too low) by 90px, which is the desired effect
 	$scope.newsSectionHeight	= 300;
 
-	$scope.initWow = function initWow(){
-		new WOW().init();
-	};
-
 	$scope.goToProjects = function goToProjects(){
 		//move body 90px lower to place the gray line under the fadeit logo
 		$scope.anim.projectContainer = angular.element('#projects').offset();
@@ -239,7 +235,10 @@ angular.module('core').directive('lastItemWatcher', function(){
 		link: function(scope, element, attrs){
 			if (scope.$last){
 				scope.goToProjects();
-				scope.initWow();
+
+				setTimeout(function initWowOnLast(){
+					scope.initWow();
+				}, 500);
 			}
 		}
 	};
@@ -289,5 +288,14 @@ angular.module('core').directive('customFooter', function(){
 	return {
 		restrict: 'E',
 		templateUrl: 'modules/core/views/footer.html'
+	};
+});
+
+angular.module('core').directive('reloadWow', function(){
+	return {
+		restrict: 'E',
+		link: function(scope, element, attrs){
+			scope.initWow();
+		}
 	};
 });

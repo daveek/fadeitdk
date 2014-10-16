@@ -35,8 +35,19 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 
 angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCtrl', ['$scope', '$location', function AppCtrl ( $scope, $location ) {
 	//global variables
+	$scope.wow = '';
 	$scope.pageTitle = '';
 	$scope.currentDate = new Date();
+
+	$scope.initWow = function initWow(){
+		$scope.wow = '';
+
+		$scope.wow = new WOW({
+			live: false
+		});
+
+		$scope.wow.init();
+	};
 
   $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
 		window.scrollTo(0,0);
@@ -47,7 +58,6 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 	});
 
 	$scope.$on('changedPage', function changedPage(event, pageTitle){
-		console.log(pageTitle);
 		$scope.pageTitle = pageTitle;
 	});
 }]);

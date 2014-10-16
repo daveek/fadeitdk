@@ -689,6 +689,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 }
 
 .project-preview-container{
+	visibility:hidden;
 	padding:0!important;
 	overflow: hidden;
 	.inline-block();
@@ -932,13 +933,18 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	max-width:1300px;
 
 	.row-fluid{
+		visibility: hidden;
 		margin:30px 0 30px 0;
 		padding-bottom:50px;
 		border-bottom:1px solid whitesmoke;
 
-		&:last-child{
+		&:last-child, &:nth-last-child(2){
 			border-bottom:none;
 		}
+	}
+
+	.visible-row{
+		visibility: visible;
 	}
 
 	@media only screen and (min-width:@bp_xxl){
@@ -1017,6 +1023,10 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .regular-title{
 	margin-top:70px;
 	margin-bottom:20px;
+
+	@media only screen and (min-width:@bp_xxl){
+		margin-top:150px;
+	}
 }
 
 .secondary-page-logo{

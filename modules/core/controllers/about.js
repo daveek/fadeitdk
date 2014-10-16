@@ -3,6 +3,9 @@
 
 angular.module('core').controller('AboutController', ['$scope', '$log', 'parallaxHelper', function ($scope, $log, parallaxHelper) {
 	var s;
+	$scope.anim = [];
+	$scope.anim.delay = '0.7s';
+	$scope.anim.duration = '1s';
 
 	$scope.initSkrollr = function initSkrollr(){
 		s = skrollr.init({
@@ -13,7 +16,7 @@ angular.module('core').controller('AboutController', ['$scope', '$log', 'paralla
 		});
 	};
 
-
+	//init methods
 	$scope.initSkrollr();
 	s.refresh();
 }]);
