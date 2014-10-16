@@ -2,7 +2,7 @@
 /*global moment:false, WOW:false, skrollr:false; */
 //ignoring the above globals, moment() is available through the amMoment service
 
-angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'ProjectPreview', '$location', '$anchorScroll', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, ProjectPreview, $location, $anchorScroll) {
+angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'ProjectPreview', '$location', '$anchorScroll', 'AnimationService', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, ProjectPreview, $location, $anchorScroll, AnimationService) {
 	//load services
 	$scope.projectPreviews = ProjectPreview;
 
@@ -19,13 +19,8 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$scope.nextElementClass = '';
 
 	//animations
-	$scope.anim = [];
-	$scope.anim.header = [];
-	$scope.anim.header.duration 				= '0.3s';
-	$scope.anim.header.delay						= '0.3s';
-	$scope.anim.header.durationMedium		= '0.5s';
-	$scope.anim.lightGreen 							= parallaxHelper.createAnimator(+0.5);
-	$scope.anim.projectContainer				= 0;
+	$scope.anim = AnimationService[0];
+	$scope.anim.custom.projectContainer	= 0;
 	$scope.currentScrollPosition				= 0;
 	$scope.isAnimating									= false;
 	$scope.newsHeaderShown							= false;
@@ -37,11 +32,11 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 
 	$scope.goToProjects = function goToProjects(){
 		//move body 90px lower to place the gray line under the fadeit logo
-		$scope.anim.projectContainer = angular.element('#projects').offset();
+		$scope.anim.custom.projectContainer = angular.element('#projects').offset();
 		$scope.isAnimating = true;
 
 		angular.element('body, html').animate({
-			scrollTop: $scope.anim.projectContainer.top + $scope.projectOffset	
+			scrollTop: $scope.anim.custom.projectContainer.top + $scope.projectOffset	
 		}, {
 			duration: 100,
 			complete: function(){
@@ -295,6 +290,7 @@ angular.module('core').directive('reloadWow', function(){
 	return {
 		restrict: 'E',
 		link: function(scope, element, attrs){
+			console.log('wow');
 			scope.initWow();
 		}
 	};

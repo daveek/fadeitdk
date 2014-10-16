@@ -1,6 +1,6 @@
 'use strict';
 
-// Users service used for communicating with the users REST endpoint
+// Menu service used for creating the main menu
 angular.module('core').factory('MenuData', function() {
 	var menuItems = [{
 			title: 'Projects',
@@ -26,7 +26,7 @@ angular.module('core').factory('MenuData', function() {
 	return menuItems;
 });
 
-// Users service used for communicating with the users REST endpoint
+// Project preview service used for displaying data in the grid preview
 angular.module('core').factory('ProjectPreview', function() {
 	var projectPreviewData = [{
 			id: 'portal',
@@ -184,7 +184,7 @@ angular.module('core').factory('ProjectPreview', function() {
 });
 
 
-// Users service used for communicating with the users REST endpoint
+// Project service used for individual projects
 angular.module('core').factory('ProjectData', function() {
 	var projectData = [{
 			id: 'portal',
@@ -202,3 +202,24 @@ angular.module('core').factory('ProjectData', function() {
 
 	return projectData;
 });
+
+// Animation service used for defining consistent animations
+angular.module('core').factory('AnimationService', function(){
+	var animationData = [{
+		header: {
+			duration: '0.3s',
+			delay: '0.3s',
+			durationMedium: '0.3s'
+		},
+		base: {
+			shortDuration: '0.5s',
+			duration: '1s',
+			delay: '0.7s',
+			longDelay: '1s'
+		},
+		custom: {}
+	}];
+
+	return animationData;
+});
+

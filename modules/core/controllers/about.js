@@ -1,11 +1,10 @@
 /*global skrollr:false; s:false; */
 'use strict';
 
-angular.module('core').controller('AboutController', ['$scope', '$log', 'parallaxHelper', function ($scope, $log, parallaxHelper) {
+angular.module('core').controller('AboutController', ['$scope', '$log', 'parallaxHelper', 'AnimationService', function ($scope, $log, parallaxHelper, AnimationService) {
 	var s;
-	$scope.anim = [];
-	$scope.anim.delay = '0.7s';
-	$scope.anim.duration = '1s';
+	//load services
+	$scope.anim = AnimationService[0];
 
 	$scope.initSkrollr = function initSkrollr(){
 		s = skrollr.init({

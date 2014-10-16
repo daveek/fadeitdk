@@ -1,6 +1,7 @@
 <section class="container-fluid main-container secondary-page-container" data-ng-controller="AboutController">
 	<section class="row-fluid secondary-page-row about-fluid clearfix">
-		<section class="outstanding-container clearfix">
+		
+		<section class="outstanding-container clearfix animate wow fadeInDown" data-wow-duration="{{anim.base.shortDuration}}" data-wow-delay="{{anim.base.delay}}">
 			<section class="default-inner-container">
 				<section class="inner-text">
 					<img ng-src="img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
@@ -15,7 +16,7 @@
 		</section>
 
 		<section class="default-inner-container">
-			<section class="row-fluid clearfix animate wow fadeIn" data-wow-delay="{{anim.delay}}" data-wow-duration="{{anim.duration}}">
+			<section class="row-fluid clearfix animate wow fadeIn" data-wow-delay="{{anim.base.longDelay}}" data-wow-duration="{{anim.base.duration}}">
 				<section class="col-xs-12 col-sm-12 col-md-9">
 					<h3 class="regular-title">Background</h3>
 					<p class="regular-text">
@@ -30,7 +31,7 @@
 				</section>
 			</section>
 
-			<section class="row-fluid clearfix animate wow fadeIn" data-wow-delay="{{anim.delay}}" data-wow-duration="{{anim.duration}}">
+			<section class="row-fluid clearfix animate wow fadeIn" data-wow-delay="{{anim.base.longDelay}}" data-wow-duration="{{anim.base.duration}}">
 				<section class="col-xs-12 col-sm-12 col-md-3">
 					<figure class="image-container">
 						<img ng-src="img/icons/fadeit_terminal.svg" class="icon-image" alt="fadeit terminal image"/>
@@ -44,7 +45,7 @@
 				</section>
 			</section>
 
-			<section class="row-fluid clearfix animate wow fadeIn" data-wow-delay="{{anim.delay}}" data-wow-duration="{{anim.duration}}">
+			<section class="row-fluid clearfix animate wow fadeIn" data-wow-delay="{{anim.base.longDelay}}" data-wow-duration="{{anim.base.duration}}">
 				<section class="col-xs-12 col-sm-12 col-md-7">
 					<h3 class="regular-title">Our culture</h3>
 					<p class="regular-text">
@@ -68,8 +69,8 @@
 					</figure>
 				</section>
 			</section>
-
-			<reload-wow></reload-wow>
 		</section>
+	
+		<reload-wow></reload-wow>
 	</section>
 </section>

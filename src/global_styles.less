@@ -933,13 +933,20 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	max-width:1300px;
 
 	.row-fluid{
+		display: table;
 		visibility: hidden;
-		margin:30px 0 30px 0;
+		margin:100px 0 30px 0;
 		padding-bottom:50px;
 		border-bottom:1px solid whitesmoke;
 
-		&:last-child, &:nth-last-child(2){
-			border-bottom:none;
+		&:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3){
+			border-bottom:none!important;
+		}
+
+		[class*="col-"] {
+			float: none;
+			display: table-cell;
+			vertical-align: middle;
 		}
 	}
 
@@ -955,6 +962,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 }
 
 .outstanding-container{
+	visibility: hidden;
 	background:#E7E7E7;
 	color:@col_text_gray;
 	border-bottom: 10px solid rgba(210, 210, 210, 1);
@@ -1008,7 +1016,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 }
 
 .image-container{
-	margin-top:70px;
+	vertical-align: middle;
 
 	img{
 		max-width: 100%;
@@ -1021,12 +1029,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 }
 
 .regular-title{
-	margin-top:70px;
-	margin-bottom:20px;
-
-	@media only screen and (min-width:@bp_xxl){
-		margin-top:150px;
-	}
+	margin-bottom: 20px;
 }
 
 .secondary-page-logo{
