@@ -11,7 +11,6 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$scope.latestNewsId = 0;
 	$scope.maxNewsPosition = 5; //the maximum amount of news (old) that will displayed - rest API allows 10
 	$scope.news = [];
-	$scope.news.errors = 0;
 
 	//css class containers & vars
 	$scope.cssClasses = [];
@@ -56,8 +55,6 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	};
 
 	$scope.loadNews = function loadNews(){
-		//$log.info('Trying to load news...');
-		//make a request to the api
 		$http.get('twitter-api/').success(function(newsData){
 			if(newsData && newsData !== 'null' && typeof(newsData) !== 'undefined' && !newsData.errors){
 				/* 
@@ -100,21 +97,15 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 
 				//update latest news id
 				$scope.latestNewsId = newsDataId;
-				//reset the error counter
-				$scope.news.errors = 0;
 			}
 			else{
 				$scope.cssClasses.newsClasses = 'news-fade-out';
-				$log.warn('News data could not be loaded');
-				$log.error(newsData);
-				$scope.news.errors ++;
+				$log.warn('News data could not be loaded at this time');
 			}
 		}).error(function(data){
 			//animate new content & remove hidden class
 			$scope.cssClasses.newsClasses = 'news-fade-out';
-			$log.warn('Could not load news');
 			$log.error(data);
-			$scope.news.errors ++;
 		});
 
 		//check for new data in 30 seconds
@@ -290,7 +281,6 @@ angular.module('core').directive('reloadWow', function(){
 	return {
 		restrict: 'E',
 		link: function(scope, element, attrs){
-			console.log('wow');
 			scope.initWow();
 		}
 	};
