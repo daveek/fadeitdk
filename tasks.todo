@@ -1,38 +1,50 @@
 Mandatory:
   ☐ Add cookie prompter
+  ☐ Translation
+  ☐ Enhance contact page
 Bootstrap:
-  ✔ Add twitterOAuth as a dependency @done (14-09-12 23:59)
-  ☐ Move all resources to src, including images, compile with grunt
-  ☐ Create an assets folder (add to git ignore) where all css, img & scripts will be compiled
-  ☐ Selectively load data (core) from modules/core/data repo
-  ☐ Add twitter config example
-  ☐ Separate production / build files
 UX:
-  ✔ check for twitter updates and automatically display them using transitions @done (14-09-11 17:32)
-  ☐ add loader for latest news
-  ✔ handle loading error for tweets (both phh & js) @done (14-09-13 00:00)
-  ☐ display news images next to the text update
   ☐ add background to logo (should not get mixed up with menu on very low heights)
-  ☐ Fix initial loading layout jump
-  ☐ Fix twitter truncated text broken link issue 
 Graphic Design:
   ☐ change fiveico with dot
-  ☐ make loader gif
-Performance:
-  ✔ load js files using requirejs @done (14-09-13 01:12)
-  ✔ reduce image size (jpeg interlaced - progressive) @done (14-09-16 22:32)
-  ✔ kill off twitter api block @done (14-09-16 22:32)
-  ✔ remove animation from cover image @done (14-09-16 22:32)
+Performance & build:
   ☐ remove live reload script if not on localhost
-  ☐ replace the generate class method - load the class data from the model
 
 Other fun things:
   ☐ make 404 page
-  ☐ Move 'data' to bitbucket submodule, ignore core.js services (replace with base)
+  ☐ Move 'data' to bitbucket submodule, ignore core.js services (replace with base / sample)
   ☐ replace jquery with ng-modules?
-  ☐ combine js libraries to make less requests OR use require.js?
-  ☐ combine css libraries into a single resource for less requests
+  ☐ further reduce requests with concat
+
+ Not so important:
+  ☐ Move all resources to src, including images, compile with grunt
+  ☐ Create an assets folder (add to git ignore) where all css, img & scripts will be compiled
+  ☐ Add twitter config example (currently hidden)
+  ☐ Separate production / build files
+  ☐ display news images next to the text update
+
 
  Important Notes:
-   - modified linkify library to not display anything before '//' 
-       -> line 17  |    anch.innerHTML = url.replace( /.*?:\/\//g, '');
+   - (FORKED) modified linkify library to not display anything before '//' 
+       -> line 17  |    anch.innerHTML = url.replace( /.*?:\/\//g, ''); 
+
+
+
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Add twitterOAuth as a dependency @done (14-09-12 23:59) @project(Bootstrap)
+ ✘ Selectively load data (core) from modules/core/data repo @cancelled (14-10-18 00:44) @project(Bootstrap)
+ ✔ check for twitter updates and automatically display them using transitions @done (14-09-11 17:32) @project(UX)
+ ✘ add loader for latest news @cancelled (14-10-18 00:45) @project(UX)
+ ✔ handle loading error for tweets (both phh & js) @done (14-09-13 00:00) @project(UX)
+ ✘ Fix initial loading layout jump @cancelled (14-10-18 00:46) @project(UX)
+ ✘ Fix twitter truncated text broken link issue  @cancelled (14-10-18 00:46) @project(UX)
+ ✘ make loader gif @cancelled (14-10-18 00:46) @project(Graphic Design)
+ ✔ load js files using requirejs @done (14-09-13 01:12) @project(Performance & build)
+ ✔ reduce image size (jpeg interlaced - progressive) @done (14-09-16 22:32) @project(Performance & build)
+ ✔ kill off twitter api block @done (14-09-16 22:32) @project(Performance & build)
+ ✔ remove animation from cover image @done (14-09-16 22:32) @project(Performance & build)
+ ✘ replace the generate class method - load the class data from the model @cancelled (14-10-18 00:47) -- cannot really be done @project(Performance & build)
+ ✔ combine js libraries to make less requests OR use require.js? @done (14-10-18 00:48) @project(Other fun things)
+ ✔ combine css libraries into a single resource for less requests @done (14-10-18 00:48) @project(Other fun things)
