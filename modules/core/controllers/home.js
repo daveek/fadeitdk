@@ -34,7 +34,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		$scope.anim.custom.projectContainer = angular.element('#projects').offset();
 		$scope.isAnimating = true;
 
-		angular.element('body, html').animate({
+		angular.element('body, html').delay(300).animate({
 			scrollTop: $scope.anim.custom.projectContainer.top + $scope.projectOffset	
 		}, {
 			duration: 100,
