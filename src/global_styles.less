@@ -933,21 +933,23 @@ body, p, span, section, article, time, header, footer, aside, nav{
 	max-width:1300px;
 
 	.row-fluid{
+		width:100%;
 		display: table;
+		table-layout:fixed; //this keeps the grid dimensions for cells instead of the cells getting their size from the content
 		visibility: hidden;
 		margin:100px 0 30px 0;
 		padding-bottom:50px;
 		border-bottom:1px solid whitesmoke;
-
-		&:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3){
-			border-bottom:none!important;
-		}
 
 		[class*="col-"] {
 			float: none;
 			display: table-cell;
 			vertical-align: middle;
 		}
+	}
+
+	.final-row{
+		border-bottom:none!important;
 	}
 
 	.visible-row{
