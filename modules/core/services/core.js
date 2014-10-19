@@ -3,7 +3,7 @@
 // Menu service used for creating the main menu
 angular.module('core').factory('MenuData', function() {
 	var menuItems = [{
-			title: 'Projects',
+			title: 'project',
 			link: '',
 			uiRoute: '/'
 		},
@@ -32,8 +32,8 @@ angular.module('core').factory('ProjectPreview', function() {
 			id: 'portal',
 			background: '#AFB1B4',
 			title: 'Portal',
-			link: 'projects/portal',
-			uiRoute: '/projects/portal',
+			link: 'project/portal',
+			uiRoute: '/project/portal',
 			activeCover: 'lg',
 			shortDescription: '',
 			tags: {
@@ -54,8 +54,8 @@ angular.module('core').factory('ProjectPreview', function() {
 			id: 'ymobile',
 			background: '#590B0B',
 			title: 'yMobile',
-			link: 'projects/ymobile',
-			uiRoute: '/projects/ymobile',
+			link: 'project/ymobile',
+			uiRoute: '/project/ymobile',
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
@@ -72,8 +72,8 @@ angular.module('core').factory('ProjectPreview', function() {
 			id: 'ols',
 			background: '#0C7A93',
 			title: 'OLS',
-			link: 'projects/ols',
-			uiRoute: '/projects/ols',
+			link: 'project/ols',
+			uiRoute: '/project/ols',
 			activeCover: 'md',
 			shortDescription: '',
 			tags: {
@@ -98,8 +98,8 @@ angular.module('core').factory('ProjectPreview', function() {
 			id: 'aleris-hamlet',
 			background: '#319E8F',
 			title: 'Aleris/Hamlet',
-			link: 'projects/aleris-hamlet',
-			uiRoute: '/projects/aleris-hamlet',
+			link: 'project/aleris-hamlet',
+			uiRoute: '/project/aleris-hamlet',
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
@@ -120,8 +120,8 @@ angular.module('core').factory('ProjectPreview', function() {
 			id: 'portal',
 			background: '#AFB1B4',
 			title: 'Portal',
-			link: 'projects/portal',
-			uiRoute: '/projects/portal',
+			link: 'project/portal',
+			uiRoute: '/project/portal',
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
@@ -138,8 +138,8 @@ angular.module('core').factory('ProjectPreview', function() {
 			id: 'ols',
 			background: '#0C7A93',
 			title: 'OLS',
-			link: 'projects/ols',
-			uiRoute: '/projects/ols',
+			link: 'project/ols',
+			uiRoute: '/project/ols',
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
@@ -168,8 +168,8 @@ angular.module('core').factory('ProjectPreview', function() {
 			id: 'ymobile',
 			background: '#590B0B',
 			title: 'yMobile',
-			link: 'projects/ymobile',
-			uiRoute: '/projects/ymobile',
+			link: 'project/ymobile',
+			uiRoute: '/project/ymobile',
 			activeCover: 'md',
 			shortDescription: '',
 			tags: {
@@ -184,14 +184,14 @@ angular.module('core').factory('ProjectPreview', function() {
 });
 
 
-// Project service used for individual projects
+// Project service used for individual project
 angular.module('core').factory('ProjectData', function() {
 	var projectData = [{
 			id: 'portal',
 			background: '#AFB1B4',
 			title: 'Portal',
-			link: 'projects/portal',
-			uiRoute: '/projects/portal',
+			link: 'project/portal',
+			uiRoute: '/project/portal',
 			shortDescription: '',
 			tags: {
 				0: 'Drupal',
@@ -214,7 +214,7 @@ angular.module('core').factory('AnimationService', function(){
 		base: {
 			shortDuration: '0.5s',
 			duration: '1s',
-			delay: '0.7s',
+			delay: '0.5s',
 			longDelay: '1s'
 		},
 		custom: {}

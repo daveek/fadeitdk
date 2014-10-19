@@ -69,7 +69,7 @@ module.exports = function(grunt) {
 			//options: { beautify: true, mangle: false, compress: false, }, // <-- DEBUG MODE
 			options: {
 				banner: '/* fadeit js compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-				compress: true,
+				compress: true
 			},
 			appScripts: {
 				src: ['scripts/app.js'],

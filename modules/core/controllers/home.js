@@ -1,6 +1,4 @@
 'use strict';
-/*global moment:false, WOW:false, skrollr:false; */
-//ignoring the above globals, moment() is available through the amMoment service
 
 angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'ProjectPreview', '$location', '$anchorScroll', 'AnimationService', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, ProjectPreview, $location, $anchorScroll, AnimationService) {
 	//load services
@@ -23,7 +21,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$scope.currentScrollPosition				= 0;
 	$scope.isAnimating									= false;
 	$scope.newsHeaderShown							= false;
-	
+
 	//less variables - duplicated
 	//also NEED to match the global_styles LESS file
 	$scope.projectOffset			= 0; //the offset in the css is set to 90, meaning that the automatic load scroll would be 'wrong' (too low) by 90px, which is the desired effect
@@ -35,7 +33,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 		$scope.isAnimating = true;
 
 		angular.element('body, html').delay(300).animate({
-			scrollTop: $scope.anim.custom.projectContainer.top + $scope.projectOffset	
+			scrollTop: $scope.anim.custom.projectContainer.top + $scope.projectOffset
 		}, {
 			duration: 100,
 			complete: function(){
@@ -57,7 +55,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 	$scope.loadNews = function loadNews(){
 		$http.get('twitter-api/').success(function(newsData){
 			if(newsData && newsData !== 'null' && typeof(newsData) !== 'undefined' && !newsData.errors){
-				/* 
+				/*
 				 * if there is no news data, display the next item from the news (older)
 				 * this allows some interactions although the news is not that recent
 				 * the max (oldest) number of tweets is set in the scope -> $scope.currentNewsPosition = 0;
@@ -86,7 +84,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 				setTimeout(function changeNewsClass(){
 					$scope.cssClasses.newsClasses = 'news-fade-in';
 				}, 1500);
-				
+
 				//increase the position of the news (older) or restart
 				if($scope.currentNewsPosition < $scope.maxNewsPosition - 1){
 					$scope.currentNewsPosition++;
@@ -139,7 +137,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 				else if($scope.gridSize === 0){
 					currentGridSize = 0; //if it's at the beginning of the row
 				}
-				
+
 				columnSize = 6;
 			break;
 			case 'lg':
@@ -237,10 +235,10 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 			scope.menuItems = MenuData;
 
 			/*
-			 * Watch looks for changes in the pageTitle bind. Secondary pages will have a title, while others will have an empty string. 
+			 * Watch looks for changes in the pageTitle bind. Secondary pages will have a title, while others will have an empty string.
 			 * Changing the binding will cause the whitebar to be hidden
 			 * If on a secondary page, the whitebar will be shown again after 500ms
-			 * 
+			 *
 			 */
 			scope.$watch('pageTitle', function (titleValue) {
 				angular.element('.transparent-whitebar').addClass('hidden-whitebar');
@@ -258,7 +256,7 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 						scope.directiveTitle = titleValue;
 						scope.$apply();
 					}, 500);
-				} 
+				}
 				else {
 					scope.onSecondaryPage = false;
 					angular.element('#logo-link').removeClass('hidden-always');
@@ -282,6 +280,10 @@ angular.module('core').directive('reloadWow', function(){
 		restrict: 'E',
 		link: function(scope, element, attrs){
 			scope.initWow();
+
+			scope.$watch('wowRefresh', function (refreshValue) {
+				scope.initWow();
+			});
 		}
 	};
 });

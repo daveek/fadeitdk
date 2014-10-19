@@ -1,7 +1,7 @@
 <section class="container-fluid main-container secondary-page-container" data-ng-controller="ProjectController">
 	<section class="row-fluid secondary-page-row project-fluid clearfix">
-		
-		<section class="outstanding-container clearfix animate wow fadeInDown" data-wow-duration="{{anim.base.shortDuration}}" data-wow-delay="{{anim.base.delay}}">
+
+		<section class="outstanding-container clearfix animate wow fadeInDown" data-wow-duration="{{anim.base.shortDuration}}" data-wow-delay="{{anim.base.delay}}" data-ng-if="!project">
 			<section class="default-inner-container">
 				<section class="inner-text">
 					<img ng-src="img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
@@ -12,6 +12,19 @@
 					</p>
 				</section>
 			</section>
+		</section>
+
+		<section class="default-inner-container" data-ng-if="project">
+
+			<section class="row-fluid clearfix animate wow fadeIn" data-wow-delay="{{anim.base.longDelay}}" data-wow-duration="{{anim.base.duration}}">
+				<section class="col-xs-12 col-sm-12 col-md-12">
+					<h3 class="regular-title">{{project.title}}</h3>
+					<p class="regular-text">
+						{{project.link}}
+					</p>
+				</section>
+			</section>
+
 		</section>
 
 		<reload-wow></reload-wow>

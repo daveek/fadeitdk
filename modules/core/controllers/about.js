@@ -1,4 +1,3 @@
-/*global skrollr:false; s:false; */
 'use strict';
 
 angular.module('core').controller('AboutController', ['$scope', '$log', 'parallaxHelper', 'AnimationService', function ($scope, $log, parallaxHelper, AnimationService) {
