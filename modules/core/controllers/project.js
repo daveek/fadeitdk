@@ -25,7 +25,7 @@ angular.module('core').controller('ProjectController', ['$scope', '$stateParams'
 
 		if(!projectExists){
 			//emit info to the parent application module to update the title
-			$scope.$emit('changedPage', $scope.projectId.toUpperCase());
+			$scope.$emit('changedPage', $scope.projectId);
 		}
 	};
 

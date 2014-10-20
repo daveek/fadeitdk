@@ -936,6 +936,12 @@ a{
 	margin-left:0;
 }
 
+.binary{
+  .inline-block();
+  overflow: hidden;
+  .ta-j();
+}
+
 .default-inner-container{
 	padding-left:@sidebar_left_width;
 	max-width:1300px;
@@ -976,14 +982,17 @@ a{
   .social-fluid{
     padding:30px;
     color:@col_text_gray;
-    background:#EDEDED;
+    background:#F5F5F5;
 
     .regular-text{
       color:@col_text_gray;
 
       i{
-        margin-left:2px;
-        margin-right:1px;
+        &:before{
+          .inline-block();
+          width:30px;
+          text-align: center;
+        }
       }
 
       a{
@@ -1053,6 +1062,7 @@ a{
 	.animate(@animation_time_short_w_delay, @transition_default);
 
 	.page-title{
+    text-transform: capitalize;
 		line-height:@projects_offset;
 		margin:0;
 	}
