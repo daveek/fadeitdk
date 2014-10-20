@@ -1,8 +1,8 @@
 Next steps:
-  ☐ Add danish
   ☐ Add team to about page
-  ☐ Export svg's at designated size? fix fine edges
+  ✔ Export svg's at designated size? fix fine edges @done (14-10-21 00:21)
   ☐ Work on the news section
+  ☐ Adjust tags
 
    Tweak:
      ☐ Linkedin, re-arrange
@@ -35,6 +35,7 @@ Other fun things:
   ☐ Add twitter config example (currently hidden)
   ☐ Separate production / build files
   ☐ display news images next to the text update
+  ☐ Add danish
 
 
  Important Notes:
