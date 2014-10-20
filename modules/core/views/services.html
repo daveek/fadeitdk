@@ -1,20 +1,101 @@
 <section class="container-fluid main-container secondary-page-container" data-ng-controller="ServicesController">
 	<section class="row-fluid secondary-page-row services-fluid clearfix">
 
-		<section class="outstanding-container clearfix animate wow fadeInDown"
+    <section class="outstanding-container clearfix animate wow fadeInDown"
     data-wow-duration="{{anim.base.shortDuration}}"
     data-wow-delay="{{anim.base.delay}}">
-			<section class="default-inner-container">
-				<section class="inner-text">
-					<img ng-src="img/icons/fadeit_penguin.svg" alt="fadeit logo" class="secondary-page-logo" />
-					<p class="regular-text">
-						Our services page was destroyed by a pack of wild penguins threating us that they will come back and finish what they started.
-						<br/>
-						We are still recovering...
-					</p>
-				</section>
-			</section>
-		</section>
+
+      <section class="default-inner-container">
+        <section class="inner-text">
+          <img ng-src="img/brand/logo_blue.svg" alt="fadeit logo" class="secondary-page-logo" />
+          <p class="regular-text">
+            We're open to collaboration no matter what development project you have in mind. We've been building Open Data Hubs, IoT Platforms, Decentralized Systems and many more. Let's talk about your ideas.
+          </p>
+        </section>
+      </section>
+    </section>
+
+    <section class="default-inner-container">
+      <section class="row-fluid service-one clearfix animate wow fadeIn"
+      data-wow-delay="{{anim.base.longDelay}}"
+      data-wow-duration="{{anim.base.duration}}">
+
+        <section class="col-xs-12 col-sm-12 col-md-9">
+          <h3 class="regular-title">Back-end development</h3>
+          <p class="regular-text">
+            A project needs a strong foundation and an architecture that will withstand serios refactoring as it grows. We develop back-ends that are easy to deploy using Vagrant Virtual Machines (Puppets). We can build reliable REST architectures that are extendable across systems &amp; devices. With each new project, we are looking for the right tool for the job, therefore we have experience with many technologies, such as: Drupal, CKAN, Flask, Express.js, Node-RED, PostgreSQL, MongoDB and many more.
+          </p>
+        </section>
+
+        <section class="col-xs-12 col-sm-12 col-md-3">
+          <figure class="image-container">
+            <img ng-src="img/icons/fadeit_dot_one.svg" class="icon-image" alt="fadeit service icon"/>
+          </figure>
+        </section>
+      </section>
+
+      <section class="row-fluid service-two clearfix animate wow fadeIn"
+      data-wow-delay="{{anim.base.longDelay}}"
+      data-wow-duration="{{anim.base.duration}}">
+
+        <section class="col-xs-12 col-sm-12 col-md-3">
+          <figure class="image-container">
+            <img ng-src="img/icons/fadeit_dot_two.svg" class="icon-image" alt="fadeit service icon"/>
+          </figure>
+        </section>
+        <section class="col-xs-12 col-sm-12 col-md-9">
+          <h3 class="regular-title">Front-end development</h3>
+          <p class="regular-text">
+            A strong back-end will be worth way more with a matching front-end. On the client side, we build applications using AngularJS. We're also familiar with other libraries or technologies such as: jQuery, Bootstrap, Bower, etc. We have prepared a Boilerplate that's ready to kick-off your projects and test, build and compile them with Grunt.
+          </p>
+        </section>
+      </section>
+
+      <section class="row-fluid service-three clearfix animate wow fadeIn"
+      data-wow-delay="{{anim.base.longDelay}}"
+      data-wow-duration="{{anim.base.duration}}">
+
+        <section class="col-xs-12 col-sm-12 col-md-9">
+          <h3 class="regular-title">Mobile development</h3>
+          <p class="regular-text">
+            We can develop mobile applications on top of our reliable back-ends. We'll be excited to create iOS or Android apps for projects that we see have great potential.
+          </p>
+        </section>
+        <section class="col-xs-12 col-sm-12 col-md-3">
+          <figure class="image-container">
+            <img ng-src="img/icons/fadeit_dot_three.svg" class="icon-image" alt="fadeit service icon"/>
+          </figure>
+        </section>
+      </section>
+
+      <section class="row-fluid service-four final-row clearfix animate wow fadeIn"
+      data-wow-delay="{{anim.base.longDelay}}"
+      data-wow-duration="{{anim.base.duration}}">
+
+        <section class="col-xs-12 col-sm-12 col-md-3">
+          <figure class="image-container">
+            <img ng-src="img/icons/fadeit_dot_four.svg" class="icon-image" alt="fadeit service icon"/>
+          </figure>
+        </section>
+        <section class="col-xs-12 col-sm-12 col-md-9">
+          <h3 class="regular-title">Experience design</h3>
+          <p class="regular-text">
+            Design is at the core of our products. We want to develop modern software with intuitive interfaces that are a joy to use. We'll be happy to develop concepts together, responsive interfaces, mobile designs or even help with your brand image.
+          </p>
+        </section>
+      </section>
+
+      <section class="row-fluid visible-row final-row clearfix">
+        <section class="col-xs-12">
+          <figure class="image-container img-heart">
+            <img ng-src="img/icons/fadeit_heart_love.svg" class="icon-image" alt="fadeit <3 you"
+            data-center="margin-top:-150px;"
+            data-top-bottom="margin-top:-200px;"
+            data-bottom-top="margin-top:100px;"/>
+          </figure>
+        </section>
+      </section>
+    </section>
 
 		<reload-wow></reload-wow>
 	</section>
