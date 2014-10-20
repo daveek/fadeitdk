@@ -218,7 +218,9 @@ angular.module('core').directive('lastItemWatcher', function(){
 		restrict: 'A',
 		link: function(scope, element, attrs){
 			if (scope.$last){
-				scope.goToProjects();
+        if(attrs.grid === 'yes'){
+          scope.goToProjects(); //go to projects if watching grid
+        }
 
 				setTimeout(function initWowOnLast(){
 					scope.initWow();

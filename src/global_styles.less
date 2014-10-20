@@ -67,7 +67,7 @@
 	@animation_time_long:			1000ms;
 	@animation_time_vlong:		1500ms;
 	@transition_default:			ease-in-out;
-	
+
 	/*fonts*/
 	@ff_light:		"BSLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	@ff_default:	"BSBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -258,7 +258,7 @@
 
 	.block(){
 		display:block;
-	}	
+	}
 
 	.inline(){
 		display:inline;
@@ -477,9 +477,9 @@
 
 /*general setup*/
 
-:focus { 
+:focus {
 	outline: none!important;
-	//will have to change this to something beautiful, until then UX will suffer :( 
+	//will have to change this to something beautiful, until then UX will suffer :(
 }
 
 body {
@@ -776,7 +776,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 			opacity: 1;
 			.animate(@animation_time_short_w_delay, @transition_default);
 		}
-	}	
+	}
 }
 
 .project-size-md{
@@ -797,7 +797,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 			opacity: 1;
 			.animate(@animation_time_short_w_delay, @transition_default);
 		}
-	}	
+	}
 }
 
 .dummy-project{
@@ -956,6 +956,17 @@ body, p, span, section, article, time, header, footer, aside, nav{
 		visibility: visible;
 	}
 
+  .project-intro-fluid{
+    margin-bottom:70px;
+    padding-bottom:0px;
+  }
+
+  .paragraph-fluid{
+    margin:0;
+    padding:0;
+    border-bottom:none;
+  }
+
 	@media only screen and (min-width:@bp_xxl){
 		padding-left:0;
 		max-width:1120px;
@@ -1050,6 +1061,10 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .icon-image{
 	border-bottom: 1px solid rgb(160, 157, 157);
 	.border-radius(50%);
+}
+
+.a-tag{
+  margin-right:20px;
 }
 /*end fadeit styles*/
 

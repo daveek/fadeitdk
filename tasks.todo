@@ -1,8 +1,16 @@
+Next steps:
+  ☐ Add danish
+  ☐ Add team to about page
+  ☐ Export svg's at designated size? fix fine edges
+  ☐ Work on the news section
+
 Mandatory:
   ☐ Add cookie prompter
-  ☐ Translation
   ☐ Enhance contact page
+
 Bootstrap:
+  ☐ refactor grunt tasks (add build-compile scenarios)
+
 UX:
   ☐ add background to logo (should not get mixed up with menu on very low heights)
 Graphic Design:
@@ -25,8 +33,8 @@ Other fun things:
 
 
  Important Notes:
-   - (FORKED) modified linkify library to not display anything before '//' 
-       -> line 17  |    anch.innerHTML = url.replace( /.*?:\/\//g, ''); 
+   - (FORKED) modified linkify library to not display anything before '//'
+       -> line 17  |    anch.innerHTML = url.replace( /.*?:\/\//g, '');
 
 
 

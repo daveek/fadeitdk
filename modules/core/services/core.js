@@ -3,7 +3,7 @@
 // Menu service used for creating the main menu
 angular.module('core').factory('MenuData', function() {
 	var menuItems = [{
-			title: 'project',
+			title: 'projects',
 			link: '',
 			uiRoute: '/'
 		},
@@ -188,16 +188,27 @@ angular.module('core').factory('ProjectPreview', function() {
 angular.module('core').factory('ProjectData', function() {
 	var projectData = [{
 			id: 'portal',
-			background: '#AFB1B4',
+			color: {
+				base: '#A91400',
+				accent: '#8C0000',
+				text: '#FFFFFF'
+			},
 			title: 'Portal',
 			link: 'project/portal',
 			uiRoute: '/project/portal',
-			shortDescription: '',
 			tags: {
 				0: 'Drupal',
 				1: 'UX Design',
 				2: 'Responsive'
-			} //max 3 tags
+			},
+			content: {
+				shortDescription: 'A management and overview tool for telcos',
+        paragraphs: {
+          0: 'We started this project in order to help IPVision to build a tool that allows them to manageme user subscriptions, data packages and accounts within internally. The application offers overview of client consumption and allows gives the administrators tools to quickly switch between users, view reports and do changes to their accounts.',
+          1: 'We\'ve built the system on a base Drupal instance, creating everything else from scratch. A special focus was put on experience design and mobile device optimazitation.',
+          2: 'The challenge behind this project was to create a responsive front-end application that gives overview and control over a company\'s users. It had to offer a detailed representation of call, SMS, MMS and data consumption and allow users to quickly switch between subscriptions and addon plans.'
+        }
+			}
 		}];
 
 	return projectData;
@@ -214,6 +225,8 @@ angular.module('core').factory('AnimationService', function(){
 		base: {
 			shortDuration: '0.5s',
 			duration: '1s',
+      longDuration: '1.5s',
+      shortDelay: '0.2s',
 			delay: '0.5s',
 			longDelay: '1s'
 		},

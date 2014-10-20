@@ -13,10 +13,14 @@
   </a>
 
   <ul class="menu-link-list">
-    <li class="menu-link-item" data-ng-repeat="item in menuItems" data-ng-class="{'activeMenu': $uiRoute}" ui-route="{{item.uiRoute}}">
+    <li class="menu-link-item"
+    data-ng-repeat="item in menuItems"
+    data-ng-class="{'activeMenu': $uiRoute}"
+    ui-route="{{item.uiRoute}}">
       <a href="#!/{{item.link}}" class="menu-anchor main-menu-anchor">
         {{item.title}}
       </a>
     </li>
+
   </ul>
 </nav>
