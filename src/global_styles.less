@@ -530,6 +530,14 @@ body, p, span, section, article, time, header, footer, aside, nav{
 		line-height:@lh_medium;
 	}
 }
+
+a{
+  color:@col_fadeit;
+
+  &:hover{
+    color:@col_fadeit_c;
+  }
+}
 /*end general setup*/
 
 /*fadeit styles*/
@@ -961,10 +969,32 @@ body, p, span, section, article, time, header, footer, aside, nav{
     padding-bottom:0px;
   }
 
-  .paragraph-fluid{
-    margin:0;
-    padding:0;
+  .cover-fluid{
     border-bottom:none;
+  }
+
+  .social-fluid{
+    padding:30px;
+    color:@col_text_gray;
+    background:#EDEDED;
+
+    .regular-text{
+      color:@col_text_gray;
+
+      i{
+        margin-left:2px;
+        margin-right:1px;
+      }
+
+      a{
+        color:@col_text_gray;
+
+        &:hover{
+          text-decoration: none;
+          color:@b;
+        }
+      }
+    }
   }
 
 	@media only screen and (min-width:@bp_xxl){
@@ -976,7 +1006,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 .outstanding-container{
 	visibility: hidden;
-	background:#E7E7E7;
+	background:#EDEDED;
 	color:@col_text_gray;
 	border-bottom: 10px solid rgba(210, 210, 210, 1);
 	margin-left:-30px;
@@ -987,7 +1017,12 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 	.regular-text{
 		margin-top:20px;
+    font-family: @ff_default;
 	}
+
+  .bold-text{
+    font-family: @ff_bold;
+  }
 
 	img{
 		margin-left:50px;
@@ -1039,6 +1074,7 @@ body, p, span, section, article, time, header, footer, aside, nav{
 .regular-text{
 	margin-bottom:30px;
 	color: @col_text_gray;
+  font-family: @ff_light;
 }
 
 .regular-title{
@@ -1065,6 +1101,88 @@ body, p, span, section, article, time, header, footer, aside, nav{
 
 .a-tag{
   margin-right:20px;
+}
+
+.single-project-cover{
+  img{
+    max-width:100%;
+  }
+}
+
+.single-project-intro{
+  padding-left:35px;
+  padding-right:35px;
+
+  .regular-text{
+    font-family: @ff_light;
+    font-size: @fs_body;
+  }
+}
+
+.project-details{
+  visibility: hidden;
+  margin: -65px 0 0 15px;
+  padding: 30px 35px 20px 35px;
+
+  .paragraph-fluid{
+    margin:0;
+    padding:0;
+    border-bottom:none;
+
+    h3{
+      padding:0;
+    }
+  }
+}
+
+.project-screens{
+  padding-left:15px;
+
+  .project-screen{
+    visibility: hidden;
+    margin:30px 0 30px 0;
+
+    &:first-child{
+      margin-top:0px;
+    }
+
+    &:nth-child(odd){
+      img{
+        float:left;
+        border-right:5px solid;
+      }
+
+      figcaption{
+        float:right;
+      }
+    }
+
+    &:nth-child(even){
+      img{
+        float:right;
+        border-left:5px solid;
+      }
+
+      figcaption{
+        float:left;
+      }
+    }
+
+    img{
+      border: 1px solid whitesmoke;
+      width:70%;
+      max-width:100%;
+    }
+
+    figcaption{
+      padding:35px;
+      width:30%;
+    }
+  }
+}
+
+.project-extras{
+  margin-top:20px;
 }
 /*end fadeit styles*/
 

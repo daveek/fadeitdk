@@ -40,14 +40,70 @@
 				</section>
 			</section>
 
-			<section class="row-fluid paragraph-fluid clearfix animate wow fadeIn"
+			<section class="row-fluid cover-fluid clearfix animate wow fadeIn"
+			data-wow-delay="{{anim.base.longDelay}}"
+			data-wow-duration="{{anim.base.duration}}">
+				<section class="col-xs-12 col-sm-8 col-md-8 single-project-cover">
+					<img ng-src="img/projects/{{project.id}}/{{project.images.cover}}" alt="{{project.title}} project" />
+				</section>
+
+				<section class="col-xs-12 col-sm-4 col-md-4 single-project-intro"
+				data-ng-style="{'background': project.color.base}">
+					<h3 data-ng-style="{'color': project.color.text}">
+						{{project.content.intro.heading}}
+					</h3>
+					<p class="regular-text" data-ng-style="{'color': project.color.text}">
+						{{project.content.intro.text}}
+					</p>
+				</section>
+			</section>
+
+
+			<article class="project-details animate wow fadeIn"
 			data-wow-delay="{{anim.base.longDelay}}"
 			data-wow-duration="{{anim.base.duration}}"
-			data-ng-repeat='text in project.content.paragraphs'
-			last-item-watcher>
-				<section class="col-xs-12 col-sm-12 col-md-12">
-					<p class="regular-text">{{text}}</p>
+			data-ng-style="{'background': project.color.light, 'color': project.color.darkText }">
+				<section class="paragraph-fluid clearfix">
+					<h3>{{project.content.mainHeading}}</h3>
 				</section>
+
+				<section class="paragraph-fluid clearfix"
+				data-ng-repeat='text in project.content.paragraphs'
+				last-item-watcher>
+					<p class="regular-text" data-ng-style="{'color': project.color.darkText}">{{text}}</p>
+				</section>
+			</article>
+
+
+			<article class="project-details project-extras animate wow fadeIn"
+			data-wow-delay="{{anim.base.longDelay}}"
+			data-wow-duration="{{anim.base.duration}}" data-ng-if='project.url || project.images.screens'>
+				<h3>Images and where to go next</h3>
+
+				<section class="url-fluid clearfix" data-ng-if="project.url">
+					<p class="regular-text">
+						<span class="url-text">{{project.url.text}}</span>
+						<a href="{{project.url.link}}" target="_blank"
+						data-ng-style="{'color': project.color.base}">
+							{{project.url.title}}
+						</a>
+					</p>
+				</section>
+			</article>
+
+			<section class="project-screens clearfix" data-ng-if="project.images.screens">
+				<figure class="project-screen clearfix animate wow fadeIn"
+				data-ng-repeat="screen in project.images.screens"
+				data-wow-delay="{{anim.base.longDelay}}"
+				data-wow-duration="{{anim.base.duration}}"
+				data-ng-style="{'background': project.color.light}"
+				last-item-watcher>
+					<img data-ng-src="img/projects/{{project.id}}/screens/{{screen.filename}}" alt="{{project.title}} screenshot" data-ng-style="{'border-color': '{{project.color.lightAccent}}'}"/>
+					<figcaption data-ng-style="{'color': project.color.darkText}">
+						<h3>{{screen.title}}</h3>
+						<p class="regular-text">{{screen.desc}}</p>
+					</figcaption>
+				</figure>
 			</section>
 
 		</section>

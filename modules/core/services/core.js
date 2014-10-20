@@ -191,7 +191,10 @@ angular.module('core').factory('ProjectData', function() {
 			color: {
 				base: '#A91400',
 				accent: '#8C0000',
-				text: '#FFFFFF'
+				text: '#FFFFFF',
+        darkText: '#333333',
+        light: '#F9F9F9',
+        lightAccent: '#E7E8EA'
 			},
 			title: 'Portal',
 			link: 'project/portal',
@@ -201,12 +204,51 @@ angular.module('core').factory('ProjectData', function() {
 				1: 'UX Design',
 				2: 'Responsive'
 			},
+      images: {
+        cover: 'cover_sm@2x.jpg',
+        screens: {
+          0: {
+            filename: '0.png',
+            title: 'Dashboard / App home',
+            desc: 'The front page of the application, displaying the user consumption for the selected period of time.'
+          },
+          1: {
+            filename: '1.png',
+            title: 'Consumption Overview (line chart)',
+            desc: 'A detailed view of the "talk" consumption for the selected period.'
+          },
+          2: {
+            filename: '2.png',
+            title: 'Subscription Management',
+            desc: 'A detailed subscription view for the selected user.'
+          },
+          3: {
+            filename: '3.png',
+            title: 'User Account Overview',
+            desc: 'The user account main page, displaying general user info.'
+          },
+          4: {
+            filename: '4.png',
+            title: 'Mobile Views',
+            desc: 'An overview of the responsive implementation.'
+          }
+        }
+      },
+      url: {
+        title: 'Portal prototype',
+        link: 'http://danmind.ru/portal/main',
+        text: 'To view the initial prototype for this application, go here: '
+      },
 			content: {
 				shortDescription: 'A management and overview tool for telcos',
+        intro: {
+          heading: 'Optimizing processes',
+          text: 'We helped IPVision build a tool that they can use to manage user subscriptions, data packages and accounts. The application offers overview of client consumption and allows quick switching between user and company accounts.'
+        },
+        mainHeading: 'Project description',
         paragraphs: {
-          0: 'We started this project in order to help IPVision to build a tool that allows them to manageme user subscriptions, data packages and accounts within internally. The application offers overview of client consumption and allows gives the administrators tools to quickly switch between users, view reports and do changes to their accounts.',
-          1: 'We\'ve built the system on a base Drupal instance, creating everything else from scratch. A special focus was put on experience design and mobile device optimazitation.',
-          2: 'The challenge behind this project was to create a responsive front-end application that gives overview and control over a company\'s users. It had to offer a detailed representation of call, SMS, MMS and data consumption and allow users to quickly switch between subscriptions and addon plans.'
+          0: 'We built the system on a base Drupal system, creating everything else from scratch. A special focus was put on experience design and mobile device optimazitation.',
+          1: 'The challenge behind this project was to create a robust, extensible application that aligns with the rapid changes in telcos. It had to offer a detailed representation of call, SMS, MMS and data consumption and allow users to quickly switch between subscriptions and addon plans.'
         }
 			}
 		}];
