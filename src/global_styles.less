@@ -114,6 +114,7 @@
 	@dot_width_height:	60px;
 	@dot_base:					5px;
 	@dot_border:				(@dot_width_height / 10)*2 + @dot_base;
+  @social_icon_width:  40px;
 
 	/*shared with Angular*/
 	//home controller
@@ -940,9 +941,15 @@ a{
 	margin-left:0;
 }
 
+.contact-fluid{
+  .contact-block{
+    padding: 35px;
+  }
+}
+
 .services-fluid{
   .outstanding-container{
-    background:@col_fadeit;
+    background:#DEF7FF;
     border-color:@col_fadeit_c;
 
     .default-inner-container{
@@ -1015,29 +1022,50 @@ a{
   }
 
   .social-fluid{
-    padding:30px;
     color:@col_text_gray;
-    background:#F5F5F5;
+    //background:#F5F5F5;
+    //.ta-c();
+
+    .social-block{
+      //background:whitesmoke;
+      .ta-c();
+
+      .icons-container{
+        //margin-left:60px;
+        color:@col_text_gray;
+        .animate(@animation_time_short, @transition_default);
+            color:@b;
+
+        &:hover{
+          .animate(@animation_time_short_w_delay, @transition_default);
+
+          .social-link{
+            .animate(@animation_time_short_w_delay, @transition_default);
+            color:@col_fadeit_c;
+          }
+        }
+
+        .social-link{
+          .inline-block();
+          .border-box();
+          //background: #EDEDED;
+          color: @col_text_gray;
+          width:45px;
+          font-size: 28px;
+          line-height: 33px;
+          .animate(@animation_time_short, @transition_default);
+
+          &:hover{
+            //background: @col_text_gray;
+            color:@col_fadeit;
+            .animate(@animation_time_short, @transition_default);
+          }
+        }
+      }
+    }
 
     .regular-text{
       color:@col_text_gray;
-
-      i{
-        &:before{
-          .inline-block();
-          width:30px;
-          text-align: center;
-        }
-      }
-
-      a{
-        color:@col_text_gray;
-
-        &:hover{
-          text-decoration: none;
-          color:@b;
-        }
-      }
     }
   }
 
@@ -1071,10 +1099,6 @@ a{
 	img{
 		margin-left:50px;
 		float:right;
-	}
-
-	.default-inner-container{
-
 	}
 
 	@media only screen and (min-width:@bp_xxl){
