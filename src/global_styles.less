@@ -949,12 +949,12 @@ a{
 
 .services-fluid{
   .outstanding-container{
-    background:#DEF7FF;
-    border-color:@col_fadeit_c;
+    background:whitesmoke;
+    //border-color:@col_text_gray;
 
     .default-inner-container{
       .regular-text{
-        color:@col_fadeit_c;
+        //color:@col_text_gray;
       }
     }
   }
@@ -974,6 +974,26 @@ a{
 
     .service-four{
       color:@col_last_green;
+    }
+
+    .row-fluid{
+      &:nth-child(odd){
+        .rounded-border{
+          .fr();
+        }
+      }
+
+      &:nth-child(even){
+        .rounded-border{
+          .fl();
+        }
+      }
+
+      &:last-child{
+        .rounded-border{
+          float:none;
+        }
+      }
     }
   }
 }
