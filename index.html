@@ -2,8 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="AppCtrl">
 
 <head>
-	<title data-ng-if="pageTitle">{{pageTitle}} - fadeit, software development agency</title>
-	<title data-ng-if="!pageTitle">fadeit - software development agency</title>
+	<title ng-bind="htmlTitle"></title>
 
 	<!-- General META -->
 	<meta charset="utf-8">
@@ -86,7 +85,7 @@
 	</script>
 	<div id="fb-root"></div>
 	<!--! end facebook init-->
-	
+
 	<!-- fb-like example
 
 	<div
@@ -95,7 +94,7 @@
 	  data-width="450"
 	  data-show-faces="true">
 	</div>-->
-	
+
 	<!-- all page & template content -->
 	<left-sidebar-menu></left-sidebar-menu>
 	<data-ui-view></data-ui-view>

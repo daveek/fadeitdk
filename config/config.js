@@ -54,11 +54,13 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 
 		if ( angular.isDefined( toState.data.pageTitle ) ) {
 			$scope.pageTitle = toState.data.pageTitle ;
+      $scope.htmlTitle = toState.data.pageTitle + ' fadeit - software development agency';
 		}
 	});
 
 	$scope.$on('changedPage', function changedPage(event, pageTitle){
 		$scope.pageTitle = pageTitle;
+    $scope.htmlTitle = pageTitle + 'fadeit - software development agency';
 	});
 }]);
 

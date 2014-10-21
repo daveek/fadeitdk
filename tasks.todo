@@ -19,7 +19,7 @@ Bootstrap:
 UX:
   ☐ add background to logo (should not get mixed up with menu on very low heights)
 Graphic Design:
-  ☐ change fiveico with dot
+  ☐ change fiveico with dot?
 Performance & build:
   ☐ remove live reload script if not on localhost
 
