@@ -13,12 +13,13 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
 	}
 
 	if(!$rootScope.ballsLoaded){
-		angularLoad.loadScript('balls/balls.js').then(function() {
+		angularLoad.loadScript('scripts/technologies.min.js').then(function() {
 			init();
 			addTechnologies();
 			play();
 			$rootScope.ballsLoaded = true;
 		}).catch(function() {
+			//TODO: list technologies differently?
 			console.log('failed to load');
 		});
 	}
