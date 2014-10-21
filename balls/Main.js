@@ -5,25 +5,15 @@ var delta = [ 0, 0 ];
 var stage = [ window.screenX, window.screenY, window.innerWidth, window.innerHeight ];
 getBrowserDimensions();
 
-var themes = [
-      [ "#FFFFFF",
+var theme = [ 
+      "#FFFFFF",
       "RGBA(3, 123, 145, 1)",
       "RGBA(0, 159, 201, 0.9)",
       "RGBA(10, 173, 223, 0.9)",
       "RGBA(196, 196, 196, 0.3)",
       "RGBA(215, 216, 216, 0.5)",
       "RGBA(232, 233, 233, 1)"
-      ],
-      [ "#FFFFFF", "#95AB63", "#BDD684", "#E2F0D6", "#F6FFE0" ],
-  		[ "#362C2A", "#732420", "#BF734C", "#FAD9A0", "#736859" ],
-  		[ "#0D1114", "#102C2E", "#695F4C", "#EBBC5E", "#FFFBB8" ],
-  		[ "#2E2F38", "#FFD63E", "#FFB54B", "#E88638", "#8A221C" ],
-  		[ "#121212", "#E6F2DA", "#C9F24B", "#4D7B85", "#23383D" ],
-  		[ "#343F40", "#736751", "#F2D7B6", "#BFAC95", "#8C3F3F" ],
-  		[ "#000000", "#2D2B2A", "#561812", "#B81111", "#FFFFFF" ],
-  		[ "#333B3A", "#B4BD51", "#543B38", "#61594D", "#B8925A" ]
-    ];
-var theme;
+      ];
 
 var worldAABB, world, iterations = 1, timeStep = 1 / 15;
 
@@ -44,9 +34,6 @@ var gravity = { x: 0, y: 1 };
 var PI2 = Math.PI * 2;
 
 var timeOfLastTouch = 0;
-
-init();
-play();
 
 function init() {
 
@@ -72,59 +59,35 @@ function init() {
 	world = new b2World( worldAABB, new b2Vec2( 0, 0 ), true );
 
 	setWalls();
-	reset();
+	start();
 }
-
 
 function play() {
-
 	setInterval( loop, 1000 / 40 );
 }
-
-function reset() {
-
+function clear() {
 	var i;
-
 	if ( bodies ) {
-
 		for ( i = 0; i < bodies.length; i++ ) {
-
 			var body = bodies[ i ]
 			canvas.removeChild( body.GetUserData().element );
 			world.DestroyBody( body );
 			body = null;
 		}
 	}
-
-	// color theme
-	theme = themes[ Math.random() * themes.length >> 0 ];
-	theme = themes[0];//1,8
 	document.body.style[ 'backgroundColor' ] = theme[ 0 ];
-
+}
+function start(){
 	bodies = [];
 	elements = [];
-
-	createInstructions('Vagrant',225,1,40);
-	createInstructions('AngularJS',250,1,40,true);
-	createInstructions('Linux',270,2,60);
-	createInstructions('Puppet',175,3,35);
-	createInstructions('Docker',150,1,32);
-
-	createInstructions('Python',250,2,40);
-	createInstructions('Flask',200,3,40);
-	createInstructions('Apache',250,1,40);
-	createInstructions('PHP',170,4,40);
-	createInstructions('Nginx',200,1,40);
-	createInstructions('S',100,1,40);
 	for( i = 0; i < 10; i++ ) {
-
 		createBall();
-
 	}
-
 }
-
-//
+function reset() {
+	clear();
+	start();
+}
 
 function onDocumentMouseDown() {
 
@@ -145,8 +108,7 @@ function onDocumentMouseMove( event ) {
 }
 
 function onDocumentDoubleClick() {
-
-	reset();
+	//reset();
 }
 
 function onDocumentTouchStart( event ) {
@@ -208,9 +170,8 @@ function onWindowDeviceOrientation( event ) {
 
 }
 
-//
 
-function createInstructions(display,size,num_circles,font_size,bold) {
+function createTech(display,size,num_circles,font_size,bold) {
 
 	var element = document.createElement( 'div' );
 	element.width = size;
@@ -219,7 +180,7 @@ function createInstructions(display,size,num_circles,font_size,bold) {
 	element.style.left = -0 + 'px';
 	element.style.top = -0 + 'px';
 	element.style.cursor = "pointer";
-
+	//element.title = "sample";
 	canvas.appendChild(element);
 	elements.push( element );
 
@@ -231,13 +192,13 @@ function createInstructions(display,size,num_circles,font_size,bold) {
 	var count = 0;
 	var i = size;
 	while(count <= num_circles){
-    //inner circle color
-    if(count === num_circles){
-        graphics.fillStyle = "#0fade1";
-    }
-    else{
-      graphics.fillStyle = theme[ (Math.random() * 5 >> 0) + 1];
-    }
+		//inner circle color
+       		if(count === num_circles){
+        		graphics.fillStyle = "#0fade1";
+		}
+		else{
+       		 	graphics.fillStyle = theme[ (Math.random() * 5 >> 0) + 1];
+	   	 }
 		graphics.beginPath();
 		graphics.arc(size * .5, size * .5, i * .5, 0, PI2, true);
 		graphics.closePath();
@@ -252,7 +213,7 @@ function createInstructions(display,size,num_circles,font_size,bold) {
 	}
 	text = document.createElement( 'div' );
 	text.onSelectStart = null;
-  //set text color
+	//set text color
 	text.innerHTML = '<span style="color:#FFFFFF;font-size:'+font_size+'px;'+font_weight+'">'+display+'</span>';
 	text.style.color = theme[1];
 	text.style.position = 'absolute';
@@ -328,8 +289,6 @@ function createBall( x, y ) {
 	b2body.linearVelocity.Set( Math.random() * 400 - 200, Math.random() * 400 - 200 );
 	bodies.push( world.CreateBody(b2body) );
 }
-
-//
 
 function loop() {
 

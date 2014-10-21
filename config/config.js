@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'fadeit';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'angularMoment', 'linkify', 'duParallax'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'angularMoment', 'linkify', 'duParallax', 'angularLoad'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName) {
@@ -71,4 +71,5 @@ angular.element(document).ready(function() {
 
 	//Then init the app
 	angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
+	console.log('strapped!');
 });
