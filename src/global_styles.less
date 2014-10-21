@@ -51,6 +51,7 @@
 	@w:									#FFFFFF;
 	@w_c:								#E7E7E7;
 	@b:									#000000;
+  @ws:                #F5F5F5;
 
 	//grays - built as a parallel to the logo underline shades
 	@col_fadeit_gray:				@w_c;
@@ -949,7 +950,7 @@ a{
 
 .services-fluid{
   .outstanding-container{
-    background:whitesmoke;
+    background:@ws;
     //border-color:@col_text_gray;
 
     .default-inner-container{
@@ -1015,7 +1016,7 @@ a{
 		visibility: hidden;
 		margin:100px 0 30px 0;
 		padding-bottom:50px;
-		border-bottom:1px solid whitesmoke;
+		border-bottom:1px solid @ws;
 
 		[class*="col-"] {
 			float: none;
@@ -1043,11 +1044,11 @@ a{
 
   .social-fluid{
     color:@col_text_gray;
-    //background:#F5F5F5;
+    //background:@ws;
     //.ta-c();
 
     .social-block{
-      //background:whitesmoke;
+      //background:@ws;
       .ta-c();
 
       .icons-container{
@@ -1098,9 +1099,11 @@ a{
 
 .outstanding-container{
 	visibility: hidden;
-	background:#EDEDED;
+	//background:#EDEDED;
+  background:@ws;
 	color:@col_text_gray;
-	border-bottom: 10px solid rgba(210, 210, 210, 1);
+	//border-bottom: 10px solid rgba(210, 210, 210, 1);
+  border-bottom:8px solid #EAEAEA;
 	margin-left:-30px;
 	margin-right:-30px;
 	margin-top: -60px;
@@ -1118,7 +1121,7 @@ a{
 
 	img{
 		margin-left:50px;
-		float:right;
+		.fr();
 	}
 
 	@media only screen and (min-width:@bp_xxl){
@@ -1259,28 +1262,28 @@ a{
 
     &:nth-child(odd){
       img{
-        float:left;
+        .fl();
         border-right:5px solid;
       }
 
       figcaption{
-        float:right;
+        .fr();
       }
     }
 
     &:nth-child(even){
       img{
-        float:right;
+        .fr();
         border-left:5px solid;
       }
 
       figcaption{
-        float:left;
+        .fl();
       }
     }
 
     img{
-      border: 1px solid whitesmoke;
+      border: 1px solid @ws;
       width:70%;
       max-width:100%;
     }
