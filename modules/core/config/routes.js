@@ -1,7 +1,7 @@
 'use strict';
 
 // Setting up route
-angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locationProvider', 
+angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
 	function($stateProvider, $urlRouterProvider, $locationProvider) {
 		// Redirect to home view when route not found
 		$urlRouterProvider.otherwise('/');
@@ -41,6 +41,13 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 			templateUrl: 'modules/core/views/single-project.html',
 			data: {
 				pageTitle: ''
+			}
+		}).
+		state('technologies', {
+			url: '/technologies',
+			templateUrl: 'modules/core/views/technologies.html',
+			data: {
+				pageTitle: 'Technologies'
 			}
 		});
 	}

@@ -878,15 +878,23 @@ a{
 	color:@col_dark_gray;
 	.animate(@animation_time_short, @transition_default);
 
-	&:hover{
-		color:@col_fadeit;
-		text-decoration: none;
-		.animate(@animation_time_short, @transition_default);
-	}
-
 	&:visited, &:focus{
 		text-decoration: none;
 	}
+
+  &:visited{
+    color:@col_dark_gray;
+  }
+
+  &:focus{
+    color:@col_dark_gray;
+  }
+
+  &:hover{
+    color:@col_fadeit;
+    text-decoration: none;
+    .animate(@animation_time_short, @transition_default);
+  }
 }
 
 .activeMenu{

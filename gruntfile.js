@@ -68,8 +68,9 @@ module.exports = function(grunt) {
 		uglify: {
 			//options: { beautify: true, mangle: false, compress: false, }, // <-- DEBUG MODE
 			options: {
+        beautify: true, mangle: false, compress: false,
 				banner: '/* fadeit js compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
-				compress: true
+				//compress: true
 			},
 			appScripts: {
 				src: ['scripts/app.js'],
@@ -104,7 +105,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	//Load NPM tasks 
+	//Load NPM tasks
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-less');
