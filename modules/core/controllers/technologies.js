@@ -27,5 +27,10 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
 	}
 	$scope.$on('$destroy', function(){
 		clear();
+		var unbind = function(){};
+		document.onmousedown = unbind;
+		document.onmouseup = unbind;
+		document.onmousemove = unbind;
+		document.ondblclick = unbind;
 	});
 }]);
