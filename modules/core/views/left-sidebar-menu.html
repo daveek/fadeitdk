@@ -12,7 +12,7 @@
     <img ng-src="img/brand/logo_full.svg" alt="fadeit logo" class="fadeit-logo-small"/>
   </a>
 
-  <ul class="menu-link-list">
+  <ul class="menu-link-list menu-{{directiveTitle}}">
     <li class="menu-link-item"
     data-ng-repeat="item in menuItems"
     data-ng-class="{'activeMenu': $uiRoute}"

@@ -21,10 +21,6 @@ angular.module('core').factory('MenuData', function() {
 			title: 'Contact',
 			link: 'contact',
 			uiRoute: '/contact'
-		},
-		{	title: 'Technologies',
-			link: 'technologies',
-			uiRoute: '/technologies'
 		}];
 
 	return menuItems;
