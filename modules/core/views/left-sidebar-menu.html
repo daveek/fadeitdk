@@ -1,16 +1,14 @@
 <nav class="main-menu left-sidebar">
   <section class="transparent-whitebar">
     <a class="menu-anchor newsAction transparent-always" href="#!" id="news-link">News</a>
-    <section class="secondary-page-title" data-ng-show="directiveTitle">
-      <h2 class="page-title">
-        {{directiveTitle}}
-        </h2>
+    <section class="secondary-page-title" data-ng-if="!directiveImage">
+      <h2 class="page-title">{{directiveTitle}}</h2>
     </section>
   </section>
 
-  <a href="#!" id="logo-link">
-    <img ng-src="img/brand/logo_full.svg" alt="fadeit logo" class="fadeit-logo-small"/>
-  </a>
+  <span id="logo-link" data-ng-if="!directiveTitle">
+    <img ng-src="{{directiveImage || ''}}" class="fadeit-logo-small"/>
+  </span>
 
   <ul class="menu-link-list menu-{{directiveTitle}}">
     <li class="menu-link-item"
@@ -21,6 +19,5 @@
         {{item.title}}
       </a>
     </li>
-
   </ul>
 </nav>

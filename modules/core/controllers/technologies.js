@@ -1,10 +1,7 @@
 'use strict';
 
 angular.module('core').controller('TechnologiesController', ['angularLoad', '$rootScope', '$scope', 'TechnologiesService',function (angularLoad, $rootScope, $scope, TechnologiesService) {
-	/*global play*/
-	/*global init*/
-	/*global clear*/
-	/*global createTech*/
+
 	function addTechnologies(){
 		var technologies = TechnologiesService.getTechnologies();
 		angular.forEach(technologies,function(tech){

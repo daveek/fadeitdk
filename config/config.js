@@ -29,16 +29,34 @@ angular.module(ApplicationConfiguration.applicationModuleName, ApplicationConfig
 angular.module(ApplicationConfiguration.applicationModuleName).config(['$locationProvider',
 	function($locationProvider) {
 		$locationProvider.hashPrefix('!');
-		//$locationProvider.html5Mode(true);
+		//$locationProvider.html5Mode(true); //removes '#!' from the path
 	}
 ]);
 
-angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCtrl', ['$scope', '$location', function AppCtrl ( $scope, $location ) {
-	//global variables
+angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCtrl', ['$scope', '$location', 'StyleService', function AppCtrl ( $scope, $location, StyleService ) {
+
+  //load services
+  $scope.styles = StyleService.getStyles();
+
+  //css class containers & vars
+  $scope.cssClasses         = $scope.styles.cssClasses;
+  $scope.projectOffset      = $scope.styles.projectOffset;
+  $scope.newsSectionHeight  = $scope.styles.newsSectionHeight;
+
+  //wow animation variables
 	$scope.wow = '';
+  $scope.isAnimating = false;
+
+  //variables used globally
 	$scope.pageTitle = '';
+  $scope.pageImage = '';
 	$scope.currentDate = new Date();
 
+  /*
+   * Unsets wow and re-starts it to refresh animations
+   * Used by the reloadWow directive
+   *
+   */
 	$scope.initWow = function initWow(){
 		$scope.wow = '';
 
@@ -49,18 +67,71 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		$scope.wow.init();
 	};
 
-  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
-		window.scrollTo(0,0);
 
-		if ( angular.isDefined( toState.data.pageTitle ) ) {
-			$scope.pageTitle = toState.data.pageTitle ;
-      $scope.htmlTitle = toState.data.pageTitle + ' fadeit - software development agency';
+  /*
+   * Event callback that wait for a state to change
+   * Scrolls the page just after the news section to create the 'illusion'
+   * that news is hidden at the top of the page
+   *
+   * It's very important to set
+   * scope.pageImage, scope.pageTitle to ''
+   * This way we'll make sure the directive 'leftSidebarMenu'
+   * will be notified of a change.
+   *
+   */
+  $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+    $scope.pageImage = '';
+    $scope.pageTitle = '';
+
+    angular.element('body, html').delay(400).animate({
+      scrollTop: $scope.newsSectionHeight + $scope.projectOffset
+    }, {
+      duration: 100,
+      complete: function(){
+        $scope.isAnimating = false;
+      }
+    });
+    /*
+     * updates the <title> tag
+     * pageTitle/pageImage is displayed in
+     * 'modules/core/views/left-sidebar-menu.html'
+     *
+     * htmlTitle is always set.
+     * There can be either a pageTitle or pageImage set, not both
+     *
+     */
+		if(angular.isDefined(toState.data.pageTitle)){
+			$scope.htmlTitle = toState.data.pageTitle + ' - fadeit, software development agency';
+
+      if(angular.isDefined(toState.data.imageUrl)){
+        $scope.pageImage = toState.data.imageUrl;
+      }
+      else{
+        $scope.pageTitle = toState.data.pageTitle;
+      }
 		}
+
+    /*
+     * Don't display news on the tech page
+     */
+    $scope.hideNews = true;
+    if(angular.isDefined(toState.data.hideNews)){
+      if(toState.data.hideNews){
+        $scope.hideNews = false;
+      }
+    }
 	});
 
+  /*
+   * Listens to controllers that want to emit their titles
+   * Used for custom titles (not from state provider).
+   * With this we can set the titles of 'wildcard' paths
+   * (url: '/project/:projectId')
+   *
+   */
 	$scope.$on('changedPage', function changedPage(event, pageTitle){
 		$scope.pageTitle = pageTitle;
-    $scope.htmlTitle = pageTitle + 'fadeit - software development agency';
+    $scope.htmlTitle = pageTitle + ' fadeit - software development agency';
 	});
 }]);
 
@@ -71,5 +142,4 @@ angular.element(document).ready(function() {
 
 	//Then init the app
 	angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
-	console.log('strapped!');
 });

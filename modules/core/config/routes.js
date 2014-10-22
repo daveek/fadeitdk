@@ -6,13 +6,22 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 		// Redirect to home view when route not found
 		$urlRouterProvider.otherwise('/');
 
-		// Home state routing
+		/*
+		 * Routes pass pageTitle [data] that is used for template titles
+		 * (will be emited to the 'fadeit' parent module)
+		 *
+		 * An imageUrl [data] param can be passed
+		 * which will result in rendering an image instead of the text
+		 *
+		 * data: {pageTitle} is MANDATORY
+		 */
 		$stateProvider.
 		state('home', {
 			url: '/',
 			templateUrl: 'modules/core/views/home.html',
 			data: {
-				pageTitle: ''
+				pageTitle: 'Stories',
+				imageUrl: 'img/brand/logo_full.svg'
 			}
 		}).
 		state('about', {
@@ -47,7 +56,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 			url: '/technologies',
 			templateUrl: 'modules/core/views/technologies.html',
 			data: {
-				pageTitle: 'Technologies'
+				pageTitle: 'Technologies',
+				hideNews: true
 			}
 		});
 	}

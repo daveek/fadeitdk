@@ -3,7 +3,7 @@
 angular.module('core').controller('ServicesController', ['$scope', '$log', 'parallaxHelper', 'AnimationService', function ($scope, $log, parallaxHelper, AnimationService) {
   var s;
   //load services
-  $scope.anim = AnimationService[0];
+  $scope.anim = AnimationService;
 
   $scope.initSkrollr = function initSkrollr(){
     s = skrollr.init({

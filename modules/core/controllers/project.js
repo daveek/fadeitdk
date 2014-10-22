@@ -2,7 +2,7 @@
 
 angular.module('core').controller('ProjectController', ['$scope', '$stateParams','amMoment', '$sce', '$log', 'parallaxHelper', 'ProjectData', 'AnimationService', function ($scope, $stateParams, amMoment, $sce, $log, parallaxHelper, ProjectData, AnimationService) {
 	//load services
-	$scope.anim = AnimationService[0];
+	$scope.anim = AnimationService;
 
 	//read the project id from the state
 	$scope.projectId = $stateParams.projectId;

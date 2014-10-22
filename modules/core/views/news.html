@@ -1,0 +1,31 @@
+<section class="container-fluid main-container home-container" ng-controller="NewsController" id="news" data-ng-if="hideNews">
+  <section class="row-fluid news-fluid transparent-always clearfix" id="news-section">
+    <header class="logo-news-container col-xs-12">
+      <!-- large fadeit logo -->
+      <aside class="left-sidebar">
+        <span class="fadeit-logo-link">
+          <img ng-src="img/brand/logo_white.svg" alt="fadeit logo" class="fadeit-logo"/>
+        </span>
+      </aside>
+      <!-- news updates -->
+      <section class="time-text-container" data-ng-class="cssClasses.newsClasses">
+        <section class="inner-time-text-container" data-ng-if="news.text">
+          <time class="news-relative-time">
+            {{news.updateTime}}
+          </time>
+          <span class="news-text" ng-bind-html="news.text"></span>
+        </section>
+
+        <section class="inner-time-text-container" data-ng-if="!news.text">
+          <time class="news-relative-time">
+            just now
+          </time>
+          <span class="news-text">
+            Update: our news has been destroyed by a wild pack of squirrels and we are still recovering from the shock.
+          </span>
+        </section>
+
+      </section>
+    </header>
+  </section>
+</section>

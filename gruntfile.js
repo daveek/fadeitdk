@@ -71,7 +71,9 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			options: {
-			        beautify: false, mangle: true, compress: { drop_console: true},//hide console warnings
+        beautify: true,
+        mangle: false,
+        //compress: {drop_console: true},
 				banner: '/* fadeit js compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 			},
 			appScripts: {
