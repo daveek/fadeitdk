@@ -56,14 +56,16 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 			url: '/thanks',
 			templateUrl: 'modules/core/views/thanks.html',
 			data: {
-				pageTitle: 'Internship at fadeit'
+				pageTitle: 'Internship at fadeit',
+				hideNews: true
 			}
 		}).
 		state('apply', {
 			url: '/apply',
 			templateUrl: 'modules/core/views/apply.html',
 			data: {
-				pageTitle: 'Internship at fadeit'
+				pageTitle: 'Internship at fadeit',
+				hideNews: true
 			}
 		}).
 		state('technologies', {
