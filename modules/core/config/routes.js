@@ -43,6 +43,20 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 				pageTitle: ''
 			}
 		}).
+		state('thanks', {
+			url: '/thanks',
+			templateUrl: 'modules/core/views/thanks.html',
+			data: {
+				pageTitle: 'Internship at fadeit'
+			}
+		}).
+		state('apply', {
+			url: '/apply',
+			templateUrl: 'modules/core/views/apply.html',
+			data: {
+				pageTitle: 'Internship at fadeit'
+			}
+		}).
 		state('technologies', {
 			url: '/technologies',
 			templateUrl: 'modules/core/views/technologies.html',
