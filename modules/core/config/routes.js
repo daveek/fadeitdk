@@ -68,11 +68,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 				hideNews: true
 			}
 		}).
-		state('technologies', {
-			url: '/technologies',
+		state('toolbox', {
+			url: '/toolbox',
 			templateUrl: 'modules/core/views/technologies.html',
 			data: {
-				pageTitle: 'Technologies',
+				pageTitle: 'Toolbox',
 				hideNews: true
 			}
 		});

@@ -28,7 +28,8 @@
 		"play": true,
 		"init": true,
 		"clear": true,
-		"createTech": true
+		"createTech": true,
+		"getBrowserDimensions": true
 	},
 	"predef": [ // Extra globals.
 		"define",

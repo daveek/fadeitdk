@@ -1,7 +1,6 @@
 'use strict';
 
 angular.module('core').controller('NewsController', ['$scope', '$log', '$http', '$anchorScroll', '$sce', 'linkify', '$document', 'StyleService', function ($scope, $log, $http, $anchorScroll, $sce, linkify, $document, StyleService) {
-
 	//load services
 	$scope.styles = StyleService.getStyles();
 
@@ -17,6 +16,16 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 	$scope.maxNewsPosition = 5; //max past items: API allows 10 atm
 	$scope.news = [];
 	$scope.newsHeaderShown = false;
+
+	/*
+	 * Overrides the scroll in config.js
+	 * It scrolls back to top if #news's CSS display === none
+	 */
+	if(angular.element('#news').css('display') === 'none'){
+		angular.element('body, html').delay(400).animate({
+			scrollTop: 0
+		}, { duration: 100 });
+	}
 
 	/*
 	 * one-time news trigger when controller is ready
@@ -131,24 +140,27 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 	 * Checks for scroll position:
 	 * Hides or show the 'top whitebar' to reveal news
 	 *
+	 * Same as the scroll, it will only be applied if the #news is NOT display:none
 	 */
 	$document.on('scroll mousewheel DOMMouseScroll MozMousePixelScroll MouseScrollEvent', function() {
 		//btw: not using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
-		$scope.currentScrollPosition = angular.element(window).scrollTop();
+		if(angular.element('#news').css('display') !== 'none'){
+			$scope.currentScrollPosition = angular.element(window).scrollTop();
 
-		if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset && !$scope.newsHeaderShown){
-			angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
-			angular.element('.fadeit-logo-small').addClass('visible-fixed-logo');
-			angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
+			if($scope.currentScrollPosition >= $scope.newsSectionHeight + $scope.projectOffset && !$scope.newsHeaderShown){
+				angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
+				angular.element('.fadeit-logo-small').addClass('visible-fixed-logo');
+				angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
 
-			$scope.newsHeaderShown = true;
-		}
-		else if($scope.currentScrollPosition <= $scope.newsSectionHeight + $scope.projectOffset && $scope.newsHeaderShown){
-			angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
-			angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
-			angular.element('.transparent-whitebar').addClass('hidden-whitebar');
+				$scope.newsHeaderShown = true;
+			}
+			else if($scope.currentScrollPosition <= $scope.newsSectionHeight + $scope.projectOffset && $scope.newsHeaderShown){
+				angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
+				angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
+				angular.element('.transparent-whitebar').addClass('hidden-whitebar');
 
-			$scope.newsHeaderShown = false;
+				$scope.newsHeaderShown = false;
+			}
 		}
 	});
 

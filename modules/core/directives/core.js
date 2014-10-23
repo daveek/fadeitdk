@@ -1,13 +1,13 @@
 'use strict';
 
-//controls the event triggered by clicking the news button
-angular.module('core').directive('newsAction', ['$location', '$anchorScroll', function($location, $anchorScroll){
+//controls the event triggered by clicking the news button (or Free ride on mobiles), goes to provided-anchor
+angular.module('core').directive('goTo', ['$location', '$anchorScroll', function($location, $anchorScroll){
 	return {
-		restrict: 'C',
+		restrict: 'CA',
 		link: function(scope, element, attrs){
 			element.bind('click', function(){
 				var old = $location.hash();
-				$location.hash('news');
+				$location.hash(attrs.anchor);
 				$anchorScroll();
 				//reset to old to keep any additional routing logic from kicking in
 				$location.hash(old);
@@ -35,6 +35,8 @@ angular.module('core').directive('lastItemWatcher', function(){
 angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuData){
 	return {
 		restrict: 'E',
+		templateUrl: 'modules/core/views/left-sidebar-menu.html',
+		//replace: true,
 		link: function(scope, element, attrs){
 			//load services
 			scope.menuItems = MenuData;
@@ -94,9 +96,7 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 					}, 500);
 				}
 			};
-		},
-		templateUrl: 'modules/core/views/left-sidebar-menu.html',
-		replace: true
+		}
 	};
 }]);
 

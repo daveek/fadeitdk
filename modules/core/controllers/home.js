@@ -74,7 +74,7 @@ angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify
 			break;
 		}
 
-		cssClass = 'col-xs-' + columnSize + ' project-size-' + activeCover + $scope.nextElementClass;
+		cssClass = 'col-xs-12 col-md-' + columnSize + ' project-size-' + activeCover + $scope.nextElementClass;
 
 		//if it's just a dummy project, append one more identifier class
 		if(isDummy){

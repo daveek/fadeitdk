@@ -65,7 +65,9 @@
 </head>
 
 <body class="ng-cloak">
-	<!-- facebook init -->
+	<!-- facebook init
+	//not used ATM because we don't want to display a cookie prompter
+
 	<script>
 		window.fbAsyncInit = function() {
 			FB.init({
@@ -84,9 +86,6 @@
 		 }(document, 'script', 'facebook-jssdk'));
 	</script>
 	<div id="fb-root"></div>
-	<!--! end facebook init-->
-
-	<!-- fb-like example
 
 	<div
 		class="fb-like"
@@ -96,15 +95,15 @@
 	</div>-->
 
 	<!-- all page & template content -->
-	<left-sidebar-menu></left-sidebar-menu>
 	<news-section></news-section>
 	<data-ui-view></data-ui-view>
+	<left-sidebar-menu></left-sidebar-menu>
 	<custom-footer></custom-footer>
 	<!-- end all page & tempate content -->
 
-	<script src="scripts/app.min.js"></script>
-	<script src="scripts/config.min.js"></script>
-	<script src="scripts/modules.min.js"></script>
+	<script type="text/javascript" src="scripts/app.min.js"></script>
+	<script type="text/javascript" src="scripts/config.min.js"></script>
+	<script type="text/javascript" src="scripts/modules.min.js"></script>
 
 	<!--Livereload script rendered -->
 	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>

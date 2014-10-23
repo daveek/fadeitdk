@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				}
 			},
 			clientJS: {
-				files: ['js/**/*.js', 'modules/**/*.js', 'src/*.js', 'config/*.js'],
+				files: ['js/**/*.js', 'modules/**/*.js', 'src/*.js', 'config/*.js', 'balls/**/*.js'],
 				tasks: ['concurrent'],
 				options: {
 					livereload: true,

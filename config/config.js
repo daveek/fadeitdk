@@ -83,8 +83,22 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		$scope.pageImage = '';
 		$scope.pageTitle = '';
 
+
+		/*
+		 * To simulate a 'classic' page setup (you go to the top on the new page)
+		 * we scroll at every $stateChangeSuccess.
+		 *
+		 * If the news' CSS property 'display' is NOT 'none'
+		 * we scroll past the news section (+ an offset).
+		 *
+		 */
+		var scrollPosition = 0;
+		if(angular.element('#news').css('display') !== 'none'){
+			scrollPosition = $scope.newsSectionHeight + $scope.projectOffset;
+		}
+
 		angular.element('body, html').delay(400).animate({
-			scrollTop: $scope.newsSectionHeight + $scope.projectOffset
+			scrollTop: scrollPosition
 		}, {
 			duration: 100,
 			complete: function(){

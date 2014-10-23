@@ -5,7 +5,7 @@ var delta = [ 0, 0 ];
 var stage = [ window.screenX, window.screenY, window.innerWidth, window.innerHeight ];
 getBrowserDimensions();
 
-var theme = [ 
+var theme = [
       "#FFFFFF",
       "RGBA(3, 123, 145, 1)",
       "RGBA(0, 159, 201, 0.9)",
@@ -29,7 +29,7 @@ var destroyMode = false;
 var isMouseDown = false;
 var mouseJoint;
 var mouse = { x: 0, y: 0 };
-var gravity = { x: 0, y: 1 };
+var gravity = { x: 0, y: 0 };
 
 var PI2 = Math.PI * 2;
 
@@ -193,12 +193,12 @@ function createTech(display,size,num_circles,font_size,bold) {
 	var i = size;
 	while(count <= num_circles){
 		//inner circle color
-       		if(count === num_circles){
-        		graphics.fillStyle = "#0fade1";
+		if(count === num_circles){
+			graphics.fillStyle = "#0fade1";
 		}
 		else{
-       		 	graphics.fillStyle = theme[ (Math.random() * 5 >> 0) + 1];
-	   	 }
+			graphics.fillStyle = theme[ (Math.random() * 5 >> 0) + 1];
+		}
 		graphics.beginPath();
 		graphics.arc(size * .5, size * .5, i * .5, 0, PI2, true);
 		graphics.closePath();
@@ -318,11 +318,11 @@ function loop() {
 		if (element.tagName == 'DIV') {
 
 			var style = 'rotate(' + (body.m_rotation0 * 57.2957795) + 'deg) translateZ(0)';
-			text.style.WebkitTransform = style;
-			text.style.MozTransform = style;
-			text.style.OTransform = style;
-			text.style.msTransform = style;
-			text.style.transform = style;
+			element.style.WebkitTransform = style;
+			element.style.MozTransform = style;
+			element.style.OTransform = style;
+			element.style.msTransform = style;
+			element.style.transform = style;
 
 		}
 

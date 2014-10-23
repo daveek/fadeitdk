@@ -21,6 +21,11 @@ angular.module('core').factory('MenuData', function() {
 			title: 'Contact',
 			link: 'contact',
 			uiRoute: '/contact'
+		},
+		{
+			title: 'Toolbox',
+			link: 'toolbox',
+			uiRoute: '/toolbox'
 		}];
 
 	return menuItems;
