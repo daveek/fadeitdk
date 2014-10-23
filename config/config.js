@@ -67,6 +67,35 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		$scope.wow.init();
 	};
 
+	/*
+		 * To simulate a 'classic' page setup (you go to the top on the new page)
+		 * we scroll at every $stateChangeSuccess to top or news.
+		 *
+		 * If the news' CSS property 'display' is NOT 'none'
+		 * we scroll past the news section (+ an offset).
+		 *
+		 * Method also used while listening to $on('newsReady')
+		 * which helps determine the right 'display' (won't be ready at first $stateChange)
+		 *
+		 */
+	$scope.scrollToNewsOrTop = function scrollToNewsOrTop(){
+		var scrollPosition = 0;
+		var scrollDelay = 0;
+		if(angular.element('#news').css('display') !== 'none'){
+			scrollPosition = $scope.newsSectionHeight + $scope.projectOffset;
+			scrollDelay = 500;
+		}
+
+		angular.element('body, html').delay(scrollDelay).animate({
+			scrollTop: scrollPosition
+		}, {
+			duration: 100,
+			complete: function(){
+				$scope.isAnimating = false;
+			}
+		});
+	}
+
 
 	/*
 	 * Event callback that wait for a state to change
@@ -83,28 +112,9 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		$scope.pageImage = '';
 		$scope.pageTitle = '';
 
+		//Simulates a 'real' page
+		$scope.scrollToNewsOrTop();
 
-		/*
-		 * To simulate a 'classic' page setup (you go to the top on the new page)
-		 * we scroll at every $stateChangeSuccess.
-		 *
-		 * If the news' CSS property 'display' is NOT 'none'
-		 * we scroll past the news section (+ an offset).
-		 *
-		 */
-		var scrollPosition = 0;
-		if(angular.element('#news').css('display') !== 'none'){
-			scrollPosition = $scope.newsSectionHeight + $scope.projectOffset;
-		}
-
-		angular.element('body, html').delay(400).animate({
-			scrollTop: scrollPosition
-		}, {
-			duration: 100,
-			complete: function(){
-				$scope.isAnimating = false;
-			}
-		});
 		/*
 		 * updates the <title> tag
 		 * pageTitle/pageImage is displayed in
@@ -146,6 +156,17 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 	$scope.$on('changedPage', function changedPage(event, pageTitle){
 		$scope.pageTitle = pageTitle;
 		$scope.htmlTitle = pageTitle + ' fadeit - software development agency';
+	});
+
+	/*
+	 * Listens to the news controller
+	 * Used in order to scroll to the right position:
+	 * NewsController needs to be initialized.
+	 *
+	 */
+	$scope.$on('newsReady', function newsReadyScroll(){
+		//Simulates a 'real' page
+		$scope.scrollToNewsOrTop();
 	});
 }]);
 

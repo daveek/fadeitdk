@@ -164,6 +164,7 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 		}
 	});
 
-	//Called at controller init to refresh animations
+	//Called at controller init to refresh animations & scroll: the emit notifies the main app modules (config.js) that it should re-check for the 'display' CSS style of #news
 	$scope.initNews();
+	$scope.$emit('newsReady', '');
 }]);

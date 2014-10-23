@@ -29,7 +29,7 @@ var destroyMode = false;
 var isMouseDown = false;
 var mouseJoint;
 var mouse = { x: 0, y: 0 };
-var gravity = { x: 0, y: 0 };
+var gravity = { x: 0, y: 1 };
 
 var PI2 = Math.PI * 2;
 
@@ -317,7 +317,7 @@ function loop() {
 
 		if (element.tagName == 'DIV') {
 
-			var style = 'rotate(' + (body.m_rotation0 * 57.2957795) + 'deg) translateZ(0)';
+			var style = 'rotate(' + (body.m_rotation0 * 87.2957795) + 'deg) translateZ(0)';
 			element.style.WebkitTransform = style;
 			element.style.MozTransform = style;
 			element.style.OTransform = style;

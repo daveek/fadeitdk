@@ -24,7 +24,7 @@
 			<section class="row-fluid project-intro-fluid clearfix animate wow fadeIn"
 			data-wow-delay="{{anim.base.longDelay}}"
 			data-wow-duration="{{anim.base.duration}}">
-				<section class="col-xs-12 col-sm-12 col-md-12">
+				<section class="col-xs-12">
 					<h3 class="regular-title">{{project.content.shortDescription}}</h3>
 					<p class="regular-text project-tags">
 						<span class="a-tag" ng-repeat="tag in project.tags">
@@ -37,11 +37,11 @@
 			<section class="row-fluid cover-fluid clearfix animate wow fadeIn"
 			data-wow-delay="{{anim.base.longDelay}}"
 			data-wow-duration="{{anim.base.duration}}">
-				<section class="col-xs-12 col-sm-8 col-md-8 single-project-cover">
+				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-8 single-project-cover">
 					<img ng-src="img/projects/{{project.id}}/{{project.images.cover}}" alt="{{project.title}} project" />
 				</section>
 
-				<section class="col-xs-12 col-sm-4 col-md-4 single-project-intro"
+				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single-project-intro"
 				data-ng-style="{'background': project.color.base}">
 					<h3 data-ng-style="{'color': project.color.text}">
 						{{project.content.intro.heading}}
