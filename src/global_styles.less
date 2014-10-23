@@ -94,6 +94,24 @@
 	@fs_small:	13px;
 	@lh_small:	18px;
 
+	/*mobile font sizes*/
+	@m_fs_h1: 		25px;
+	@m_lh_h1: 		28px;
+	@m_fs_h2:			19px;
+	@m_lh_h2: 		21px;
+	@m_fs_h3: 		18px;
+	@m_lh_h3: 		21px;
+	@m_fs_h4: 		14px;
+	@m_lh_h4: 		17px;
+	@m_fs_h5: 		13px;
+	@m_lh_h5: 		16px;
+	@m_fs_body:		12px;
+	@m_lh_body:		14px;
+	@m_fs_medium: 13px;
+	@m_lh_medium: 18px;
+	@m_fs_small:	11px;
+	@m_lh_small:	13px;
+
 	/*break points*/
 	@bp_sm: 767px;
 	@bp_md: 991px;
@@ -495,39 +513,69 @@ body {
 */
 
 h1{
-	font-size: @fs_h1;
 	font-family: @ff_default;
-	line-height: @lh_h1;
+	font-size: @m_fs_h1;
+	line-height: @m_lh_h1;
+
+	@media only screen and (min-width:@bp_md){
+		font-size: @fs_h1;
+		line-height: @lh_h1;
+	}
 }
 
 h2{
-	font-size: @fs_h2;
 	font-family: @ff_default;
-	line-height: @lh_h2;
+	font-size: @m_fs_h2;
+	line-height: @m_lh_h2;
+
+	@media only screen and (min-width:@bp_md){
+		font-size: @fs_h2;
+		line-height: @lh_h2;
+	}
 }
 
 h3{
-	font-size: @fs_h3;
 	font-family: @ff_default;
-	line-height: @lh_h3;
+	font-size: @m_fs_h3;
+	line-height: @m_lh_h3;
+
+	@media only screen and (min-width:@bp_md){
+		font-size: @fs_h3;
+		line-height: @lh_h3;
+	}
 }
 
 h4{
-	font-size: @fs_h4;
 	font-family: @ff_bold;
-	line-height: @lh_h4;
+	font-size: @m_fs_h4;
+	line-height: @m_lh_h4;
+
+	@media only screen and (min-width:@bp_md){
+		font-size: @fs_h4;
+		line-height: @lh_h4;
+	}
 }
 
 h5{
-	font-size: @fs_h5;
 	font-family: @ff_bold;
-	line-height: @lh_h5;
+	font-size: @m_fs_h5;
+	line-height: @m_lh_h5;
+
+	@media only screen and (min-width:@bp_md){
+		font-size: @fs_h5;
+		line-height: @lh_h5;
+	}
 }
 
 body, p, span, section, article, time, header, footer, aside, nav{
 	font-family: @ff_default;
-	font-size:@fs_body;
-	line-height:@lh_body;
+	font-size:@m_fs_body;
+	line-height:@m_lh_body;
+
+	@media only screen and (min-width:@bp_md){
+		font-size:@fs_body;
+		line-height:@lh_body;
+	}
 
 	@media only screen and (min-width:@bp_xxl){
 		font-size:@fs_medium;
@@ -551,6 +599,14 @@ a{
 /*fadeit styles*/
 .main-container{
 	height:100%;
+}
+
+#news{
+	.hide();
+
+	@media only screen and (min-width:@bp_md){
+		.block();
+	}
 }
 
 .news-fluid{
@@ -623,8 +679,10 @@ a{
 }
 
 .hidden-whitebar{
-	margin-top:-@projects_offset - @news_section_height;
-	.animate(@animation_time_short, @transition_default);
+	@media only screen and (min-width:@bp_md){
+		margin-top:-@projects_offset - @news_section_height;
+		.animate(@animation_time_short, @transition_default);
+	}
 }
 
 .time-text-container{
@@ -866,7 +924,11 @@ a{
 	.fix();
 	top:0;
 	z-index:1;
-	height:100%;
+	height: 40px;
+
+	@media only screen and (min-width:@bp_md){
+		height:100%;
+	}
 
 	.menu-link-list{
 		.abs();
@@ -874,6 +936,11 @@ a{
 		bottom:30px;
 		padding-left:0;
 		list-style-type: none;
+		.hide();
+
+		@media only screen and (min-width:@bp_md){
+			.block();
+		}
 
 		.menu-link-item{
 			line-height:40px;
@@ -1173,7 +1240,7 @@ a{
 	margin-left:-300px;
 	width:@sidebar_left_width;
 	.ta-c();
-	z-index:10;
+	z-index:-1;
 	.animate(@animation_time_short_w_delay, @transition_default);
 
 	.page-title{
