@@ -1,7 +1,7 @@
 Next steps:
   ☐ Add team to about page
   ✔ Export svg's at designated size? fix fine edges @done (14-10-21 00:21)
-  ☐ Work on the news section - allow on all pages
+  ✔ Work on the news section - allow on all pages @done (14-10-23 03:00)
   ☐ Adjust tags - actually implement tag - search
 
    Tweak:
@@ -11,7 +11,7 @@ Next steps:
 
 Mandatory:
   ☐ Add cookie prompter
-  ☐ Enhance contact page
+  ✔ Enhance contact page @done (14-10-23 03:00)
 
 Bootstrap:
   ☐ refactor grunt tasks (add build-compile scenarios)

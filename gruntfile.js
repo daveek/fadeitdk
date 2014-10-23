@@ -53,7 +53,24 @@ module.exports = function(grunt) {
 		},
 		concat:{
 			appScripts:{
-				src: ['lib/momentjs/moment.js', 'lib/jquery/dist/jquery.js', 'lib/angular/angular.js', 'lib/angular-resource/angular-resource.js', 'lib/angular-cookies/angular-cookies.js', 'lib/angular-animate/angular-animate.js', 'lib/angular-bootstrap/ui-bootstrap.js', 'lib/angular-ui-utils/ui-utils.js', 'lib/angular-ui-router/release/angular-ui-router.js', 'lib/angular-moment-fadeit/angular-moment.js', 'lib/angular-linkify-fadeit/angular-linkify.js', 'lib/wowjs/dist/wow.js', 'lib/angular-scroll/angular-scroll.js', 'lib/ng-parallax/angular-parallax.js', 'lib/skrollr/dist/skrollr.min.js', 'scripts/other.min.js', 'lib/angular-load/angular-load.js'],
+				src: [
+				'lib/momentjs/moment.js',
+				'lib/jquery/dist/jquery.js',
+				'lib/angular/angular.js',
+				'lib/angular-resource/angular-resource.js',
+				'lib/angular-cookies/angular-cookies.js',
+				'lib/angular-animate/angular-animate.js',
+				'lib/angular-bootstrap/ui-bootstrap.js',
+				'lib/angular-ui-utils/ui-utils.js',
+				'lib/angular-ui-router/release/angular-ui-router.js',
+				'lib/angular-moment-fadeit/angular-moment.js',
+				'lib/angular-linkify-fadeit/angular-linkify.js',
+				'lib/wowjs/dist/wow.js',
+				'lib/angular-scroll/angular-scroll.js',
+				'lib/ng-parallax/angular-parallax.js',
+				'lib/skrollr/dist/skrollr.min.js',
+				'scripts/other.min.js',
+				'lib/angular-load/angular-load.js'],
 				dest: 'scripts/app.js'
 			},
 			appModules:{
@@ -61,8 +78,12 @@ module.exports = function(grunt) {
 				dest: 'scripts/modules.js'
 			},
 			vendorCss:{
-				src: ['lib/bootstrap/dist/css/bootstrap.css', 'lib/bootstrap/dist/css/bootstrap-theme.css', 'lib/animate.css/animate.min.css', 'lib/font-awesome/css/font-awesome.min.css'],
-				dest: 'css/vendor.css'
+				src: [
+					'lib/bootstrap/dist/css/bootstrap.css',
+					'lib/bootstrap/dist/css/bootstrap-theme.css',
+					'lib/animate.css/animate.min.css',
+					'lib/font-awesome/css/font-awesome.min.css'],
+				dest:'css/vendor.css'
 			},
 			techScripts:{
 				src: ['balls/protoclass.js','balls/box2d.js','balls/Main.js'],
@@ -71,10 +92,10 @@ module.exports = function(grunt) {
 		},
 		uglify: {
 			options: {
-        beautify: true,
-        mangle: false,
-        //compress: {drop_console: true},
-				banner: '/* fadeit js compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+			beautify: false,
+			mangle: true,
+			//compress: {drop_console: true},
+			banner: '/* fadeit js compiled <%= grunt.template.today("yyyy-mm-dd") %> */\n',
 			},
 			appScripts: {
 				src: ['scripts/app.js'],

@@ -16,7 +16,7 @@
 	"unused": false, // Warn unused variables.
 	"strict": true, // Require `use strict` pragma in every file.
 	"trailing": true, // Prohibit trailing whitespaces.
-	"smarttabs": true, // Suppresses warnings about mixed tabs and spaces
+	"smarttabs": false, // Suppresses warnings about mixed tabs and spaces
 	"globals": { // Globals variables.
 		"jasmine": true,
 		"angular": true,
@@ -24,11 +24,11 @@
 		"moment": true,
 		"WOW": true,
 		"skrollr": true,
-    "toState": true,
-    "play": true,
-    "init": true,
-    "clear": true,
-    "createTech": true
+		"toState": true,
+		"play": true,
+		"init": true,
+		"clear": true,
+		"createTech": true
 	},
 	"predef": [ // Extra globals.
 		"define",
@@ -44,7 +44,7 @@
 		"inject",
 		"expect"
 	],
-	"indent": 4, // Specify indentation spacing
+	"indent": 2, // Specify indentation spacing
 	"devel": true, // Allow development statements e.g. `console.log();`.
 	"noempty": true // Prohibit use of empty blocks.
 }
