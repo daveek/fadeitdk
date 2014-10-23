@@ -67,21 +67,21 @@
 <body class="ng-cloak">
 	<!-- facebook init -->
 	<script>
-	  window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '377735055715546',
-	      xfbml      : true,
-	      version    : 'v2.1'
-	    });
-	  };
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '377735055715546',
+				xfbml      : true,
+				version    : 'v2.1'
+			});
+		};
 
-	  (function(d, s, id){
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) {return;}
-	     js = d.createElement(s); js.id = id;
-	     js.src = "//connect.facebook.net/en_US/sdk.js";
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
+		(function(d, s, id){
+			 var js, fjs = d.getElementsByTagName(s)[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement(s); js.id = id;
+			 js.src = "//connect.facebook.net/en_US/sdk.js";
+			 fjs.parentNode.insertBefore(js, fjs);
+		 }(document, 'script', 'facebook-jssdk'));
 	</script>
 	<div id="fb-root"></div>
 	<!--! end facebook init-->
@@ -89,15 +89,15 @@
 	<!-- fb-like example
 
 	<div
-	  class="fb-like"
-	  data-share="true"
-	  data-width="450"
-	  data-show-faces="true">
+		class="fb-like"
+		data-share="true"
+		data-width="450"
+		data-show-faces="true">
 	</div>-->
 
 	<!-- all page & template content -->
 	<left-sidebar-menu></left-sidebar-menu>
-  <news-section></news-section>
+	<news-section></news-section>
 	<data-ui-view></data-ui-view>
 	<custom-footer></custom-footer>
 	<!-- end all page & tempate content -->
