@@ -31,11 +31,13 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
 	};
 
 	$scope.initBalls = function initBalls(){
+		var randomGravity = angular.element(window).width() > 767 ? true : false;
 		if(!$rootScope.ballsLoaded){
 			angularLoad.loadScript('scripts/technologies.min.js').then(function() {
-				init();
+				init(randomGravity);
 				$scope.createBalls();
 				play();
+				$rootScope.ballsLoaded = true;
 			}).catch(function() {
 				//TODO: list technologies differently?
 				console.log('failed to load');
@@ -43,7 +45,7 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
 		}
 		else{
 			//using existing script, no need to re-download
-			init();
+			init(randomGravity);
 			$scope.createBalls();
 		}
 	};
@@ -54,7 +56,6 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
 		document.onmouseup = unbind;
 		document.onmousemove = unbind;
 		document.ondblclick = unbind;
-		$rootScope.ballsLoaded = false;
 	};
 
 	//start the balls

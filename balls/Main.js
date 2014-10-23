@@ -29,15 +29,16 @@ var destroyMode = false;
 var isMouseDown = false;
 var mouseJoint;
 var mouse = { x: 0, y: 0 };
-var gravity = { x: 0, y: 1 };
+var gravity = { x: 0, y: 0 };
 
 var PI2 = Math.PI * 2;
 
 var timeOfLastTouch = 0;
 
-function init() {
-
-	this.gravity = {x: 0, y: Math.random() > 0.5 ? 1 : 0};
+function init(randomGravity) {
+	if(randomGravity){
+		this.gravity = {x: 0, y: Math.random() > 0.5 ? 1 : 0};
+	}
 	canvas = document.getElementById( 'canvas' );
 
 	document.onmousedown = onDocumentMouseDown;
