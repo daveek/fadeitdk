@@ -29,7 +29,9 @@
 		"init": true,
 		"clear": true,
 		"createTech": true,
-		"getBrowserDimensions": true
+		"getBrowserDimensions": true,
+		"createBall": true,
+		"setFactor": true
 	},
 	"predef": [ // Extra globals.
 		"define",
