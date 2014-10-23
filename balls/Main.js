@@ -1,6 +1,6 @@
 /* jshint ignore:start */
 var canvas;
-
+var factor = 1;
 var delta = [ 0, 0 ];
 var stage = [ window.screenX, window.screenY, window.innerWidth, window.innerHeight ];
 getBrowserDimensions();
@@ -37,6 +37,7 @@ var timeOfLastTouch = 0;
 
 function init() {
 
+	this.gravity = {x: 0, y: Math.random() > 0.5 ? 1 : 0};
 	canvas = document.getElementById( 'canvas' );
 
 	document.onmousedown = onDocumentMouseDown;
@@ -59,7 +60,8 @@ function init() {
 	world = new b2World( worldAABB, new b2Vec2( 0, 0 ), true );
 
 	setWalls();
-	start();
+	bodies = [];
+	elements = [];
 }
 
 function play() {
@@ -77,16 +79,8 @@ function clear() {
 	}
 	document.body.style[ 'backgroundColor' ] = theme[ 0 ];
 }
-function start(){
-	bodies = [];
-	elements = [];
-	for( i = 0; i < 10; i++ ) {
-		createBall();
-	}
-}
 function reset() {
 	clear();
-	start();
 }
 
 function onDocumentMouseDown() {
@@ -172,7 +166,8 @@ function onWindowDeviceOrientation( event ) {
 
 
 function createTech(display,size,num_circles,font_size,bold) {
-
+	size = size * factor;
+	font_size = font_size * factor;
 	var element = document.createElement( 'div' );
 	element.width = size;
 	element.height = size;
@@ -247,7 +242,7 @@ function createBall( x, y ) {
 	var y = y || Math.random() * -200;
 
 	var size = (Math.random() * 100 >> 0) + 20;
-
+	var size = size * factor;
 	var element = document.createElement("canvas");
 	element.width = size;
 	element.height = size;
@@ -471,8 +466,11 @@ function setWalls() {
 
 }
 
-// BROWSER DIMENSIONS
+function setFactor(factor){
+	this.factor = factor;
+}
 
+// BROWSER DIMENSIONS
 function getBrowserDimensions() {
 
 	var changed = false;

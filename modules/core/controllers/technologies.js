@@ -2,20 +2,40 @@
 
 angular.module('core').controller('TechnologiesController', ['angularLoad', '$rootScope', '$scope', 'TechnologiesService', '$window', function (angularLoad, $rootScope, $scope, TechnologiesService, $window) {
 
-	$scope.addTechnologies = function addTechnologies(){
+	$scope.createBalls = function createBalls(){
 		var technologies = TechnologiesService.getTechnologies();
+		var width = angular.element(window).width();
+		var factor;
+		if(width < 360){
+			factor = 0.3;
+		}
+		else if(width < 767){
+			factor = 0.5;
+		}
+		else if(width < 800){
+			//let's trim it down a little for 1024x768 guys
+			factor = 0.75;
+		}
+		else{
+			factor = 1;
+		}
+		setFactor(factor);
 		angular.forEach(technologies,function(tech){
-			createTech(tech.name,tech.size,tech.circles,tech.font,tech.bold);
+			//for smaller screens we randomize what we display
+			if(factor > Math.random()){
+				createTech(tech.name,tech.size,tech.circles,tech.font,tech.bold);
+				createBall();
+			}
 		});
+		$scope.ballsCreated = true;
 	};
 
 	$scope.initBalls = function initBalls(){
 		if(!$rootScope.ballsLoaded){
 			angularLoad.loadScript('scripts/technologies.min.js').then(function() {
 				init();
-				$scope.addTechnologies();
+				$scope.createBalls();
 				play();
-				$rootScope.ballsLoaded = true;
 			}).catch(function() {
 				//TODO: list technologies differently?
 				console.log('failed to load');
@@ -24,7 +44,7 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
 		else{
 			//using existing script, no need to re-download
 			init();
-			$scope.addTechnologies();
+			$scope.createBalls();
 		}
 	};
 
@@ -48,9 +68,9 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
 
 	//re-init when resizing window
 	angular.element(window).resize(function(){
-		if($rootScope.ballsLoaded){
+		if($scope.ballsCreated){
 			clear();
-			$scope.initBalls();
+			$scope.createBalls();
 		}
 	});
 }]);
