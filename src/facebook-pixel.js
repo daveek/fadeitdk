@@ -1,5 +1,9 @@
 /* jshint ignore:start */
 'use strict';
+
+
+//removed until cookie prompter is ready
+/*
 //facebook website pixel
 (function() {
 	  var _fbq = window._fbq || (window._fbq = []);
