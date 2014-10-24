@@ -49,40 +49,6 @@ angular.module('core').factory('ProjectPreview', function() {
 			}
 		},
 		{
-			id: 'alexandra',
-			background: '#A9A7A8',
-			title: 'Alexandra Institute',
-			link: 'story/alexandra',
-			uiRoute: '/story/alexandra',
-			activeCover: 'sm',
-			shortDescription: '',
-			tags: {
-				0: 'Open Data',
-				1: 'CKAN',
-				2: 'Drupal'
-			}
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
 			id: 'ipvision',
 			background: '#AFB1B4',
 			title: 'IPVision',
@@ -95,6 +61,30 @@ angular.module('core').factory('ProjectPreview', function() {
 				1: 'Asterisk',
 				2: 'PHP'
 			}
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
 		},
 		{
 			dummy: true,
@@ -118,10 +108,19 @@ angular.module('core').factory('ProjectPreview', function() {
 			dummy: true,
 			activeCover: 'sm'
 		},
-
 		{
-			dummy: true,
-			activeCover: 'sm'
+			id: 'alexandra',
+			background: '#A9A7A8',
+			title: 'Alexandra Institute',
+			link: 'story/alexandra',
+			uiRoute: '/story/alexandra',
+			activeCover: 'sm',
+			shortDescription: '',
+			tags: {
+				0: 'Open Data',
+				1: 'CKAN',
+				2: 'Drupal'
+			}
 		}
 	];
 
@@ -273,8 +272,7 @@ angular.module('core').factory('ProjectData', function() {
 			uiRoute: '/story/gatesense',
 			tags: {
 				0: 'IoT',
-				1: 'Big Data',
-				2: 'Integration'
+				1: 'Big Data'
 			},
 			images: {
 				heading: 'Learn more about Gatesense',
