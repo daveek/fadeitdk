@@ -5,7 +5,7 @@ data-ng-repeat="project in projectPreviews"
 data-ng-class="generateClass(project.activeCover, project.dummy, $index)"
 last-item-watcher>
 	<!-- Don't do anything for the first project for now
-	<a href="#!/project/{{project.id}}" class="project-preview" data-ng-if="$index === 0 && !project.dummy">
+	<a href="#!/story/{{project.id}}" class="project-preview" data-ng-if="$index === 0 && !project.dummy">
 		<img data-ng-src='img/projects/{{project.id}}/cover_{{project.activeCover}}@2x.jpg' alt="project.title" class="project-cover-used main-cover"/>
 
 		<span class="project-tags project-tags-{{project.activeCover}}">
@@ -15,7 +15,7 @@ last-item-watcher>
 		</span>
 	</a>-->
 
-	<a href="#!/project/{{project.id}}" class="project-preview" data-ng-if="!project.dummy && $index !== 0">
+	<a href="#!/story/{{project.id}}" class="project-preview" data-ng-if="!project.dummy && $index !== 0">
 		<img data-ng-src='img/projects/{{project.id}}/cover_{{project.activeCover}}@2x.jpg' alt="project.title" class="project-cover-used"/>
 
 		<span class="project-tags project-tags-{{project.activeCover}}">

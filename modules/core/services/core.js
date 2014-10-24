@@ -35,32 +35,32 @@ angular.module('core').factory('MenuData', function() {
 angular.module('core').factory('ProjectPreview', function() {
 	var projectPreviewData = [
 		{
-			id: 'portal',
+			id: 'ipvision',
 			background: '#AFB1B4',
-			title: 'Portal',
-			link: 'project/portal',
-			uiRoute: '/project/portal',
+			title: 'IPVision',
+			link: 'story/ipvision',
+			uiRoute: '/story/ipvision',
 			activeCover: 'lg',
 			shortDescription: '',
 			tags: {
-				0: 'Drupal',
-				1: 'UX Design',
-				2: 'Responsive'
-			} //max 3 tags
+				0: 'VoIP',
+				1: 'Asterisk',
+				2: 'PHP'
+			}
 		},
 		{
-			id: 'ymobile',
-			background: '#590B0B',
-			title: 'yMobile',
-			link: 'project/ymobile',
-			uiRoute: '/project/ymobile',
+			id: 'alexandra',
+			background: '#A9A7A8',
+			title: 'Alexandra Institute',
+			link: 'story/alexandra',
+			uiRoute: '/story/alexandra',
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
-				0: 'Drupal',
-				1: 'CMS',
-				2: 'Responsive'
-			} //max 3 tags
+				0: 'Open Data',
+				1: 'CKAN',
+				2: 'Drupal'
+			}
 		},
 		{
 			dummy: true,
@@ -83,37 +83,42 @@ angular.module('core').factory('ProjectPreview', function() {
 			activeCover: 'sm'
 		},
 		{
-			id: 'ols',
-			background: '#0C7A93',
-			title: 'OLS',
-			link: 'project/ols',
-			uiRoute: '/project/ols',
+			id: 'ipvision',
+			background: '#AFB1B4',
+			title: 'IPVision',
+			link: 'story/ipvision',
+			uiRoute: '/story/ipvision',
 			activeCover: 'md',
 			shortDescription: '',
 			tags: {
-				0: 'Python',
-				1: 'AngularJS',
-				2: 'iOS'
-			} //max 3 tags
+				0: 'VoIP',
+				1: 'Asterisk',
+				2: 'PHP'
+			}
 		},
 		{
 			dummy: true,
 			activeCover: 'sm'
 		},
 		{
-			id: 'portal',
-			background: '#AFB1B4',
-			title: 'Portal',
-			link: 'project/portal',
-			uiRoute: '/project/portal',
+			id: 'gatesense',
+			background: '#0C7A93',
+			title: 'Gatesense',
+			link: 'story/gatesense',
+			uiRoute: '/story/gatesense',
 			activeCover: 'sm',
 			shortDescription: '',
 			tags: {
-				0: 'Drupal',
-				1: 'UX Design',
-				2: 'Responsive'
-			} //max 3 tags
+				0: 'IoT',
+				1: 'Big Data',
+				2: 'Integration'
+			}
 		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+
 		{
 			dummy: true,
 			activeCover: 'sm'
@@ -127,24 +132,27 @@ angular.module('core').factory('ProjectPreview', function() {
 // Project service used for individual project
 angular.module('core').factory('ProjectData', function() {
 	var projectData = [{
-			id: 'portal',
+			id: 'ipvision',
 			color: {
-				base: '#A91400',
-				accent: '#8C0000',
-				text: '#FFFFFF',
-				darkText: '#333333',
-				light: '#F9F9F9',
-				lightAccent: '#E7E8EA'
+				links: '#A91400',
+				base: '#A91400', //background-base
+				accent: '#8C0000', //darker background
+				text: '#FFFFFF', //color for the base
+				darkText: '#333333', //text for light background
+				light: '#F9F9F9',	//light background
+				lightAccent: '#E7E8EA', //darker background (for borders maybe)
+				coverBackground: '#E7E8EA'
 			},
-			title: 'Portal',
-			link: 'project/portal',
-			uiRoute: '/project/portal',
+			title: 'IPVision',
+			link: 'story/ipvision',
+			uiRoute: '/story/ipvision',
 			tags: {
-				0: 'Drupal',
-				1: 'UX Design',
-				2: 'Responsive'
+				0: 'VoIP',
+				1: 'Asterisk',
+				2: 'PHP'
 			},
 			images: {
+				heading: 'Project images and further reading',
 				cover: 'cover_sm@2x.jpg',
 				screens: {
 					0: {
@@ -174,21 +182,121 @@ angular.module('core').factory('ProjectData', function() {
 					}
 				}
 			},
-      url: {
-				title: 'Portal prototype',
-				link: 'http://danmind.ru/portal/main',
-				text: 'To view the initial prototype for this application, go here: '
+			urls:{
+	      0:{
+					title: 'IPVision website',
+					link: 'http://www.ipvision.dk/',
+					text: 'To find out more, take a look at the '
+				},
+				1:{
+					title: 'Portal prototype',
+					link: 'http://danmind.ru/portal/main',
+					text: 'Below you can see one of the projects that we\'ve built together, Portal. A prototype is also avaialble here: '
+				},
 			},
 			content: {
-				shortDescription: 'A management and overview tool for telcos',
+				shortDescription: 'Integrating PBXs, Cloud services, mail clients and back-office servers',
 				intro: {
-					heading: 'Optimizing processes',
-					text: 'We helped IPVision build a tool that they can use to manage user subscriptions, data packages and accounts. The application offers overview of client consumption and allows quick switching between user and company accounts.'
+					heading: 'About IPVision',
+					text: 'IPVision A/S is a Copenhagen-based Mobile Virtual Network Operator (MVNO). They are one of the leading IP Telephony providers for B2B customers in Denmark.'
 				},
-				mainHeading: 'Project description',
+				mainHeading: 'Our collaboration',
 				paragraphs: {
-					0: 'We built the system on a base Drupal system, creating everything else from scratch. A special focus was put on experience design and mobile device optimazitation.',
-					1: 'The challenge behind this project was to create a robust, extensible application that aligns with the rapid changes in telcos. It had to offer a detailed representation of call, SMS, MMS and data consumption and allow users to quickly switch between subscriptions and addon plans.'
+					0: 'In IPVision, we work on state of the art self service portals, backoffice tools, phone usage systems, accounting software and automation of various workflows.'
+				}
+			}
+		},
+		{
+			id: 'alexandra',
+			color: {
+				links: '#F26436',
+				base: '#A9A7A8',
+				accent: '#7C7B79',
+				text: '#FFFFFF',
+				darkText: '#333333',
+				light: '#F9F9F9',
+				lightAccent: '#E7E8EA',
+				coverBackground: '#3F4040'
+			},
+			title: 'Alexandra Institute',
+			link: 'story/alexandra',
+			uiRoute: '/story/alexandra',
+			tags: {
+				0: 'Open Data',
+				1: 'CKAN',
+				2: 'Drupal'
+			},
+			images: {
+				heading: 'Where to learn more',
+				cover: 'cover_sm@2x.jpg',
+				screens: {}
+			},
+      urls: {
+      	0:{
+					title: 'their website',
+					link: 'http://www.alexandra.dk/uk/',
+					text: 'To read more about Alexandra, go to '
+				},
+				1:{
+					title: 'here',
+					link: 'http://www.alexandra.dk/uk/labs/smart-city-lab/pages/smart-city-lab.aspx',
+					text: 'You can find more details about Smart City Lab '
+				},
+			},
+			content: {
+				shortDescription: 'Building bridges with research-based innovation',
+				intro: {
+					heading: 'About Alexandra Institute',
+					text: 'Alexandra Institute is an IT research and innovation organization founded in 1999.'
+				},
+				mainHeading: 'Our collaboration',
+				paragraphs: {
+					0: 'By merging commercial relevance, the latest IT research, technology and user involvement, Alexandra creates IT-based products that generate social value and contribute to economic growth. In other words, they are a bridge-builder between research, private corporations, public institutions and citizens.',
+					1: 'We work with Alexandra\'s Smart City Lab on building modern Open Data portals that are based on CKAN and Drupal.'
+				}
+			}
+		},
+		{
+			id: 'gatesense',
+			color: {
+				links: '#87B816',
+				base: '#12506E',
+				accent: '#0E415A',
+				text: '#FFFFFF',
+				darkText: '#333333',
+				light: '#F9F9F9',
+				lightAccent: '#E7E8EA',
+				coverBackground: '#1B698F'
+			},
+			title: 'About Gatesense',
+			link: 'story/gatesense',
+			uiRoute: '/story/gatesense',
+			tags: {
+				0: 'IoT',
+				1: 'Big Data',
+				2: 'Integration'
+			},
+			images: {
+				heading: 'Learn more about Gatesense',
+				cover: 'cover_sm@2x.jpg',
+				screens: {}
+			},
+      urls: {
+      	0:{
+					title: 'Gatesense website',
+					link: 'http://gatesense.com',
+					text: 'This still-evolving project is currently building an international community of developers and other entrepreneurs, cities and organisations with a passion for sustainability. Check out the '
+				}
+			},
+			content: {
+				shortDescription: 'Unleashing creativity and creating significant value for society',
+				intro: {
+					heading: 'Gatesense',
+					text: 'Gatesense is a modern Internet of Things platform. Its primary purpose is to build a community and a set of concrete tools for solving today\'s environment problems.'
+				},
+				mainHeading: 'Our collaboration',
+				paragraphs: {
+					0: 'We play a major role in research and technical development of the platform. The effort is lead by Grundfos and Alexandra Institute.'
 				}
 			}
 		}];

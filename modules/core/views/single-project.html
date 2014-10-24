@@ -56,11 +56,11 @@
 			<section class="row-fluid cover-fluid clearfix animate wow fadeIn"
 			data-wow-delay="{{anim.base.longDelay}}"
 			data-wow-duration="{{anim.base.duration}}">
-				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-8 single-project-cover">
+				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-8 single-project-cover" data-ng-style="{'background': project.color.coverBackground}">
 					<img ng-src="img/projects/{{project.id}}/{{project.images.cover}}" alt="{{project.title}} project" />
 				</section>
 
-				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 single-project-intro"
+				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-4 single-project-intro"
 				data-ng-style="{'background': project.color.base}">
 					<h3 data-ng-style="{'color': project.color.text}">
 						{{project.content.intro.heading}}
@@ -91,14 +91,16 @@
 			<article class="project-details project-extras animate wow fadeIn"
 			data-wow-delay="{{anim.base.longDelay}}"
 			data-wow-duration="{{anim.base.duration}}" data-ng-if='project.url || project.images.screens'>
-				<h3>Images and where to go next</h3>
+				<h3>{{project.images.heading}}</h3>
 
-				<section class="url-fluid clearfix" data-ng-if="project.url">
+				<section class="url-fluid clearfix"
+				data-ng-if="project.urls"
+				data-ng-repeat="url in project.urls">
 					<p class="regular-text">
-						<span class="url-text">{{project.url.text}}</span>
-						<a href="{{project.url.link}}" target="_blank"
-						data-ng-style="{'color': project.color.base}">
-							{{project.url.title}}
+						<span class="url-text">{{url.text}}</span>
+						<a href="{{url.link}}" target="_blank"
+						data-ng-style="{'color': project.color.links}">
+							{{url.title}}
 						</a>
 					</p>
 				</section>

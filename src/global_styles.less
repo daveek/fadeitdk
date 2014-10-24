@@ -1297,6 +1297,10 @@ a{
 
 	.cover-fluid{
 		border-bottom:none;
+
+		@media only screen and (min-width:@bp_lg){
+			table-layout: auto;
+		}
 	}
 
 	.social-fluid{
@@ -1355,12 +1359,22 @@ a{
 		padding-bottom:0;
 		margin-bottom:-10px;
 
-		.form{
+		#formWrapper{
 			margin-top:20px;
 			margin-bottom:20px;
 
 			.help-block{
 				font-size:@fs_small;
+			}
+
+			#edit-submitted-cv-upload-button{
+				.hide-i();
+			}
+
+			#edit-submitted-cv-ajax-wrapper{
+				.description{
+					.hide-i();
+				}
 			}
 
 			#edit-submitted-cv-upload{
@@ -1371,41 +1385,23 @@ a{
 				width: 225px;
 				margin-top: 8px;
 				.inline-block();
+				.rel();
+				top: -9px;
+				font-size: 16px;
 			}
 
 			label{
+				text-transform: capitalize;
 				margin-top:10px;
 			}
 
-			.fileUpload {
-				position: relative;
-				overflow: hidden;
-				margin: 10px;
-			}
-
-			.fileUpload input.upload {
-				position: absolute;
-				top: 0;
-				right: 0;
-				margin: 0;
-				padding: 0;
-				font-size: 14px;
-				line-height:18px;
-				cursor: pointer;
-				opacity: 0;
-				filter: alpha(opacity=0);
-			}
-
-			#uploadFile{
-				padding: 5px;
-			}
-
-			.thoughts-text{
-				max-width:100%;
-			}
-
-			.btn-success{
-				margin-top:25px;
+			.form-actions{
+				.webform-submit{
+					padding: 8px 15px 8px 15px;
+					border: none;
+					color:@w;
+					background:@col_fadeit;
+				}
 			}
 		}
 
@@ -1621,7 +1617,12 @@ a{
 	//if it doesn't work out, padding-left/right 15px from @bp_sm
 
 	img{
+		width: 100%;
 		max-width:100%;
+
+		@media only screen and (min-width:@bp_lg){
+			width:auto;
+		}
 	}
 }
 
@@ -1724,6 +1725,17 @@ a{
 .project-fluid{
 	@media only screen and (min-width:@bp_sm){
 		padding-top:@projects_offset + 30px;
+	}
+}
+
+.url-fluid{
+	.regular-text{
+		margin-bottom:0px;
+		margin-top:0px;
+
+		&:last-child{
+			margin-bottom:20px;
+		}
 	}
 }
 

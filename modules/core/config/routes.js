@@ -45,8 +45,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 				pageTitle: 'Contact'
 			}
 		}).
-		state('projects', {
-			url: '/project/:projectId',
+		state('stories', {
+			url: '/story/:projectId',
 			templateUrl: 'modules/core/views/single-project.html',
 			data: {
 				pageTitle: ''
