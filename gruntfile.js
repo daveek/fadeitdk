@@ -66,8 +66,6 @@ module.exports = function(grunt) {
 				'lib/angular-moment-fadeit/angular-moment.js',
 				'lib/angular-linkify-fadeit/angular-linkify.js',
 				'lib/wowjs/dist/wow.js',
-				'lib/angular-scroll/angular-scroll.js',
-				'lib/ng-parallax/angular-parallax.js',
 				'scripts/other.min.js',
 				'lib/angular-load/angular-load.js'],
 				dest: 'scripts/app.js'
