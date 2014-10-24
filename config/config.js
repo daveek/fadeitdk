@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'fadeit';
-	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'angularMoment', 'linkify', 'duParallax', 'angularLoad'];
+	var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'angularMoment', 'linkify', 'angularLoad'];
 
 	// Add a new vertical module
 	var registerModule = function(moduleName) {
@@ -61,7 +61,8 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		$scope.wow = '';
 
 		$scope.wow = new WOW({
-			live: false
+			live: false,
+			mobile: false
 		});
 
 		$scope.wow.init();

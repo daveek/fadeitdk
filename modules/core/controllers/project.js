@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core').controller('ProjectController', ['$scope', '$stateParams','amMoment', '$sce', '$log', 'parallaxHelper', 'ProjectData', 'AnimationService', function ($scope, $stateParams, amMoment, $sce, $log, parallaxHelper, ProjectData, AnimationService) {
+angular.module('core').controller('ProjectController', ['$scope', '$stateParams','amMoment', '$sce', '$log', 'ProjectData', 'AnimationService', function ($scope, $stateParams, amMoment, $sce, $log, ProjectData, AnimationService) {
 	//load services
 	$scope.anim = AnimationService;
 

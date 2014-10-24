@@ -68,7 +68,6 @@ module.exports = function(grunt) {
 				'lib/wowjs/dist/wow.js',
 				'lib/angular-scroll/angular-scroll.js',
 				'lib/ng-parallax/angular-parallax.js',
-				'lib/skrollr/dist/skrollr.min.js',
 				'scripts/other.min.js',
 				'lib/angular-load/angular-load.js'],
 				dest: 'scripts/app.js'

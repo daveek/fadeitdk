@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', 'parallaxHelper', '$document', 'ProjectPreview', '$location', '$anchorScroll', 'AnimationService', 'StyleService', function ($scope, $http, linkify, $sce, $log, parallaxHelper, $document, ProjectPreview, $location, $anchorScroll, AnimationService, StyleService) {
+angular.module('core').controller('HomeController', ['$scope', '$http', 'linkify', '$sce', '$log', '$document', 'ProjectPreview', '$location', '$anchorScroll', 'AnimationService', 'StyleService', function ($scope, $http, linkify, $sce, $log, $document, ProjectPreview, $location, $anchorScroll, AnimationService, StyleService) {
 	//load services
 	$scope.projectPreviews = ProjectPreview;
 	$scope.anim = AnimationService;

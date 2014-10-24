@@ -1,20 +1,6 @@
 'use strict';
 
-angular.module('core').controller('ContactController', ['$scope', '$log', 'parallaxHelper', 'AnimationService', function ($scope, $log, parallaxHelper, AnimationService) {
-	var s;
+angular.module('core').controller('ContactController', ['$scope', '$log', 'AnimationService', function ($scope, $log, AnimationService) {
 	//load services
 	$scope.anim = AnimationService;
-
-	$scope.initSkrollr = function initSkrollr(){
-		s = skrollr.init({
-			forceHeight:false,
-			constants: {
-				h: 300
-			}
-		});
-	};
-
-	//init methods
-	$scope.initSkrollr();
-	s.refresh();
 }]);

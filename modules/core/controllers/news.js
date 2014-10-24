@@ -18,16 +18,6 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 	$scope.newsHeaderShown = false;
 
 	/*
-	 * Overrides the scroll in config.js
-	 * It scrolls back to top if #news's CSS display === none
-	 */
-	if(angular.element('#news').css('display') === 'none'){
-		angular.element('body, html').delay(400).animate({
-			scrollTop: 0
-		}, { duration: 100 });
-	}
-
-	/*
 	 * one-time news trigger when controller is ready
 	 * calls loadNews() which will call itself
 	 *
@@ -141,6 +131,10 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 	 * Hides or show the 'top whitebar' to reveal news
 	 *
 	 * Same as the scroll, it will only be applied if the #news is NOT display:none
+	 *
+	 * On 'secondary' pages, where a logo is presented in the outstanding-container
+	 * hide that logo (avoid having 2 logos at the same time)
+	 *
 	 */
 	$document.on('scroll mousewheel DOMMouseScroll MozMousePixelScroll MouseScrollEvent', function() {
 		//btw: not using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
@@ -151,6 +145,7 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 				angular.element('.fadeit-logo-link').addClass('hidden-logo-link');
 				angular.element('.fadeit-logo-small').addClass('visible-fixed-logo');
 				angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
+				angular.element('.secondary-page-logo').removeClass('hidden-secondary-page-logo');
 
 				$scope.newsHeaderShown = true;
 			}
@@ -158,6 +153,7 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 				angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
 				angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
 				angular.element('.transparent-whitebar').addClass('hidden-whitebar');
+				angular.element('.secondary-page-logo').addClass('hidden-secondary-page-logo');
 
 				$scope.newsHeaderShown = false;
 			}
