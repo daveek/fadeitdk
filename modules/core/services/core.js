@@ -33,7 +33,8 @@ angular.module('core').factory('MenuData', function() {
 
 // Project preview service used for displaying data in the grid preview
 angular.module('core').factory('ProjectPreview', function() {
-	var projectPreviewData = [{
+	var projectPreviewData = [
+		{
 			id: 'portal',
 			background: '#AFB1B4',
 			title: 'Portal',
@@ -48,14 +49,6 @@ angular.module('core').factory('ProjectPreview', function() {
 			} //max 3 tags
 		},
 		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
 			id: 'ymobile',
 			background: '#590B0B',
 			title: 'yMobile',
@@ -74,6 +67,22 @@ angular.module('core').factory('ProjectPreview', function() {
 			activeCover: 'sm'
 		},
 		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
+			dummy: true,
+			activeCover: 'sm'
+		},
+		{
 			id: 'ols',
 			background: '#0C7A93',
 			title: 'OLS',
@@ -86,36 +95,6 @@ angular.module('core').factory('ProjectPreview', function() {
 				1: 'AngularJS',
 				2: 'iOS'
 			} //max 3 tags
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			id: 'aleris-hamlet',
-			background: '#319E8F',
-			title: 'Aleris/Hamlet',
-			link: 'project/aleris-hamlet',
-			uiRoute: '/project/aleris-hamlet',
-			activeCover: 'sm',
-			shortDescription: '',
-			tags: {
-				0: 'Drupal',
-				1: 'Responsive',
-				2: 'AngularJS'
-			} //max 3 tags
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
 		},
 		{
 			dummy: true,
@@ -138,51 +117,7 @@ angular.module('core').factory('ProjectPreview', function() {
 		{
 			dummy: true,
 			activeCover: 'sm'
-		},
-		{
-			id: 'ols',
-			background: '#0C7A93',
-			title: 'OLS',
-			link: 'project/ols',
-			uiRoute: '/project/ols',
-			activeCover: 'sm',
-			shortDescription: '',
-			tags: {
-				0: 'Python',
-				1: 'AngularJS',
-				2: 'iOS'
-			} //max 3 tags
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			dummy: true,
-			activeCover: 'sm'
-		},
-		{
-			id: 'ymobile',
-			background: '#590B0B',
-			title: 'yMobile',
-			link: 'project/ymobile',
-			uiRoute: '/project/ymobile',
-			activeCover: 'md',
-			shortDescription: '',
-			tags: {
-				0: 'Drupal',
-				1: 'CMS',
-				2: 'Responsive'
-			} //max 3 tags
-		},
+		}
 	];
 
 	return projectPreviewData;

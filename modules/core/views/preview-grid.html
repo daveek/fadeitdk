@@ -4,6 +4,7 @@ data-wow-duration="{{anim.header.durationMedium}}"
 data-ng-repeat="project in projectPreviews"
 data-ng-class="generateClass(project.activeCover, project.dummy, $index)"
 last-item-watcher>
+	<!-- Don't do anything for the first project for now
 	<a href="#!/project/{{project.id}}" class="project-preview" data-ng-if="$index === 0 && !project.dummy">
 		<img data-ng-src='img/projects/{{project.id}}/cover_{{project.activeCover}}@2x.jpg' alt="project.title" class="project-cover-used main-cover"/>
 
@@ -12,7 +13,7 @@ last-item-watcher>
 				{{tag}}
 			</span>
 		</span>
-	</a>
+	</a>-->
 
 	<a href="#!/project/{{project.id}}" class="project-preview" data-ng-if="!project.dummy && $index !== 0">
 		<img data-ng-src='img/projects/{{project.id}}/cover_{{project.activeCover}}@2x.jpg' alt="project.title" class="project-cover-used"/>
