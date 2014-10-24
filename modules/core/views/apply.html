@@ -1,7 +1,7 @@
 <section class="container-fluid main-container secondary-page-container">
-	<section class="row-fluid secondary-page-row services-fluid clearfix">
+	<section class="row-fluid secondary-page-row apply-fluid clearfix">
 
-		<section class="default-inner-container" style="margin-top: 200px;">
+		<section class="default-inner-container">
 			<section class="row-fluid visible-row apply-row clearfix">
 				<section class="col-xs-12">
 					<h1 class="regular-title">Hi there, stranger</h1>
@@ -69,16 +69,19 @@
 									<input id="uploadFile" placeholder="No file chosen" disabled="disabled" />
 									<div class="fileUpload btn btn-primary btn-sm">
 									  <span>Choose file</span>
+									  <!-- CV uploaded here -->
 									  <input type="file" id="edit-submitted-cv-upload" name="files[submitted_cv]" class="form-file upload">
 									</div>
 
 									<script>
+										//Just writing the filename in the 'disabled' field
 										document.getElementById("edit-submitted-cv-upload").onchange = function () {
 											document.getElementById("uploadFile").value = this.value;
 										};
 									</script>
 
-									<!--<input type="submit" id="edit-submitted-cv-upload-button" name="submitted_cv_upload_button" value="Upload" class="form-submit ajax-processed">-->
+									<!-- Submit button that was next to the file input
+									<input type="submit" id="edit-submitted-cv-upload-button" name="submitted_cv_upload_button" value="Upload" class="form-submit ajax-processed">-->
 									<input type="hidden" name="submitted[cv][fid]" value="0">
 								</div>
 

@@ -56,7 +56,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider', '$locatio
 			url: '/thanks',
 			templateUrl: 'modules/core/views/thanks.html',
 			data: {
-				pageTitle: 'Internship at fadeit',
+				pageTitle: 'Thanks',
 				hideNews: true
 			}
 		}).
