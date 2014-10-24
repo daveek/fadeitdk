@@ -3,7 +3,7 @@
 // Menu service used for creating the main menu
 angular.module('core').factory('MenuData', function() {
 	var menuItems = [{
-			title: 'projects',
+			title: 'stories',
 			link: '',
 			uiRoute: '/'
 		},
