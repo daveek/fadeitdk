@@ -149,7 +149,7 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 
 				$scope.newsHeaderShown = true;
 			}
-			else if($scope.currentScrollPosition <= $scope.newsSectionHeight + $scope.projectOffset && $scope.newsHeaderShown){
+			else if($scope.currentScrollPosition < $scope.newsSectionHeight + $scope.projectOffset && $scope.newsHeaderShown){
 				angular.element('.fadeit-logo-link').removeClass('hidden-logo-link');
 				angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
 				angular.element('.transparent-whitebar').addClass('hidden-whitebar');

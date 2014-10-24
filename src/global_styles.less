@@ -1019,7 +1019,7 @@ a{
   }
 }
 
-.menuToolbox{
+.mainSidebarToolbox{
 	#news-link{
 		.hide();
 	}
@@ -1166,7 +1166,9 @@ a{
 
 .contact-fluid{
 	.contact-block{
-		padding: 35px;
+		@media only screen and (min-width:@bp_xxl){
+			padding: 35px;
+		}
 	}
 }
 
@@ -1221,14 +1223,8 @@ a{
 	}
 }
 
-.binary{
-	.inline-block();
-	overflow: hidden;
-	.ta-j();
-}
-
 .default-inner-container{
-	max-width:1300px;
+	max-width:1250px;
 
 	@media only screen and (min-width:@bp_sm){
 		padding-left:@sidebar_left_width;
@@ -1370,7 +1366,7 @@ a{
 	}
 
 	@media only screen and (min-width:@bp_lg){
-		padding:100px + @projects_offset 150px 60px 40px;
+		padding:100px + @projects_offset 40px 60px 40px;
 
 		.default-inner-container{
 			padding-left:@sidebar_left_width;
@@ -1447,6 +1443,7 @@ a{
 	}
 
 	.rounded-border{
+		max-width: 100%;//FF fix
 		.inline-block();
 		.border-radius(50%);
 		border: 1px solid #EAEAEA;
@@ -1493,20 +1490,31 @@ a{
 .secondary-page-logo{
 	width:150px;
 	margin-bottom:50px;
-	.animate(@animation_time_short, @transition_default);
+	.animate(@animation_time, @transition_default);
 }
 
 .hidden-secondary-page-logo{
 	opacity:0;
-	.animate(@animation_time_short, @transition_default);
+	.animate(@animation_time, @transition_default);
 }
 
-.img-heart, .img-butterfly{
+.img-heart, .img-butterfly, .img-penguin{
 	.ta-c();
 	margin-top: 50px;
 
 	img{
 		width:80px;
+	}
+}
+
+.img-penguin{
+	padding:20px;
+	margin-top:200px;
+	margin-bottom:50px;
+
+	img{
+		width:140px;
+		padding:30px;
 	}
 }
 
@@ -1638,6 +1646,21 @@ a{
 	}
 }
 
+.binary-container{
+	margin-top:-(@projects_offset + 30px);
+	padding-bottom:60px;
+
+	.binary{
+		font-family: Arial, sans-serif;
+		font-size:18px!important;
+		line-height:30px!important;
+		max-height:120px;
+		.inline-block();
+		overflow: hidden;
+		.ta-j();
+	}
+}
+
 /*end fadeit styles*/
 
 /*outstanding*/
@@ -1676,6 +1699,14 @@ a{
 	.hide-i();
 
 	@media only screen and (min-width:@bp_lg){
+		display:block!important;
+	}
+}
+
+.min-xxl{
+	.hide-i();
+
+	@media only screen and (min-width:@bp_xxl){
 		display:block!important;
 	}
 }

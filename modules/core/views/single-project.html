@@ -1,7 +1,7 @@
 <section class="container-fluid main-container secondary-page-container" data-ng-controller="ProjectController">
 	<section class="row-fluid secondary-page-row project-fluid clearfix">
 
-		<section class="outstanding-container clearfix animate wow fadeInDown"
+		<section class="outstanding-container binary-container clearfix animate wow fadeInDown"
 		data-wow-duration="{{anim.base.shortDuration}}"
 		data-wow-delay="{{anim.base.delay}}"
 		data-ng-if="!project">
@@ -9,7 +9,7 @@
 				<section class="inner-text">
 					<img ng-src="img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
 					<p class="regular-text">
-						The project <u>{{projectId}}</u> is still being put together by one of our developers. He promised a preview of what he has so far and we are very excited to share it with you: <br/><br/><br/><br/>
+						The project description for <u>{{projectId}}</u> is still being put together by one of our developers. He promised us a preview and he did not disappoint when asked to deliver: <br/><br/><br/><br/>
 
             <span class="binary">
 						0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 0 0 1 1 1 0 0
@@ -18,6 +18,25 @@
 				</section>
 			</section>
 		</section>
+
+		<section class="row-fluid visible-row final-row clearfix animate wow fadeIn"
+		data-wow-duration="{{anim.base.shortDuration}}"
+		data-wow-delay="{{anim.base.delay}}"
+		data-ng-if="!project">
+      <section class="col-xs-12">
+        <figure class="image-container clearfix img-penguin">
+          <span class="rounded-border">
+          	<img ng-src="img/icons/fadeit_penguin.svg" alt="a penguin to cheer you up" class="icon-image" />
+          </span>
+          <figcaption>
+	          <h2>Here's a penguin to cheer you up.</h2>
+	          We'll do our best to prevent this from happening again.<br/>
+	          If you are really mad at us, go ahead and send an angry email.<br/><br/>
+	          Just to show that we care, we even provide you with <a href="#!/contact">a link</a>.
+          </figcaption>
+        </figure>
+      </section>
+    </section>
 
 		<section class="default-inner-container" data-ng-if="project">
 

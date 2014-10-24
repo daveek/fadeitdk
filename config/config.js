@@ -33,7 +33,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).config(['$locatio
 	}
 ]);
 
-angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCtrl', ['$scope', '$location', 'StyleService', function AppCtrl ( $scope, $location, StyleService ) {
+angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCtrl', ['$scope', '$location', 'StyleService', '$log', function AppCtrl ( $scope, $location, StyleService, $log ) {
 
 	//load services
 	$scope.styles = StyleService.getStyles();
@@ -90,13 +90,12 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		angular.element('body, html').delay(scrollDelay).animate({
 			scrollTop: scrollPosition
 		}, {
-			duration: 100,
+			duration: 0,
 			complete: function(){
 				$scope.isAnimating = false;
 			}
 		});
 	}
-
 
 	/*
 	 * Event callback that wait for a state to change
@@ -169,6 +168,20 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		//Simulates a 'real' page
 		$scope.scrollToNewsOrTop();
 	});
+
+	/*
+	 * Hackers gotta hack
+	 */
+	$log.debug('
+     ███████╗ █████╗ ██████╗ ███████╗██╗████████╗
+     ██╔════╝██╔══██╗██╔══██╗██╔════╝██║╚══██╔══╝
+     █████╗  ███████║██║  ██║█████╗  ██║   ██║
+     ██╔══╝  ██╔══██║██║  ██║██╔══╝  ██║   ██║
+     ██║     ██║  ██║██████╔╝███████╗██║   ██║
+     ╚═╝     ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝   ╚═╝
+	\n\n
+	Like inspecting code? Check out fadeit.dk/apply
+	');
 }]);
 
 //Then define the init function for starting up the application
