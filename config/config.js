@@ -45,7 +45,6 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 
 	//wow animation variables
 	$scope.wow = '';
-	$scope.isAnimating = false;
 
 	//variables used globally
 	$scope.pageTitle = '';
@@ -82,7 +81,8 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 	$scope.scrollToNewsOrTop = function scrollToNewsOrTop(){
 		var scrollPosition = 0;
 		var scrollDelay = 0;
-		if(angular.element('#news').css('display') !== 'none'){
+
+		if($scope.hideNews && typeof angular.element('#news').css('display') !== 'undefined' && angular.element('#news').css('display') !== 'none'){
 			scrollPosition = $scope.newsSectionHeight + $scope.projectOffset;
 			scrollDelay = 500;
 		}
@@ -90,10 +90,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		angular.element('body, html').delay(scrollDelay).animate({
 			scrollTop: scrollPosition
 		}, {
-			duration: 0,
-			complete: function(){
-				$scope.isAnimating = false;
-			}
+			duration: 100
 		});
 	}
 
@@ -111,9 +108,6 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
 		$scope.pageImage = '';
 		$scope.pageTitle = '';
-
-		//Simulates a 'real' page
-		$scope.scrollToNewsOrTop();
 
 		/*
 		 * updates the <title> tag
@@ -136,7 +130,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 		}
 
 		/*
-		 * Don't display news on the tech page
+		 * Don't display news on the pages that have hideNews: true
 		 */
 		$scope.hideNews = true;
 		if(angular.isDefined(toState.data.hideNews)){
@@ -144,6 +138,9 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 				$scope.hideNews = false;
 			}
 		}
+
+		//Simulates a 'real' page
+		$scope.scrollToNewsOrTop();
 	});
 
 	/*
@@ -160,8 +157,7 @@ angular.module(ApplicationConfiguration.applicationModuleName).controller('AppCt
 
 	/*
 	 * Listens to the news controller
-	 * Used in order to scroll to the right position:
-	 * NewsController needs to be initialized.
+	 * Used in order to scroll to the right position.
 	 *
 	 */
 	$scope.$on('newsReady', function newsReadyScroll(){
