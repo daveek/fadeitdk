@@ -2,7 +2,7 @@
 'use strict';
 
 
-//removed until cookie prompter is ready
+//Removed until cookie prompter is ready
 /*
 //facebook website pixel
 (function() {
