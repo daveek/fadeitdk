@@ -348,6 +348,13 @@ angular.module('core').factory('TechnologiesService', function(){
 				bold : false
 			},
 			{
+				name : 'Docker',
+				size : 150,
+				circles : 2,
+				font : 28,
+				bold : false
+			},
+			{
 				name : 'MySQL',
 				size : 170,
 				circles : 4,
