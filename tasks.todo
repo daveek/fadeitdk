@@ -1,33 +1,26 @@
 Next steps:
   ☐ Add team to about page
-  ✔ Export svg's at designated size? fix fine edges @done (14-10-21 00:21)
-  ✔ Work on the news section - allow on all pages @done (14-10-23 03:00)
   ☐ Adjust tags - actually implement tag - search
+  ☐ Test in Safari, some IE versions, etc
 
    Tweak:
-     ✔ Linkedin, re-arrange @done (14-10-21 03:14)
-     ☐ Change front page?
-
+  ☐ Change front page?
 
 Mandatory:
   ☐ Add cookie prompter
-  ✔ Enhance contact page @done (14-10-23 03:00)
 
 Bootstrap:
   ☐ refactor grunt tasks (add build-compile scenarios)
 
 UX:
-  ☐ add background to logo (should not get mixed up with menu on very low heights)
 Graphic Design:
   ☐ change fiveico with dot?
 Performance & build:
   ☐ remove live reload script if not on localhost
 
 Other fun things:
-  ☐ make 404 page
   ☐ Move 'data' to bitbucket submodule, ignore core.js services (replace with base / sample)
-  ☐ replace jquery with ng-modules?
-  ☐ further reduce requests with concat
+  ☐ further reduce requests
 
  Not so important:
   ☐ Move all resources to src, including images, compile with grunt
@@ -36,7 +29,6 @@ Other fun things:
   ☐ Separate production / build files
   ☐ display news images next to the text update
   ☐ Add danish
-
 
  Important Notes:
    - (FORKED) modified linkify library to not display anything before '//'
@@ -47,18 +39,25 @@ Other fun things:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ Add twitterOAuth as a dependency @done (14-09-12 23:59) @project(Bootstrap)
- ✘ Selectively load data (core) from modules/core/data repo @cancelled (14-10-18 00:44) @project(Bootstrap)
- ✔ check for twitter updates and automatically display them using transitions @done (14-09-11 17:32) @project(UX)
- ✘ add loader for latest news @cancelled (14-10-18 00:45) @project(UX)
- ✔ handle loading error for tweets (both phh & js) @done (14-09-13 00:00) @project(UX)
- ✘ Fix initial loading layout jump @cancelled (14-10-18 00:46) @project(UX)
- ✘ Fix twitter truncated text broken link issue  @cancelled (14-10-18 00:46) @project(UX)
- ✘ make loader gif @cancelled (14-10-18 00:46) @project(Graphic Design)
- ✔ load js files using requirejs @done (14-09-13 01:12) @project(Performance & build)
- ✔ reduce image size (jpeg interlaced - progressive) @done (14-09-16 22:32) @project(Performance & build)
- ✔ kill off twitter api block @done (14-09-16 22:32) @project(Performance & build)
- ✔ remove animation from cover image @done (14-09-16 22:32) @project(Performance & build)
- ✘ replace the generate class method - load the class data from the model @cancelled (14-10-18 00:47) -- cannot really be done @project(Performance & build)
+ ✘ replace jquery with ng-modules? @cancelled (14-10-24 05:15) @project(Other fun things)
+ ✘ make 404 page @cancelled (14-10-24 05:15) //kinda there: not-found.html @project(Other fun things)
+ ✘ add background to logo (should not get mixed up with menu on very low heights) @cancelled (14-10-24 05:14) @project(UX)
+ ✔ Work on the news section - allow on all pages @done (14-10-23 03:00) @project(Next steps)
+ ✔ Enhance contact page @done (14-10-23 03:00) @project(Mandatory)
+ ✔ Linkedin, re-arrange @done (14-10-21 03:14) @project(Next steps / Tweak)
+ ✔ Export svg's at designated size? fix fine edges @done (14-10-21 00:21) @project(Next steps)
  ✔ combine js libraries to make less requests OR use require.js? @done (14-10-18 00:48) @project(Other fun things)
  ✔ combine css libraries into a single resource for less requests @done (14-10-18 00:48) @project(Other fun things)
+ ✘ replace the generate class method - load the class data from the model @cancelled (14-10-18 00:47) -- cannot really be done @project(Performance & build)
+ ✘ make loader gif @cancelled (14-10-18 00:46) @project(Graphic Design)
+ ✘ Fix twitter truncated text broken link issue  @cancelled (14-10-18 00:46) @project(UX)
+ ✘ Fix initial loading layout jump @cancelled (14-10-18 00:46) @project(UX)
+ ✘ add loader for latest news @cancelled (14-10-18 00:45) @project(UX)
+ ✘ Selectively load data (core) from modules/core/data repo @cancelled (14-10-18 00:44) @project(Bootstrap)
+ ✔ remove animation from cover image @done (14-09-16 22:32) @project(Performance & build)
+ ✔ reduce image size (jpeg interlaced - progressive) @done (14-09-16 22:32) @project(Performance & build)
+ ✔ kill off twitter api block @done (14-09-16 22:32) @project(Performance & build)
+ ✔ load js files using requirejs @done (14-09-13 01:12) @project(Performance & build)
+ ✔ handle loading error for tweets (both phh & js) @done (14-09-13 00:00) @project(UX)
+ ✔ Add twitterOAuth as a dependency @done (14-09-12 23:59) @project(Bootstrap)
+ ✔ check for twitter updates and automatically display them using transitions @done (14-09-11 17:32) @project(UX)
