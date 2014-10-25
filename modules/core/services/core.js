@@ -101,7 +101,7 @@ angular.module('core').factory('ProjectPreview', function() {
 			tags: {
 				0: 'IoT',
 				1: 'Big Data',
-				2: 'Integration'
+				2: 'Node.js'
 			}
 		},
 		{
