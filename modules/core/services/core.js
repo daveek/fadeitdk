@@ -272,7 +272,8 @@ angular.module('core').factory('ProjectData', function() {
 			uiRoute: '/story/gatesense',
 			tags: {
 				0: 'IoT',
-				1: 'Big Data'
+				1: 'Big Data',
+        2: 'Node.js'
 			},
 			images: {
 				heading: 'Learn more about Gatesense',
