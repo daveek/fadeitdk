@@ -137,10 +137,10 @@ angular.module('core').factory('ProjectData', function() {
             base: '#A91400', //background-base
             accent: '#8C0000', //darker background
             text: '#FFFFFF', //color for the base
-                darkText: '#333333', //text for light background
-                    light: '#F9F9F9',	//light background
+            darkText: '#333333', //text for light background
+            light: '#F9F9F9',	//light background
             lightAccent: '#E7E8EA', //darker background (for borders maybe)
-                coverBackground: '#E7E8EA'
+            coverBackground: '#E7E8EA'
         },
         title: 'IPVision',
         link: 'story/ipvision',
@@ -159,38 +159,38 @@ angular.module('core').factory('ProjectData', function() {
                     title: 'Dashboard / App home',
                     desc: 'The front page of the application, displaying the user consumption for the selected period of time.'
                 },
-            1: {
-                filename: '1.png',
-                title: 'Consumption Overview (line chart)',
-                desc: 'A detailed view of the "talk" consumption for the selected period.'
-            },
-        2: {
-            filename: '2.png',
-            title: 'Subscription Management',
-            desc: 'A detailed subscription view for the selected user.'
-        },
-    3: {
-        filename: '3.png',
-        title: 'User Account Overview',
-        desc: 'The user account main page, displaying general user info.'
-    },
-    4: {
-        filename: '4.png',
-        title: 'Mobile Views',
-        desc: 'An overview of the responsive implementation.'
-    }
+                1: {
+                    filename: '1.png',
+                    title: 'Consumption Overview (line chart)',
+                    desc: 'A detailed view of the "talk" consumption for the selected period.'
+                },
+                2: {
+                    filename: '2.png',
+                    title: 'Subscription Management',
+                    desc: 'A detailed subscription view for the selected user.'
+                },
+                3: {
+                    filename: '3.png',
+                    title: 'User Account Overview',
+                    desc: 'The user account main page, displaying general user info.'
+                },
+                4: {
+                    filename: '4.png',
+                    title: 'Mobile Views',
+                    desc: 'An overview of the responsive implementation.'
+                }
             }
         },
         urls:{
             0:{
                 title: 'IPVision website',
                 link: 'http://www.ipvision.dk/',
-                    text: 'To find out more, take a look at the '
+                text: 'To find out more, take a look at the '
             },
             1:{
                 title: 'Portal prototype',
                 link: 'http://danmind.ru/portal/main',
-                    text: 'Below you can see one of the projects that we\'ve built together, Portal. A prototype is also avaialble here: '
+                text: 'Below you can see one of the projects that we\'ve built together, Portal. A prototype is also avaialble here: '
             },
         },
         content: {
@@ -199,10 +199,10 @@ angular.module('core').factory('ProjectData', function() {
                 heading: 'About IPVision',
                 text: 'IPVision A/S is a Copenhagen-based Mobile Virtual Network Operator (MVNO). They are one of the leading IP Telephony providers for B2B customers in Denmark.'
             },
-        mainHeading: 'Our collaboration',
-        paragraphs: {
-            0: 'In IPVision, we work on state of the art self service portals, backoffice tools, phone usage systems, accounting software and automation of various workflows.'
-        }
+            mainHeading: 'Our collaboration',
+            paragraphs: {
+                0: 'In IPVision, we work on state of the art self service portals, backoffice tools, phone usage systems, accounting software and automation of various workflows.'
+            }
         }
     },
     {
@@ -234,12 +234,12 @@ angular.module('core').factory('ProjectData', function() {
             0:{
                 title: 'their website',
                 link: 'http://www.alexandra.dk/uk/',
-                    text: 'To read more about Alexandra, go to '
+                text: 'To read more about Alexandra, go to '
             },
             1:{
                 title: 'here',
                 link: 'http://www.alexandra.dk/uk/labs/smart-city-lab/pages/smart-city-lab.aspx',
-                    text: 'You can find more details about Smart City Lab '
+                text: 'You can find more details about Smart City Lab '
             },
         },
         content: {
@@ -284,15 +284,15 @@ angular.module('core').factory('ProjectData', function() {
             0:{
                 title: 'Gatesense website',
                 link: 'http://gatesense.com',
-                    text: 'This still-evolving project is currently building an international community of developers and other entrepreneurs, cities and organisations with a passion for sustainability. Check out the '
+                text: 'This still-evolving project is currently building an international community of developers and other entrepreneurs, cities and organisations with a passion for sustainability. Check out the '
             }
         },
         content: {
             shortDescription: 'Unleashing creativity and creating significant value for society',
-                intro: {
-                    heading: 'Gatesense',
-                    text: 'Gatesense is a modern Internet of Things platform. Its primary purpose is to build a community and a set of concrete tools for solving today\'s environment problems.'
-                },
+            intro: {
+                heading: 'Gatesense',
+                text: 'Gatesense is a modern Internet of Things platform. Its primary purpose is to build a community and a set of concrete tools for solving today\'s environment problems.'
+            },
             mainHeading: 'Our collaboration',
             paragraphs: {
                 0: 'We play a major role in research and technical development of the platform. The effort is lead by Grundfos and Alexandra Institute.'
@@ -307,172 +307,172 @@ angular.module('core').factory('ProjectData', function() {
 angular.module('core').factory('StyleService', function(){
     this.getStyles = function getStyles(){
         /*
-            * Contains less variables - (duplicated from CSS)
-        * NEED to match the global_styles LESS file when changing
-        *
-            */
-        var styles = {
+         * Contains less variables - (duplicated from CSS)
+         * NEED to match the global_styles LESS file when changing
+         *
+         */
+    var styles = {
 
-            cssClasses: {},
-            projectOffset: 0,
-            newsSectionHeight: 300
-        };
+cssClasses: {},
+projectOffset: 0,
+newsSectionHeight: 300
+};
 
-        return styles;
-    };
+return styles;
+};
 
-    return this;
+return this;
 });
 
 // Style service used for defining classes, sizes
 angular.module('core').factory('AnimationService', function(){
-    var animationData = {
-        header: {
-            duration: '0.3s',
-            delay: '0.3s',
-            durationMedium: '0.3s'
-        },
-        base: {
-            shortDuration: '0.5s',
-            duration: '1s',
-            longDuration: '1.5s',
-            shortDelay: '0.2s',
-            delay: '0.5s',
-            longDelay: '1s'
-        },
-        custom: {}
-    };
+        var animationData = {
+header: {
+duration: '0.3s',
+delay: '0.3s',
+durationMedium: '0.3s'
+},
+base: {
+shortDuration: '0.5s',
+duration: '1s',
+longDuration: '1.5s',
+shortDelay: '0.2s',
+delay: '0.5s',
+longDelay: '1s'
+},
+custom: {}
+};
 
-    return animationData;
+return animationData;
 });
 
 // Balls service (Sander's ballz)
 angular.module('core').factory('TechnologiesService', function(){
-    this.getTechnologies = function getTechnologies(){
+        this.getTechnologies = function getTechnologies(){
         var technologies = [{
-            name : 'AngularJS',
-            size : 250,
-            circles : 3,
-            font : 35,
-            bold : true
-        },
-        {
-            name : 'Python',
-            size : 250,
-            circles : 3,
-            font : 43,
-            bold : true
-        },
-        {
-            name : 'PHP',
-            size : 80,
-            circles : 1,
-            font : 25,
-            bold : false
-        },
-        {
-            name : 'nginx',
-            size : 170,
-            circles : 4,
-            font : 35,
-            bold : false
-        },
-        {
-            name : 'Flask',
-            size : 150,
-            circles : 2,
-            font : 33,
-            bold : false
-        },
-        {
-            name : 'Drupal',
-            size : 170,
-            circles : 2,
-            font : 35,
-            bold : false
-        },
-        {
-            name : 'JavaScript',
-            size : 260,
-            circles : 3,
-            font : 35,
-            bold : true
-        },
-        {
-            name : 'Apache',
-            size : 200,
-            circles : 1,
-            font : 35,
-            bold : false
-        },
-        {
-            name : 'Java',
-            size : 180,
-            circles : 3,
-            font : 40,
-            bold : true
-        },
-        {
-            name : 'elasticsearch',
-            size : 230,
-            circles : 2,
-            font : 25,
-            bold : false
-        },
-        {
-            name : 'Linux',
-            size : 240,
-            circles : 3,
-            font : 45,
-            bold : true
-        },
-        {
-            name : 'Git',
-            size : 160,
-            circles : 4,
-            font : 37,
-            bold : false
-        },
-        {
-            name : 'Vagrant',
-            size : 225,
-            circles : 2,
-            font : 35,
-            bold : false
-        },
-        {
-            name : 'Puppet',
-            size : 190,
-            circles : 2,
-            font : 34,
-            bold : false
-        },
-        {
-            name : 'PostgreSQL',
-            size : 210,
-            circles : 2,
-            font : 27,
-            bold : false
-        },
-        {
-            name : 'Docker',
-            size : 150,
-            circles : 2,
-            font : 28,
-            bold : false
-        },
-        {
-            name : 'MySQL',
-            size : 170,
-            circles : 4,
-            font : 30,
-            bold : false
-        },
-        ];
+name : 'AngularJS',
+size : 250,
+circles : 3,
+font : 35,
+bold : true
+},
+{
+name : 'Python',
+size : 250,
+circles : 3,
+font : 43,
+bold : true
+},
+{
+name : 'PHP',
+size : 80,
+circles : 1,
+font : 25,
+bold : false
+},
+{
+name : 'nginx',
+       size : 170,
+       circles : 4,
+       font : 35,
+       bold : false
+},
+{
+name : 'Flask',
+       size : 150,
+       circles : 2,
+       font : 33,
+       bold : false
+},
+{
+name : 'Drupal',
+       size : 170,
+       circles : 2,
+       font : 35,
+       bold : false
+},
+{
+name : 'JavaScript',
+       size : 260,
+       circles : 3,
+       font : 35,
+       bold : true
+},
+{
+name : 'Apache',
+       size : 200,
+       circles : 1,
+       font : 35,
+       bold : false
+},
+{
+name : 'Java',
+       size : 180,
+       circles : 3,
+       font : 40,
+       bold : true
+},
+{
+name : 'elasticsearch',
+       size : 230,
+       circles : 2,
+       font : 25,
+       bold : false
+},
+{
+name : 'Linux',
+       size : 240,
+       circles : 3,
+       font : 45,
+       bold : true
+},
+{
+name : 'Git',
+       size : 160,
+       circles : 4,
+       font : 37,
+       bold : false
+},
+{
+name : 'Vagrant',
+       size : 225,
+       circles : 2,
+       font : 35,
+       bold : false
+},
+{
+name : 'Puppet',
+       size : 190,
+       circles : 2,
+       font : 34,
+       bold : false
+},
+{
+name : 'PostgreSQL',
+       size : 210,
+       circles : 2,
+       font : 27,
+       bold : false
+},
+{
+name : 'Docker',
+       size : 150,
+       circles : 2,
+       font : 28,
+       bold : false
+},
+{
+name : 'MySQL',
+       size : 170,
+       circles : 4,
+       font : 30,
+       bold : false
+},
+    ];
 
-        return technologies;
-    };
+return technologies;
+};
 
-    return this;
+return this;
 });
 

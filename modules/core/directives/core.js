@@ -42,58 +42,58 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
             scope.menuItems = MenuData;
 
             /*
-                * $watch listens for changes in the pageTitle / pageImage binding.
-                * When a change triggers a method, the class that made it visible
-            * will be removed (it will trigger animations),
-            * See 'toggleWhitebar' bellow.
-                *
-                */
+             * $watch listens for changes in the pageTitle / pageImage binding.
+             * When a change triggers a method, the class that made it visible
+             * will be removed (it will trigger animations),
+             * See 'toggleWhitebar' bellow.
+             *
+             */
             scope.$watch('pageTitle', function titleChanged(titleValue) {
-                scope.directiveImage = '';
-                angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
-                toggleWhitebar(titleValue, 0);
-            });
+                    scope.directiveImage = '';
+                    angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
+                    toggleWhitebar(titleValue, 0);
+                    });
 
             scope.$watch('pageImage', function imageChanged(imageValue) {
-                scope.directiveTitle = '';
-                angular.element('.secondary-page-title').removeClass('visible-secondary-page-title');
-                toggleWhitebar(imageValue, 1);
-            });
+                    scope.directiveTitle = '';
+                    angular.element('.secondary-page-title').removeClass('visible-secondary-page-title');
+                    toggleWhitebar(imageValue, 1);
+                    });
 
             /*
-                * Method that controls the custom binding of:
-                * directiveTitle and directiveImage
-            *
-                * @value is either pageTitle or pageImage (see routes)
-            * @type is image or text
-            * type = 0 is text
-            * type = 1 is image
-            *
-                * The current value (image or text) is allowed to leave the screen
-            * with the help of a timeout of 500ms.
-                *
-                * Each type of value will add a corresponding class
-            * to their containing/binding element.
-                * This class will toggle the animations and make the element visible
-            *
-                */
+             * Method that controls the custom binding of:
+             * directiveTitle and directiveImage
+             *
+             * @value is either pageTitle or pageImage (see routes)
+             * @type is image or text
+             * type = 0 is text
+             * type = 1 is image
+             *
+             * The current value (image or text) is allowed to leave the screen
+             * with the help of a timeout of 500ms.
+             *
+             * Each type of value will add a corresponding class
+             * to their containing/binding element.
+             * This class will toggle the animations and make the element visible
+             *
+             */
             var toggleWhitebar = function toggleWhitebar(value, type){
                 angular.element('.transparent-whitebar').addClass('hidden-whitebar');
 
                 if(value !== '' && typeof value !== 'undefined'){
                     setTimeout(function showWhitebar(){
-                        if(type === 1){
+                            if(type === 1){
                             scope.directiveImage = value;
                             angular.element('.fadeit-logo-small').addClass('visible-fixed-logo');
-                        }
-                        else{
+                            }
+                            else{
                             scope.directiveTitle = value;
                             angular.element('.secondary-page-title').addClass('visible-secondary-page-title');
-                        }
+                            }
 
-                        angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
-                        scope.$apply();
-                    }, 500);
+                            angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
+                            scope.$apply();
+                            }, 500);
                 }
             };
         }
@@ -102,32 +102,32 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 
 //template for the footer
 angular.module('core').directive('customFooter', function(){
-    return {
-        restrict: 'E',
-        templateUrl: 'modules/core/views/footer.html',
-        replace: true
-    };
+        return {
+restrict: 'E',
+templateUrl: 'modules/core/views/footer.html',
+replace: true
+};
 });
 
 //reloads wow on demand
 angular.module('core').directive('reloadWow', function(){
-    return {
-        restrict: 'E',
-        link: function(scope, element, attrs){
-            scope.initWow();
+        return {
+restrict: 'E',
+link: function(scope, element, attrs){
+scope.initWow();
 
-            scope.$watch('wowRefresh', function (refreshValue) {
-                scope.initWow();
-            });
-        }
-    };
+scope.$watch('wowRefresh', function (refreshValue) {
+        scope.initWow();
+        });
+}
+};
 });
 
 //template for the news section
 angular.module('core').directive('newsSection', function(){
-    return {
-        restrict: 'E',
-        templateUrl: 'modules/core/views/news.html',
-        replace: true
-    };
+        return {
+restrict: 'E',
+templateUrl: 'modules/core/views/news.html',
+replace: true
+};
 });
