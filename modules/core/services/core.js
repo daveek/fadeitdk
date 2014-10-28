@@ -12,21 +12,21 @@ angular.module('core').factory('MenuData', function() {
         link: 'about',
         uiRoute: '/about'
     },
-        {
-            title: 'Services',
-            link: 'services',
-            uiRoute: '/services'
-        },
-        {
-            title: 'Contact',
-            link: 'contact',
-            uiRoute: '/contact'
-        },
-            {
-                title: 'Toolbox',
-                link: 'toolbox',
-                uiRoute: '/toolbox'
-            }];
+    {
+        title: 'Services',
+        link: 'services',
+        uiRoute: '/services'
+    },
+    {
+        title: 'Contact',
+        link: 'contact',
+        uiRoute: '/contact'
+    },
+    {
+        title: 'Toolbox',
+        link: 'toolbox',
+        uiRoute: '/toolbox'
+    }];
 
     return menuItems;
 });
@@ -34,7 +34,7 @@ angular.module('core').factory('MenuData', function() {
 // Project preview service used for displaying data in the grid preview
 angular.module('core').factory('ProjectPreview', function() {
     var projectPreviewData = [
-    {
+        {
         id: 'ipvision',
         background: '#AFB1B4',
         title: 'IPVision',
@@ -62,66 +62,66 @@ angular.module('core').factory('ProjectPreview', function() {
             2: 'PHP'
         }
     },
-        {
-            dummy: true,
-            activeCover: 'sm'
-        },
-        {
-            dummy: true,
-            activeCover: 'sm'
-        },
-            {
-                dummy: true,
-                activeCover: 'sm'
-            },
-            {
-                dummy: true,
-                activeCover: 'sm'
-            },
-                {
-                    dummy: true,
-                    activeCover: 'sm'
-                },
-                {
-                    dummy: true,
-                    activeCover: 'sm'
-                },
-                    {
-                        dummy: true,
-                        activeCover: 'sm'
-                    },
-                    {
-                        id: 'gatesense',
-                        background: '#0C7A93',
-                        title: 'Gatesense',
-                        link: 'story/gatesense',
-                        uiRoute: '/story/gatesense',
-                        activeCover: 'sm',
-                        shortDescription: '',
-                        tags: {
-                            0: 'IoT',
-                            1: 'Big Data',
-                            2: 'Node.js'
-                        }
-                    },
-                        {
-                            dummy: true,
-                            activeCover: 'sm'
-                        },
-                        {
-                            id: 'alexandra',
-                            background: '#A9A7A8',
-                            title: 'Alexandra Institute',
-                            link: 'story/alexandra',
-                            uiRoute: '/story/alexandra',
-                            activeCover: 'sm',
-                            shortDescription: '',
-                            tags: {
-                                0: 'Open Data',
-                                1: 'CKAN',
-                                2: 'Drupal'
-                            }
-                        }
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        id: 'gatesense',
+        background: '#0C7A93',
+        title: 'Gatesense',
+        link: 'story/gatesense',
+        uiRoute: '/story/gatesense',
+        activeCover: 'sm',
+        shortDescription: '',
+        tags: {
+            0: 'IoT',
+            1: 'Big Data',
+            2: 'Node.js'
+        }
+    },
+    {
+        dummy: true,
+        activeCover: 'sm'
+    },
+    {
+        id: 'alexandra',
+        background: '#A9A7A8',
+        title: 'Alexandra Institute',
+        link: 'story/alexandra',
+        uiRoute: '/story/alexandra',
+        activeCover: 'sm',
+        shortDescription: '',
+        tags: {
+            0: 'Open Data',
+            1: 'CKAN',
+            2: 'Drupal'
+        }
+    }
     ];
 
     return projectPreviewData;
@@ -137,10 +137,10 @@ angular.module('core').factory('ProjectData', function() {
             base: '#A91400', //background-base
             accent: '#8C0000', //darker background
             text: '#FFFFFF', //color for the base
-            darkText: '#333333', //text for light background
-            light: '#F9F9F9',	//light background
+                darkText: '#333333', //text for light background
+                    light: '#F9F9F9',	//light background
             lightAccent: '#E7E8EA', //darker background (for borders maybe)
-            coverBackground: '#E7E8EA'
+                coverBackground: '#E7E8EA'
         },
         title: 'IPVision',
         link: 'story/ipvision',
@@ -159,38 +159,38 @@ angular.module('core').factory('ProjectData', function() {
                     title: 'Dashboard / App home',
                     desc: 'The front page of the application, displaying the user consumption for the selected period of time.'
                 },
-                1: {
-                    filename: '1.png',
-                    title: 'Consumption Overview (line chart)',
-                    desc: 'A detailed view of the "talk" consumption for the selected period.'
-                },
-                2: {
-                    filename: '2.png',
-                    title: 'Subscription Management',
-                    desc: 'A detailed subscription view for the selected user.'
-                },
-                3: {
-                    filename: '3.png',
-                    title: 'User Account Overview',
-                    desc: 'The user account main page, displaying general user info.'
-                },
-                4: {
-                    filename: '4.png',
-                    title: 'Mobile Views',
-                    desc: 'An overview of the responsive implementation.'
-                }
+            1: {
+                filename: '1.png',
+                title: 'Consumption Overview (line chart)',
+                desc: 'A detailed view of the "talk" consumption for the selected period.'
+            },
+        2: {
+            filename: '2.png',
+            title: 'Subscription Management',
+            desc: 'A detailed subscription view for the selected user.'
+        },
+    3: {
+        filename: '3.png',
+        title: 'User Account Overview',
+        desc: 'The user account main page, displaying general user info.'
+    },
+    4: {
+        filename: '4.png',
+        title: 'Mobile Views',
+        desc: 'An overview of the responsive implementation.'
+    }
             }
         },
         urls:{
             0:{
                 title: 'IPVision website',
                 link: 'http://www.ipvision.dk/',
-                text: 'To find out more, take a look at the '
+                    text: 'To find out more, take a look at the '
             },
             1:{
                 title: 'Portal prototype',
                 link: 'http://danmind.ru/portal/main',
-                text: 'Below you can see one of the projects that we\'ve built together, Portal. A prototype is also avaialble here: '
+                    text: 'Below you can see one of the projects that we\'ve built together, Portal. A prototype is also avaialble here: '
             },
         },
         content: {
@@ -199,10 +199,10 @@ angular.module('core').factory('ProjectData', function() {
                 heading: 'About IPVision',
                 text: 'IPVision A/S is a Copenhagen-based Mobile Virtual Network Operator (MVNO). They are one of the leading IP Telephony providers for B2B customers in Denmark.'
             },
-            mainHeading: 'Our collaboration',
-            paragraphs: {
-                0: 'In IPVision, we work on state of the art self service portals, backoffice tools, phone usage systems, accounting software and automation of various workflows.'
-            }
+        mainHeading: 'Our collaboration',
+        paragraphs: {
+            0: 'In IPVision, we work on state of the art self service portals, backoffice tools, phone usage systems, accounting software and automation of various workflows.'
+        }
         }
     },
     {
@@ -234,12 +234,12 @@ angular.module('core').factory('ProjectData', function() {
             0:{
                 title: 'their website',
                 link: 'http://www.alexandra.dk/uk/',
-                text: 'To read more about Alexandra, go to '
+                    text: 'To read more about Alexandra, go to '
             },
             1:{
                 title: 'here',
                 link: 'http://www.alexandra.dk/uk/labs/smart-city-lab/pages/smart-city-lab.aspx',
-                text: 'You can find more details about Smart City Lab '
+                    text: 'You can find more details about Smart City Lab '
             },
         },
         content: {
@@ -255,50 +255,50 @@ angular.module('core').factory('ProjectData', function() {
             }
         }
     },
-        {
-            id: 'gatesense',
-            color: {
-                links: '#87B816',
-                base: '#12506E',
-                accent: '#0E415A',
-                text: '#FFFFFF',
-                darkText: '#333333',
-                light: '#F9F9F9',
-                lightAccent: '#E7E8EA',
-                coverBackground: '#1B698F'
-            },
-            title: 'About Gatesense',
-            link: 'story/gatesense',
-            uiRoute: '/story/gatesense',
-            tags: {
-                0: 'IoT',
-                1: 'Big Data',
-                2: 'Node.js'
-            },
-            images: {
-                heading: 'Learn more about Gatesense',
-                cover: 'cover_sm@2x.jpg',
-                screens: {}
-            },
-            urls: {
-                0:{
-                    title: 'Gatesense website',
-                    link: 'http://gatesense.com',
+    {
+        id: 'gatesense',
+        color: {
+            links: '#87B816',
+            base: '#12506E',
+            accent: '#0E415A',
+            text: '#FFFFFF',
+            darkText: '#333333',
+            light: '#F9F9F9',
+            lightAccent: '#E7E8EA',
+            coverBackground: '#1B698F'
+        },
+        title: 'About Gatesense',
+        link: 'story/gatesense',
+        uiRoute: '/story/gatesense',
+        tags: {
+            0: 'IoT',
+            1: 'Big Data',
+            2: 'Node.js'
+        },
+        images: {
+            heading: 'Learn more about Gatesense',
+            cover: 'cover_sm@2x.jpg',
+            screens: {}
+        },
+        urls: {
+            0:{
+                title: 'Gatesense website',
+                link: 'http://gatesense.com',
                     text: 'This still-evolving project is currently building an international community of developers and other entrepreneurs, cities and organisations with a passion for sustainability. Check out the '
-                }
-            },
-            content: {
-                shortDescription: 'Unleashing creativity and creating significant value for society',
+            }
+        },
+        content: {
+            shortDescription: 'Unleashing creativity and creating significant value for society',
                 intro: {
                     heading: 'Gatesense',
                     text: 'Gatesense is a modern Internet of Things platform. Its primary purpose is to build a community and a set of concrete tools for solving today\'s environment problems.'
                 },
-                mainHeading: 'Our collaboration',
-                paragraphs: {
-                    0: 'We play a major role in research and technical development of the platform. The effort is lead by Grundfos and Alexandra Institute.'
-                }
+            mainHeading: 'Our collaboration',
+            paragraphs: {
+                0: 'We play a major role in research and technical development of the platform. The effort is lead by Grundfos and Alexandra Institute.'
             }
-        }];
+        }
+    }];
 
     return projectData;
 });
@@ -307,10 +307,10 @@ angular.module('core').factory('ProjectData', function() {
 angular.module('core').factory('StyleService', function(){
     this.getStyles = function getStyles(){
         /*
-         * Contains less variables - (duplicated from CSS)
-         * NEED to match the global_styles LESS file when changing
-         *
-         */
+            * Contains less variables - (duplicated from CSS)
+        * NEED to match the global_styles LESS file when changing
+        *
+            */
         var styles = {
 
             cssClasses: {},
@@ -363,112 +363,112 @@ angular.module('core').factory('TechnologiesService', function(){
             font : 43,
             bold : true
         },
-            {
-                name : 'PHP',
-                size : 80,
-                circles : 1,
-                font : 25,
-                bold : false
-            },
-            {
-                name : 'nginx',
-                size : 170,
-                circles : 4,
-                font : 35,
-                bold : false
-            },
-                {
-                    name : 'Flask',
-                    size : 150,
-                    circles : 2,
-                    font : 33,
-                    bold : false
-                },
-                {
-                    name : 'Drupal',
-                    size : 170,
-                    circles : 2,
-                    font : 35,
-                    bold : false
-                },
-                    {
-                        name : 'JavaScript',
-                        size : 260,
-                        circles : 3,
-                        font : 35,
-                        bold : true
-                    },
-                    {
-                        name : 'Apache',
-                        size : 200,
-                        circles : 1,
-                        font : 35,
-                        bold : false
-                    },
-                        {
-                            name : 'Java',
-                            size : 180,
-                            circles : 3,
-                            font : 40,
-                            bold : true
-                        },
-                        {
-                            name : 'Solr',
-                            size : 150,
-                            circles : 4,
-                            font : 30,
-                            bold : false
-                        },
-                            {
-                                name : 'Linux',
-                                size : 240,
-                                circles : 3,
-                                font : 45,
-                                bold : true
-                            },
-                            {
-                                name : 'Git',
-                                size : 160,
-                                circles : 4,
-                                font : 37,
-                                bold : false
-                            },
-                                {
-                                    name : 'Vagrant',
-                                    size : 225,
-                                    circles : 2,
-                                    font : 35,
-                                    bold : false
-                                },
-                                {
-                                    name : 'Puppet',
-                                    size : 190,
-                                    circles : 2,
-                                    font : 34,
-                                    bold : false
-                                },
-                                    {
-                                        name : 'PostgreSQL',
-                                        size : 210,
-                                        circles : 2,
-                                        font : 27,
-                                        bold : false
-                                    },
-                                    {
-                                        name : 'Docker',
-                                        size : 150,
-                                        circles : 2,
-                                        font : 28,
-                                        bold : false
-                                    },
-                                        {
-                                            name : 'MySQL',
-                                            size : 170,
-                                            circles : 4,
-                                            font : 30,
-                                            bold : false
-                                        },
-                                        ];
+        {
+            name : 'PHP',
+            size : 80,
+            circles : 1,
+            font : 25,
+            bold : false
+        },
+        {
+            name : 'nginx',
+            size : 170,
+            circles : 4,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'Flask',
+            size : 150,
+            circles : 2,
+            font : 33,
+            bold : false
+        },
+        {
+            name : 'Drupal',
+            size : 170,
+            circles : 2,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'JavaScript',
+            size : 260,
+            circles : 3,
+            font : 35,
+            bold : true
+        },
+        {
+            name : 'Apache',
+            size : 200,
+            circles : 1,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'Java',
+            size : 180,
+            circles : 3,
+            font : 40,
+            bold : true
+        },
+        {
+            name : 'elasticsearch',
+            size : 230,
+            circles : 2,
+            font : 25,
+            bold : false
+        },
+        {
+            name : 'Linux',
+            size : 240,
+            circles : 3,
+            font : 45,
+            bold : true
+        },
+        {
+            name : 'Git',
+            size : 160,
+            circles : 4,
+            font : 37,
+            bold : false
+        },
+        {
+            name : 'Vagrant',
+            size : 225,
+            circles : 2,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'Puppet',
+            size : 190,
+            circles : 2,
+            font : 34,
+            bold : false
+        },
+        {
+            name : 'PostgreSQL',
+            size : 210,
+            circles : 2,
+            font : 27,
+            bold : false
+        },
+        {
+            name : 'Docker',
+            size : 150,
+            circles : 2,
+            font : 28,
+            bold : false
+        },
+        {
+            name : 'MySQL',
+            size : 170,
+            circles : 4,
+            font : 30,
+            bold : false
+        },
+        ];
 
         return technologies;
     };

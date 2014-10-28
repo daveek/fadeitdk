@@ -18,10 +18,10 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
     $scope.newsHeaderShown = false;
 
     /*
-     * one-time news trigger when controller is ready
-     * calls loadNews() which will call itself
-     *
-     */
+        * one-time news trigger when controller is ready
+    * calls loadNews() which will call itself
+    *
+        */
     $scope.initNews = function initNews(){
         $scope.loadNews();
         setTimeout(function showNews(){
@@ -32,27 +32,27 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
     };
 
     /*
-     * main news method - send HTTP request to the Twitter API
-     * receives a JSON object which is saved to scope
-     *
-     */
+        * main news method - send HTTP request to the Twitter API
+    * receives a JSON object which is saved to scope
+    *
+        */
     $scope.loadNews = function loadNews(){
         $http.get('twitter-api/').success(function(newsData){
             if(newsData && newsData !== 'null' && typeof(newsData) !== 'undefined' && !newsData.errors){
                 /*
-                 * Handling data on HTTP request success
-                 *
-                 * If there is no news data compared to the current latest news
-                 * (current latest item is found in newsData[0].id)
-                 * display the next item from the news array (older)
-                 *
-                 * This allows some interactions although the news is not that recent
-                 * The amount of older tweets to iterate is set in the scope -> $scope.currentNewsPosition = 0;
-                 *
-                 * The max tweets loaded by the API is set in the request URL @ /twitteroauth/index.php
-                 * All news items are faded out by default.
-                 *
-                 */
+                    * Handling data on HTTP request success
+                *
+                    * If there is no news data compared to the current latest news
+                * (current latest item is found in newsData[0].id)
+                * display the next item from the news array (older)
+                *
+                    * This allows some interactions although the news is not that recent
+                * The amount of older tweets to iterate is set in the scope -> $scope.currentNewsPosition = 0;
+                *
+                    * The max tweets loaded by the API is set in the request URL @ /twitteroauth/index.php
+                * All news items are faded out by default.
+                    *
+                    */
                 var newsDataId = newsData[0].id;
                 $scope.cssClasses.newsClasses = 'news-fade-out';
 
@@ -87,55 +87,55 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
             }
             else{
                 /*
-                 * Handling callback success but invalid data.
-                 * This can be caused by:
-                 * - a fault in the twitter server
-                 * - us being timeout by the API limitation
-                 * - error in the API
-                 *
-                 */
+                    * Handling callback success but invalid data.
+                    * This can be caused by:
+                    * - a fault in the twitter server
+                * - us being timeout by the API limitation
+                * - error in the API
+                *
+                    */
                 $scope.cssClasses.newsClasses = 'news-fade-out';
                 $log.warn('News data could not be loaded at this time');
             }
         }).error(function(data){
             /*
-             * If the API cannot be reached at all.
-             * Sometimes Apache can fuck up
-             * OR the internet connection can be lost while browsing
-             */
+                * If the API cannot be reached at all.
+                * Sometimes Apache can fuck up
+            * OR the internet connection can be lost while browsing
+                */
             $scope.cssClasses.newsClasses = 'news-fade-out';
             $log.error(data);
         });
 
         /*
-         * Check for new data every 30 seconds
-         * Should be within reason and prevent twitter from blocking us
-         */
+            * Check for new data every 30 seconds
+        * Should be within reason and prevent twitter from blocking us
+        */
         setTimeout($scope.loadNews, 30000);
     };
 
     /* Displays news in the template
-     * @time - the timestamp from twitter
-     * @text - the tweet text
-     *
-     * Before displaying, date is formated nicely (as 'timeago').
-     * All links are encapsulated by linkify into an '<a>' tag
-     */
+    * @time - the timestamp from twitter
+    * @text - the tweet text
+    *
+        * Before displaying, date is formated nicely (as 'timeago').
+        * All links are encapsulated by linkify into an '<a>' tag
+    */
     $scope.displayNews = function displayNews(time, text){
         $scope.news.updateTime = 'news from ' + moment(time, 'dd MMM DD HH:mm:ss ZZ YYYY').fromNow();
         $scope.news.text = $sce.trustAsHtml(linkify.twitter(text));
     };
 
     /*
-     * Checks for scroll position:
-     * Hides or show the 'top whitebar' to reveal news
-     *
-     * Same as the scroll, it will only be applied if the #news is NOT display:none
-     *
-     * On 'secondary' pages, where a logo is presented in the outstanding-container
-     * hide that logo (avoid having 2 logos at the same time)
-     *
-     */
+        * Checks for scroll position:
+        * Hides or show the 'top whitebar' to reveal news
+    *
+        * Same as the scroll, it will only be applied if the #news is NOT display:none
+    *
+        * On 'secondary' pages, where a logo is presented in the outstanding-container
+    * hide that logo (avoid having 2 logos at the same time)
+    *
+        */
     $document.on('scroll mousewheel DOMMouseScroll MozMousePixelScroll MouseScrollEvent', function() {
         //btw: not using ng-class / ng-animate - it creates such a mess, just adding and removing a class works far better & simpler with css animations
         if(angular.element('#news').css('display') !== 'none'){
@@ -162,5 +162,5 @@ angular.module('core').controller('NewsController', ['$scope', '$log', '$http', 
 
     //Called at controller init to refresh animations & scroll: the emit notifies the main app modules (config.js) that it should re-check for the 'display' CSS style of #news
     $scope.initNews();
-    $scope.$emit('newsReady', '');
+$scope.$emit('newsReady', '');
 }]);

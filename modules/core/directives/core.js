@@ -42,12 +42,12 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
             scope.menuItems = MenuData;
 
             /*
-             * $watch listens for changes in the pageTitle / pageImage binding.
-             * When a change triggers a method, the class that made it visible
-             * will be removed (it will trigger animations),
-             * See 'toggleWhitebar' bellow.
-             *
-             */
+                * $watch listens for changes in the pageTitle / pageImage binding.
+                * When a change triggers a method, the class that made it visible
+            * will be removed (it will trigger animations),
+            * See 'toggleWhitebar' bellow.
+                *
+                */
             scope.$watch('pageTitle', function titleChanged(titleValue) {
                 scope.directiveImage = '';
                 angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
@@ -61,22 +61,22 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
             });
 
             /*
-             * Method that controls the custom binding of:
-             * directiveTitle and directiveImage
-             *
-             * @value is either pageTitle or pageImage (see routes)
-             * @type is image or text
-             * type = 0 is text
-             * type = 1 is image
-             *
-             * The current value (image or text) is allowed to leave the screen
-             * with the help of a timeout of 500ms.
-             *
-             * Each type of value will add a corresponding class
-             * to their containing/binding element.
-             * This class will toggle the animations and make the element visible
-             *
-             */
+                * Method that controls the custom binding of:
+                * directiveTitle and directiveImage
+            *
+                * @value is either pageTitle or pageImage (see routes)
+            * @type is image or text
+            * type = 0 is text
+            * type = 1 is image
+            *
+                * The current value (image or text) is allowed to leave the screen
+            * with the help of a timeout of 500ms.
+                *
+                * Each type of value will add a corresponding class
+            * to their containing/binding element.
+                * This class will toggle the animations and make the element visible
+            *
+                */
             var toggleWhitebar = function toggleWhitebar(value, type){
                 angular.element('.transparent-whitebar').addClass('hidden-whitebar');
 
