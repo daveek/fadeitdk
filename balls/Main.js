@@ -134,7 +134,7 @@ function onDocumentTouchStart( event ) {
 
 function onDocumentTouchMove( event ) {
 
-	if ( event.touches.length == 1 ) {
+	if ( event.touches.length == 1 && event.target.tagName.toLowerCase() !== 'a') {
 
 		event.preventDefault();
 
@@ -147,7 +147,7 @@ function onDocumentTouchMove( event ) {
 
 function onDocumentTouchEnd( event ) {
 
-	if ( event.touches.length == 0 ) {
+	if ( event.touches.length == 0 && event.target.tagName.toLowerCase() !== 'a') {
 
 		event.preventDefault();
 		isMouseDown = false;
