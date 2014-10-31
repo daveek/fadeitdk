@@ -107,8 +107,10 @@ function onDocumentDoubleClick() {
 }
 
 function onDocumentTouchStart( event ) {
-
-	if( event.touches.length == 1 ) {
+    /*
+     * Check if an 'a' tag is touched (it should not be prevented if so)
+     */
+	if( event.touches.length == 1 && event.target.tagName.toLowerCase() !== 'a') {
 
 		event.preventDefault();
 

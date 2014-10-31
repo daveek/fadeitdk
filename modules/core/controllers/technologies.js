@@ -56,6 +56,11 @@ angular.module('core').controller('TechnologiesController', ['angularLoad', '$ro
         document.onmouseup = unbind;
         document.onmousemove = unbind;
         document.ondblclick = unbind;
+
+        document.removeEventListener( 'touchstart', onDocumentTouchStart, false );
+        document.removeEventListener( 'touchmove', onDocumentTouchMove, false );
+        document.removeEventListener( 'touchend', onDocumentTouchEnd, false );
+        window.removeEventListener( 'deviceorientation', onWindowDeviceOrientation, false );
     };
 
     //start the balls

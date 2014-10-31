@@ -31,7 +31,11 @@
 		"createTech": true,
 		"getBrowserDimensions": true,
 		"createBall": true,
-		"setFactor": true
+		"setFactor": true,
+        "onDocumentTouchStart": true,
+        "onDocumentTouchMove": true,
+        "onDocumentTouchEnd": true,
+        "onWindowDeviceOrientation": true
 	},
 	"predef": [ // Extra globals.
 		"define",
