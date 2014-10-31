@@ -49,16 +49,16 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
              *
              */
             scope.$watch('pageTitle', function titleChanged(titleValue) {
-                    scope.directiveImage = '';
-                    angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
-                    toggleWhitebar(titleValue, 0);
-                    });
+                scope.directiveImage = '';
+                angular.element('.fadeit-logo-small').removeClass('visible-fixed-logo');
+                toggleWhitebar(titleValue, 0);
+            });
 
             scope.$watch('pageImage', function imageChanged(imageValue) {
-                    scope.directiveTitle = '';
-                    angular.element('.secondary-page-title').removeClass('visible-secondary-page-title');
-                    toggleWhitebar(imageValue, 1);
-                    });
+                scope.directiveTitle = '';
+                angular.element('.secondary-page-title').removeClass('visible-secondary-page-title');
+                toggleWhitebar(imageValue, 1);
+            });
 
             /*
              * Method that controls the custom binding of:
@@ -82,18 +82,18 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 
                 if(value !== '' && typeof value !== 'undefined'){
                     setTimeout(function showWhitebar(){
-                            if(type === 1){
+                        if(type === 1){
                             scope.directiveImage = value;
                             angular.element('.fadeit-logo-small').addClass('visible-fixed-logo');
-                            }
-                            else{
+                        }
+                        else{
                             scope.directiveTitle = value;
                             angular.element('.secondary-page-title').addClass('visible-secondary-page-title');
-                            }
+                        }
 
-                            angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
-                            scope.$apply();
-                            }, 500);
+                        angular.element('.transparent-whitebar').removeClass('hidden-whitebar');
+                        scope.$apply();
+                    }, 500);
                 }
             };
         }
@@ -102,32 +102,32 @@ angular.module('core').directive('leftSidebarMenu', ['MenuData', function(MenuDa
 
 //template for the footer
 angular.module('core').directive('customFooter', function(){
-        return {
-restrict: 'E',
-templateUrl: 'modules/core/views/footer.html',
-replace: true
-};
+    return {
+        restrict: 'E',
+        templateUrl: 'modules/core/views/footer.html',
+        replace: true
+    };
 });
 
 //reloads wow on demand
 angular.module('core').directive('reloadWow', function(){
-        return {
-restrict: 'E',
-link: function(scope, element, attrs){
-scope.initWow();
+    return {
+        restrict: 'E',
+        link: function(scope, element, attrs){
+            scope.initWow();
 
-scope.$watch('wowRefresh', function (refreshValue) {
-        scope.initWow();
-        });
-}
-};
+            scope.$watch('wowRefresh', function (refreshValue) {
+                scope.initWow();
+            });
+        }
+    };
 });
 
 //template for the news section
 angular.module('core').directive('newsSection', function(){
-        return {
-restrict: 'E',
-templateUrl: 'modules/core/views/news.html',
-replace: true
-};
+    return {
+        restrict: 'E',
+        templateUrl: 'modules/core/views/news.html',
+        replace: true
+    };
 });
