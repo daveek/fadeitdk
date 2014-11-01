@@ -2,6 +2,11 @@
 
 // Menu service used for creating the main menu
 angular.module('core').factory('MenuData', function() {
+    /*
+     *
+     * The menu items need to have corresponding routes (defined in core/config/routes)
+     *
+     */
     var menuItems = [{
         title: 'stories',
         link: '',
@@ -33,8 +38,14 @@ angular.module('core').factory('MenuData', function() {
 
 // Project preview service used for displaying data in the grid preview
 angular.module('core').factory('ProjectPreview', function() {
-    var projectPreviewData = [
-        {
+    /*
+     *
+     * Dummy covers can be added to create empty space
+     * It's good to use 'sm'-sized dummies for maximum 'control'
+     *
+     */
+
+    var projectPreviewData = [{
         id: 'ipvision',
         background: '#AFB1B4',
         title: 'IPVision',
@@ -130,16 +141,29 @@ angular.module('core').factory('ProjectPreview', function() {
 
 // Project service used for individual project
 angular.module('core').factory('ProjectData', function() {
+    /*
+     *
+     * Multiple colors are required for a project to be displayed correctly
+     * It's up to the developer/designer to pick colors that do justice to the project
+     *
+     * base: background-base
+     * accent: darker background
+     * text: color for the base
+     * darkText: text for light background
+     * light: light background
+     * lightAccent: darker background (for borders maybe))
+     *
+     */
     var projectData = [{
         id: 'ipvision',
         color: {
             links: '#A91400',
-            base: '#A91400', //background-base
-            accent: '#8C0000', //darker background
-            text: '#FFFFFF', //color for the base
-            darkText: '#333333', //text for light background
-            light: '#F9F9F9',	//light background
-            lightAccent: '#E7E8EA', //darker background (for borders maybe)
+            base: '#A91400',
+            accent: '#8C0000',
+            text: '#FFFFFF',
+            darkText: '#333333',
+            light: '#F9F9F9',
+            lightAccent: '#E7E8EA',
             coverBackground: '#E7E8EA'
         },
         title: 'IPVision',
@@ -307,172 +331,171 @@ angular.module('core').factory('ProjectData', function() {
 angular.module('core').factory('StyleService', function(){
     this.getStyles = function getStyles(){
         /*
+         *
          * Contains less variables - (duplicated from CSS)
          * NEED to match the global_styles LESS file when changing
          *
          */
-    var styles = {
+        var styles = {
+            cssClasses: {},
+            projectOffset: 0,
+            newsSectionHeight: 300
+        };
 
-cssClasses: {},
-projectOffset: 0,
-newsSectionHeight: 300
-};
+        return styles;
+    };
 
-return styles;
-};
-
-return this;
+    return this;
 });
 
 // Style service used for defining classes, sizes
 angular.module('core').factory('AnimationService', function(){
-        var animationData = {
-header: {
-duration: '0.3s',
-delay: '0.3s',
-durationMedium: '0.3s'
-},
-base: {
-shortDuration: '0.5s',
-duration: '1s',
-longDuration: '1.5s',
-shortDelay: '0.2s',
-delay: '0.5s',
-longDelay: '1s'
-},
-custom: {}
-};
+    var animationData = {
+        header: {
+            duration: '0.3s',
+            delay: '0.3s',
+            durationMedium: '0.3s'
+        },
+        base: {
+            shortDuration: '0.5s',
+            duration: '1s',
+            longDuration: '1.5s',
+            shortDelay: '0.2s',
+            delay: '0.5s',
+            longDelay: '1s'
+        },
+        custom: {}
+    };
 
-return animationData;
+    return animationData;
 });
 
 // Balls service (Sander's ballz)
 angular.module('core').factory('TechnologiesService', function(){
-        this.getTechnologies = function getTechnologies(){
+    this.getTechnologies = function getTechnologies(){
         var technologies = [{
-name : 'AngularJS',
-size : 250,
-circles : 3,
-font : 35,
-bold : true
-},
-{
-name : 'Python',
-size : 250,
-circles : 3,
-font : 43,
-bold : true
-},
-{
-name : 'PHP',
-size : 80,
-circles : 1,
-font : 25,
-bold : false
-},
-{
-name : 'nginx',
-       size : 170,
-       circles : 4,
-       font : 35,
-       bold : false
-},
-{
-name : 'Flask',
-       size : 150,
-       circles : 2,
-       font : 33,
-       bold : false
-},
-{
-name : 'Drupal',
-       size : 170,
-       circles : 2,
-       font : 35,
-       bold : false
-},
-{
-name : 'JavaScript',
-       size : 260,
-       circles : 3,
-       font : 35,
-       bold : true
-},
-{
-name : 'Apache',
-       size : 200,
-       circles : 1,
-       font : 35,
-       bold : false
-},
-{
-name : 'Java',
-       size : 180,
-       circles : 3,
-       font : 40,
-       bold : true
-},
-{
-name : 'elasticsearch',
-       size : 230,
-       circles : 2,
-       font : 25,
-       bold : false
-},
-{
-name : 'Linux',
-       size : 240,
-       circles : 3,
-       font : 45,
-       bold : true
-},
-{
-name : 'Git',
-       size : 160,
-       circles : 4,
-       font : 37,
-       bold : false
-},
-{
-name : 'Vagrant',
-       size : 225,
-       circles : 2,
-       font : 35,
-       bold : false
-},
-{
-name : 'Puppet',
-       size : 190,
-       circles : 2,
-       font : 34,
-       bold : false
-},
-{
-name : 'PostgreSQL',
-       size : 210,
-       circles : 2,
-       font : 27,
-       bold : false
-},
-{
-name : 'Docker',
-       size : 150,
-       circles : 2,
-       font : 28,
-       bold : false
-},
-{
-name : 'MySQL',
-       size : 170,
-       circles : 4,
-       font : 30,
-       bold : false
-},
-    ];
+            name : 'AngularJS',
+            size : 250,
+            circles : 3,
+            font : 35,
+            bold : true
+        },
+        {
+            name : 'Python',
+            size : 250,
+            circles : 3,
+            font : 43,
+            bold : true
+        },
+        {
+            name : 'PHP',
+            size : 80,
+            circles : 1,
+            font : 25,
+            bold : false
+        },
+        {
+            name : 'nginx',
+            size : 170,
+            circles : 4,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'Flask',
+            size : 150,
+            circles : 2,
+            font : 33,
+            bold : false
+        },
+        {
+            name : 'Drupal',
+            size : 170,
+            circles : 2,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'JavaScript',
+            size : 260,
+            circles : 3,
+            font : 35,
+            bold : true
+        },
+        {
+            name : 'Apache',
+            size : 200,
+            circles : 1,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'Java',
+            size : 180,
+            circles : 3,
+            font : 40,
+            bold : true
+        },
+        {
+            name : 'elasticsearch',
+            size : 230,
+            circles : 2,
+            font : 25,
+            bold : false
+        },
+        {
+            name : 'Linux',
+            size : 240,
+            circles : 3,
+            font : 45,
+            bold : true
+        },
+        {
+            name : 'Git',
+            size : 160,
+            circles : 4,
+            font : 37,
+            bold : false
+        },
+        {
+            name : 'Vagrant',
+            size : 225,
+            circles : 2,
+            font : 35,
+            bold : false
+        },
+        {
+            name : 'Puppet',
+            size : 190,
+            circles : 2,
+            font : 34,
+            bold : false
+        },
+        {
+            name : 'PostgreSQL',
+            size : 210,
+            circles : 2,
+            font : 27,
+            bold : false
+        },
+        {
+            name : 'Docker',
+            size : 150,
+            circles : 2,
+            font : 28,
+            bold : false
+        },
+        {
+            name : 'MySQL',
+            size : 170,
+            circles : 4,
+            font : 30,
+            bold : false
+        }];
 
-return technologies;
-};
+        return technologies;
+    };
 
-return this;
+    return this;
 });
 
