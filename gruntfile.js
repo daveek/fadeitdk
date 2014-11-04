@@ -45,13 +45,31 @@ module.exports = function(grunt) {
 			}
 		},
 		concurrent: {
-			tasks: ['concat', 'jshint', 'uglify', 'copy', 'less', 'cssmin'],
+			tasks: [
+      'concat:index_development',
+      'concat:appScripts',
+      'concat:appModules',
+      'concat:vendorCss',
+      'concat:techScripts',
+      'jshint',
+      'uglify',
+      'copy',
+      'less',
+      'cssmin'],
 			options: {
 				logConcurrentOutput: true,
 				limit: 10
 			}
 		},
 		concat:{
+      index_development:{
+        src: ['src/index.html', 'src/development.suffix'],
+        dest: 'index.html'
+      },
+      index_production:{
+        src: ['src/index.html', 'src/production.suffix'],
+        dest: 'index.html'
+      },
 			appScripts:{
 				src: [
 				'lib/momentjs/moment.js',
@@ -147,6 +165,7 @@ module.exports = function(grunt) {
 	//Making grunt default to force in order not to break the project.
 	//grunt.option('force', true);
 
-	//Default task(s).
+	//Tasks
 	grunt.registerTask('default', ['concurrent', 'watch']);
+  grunt.registerTask('production', ['concat:appScripts', 'concat:appModules', 'concat:vendorCss', 'concat:techScripts', 'jshint', 'uglify', 'copy', 'less', 'cssmin', 'concat:index_production']);
 };
