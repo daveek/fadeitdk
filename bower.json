@@ -13,6 +13,7 @@
 		"angular-ui-utils": "~0.1.1",
 		"angular-ui-router": "~0.2",
 		"animate.css": "~3.2.0",
+		"fingerprint": "0.5.3",
 		"wowjs": "~1.0.1",
 		"angular-moment-fadeit": "fadeit/angular-moment#correct-define-and-cleaned",
 		"angular-linkify-fadeit": "fadeit/angular-linkify#http-strip",
