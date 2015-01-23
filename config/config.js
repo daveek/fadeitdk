@@ -4,7 +4,7 @@
 var ApplicationConfiguration = (function() {
     // Init module configuration options
     var applicationModuleName = 'fadeit';
-    var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'angularMoment', 'linkify', 'angularLoad'];
+    var applicationModuleVendorDependencies = ['ngResource', 'ngCookies', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'angularMoment', 'linkify', 'angularLoad', 'pascalprecht.translate'];
 
     // Add a new vertical module
     var registerModule = function(moduleName) {

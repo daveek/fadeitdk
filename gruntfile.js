@@ -86,7 +86,8 @@ module.exports = function(grunt) {
 				'lib/wowjs/dist/wow.js',
 				'lib/fingerprint/fingerprint.js',
 				'scripts/other.min.js',
-				'lib/angular-load/angular-load.js'],
+				'lib/angular-load/angular-load.js',
+				'lib/angular-translate/angular-translate.js'],
 				dest: 'scripts/app.js'
 			},
 			appModules:{
