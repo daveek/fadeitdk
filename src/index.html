@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="RootController as root">
+<head>
+  <title data-ng-bind="root.htmlTitle">fadeit home</title>
+
+  <!-- General META -->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Semantic META -->
+  <meta name="description" content="AngularJS boilerplate made by studying available boilerplates, so you don't have to.">
+  <meta name="author" content="Dan Mindru">
+  <meta name="keywords" content="AngularJS, boilerplate, module">
+
+  <!-- HTML5 Shim -->
+  <!--[if lt IE 9]>
+     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- All stylesheets in ./src/assets/ (including LESS files) are compiled in one css file in both build and compile phases -->
+  <link rel="stylesheet" type="text/css" href="./src/assets/css/app.min.css" />
+</head>
+
+<body>
+  <section app-shell></section>
+</body>
+
+<%
+  //#Scripts are automatically added using grunt, you should not touch this part.
+
+  if(typeof scripts !== 'undefined'){
+    scripts.forEach(function (script){
+      %><script type="text/javascript" src="<%= script %>"></script><%
+    });
+  } else {
+      %><script type="text/javascript" src="./src/app/app.min.js"></script><%
+  }
+%>
+
+</html>
