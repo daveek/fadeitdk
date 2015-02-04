@@ -3,7 +3,7 @@ describe('Root Application Module:', function(){
       scope;
 
   beforeEach(function(){
-    module('abs');
+    module('fadeit');
   });
 
   describe('Root Config:', function(){

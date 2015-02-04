@@ -3,7 +3,7 @@ angular.module(absConfig.appRootModuleName).controller('RootController', rootCon
 rootController.$inject = ['$scope', '$window'];
 function rootController($scope, $window) {
   var vm = this;
-  vm.htmlTitle = 'Angular Boilerplate Study';
+  vm.htmlTitle = 'fadeit';
   /*
    * Event callback on every route change
    * Scrolls the page to the top as 'normally' changing a page
@@ -18,7 +18,7 @@ function rootController($scope, $window) {
      *
      */
     if(angular.isDefined(toState.data.pageTitle)){
-      vm.htmlTitle = toState.data.pageTitle + ' - Angular Boilerplate Study';
+      vm.htmlTitle = toState.data.pageTitle + ' - fadeit';
     }
 
     $window.scrollTo(0,0);

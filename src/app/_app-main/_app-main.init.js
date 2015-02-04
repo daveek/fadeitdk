@@ -12,7 +12,7 @@
  *
  */
 var absConfig = (function applicationInit(){
-  var appRootModuleName = 'abs';
+  var appRootModuleName = 'fadeit';
   var appMainVendorDependencies = ['ui.router', 'sharedViewsModule'];
 
   var pushAfterBootstrap = function pushAfterBootstrap(lateModule){

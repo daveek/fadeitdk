@@ -1,37 +1,49 @@
-<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <section class="container-fluid">
-    <p class="navbar-text">
-      <strong>Demo application&#0153;</strong>
-    </p>
+<nav class="main-menu left-sidebar mainSidebar{{directiveTitle}}" ng-if="!removeTopNav">
+  <section class="transparent-whitebar">
+    <a href="#!" class="go-to-menu max-md" go-to anchor="menu"><i class="fa fa-level-down"></i></a>
+    <section class="secondary-page-title" data-ng-if="!directiveImage">
+      <h2 class="page-title">{{directiveTitle}}</h2>
+    </section>
+  </section>
 
-    <ul class="nav navbar-nav">
-      <li ui-sref-active="active">
-        <a href ui-sref="home">
-          Home
+  <span id="logo-link" data-ng-if="!directiveTitle">
+    <img ng-src="{{directiveImage || ''}}" class="fadeit-logo-small"/>
+  </span>
+
+  <ul class="menu-link-list menu{{directiveTitle}}">
+    <li class="menu-link-item"
+    data-ng-repeat="item in menuItems"
+    data-ng-class="{'activeMenu': $uiRoute}"
+    ui-route="{{item.uiRoute}}">
+      <a href="#!/{{item.link}}" class="menu-anchor main-menu-anchor">
+        {{item.title}}
+      </a>
+    </li>
+  </ul>
+
+  <!-- mobile nav -->
+  <nav class="mobile-menu footer-nav max-md" id="menu">
+    <ul class="mobile-link-list mobileMenu{{directiveTitle}}">
+      <li class="mobile-link-item"
+      data-ng-repeat="item in menuItems"
+      data-ng-class="{'activeMenu': $uiRoute}"
+      ui-route="{{item.uiRoute}}">
+        <a href="#!/{{item.link}}" class="menu-anchor mobile-menu-anchor">
+          {{item.title}}
         </a>
       </li>
 
-      <li ui-sref-active="active">
-        <a href ui-sref="providerIndex">
-          Providers
+      <li class="mobile-link-item">
+        <a href="#!" class="menu-anchor mobile-menu-anchor" go-to anchor="">
+          Free ride to the top <i class="fa fa-level-up"></i>
         </a>
       </li>
 
-      <li ui-sref-active="active">
-        <a href ui-sref="customerIndex">
-          Customers
-        </a>
-      </li>
-
-      <li ui-sref-active="active">
-        <a href ui-sref="about">
-          About
+      <li class="mobile-link-item toolbox-home">
+        <a href="#!/" class="menu-anchor">
+          Back home <i class="fa fa-home"></i>
         </a>
       </li>
     </ul>
-
-    <p class="navbar-text pull-right">
-      Copyright © <span ng-bind="::vm.currentDate"></span> <strong><a href="https://github.com/dandaniel/angular-boilerplate-study" target="_blank">Angular boilerplate study</a></strong>
-    </p>
-  </section>
+  </nav>
 </nav>
