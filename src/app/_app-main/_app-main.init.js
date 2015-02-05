@@ -13,7 +13,7 @@
  */
 var absConfig = (function applicationInit(){
   var appRootModuleName = 'fadeit';
-  var appMainVendorDependencies = ['ui.router', 'sharedViewsModule'];
+  var appMainVendorDependencies = ['ui.router', 'sharedViewsModule', 'angularLoad'];
 
   var pushAfterBootstrap = function pushAfterBootstrap(lateModule){
     angular.module(lateModule, []);

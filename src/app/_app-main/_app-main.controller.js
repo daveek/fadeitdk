@@ -1,7 +1,7 @@
 angular.module(absConfig.appRootModuleName).controller('RootController', rootController);
 
-rootController.$inject = ['$scope', '$window'];
-function rootController($scope, $window) {
+rootController.$inject = ['$scope', '$window', '$log'];
+function rootController($scope, $window, $log) {
   var vm = this;
   vm.htmlTitle = 'fadeit';
   /*
@@ -36,4 +36,17 @@ function rootController($scope, $window) {
   $scope.$on('changedPage', function changedPage(event, pageTitle){
     vm.htmlTitle = pageTitle;
   });
+
+  /*
+   * Hackers gotta hack
+   */
+  $log.debug(
+    '███████╗ █████╗ ██████╗ ███████╗██╗████████╗\n'+
+    ' ██╔════╝██╔══██╗██╔══██╗██╔════╝██║╚══██╔══╝\n'+
+    ' █████╗  ███████║██║  ██║█████╗  ██║   ██║\n'+
+    ' ██╔══╝  ██╔══██║██║  ██║██╔══╝  ██║   ██║\n'+
+    ' ██║     ██║  ██║██████╔╝███████╗██║   ██║\n'+
+    ' ╚═╝     ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝   ╚═╝\n'+
+    '\n\n'+
+   'Like inspecting code? Check out fadeit.dk/apply');
 }

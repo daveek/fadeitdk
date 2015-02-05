@@ -25,15 +25,15 @@ module.exports = {
   build: {
     vendor_js: [
       //written in 'index.html' in this order
+      './vendor/jquery/dist/jquery.js',
       './vendor/angular/angular.js',
       './vendor/angular-ui-router/release/angular-ui-router.js',
       './vendor/angular-mocks/angular-mocks.js',
-      './vendor/stacktrace-js/dist/stacktrace.js',
-      './vendor/loggly-jslogger/src/loggly.tracker.js'
+      './vendor/angular-load/angular-load.js'
     ],
     vendor_css: [
       //concatenated with 'assets' stylesheets in 'app.min.css'
-      './vendor/bootstrap/dist/css/bootstrap.min.css'
+      './vendor/bootstrap-fadeit/dist/css/bootstrap.min.css'
     ]
   },
   /*
@@ -49,10 +49,10 @@ module.exports = {
   compile: {
     vendor_min_js: [
       //won't minify again
+      './vendor/jquery/dist/jquery.min.js',
       './vendor/angular/angular.min.js',
       './vendor/angular-ui-router/release/angular-ui-router.min.js',
-      './vendor/stacktrace-js/dist/stacktrace.min.js',
-      './vendor/loggly-jslogger/src/loggly.tracker.js',
+      './vendor/angular-load/angular-load.min.js'
     ],
     vendor_js: [
       //doesn't have a min files, will minify
@@ -95,7 +95,7 @@ module.exports = {
    */
   common: {
     vendor_fonts: [
-      './vendor/bootstrap/dist/fonts/**/*'
+      './vendor/bootstrap-fadeit/dist/fonts/**/*'
     ]
   },
   /*
