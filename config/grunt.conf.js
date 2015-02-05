@@ -33,7 +33,8 @@ module.exports = {
     ],
     vendor_css: [
       //concatenated with 'assets' stylesheets in 'app.min.css'
-      './vendor/bootstrap-fadeit/dist/css/bootstrap.min.css'
+      './vendor/bootstrap-fadeit/dist/css/bootstrap.min.css',
+      './vendor/font-awesome/css/font-awesome.min.css'
     ]
   },
   /*
@@ -95,7 +96,8 @@ module.exports = {
    */
   common: {
     vendor_fonts: [
-      './vendor/bootstrap-fadeit/dist/fonts/**/*'
+      './vendor/bootstrap-fadeit/dist/fonts/**/*',
+      './vendor/font-awesome/fonts/**/*'
     ]
   },
   /*

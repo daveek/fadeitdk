@@ -1,27 +1,46 @@
-<nav class="main-menu left-sidebar mainSidebar{{directiveTitle}}" ng-if="!removeTopNav">
-  <section class="transparent-whitebar">
-    <a href="#!" class="go-to-menu max-md" go-to anchor="menu"><i class="fa fa-level-down"></i></a>
-    <section class="secondary-page-title" data-ng-if="!directiveImage">
-      <h2 class="page-title">{{directiveTitle}}</h2>
+<section class="nav-container" ng-class="{'dark-mode': root.darkMode}">
+  <nav class="main-menu left-sidebar">
+    <section class="transparent-whitebar">
+      <!--<a href="#!" class="go-to-menu max-md" go-to anchor="menu"><i class="fa fa-level-down"></i></a>-->
+      <section class="secondary-page-title" data-ng-if="!root.logoImage">
+        <h2 class="page-title">{{root.htmlTitle}}</h2>
+      </section>
     </section>
-  </section>
 
-  <span id="logo-link" data-ng-if="!directiveTitle">
-    <img ng-src="{{directiveImage || ''}}" class="fadeit-logo-small"/>
-  </span>
+    <span id="logo-link">
+      <img ng-src="{{root.logoImage || ''}}" class="fadeit-logo-small"/>
+    </span>
 
-  <ul class="menu-link-list menu{{directiveTitle}}">
-    <li class="menu-link-item"
-    data-ng-repeat="item in menuItems"
-    data-ng-class="{'activeMenu': $uiRoute}"
-    ui-route="{{item.uiRoute}}">
-      <a href="#!/{{item.link}}" class="menu-anchor main-menu-anchor">
-        {{item.title}}
-      </a>
-    </li>
-  </ul>
+    <ul class="menu-link-list">
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="home" class="menu-anchor main-menu-anchor">
+          Story
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor">
+          About us
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="contact" class="menu-anchor main-menu-anchor">
+          Contact
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="toolbox" class="menu-anchor main-menu-anchor">
+          Toolbox
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="services" class="menu-anchor main-menu-anchor">
+          Services
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-  <!-- mobile nav -->
+    <!-- mobile nav
   <nav class="mobile-menu footer-nav max-md" id="menu">
     <ul class="mobile-link-list mobileMenu{{directiveTitle}}">
       <li class="mobile-link-item"
@@ -45,5 +64,5 @@
         </a>
       </li>
     </ul>
-  </nav>
-</nav>
+  </nav>-->
+</section>

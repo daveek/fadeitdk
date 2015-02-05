@@ -13,10 +13,10 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider){
     url: '/404',
     templateUrl: 'views/404.html',
     data:{
-      pageTitle: 'OMG WE COULD NOT FIND THIS PAGE'
+      pageTitle: 'OMG WE COULDN\'T FIND THIS PAGE'
     }
   });
 
   $locationProvider.hashPrefix('!');
-  $urlRouterProvider.otherwise('/404');
+  $urlRouterProvider.otherwise('/');
 }

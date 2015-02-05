@@ -8,7 +8,7 @@ function homeConfig($stateProvider){
     url: '/',
     templateUrl: 'views/home-page.html',
     data:{
-      pageTitle: 'Home page'
+      pageTitle: 'We\'re a dedicated development force'
     }
   });
 }

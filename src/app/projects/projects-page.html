@@ -1,15 +1,11 @@
 <section class="container-fluid main-container secondary-page-container">
-  <section class="row-fluid secondary-page-row project-fluid clearfix">
-
-    <section class="outstanding-container binary-container clearfix animate wow fadeInDown"
-    data-wow-duration="{{anim.base.shortDuration}}"
-    data-wow-delay="{{anim.base.delay}}"
-    data-ng-if="!project">
+  <section class="row-fluid secondary-page-row project-fluid">
+    <section class="outstanding-container binary-container" data-ng-if="!vm.project.errors">
       <section class="default-inner-container">
         <section class="inner-text">
-          <img ng-src="img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
+          <img ng-src="/src/assets/img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
           <p class="regular-text">
-            The project description for <u>{{projectId}}</u> is still being put together by one of our developers. He promised us a preview and he did not disappoint when asked to deliver: <br/><br/><br/><br/>
+            The project description for <u>{{vm.requestUrl}}</u> is still being put together by one of our developers. He promised us a preview and he did not disappoint when asked to deliver: <br/><br/><br/><br/>
 
             <span class="binary">
             0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 0 0 1 1 1 0 0
@@ -19,14 +15,11 @@
       </section>
     </section>
 
-    <section class="row-fluid visible-row final-row clearfix animate wow fadeIn"
-    data-wow-duration="{{anim.base.shortDuration}}"
-    data-wow-delay="{{anim.base.delay}}"
-    data-ng-if="!project">
-      <section class="col-xs-12">
+    <section class="row-fluid visible-row final-row" data-ng-if="!vm.project.errors">
+      <section class="col-xs-24">
         <figure class="image-container clearfix img-penguin">
           <span class="rounded-border">
-            <img ng-src="img/icons/fadeit_penguin.svg" alt="a penguin to cheer you up" class="icon-image" />
+            <img ng-src="/src/assets/img/icons/fadeit_penguin.svg" alt="a penguin to cheer you up" class="icon-image" />
           </span>
           <figcaption>
             <h2>Here's a penguin to cheer you up.</h2>
@@ -38,89 +31,75 @@
       </section>
     </section>
 
-    <section class="default-inner-container" data-ng-if="project">
+    <section class="default-inner-container" data-ng-if="vm.project.errors">
 
-      <section class="row-fluid project-intro-fluid clearfix animate wow fadeIn"
-      data-wow-delay="{{anim.base.longDelay}}"
-      data-wow-duration="{{anim.base.duration}}">
-        <section class="col-xs-12">
-          <h3 class="regular-title">{{project.content.shortDescription}}</h3>
+      <section class="row-fluid project-intro-fluid">
+        <section class="col-xs-24">
+          <h3 class="regular-title">{{vm.project.content.shortDescription}}</h3>
           <p class="regular-text project-tags">
-            <span class="a-tag" ng-repeat="tag in project.tags">
+            <span class="a-tag" ng-repeat="tag in vm.project.tags">
             {{tag}}
             </span>
           </p>
         </section>
       </section>
 
-      <section class="row-fluid cover-fluid clearfix animate wow fadeIn"
-      data-wow-delay="{{anim.base.longDelay}}"
-      data-wow-duration="{{anim.base.duration}}">
-        <section class="col-xs-12 col-sm-12 col-md-12 col-lg-8 single-project-cover" data-ng-style="{'background': project.color.coverBackground}">
-          <img ng-src="img/projects/{{project.id}}/{{project.images.cover}}" alt="{{project.title}} project" />
+      <section class="row-fluid cover-fluid">
+        <section class="col-xs-24 col-lg-16 single-project-cover" data-ng-style="{'background': vm.project.color.coverBackground}">
+          <img ng-src="/src/assets/img/projects/{{vm.project.id}}/{{vm.project.images.cover}}" alt="{{vm.project.title}} project" />
         </section>
 
-        <section class="col-xs-12 col-sm-12 col-md-12 col-lg-4 single-project-intro"
-        data-ng-style="{'background': project.color.base}">
-          <h3 data-ng-style="{'color': project.color.text}">
-            {{project.content.intro.heading}}
+        <section class="col-xs-24 col-lg-8 single-project-intro" data-ng-style="{'background': vm.project.color.base}">
+          <h3 data-ng-style="{'color': vm.project.color.text}">
+            {{vm.project.content.intro.heading}}
           </h3>
-          <p class="regular-text" data-ng-style="{'color': project.color.text}">
-            {{project.content.intro.text}}
+          <p class="regular-text" data-ng-style="{'color': vm.project.color.text}">
+            {{vm.project.content.intro.text}}
           </p>
         </section>
       </section>
 
 
-      <article class="project-details animate wow fadeIn"
-      data-wow-delay="{{anim.base.longDelay}}"
-      data-wow-duration="{{anim.base.duration}}"
-      data-ng-style="{'background': project.color.light, 'color': project.color.darkText }">
+      <article class="project-details"
+      data-ng-style="{'background': vm.project.color.light, 'color': vm.project.color.darkText }">
         <section class="paragraph-fluid clearfix">
-          <h3>{{project.content.mainHeading}}</h3>
+          <h3>{{vm.project.content.mainHeading}}</h3>
         </section>
 
         <section class="paragraph-fluid clearfix"
-        data-ng-repeat='text in project.content.paragraphs'
+        data-ng-repeat='text in vm.project.content.paragraphs'
         last-item-watcher>
-          <p class="regular-text" data-ng-style="{'color': project.color.darkText}">{{text}}</p>
+          <p class="regular-text" data-ng-style="{'color': vm.project.color.darkText}">{{text}}</p>
         </section>
       </article>
 
 
-      <article class="project-details project-extras animate wow fadeIn"
-      data-wow-delay="{{anim.base.longDelay}}"
-      data-wow-duration="{{anim.base.duration}}" data-ng-if='project.url || project.images.screens'>
-        <h3>{{project.images.heading}}</h3>
+      <article class="project-details project-extras" data-ng-if='vm.project.url || vm.project.images.screens'>
+        <h3>{{vm.project.images.heading}}</h3>
 
-        <section class="url-fluid clearfix"
-        data-ng-if="project.urls"
-        data-ng-repeat="url in project.urls">
+        <section class="url-fluid clearfix" data-ng-if="vm.project.urls" data-ng-repeat="url in vm.project.urls">
           <p class="regular-text">
             <span class="url-text">{{url.text}}</span>
             <a href="{{url.link}}" target="_blank"
-            data-ng-style="{'color': project.color.links}">
+            data-ng-style="{'color': vm.project.color.links}">
               {{url.title}}
             </a>
           </p>
         </section>
       </article>
 
-      <section class="project-screens clearfix" data-ng-if="project.images.screens">
-        <figure class="project-screen clearfix animate wow fadeIn"
-        data-ng-repeat="screen in project.images.screens"
-        data-wow-delay="{{anim.base.longDelay}}"
-        data-wow-duration="{{anim.base.duration}}"
-        data-ng-style="{'background': project.color.light}"
+      <section class="project-screens" data-ng-if="vm.project.images.screens">
+        <figure class="project-screen"
+        data-ng-repeat="screen in vm.project.images.screens"
+        data-ng-style="{'background': vm.project.color.light}"
         last-item-watcher>
-          <img data-ng-src="img/projects/{{project.id}}/screens/{{screen.filename}}" alt="{{project.title}} screenshot" data-ng-style="{'border-color': '{{project.color.lightAccent}}'}"/>
-          <figcaption data-ng-style="{'color': project.color.darkText}">
+          <img data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title}} screenshot" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>
+          <figcaption data-ng-style="{'color': vm.project.color.darkText}">
             <h3>{{screen.title}}</h3>
             <p class="regular-text">{{screen.desc}}</p>
           </figcaption>
         </figure>
       </section>
-
     </section>
 
     <reload-wow></reload-wow>

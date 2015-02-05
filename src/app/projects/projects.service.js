@@ -17,7 +17,7 @@ function projectsService($http, $q){
 
     availableProviders.then(function singleProjectResponse(response){
       var currentProject = {},
-        projectExists = false;
+          projectExists = false;
 
       for (var key in response.data) {
         if (response.data.hasOwnProperty(key)) {

@@ -4,6 +4,7 @@ rootController.$inject = ['$scope', '$window', '$log'];
 function rootController($scope, $window, $log) {
   var vm = this;
   vm.htmlTitle = 'fadeit';
+  vm.darkMode = false;
   /*
    * Event callback on every route change
    * Scrolls the page to the top as 'normally' changing a page
@@ -17,8 +18,17 @@ function rootController($scope, $window, $log) {
      * (vm.htmlTitle is binded to the title tag)
      *
      */
-    if(angular.isDefined(toState.data.pageTitle)){
-      vm.htmlTitle = toState.data.pageTitle + ' - fadeit';
+    if(angular.isDefined(toState.data) && angular.isDefined(toState.data.pageTitle)){
+      vm.htmlTitle = toState.data.pageTitle;
+    }
+
+    /*
+     * if next state is home, turn dark mode on
+     */
+    if(toState.name === 'home'){
+      vm.darkMode = true;
+    } else {
+      vm.darkMode = false;
     }
 
     $window.scrollTo(0,0);
