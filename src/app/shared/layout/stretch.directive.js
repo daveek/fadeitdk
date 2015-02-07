@@ -1,4 +1,4 @@
-angular.module('abs.coreLayout').directive('stretch', stretch);
+angular.module('fadeit.coreLayout').directive('stretch', stretch);
 
 /*
  * Gives the containing element a height relative to the

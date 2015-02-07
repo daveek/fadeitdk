@@ -1,4 +1,4 @@
-angular.module('abs.coreLayout').directive('scrollOpacity', scrollOpacity);
+angular.module('fadeit.coreLayout').directive('scrollOpacity', scrollOpacity);
 
 /*
  * Modifies the background-color opacity of an element as the page is scrolled

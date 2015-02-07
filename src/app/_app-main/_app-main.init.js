@@ -11,9 +11,9 @@
  * See more in ./gruntfile.js, 'html2js' task.
  *
  */
-var absConfig = (function applicationInit(){
+var fadeitConfig = (function applicationInit(){
   var appRootModuleName = 'fadeit';
-  var appMainVendorDependencies = ['ui.router', 'sharedViewsModule', 'angularLoad'];
+  var appMainVendorDependencies = ['ui.router', 'sharedViewsModule', 'angularLoad', 'duScroll'];
 
   var pushAfterBootstrap = function pushAfterBootstrap(lateModule){
     angular.module(lateModule, []);
@@ -44,7 +44,7 @@ angular.module('sharedViewsModule', []);
  * bootstrapped on 'angular.ready'.
  *
  */
-angular.module(absConfig.appRootModuleName, absConfig.appMainVendorDependencies);
+angular.module(fadeitConfig.appRootModuleName, fadeitConfig.appMainVendorDependencies);
 
 angular.element(document).ready(function applicationBootstrap() {
     //Fixing facebook bug with redirect
@@ -52,5 +52,5 @@ angular.element(document).ready(function applicationBootstrap() {
       window.location.hash = '#!';
     }
 
-    angular.bootstrap(document, [absConfig.appRootModuleName]);
+    angular.bootstrap(document, [fadeitConfig.appRootModuleName]);
 });

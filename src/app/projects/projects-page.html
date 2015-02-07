@@ -1,6 +1,6 @@
 <section class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row project-fluid">
-    <section class="outstanding-container binary-container" data-ng-if="!vm.project.errors">
+    <section class="outstanding-container binary-container" data-ng-if="vm.project.errors">
       <section class="default-inner-container">
         <section class="inner-text">
           <img ng-src="/src/assets/img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
@@ -15,7 +15,7 @@
       </section>
     </section>
 
-    <section class="row-fluid visible-row final-row" data-ng-if="!vm.project.errors">
+    <section class="row-fluid visible-row final-row" data-ng-if="vm.project.errors">
       <section class="col-xs-24">
         <figure class="image-container clearfix img-penguin">
           <span class="rounded-border">
@@ -31,7 +31,7 @@
       </section>
     </section>
 
-    <section class="default-inner-container" data-ng-if="vm.project.errors">
+    <section class="default-inner-container" data-ng-if="!vm.project.errors">
 
       <section class="row-fluid project-intro-fluid">
         <section class="col-xs-24">

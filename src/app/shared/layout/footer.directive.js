@@ -1,4 +1,4 @@
-angular.module('abs.coreLayout').directive('appFooter', appFooter);
+angular.module('fadeit.coreLayout').directive('appFooter', appFooter);
 
 function appFooter(){
   return {

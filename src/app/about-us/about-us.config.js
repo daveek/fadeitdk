@@ -1,4 +1,4 @@
-absConfig.pushAfterBootstrap('fadeit.aboutUs');
+fadeitConfig.pushAfterBootstrap('fadeit.aboutUs');
 
 angular.module('fadeit.aboutUs').config(aboutUsConfig);
 

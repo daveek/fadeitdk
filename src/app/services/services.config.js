@@ -1,14 +1,14 @@
-absConfig.pushAfterBootstrap('fadeit.servicesPage');
+fadeitConfig.pushAfterBootstrap('fadeit.servicesPage');
 
 angular.module('fadeit.servicesPage').config(servicesPageConfig);
 
 servicesPageConfig.$inject = ['$stateProvider'];
 function servicesPageConfig($stateProvider){
-  $stateProvider.state('services', {
-    url: '/services',
+  $stateProvider.state('our-work', {
+    url: '/our-work',
     templateUrl: 'views/services-page.html',
     data:{
-      pageTitle: 'Our services'
+      pageTitle: 'Our work'
     }
   });
 }

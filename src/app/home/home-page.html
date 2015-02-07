@@ -1,6 +1,12 @@
 <section class="container-fluid home-container">
   <section lamp-graphic></section>
 
+  <section class="fadeit-bubbles">
+    <span class="center-dot"></span>
+    <span class="center-dot small-dot"></span>
+    <span class="center-dot large-dot"></span>
+  </section>
+
   <section class="row-fluid first-row" stretch amount="0.8">
     <section class="col-xs-24 col-md-16 col-md-offset-4 right-container">
       <img src="src/assets/img/brand/fadeit_logo_front_sm.svg" alt="fadeit logo - software development agency" class="fadeit-front-logo"/>
@@ -11,11 +17,13 @@
       <h3 class="front-subtitle">
         Software can become a dark spot if not done properly, we're here to make it right.<br/>Here's what we believe in.
       </h3>
-      <img src="src/assets/img/brand/fadeit_arrow_down.svg" alt="Continue reading about fadeit - software development agency" class="fadeit-arrow-down"/>
+      <a href="#story-start" class="arrow-anchor clearfix" du-smooth-scroll>
+        <img src="src/assets/img/brand/fadeit_arrow_down.svg" alt="Continue reading about fadeit - software development agency" class="fadeit-arrow-down"/>
+      </a>
     </section>
   </section>
 
-  <section class="row-fluid custom-rows second-row" stretch amount="1">
+  <section class="row-fluid custom-rows second-row" id="story-start" stretch amount="1" auto-scrolling>
     <figure class="fadeit-front-figure first-figure" stretch amount="0.7">
       <figcaption>
         <h2>
@@ -30,7 +38,7 @@
   </section>
 
 
-  <section class="row-fluid custom-rows third-row" stretch amount="1">
+  <section class="row-fluid custom-rows third-row" stretch amount="1" auto-scrolling>
     <figure class="fadeit-front-figure second-figure" stretch amount="1">
       <figcaption>
         <h2>
@@ -49,16 +57,15 @@
 
   <section class="row-fluid custom-rows third-row space-row" stretch amount="0.3"></section>
 
-  <section class="row-fluid custom-rows fourth-row" stretch amount="1">
+  <section class="row-fluid custom-rows fourth-row" stretch amount="1" auto-scrolling>
     <figure class="fadeit-front-figure third-figure" stretch amount="1">
       <figcaption>
         <h2>
-          Software made portable
+          Software made powerful
         </h2>
         <p>
-          Scaling and portability are pain-points for many companies.<br/>
-          They are often the primary reason for using out-dated legacy software solutions.<br/>
-          We belive in software that is ready for change, ready to adapt.
+          No more constraints, the browser can do it all. With the rise of HTML5, the limits of what a browser can do have been scraped.<br/>
+          This has changed how applications are architectured and it's time to embrace the change.
         </p>
       </figcaption>
     </figure>
@@ -66,7 +73,7 @@
 
   <section class="row-fluid custom-rows fourth-row space-row" stretch amount="0.3"></section>
 
-  <section class="row-fluid custom-rows fifth-row" stretch amount="1">
+  <section class="row-fluid custom-rows fifth-row" stretch>
     <section class="fadeit-front-figure fourth-figure">
       <figcaption class="row-fluid row-open-software">
         <section class="col-xs-24 col-md-14 col-md-offset-2">
@@ -82,20 +89,6 @@
           <img src="src/assets/img/front/github.png" alt="github - fadeit open software" class="logo-open-software"/>
           <img src="src/assets/img/front/ckan.png" alt="ckan - fadeit open software" class="logo-open-software"/>
           <img src="src/assets/img/front/tux.png" alt="linux - fadeit open software" class="logo-open-software"/>
-        </section>
-      </figcaption>
-
-      <figcaption class="row-fluid row-open-software">
-        <section class="col-xs-24 col-md-14 col-md-offset-2">
-          <h2>
-            Software made powerful
-          </h2>
-          <p>
-            No more constraints, the browser can do it all. With the rise of HTML5, the limits of what a browser can do have been scraped.<br/>
-            This has changed how applications are architectured and it's time to embrace the change.
-          </p>
-        </section>
-        <section class="col-xs-24 col-md-8">
         </section>
       </figcaption>
 

@@ -5,7 +5,7 @@
  *
  */
 
-angular.module(absConfig.appRootModuleName).config(rootConfig);
+angular.module(fadeitConfig.appRootModuleName).config(rootConfig);
 
 rootConfig.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider'];
 function rootConfig($locationProvider, $urlRouterProvider, $stateProvider){

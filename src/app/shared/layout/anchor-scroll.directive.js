@@ -1,4 +1,4 @@
-angular.module('abs.coreLayout').directive('anchorScrollTo', anchorScrollTo);
+angular.module('fadeit.coreLayout').directive('anchorScrollTo', anchorScrollTo);
 
 anchorScrollTo.$inject = ['$location', '$anchorScroll'];
 function anchorScrollTo($location, $anchorScroll){

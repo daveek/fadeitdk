@@ -1,4 +1,4 @@
-angular.module(absConfig.appRootModuleName).controller('RootController', rootController);
+angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
 
 rootController.$inject = ['$scope', '$window', '$log'];
 function rootController($scope, $window, $log) {

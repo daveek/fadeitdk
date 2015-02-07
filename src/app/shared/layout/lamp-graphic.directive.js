@@ -1,5 +1,13 @@
-angular.module('abs.coreLayout').directive('lampGraphic', lampGraphic);
+angular.module('fadeit.coreLayout').directive('lampGraphic', lampGraphic);
 
+/*
+ * Inserts a lamp template that tracks scroll and
+ * adjust opacity to a 'bulb-light' (bright) element
+ *
+ * Top = transparent
+ * Bottom = opaque
+ *
+ */
 lampGraphic.$inject = ['$window'];
 function lampGraphic($window){
   function lampGraphicLink(){
@@ -8,7 +16,6 @@ function lampGraphic($window){
         currentOpacity = 0,
         elementOpacity,
         childBulb = angular.element(".bulb-light");
-        console.log(bodyElement.height());
 
     lampScrollOpacity();
 

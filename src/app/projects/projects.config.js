@@ -1,4 +1,4 @@
-absConfig.pushAfterBootstrap('fadeit.projects');
+fadeitConfig.pushAfterBootstrap('fadeit.projects');
 
 angular.module('fadeit.projects').config(projectsConfig);
 

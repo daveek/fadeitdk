@@ -1,4 +1,4 @@
-absConfig.pushAfterBootstrap('fadeit.home');
+fadeitConfig.pushAfterBootstrap('fadeit.home');
 
 angular.module('fadeit.home').config(homeConfig);
 

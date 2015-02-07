@@ -1,4 +1,4 @@
-absConfig.pushAfterBootstrap('fadeit.contact');
+fadeitConfig.pushAfterBootstrap('fadeit.contact');
 
 angular.module('fadeit.contact').config(contactConfig);
 

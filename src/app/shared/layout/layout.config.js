@@ -1,1 +1,1 @@
-absConfig.pushAfterBootstrap('abs.coreLayout');
+fadeitConfig.pushAfterBootstrap('fadeit.coreLayout');

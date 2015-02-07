@@ -8,15 +8,15 @@ describe('Root Application Module:', function(){
 
   describe('Root Config:', function(){
     it('should expose a pushAfterBootstrap method', function(){
-      expect(absConfig.pushAfterBootstrap).toBeTruthy();
+      expect(fadeitConfig.pushAfterBootstrap).toBeTruthy();
     });
 
     it('should expose a appRootModuleName variable', function(){
-      expect(absConfig.appRootModuleName).toBeTruthy();
+      expect(fadeitConfig.appRootModuleName).toBeTruthy();
     });
 
     it('should expose a appMainVendorDependencies variable', function(){
-      expect(absConfig.appMainVendorDependencies).toBeTruthy();
+      expect(fadeitConfig.appMainVendorDependencies).toBeTruthy();
     });
   });
 

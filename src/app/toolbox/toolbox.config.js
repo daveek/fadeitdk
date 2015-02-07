@@ -1,4 +1,4 @@
-absConfig.pushAfterBootstrap('fadeit.toolbox');
+fadeitConfig.pushAfterBootstrap('fadeit.toolbox');
 
 angular.module('fadeit.toolbox').config(toolboxConfig);
 
