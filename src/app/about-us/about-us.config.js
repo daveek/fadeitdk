@@ -8,7 +8,7 @@ function aboutUsConfig($stateProvider){
     url: '/about-us',
     templateUrl: 'views/about-us-page.html',
     data:{
-      pageTitle: 'About fadeit'
+      pageTitle: 'About us'
     }
   });
 }

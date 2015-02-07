@@ -243,6 +243,21 @@ module.exports = function(grunt) {
       }
     },
     /*
+     * This task autoprefixes CSS
+     * You won't have to ever add -webkit-, -moz-, etc
+     * in your CSS files EVER!
+     *
+     */
+    autoprefixer: {
+      options: {
+        browsers: ['> 1%']
+      },
+      build_autoprefix_css: {
+        src: '<%= build_dir %>/src/assets/css/app.min.css',
+        dest: '<%= build_dir %>/src/assets/css/app.min.css'
+      }
+    },
+    /*
      * The uglify task mainly minifies and mangles module scripts.
      * After all scripts are concatenated, it minifies without
      * mangling to remove comments, line breaks, etc that come
@@ -413,7 +428,7 @@ module.exports = function(grunt) {
       },
       src_stylesheets: {
         files: ['./src/assets/**/*.less', './src/assets/**/*.css'],
-        tasks: ['newer:less:build_less', 'cssmin:build_css', 'clean:build_css_clean']
+        tasks: ['newer:less:build_less', 'cssmin:build_css', 'clean:build_css_clean', 'autoprefixer:build_autoprefix_css']
       },
       src_assets: {
         files: ['./src/assets/**/*', '!./src/assets/**/*.less', '!./src/assets/**/*.css'],
@@ -466,7 +481,8 @@ module.exports = function(grunt) {
     'concat:build_asset_js',
     'less:build_less',
     'cssmin:build_css',
-    'clean:build_css_clean'
+    'clean:build_css_clean',
+    'autoprefixer:build_autoprefix_css'
   ]);
   grunt.registerTask('compile', [
     'jshint',

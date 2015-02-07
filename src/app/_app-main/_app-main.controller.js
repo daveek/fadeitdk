@@ -5,6 +5,7 @@ function rootController($scope, $window, $log) {
   var vm = this;
   vm.htmlTitle = 'fadeit';
   vm.darkMode = false;
+  vm.toolboxPage = false;
   /*
    * Event callback on every route change
    * Scrolls the page to the top as 'normally' changing a page
@@ -29,6 +30,15 @@ function rootController($scope, $window, $log) {
       vm.darkMode = true;
     } else {
       vm.darkMode = false;
+    }
+
+    /*
+     * if the state is toolbox, don't show footer
+     */
+    if(toState.name === 'toolbox'){
+      vm.toolboxPage = true;
+    } else {
+      vm.toolboxPage = false;
     }
 
     $window.scrollTo(0,0);

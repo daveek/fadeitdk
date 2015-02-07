@@ -1,6 +1,6 @@
 <section class="nav-container" ng-class="{'dark-mode': root.darkMode}">
   <nav class="main-menu left-sidebar">
-    <section class="transparent-whitebar">
+    <section class="transparent-whitebar" scroll-opacity max-opacity="{{root.darkMode ? 0.5 : 0.8}}" slow-down="{{root.darkMode ? 2 : 0.2}}" rgb="{{root.darkMode ? '0, 0, 0' : '255, 255, 255'}}">
       <!--<a href="#!" class="go-to-menu max-md" go-to anchor="menu"><i class="fa fa-level-down"></i></a>-->
       <section class="secondary-page-title" data-ng-if="!root.logoImage">
         <h2 class="page-title">{{root.htmlTitle}}</h2>

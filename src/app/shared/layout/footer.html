@@ -1,3 +1,20 @@
-<footer class="row-fluid footer-fluid clearfix">
-  © <span ng-bind="::vm.currentDate"></span> fadeit
+<footer class="row-fluid footer-fluid" ng-show="!root.toolboxPage">
+  <section class="col-xs-24 col-md-6">
+    <img src="src/assets/img/brand/fadeit_logo_full.svg" alt="fadeit logo - software development agency" class="fadeit-footer-logo"/>
+  </section>
+  <section class="col-xs-24 col-md-12">
+    <p class="footer-contact">
+      Give us a call at <span>81100200</span> or email us at <a href="mailto:info@fadeit.dk">info@fadeit.dk</a><br/>
+      We'd love to have you by for a cup of coffee at Anelystparken 31 D, 8381 Tilst, Aarhus.
+    </p>
+  </section>
+
+  <section class="col-xs-24 col-md-6">
+    <a href="http://twitter.com/fadeitdk" class="social-link" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://github.com/fadeit" class="social-link" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="https://www.linkedin.com/company/fadeit" class="social-link" target="_blank"><i class="fa fa-linkedin"></i></a>
+  </section>
+  <!--<p>
+   © <span ng-bind="::vm.currentDate"></span> fadeit
+  </p>-->
 </footer>
