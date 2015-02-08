@@ -1,17 +1,12 @@
 <section class="nav-container" ng-class="{'dark-mode': root.darkMode}">
-  <nav class="main-menu left-sidebar">
+  <nav class="main-menu">
     <section class="transparent-whitebar" scroll-opacity max-opacity="{{root.darkMode ? 0.5 : 0.8}}" slow-down="{{root.darkMode ? 2 : 0.2}}" rgb="{{root.darkMode ? '0, 0, 0' : '255, 255, 255'}}">
-      <!--<a href="#!" class="go-to-menu max-md" go-to anchor="menu"><i class="fa fa-level-down"></i></a>-->
       <section class="secondary-page-title" data-ng-if="!root.logoImage">
         <h2 class="page-title">{{root.htmlTitle}}</h2>
       </section>
     </section>
 
-    <span id="logo-link">
-      <img ng-src="{{root.logoImage || ''}}" class="fadeit-logo-small"/>
-    </span>
-
-    <ul class="menu-link-list">
+    <ul class="menu-link-list" ng-hide="root.toolboxPage" id="global-menu">
       <li class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="home" class="menu-anchor main-menu-anchor">
           Story
@@ -27,42 +22,26 @@
           Contact
         </a>
       </li>
-      <!--<li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="toolbox" class="menu-anchor main-menu-anchor">
-          Toolbox
-        </a>
-      </li>-->
       <li class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="our-work" class="menu-anchor main-menu-anchor">
           Our work
         </a>
       </li>
-    </ul>
-  </nav>
 
-    <!-- mobile nav
-  <nav class="mobile-menu footer-nav max-md" id="menu">
-    <ul class="mobile-link-list mobileMenu{{directiveTitle}}">
-      <li class="mobile-link-item"
-      data-ng-repeat="item in menuItems"
-      data-ng-class="{'activeMenu': $uiRoute}"
-      ui-route="{{item.uiRoute}}">
-        <a href="#!/{{item.link}}" class="menu-anchor mobile-menu-anchor">
-          {{item.title}}
-        </a>
-      </li>
-
-      <li class="mobile-link-item">
-        <a href="#!" class="menu-anchor mobile-menu-anchor" go-to anchor="">
+      <li class="menu-link-item">
+        <a href="#" class="menu-anchor main-menu-anchor" du-smooth-scroll>
           Free ride to the top <i class="fa fa-level-up"></i>
         </a>
       </li>
+    </ul>
 
-      <li class="mobile-link-item toolbox-home">
-        <a href="#!/" class="menu-anchor">
+    <!-- toolbox menu -->
+    <ul class="menu-link-list mobileMenuToolbox" ng-show="root.toolboxPage">
+      <li class="menu-link-item toolbox-home">
+        <a href ui-sref="home" class="menu-anchor main-menu-anchor">
           Back home <i class="fa fa-home"></i>
         </a>
       </li>
     </ul>
-  </nav>-->
+  </nav>
 </section>

@@ -20,13 +20,15 @@ function lampGraphic($window){
     lampScrollOpacity();
 
     function lampScrollOpacity(){
-      elementOpacity = (this.pageYOffset / (bodyElement.height() - windowElement.height())).toFixed(1);
+      if(windowElement.width() >= 768){
+        elementOpacity = (this.pageYOffset / (bodyElement.height() - windowElement.height())).toFixed(1);
 
-      if(currentOpacity !== elementOpacity &&
-         elementOpacity >= 0 &&
-         elementOpacity <= 1){
-        currentOpacity = elementOpacity;
-        childBulb.css('opacity', elementOpacity);
+        if(currentOpacity !== elementOpacity &&
+           elementOpacity >= 0 &&
+           elementOpacity <= 1){
+          currentOpacity = elementOpacity;
+          childBulb.css('opacity', elementOpacity);
+        }
       }
     }
 
