@@ -1,0 +1,47 @@
+<section class="nav-container" ng-class="{'dark-mode': root.darkMode}">
+  <nav class="main-menu">
+    <section class="transparent-whitebar" scroll-opacity max-opacity="{{root.darkMode ? 0.5 : 0.8}}" slow-down="{{root.darkMode ? 2 : 0.2}}" rgb="{{root.darkMode ? '0, 0, 0' : '255, 255, 255'}}">
+      <section class="secondary-page-title" data-ng-if="!root.logoImage">
+        <h2 class="page-title">{{root.htmlTitle}}</h2>
+      </section>
+    </section>
+
+    <ul class="menu-link-list" ng-hide="root.toolboxPage" id="global-menu">
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="home" class="menu-anchor main-menu-anchor">
+          Story
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor">
+          About us
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="contact" class="menu-anchor main-menu-anchor">
+          Contact
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="our-work" class="menu-anchor main-menu-anchor">
+          Our work
+        </a>
+      </li>
+
+      <li class="menu-link-item">
+        <a href="#" class="menu-anchor main-menu-anchor" du-smooth-scroll>
+          Free ride to the top <i class="fa fa-level-up"></i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- toolbox menu -->
+    <ul class="menu-link-list mobileMenuToolbox" ng-show="root.toolboxPage">
+      <li class="menu-link-item toolbox-home">
+        <a href ui-sref="home" class="menu-anchor main-menu-anchor">
+          Back home <i class="fa fa-home"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>

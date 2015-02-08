@@ -1,0 +1,1 @@
+fadeitConfig.pushAfterBootstrap('fadeit.coreLayout');
