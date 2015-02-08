@@ -30,7 +30,8 @@ module.exports = {
       './vendor/angular-ui-router/release/angular-ui-router.js',
       './vendor/angular-mocks/angular-mocks.js',
       './vendor/angular-load/angular-load.js',
-      './vendor/angular-scroll/angular-scroll.js'
+      './vendor/angular-scroll/angular-scroll.js',
+      './vendor/fingerprint/fingerprint.js'
     ],
     vendor_css: [
       //concatenated with 'assets' stylesheets in 'app.min.css'
@@ -59,6 +60,7 @@ module.exports = {
     ],
     vendor_js: [
       //doesn't have a min files, will minify
+      './vendor/fingerprint/fingerprint.js'
     ]
   },
   /*
