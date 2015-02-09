@@ -8,7 +8,7 @@ function expertiseConfig($stateProvider){
     url: '/expertise',
     templateUrl: 'views/expertise-page.html',
     data:{
-      pageTitle: 'Our expertise'
+      pageTitle: 'EXPERTISE_PAGE_TITLE'
     }
   });
 }

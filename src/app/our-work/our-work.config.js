@@ -10,7 +10,7 @@ function ourWorkPageConfig($stateProvider){
     controller: 'OurWorkController',
     controllerAs: 'vm',
     data:{
-      pageTitle: 'Our work'
+      pageTitle: 'WORK_PAGE_TITLE'
     }
   });
 }

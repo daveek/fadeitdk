@@ -1,7 +1,7 @@
 angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
 
-rootController.$inject = ['$scope', '$window', '$log'];
-function rootController($scope, $window, $log) {
+rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter'];
+function rootController($scope, $window, $log, $translate, $filter) {
   var vm = this;
   vm.htmlTitle = 'fadeit';
   vm.darkMode = false;
@@ -18,9 +18,14 @@ function rootController($scope, $window, $log) {
      * updates the <title> tag if the new route has a pageTitle set
      * (vm.htmlTitle is binded to the title tag)
      *
+     * The title is also translated
      */
     if(angular.isDefined(toState.data) && angular.isDefined(toState.data.pageTitle)){
-      vm.htmlTitle = toState.data.pageTitle;
+      $scope.$watch(function(){
+        return $filter('translate')(toState.data.pageTitle);
+      }, function(newValue){
+        vm.htmlTitle = newValue;
+      });
     }
 
     /*
@@ -54,8 +59,25 @@ function rootController($scope, $window, $log) {
    *
    */
   $scope.$on('changedPage', function changedPage(event, pageTitle){
-    vm.htmlTitle = pageTitle;
+    vm.htmlTitle = $filter('translate')(pageTitle);
   });
+
+  /*
+   * Language switch
+   */
+  vm.changeLanguage = function changeLanguage(lang, langId){
+    $translate.use($filter('translate')(lang));
+
+    localStorage.setItem('langStore', JSON.stringify({
+      'lang': $filter('translate')(langId)
+    }));
+
+    //update language display
+    vm.langId = $filter('translate')(langId);
+  };
+
+  //set current language id on first load
+  vm.langId = $filter('translate')('ID');
 
   /*
    * Hackers gotta hack

@@ -4,11 +4,9 @@
     <section class="default-inner-container">
       <section class="row-fluid visible-row project-intro-fluid apply-row clearfix">
         <section class="col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">
-          <h1>Awesome!</h1>
-          <p class="regular-text">
-            Your application has been submitted and we can't wait to read it. If you forgot something important, just go to <a href ui-sref="contact">contact</a> and tell us all about it. Otherwise, we'll be get back to you very soon!<br/><br/>
-            Looking forward to meeting you,<br/>
-            The fadeit team
+          <h1 translate>THANKS_HEADING_1</h1>
+          <p class="regular-text" translate translate-value-contact="<a href='#!/contact'>{{'NAV_CONTACT' | translate}}</a>">
+            THANKS_TEXT_1
           </p>
         </section>
       </section>
@@ -17,7 +15,7 @@
         <section class="col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">
           <figure class="image-container clearfix img-heart">
             <span class="rounded-border">
-              <img ng-src="src/assets/img/icons/fadeit_heart_love.svg" class="icon-image" alt="fadeit <3 you" style="position:relative;"/>
+              <img ng-src="src/assets/img/icons/fadeit_heart_love.svg" class="icon-image" alt="{{'SEO_HEART_ALT' | translate}}"/>
             </span>
           </figure>
         </section>

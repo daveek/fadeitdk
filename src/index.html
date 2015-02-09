@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="RootController as root">
+<html lang="{{root.langId}}" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="RootController as root">
 <head>
   <title data-ng-bind="root.htmlTitle">fadeit - web development agency</title>
 
@@ -20,14 +20,14 @@
   <meta property="og:title" content="{{root.htmlTitle}}">
   <meta property="og:description" content="fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.">
   <meta property="og:url" content="http://fadeit.dk">
-  <meta property="og:image" content="img/brand/fadeit_logo_square.png">
+  <meta property="og:image" content="http://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
   <meta property="og:type" content="website">
 
   <!-- Twitter META -->
   <meta name="twitter:title" content="{{root.htmlTitle}}">
   <meta name="twitter:description" content="fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.">
   <meta name="twitter:url" content="http://fadeit.dk">
-  <meta name="twitter:image" content="img/brand/fadeit_logo_square.png">
+  <meta name="twitter:image" content="http://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
 
   <!-- Fav Icon -->
   <link href="img/brand/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">

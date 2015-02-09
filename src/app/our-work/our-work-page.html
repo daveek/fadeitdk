@@ -4,9 +4,9 @@
     <section class="row-fluid outstanding-container">
       <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">
         <section class="inner-text">
-          <img ng-src="src/assets/img/brand/fadeit_logo_full.svg" alt="fadeit logo" class="secondary-page-logo" />
-          <p class="regular-text">
-          We're open to collaboration on interesting and challenging projects. We've been working on Decentralized Web, IoT, Open Data, Modern Web Apps and much more. See some of our most interesting projects below.
+          <img ng-src="src/assets/img/brand/fadeit_logo_full.svg" alt="{{'SEO_LOGO_ALT' | translate}}" class="secondary-page-logo" />
+          <p class="regular-text" translate>
+            WORK_SUMMARY
           </p>
         </section>
       </section>
@@ -14,7 +14,7 @@
 
     <section class="default-inner-container">
       <section class="row-fluid" ng-if="!vm.projects">
-        <h3 class="col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">We couldn't load the projects at this time, please try again in a short while.</h3>
+        <h3 class="col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6" translate>WORK_PROJECT_ERROR</h3>
       </section>
 
       <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6">
@@ -25,17 +25,16 @@
             </span>
 
             <span class="col-xs-24 col-md-8 single-project-intro" data-ng-style="{'background': project.color.base, 'color': project.color.text}">
-              <h3>{{project.title}}</h3>
-              <p class="regular-text" data-ng-style="{'color': project.color.text}">{{project.shortDescription}}</p>
+              <h3 translate>{{project.title}}</h3>
+              <p class="regular-text" data-ng-style="{'color': project.color.text}" translate>{{project.shortDescription}}</p>
               <p class="read-more">
-                Read more <i class="fa fa-chevron-circle-right"></i>
+                <span translate>WORK_PROJECT_READ_MORE</span> <i class="fa fa-chevron-circle-right"></i>
               </p>
             </span>
           </a>
         </section>
-      </section>
-    </section>
+      </section> <!--end col-*-->
+    </section><!-- end default-inner-container-->
 
-    <reload-wow></reload-wow>
   </section>
 </section>

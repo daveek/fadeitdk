@@ -12,6 +12,7 @@
     "angular-ui-router": "~0.2.12",
     "angular-load": "~0.2.0",
     "angular-scroll": "~0.6.4",
+    "angular-translate": "~2.6.0",
     "angular-ui-utils": "~0.2.1",
     "bootstrap-fadeit": "fadeit/bootstrap#v3.5.1",
     "fingerprint": "~0.5.4",

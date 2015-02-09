@@ -8,7 +8,7 @@ function aboutUsConfig($stateProvider){
     url: '/about-us',
     templateUrl: 'views/about-us-page.html',
     data:{
-      pageTitle: 'About us'
+      pageTitle: 'ABOUT_PAGE_TITLE'
     }
   });
 }

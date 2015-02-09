@@ -864,6 +864,18 @@ a{
   }
 }
 
+.menu-anchor.language-anchor{
+  &:after{
+    .col(transparent, b);
+  }
+
+  &:hover{
+    &:after{
+      .col(transparent, b);
+    }
+  }
+}
+
 .mainSidebarToolbox, .mainSidebarThanks, .mainSidebarInternship{
   .menu-anchor{
     &:focus, &:hover{
@@ -1305,6 +1317,16 @@ a{
 
     &:nth-child(1){
       margin-top:0;
+    }
+
+    span{
+      font-size:@m_fs_h3;
+      line-height:@m_fs_h3;
+
+      @media only screen and (min-width:@bp_md){
+        font-size:@fs_h3;
+        line-height:@fs_h3;
+      }
     }
 
     &:nth-child(odd){
@@ -1852,6 +1874,19 @@ a{
 
       @media only screen and (min-width:@bp_md){
         color:@w;
+      }
+    }
+  }
+
+
+  .language-anchor{
+    &:after{
+      .col(transparent, b);
+    }
+
+    &:hover{
+      &:after{
+        .col(transparent, b);
       }
     }
   }

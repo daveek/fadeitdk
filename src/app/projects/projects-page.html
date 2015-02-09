@@ -5,7 +5,8 @@
         <section class="inner-text">
           <img ng-src="/src/assets/img/brand/fadeit_logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
           <p class="regular-text">
-            The project description for <u>{{vm.requestUrl}}</u> is still being put together by one of our developers. He promised us a preview and he did not disappoint when asked to deliver: <br/><br/><br/><br/>
+            <span translate translate-value-url="{{vm.requestUrl}}">PSINGLE_NOT_FOUND</span>
+            <br/><br/><br/><br/>
 
             <span class="binary">
             0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 0 0 1 1 1 0 0
@@ -22,10 +23,10 @@
             <img ng-src="/src/assets/img/icons/fadeit_penguin.svg" alt="a penguin to cheer you up" class="icon-image" />
           </span>
           <figcaption>
-            <h2>Here's a penguin to cheer you up. <br/>(page not found!)</h2>
-            We'll do our best to prevent this from happening again.<br/>
-            If you are really mad at us, go ahead and send an angry email.<br/><br/>
-            We care about your nervous breakdown, so here is <a href="#!/contact">a link</a> where you can rant.
+            <h2 translate>PSINGLE_NOT_FOUND_PENGUIN</h2>
+            <p translate translate-value-contact="<a href='#!/contact'>{{'NAV_A_LINK' | translate}}</a>">
+              PSINGLE_NOT_FOUND_PENG_TEXT
+            </p>
           </figcaption>
         </figure>
       </section>
@@ -35,7 +36,7 @@
 
       <section class="row-fluid project-intro-fluid">
         <section class="col-xs-24">
-          <h3 class="regular-title">{{vm.project.content.shortDescription}}</h3>
+          <h3 class="regular-title" translate>{{vm.project.content.shortDescription}}</h3>
           <p class="regular-text project-tags">
             <span class="a-tag" ng-repeat="tag in vm.project.tags">
             {{tag}}
@@ -46,15 +47,15 @@
 
       <section class="row-fluid table-fluid cover-fluid">
         <section class="col-xs-24 col-md-16 single-project-cover" data-ng-style="{'background': vm.project.color.coverBackground}">
-          <img ng-src="/src/assets/img/projects/{{vm.project.id}}/{{vm.project.images.cover}}" alt="{{vm.project.title}} project" />
+          <img ng-src="/src/assets/img/projects/{{vm.project.id}}/{{vm.project.images.cover}}" alt="{{vm.project.title | translate}} {{'SEO_PROJECT_ALT' |  translate}}" />
         </section>
 
         <section class="col-xs-24 col-md-8 single-project-intro" data-ng-style="{'background': vm.project.color.base}">
           <h3 data-ng-style="{'color': vm.project.color.text}">
-            {{vm.project.content.intro.heading}}
+            {{vm.project.content.intro.heading | translate}}
           </h3>
           <p class="regular-text" data-ng-style="{'color': vm.project.color.text}">
-            {{vm.project.content.intro.text}}
+            {{vm.project.content.intro.text | translate}}
           </p>
         </section>
       </section>
@@ -63,25 +64,24 @@
       <article class="project-details"
       data-ng-style="{'background': vm.project.color.light, 'color': vm.project.color.darkText }">
         <section class="paragraph-fluid clearfix">
-          <h3>{{vm.project.content.mainHeading}}</h3>
+          <h3 translate>{{vm.project.content.mainHeading}}</h3>
         </section>
 
         <section class="paragraph-fluid clearfix"
-        data-ng-repeat='text in vm.project.content.paragraphs'
-        last-item-watcher>
-          <p class="regular-text" data-ng-style="{'color': vm.project.color.darkText}">{{text}}</p>
+        data-ng-repeat='text in vm.project.content.paragraphs'>
+          <p class="regular-text" data-ng-style="{'color': vm.project.color.darkText}" translate>{{text}}</p>
         </section>
       </article>
 
 
       <article class="project-details project-extras" data-ng-if='vm.project.url || vm.project.images.screens'>
-        <h3>{{vm.project.images.heading}}</h3>
+        <h3 translate>{{vm.project.images.heading}}</h3>
 
         <section class="url-fluid clearfix" data-ng-if="vm.project.urls" data-ng-repeat="url in vm.project.urls">
           <p class="regular-text">
-            <span class="url-text">{{url.text}}</span>
+            <span class="url-text" translate>{{url.text}}</span>
             <a href="{{url.link}}" target="_blank"
-            data-ng-style="{'color': vm.project.color.links}">
+            data-ng-style="{'color': vm.project.color.links}" translate>
               {{url.title}}
             </a>
           </p>
@@ -91,17 +91,15 @@
       <section class="project-screens" data-ng-if="vm.project.images.screens">
         <figure class="project-screen"
         data-ng-repeat="screen in vm.project.images.screens"
-        data-ng-style="{'background': vm.project.color.light}"
-        last-item-watcher>
-          <img data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title}} screenshot" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>
+        data-ng-style="{'background': vm.project.color.light}">
+          <img data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title | translate}} {{'SEO_SCREENSHOT_ALT' |  translate}}" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>
           <figcaption data-ng-style="{'color': vm.project.color.darkText}">
-            <h3>{{screen.title}}</h3>
-            <p class="regular-text">{{screen.desc}}</p>
+            <h3 translate>{{screen.title}}</h3>
+            <p class="regular-text" translate>{{screen.desc}}</p>
           </figcaption>
         </figure>
-      </section>
+      </section><!--end project-screens-->
     </section>
 
-    <reload-wow></reload-wow>
   </section>
 </section>

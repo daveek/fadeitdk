@@ -11,7 +11,7 @@
       "lightAccent": "#E7E8EA",
       "coverBackground": "#E7E8EA"
     },
-    "title": "IPVision",
+    "title": "PLIST_IPVISION_TITLE",
     "link": "story/ipvision",
     "uiRoute": "/story/ipvision",
     "tags": {
@@ -20,57 +20,57 @@
       "2": "PHP"
     },
     "images": {
-      "heading": "Project images and further reading",
+      "heading": "PDET_IPVISION_IMG_H",
       "cover": "cover_sm@2x.jpg",
       "screens": {
       "0": {
         "filename": "0.png",
-        "title": "Dashboard / App home",
-        "desc": "The front page of the application, displaying the user consumption for the selected period of time."
+        "title": "PDET_IPVISION_SCREEN_1_T",
+        "desc": "PDET_IPVISION_SCREEN_1_D"
       },
       "1": {
         "filename": "1.png",
-        "title": "Consumption Overview (line chart)",
-        "desc": "A detailed view of the 'talk' consumption for the selected period."
+        "title": "PDET_IPVISION_SCREEN_2_T",
+        "desc": "PDET_IPVISION_SCREEN_2_D"
       },
       "2": {
         "filename": "2.png",
-        "title": "Subscription Management",
-        "desc": "A detailed subscription view for the selected user."
+        "title": "PDET_IPVISION_SCREEN_3_T",
+        "desc": "PDET_IPVISION_SCREEN_3_D"
       },
       "3": {
         "filename": "3.png",
-        "title": "User Account Overview",
-        "desc": "The user account main page, displaying general user info."
+        "title": "PDET_IPVISION_SCREEN_4_T",
+        "desc": "PDET_IPVISION_SCREEN_4_D"
       },
       "4": {
         "filename": "4.png",
-        "title": "Mobile Views",
-        "desc": "An overview of the responsive implementation."
+        "title": "PDET_IPVISION_SCREEN_5_T",
+        "desc": "PDET_IPVISION_SCREEN_5_D"
         }
       }
     },
     "urls": {
       "0": {
-        "title": "IPVision website",
+        "title": "PDET_IPVISION_URL_1_T",
         "link": "http://www.ipvision.dk/",
-        "text": "To find out more, take a look at the "
+        "text": "PDET_IPVISION_URL_1_D"
       },
       "1": {
-        "title": "Portal prototype",
+        "title": "PDET_IPVISION_URL_2_T",
         "link": "http://danmind.ru/portal/main",
-        "text": "Below you can see one of the projects that we've built together, Portal. A prototype is also avaialble here: "
+        "text": "PDET_IPVISION_URL_2_D"
       }
     },
     "content": {
-      "shortDescription": "Integrating PBXs, Cloud services, mail clients and back-office servers",
+      "shortDescription": "PLIST_IPVISION_DESC",
       "intro": {
-        "heading": "About IPVision",
-        "text": "IPVision A/S is a Copenhagen-based Mobile Virtual Network Operator (MVNO). They are one of the leading IP Telephony providers for B2B customers in Denmark."
+        "heading": "PDET_IPVISION_INTRO_T",
+        "text": "PDET_IPVISION_INTRO_D"
       },
-      "mainHeading": "Our collaboration",
+      "mainHeading": "PDET_IPVISION_MAIN_T",
       "paragraphs": {
-        "0": "In IPVision, we work on state of the art self service portals, backoffice tools, phone usage systems, accounting software and automation of various workflows."
+        "0": "PDET_IPVISION_P_1"
       }
     }
   },
@@ -86,7 +86,7 @@
       "lightAccent": "#E7E8EA",
       "coverBackground": "#3F4040"
     },
-    "title": "Alexandra Institute",
+    "title": "PLIST_ALEX_TITLE",
     "link": "story/alexandra",
     "uiRoute": "/story/alexandra",
     "tags": {
@@ -95,32 +95,32 @@
       "2": "Drupal"
     },
     "images": {
-      "heading": "Where to learn more",
+      "heading": "PDET_ALEX_IMG_H",
       "cover": "cover_sm@2x.jpg",
       "screens": {}
     },
     "urls": {
       "0":{
-        "title": "their website",
+        "title": "PDET_ALEX_URL_1_T",
         "link": "http://www.alexandra.dk/uk/",
-        "text": "To read more about Alexandra, go to "
+        "text": "PDET_ALEX_URL_1_D"
       },
       "1":{
-        "title": "here",
+        "title": "PDET_ALEX_URL_2_T",
         "link": "http://www.alexandra.dk/uk/labs/smart-city-lab/pages/smart-city-lab.aspx",
-        "text": "You can find more details about Smart City Lab "
+        "text": "PDET_ALEX_URL_2_D"
       }
     },
     "content": {
-      "shortDescription": "Building bridges with research-based innovation",
+      "shortDescription": "PLIST_ALEX_DESC",
       "intro": {
-        "heading": "About Alexandra Institute",
-        "text": "Alexandra Institute is an IT research and innovation organization founded in 1999."
+        "heading": "PDET_ALEX_INTRO_T",
+        "text": "PDET_ALEX_INTRO_D"
       },
-      "mainHeading": "Our collaboration",
+      "mainHeading": "PDET_ALEX_MAIN_T",
       "paragraphs": {
-        "0": "By merging commercial relevance, the latest IT research, technology and user involvement, Alexandra creates IT-based products that generate social value and contribute to economic growth. In other words, they are a bridge-builder between research, private corporations, public institutions and citizens.",
-        "1": "We work with Alexandra's Smart City Lab on building modern Open Data portals that are based on CKAN and Drupal."
+        "0": "PDET_ALEX_P_1",
+        "1": "PDET_ALEX_P_2"
       }
     }
   },
@@ -136,7 +136,7 @@
       "lightAccent": "#E7E8EA",
       "coverBackground": "#1B698F"
     },
-    "title": "About Gatesense",
+    "title": "PLIST_GATE_TITLE",
     "link": "story/gatesense",
     "uiRoute": "/story/gatesense",
     "tags": {
@@ -145,26 +145,27 @@
       "2": "Node.js"
     },
     "images": {
-      "heading": "Learn more about Gatesense",
+      "heading": "PDET_GATE_IMG_H",
       "cover": "cover_sm@2x.jpg",
       "screens": {}
     },
     "urls": {
       "0": {
-        "title": "Gatesense website",
+        "title": "PDET_GATE_URL_1_T",
         "link": "http://gatesense.com",
-        "text": "This still-evolving project is currently building an international community of developers and other entrepreneurs, cities and organisations with a passion for sustainability. Check out the "
+        "text": "PDET_GATE_URL_1_D"
       }
     },
     "content": {
-      "shortDescription": "Unleashing creativity and creating significant value for society",
+      "shortDescription": "PLIST_GATE_DESC",
       "intro": {
-      "heading": "Gatesense",
-      "text": "Gatesense is a modern Internet of Things platform. Its primary purpose is to build a community and a set of concrete tools for solving today's environment problems."
-    },
-    "mainHeading": "Our collaboration",
-    "paragraphs": {
-      "0": "We play a major role in research and technical development of the platform. The effort is lead by Grundfos and Alexandra Institute."
+        "heading": "PDET_GATE_INTRO_T",
+        "text": "PDET_GATE_INTRO_D"
+      },
+      "mainHeading": "PDET_GATE_MAIN_T",
+      "paragraphs": {
+        "0": "PDET_GATE_P_1"
+      }
     }
   }
-}]
+]

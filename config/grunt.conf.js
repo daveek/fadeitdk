@@ -31,7 +31,8 @@ module.exports = {
       './vendor/angular-mocks/angular-mocks.js',
       './vendor/angular-load/angular-load.js',
       './vendor/angular-scroll/angular-scroll.js',
-      './vendor/fingerprint/fingerprint.js'
+      './vendor/fingerprint/fingerprint.js',
+      './vendor/angular-translate/angular-translate.js'
     ],
     vendor_css: [
       //concatenated with 'assets' stylesheets in 'app.min.css'
@@ -56,7 +57,8 @@ module.exports = {
       './vendor/angular/angular.min.js',
       './vendor/angular-ui-router/release/angular-ui-router.min.js',
       './vendor/angular-load/angular-load.min.js',
-      './vendor/angular-scroll/angular-scroll.min.js'
+      './vendor/angular-scroll/angular-scroll.min.js',
+      './vendor/angular-translate/angular-translate.min.js'
     ],
     vendor_js: [
       //doesn't have a min files, will minify

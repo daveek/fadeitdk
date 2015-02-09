@@ -10,7 +10,7 @@ function applyConfig($stateProvider){
     controllerAs: 'vm',
     templateUrl: 'views/apply-page.html',
     data:{
-      pageTitle: 'Work at fadeit'
+      pageTitle: 'APPLY_PAGE_TITLE'
     }
   }).state('thanks', {
     url: '/thanks',
@@ -18,7 +18,7 @@ function applyConfig($stateProvider){
     controllerAs: 'vm',
     templateUrl: 'views/thanks-page.html',
     data:{
-      pageTitle: 'Thank you'
+      pageTitle: 'THANKS_PAGE_TITLE'
     }
   });
 }

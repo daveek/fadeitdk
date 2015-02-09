@@ -8,7 +8,7 @@ function teamPageConfig($stateProvider){
     url: '/team',
     templateUrl: 'views/team-page.html',
     data:{
-      pageTitle: 'The fadeit team'
+      pageTitle: 'TEAM_PAGE_TITLE'
     }
   });
 }

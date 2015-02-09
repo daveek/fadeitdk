@@ -10,7 +10,7 @@ function toolboxConfig($stateProvider){
     controllerAs: 'vm',
     templateUrl: 'views/toolbox-page.html',
     data:{
-      pageTitle: 'Toolbox'
+      pageTitle: 'TOOLBOX_PAGE_TITLE'
     }
   });
 }

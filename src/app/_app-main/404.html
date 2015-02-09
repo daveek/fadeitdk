@@ -1,14 +1,12 @@
 <!-- a page that doesn't have content yet, maybe placeholder for 404 -->
 <!-- can be included in other templates -->
-<section class="outstanding-container">
-  <section class="default-inner-container">
+<section class="outstanding-container row-fluid">
+  <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6" stretch amount="1">
     <section class="inner-text">
-      <img ng-src="src/assets/img/icons/fadeit_penguin.svg" alt="fadeit logo" class="secondary-page-logo" />
-      <p class="regular-text">
-        This page was destroyed by a pack of wild penguins threating us that they will come back and finish what they started.
-        <br/>
-        We are still recovering...
+      <p class="regular-text" translate>
+        404_DEFAULT
       </p>
+      <img ng-src="src/assets/img/icons/fadeit_penguin.svg" alt="{{SEO_LOGO_ALT | translate}}" class="secondary-page-logo" />
     </section>
   </section>
 </section>

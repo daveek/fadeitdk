@@ -11,8 +11,8 @@
       "lightAccent": "#E7E8EA",
       "coverBackground": "#E7E8EA"
     },
-    "title": "IPVision",
-    "shortDescription": "Integrating PBXs, Cloud services, mail clients and back-office servers",
+    "title": "PLIST_IPVISION_TITLE",
+    "shortDescription": "PLIST_IPVISION_DESC",
     "link": "story/ipvision",
     "uiRoute": "/story/ipvision",
     "tags": {
@@ -36,8 +36,8 @@
       "lightAccent": "#E7E8EA",
       "coverBackground": "#3F4040"
     },
-    "title": "Alexandra Institute",
-    "shortDescription": "Building bridges with research-based innovation, powered by Open Data",
+    "title": "PLIST_ALEX_TITLE",
+    "shortDescription": "PLIST_ALEX_DESC",
     "link": "story/alexandra",
     "uiRoute": "/story/alexandra",
     "tags": {
@@ -61,8 +61,8 @@
       "lightAccent": "#E7E8EA",
       "coverBackground": "#1B698F"
     },
-    "title": "Gatesense",
-    "shortDescription": "Unleashing creativity and creating significant value for society",
+    "title": "PLIST_GATE_TITLE",
+    "shortDescription": "PLIST_GATE_DESC",
     "link": "story/gatesense",
     "uiRoute": "/story/gatesense",
     "tags": {

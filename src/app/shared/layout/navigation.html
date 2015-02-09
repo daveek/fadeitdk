@@ -2,45 +2,50 @@
   <nav class="main-menu">
     <section class="transparent-whitebar" scroll-opacity max-opacity="{{root.darkMode ? 0.5 : 0.9}}" slow-down="{{root.darkMode ? 2 : 0.2}}" rgb="{{root.darkMode ? '0, 0, 0' : '255, 255, 255'}}">
       <section class="secondary-page-title">
-        <h2 class="page-title" ng-bind="root.htmlTitle"></h2>
+        <h2 class="page-title" translate>{{root.htmlTitle}}</h2>
       </section>
     </section>
 
     <ul class="menu-link-list" ng-hide="root.toolboxPage" id="global-menu">
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="home" class="menu-anchor main-menu-anchor">
-          Story
+        <a href ui-sref="home" class="menu-anchor main-menu-anchor" translate>
+          NAV_STORY
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="expertise" class="menu-anchor main-menu-anchor">
-          Expertise
+        <a href ui-sref="expertise" class="menu-anchor main-menu-anchor" translate>
+          NAV_EXPERTISE
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="our-work" class="menu-anchor main-menu-anchor">
-          Our work
+        <a href ui-sref="our-work" class="menu-anchor main-menu-anchor" translate>
+          NAV_OUR_WORK
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor">
-          About
+        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor" translate>
+          NAV_ABOUT
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="team" class="menu-anchor main-menu-anchor">
-          Team
+        <a href ui-sref="team" class="menu-anchor main-menu-anchor" translate>
+          NAV_TEAM
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="contact" class="menu-anchor main-menu-anchor">
-          Contact
+        <a href ui-sref="contact" class="menu-anchor main-menu-anchor" translate>
+          NAV_CONTACT
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href class="menu-anchor main-menu-anchor language-anchor" ng-click="root.changeLanguage('SWITCH', 'ID')" translate>
+          IN_LANGUAGE
         </a>
       </li>
 
       <li class="menu-link-item">
         <a href="#" class="menu-anchor main-menu-anchor mobile-link-item" du-smooth-scroll>
-          Free ride to the top <i class="fa fa-level-up"></i>
+          <span translate>NAV_TO_TOP</span> <i class="fa fa-level-up"></i>
         </a>
       </li>
     </ul>
@@ -49,7 +54,7 @@
     <ul class="menu-link-list mobileMenuToolbox" ng-show="root.toolboxPage">
       <li class="menu-link-item toolbox-home">
         <a href ui-sref="home" class="menu-anchor main-menu-anchor">
-          Back home <i class="fa fa-home"></i>
+          <span translate>NAV_BACK_HOME</span> <i class="fa fa-home"></i>
         </a>
       </li>
     </ul>
