@@ -20,9 +20,9 @@
       "2": "PHP"
     },
     "images": {
-    "heading": "Project images and further reading",
-    "cover": "cover_sm@2x.jpg",
-    "screens": {
+      "heading": "Project images and further reading",
+      "cover": "cover_sm@2x.jpg",
+      "screens": {
       "0": {
         "filename": "0.png",
         "title": "Dashboard / App home",
@@ -37,18 +37,18 @@
         "filename": "2.png",
         "title": "Subscription Management",
         "desc": "A detailed subscription view for the selected user."
-    },
-    "3": {
-      "filename": "3.png",
-      "title": "User Account Overview",
-      "desc": "The user account main page, displaying general user info."
-    },
-    "4": {
-      "filename": "4.png",
-      "title": "Mobile Views",
-      "desc": "An overview of the responsive implementation."
+      },
+      "3": {
+        "filename": "3.png",
+        "title": "User Account Overview",
+        "desc": "The user account main page, displaying general user info."
+      },
+      "4": {
+        "filename": "4.png",
+        "title": "Mobile Views",
+        "desc": "An overview of the responsive implementation."
+        }
       }
-    }
     },
     "urls": {
       "0": {

@@ -8,7 +8,16 @@ function projectsService($http, $q){
   };
 
   function projectIndex(){
-    return $http.get('./data/project-index.json');
+    var projectListDefer = $q.defer();
+    var projectList = $http.get('./data/project-list.json');
+
+    projectList.then(function projectListResponse(response){
+      projectListDefer.resolve(response.data);
+    }, function projectListResponseError(error){
+      projectListDefer.reject(error);
+    });
+
+    return projectListDefer.promise;
   }
 
   function singleProject(projectId){
@@ -30,11 +39,11 @@ function projectsService($http, $q){
 
       if(!projectExists) {
         currentProject.error = true;
-        currentProject.message = 'Could not find the provider with id ' + projectId;
+        currentProject.message = 'Could not find the project with id ' + projectId;
       }
 
       singleProjectsDefer.resolve(currentProject);
-    }, function singleProjectError(error){
+    }, function singleProjectErrorResponse(error){
       singleProjectsDefer.reject(error);
     });
 

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "ipvision",
+    "color": {
+      "links": "#A91400",
+      "base": "#A91400",
+      "accent": "#8C0000",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#E7E8EA"
+    },
+    "title": "IPVision",
+    "shortDescription": "Integrating PBXs, Cloud services, mail clients and back-office servers",
+    "link": "story/ipvision",
+    "uiRoute": "/story/ipvision",
+    "tags": {
+      "0": "VoIP",
+      "1": "Asterisk",
+      "2": "PHP"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  },
+  {
+    "id": "alexandra",
+    "color": {
+      "links": "#F26436",
+      "base": "#A9A7A8",
+      "accent": "#7C7B79",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#3F4040"
+    },
+    "title": "Alexandra Institute",
+    "shortDescription": "Building bridges with research-based innovation",
+    "link": "story/alexandra",
+    "uiRoute": "/story/alexandra",
+    "tags": {
+      "0": "Open Data",
+      "1": "CKAN",
+      "2": "Drupal"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  },
+  {
+    "id": "gatesense",
+    "color": {
+      "links": "#87B816",
+      "base": "#12506E",
+      "accent": "#0E415A",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#1B698F"
+    },
+    "title": "Gatesense",
+    "shortDescription": "Unleashing creativity and creating significant value for society",
+    "link": "story/gatesense",
+    "uiRoute": "/story/gatesense",
+    "tags": {
+      "0": "IoT",
+      "1": "Big Data",
+      "2": "Node.js"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  }
+]

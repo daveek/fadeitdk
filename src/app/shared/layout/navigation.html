@@ -1,8 +1,8 @@
 <section class="nav-container" ng-class="{'dark-mode': root.darkMode}">
   <nav class="main-menu">
     <section class="transparent-whitebar" scroll-opacity max-opacity="{{root.darkMode ? 0.5 : 0.8}}" slow-down="{{root.darkMode ? 2 : 0.2}}" rgb="{{root.darkMode ? '0, 0, 0' : '255, 255, 255'}}">
-      <section class="secondary-page-title" data-ng-if="!root.logoImage">
-        <h2 class="page-title">{{root.htmlTitle}}</h2>
+      <section class="secondary-page-title">
+        <h2 class="page-title" ng-bind="root.htmlTitle"></h2>
       </section>
     </section>
 
@@ -13,18 +13,28 @@
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor">
-          About us
-        </a>
-      </li>
-      <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="contact" class="menu-anchor main-menu-anchor">
-          Contact
+        <a href ui-sref="expertise" class="menu-anchor main-menu-anchor">
+          Expertise
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="our-work" class="menu-anchor main-menu-anchor">
           Our work
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor">
+          About
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="team" class="menu-anchor main-menu-anchor">
+          Team
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="contact" class="menu-anchor main-menu-anchor">
+          Contact
         </a>
       </li>
 

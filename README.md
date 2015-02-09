@@ -7,4 +7,4 @@ The fadeit.dk website is built on top of [this AngularJS boilerplate](https://gi
 ####About fadeit
 We love and are really good at designing &amp; developing beautiful software, web and mobile applications.
 
-See more at [fadeit.dk](http://fadeit.dk/about)
+See this site live at [fadeit.dk](http://fadeit.dk/about)

@@ -1,9 +1,9 @@
 <section class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row project-fluid">
-    <section class="outstanding-container binary-container" data-ng-if="vm.project.errors">
+    <section class="outstanding-container binary-container" data-ng-if="vm.project.error">
       <section class="default-inner-container">
         <section class="inner-text">
-          <img ng-src="/src/assets/img/brand/logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
+          <img ng-src="/src/assets/img/brand/fadeit_logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
           <p class="regular-text">
             The project description for <u>{{vm.requestUrl}}</u> is still being put together by one of our developers. He promised us a preview and he did not disappoint when asked to deliver: <br/><br/><br/><br/>
 
@@ -15,14 +15,14 @@
       </section>
     </section>
 
-    <section class="row-fluid visible-row final-row" data-ng-if="vm.project.errors">
+    <section class="row-fluid visible-row final-row" data-ng-if="vm.project.error">
       <section class="col-xs-24">
         <figure class="image-container clearfix img-penguin">
           <span class="rounded-border">
             <img ng-src="/src/assets/img/icons/fadeit_penguin.svg" alt="a penguin to cheer you up" class="icon-image" />
           </span>
           <figcaption>
-            <h2>Here's a penguin to cheer you up.</h2>
+            <h2>Here's a penguin to cheer you up. (page not found!)</h2>
             We'll do our best to prevent this from happening again.<br/>
             If you are really mad at us, go ahead and send an angry email.<br/><br/>
             We care about your nervous breakdown, so here is <a href="#!/contact">a link</a> where you can rant.
@@ -31,7 +31,7 @@
       </section>
     </section>
 
-    <section class="default-inner-container" data-ng-if="!vm.project.errors">
+    <section class="default-inner-container" data-ng-if="!vm.project.error">
 
       <section class="row-fluid project-intro-fluid">
         <section class="col-xs-24">
