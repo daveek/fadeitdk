@@ -645,8 +645,7 @@ a{
 .transparent-whitebar{
   .fix();
   width: 100%;
-  height: @m_projects_offset + @m_news_section_height;
-  margin-top:-@m_news_section_height;
+  height: 90px;
   left: 0;
   background: rgba(255, 255, 255, 0.8);
   border-bottom: @bst  rgba(255, 255, 255, 0.1);
@@ -791,9 +790,10 @@ a{
       border-bottom: @bst @g7;
 
       @media only screen and (min-width:@bp_md){
-        margin-right:15px;
+        margin-left:15px;
         width:auto;
         border:0;
+        line-height: 90px;
       }
 
       &:last-child{
@@ -809,11 +809,15 @@ a{
   font-size:@fs_h5;
   color:@col_dark_gray;
   .animate(@animation_time_short, @transition_default);
-
-  //m
   .inline-block();
   width:100%;
-  padding: 15px 30px 15px 30px;
+  //padding: 15px 30px 15px 30px;
+
+  @media only screen and (min-width:@bp_md){
+    padding: 0;
+    width:auto;
+  }
+
 
   &:visited, &:focus{
     text-decoration: none;
@@ -861,28 +865,6 @@ a{
     top:3px;
   }
 }
-
-.activeMenu{
-  .menu-anchor{
-    color:@g1;
-  }
-
-  .main-menu-anchor{
-    @media only screen and (min-width:@bp_md){
-      &:after{
-        content:'';
-        height:1px;
-        width:100%;
-        background:@col_last_green_gray;
-        .abs();
-        left:0;
-        top:100%;
-        margin-top:-1px;
-      }
-    }
-  }
-}
-
 .main-menu-anchor{
   &:after{
     content:'';
@@ -909,6 +891,33 @@ a{
 .mobile-link-item{
   @media only screen and (min-width:@bp_md){
     .h();
+  }
+}
+
+.activeMenu{
+  .menu-anchor{
+    color:@g1;
+  }
+
+  @media only screen and (min-width:@bp_md){
+    &:hover{
+      &:after{
+        width:100%;
+      }
+    }
+
+    .main-menu-anchor{
+      &:after{
+        content:'';
+        height:1px;
+        width:100%;
+        background:@col_last_green_gray;
+        .abs();
+        left:0;
+        top:100%;
+        margin-top:-1px;
+      }
+    }
   }
 }
 
@@ -1108,8 +1117,6 @@ a{
     //.ta-c();
 
     .social-block{
-      .ta-c();
-
       .icons-container{
         //margin-left:60px;
         //color:@col_text_gray;
