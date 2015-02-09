@@ -647,7 +647,7 @@ a{
   width: 100%;
   height: 90px;
   left: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);
   border-bottom: @bst  rgba(255, 255, 255, 0.1);
   z-index: -1; //otherwise it will be on top of the full logot;
   transition : all 300ms ease-out;
@@ -888,6 +888,15 @@ a{
     .rel();
     top:3px;
   }
+
+  @media only screen and (min-width:@bp_md){
+    .col(transparent, b);
+
+    i.fa{
+      line-height: 80px;
+      margin-left: 10px;
+    }
+  }
 }
 .main-menu-anchor{
   &:after{
@@ -1079,13 +1088,13 @@ a{
 }
 
 .default-inner-container{
-  max-width:1250px;
+  /*max-width:1250px;
 
   @media only screen and (min-width:@bp_lg){
     padding-left:0;
     max-width:1120px;
     margin:0 auto;
-  }
+  }*/
 
   .row-fluid{
     padding-bottom:50px;
@@ -1198,7 +1207,7 @@ a{
 
     #formWrapper{
       margin-top:20px;
-      margin-bottom:20px;
+      margin-bottom:50px;
 
       .help-block{
         font-size:@fs_small;
@@ -1247,6 +1256,11 @@ a{
     border-bottom:0;
     padding:30px;
     margin:0;
+
+    @media only screen and (min-width:@bp_md){
+      padding-left:0;
+      padding-right:0;
+    }
   }
 
   /*our work page*/
@@ -1300,6 +1314,11 @@ a{
     &:hover{
       .col(lighten(@g7, 5%), b);
       .animate(@animation_time_short, @transition_default);
+    }
+
+    @media only screen and (min-width:@bp_md){
+      padding-left:0;
+      padding-right:0;
     }
 
     p{
@@ -1356,6 +1375,7 @@ a{
 
       img{
         margin-top:20px;
+        margin-bottom: 20px;
       }
     }
 
@@ -2286,7 +2306,7 @@ a{
 .footer-contact{
   font-size:@m_fs_body;
   line-height:@m_lh_body;
-  .col(@g4);
+  .col(@g5);
   .ta-c();
 
   @media only screen and (min-width:@bp_md){
@@ -2298,7 +2318,7 @@ a{
   }
 
   a, span{
-    .col(@g2);
+    .col(@g5);
   }
 
   a{
