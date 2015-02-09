@@ -2,7 +2,7 @@
   <section class="row-fluid secondary-page-row services-fluid">
 
     <section class="row-fluid outstanding-container">
-      <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3">
+      <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">
         <section class="inner-text">
           <img ng-src="src/assets/img/brand/fadeit_logo_full.svg" alt="fadeit logo" class="secondary-page-logo" />
           <p class="regular-text">
@@ -14,10 +14,10 @@
 
     <section class="default-inner-container">
       <section class="row-fluid" ng-if="!vm.projects">
-        <h3 class="col-xs-24 col-sm-18 col-sm-offset-3">We couldn't load the projects at this time, please try again in a short while.</h3>
+        <h3 class="col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">We couldn't load the projects at this time, please try again in a short while.</h3>
       </section>
 
-      <section class="col-xs-24 col-lg-18 col-lg-offset-3">
+      <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6">
         <section class="row-fluid table-fluid cover-fluid our-work-row" ng-repeat="project in vm.projects">
           <a href ui-sref="projects({projectId: project.id})">
             <span class="col-xs-24 col-md-16 single-project-cover" data-ng-style="{'background': project.color.coverBackground}">
