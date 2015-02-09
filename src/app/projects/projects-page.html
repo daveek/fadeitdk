@@ -1,7 +1,7 @@
 <section class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row project-fluid">
-    <section class="outstanding-container binary-container" data-ng-if="vm.project.error">
-      <section class="default-inner-container">
+    <section class="outstanding-container row-fluid binary-container" data-ng-if="vm.project.error">
+      <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3">
         <section class="inner-text">
           <img ng-src="/src/assets/img/brand/fadeit_logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
           <p class="regular-text">
@@ -16,13 +16,13 @@
     </section>
 
     <section class="row-fluid visible-row final-row" data-ng-if="vm.project.error">
-      <section class="col-xs-24">
+      <section class="col-xs-24 col-sm-18 col-sm-offset-3">
         <figure class="image-container clearfix img-penguin">
           <span class="rounded-border">
             <img ng-src="/src/assets/img/icons/fadeit_penguin.svg" alt="a penguin to cheer you up" class="icon-image" />
           </span>
           <figcaption>
-            <h2>Here's a penguin to cheer you up. (page not found!)</h2>
+            <h2>Here's a penguin to cheer you up. <br/>(page not found!)</h2>
             We'll do our best to prevent this from happening again.<br/>
             If you are really mad at us, go ahead and send an angry email.<br/><br/>
             We care about your nervous breakdown, so here is <a href="#!/contact">a link</a> where you can rant.
@@ -31,7 +31,7 @@
       </section>
     </section>
 
-    <section class="default-inner-container" data-ng-if="!vm.project.error">
+    <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3" data-ng-if="!vm.project.error">
 
       <section class="row-fluid project-intro-fluid">
         <section class="col-xs-24">
@@ -44,12 +44,12 @@
         </section>
       </section>
 
-      <section class="row-fluid cover-fluid">
-        <section class="col-xs-24 col-lg-16 single-project-cover" data-ng-style="{'background': vm.project.color.coverBackground}">
+      <section class="row-fluid table-fluid cover-fluid">
+        <section class="col-xs-24 col-md-16 single-project-cover" data-ng-style="{'background': vm.project.color.coverBackground}">
           <img ng-src="/src/assets/img/projects/{{vm.project.id}}/{{vm.project.images.cover}}" alt="{{vm.project.title}} project" />
         </section>
 
-        <section class="col-xs-24 col-lg-8 single-project-intro" data-ng-style="{'background': vm.project.color.base}">
+        <section class="col-xs-24 col-md-8 single-project-intro" data-ng-style="{'background': vm.project.color.base}">
           <h3 data-ng-style="{'color': vm.project.color.text}">
             {{vm.project.content.intro.heading}}
           </h3>

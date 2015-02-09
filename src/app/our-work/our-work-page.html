@@ -1,9 +1,8 @@
 <section class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row services-fluid">
 
-    <section class="outstanding-container">
-
-      <section class="default-inner-container">
+    <section class="row-fluid outstanding-container">
+      <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3">
         <section class="inner-text">
           <img ng-src="src/assets/img/brand/fadeit_logo_full.svg" alt="fadeit logo" class="secondary-page-logo" />
           <p class="regular-text">
@@ -15,16 +14,16 @@
 
     <section class="default-inner-container">
       <section class="row-fluid" ng-if="!vm.projects">
-        <h3>We couldn't load the projects at this time, please try again in a short while.</h3>
+        <h3 class="col-xs-24 col-sm-18 col-sm-offset-3">We couldn't load the projects at this time, please try again in a short while.</h3>
       </section>
 
-      <section class="row-fluid cover-fluid our-work-row" ng-repeat="project in vm.projects">
+      <section class="row-fluid table-fluid cover-fluid our-work-row" ng-repeat="project in vm.projects">
         <a href ui-sref="projects({projectId: project.id})">
-          <span class="col-xs-24 col-lg-16 single-project-cover" data-ng-style="{'background': project.color.coverBackground}">
+          <span class="col-xs-24 col-md-16 single-project-cover" data-ng-style="{'background': project.color.coverBackground}">
             <img ng-src="/src/assets/img/projects/{{project.id}}/{{project.images.cover}}" alt="{{project.title}} project - fadeit ApS, software development company" />
           </span>
 
-          <span class="col-xs-24 col-lg-8 single-project-intro" data-ng-style="{'background': project.color.base, 'color': project.color.text}">
+          <span class="col-xs-24 col-md-8 single-project-intro" data-ng-style="{'background': project.color.base, 'color': project.color.text}">
             <h3>{{project.title}}</h3>
             <p class="regular-text" data-ng-style="{'color': project.color.text}">{{project.shortDescription}}</p>
             <p class="read-more">

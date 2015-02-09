@@ -9,11 +9,23 @@ stretch.$inject = ['$window'];
 function stretch($window){
   function stretchLink(scope, element, attrs){
     var windowElement = angular.element($window);
-    element.css('min-height', windowElement.height() * attrs.amount);
 
-    windowElement.bind('resize', function resizeWindowStretch(){
-      element.css('min-height', windowElement.height() * attrs.amount);
-    });
+    function stretchElementsOnResize(){
+      /*
+       * Only strech if not in portrait mode and width > 767px
+       * otherwise set the min width to 50% of the window size
+       *
+       */
+      if(windowElement.height() > windowElement.width() && windowElement.height() > 767){
+        element.css('min-height', windowElement.height() * 0.5);
+      } else {
+        element.css('min-height', windowElement.height() * attrs.amount);
+      }
+
+    }
+
+    windowElement.bind('resize', stretchElementsOnResize);
+    stretchElementsOnResize();
   }
 
   return {
