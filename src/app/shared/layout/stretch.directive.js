@@ -8,7 +8,8 @@ angular.module('fadeit.coreLayout').directive('stretch', stretch);
 stretch.$inject = ['$window'];
 function stretch($window){
   function stretchLink(scope, element, attrs){
-    var windowElement = angular.element($window);
+    var windowElement = angular.element($window),
+        previousWindowWidth = 0; //start with 0 to resize by default the first time
 
     function stretchElementsOnResize(){
       /*
@@ -17,9 +18,19 @@ function stretch($window){
        *
        */
       if(windowElement.height() > windowElement.width() && windowElement.height() > 767){
+        console.log('resizing to 0.5 for landscape mode, bigger than 767px');
+        //if in portrait mode and the viewport height is more than 767
         element.css('min-height', windowElement.height() * 0.5);
       } else {
-        element.css('min-height', windowElement.height() * attrs.amount);
+        //if the window with is < 767, only apply resizing if the width difference is bigger than [an arbitrary] 150px
+        if(windowElement.width() <= 767 && Math.abs(previousWindowWidth - windowElement.width()) > 150){
+          console.log('resizing to 1 for mobiles, because the resize difference was bigger than 150');
+          previousWindowWidth = windowElement.width();
+          element.css('min-height', windowElement.height() * attrs.amount);
+        } else if(windowElement.height() > 767){
+          console.log('just resizing');
+          element.css('min-height', windowElement.height() * attrs.amount);
+        }
       }
 
     }
