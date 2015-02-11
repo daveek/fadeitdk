@@ -104,7 +104,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_PAGE_TITLE": "Our expertise",
     "EXPERTISE_SUMMARY": "We've been developing a variety of web and mobile appications. We design cross-platform concepts and experiences. We automate systems and simplify processes.",
     "EXPERTISE_DRUPAL": "Planning a medium to large size, highly-customizable modern website with awesome community support? Looks like you're talking about Drupal. We can build a custom installation profile, theme or module for you. Also, we can provide you with Drupal site maintenance, testing and support.",
-    "EXPERTISE_PYTHON": "Sometimes Content Management Systems just don't cut it. In fadeit, we love Python and its Web Stack and we can build custom web apps using Flask micro framework.",
+    "EXPERTISE_PYTHON": "Sometimes Content Management Systems just don't cut it. At fadeit, we love Python and its Web Stack and we can build custom web apps using Flask micro framework.",
     "EXPERTISE_ANGULARJS": "Abstracting the front-end will allow you to develop scalable, maintainable and reusable applications. Single page apps will also drastically simplify the server side logic and improve the performance of the interface.",
     "EXPERTISE_IT_AUTO_TITLE": "IT Automation",
     "EXPERTISE_IT_AUTO": "Perhaps you've heard some legends about IT companies where new developers are able to commit code on their very first day and push to production on their first week? Well, it's not a miracle and it's possible to achieve this in your company too. We embrace DevOps and Infrastructure as Code mentality. Give us a call if you need a dedicated automation ninja to help you with Puppet, Docker or Vagrant.",
@@ -257,16 +257,239 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software development company",
     "SEO_PROJECT_ALT": " - project made by fadeit - software development company",
     "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company",
-    "SEO_META_TITLE_EMPTY": "fadeit - web development company",
+    /*"SEO_META_TITLE_EMPTY": "fadeit - web development company",
     "SEO_META_DESC": "fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
     "SEO_META_AUTHOR": "fadeit ApS",
     "SEO_META_KEYWORDS": "fadeit, software, development, design agency, mobile, web, applications, systems, aarhus, denmark",
-    "SEO_OG_SITE_NAME": "fadeit"
+    "SEO_OG_SITE_NAME": "fadeit"*/
   });
 
   $translateProvider.translations('da-dk', {
     "ID": 'da-dk', //NEEDED for saving language pref.
     "SWITCH": "en-us", //NEEDED for switching the language.
     "IN_LANGUAGE": "in english", //MENU button (switch)
+        /*
+     * 404
+     */
+    "404_PAGE_TITLE": "OMG VI KUNNE IKKE FINDE DENNE SIDE",
+    "404_PINGUIN": "404 penguin - siden blev ikke fundet - software development company",
+    "404_DEFAULT": "Denne side blev smadret af en flok wilde pingviner, som truede os med at de ville komme tilbage og smadre hele hjemesiden.<br/> Vi er ikke helt ovenpå endnu...",
+
+    /*
+     * FOOTER
+     */
+    "FOOTER_PHONE": "Telefon",
+
+    /*
+     * TOOLBOX
+     */
+    "TOOLBOX_PAGE_TITLE": "Vores værktøjskasse",
+
+    /*
+     * FRONT PAGE
+     */
+    "FRONT_PAGE_TITLE": "Vi er et team at dedikerede udviklere",
+    "FRONT_TIME_TO_DO": "Hvorfor har udviklere aldrig tid til at gøre det rigtigt,<br/> men altid tid til at gøre det hele om igen!",
+    "FRONT_HERES_WHAT_WE_BELIEVE": "Software kan nemt blive et sort område, hvis ikke det er gjort rigtigt fra starten - vi er sat i verden for at gøre det rigtigt.<br/> Her er lidt fra vores synspunkt.",
+    "FRONT_SOFTWARE_EASY": "Software udviklet rigtigt fra starten",
+    "FRONT_SOFTWARE_EASY_TEXT": "Vores tro er at software bør være tilgængelig og intuitivt at bruge.<br/> Bruger oplevelsen er normalt kernen i vores software.",
+    "FRONT_SOFTWARE_SECURE": "Software med sikkerhed som 1. prioritet",
+    "FRONT_SOFTWARE_SECURE_TEXT": "Software sikkerhed er mest af alt et avanceret spil, der er umuligt at vinde. <br/> Nye spillere kommer på banen hver eneste dag, så det er vigtigt altid at være ét skridt foran <br/> i dette spil. Sikkerheden i de software vi udvikler er påvirket af kundens perspektiv, <br/> men det er vores fornemmeste opgave at sikre at det vi udvikler i dag også er supporteret i morgen. ",
+    "FRONT_SOFTWARE_OPEN": "Software skal være næsten alles",
+    "FRONT_SOFTWARE_OPEN_TEXT": "Vi tror på at software skal være transparent. I kernen af al vores software<br/> finder du Open Source i aller bedste form. Vi deler vores viden og vores kode i den udstrækning det er os muligt.",
+    "FRONT_SOFTWARE_POWERFUL": "Software med masser af power",
+    "FRONT_SOFTWARE_POWERFUL_TEXT": "Ikke flere begrænsninger, den moderne browser kan alt. Med HTML5 forsvandt alle begrænsningerne som tidligere forhindrede os i at udvikle smart software direkte i browseren.<br/> Det har ændres måden hvorpå man kan udvikle software i fremtiden, så det gør vi.",
+    "FRONT_SOFTWARE_MOBILE": "Software skal være mobil",
+    "FRONT_SOFTWARE_MOBILE_TEXT": "Vi mener at single page software ændrer måden hvorpå vi interagerer med vores browser.<br/> Kombineret med responsive design er vi i stand til at bygge software platforme med en enkelt code database.<br/> Når just-as-well ikke er godt nok, kan vores arbejde overføres til mobile platforme - so they are treated like first class citizens.",
+    "FRONT_SOFTWARE_FOR_YOU": "Software lavet til dig.",
+    "FRONT_ARE_YOU_A_CLIENT": "Vi sørger for at holde dig ude at mørket. Måske du er vores næste spændende kunde?",
+    "FRONT_BUTTON_CONTACT": "Kontakt os",
+
+    /*
+     * ABOUT PAGE
+     */
+    "ABOUT_PAGE_TITLE": "Om os",
+    "ABOUT_SUMMARY": "Vi er en mindre udviklingsvirksomhed i Århus, hvis rejse startede tilbage i 2013 - Siden da har vi brugt vores tid på at bage lækkert software til vores kunder.",
+    "ABOUT_OUR_CULTURE": "Kulturen",
+    "ABOUT_CULTURE_TEXT_1": "Her, hos fadeit forsøger vi at se et lidt andet perspektiv end de fleste andre udviklingsvirksomheder. Vi vil have vores projekter er fornøjelige og af en meget høj kvalitet, ikke bare for kundens skyld, men ligeså meget for vores egen skyld. Vi vil udvikle os sammen med vores kunder og bygge software der kan skabe glæde for begge parter i lang tid.",
+    "ABOUT_CULTURE_TEXT_2": "Vi vil også gerne have ligeså meget sjov som vi er alvorlige - En af vores grundværdier er at have det sjovt på arbejdspladsen og det er uanset hvad sjov betyder for den enkelte medarbejder - det kan være 24 timers lemans på kontorstolen, at skrive en lækker code, at drikke en shaker til fyraften .. eller alle tre ting på én gang.",
+
+    /*
+     * CONTACT PAGE
+     */
+    "CONTACT_PAGE_TITLE": "Kontakt",
+    "CONTACT_NAME": "fadeit ApS",
+    "CONTACT_ADDRESS": "Anelystparken 31 D, 8381 Tilst, Århus, Denmark",
+    "CONTACT_BUSINESS": "For any business related matter",
+    "CONTACT_PHONE": "Telefon:",
+    "CONTACT_EMAIL": "E-mail:",
+    "CONTACT_DEVS": "Du er altid velkommen til at sige hej til teamet",
+    "CONTACT_CHAT_WITH_US": "Vi tager gerne en uforpligtende snak",
+    "CONTACT_FOLLOW_US": "Følg os på de sociale medier.",
+
+    /*
+     * EXPERTISE PAGE
+     */
+    "EXPERTISE_PAGE_TITLE": "Det vi gør",
+    "EXPERTISE_SUMMARY": "Vi har udviklet en stor vifte af forskellige web og mobil applikationer. Vi designer på tværs af platforme, koncepter og erfaringer. Vi automatiserer systemer og forenkle processer.",
+  "EXPERTISE_DRUPAL": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
+  "EXPERTISE_PYTHON": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python og dens Web Stack, hvor vi bygger custom applikationer med Flask micro framework.",
+    "EXPERTISE_ANGULARJS": "Angular JS tillader at man kan udvikle skalerbare, vedligeholdelsesfrie og genbrugelige applikationer. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af applikationen.",
+    "EXPERTISE_IT_AUTO_TITLE": "IT Automatisering",
+    "EXPERTISE_IT_AUTO": "Måske har du hørt legender om at udviklingsvirksomheder hvor nye udviklere kunne udgive deres applikationer på deres første dag? Tjaa, det er absolut ikke et mirakel og det er faktisk muligt at opnå dette også i din virksomhed. Vi arbejder med DevOps og Infrastructure som vores kode mentalitet. Giv os et kald hvis du har brug for en dedikeret kode ninja der kan hjælpe dig med Puppet, Docker eller Vagrant.",
+    "EXPERTISE_XP_DESIGN_TITLE": "Experience Design",
+    "EXPERTISE_XP_DESIGN": "Vores baggrund med experience design vil supplere din innovations indsats og hjælpe dig med at opbygge et bedre produkt. Vi elsker at udvikle koncepter sammen med vores kunder.",
+    "EXPERTISE_OPEN_DATA_TITLE": "Open Data",
+    "EXPERTISE_OPEN_DATA": "Åbenhed og gennemsigtighed er nøglen til den regering du gerne vil have. Hvis du skal bygge eller udvide en Open Data applikation, står vi til rådighed. Vi har stor expertise i forbindelse med at udvikle større CKAN portaler integreret med bl.a. Drupal infrastruktur.",
+    "EXPERTISE_NODEJS": "Javascript afvikles ikke mere i din browser - NodeJS byder derimod på en model som er velegnet til web applikationer med data i real-time. Vi udvikler kommunikations applikationer med socket.io, custom moduler i forbindelse med Internet of Things routing software Node-RED og express.js backends.",
+    "EXPERTISE_WEB_CRAWLERS_TITLE": "Web Crawlers",
+    "EXPERTISE_WEB_CRAWLERS": "Har du brug for at få offentlig data ind i din database, men kan ikke finde en indgang? Vi bygger custom web spiders så giv os et kald, hvis du har brug for hjælp.",
+    "EXPERTISE_BACKENDS_TITLE": "Custom Back-ends",
+    "EXPERTISE_BACKENDS": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
+    "EXPERTISE_TOOLBOX_LINK": "Fandt du ikke det du kom efter? Tag et kig i vores {{toolbox}} og ha' lidt sjov med det!",
+
+    /*
+     * OUR WORK PAGE
+     */
+    "WORK_PAGE_TITLE": "Noget vi har lavet",
+    "WORK_SUMMARY": "Vi er åbne overfor samarbejder på spændende og udfordrende projekter. Vi har arbejdet med Decentralized Web, IoT, Open Data, Modern Web Apps og meget andet. Du finder nogle af vores projekter her.",
+    "WORK_PROJECT_ERROR": "Projektet blev ikke fundet, forsøg venligst om et par minutter.",
+    "WORK_PROJECT_READ_MORE": "Læs mere",
+
+    /*
+     * TEAM PAGE
+     */
+    "TEAM_PAGE_TITLE": "Teamet",
+    "TEAM_SUMMARY": "Vi er et team at hackers, automation freaks og console cowboys som elsker at arbejde med Open Source software og med henblik på at benytte det i såvel open source applikationer som kommercielle applikationer. Vi mener selv vi har et unikt perspektiv på software udvikling grundet vores baggrund.",
+    "TEAM_CEO": "CEO",
+    "TEAM_SOFTWARE_DEV": "Software Udvikler",
+    "TEAM_DESIGNER": "Designer",
+    //Lars
+    "TEAM_LARS_DESC": "Manden der får ting til at gå op i en højere enhed.<br/> Når det kommer til alt det kedelige administrative, salget og økonomien er Lars manden man skal snakke med.",
+    "TEAM_LARS_ALT": "Lars Normark Holmgaard",
+    //Justas
+    "TEAM_JUSTAS_DESC": "Udvikler med mange kompetencer. Han mestrer 10+ programmeringssprog og utallige andre teknologier. Hans ynglingsvåben: Python, NodeJS, Puppet, Linux, Vim, ZSH.",
+    "TEAM_JUSTAS_ALT": "Justas Azna",
+    //Dan
+    "TEAM_DAN_DESC": "Arbejder med det der virker for at opnå det rigtige resultat: Sketch, Illustrator, AngularJS, iOS, wacky CSS; you name it. Han var engang rigtig glad for et design han havde lavet, men nu laver han det om.",
+    "TEAM_DAN_ALT": "Dan Mindru",
+    //Sander
+    "TEAM_SANDER_DESC": "Der findes ingen hindringer og ingen bjerge er for store - Han når altid toppen af bjerget. Der kommer altid nye ideer på bordet og stadig med samme hensynsløse pragmatiske indgangsvinkel.",
+    "TEAM_SANDER_ALT": "Sander Sink",
+    //New guy
+    "TEAM_NEW_POSITION": "Imponerende person",
+    "TEAM_NEW_NAME": "J. Brugforetjob",
+    "TEAM_NEW_DESC": "Elsker at surfe på kanten af bølgerne af teknologi og er altid motiveret til at lære nyt og opnå resultater. Hvis det er sådan du har det .. ?<br/> Så søg ind til os ",
+    "TEAM_NEW_LINK_TITLE": "her",
+
+    /*
+     * SINGLE PROJECT PAGE
+     */
+    "PSINGLE_NOT_FOUND": "Projekt beskrivelsen for <u>{{url}}</u> er endnu ikke færdig. Han lovede os et eksempel, og vi blev ikke skuffet: ",
+    "PSINGLE_NOT_FOUND_PENGUIN": "Her er en pingvin der kan muntre dig lidt op. <br/>(Siden blev ikke fundet!)",
+    "PSINGLE_NOT_FOUND_PENG_TEXT": "Vi gør vores bedste for at dette ikke kommer til at ske igen.<br/> Hvis du er blevet rigtig vred på os så send os gerne en vred e-mail.<br/><br/> Vi bekymrer os om vores kunder, så klik her {{contact}} og kom med dine vrede.",
+
+    /*
+     * PROJECT LIST
+     */
+    //ipvision
+    "PLIST_IPVISION_TITLE": "IPVision",
+    "PLIST_IPVISION_DESC": "Integrating PBXs, Cloud services, mail clients og back-office servers",
+    //alexandra inst.
+    "PLIST_ALEX_TITLE": "Alexandra Institute",
+    "PLIST_ALEX_DESC": "Udvikling af bro'er med research baseret innovation, powered by Open Data",
+    //gatesense
+    "PLIST_GATE_TITLE": "Gatesense",
+    "PLIST_GATE_DESC": "løslad kreativiteten og udvikling af værdi til samfundet",
+
+    /*
+     * PROJECT DETAILS
+     */
+    //ipvision
+    "PDET_IPVISION_IMG_H": "Projekt billeder og mere læsning",
+    "PDET_IPVISION_SCREEN_1_T": "Forsiden",
+    "PDET_IPVISION_SCREEN_1_D": "Forsiden i applikationen viser tydelige brugerens forbrug for den valgte periode.",
+    "PDET_IPVISION_SCREEN_2_T": "Forbrugs oversigt",
+    "PDET_IPVISION_SCREEN_2_D": "Et detaljeret overblik over talt tid i den valgte periode.",
+    "PDET_IPVISION_SCREEN_3_T": "Abonnementsstyring",
+    "PDET_IPVISION_SCREEN_3_D": "Et detaljeret overblik over hvilket abonnement den valgte bruger har købt.",
+    "PDET_IPVISION_SCREEN_4_T": "Brugerkonto",
+    "PDET_IPVISION_SCREEN_4_D": "Brugerkontoen's forside viser generelle bruger oplysninger.",
+    "PDET_IPVISION_SCREEN_5_T": "Mobil",
+    "PDET_IPVISION_SCREEN_5_D": "Et overblik over mobil delen.",
+    "PDET_IPVISION_URL_1_T": "Ipvision hjemmeside",
+    "PDET_IPVISION_URL_1_D": "Hvis du vil vide mere så se mere her ",
+    "PDET_IPVISION_URL_2_T": "Portalen",
+    "PDET_IPVISION_URL_2_D": "Nedenfor kan de se et af de projekter vi har brugget sammen. Dette er prototypen som er tilgængelig her: ",
+    "PDET_IPVISION_INTRO_T": "Om Ipvision",
+    "PDET_IPVISION_INTRO_D": "Ipvision A/S er Dansk teleoperatør med fokus på B2B markedet. Virksomheden er førende indenfor ip telefoni løsninger til erhvervslivet.",
+    "PDET_IPVISION_MAIN_T": "Vores samarbejde",
+    "PDET_IPVISION_P_1": "Hos Ipvision, har vi mulighed for at arbejde med state-of-the-art brugerportaler, backoffice, telefonisystemer, økonomisystemer og automatisering af forskellige arbejdsprocesser.",
+    //alexandra inst.
+    "PDET_ALEX_IMG_H": "Hvor kan du lærer mere",
+    "PDET_ALEX_URL_1_T": "deres hjemmeside",
+    "PDET_ALEX_URL_1_D": "For at læse mere om Alexandra, gå til ",
+    "PDET_ALEX_URL_2_T": "her",
+    "PDET_ALEX_URL_2_D": "Du finder mere information om Smart City Lab ",
+    "PDET_ALEX_INTRO_T": "Om Alexandra Institute",
+    "PDET_ALEX_INTRO_D": "Alexandra Institute er en IT research og innovations organisation stiftet i 1999.",
+    "PDET_ALEX_MAIN_T": "Vores samarbejde",
+    "PDET_ALEX_P_1": "By merging commercial relevance, the latest IT research, technology and user involvement, Alexandra creates IT-based products that generate social value and contribute to economic growth. In other words, they are a bridge-builder between research, private corporations, public institutions and citizens.",
+    "PDET_ALEX_P_2": "Vi arbejder sammen med Alexandra's Smart City Lab i forbindelse med udvikling af moderne open data portaler som er baseret på CKAN og Drupal.",
+    //gatesense
+    "PDET_GATE_IMG_H": "Læs mere om Gatesense",
+    "PDET_GATE_URL_1_T": "Gatesense hjemmeside",
+    "PDET_GATE_URL_1_D": "Dette on-going projekt er baseret på en international gruppe af udviklere og entreprenører, byer or organisationer med en passion bæredygtighed. Tjek ",
+    "PDET_GATE_INTRO_T": "Gatesense",
+    "PDET_GATE_INTRO_D": "Gatesense er en moderniseret version af Internet of Things platformen. Dets primære formål er at bygge et community og et sæt værktøjer der skal være medvirkende til at løse dagligdagens miljø problemer.",
+    "PDET_GATE_MAIN_T": "Vores samarbejde",
+    "PDET_GATE_P_1": "Vi spiller en stor rolle i forbindelse med research og udvikling af platformen. Projektet bliver drevet og funded af Grundfos og Alexandra Institute.",
+
+    /*
+     * APPLY & THANK YOU PAGE
+     */
+    "APPLY_PAGE_TITLE": "Job hos fadeit",
+    "APPLY_WELCOME": "Hej, fremmede",
+    "APPLY_TEXT_1": "For det første .. tillykke med at du har løst koden. Vi er glade for at se at du både er nysgerrig og villig til at udforske. Vi leder konstant efter motiverede og målrettede medlemmer til vores team af udviklere.",
+    "APPLY_HEADING_1": "Hvem leder vi efter?",
+    "APPLY_TEXT_2": "Teknologi platforme og måder at udvikle moderne applikationer skifter hele tiden - hvad der i dag betragtes som cutting-edge kan nemt være forældet i morgen. Hos fadeit værdsætter vi evnen at ville lærer.<br/> Du behøver ikke være bekendt med teknologier fra vores {{toolbox}} (Selv om det måske er en kæmpe fordel). Vi leder efter udviklere som er lærernemme og rigtig gerne vil være med der hvor teknologierne opstår - du skal være motiveret til at gøre bedre.",
+    "APPLY_HEADING_2": "Hvad kan vi tilbyde?",
+    "APPLY_TEXT_3": "Vi tilbyder en mulighed for at arbejde med Free Software og Open Source værktøjer med henblik på at udvikle web applikationer på den rigtige måde. Du elsker back-end udvikling, du vil arbejde med front-end design? Måske leder du efter en mulighed for at forbedre dine evner med Linux, måske kunne du tænke dig at arbejde med it automation? Er der noget helt andet du finder sjovt at lave? Chancen for at vi har en plads til dig er stor.",
+    "APPLY_HEADING_3": "Hvis det lyder godt i dine øre så send os dine informationer:<br/>",
+    "THANKS_PAGE_TITLE": "Tak",
+    "THANKS_HEADING_1": "Awesome!",
+    "THANKS_TEXT_1": "Din ansøgning er modtaget og vi kan ikke vente med at læse den. Hvis du har glemt noget vigtigt i din ansøgning så gå til {{contact}} og fortæl os om det. Når vi har læst din ansøgning kontakter vi dig!<br/><br/> Vi glæder os til at møde dig,<br/> <b>The fadeit team</b>",
+
+    /*
+     * NAV TRANSLATIONS
+     */
+    "NAV_STORY": "Vores arbejde",
+    "NAV_EXPERTISE": "Hvad vi laver",
+    "NAV_ABOUT": "Om",
+    "NAV_OUR_WORK": "vores arbejde",
+    "NAV_TEAM": "holdet",
+    "NAV_TOOLBOX": "værktøjskassen",
+    "NAV_CONTACT": "kontakt",
+    "NAV_A_LINK": "et link",
+    "NAV_TO_TOP": "Free ride to the top",
+    "NAV_TO_MENU": "gå til menu'en",
+    "NAV_BACK_HOME": "Til forsiden",
+
+    /*
+     * SEO TRANSLATIONS
+     * Keep in mind - ALT tags should also describe
+     * what the image represents, SEO comes after
+     */
+    "SEO_LOGO_ALT": "the fadeit logo - software udviklingsvirksomhed",
+    "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software udviklingsvirksomhed",
+    "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software udviklingsvirksomhed",
+    "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software udviklingsvirksomhed",
+    "SEO_PROJECT_ALT": " - project made by fadeit - software udviklingsvirksomhed",
+    "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software udviklingsvirksomhed",
+    /*"SEO_META_TITLE_EMPTY": "fadeit - software udviklingsvirksomhed",
+    "SEO_META_DESC": "fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
+    "SEO_META_AUTHOR": "fadeit ApS",
+    "SEO_META_KEYWORDS": "fadeit, software, udvikling, design, mobil, web, applikationer, systemer, aarhus, denmark",
+    "SEO_OG_SITE_NAME": "fadeit"*/
   });
 }
