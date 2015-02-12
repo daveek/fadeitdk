@@ -251,6 +251,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * Keep in mind - ALT tags should also describe
      * what the image represents, SEO comes after
      */
+    "SEO_TITLE_APPEND": "fadeit, software development company in Aarhus",
     "SEO_LOGO_ALT": "the fadeit logo - software development company",
     "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software development company",
     "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software development company",
@@ -480,6 +481,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * Keep in mind - ALT tags should also describe
      * what the image represents, SEO comes after
      */
+    "SEO_TITLE_APPEND": "fadeit, software development company in Aarhus",
     "SEO_LOGO_ALT": "the fadeit logo - software udviklingsvirksomhed",
     "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software udviklingsvirksomhed",
     "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software udviklingsvirksomhed",

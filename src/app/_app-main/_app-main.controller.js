@@ -3,7 +3,8 @@ angular.module(fadeitConfig.appRootModuleName).controller('RootController', root
 rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter'];
 function rootController($scope, $window, $log, $translate, $filter) {
   var vm = this;
-  vm.htmlTitle = 'fadeit';
+  vm.pageTitle = 'fadeit';
+  vm.htmlTitle = $filter('translate')('SEO_TITLE_APPEND');
   vm.darkMode = false;
   vm.toolboxPage = false;
   /*
@@ -24,7 +25,8 @@ function rootController($scope, $window, $log, $translate, $filter) {
       $scope.$watch(function(){
         return $filter('translate')(toState.data.pageTitle);
       }, function(newValue){
-        vm.htmlTitle = newValue;
+        vm.pageTitle = newValue;
+        vm.htmlTitle = newValue + ' - ' + $filter('translate')('SEO_TITLE_APPEND');
       });
     }
 
@@ -59,7 +61,8 @@ function rootController($scope, $window, $log, $translate, $filter) {
    *
    */
   $scope.$on('changedPage', function changedPage(event, pageTitle){
-    vm.htmlTitle = $filter('translate')(pageTitle);
+    vm.htmlTitle = $filter('translate')(pageTitle) + ' - ' + $filter('translate')('SEO_TITLE_APPEND');
+    vm.pageTitle = $filter('translate')(pageTitle);
   });
 
   /*
