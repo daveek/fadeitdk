@@ -89,7 +89,7 @@
       </article>
 
       <section class="project-screens" data-ng-if="vm.project.images.screens">
-        <figure class="project-screen"
+        <figure class="project-screen fadeit-animate animated fadeIn" data-wow-delay="1s" data-wow-offset="50"
         data-ng-repeat="screen in vm.project.images.screens"
         data-ng-style="{'background': vm.project.color.light}">
           <img data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title | translate}} {{'SEO_SCREENSHOT_ALT' |  translate}}" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>

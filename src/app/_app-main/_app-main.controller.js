@@ -2,7 +2,8 @@ angular.module(fadeitConfig.appRootModuleName).controller('RootController', root
 
 rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter'];
 function rootController($scope, $window, $log, $translate, $filter) {
-  var vm = this;
+  var vm = this,
+      wow;
   vm.pageTitle = 'fadeit';
   vm.htmlTitle = $filter('translate')('SEO_TITLE_APPEND');
   vm.darkMode = false;
@@ -15,6 +16,7 @@ function rootController($scope, $window, $log, $translate, $filter) {
    *
    */
   $scope.$on('$stateChangeSuccess', function rootStateChangeSuccess(event, toState){
+    wow.init();
     /*
      * updates the <title> tag if the new route has a pageTitle set
      * (vm.htmlTitle is binded to the title tag)
@@ -81,6 +83,18 @@ function rootController($scope, $window, $log, $translate, $filter) {
 
   //set current language id on first load
   vm.langId = $filter('translate')('ID');
+
+  //init wow
+  wow = new WOW(
+    {
+      boxClass:     'fadeit-animate',
+      animateClass: 'animated',
+      offset:       0,
+      mobile:       false,
+      live:         true
+    }
+  );
+  wow.init();
 
   /*
    * Hackers gotta hack

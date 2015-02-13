@@ -25,6 +25,7 @@ module.exports = {
   build: {
     vendor_js: [
       //written in 'index.html' in this order
+      './vendor/wow/dist/wow.js',
       './vendor/jquery/dist/jquery.js',
       './vendor/angular/angular.js',
       './vendor/angular-ui-router/release/angular-ui-router.js',
@@ -37,7 +38,8 @@ module.exports = {
     vendor_css: [
       //concatenated with 'assets' stylesheets in 'app.min.css'
       './vendor/bootstrap-fadeit/dist/css/bootstrap.min.css',
-      './vendor/font-awesome/css/font-awesome.min.css'
+      './vendor/font-awesome/css/font-awesome.min.css',
+      './vendor/animate.css/animate.min.css'
     ]
   },
   /*
@@ -53,6 +55,7 @@ module.exports = {
   compile: {
     vendor_min_js: [
       //won't minify again
+      './vendor/wow/dist/wow.min.js',
       './vendor/jquery/dist/jquery.min.js',
       './vendor/angular/angular.min.js',
       './vendor/angular-ui-router/release/angular-ui-router.min.js',
