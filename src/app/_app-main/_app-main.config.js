@@ -221,7 +221,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      */
     "APPLY_PAGE_TITLE": "Work at fadeit",
     "APPLY_WELCOME": "Hi there, stranger",
-    "APPLY_TEXT_1": "First of all, congrats on cracking that piece of code. We're excited to know that you are curious and willing to explore. We are always looking for a motivated and determined person to join our team.",
+    "APPLY_TEXT_1": "Thanks for dropping by. We're excited to know that you are curious and willing to explore. We are always looking for a motivated and determined person to join our team.",
     "APPLY_HEADING_1": "Who are we looking for?",
     "APPLY_TEXT_2": "Technology landscapes are changing fast, with new software rolling out on a daily basis - what is considered cutting-edge today, can become obsolete tomorrow. Here at fadeit we value the ability to learn.<br/> You don't have to be familiar with technologies from our {{toolbox}} (although it's an advantage). We're looking for someone who is fast at picking stuff up and most importantly - motivated to improve.",
     "APPLY_HEADING_2": "What do we offer?",
