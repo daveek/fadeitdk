@@ -28,7 +28,7 @@ function rootController($scope, $window, $log, $translate, $filter) {
         return $filter('translate')(toState.data.pageTitle);
       }, function(newValue){
         vm.pageTitle = newValue;
-        vm.htmlTitle = newValue + ' - ' + $filter('translate')('SEO_TITLE_APPEND');
+        vm.htmlTitle = newValue + ', ' + $filter('translate')('SEO_TITLE_APPEND');
       });
     }
 
@@ -63,7 +63,7 @@ function rootController($scope, $window, $log, $translate, $filter) {
    *
    */
   $scope.$on('changedPage', function changedPage(event, pageTitle){
-    vm.htmlTitle = $filter('translate')(pageTitle) + ' - ' + $filter('translate')('SEO_TITLE_APPEND');
+    vm.htmlTitle = $filter('translate')(pageTitle) + ', ' + $filter('translate')('SEO_TITLE_APPEND');
     vm.pageTitle = $filter('translate')(pageTitle);
   });
 
@@ -99,8 +99,8 @@ function rootController($scope, $window, $log, $translate, $filter) {
   /*
    * Hackers gotta hack
    */
-  $log.debug(
-    '███████╗ █████╗ ██████╗ ███████╗██╗████████╗\n'+
+  $log.debug('\n'+
+    ' ███████╗ █████╗ ██████╗ ███████╗██╗████████╗\n'+
     ' ██╔════╝██╔══██╗██╔══██╗██╔════╝██║╚══██╔══╝\n'+
     ' █████╗  ███████║██║  ██║█████╗  ██║   ██║\n'+
     ' ██╔══╝  ██╔══██║██║  ██║██╔══╝  ██║   ██║\n'+
