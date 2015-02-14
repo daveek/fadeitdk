@@ -68,10 +68,6 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "FRONT_SOFTWARE_SECURE_TEXT": "Software security is essentially a catch-up game which is impossible to win.<br/> While new attack vectors are being used every day, it is important to stay on <br/> top of the game. Our software choices are influenced by the vendor’s<br/> perspective on security as well as making sure that the choices we<br/> make today are supported tomorrow.",
     "FRONT_SOFTWARE_OPEN": "Software made open",
     "FRONT_SOFTWARE_OPEN_TEXT": " We think that software should be transparent. Open source solutions are at the<br/> core of our products. We share our knowledge with the community, we progress.",
-    "FRONT_SOFTWARE_POWERFUL": "Software made powerful",
-    "FRONT_SOFTWARE_POWERFUL_TEXT": "No more constraints, the browser can do it all. With the rise of HTML5, the limits of what a browser can do have been scraped.<br/> This has changed how applications are architectured and it's time to embrace the change.",
-    "FRONT_SOFTWARE_MOBILE": "Software made mobile",
-    "FRONT_SOFTWARE_MOBILE_TEXT": "We believe single page applications are changing how we interact with the browser.<br/> Combined with responsive interfaces, we are able to create cross platform software with a single code base.<br/> When just-as-well is not good enough, our solutions can be ported to mobile platforms so they are treated like first class citizens.",
     "FRONT_SOFTWARE_FOR_YOU": "Software made for you.",
     "FRONT_ARE_YOU_A_CLIENT": "We are here to keep you away from the dark. Are you our next great client?",
     "FRONT_BUTTON_CONTACT": "Get in touch",
@@ -257,15 +253,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software development company",
     "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software development company",
     "SEO_PROJECT_ALT": " - project made by fadeit - software development company",
-    "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company",
-    /*"SEO_META_TITLE_EMPTY": "fadeit - web development company",
-    "SEO_META_DESC": "fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
-    "SEO_META_AUTHOR": "fadeit ApS",
-    "SEO_META_KEYWORDS": "fadeit, software, development, design agency, mobile, web, applications, systems, aarhus, denmark",
-    "SEO_OG_SITE_NAME": "fadeit"*/
+    "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company"
   });
-
-  $translateProvider.translations('da-dk', {
+$translateProvider.translations('da-dk', {
     "ID": 'da-dk', //NEEDED for saving language pref.
     "SWITCH": "en-us", //NEEDED for switching the language.
     "IN_LANGUAGE": "in english", //MENU button (switch)
@@ -290,21 +280,17 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * FRONT PAGE
      */
     "FRONT_PAGE_TITLE": "Vi er et team at dedikerede udviklere",
-    "FRONT_TIME_TO_DO": "Hvorfor har udviklere aldrig tid til at gøre det rigtigt,<br/> men altid tid til at gøre det hele om igen!",
-    "FRONT_HERES_WHAT_WE_BELIEVE": "Software kan nemt blive et sort område, hvis ikke det er gjort rigtigt fra starten - vi er sat i verden for at gøre det rigtigt.<br/> Her er lidt fra vores synspunkt.",
-    "FRONT_SOFTWARE_EASY": "Software udviklet rigtigt fra starten",
-    "FRONT_SOFTWARE_EASY_TEXT": "Vores tro er at software bør være tilgængelig og intuitivt at bruge.<br/> Bruger oplevelsen er normalt kernen i vores software.",
-    "FRONT_SOFTWARE_SECURE": "Software med sikkerhed som 1. prioritet",
-    "FRONT_SOFTWARE_SECURE_TEXT": "Software sikkerhed er mest af alt et avanceret spil, der er umuligt at vinde. <br/> Nye spillere kommer på banen hver eneste dag, så det er vigtigt altid at være ét skridt foran <br/> i dette spil. Sikkerheden i de software vi udvikler er påvirket af kundens perspektiv, <br/> men det er vores fornemmeste opgave at sikre at det vi udvikler i dag også er supporteret i morgen. ",
-    "FRONT_SOFTWARE_OPEN": "Software skal være næsten alles",
-    "FRONT_SOFTWARE_OPEN_TEXT": "Vi tror på at software skal være transparent. I kernen af al vores software<br/> finder du Open Source i aller bedste form. Vi deler vores viden og vores kode i den udstrækning det er os muligt.",
-    "FRONT_SOFTWARE_POWERFUL": "Software med masser af power",
-    "FRONT_SOFTWARE_POWERFUL_TEXT": "Ikke flere begrænsninger, den moderne browser kan alt. Med HTML5 forsvandt alle begrænsningerne som tidligere forhindrede os i at udvikle smart software direkte i browseren.<br/> Det har ændres måden hvorpå man kan udvikle software i fremtiden, så det gør vi.",
-    "FRONT_SOFTWARE_MOBILE": "Software skal være mobil",
-    "FRONT_SOFTWARE_MOBILE_TEXT": "Vi mener at single page software ændrer måden hvorpå vi interagerer med vores browser.<br/> Kombineret med responsive design er vi i stand til at bygge software platforme med en enkelt code database.<br/> Når just-as-well ikke er godt nok, kan vores arbejde overføres til mobile platforme - so they are treated like first class citizens.",
-    "FRONT_SOFTWARE_FOR_YOU": "Software lavet til dig.",
-    "FRONT_ARE_YOU_A_CLIENT": "Vi sørger for at holde dig ude at mørket. Måske du er vores næste spændende kunde?",
-    "FRONT_BUTTON_CONTACT": "Kontakt os",
+    "FRONT_TIME_TO_DO": "Hvorfor har udviklere aldrig<br/>tid til at gøre det rigtigt .. <br/>men altid tid til at gøre det<br/>hele om igen!",
+    "FRONT_HERES_WHAT_WE_BELIEVE": "Software og it er for mange et sort område - du ved godt hvad du vil ha' og hvordan det skal virke, men du ved ikke hvordan vi udviklere når målet",
+    "FRONT_SOFTWARE_EASY": "Vi skaber software der skaber værdi",
+    "FRONT_SOFTWARE_EASY_TEXT": "Hjemmesider, portaler, e-shop løsninger, back-end løsninger, it og system <br/>automatisering og system integration er blot nogle af de opgaver vi har <br/>arbejdet med igennem de seneste mange år - Vi har erfaringen og en hånd-<br/>fuld af dygtige udviklere som er med til at skabe software der skaber værdi <br/>for vores kunder.",
+    "FRONT_SOFTWARE_SECURE": "Alting har jo en bagside?",
+    "FRONT_SOFTWARE_SECURE_TEXT": "Det kan være svært for dig som kunde at se hvad der sker bag ved skærmen .. <br/>Hvad nytter det at du kører rundt i verdens smukkeste bil, hvis ikke den kan <br/>bremse? <br/><br/>Som udvikler er det vores job at sikre at visse regler overholdes når vi bygger <br/>software til vores kunder. For at sikre at vi ikke går på kompromis med vores <br/>regelsæt har vi som udgangspunkt altid én udvikler der læser koden igennem <br/>inden den bliver frigivet. <br/><br/>Det er måske også årsagen til at vi ikke er de billigste .. Men det giver dig garanti <br/>for at dit software er stabilt, at sikkerhed ikke er et stort kompromis og at, hvis <br/>det skulle fejle, så kan fejl lokaliseres og fjernes hurtigt og effektivt.",
+    "FRONT_SOFTWARE_OPEN": "Vi tænker anderledes ;)",
+    "FRONT_SOFTWARE_OPEN_TEXT": "Hos fadeit tænker vi anderledes - vi har dygtige udviklere .. de kan udvikle den <br/>dybe tallerken, men ligeså vigtigt har vi de bedste system designere i Danmark - <br/>En system designers primære og mest fornemste job er at hjælpe dig til at se <br/>muligheder, at udvikle dine tanker, at illustrerer hvad der er muligt og naturligvis <br/>at kunne tale med dig over en kop kaffe.",
+    "FRONT_SOFTWARE_FOR_YOU": "Lad os rådgive dig?",
+    "FRONT_ARE_YOU_A_CLIENT": "Værdiskabende rådgivning uden varm luft - Har du store planer du vil have realiseret, planer som du vil have et andet syn på? ",
+    "FRONT_BUTTON_CONTACT": "Spørg løs",
 
     /*
      * ABOUT PAGE
@@ -321,7 +307,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "CONTACT_PAGE_TITLE": "Kontakt",
     "CONTACT_NAME": "fadeit ApS",
     "CONTACT_ADDRESS": "Anelystparken 31 D, 8381 Tilst, Århus, Denmark",
-    "CONTACT_BUSINESS": "For any business related matter",
+    "CONTACT_BUSINESS": "Salg og projektstyring",
     "CONTACT_PHONE": "Telefon:",
     "CONTACT_EMAIL": "E-mail:",
     "CONTACT_DEVS": "Du er altid velkommen til at sige hej til teamet",
@@ -334,14 +320,14 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_PAGE_TITLE": "Det vi gør",
     "EXPERTISE_SUMMARY": "Vi har udviklet en stor vifte af forskellige web og mobil applikationer. Vi designer på tværs af platforme, koncepter og erfaringer. Vi automatiserer systemer og forenkle processer.",
   "EXPERTISE_DRUPAL": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
-  "EXPERTISE_PYTHON": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python og dens Web Stack, hvor vi bygger custom applikationer med Flask micro framework.",
-    "EXPERTISE_ANGULARJS": "Angular JS tillader at man kan udvikle skalerbare, vedligeholdelsesfrie og genbrugelige applikationer. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af applikationen.",
+  "EXPERTISE_PYTHON": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
+    "EXPERTISE_ANGULARJS": "Angular JS tillader at vi kan udvikle skalerbare, vedligeholdelsesfrie og genbrugeligt software. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af dit software så brugerens oplevelse er flydende.",
     "EXPERTISE_IT_AUTO_TITLE": "IT Automatisering",
-    "EXPERTISE_IT_AUTO": "Måske har du hørt legender om at udviklingsvirksomheder hvor nye udviklere kunne udgive deres applikationer på deres første dag? Tjaa, det er absolut ikke et mirakel og det er faktisk muligt at opnå dette også i din virksomhed. Vi arbejder med DevOps og Infrastructure som vores kode mentalitet. Giv os et kald hvis du har brug for en dedikeret kode ninja der kan hjælpe dig med Puppet, Docker eller Vagrant.",
+    "EXPERTISE_IT_AUTO": "Måske har du hørt legender om at udviklingsvirksomheder hvor nye udviklere kunne udgive deres applikationer på deres første dag? Tjaa, det er absolut ikke et mirakel og det er faktisk heller ikke umuligt at opnå. Vi arbejder med DevOps og Infrastructure som vores kode mentalitet. Giv os et kald hvis du har brug for en dedikeret kode ninja der kan hjælpe dig med Puppet, Docker eller Vagrant.",
     "EXPERTISE_XP_DESIGN_TITLE": "Experience Design",
-    "EXPERTISE_XP_DESIGN": "Vores baggrund med experience design vil supplere din innovations indsats og hjælpe dig med at opbygge et bedre produkt. Vi elsker at udvikle koncepter sammen med vores kunder.",
+    "EXPERTISE_XP_DESIGN": "Vores baggrund med experience design vil kunne udvikle dine tanker og hjælper dig til at bygge et langt bedre produkt. Vi elsker at udvikle koncepter sammen med vores kunder.",
     "EXPERTISE_OPEN_DATA_TITLE": "Open Data",
-    "EXPERTISE_OPEN_DATA": "Åbenhed og gennemsigtighed er nøglen til den regering du gerne vil have. Hvis du skal bygge eller udvide en Open Data applikation, står vi til rådighed. Vi har stor expertise i forbindelse med at udvikle større CKAN portaler integreret med bl.a. Drupal infrastruktur.",
+    "EXPERTISE_OPEN_DATA": "Åbenhed og gennemsigtighed er nøglen til den regering du gerne vil have. Hvis du skal bygge eller udvide et Open Data software, står vi til rådighed. Vi har stor expertise i forbindelse med at udvikle større CKAN portaler integreret med bl.a. Drupal infrastruktur.",
     "EXPERTISE_NODEJS": "Javascript afvikles ikke mere i din browser - NodeJS byder derimod på en model som er velegnet til web applikationer med data i real-time. Vi udvikler kommunikations applikationer med socket.io, custom moduler i forbindelse med Internet of Things routing software Node-RED og express.js backends.",
     "EXPERTISE_WEB_CRAWLERS_TITLE": "Web Crawlers",
     "EXPERTISE_WEB_CRAWLERS": "Har du brug for at få offentlig data ind i din database, men kan ikke finde en indgang? Vi bygger custom web spiders så giv os et kald, hvis du har brug for hjælp.",
@@ -394,11 +380,11 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * PROJECT LIST
      */
     //ipvision
-    "PLIST_IPVISION_TITLE": "IPVision",
-    "PLIST_IPVISION_DESC": "Integrating PBXs, Cloud services, mail clients og back-office servers",
+    "PLIST_IPVISION_TITLE": "Ipvision",
+    "PLIST_IPVISION_DESC": "Integration af telefonisystemer, cloud services, mail clients, back-office løsning og selvbetjeningsportal",
     //alexandra inst.
     "PLIST_ALEX_TITLE": "Alexandra Institute",
-    "PLIST_ALEX_DESC": "Udvikling af bro'er med research baseret innovation, powered by Open Data",
+    "PLIST_ALEX_DESC": "Integration med research baseret innovation, powered by Open Data",
     //gatesense
     "PLIST_GATE_TITLE": "Gatesense",
     "PLIST_GATE_DESC": "løslad kreativiteten og udvikling af værdi til samfundet",
@@ -407,7 +393,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * PROJECT DETAILS
      */
     //ipvision
-    "PDET_IPVISION_IMG_H": "Projekt billeder og mere læsning",
+    "PDET_IPVISION_IMG_H": "Projekt billeder og mere information",
     "PDET_IPVISION_SCREEN_1_T": "Forsiden",
     "PDET_IPVISION_SCREEN_1_D": "Forsiden i applikationen viser tydelige brugerens forbrug for den valgte periode.",
     "PDET_IPVISION_SCREEN_2_T": "Forbrugs oversigt",
@@ -419,22 +405,22 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_IPVISION_SCREEN_5_T": "Mobil",
     "PDET_IPVISION_SCREEN_5_D": "Et overblik over mobil delen.",
     "PDET_IPVISION_URL_1_T": "Ipvision hjemmeside",
-    "PDET_IPVISION_URL_1_D": "Hvis du vil vide mere så se mere her ",
+    "PDET_IPVISION_URL_1_D": "Hvis du vil vide mere om ipvision - Gå til  ",
     "PDET_IPVISION_URL_2_T": "Portalen",
-    "PDET_IPVISION_URL_2_D": "Nedenfor kan de se et af de projekter vi har brugget sammen. Dette er prototypen som er tilgængelig her: ",
+    "PDET_IPVISION_URL_2_D": "Nedenfor kan du se billeder fra den selvbetjeningsportal vi byggede for Ipvision - Ydermere kan du tilgå prototypen her: ",
     "PDET_IPVISION_INTRO_T": "Om Ipvision",
-    "PDET_IPVISION_INTRO_D": "Ipvision A/S er Dansk teleoperatør med fokus på B2B markedet. Virksomheden er førende indenfor ip telefoni løsninger til erhvervslivet.",
+    "PDET_IPVISION_INTRO_D": "Ipvision A/S er danmarks fortrukne teleoperatør på B2B markedet. Virksomheden er førende indenfor ip telefoni løsninger til erhvervslivet.",
     "PDET_IPVISION_MAIN_T": "Vores samarbejde",
-    "PDET_IPVISION_P_1": "Hos Ipvision, har vi mulighed for at arbejde med state-of-the-art brugerportaler, backoffice, telefonisystemer, økonomisystemer og automatisering af forskellige arbejdsprocesser.",
+    "PDET_IPVISION_P_1": "I samarbejde med Ipvision's internt udviklingsafdeling, har vi haft mulighed for at arbejde med state-of-the-art brugerportaler, backoffice systemer, telefonisystemer, økonomisystemer og automatisering af forskellige arbejdsprocesser.",
     //alexandra inst.
-    "PDET_ALEX_IMG_H": "Hvor kan du lærer mere",
+    "PDET_ALEX_IMG_H": "Mere om Alexandra?",
     "PDET_ALEX_URL_1_T": "deres hjemmeside",
     "PDET_ALEX_URL_1_D": "For at læse mere om Alexandra, gå til ",
-    "PDET_ALEX_URL_2_T": "her",
+    "PDET_ALEX_URL_2_T": "ved at klikke her",
     "PDET_ALEX_URL_2_D": "Du finder mere information om Smart City Lab ",
     "PDET_ALEX_INTRO_T": "Om Alexandra Institute",
-    "PDET_ALEX_INTRO_D": "Alexandra Institute er en IT research og innovations organisation stiftet i 1999.",
-    "PDET_ALEX_MAIN_T": "Vores samarbejde",
+    "PDET_ALEX_INTRO_D": "Alexandra Institute er en IT research og innovations organisation stiftet tilbage i 1999.",
+    "PDET_ALEX_MAIN_T": "Vores opgave",
     "PDET_ALEX_P_1": "By merging commercial relevance, the latest IT research, technology and user involvement, Alexandra creates IT-based products that generate social value and contribute to economic growth. In other words, they are a bridge-builder between research, private corporations, public institutions and citizens.",
     "PDET_ALEX_P_2": "Vi arbejder sammen med Alexandra's Smart City Lab i forbindelse med udvikling af moderne open data portaler som er baseret på CKAN og Drupal.",
     //gatesense
@@ -464,12 +450,12 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     /*
      * NAV TRANSLATIONS
      */
-    "NAV_STORY": "Vores arbejde",
-    "NAV_EXPERTISE": "Hvad vi laver",
-    "NAV_ABOUT": "Om",
-    "NAV_OUR_WORK": "vores arbejde",
-    "NAV_TEAM": "holdet",
-    "NAV_TOOLBOX": "værktøjskassen",
+    "NAV_STORY": "hjem",
+    "NAV_EXPERTISE": "teknologier",
+    "NAV_ABOUT": "Om fadeit",
+    "NAV_OUR_WORK": "vi kan lidt af hvert",
+    "NAV_TEAM": "menneskerne",
+    "NAV_TOOLBOX": "værktøjskasse",
     "NAV_CONTACT": "kontakt",
     "NAV_A_LINK": "et link",
     "NAV_TO_TOP": "Free ride to the top",
@@ -481,17 +467,13 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * Keep in mind - ALT tags should also describe
      * what the image represents, SEO comes after
      */
-    "SEO_TITLE_APPEND": "fadeit, software development company in Aarhus",
+    "SEO_TITLE_APPEND": "fadeit - software udviklingsvirksomhed",
     "SEO_LOGO_ALT": "the fadeit logo - software udviklingsvirksomhed",
     "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software udviklingsvirksomhed",
     "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software udviklingsvirksomhed",
     "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software udviklingsvirksomhed",
     "SEO_PROJECT_ALT": " - project made by fadeit - software udviklingsvirksomhed",
     "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software udviklingsvirksomhed",
-    /*"SEO_META_TITLE_EMPTY": "fadeit - software udviklingsvirksomhed",
-    "SEO_META_DESC": "fadeit ApS is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
-    "SEO_META_AUTHOR": "fadeit ApS",
-    "SEO_META_KEYWORDS": "fadeit, software, udvikling, design, mobil, web, applikationer, systemer, aarhus, denmark",
-    "SEO_OG_SITE_NAME": "fadeit"*/
+    "SEO_META_TITLE_EMPTY": "fadeit - software udviklingsvirksomhed"
   });
 }
