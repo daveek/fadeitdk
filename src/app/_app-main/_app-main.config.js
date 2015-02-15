@@ -421,7 +421,8 @@ $translateProvider.translations('da-dk', {
     "PDET_ALEX_INTRO_T": "Om Alexandra Institute",
     "PDET_ALEX_INTRO_D": "Alexandra Institute er en IT research og innovations organisation stiftet tilbage i 1999.",
     "PDET_ALEX_MAIN_T": "Vores opgave",
-    "PDET_ALEX_P_1": "By merging commercial relevance, the latest IT research, technology and user involvement, Alexandra creates IT-based products that generate social value and contribute to economic growth. In other words, they are a bridge-builder between research, private corporations, public institutions and citizens.",
+    //TODO: add a danish description for P1
+    "PDET_ALEX_P_1": "",
     "PDET_ALEX_P_2": "Vi arbejder sammen med Alexandra's Smart City Lab i forbindelse med udvikling af moderne open data portaler som er baseret på CKAN og Drupal.",
     //gatesense
     "PDET_GATE_IMG_H": "Læs mere om Gatesense",
@@ -437,7 +438,8 @@ $translateProvider.translations('da-dk', {
      */
     "APPLY_PAGE_TITLE": "Job hos fadeit",
     "APPLY_WELCOME": "Hej, fremmede",
-    "APPLY_TEXT_1": "For det første .. tillykke med at du har løst koden. Vi er glade for at se at du både er nysgerrig og villig til at udforske. Vi leder konstant efter motiverede og målrettede medlemmer til vores team af udviklere.",
+    //TODO: ADD INTRO SENTENCE
+    "APPLY_TEXT_1": "Vi er glade for at se at du både er nysgerrig og villig til at udforske. Vi leder konstant efter motiverede og målrettede medlemmer til vores team af udviklere.",
     "APPLY_HEADING_1": "Hvem leder vi efter?",
     "APPLY_TEXT_2": "Teknologi platforme og måder at udvikle moderne applikationer skifter hele tiden - hvad der i dag betragtes som cutting-edge kan nemt være forældet i morgen. Hos fadeit værdsætter vi evnen at ville lærer.<br/> Du behøver ikke være bekendt med teknologier fra vores {{toolbox}} (Selv om det måske er en kæmpe fordel). Vi leder efter udviklere som er lærernemme og rigtig gerne vil være med der hvor teknologierne opstår - du skal være motiveret til at gøre bedre.",
     "APPLY_HEADING_2": "Hvad kan vi tilbyde?",
