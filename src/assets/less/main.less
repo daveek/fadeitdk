@@ -841,13 +841,17 @@ a{
     width:auto;
   }
 
-
   &:visited, &:focus{
     text-decoration: none;
   }
 
   &:visited{
     color:@g5;
+  }
+
+  &:focus{
+    outline:0;
+    color:@col_fadeit;
   }
 
   &:hover{
@@ -1302,6 +1306,11 @@ a{
       .animate(@animation_time_short, @transition_default);
 
       &:hover{
+        .animate(@animation_time_short, @transition_default);
+        opacity:0.8;
+      }
+
+      &:focus{
         .animate(@animation_time_short, @transition_default);
         opacity:0.8;
       }
@@ -1860,9 +1869,14 @@ a{
       color:@g2;
     }
 
+    &:focus{
+      outline:0;
+    }
+
     @media only screen and (min-width:@bp_md){
       &:focus{
         color:@g6;
+        color:@w;
       }
 
       &:hover{
@@ -2535,8 +2549,15 @@ a{
   width: 40px;
   height: 24px;
   padding:15px 0 15px 0;
+  margin-top: 20px;
   margin-bottom: 20px;
   .inline-block();
+
+  &:focus{
+    outline:0;
+    margin-top: 40px;
+    opacity:0.5;
+  }
 }
 
 @keyframes frontarrow {

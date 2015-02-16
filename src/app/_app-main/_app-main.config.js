@@ -280,14 +280,14 @@ $translateProvider.translations('da-dk', {
      * FRONT PAGE
      */
     "FRONT_PAGE_TITLE": "Vi er et team at dedikerede udviklere",
-    "FRONT_TIME_TO_DO": "Hvorfor har udviklere aldrig<br/>tid til at gøre det rigtigt .. <br/>men altid tid til at gøre det<br/>hele om igen!",
+    "FRONT_TIME_TO_DO": "Hvorfor har udviklere aldrig<br/>tid til at gøre det rigtigt ... <br/>men altid tid til at gøre det<br/>hele om igen!",
     "FRONT_HERES_WHAT_WE_BELIEVE": "Software og it er for mange et sort område - du ved godt hvad du vil ha' og hvordan det skal virke, men du ved ikke hvordan vi udviklere når målet",
     "FRONT_SOFTWARE_EASY": "Vi skaber software der skaber værdi",
     "FRONT_SOFTWARE_EASY_TEXT": "Hjemmesider, portaler, e-shop løsninger, back-end løsninger, it og system <br/>automatisering og system integration er blot nogle af de opgaver vi har <br/>arbejdet med igennem de seneste mange år - Vi har erfaringen og en hånd-<br/>fuld af dygtige udviklere som er med til at skabe software der skaber værdi <br/>for vores kunder.",
     "FRONT_SOFTWARE_SECURE": "Alting har jo en bagside?",
-    "FRONT_SOFTWARE_SECURE_TEXT": "Det kan være svært for dig som kunde at se hvad der sker bag ved skærmen .. <br/>Hvad nytter det at du kører rundt i verdens smukkeste bil, hvis ikke den kan <br/>bremse? <br/><br/>Som udvikler er det vores job at sikre at visse regler overholdes når vi bygger <br/>software til vores kunder. For at sikre at vi ikke går på kompromis med vores <br/>regelsæt har vi som udgangspunkt altid én udvikler der læser koden igennem <br/>inden den bliver frigivet. <br/><br/>Det er måske også årsagen til at vi ikke er de billigste .. Men det giver dig garanti <br/>for at dit software er stabilt, at sikkerhed ikke er et stort kompromis og at, hvis <br/>det skulle fejle, så kan fejl lokaliseres og fjernes hurtigt og effektivt.",
+    "FRONT_SOFTWARE_SECURE_TEXT": "Det kan være svært for dig som kunde at se hvad der sker bag ved skærmen ... <br/>Hvad nytter det at du kører rundt i verdens smukkeste bil, hvis ikke den kan <br/>bremse? <br/><br/>Som udvikler er det vores job at sikre at visse regler overholdes når vi bygger <br/>software til vores kunder. For at sikre at vi ikke går på kompromis med vores <br/>regelsæt har vi som udgangspunkt altid én udvikler der læser koden igennem <br/>inden den bliver frigivet. <br/><br/>Det er måske også årsagen til at vi ikke er de billigste ... Men det giver dig garanti <br/>for at dit software er stabilt, at sikkerhed ikke er et stort kompromis og at, hvis <br/>det skulle fejle, så kan fejl lokaliseres og fjernes hurtigt og effektivt.",
     "FRONT_SOFTWARE_OPEN": "Vi tænker anderledes ;)",
-    "FRONT_SOFTWARE_OPEN_TEXT": "Hos fadeit tænker vi anderledes - vi har dygtige udviklere .. de kan udvikle den <br/>dybe tallerken, men ligeså vigtigt har vi de bedste system designere i Danmark - <br/>En system designers primære og mest fornemste job er at hjælpe dig til at se <br/>muligheder, at udvikle dine tanker, at illustrerer hvad der er muligt og naturligvis <br/>at kunne tale med dig over en kop kaffe.",
+    "FRONT_SOFTWARE_OPEN_TEXT": "Hos fadeit tænker vi anderledes - vi har dygtige udviklere ... de kan udvikle den <br/>dybe tallerken, men ligeså vigtigt har vi de bedste system designere i Danmark - <br/>En system designers primære og mest fornemste job er at hjælpe dig til at se <br/>muligheder, at udvikle dine tanker, at illustrerer hvad der er muligt og naturligvis <br/>at kunne tale med dig over en kop kaffe.",
     "FRONT_SOFTWARE_FOR_YOU": "Lad os rådgive dig?",
     "FRONT_ARE_YOU_A_CLIENT": "Værdiskabende rådgivning uden varm luft - Har du store planer du vil have realiseret, planer som du vil have et andet syn på? ",
     "FRONT_BUTTON_CONTACT": "Spørg løs",
@@ -299,7 +299,7 @@ $translateProvider.translations('da-dk', {
     "ABOUT_SUMMARY": "Vi er en mindre udviklingsvirksomhed i Århus, hvis rejse startede tilbage i 2013 - Siden da har vi brugt vores tid på at bage lækkert software til vores kunder.",
     "ABOUT_OUR_CULTURE": "Kulturen",
     "ABOUT_CULTURE_TEXT_1": "Her, hos fadeit forsøger vi at se et lidt andet perspektiv end de fleste andre udviklingsvirksomheder. Vi vil have vores projekter er fornøjelige og af en meget høj kvalitet, ikke bare for kundens skyld, men ligeså meget for vores egen skyld. Vi vil udvikle os sammen med vores kunder og bygge software der kan skabe glæde for begge parter i lang tid.",
-    "ABOUT_CULTURE_TEXT_2": "Vi vil også gerne have ligeså meget sjov som vi er alvorlige - En af vores grundværdier er at have det sjovt på arbejdspladsen og det er uanset hvad sjov betyder for den enkelte medarbejder - det kan være 24 timers lemans på kontorstolen, at skrive en lækker code, at drikke en shaker til fyraften .. eller alle tre ting på én gang.",
+    "ABOUT_CULTURE_TEXT_2": "Vi vil også gerne have ligeså meget sjov som vi er alvorlige - En af vores grundværdier er at have det sjovt på arbejdspladsen og det er uanset hvad sjov betyder for den enkelte medarbejder - det kan være 24 timers lemans på kontorstolen, at skrive en lækker code, at drikke en shaker til fyraften ... eller alle tre ting på én gang.",
 
     /*
      * CONTACT PAGE
@@ -366,7 +366,7 @@ $translateProvider.translations('da-dk', {
     //New guy
     "TEAM_NEW_POSITION": "Imponerende person",
     "TEAM_NEW_NAME": "J. Brugforetjob",
-    "TEAM_NEW_DESC": "Elsker at surfe på kanten af bølgerne af teknologi og er altid motiveret til at lære nyt og opnå resultater. Hvis det er sådan du har det .. ?<br/> Så søg ind til os ",
+    "TEAM_NEW_DESC": "Elsker at surfe på kanten af bølgerne af teknologi og er altid motiveret til at lære nyt og opnå resultater. Hvis det er sådan du har det ... ?<br/> Så søg ind til os ",
     "TEAM_NEW_LINK_TITLE": "her",
 
     /*
