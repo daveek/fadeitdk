@@ -33,7 +33,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
    */
   var retrievedLang = localStorage.getItem('langStore');
 
-  if(retrievedLang){
+  if(retrievedLang && JSON.parse(retrievedLang) && JSON.parse(retrievedLang).lang){
     $translateProvider.preferredLanguage(JSON.parse(retrievedLang).lang);
   } else {
     $translateProvider.preferredLanguage('da-dk');

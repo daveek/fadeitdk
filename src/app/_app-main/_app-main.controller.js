@@ -54,12 +54,12 @@ function rootController($scope, $window, $log, $translate, $filter, $state) {
      * if the user navigates to one of the language-setting pages
      */
     if(toState.name === 'da-dk'){
-      vm.changeLanguage('da-dk');
+      vm.changeLanguage('da-dk', 'da-dk');
       $state.go('home');
     }
 
     if(toState.name === 'en-us'){
-      vm.changeLanguage('en-us');
+      vm.changeLanguage('en-us', 'en-us');
       $state.go('home');
     }
 
