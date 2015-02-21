@@ -1,7 +1,7 @@
 angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
 
-rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter'];
-function rootController($scope, $window, $log, $translate, $filter) {
+rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state'];
+function rootController($scope, $window, $log, $translate, $filter, $state) {
   var vm = this,
       wow;
   vm.pageTitle = 'fadeit';
@@ -48,6 +48,19 @@ function rootController($scope, $window, $log, $translate, $filter) {
       vm.toolboxPage = true;
     } else {
       vm.toolboxPage = false;
+    }
+
+    /*
+     * if the user navigates to one of the language-setting pages
+     */
+    if(toState.name === 'da-dk'){
+      vm.changeLanguage('da-dk');
+      $state.go('home');
+    }
+
+    if(toState.name === 'en-us'){
+      vm.changeLanguage('en-us');
+      $state.go('home');
     }
 
     angular.element('html,body').animate({scrollTop: 0}, 1);

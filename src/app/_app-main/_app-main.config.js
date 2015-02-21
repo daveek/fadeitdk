@@ -15,6 +15,14 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     data:{
       pageTitle: '404_PAGE_TITLE'
     }
+  })
+  //if more languages will be added, it would make sense to add a separate controller
+   .state('en-us', {
+    url: '/en-us',
+    controller: 'RootController'
+  }).state('da-dk', {
+    url: '/da-dk',
+    controller: 'RootController'
   });
 
   $locationProvider.hashPrefix('!');
@@ -256,7 +264,8 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "SEO_PROJECT_ALT": " - project made by fadeit - software development company",
     "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company"
   });
-$translateProvider.translations('da-dk', {
+
+  $translateProvider.translations('da-dk', {
     "ID": 'da-dk', //NEEDED for saving language pref.
     "SWITCH": "en-us", //NEEDED for switching the language.
     "IN_LANGUAGE": "in english", //MENU button (switch)
@@ -320,9 +329,9 @@ $translateProvider.translations('da-dk', {
      */
     "EXPERTISE_PAGE_TITLE": "Det vi gør",
     "EXPERTISE_SUMMARY": "Vi har udviklet en stor vifte af forskellige web og mobil applikationer. Vi designer på tværs af platforme, koncepter og erfaringer. Vi automatiserer systemer og forenkle processer.",
-  "EXPERTISE_DRUPAL": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
-  "EXPERTISE_PYTHON": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
-    "EXPERTISE_ANGULARJS": "Angular JS tillader at vi kan udvikle skalerbare, vedligeholdelsesfrie og genbrugeligt software. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af dit software så brugerens oplevelse er flydende.",
+    "EXPERTISE_DRUPAL": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
+    "EXPERTISE_PYTHON": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
+      "EXPERTISE_ANGULARJS": "Angular JS tillader at vi kan udvikle skalerbare, vedligeholdelsesfrie og genbrugeligt software. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af dit software så brugerens oplevelse er flydende.",
     "EXPERTISE_IT_AUTO_TITLE": "IT Automatisering",
     "EXPERTISE_IT_AUTO": "Måske har du hørt legender om at udviklingsvirksomheder hvor nye udviklere kunne udgive deres applikationer på deres første dag? Tjaa, det er absolut ikke et mirakel og det er faktisk heller ikke umuligt at opnå. Vi arbejder med DevOps og Infrastructure som vores kode mentalitet. Giv os et kald hvis du har brug for en dedikeret kode ninja der kan hjælpe dig med Puppet, Docker eller Vagrant.",
     "EXPERTISE_XP_DESIGN_TITLE": "Experience Design",
