@@ -164,7 +164,8 @@
       },
       "mainHeading": "PDET_GATE_MAIN_T",
       "paragraphs": {
-        "0": "PDET_GATE_P_1"
+        "0": "PDET_GATE_P_1",
+        "1": "PDET_GATE_P_2"
       }
     }
   }

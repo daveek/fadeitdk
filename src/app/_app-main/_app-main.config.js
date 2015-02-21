@@ -211,6 +211,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_GATE_INTRO_D": "Gatesense is a modern Internet of Things platform. Its primary purpose is to build a community and a set of concrete tools for solving today's environment problems.",
     "PDET_GATE_MAIN_T": "Our collaboration",
     "PDET_GATE_P_1": "We play a major role in research and technical development of the platform. The effort is lead by Grundfos and Alexandra Institute.",
+    "PDET_GATE_P_2": "Some of the more tasks we contributed to were: development of gatesense.com website, setting up automated infrastructure, CoAP protocol integration into Node-RED IoT tool and Internet of Things research work.",
 
     /*
      * APPLY & THANK YOU PAGE
@@ -422,7 +423,7 @@ $translateProvider.translations('da-dk', {
     "PDET_ALEX_INTRO_D": "Alexandra Institute er en IT research og innovations organisation stiftet tilbage i 1999.",
     "PDET_ALEX_MAIN_T": "Vores opgave",
     //TODO: add a danish description for P1
-    "PDET_ALEX_P_1": "",
+    "PDET_ALEX_P_1": "Alexandra Instituttet hjælper offentlige og private virksomheder med at anvende den nyeste forskning og teknologi inden for it. De skaber værdi gennem nye innovative it-baserede produkter og services.",
     "PDET_ALEX_P_2": "Vi arbejder sammen med Alexandra's Smart City Lab i forbindelse med udvikling af moderne open data portaler som er baseret på CKAN og Drupal.",
     //gatesense
     "PDET_GATE_IMG_H": "Læs mere om Gatesense",
@@ -432,6 +433,7 @@ $translateProvider.translations('da-dk', {
     "PDET_GATE_INTRO_D": "Gatesense er en moderniseret version af Internet of Things platformen. Dets primære formål er at bygge et community og et sæt værktøjer der skal være medvirkende til at løse dagligdagens miljø problemer.",
     "PDET_GATE_MAIN_T": "Vores samarbejde",
     "PDET_GATE_P_1": "Vi spiller en stor rolle i forbindelse med research og udvikling af platformen. Projektet bliver drevet og funded af Grundfos og Alexandra Institute.",
+    "PDET_GATE_P_2": "",
 
     /*
      * APPLY & THANK YOU PAGE
