@@ -25,6 +25,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     controller: 'RootController'
   });
 
+  $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
@@ -101,6 +102,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "CONTACT_DEVS": "Always feel free to say hi to our team",
     "CONTACT_CHAT_WITH_US": "We'd love to chat with you",
     "CONTACT_FOLLOW_US": "Follow us on social media for more updates and tech-related news.",
+    "CONTACT_FULL": "fadeit ApS - 81100200, Anelystparken 31 D, 8381 Tilst, Århus, Denmark.",
 
     /*
      * EXPERTISE PAGE
@@ -262,6 +264,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software development company",
     "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software development company",
     "SEO_PROJECT_ALT": " - project made by fadeit - software development company",
+    "SEO_META_DESC": "fadeit is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
     "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company"
   });
 
@@ -323,6 +326,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "CONTACT_DEVS": "Du er altid velkommen til at sige hej til teamet",
     "CONTACT_CHAT_WITH_US": "Vi tager gerne en uforpligtende snak",
     "CONTACT_FOLLOW_US": "Følg os på de sociale medier.",
+    "CONTACT_FULL": "fadeit ApS - 81100200, Anelystparken 31 D, 8381 Tilst, Århus, Denmark.",
 
     /*
      * EXPERTISE PAGE
@@ -486,6 +490,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software udviklingsvirksomhed",
     "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software udviklingsvirksomhed",
     "SEO_PROJECT_ALT": " - project made by fadeit - software udviklingsvirksomhed",
+    "SEO_META_DESC": "fadeit is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
     "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software udviklingsvirksomhed",
     "SEO_META_TITLE_EMPTY": "fadeit - software udviklingsvirksomhed"
   });

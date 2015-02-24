@@ -12,10 +12,13 @@ function projectsController($scope, $stateParams, ProjectsService, $state) {
 
   ProjectsService.singleProject(vm.requestUrl)
     .then(function singleProjectResponse(response){
-      var pageTitle;
+      var pageTitle, pageDesc;
 
       vm.project = response;
       pageTitle = !response.error ? vm.project.title : 'Sorry, this project does not exist';
+      pageDesc = !response.error ? vm.project.content.shortDescription : 'Sorry, this project does not exist';
+
       $scope.$emit('changedPage', pageTitle);
+      $scope.$emit('changedDesc', pageDesc);
   });
 }

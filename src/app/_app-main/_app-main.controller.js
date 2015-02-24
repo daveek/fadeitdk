@@ -6,8 +6,10 @@ function rootController($scope, $window, $log, $translate, $filter, $state) {
       wow;
   vm.pageTitle = 'fadeit';
   vm.htmlTitle = $filter('translate')('SEO_TITLE_APPEND');
+  vm.pageDesc = $filter('translate')('SEO_META_DESC');
   vm.darkMode = false;
   vm.toolboxPage = false;
+
   /*
    * Event callback on every route change
    * Scrolls the page to the top as 'normally' changing a page
@@ -18,18 +20,29 @@ function rootController($scope, $window, $log, $translate, $filter, $state) {
   $scope.$on('$stateChangeSuccess', function rootStateChangeSuccess(event, toState){
     wow.init();
     /*
-     * updates the <title> tag if the new route has a pageTitle set
+     * updates the <title> and meta description tag if the new route has a pageTitle/pageDesc set
      * (vm.htmlTitle is binded to the title tag)
      *
-     * The title is also translated
+     * The title/desc is also translated.
      */
-    if(angular.isDefined(toState.data) && angular.isDefined(toState.data.pageTitle)){
-      $scope.$watch(function(){
-        return $filter('translate')(toState.data.pageTitle);
-      }, function(newValue){
-        vm.pageTitle = newValue;
-        vm.htmlTitle = newValue + ', ' + $filter('translate')('SEO_TITLE_APPEND');
-      });
+    if(angular.isDefined(toState.data)){
+      if(angular.isDefined(toState.data.pageTitle)){
+        $scope.$watch(function(){
+          return $filter('translate')(toState.data.pageTitle);
+        }, function(newValue){
+          var translatedValue = $filter('translate')(newValue);
+          vm.pageTitle = translatedValue;
+          vm.htmlTitle = translatedValue + ', ' + $filter('translate')('SEO_TITLE_APPEND');
+        });
+      }
+
+      if(angular.isDefined(toState.data.pageDesc)){
+        $scope.$watch(function(){
+          return $filter('translate')(toState.data.pageDesc);
+        }, function(newValue){
+          vm.pageDesc = newValue;
+        });
+      }
     }
 
     /*
@@ -67,8 +80,8 @@ function rootController($scope, $window, $log, $translate, $filter, $state) {
   });
 
   /*
-   * Listens to controllers that emit title changes
-   * Used for custom titles (not from state provider),
+   * Listens to controllers that emit title/desc changes
+   * Used for custom titles/descs (not from state provider),
    * when the route has a dynamic parameter.
    *
    * With this we can set the titles of 'wildcard' paths.
@@ -76,8 +89,13 @@ function rootController($scope, $window, $log, $translate, $filter, $state) {
    *
    */
   $scope.$on('changedPage', function changedPage(event, pageTitle){
-    vm.htmlTitle = $filter('translate')(pageTitle) + ', ' + $filter('translate')('SEO_TITLE_APPEND');
-    vm.pageTitle = $filter('translate')(pageTitle);
+    var translatedValue = $filter('translate')(pageTitle);
+    vm.htmlTitle = translatedValue + ', ' + $filter('translate')('SEO_TITLE_APPEND');
+    vm.pageTitle = translatedValue;
+  });
+
+  $scope.$on('changedDesc', function changedPage(event, pageDesc){
+    vm.pageDesc = $filter('translate')(pageDesc);
   });
 
   /*

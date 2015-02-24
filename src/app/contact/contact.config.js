@@ -8,7 +8,8 @@ function contactConfig($stateProvider){
     url: '/contact',
     templateUrl: 'views/contact-page.html',
     data:{
-      pageTitle: 'CONTACT_PAGE_TITLE'
+      pageTitle: 'CONTACT_PAGE_TITLE',
+      pageDesc: 'CONTACT_FULL'
     }
   });
 }

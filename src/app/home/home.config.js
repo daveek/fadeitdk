@@ -8,7 +8,8 @@ function homeConfig($stateProvider){
     url: '/',
     templateUrl: 'views/home-page.html',
     data:{
-      pageTitle: 'FRONT_PAGE_TITLE'
+      pageTitle: 'FRONT_PAGE_TITLE',
+      pageDesc: 'SEO_META_DESC'
     }
   });
 }

@@ -10,7 +10,8 @@ function toolboxConfig($stateProvider){
     controllerAs: 'vm',
     templateUrl: 'views/toolbox-page.html',
     data:{
-      pageTitle: 'TOOLBOX_PAGE_TITLE'
+      pageTitle: 'TOOLBOX_PAGE_TITLE',
+      pageDesc: 'A software toolbox experiment'
     }
   });
 }
