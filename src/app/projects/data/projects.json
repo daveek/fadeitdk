@@ -23,30 +23,30 @@
       "heading": "PDET_IPVISION_IMG_H",
       "cover": "cover_sm@2x.jpg",
       "screens": {
-      "0": {
-        "filename": "0.png",
-        "title": "PDET_IPVISION_SCREEN_1_T",
-        "desc": "PDET_IPVISION_SCREEN_1_D"
-      },
-      "1": {
-        "filename": "1.png",
-        "title": "PDET_IPVISION_SCREEN_2_T",
-        "desc": "PDET_IPVISION_SCREEN_2_D"
-      },
-      "2": {
-        "filename": "2.png",
-        "title": "PDET_IPVISION_SCREEN_3_T",
-        "desc": "PDET_IPVISION_SCREEN_3_D"
-      },
-      "3": {
-        "filename": "3.png",
-        "title": "PDET_IPVISION_SCREEN_4_T",
-        "desc": "PDET_IPVISION_SCREEN_4_D"
-      },
-      "4": {
-        "filename": "4.png",
-        "title": "PDET_IPVISION_SCREEN_5_T",
-        "desc": "PDET_IPVISION_SCREEN_5_D"
+        "0": {
+          "filename": "0.png",
+          "title": "PDET_IPVISION_SCREEN_1_T",
+          "desc": "PDET_IPVISION_SCREEN_1_D"
+        },
+        "1": {
+          "filename": "1.png",
+          "title": "PDET_IPVISION_SCREEN_2_T",
+          "desc": "PDET_IPVISION_SCREEN_2_D"
+        },
+        "2": {
+          "filename": "2.png",
+          "title": "PDET_IPVISION_SCREEN_3_T",
+          "desc": "PDET_IPVISION_SCREEN_3_D"
+        },
+        "3": {
+          "filename": "3.png",
+          "title": "PDET_IPVISION_SCREEN_4_T",
+          "desc": "PDET_IPVISION_SCREEN_4_D"
+        },
+        "4": {
+          "filename": "4.png",
+          "title": "PDET_IPVISION_SCREEN_5_T",
+          "desc": "PDET_IPVISION_SCREEN_5_D"
         }
       }
     },
@@ -166,6 +166,86 @@
       "paragraphs": {
         "0": "PDET_GATE_P_1",
         "1": "PDET_GATE_P_2"
+      }
+    }
+  },
+  {
+    "id": "hopper",
+    "color": {
+      "links": "#6FC490",
+      "base": "#00552D",
+      "accent": "#003d21",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#42B673"
+    },
+    "title": "PLIST_OLS_TITLE",
+    "shortDescription": "PLIST_OLS_DESC",
+    "link": "story/hopper",
+    "uiRoute": "/story/hopper",
+    "tags": {
+      "0": "Python",
+      "1": "Flask",
+      "2": "AngularJS",
+      "3": "IT Automation",
+      "4": "Puppet",
+      "5": "ElasticSearch"
+    },
+    "images": {
+      "heading": "PDET_OLS_IMG_H",
+      "cover": "cover_sm@2x.jpg",
+      "screens": {
+        "0": {
+          "filename": "0.png",
+          "title": "PDET_OLS_SCREEN_1_T",
+          "desc": "PDET_OLS_SCREEN_1_D"
+        },
+        "1": {
+          "filename": "1.png",
+          "title": "PDET_OLS_SCREEN_2_T",
+          "desc": "PDET_OLS_SCREEN_2_D"
+        },
+        "2": {
+          "filename": "2.png",
+          "title": "PDET_OLS_SCREEN_3_T",
+          "desc": "PDET_OLS_SCREEN_3_D"
+        },
+        "3": {
+          "filename": "3.png",
+          "title": "PDET_OLS_SCREEN_4_T",
+          "desc": "PDET_OLS_SCREEN_4_D"
+        },
+        "4": {
+          "filename": "4.png",
+          "title": "PDET_OLS_SCREEN_5_T",
+          "desc": "PDET_OLS_SCREEN_5_D"
+        }
+      }
+    },
+    "urls": {
+      "0": {
+        "title": "PDET_OLS_URL_1_T",
+        "link": "https://hopper.dk/",
+        "text": "PDET_OLS_URL_1_D"
+      },
+      "1": {
+        "title": "here",
+        "link": "http://fadeit.dk/!projects/ols/",
+        "text": "A few design mock-ups are presented below. The design is constantly evolving, therefore they might be different from the prototype. The design manual is also available "
+      }
+    },
+    "content": {
+      "shortDescription": "PLIST_OLS_DESC",
+      "intro": {
+        "heading": "PDET_OLS_INTRO_T",
+        "text": "PDET_OLS_INTRO_D"
+      },
+      "mainHeading": "PDET_OLS_MAIN_T",
+      "paragraphs": {
+        "0": "PDET_OLS_P_1",
+        "1": "PDET_OLS_P_2"
       }
     }
   }

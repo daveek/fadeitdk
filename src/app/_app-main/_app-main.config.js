@@ -25,7 +25,8 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     controller: 'RootController'
   });
 
-  $locationProvider.html5Mode(true);
+  //TURN ON FOR PROD
+  //$locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
@@ -178,6 +179,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     //gatesense
     "PLIST_GATE_TITLE": "Gatesense",
     "PLIST_GATE_DESC": "Unleashing creativity and creating significant value for society",
+    //ols
+    "PLIST_OLS_TITLE": "Hopper",
+    "PLIST_OLS_DESC": "Hopper helps people find, book and communicate with business providers close to their location.",
 
     /*
      * PROJECT DETAILS
@@ -222,6 +226,27 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_GATE_MAIN_T": "Our collaboration",
     "PDET_GATE_P_1": "We play a major role in research and technical development of the platform. The effort is lead by Grundfos and Alexandra Institute.",
     "PDET_GATE_P_2": "Some of the more tasks we contributed to were: development of gatesense.com website, setting up automated infrastructure, CoAP protocol integration into Node-RED IoT tool and Internet of Things research work.",
+    //ols
+    "PDET_OLS_IMG_H": "Links and design mock-ups",
+    "PDET_OLS_SCREEN_1_T": "Front page",
+    "PDET_OLS_SCREEN_1_D": "The front page focuses on the location-based search.",
+    "PDET_OLS_SCREEN_2_T": "Search results",
+    "PDET_OLS_SCREEN_2_D": "On the right hand side a list of the closest providers matching the search will be displayed.",
+    "PDET_OLS_SCREEN_3_T": "Detailed result",
+    "PDET_OLS_SCREEN_3_D": "Selecting a result will display concise information about the provider.",
+    "PDET_OLS_SCREEN_4_T": "Provider profile (services)",
+    "PDET_OLS_SCREEN_4_D": "Local service providers can display their services on the company profile page.",
+    "PDET_OLS_SCREEN_5_T": "Provider projects",
+    "PDET_OLS_SCREEN_5_D": "In addition to services, providers can showcase their previous work.",
+    "PDET_OLS_URL_1_T": "hopper.dk",
+    "PDET_OLS_URL_1_D": "The prototype is available at ",
+    "PDET_OLS_URL_2_T": "here",
+    "PDET_OLS_URL_2_D": "A few design mock-ups are presented below. The design is constantly evolving, therefore they might be different from the prototype. The design manual is also available ",
+    "PDET_OLS_INTRO_T": "About Hopper",
+    "PDET_OLS_INTRO_D": "Hopper is a fadeit in-house project started in 2013. The purpose of this project is to offer a powerful location-based search and a messaging/booking system.",
+    "PDET_OLS_MAIN_T": "What we have been doing so far",
+    "PDET_OLS_P_1": "We are still in the early stages of the project, with only core features implemented. However, we have automated the deployment process and have been building a design manual in parallel. For the past months we were able to make visible progress and launch our first prototype.",
+    "PDET_OLS_P_2": "Our plans for Hopper include integrating it with accounting systems and introducing mobile applications to manage bookings easier.",
 
     /*
      * APPLY & THANK YOU PAGE
@@ -402,6 +427,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     //gatesense
     "PLIST_GATE_TITLE": "Gatesense",
     "PLIST_GATE_DESC": "løslad kreativiteten og udvikling af værdi til samfundet",
+    //ols
+    "PLIST_OLS_TITLE": "Hopper",
+    "PLIST_OLS_DESC": "Hopper helps people find, book and communicate with business providers close to their location.",
 
     /*
      * PROJECT DETAILS
@@ -447,6 +475,27 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_GATE_MAIN_T": "Vores samarbejde",
     "PDET_GATE_P_1": "Vi spiller en stor rolle i forbindelse med research og udvikling af platformen. Projektet bliver drevet og funded af Grundfos og Alexandra Institute.",
     "PDET_GATE_P_2": "",
+        //ols
+    "PDET_OLS_IMG_H": "Links and design mock-ups",
+    "PDET_OLS_SCREEN_1_T": "Front page",
+    "PDET_OLS_SCREEN_1_D": "The front page focuses on the location-based search.",
+    "PDET_OLS_SCREEN_2_T": "Search results",
+    "PDET_OLS_SCREEN_2_D": "On the right hand side a list of the closest providers matching the search will be displayed.",
+    "PDET_OLS_SCREEN_3_T": "Detailed result",
+    "PDET_OLS_SCREEN_3_D": "Selecting a result will display concise information about the provider.",
+    "PDET_OLS_SCREEN_4_T": "Provider profile (services)",
+    "PDET_OLS_SCREEN_4_D": "Local service providers can display their services on the company profile page.",
+    "PDET_OLS_SCREEN_5_T": "Provider projects",
+    "PDET_OLS_SCREEN_5_D": "In addition to services, providers can showcase their previous work.",
+    "PDET_OLS_URL_1_T": "hopper.dk",
+    "PDET_OLS_URL_1_D": "The prototype is available at ",
+    "PDET_OLS_URL_2_T": "here",
+    "PDET_OLS_URL_2_D": "A few design mock-ups are presented below. The design is constantly evolving, therefore they might be different from the prototype. The design manual is also available ",
+    "PDET_OLS_INTRO_T": "About Hopper",
+    "PDET_OLS_INTRO_D": "Hopper is a fadeit in-house project started in 2013. The purpose of this project is to offer a powerful location-based search and a messaging/booking system.",
+    "PDET_OLS_MAIN_T": "What we have been doing so far",
+    "PDET_OLS_P_1": "We are still in the early stages of the project, with only core features implemented. However, we have automated the deployment process and have been building a design manual in parallel. For the past months we were able to make visible progress and launch our first prototype.",
+    "PDET_OLS_P_2": "Our plans for Hopper include integrating it with accounting systems and introducing mobile applications to manage bookings easier.",
 
     /*
      * APPLY & THANK YOU PAGE
