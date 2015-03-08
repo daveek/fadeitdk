@@ -168,6 +168,15 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PSINGLE_NOT_FOUND_PENG_TEXT": "We'll do our best to prevent this from happening again.<br/> If you are really mad at us, go ahead and send an angry email.<br/><br/> We care about your nervous breakdown, so here is {{contact}} where you can rant.",
 
     /*
+     * BLOG PAGE
+     */
+    "BLOG_PAGE_TITLE": "The fadeit blog",
+    "BLOG_SUMMARY": "Our blog is a great place to find tech-related articles and tutorials to kick-start your next project. We love to share our knowledge and help others learn from our experience. We're currently writing in English to reach a wider audience.",
+    "BLOG_LIST_ERROR": "There was a problem loading the blog posts. Please check back later",
+    "BLOG_READ_MORE": "Read this",
+    "BLOG_POST_ERROR": "We couldn't load this blog post at this time, please try again in a short while.",
+
+    /*
      * PROJECT LIST
      */
     //ipvision
@@ -414,6 +423,15 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PSINGLE_NOT_FOUND": "Projekt beskrivelsen for <u>{{url}}</u> er endnu ikke færdig. Han lovede os et eksempel, og vi blev ikke skuffet: ",
     "PSINGLE_NOT_FOUND_PENGUIN": "Her er en pingvin der kan muntre dig lidt op. <br/>(Siden blev ikke fundet!)",
     "PSINGLE_NOT_FOUND_PENG_TEXT": "Vi gør vores bedste for at dette ikke kommer til at ske igen.<br/> Hvis du er blevet rigtig vred på os så send os gerne en vred e-mail.<br/><br/> Vi bekymrer os om vores kunder, så klik her {{contact}} og kom med dine vrede.",
+
+    /*
+     * BLOG PAGE
+     */
+    "BLOG_PAGE_TITLE": "The fadeit blog",
+    "BLOG_SUMMARY": "Our blog is a great place to find tech-related articles and tutorials to kick-start your next project. We love to share our knowledge and help others learn from our experience. We're currently writing in English to reach a wider audience.",
+    "BLOG_LIST_ERROR": "There was a problem loading the blog posts. Please check back later",
+    "BLOG_READ_MORE": "Read this",
+    "BLOG_POST_ERROR": "We couldn't load this blog post at this time, please try again in a short while.",
 
     /*
      * PROJECT LIST

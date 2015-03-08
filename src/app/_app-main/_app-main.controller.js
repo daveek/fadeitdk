@@ -64,6 +64,15 @@ function rootController($scope, $window, $log, $translate, $filter, $state) {
     }
 
     /*
+     * blog state add a class to 'nav-container'
+     */
+    if(toState.name === 'blog-posts'){
+      vm.blogMode = true;
+    } else {
+      vm.blogMode = false;
+    }
+
+    /*
      * if the user navigates to one of the language-setting pages
      */
     if(toState.name === 'da-dk'){

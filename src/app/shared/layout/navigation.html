@@ -1,8 +1,8 @@
-<section class="nav-container" ng-class="{'dark-mode': root.darkMode}">
+<section class="nav-container" ng-class="{'dark-mode': root.darkMode, 'blog-mode': root.blogMode}">
   <nav class="main-menu">
     <section class="transparent-whitebar" scroll-opacity max-opacity="{{root.darkMode ? 0.5 : 0.8}}" slow-down="{{root.darkMode ? 2 : 0.2}}" rgb="{{root.darkMode ? '0, 0, 0' : '255, 255, 255'}}">
       <section class="secondary-page-title">
-        <h2 class="page-title" translate>{{root.pageTitle}}</h2>
+        <h1 class="page-title" translate>{{root.pageTitle}}</h1>
       </section>
     </section>
 
@@ -23,11 +23,6 @@
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor" translate>
-          NAV_ABOUT
-        </a>
-      </li>
-      <li class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="team" class="menu-anchor main-menu-anchor" translate>
           NAV_TEAM
         </a>
@@ -35,6 +30,16 @@
       <li class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="contact" class="menu-anchor main-menu-anchor" translate>
           NAV_CONTACT
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="blog" class="menu-anchor main-menu-anchor" translate>
+          Blog
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor" translate>
+          NAV_ABOUT
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">

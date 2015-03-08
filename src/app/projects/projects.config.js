@@ -10,7 +10,8 @@ function projectsConfig($stateProvider){
     controllerAs: 'vm',
     templateUrl: 'views/projects-page.html',
     data:{
-      pageTitle: 'Our projects'
+      pageTitle: 'Our projects',
+      pageDesc: 'A fadeit project'
     }
   });
 }

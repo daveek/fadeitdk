@@ -10,6 +10,7 @@ function projectsController($scope, $stateParams, ProjectsService, $state) {
     $state.go('projects', {projectId: 'wrong-project-page'});
   }
 
+  //TODO: promise rejects are not handled
   ProjectsService.singleProject(vm.requestUrl)
     .then(function singleProjectResponse(response){
       var pageTitle, pageDesc;

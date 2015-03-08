@@ -4,7 +4,8 @@ ourWorkController.$inject = ['ProjectsService'];
 function ourWorkController(ProjectsService){
   var vm = this;
 
-  ProjectsService.projectIndex().then(function singleProjectResponse(response){
+  //TODO: promise rejects are not handled
+  ProjectsService.projectIndex().then(function projectListResponse(response){
     vm.projects = response;
   });
 }

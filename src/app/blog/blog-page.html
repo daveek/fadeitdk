@@ -1,0 +1,84 @@
+<!--Post: {{vm.post}}
+
+<p class="post-author">
+  <span ng-bind="post.author.name" class="author-name"></span>
+  <span ng-bind="post.author.job_title" class="author-title"></span>
+  <span class="author-image">
+    <img ng-src="{{post.author.photo}}" alt="{{post.author.name}} - {{post.author.job_title}} at fadeit"/>
+  </span>
+</p>
+-->
+
+<section class="container-fluid main-container secondary-page-container">
+  <section class="row-fluid secondary-page-row services-fluid">
+    <section class="row-fluid outstanding-container" ng-if="!vm.post">
+      <h3 class="col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6 blog-error">
+        <span translate>BLOG_POST_ERROR</span> <i class="fa fa-chain-broken"></i>
+      </h3>
+    </section>
+
+    <section class="row-fluid outstanding-container blog-outstanding" style="background-image: url(src/assets/img/blog/{{vm.post.id}}/{{vm.post.cover}});" ng-if="vm.post">
+      <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">
+        <section class="row-fluid single-post blog-row">
+          <section class="col-xs-14 post-description">
+            <h2 ng-bind="vm.post.title"></h2>
+            <p class="post-date">{{vm.post.date | date: 'd MMMM yyyy, H:m'}}</p>
+            <p class="post-intro" ng-bind="vm.post.intro"></p>
+          </section>
+        </section>
+
+        <section class="read-post">
+          <a du-smooth-scroll href="#post"><i class="fa fa-angle-down"></i></a>
+        </section>
+      </section>
+    </section>
+
+    <section class="default-inner-container" id="post">
+      <section class="row-fluid" ng-if="vm.post">
+        <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6 post-heading">
+          <p class="post-author">
+            <span ng-bind="vm.post.author.name" class="author-name"></span>
+            <span ng-bind="vm.post.author.job_title" class="author-title"></span>
+            <span class="author-image">
+              <img ng-src="{{vm.post.author.photo}}" alt="{{vm.post.author.name}} - {{vm.post.author.job_title}} at fadeit"/>
+            </span>
+          </p>
+        </section><!--end col-*-->
+
+        <section class="post-content clearfix" ng-repeat="content in vm.post.content" ng-switch on="content.type">
+          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6 blog-type-p" ng-switch-when="p">
+            <p ng-bind-html="content.text"></p>
+          </section>
+
+          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6 blog-type-h" ng-switch-when="h">
+            <section ng-switch on="content.number">
+              <h2 ng-bind-html="content.text" ng-switch-when="2"></h2>
+              <h3 ng-bind-html="content.text" ng-switch-when="3"></h3>
+              <h4 ng-bind-html="content.text" ng-switch-when="4"></h4>
+              <h5 ng-bind-html="content.text" ng-switch-when="5"></h5>
+              <h6 ng-bind-html="content.text" ng-switch-when="6"></h6>
+              <h2 ng-bind-html="content.text" ng-switch-default></h2>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section class="default-inner-container">
+        <section id="disqus_thread" class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6"></section>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'fadeit';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </section>
+    </section><!-- end default-inner-container-->
+
+  </section>
+</section>
