@@ -1,17 +1,5 @@
 [
   {
-    "id": "fadeit-launch-songs",
-    "title": "Presenting the great fadeit 'launch songs'",
-    "intro": "Every finished project comes with a song at fadeit. See on which songs we've been doing 'the dance of happiness' after a successful launch.",
-    "cover": "cover.jpg",
-    "date": "2015-03-07T21:28:14.465Z",
-    "author": {
-      "name": "Dan Mindru",
-      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
-      "job_title": "Experience designer"
-    }
-  },
-  {
     "id": "fadeit-blog-is-live",
     "title": "Blog: open for business",
     "intro": "We're super excited to launch a blog section on our website. We'll be writing about design, tech, code and everything in between.",

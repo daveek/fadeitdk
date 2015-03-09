@@ -1500,11 +1500,66 @@ a{
 
 #disqus_thread{
   margin-bottom:30px;
+  padding:10px;
+
+  @media only screen and (min-width:@bp_lg){
+    padding:0;
+  }
 }
 
 [class*="blog-type-"]{
   .col(@w, b);
-  padding:30px 30px 20px 30px;
+  padding:15px 15px 10px 15px;
+
+  @media only screen and (min-width:@bp_md){
+    padding:30px 30px 20px 30px;
+  }
+}
+
+.blog-type-h{
+  padding-bottom: 0;
+
+  @media only screen and (min-width:@bp_md){
+    padding-bottom:20px;
+  }
+}
+
+.default-inner-container{
+  .blog-type-cover{
+    margin-bottom: 80px;
+
+    @media only screen and (max-width:@bp_md_max){
+      background:@w!important;
+      min-height:0!important;
+      margin-bottom:0;
+    }
+
+    @media only screen and (min-width:@bp_md){
+      .normal-image{
+        visibility:hidden;
+      }
+    }
+  }
+}
+
+.blog-type-cover{
+  padding-top:0px;
+  .rel();
+
+  &:first-child{
+    padding-top:0px;
+  }
+
+  p{
+    .abs();
+    bottom:-60px;
+  }
+}
+
+.blog-type-img{
+  p{
+    margin-top:20px;
+  }
 }
 
 .read-post{
@@ -1546,6 +1601,8 @@ a{
 }
 
 .post-heading{
+  margin-top: 40px;
+
   &:after{
     content: "\f0d8";
     .inline-block();
@@ -1559,6 +1616,15 @@ a{
     .abs();
     bottom: -6px;
     left: 30px;
+  }
+
+  @media only screen and (min-width:@bp_md){
+    padding-left:30px;
+    padding-righ:30px;
+  }
+
+  @media only screen and (min-width:@bp_lg){
+    margin-top:0;
   }
 }
 
@@ -1605,8 +1671,8 @@ a{
   border-bottom:8px solid #EAEAEA;
   padding: 50px 30px 30px 30px;
   margin-bottom:0;
-  //.cover();
-  background-size: 100%;
+  .cover();
+  //background-size: 100%;
   background-attachment: fixed;
 
   @media only screen and (min-width:@bp_md){
@@ -1636,8 +1702,10 @@ a{
 }
 
 .blog-outstanding{
-  margin-top:@top_nav_height;
-  padding-top:110px;
+  @media only screen and (min-width:@bp_md){
+    margin-top:@top_nav_height;
+    padding-top:110px;
+  }
 }
 
 
@@ -2068,6 +2136,14 @@ a{
   }
 }
 
+.blog-mode{
+  .go-to-menu{
+    span{
+      visibility:hidden;
+    }
+  }
+}
+
 .nav-container.blog-mode{
   .transparent-whitebar{
     background-color:rgba(255, 255, 255, 0.9)!important;
@@ -2256,6 +2332,7 @@ a{
       border:@bst @g3;
       .fr();
       padding:15px;
+      margin-bottom: 60px;
 
       br{
         .h();

@@ -1,10 +1,14 @@
 angular.module('fadeit.blog').controller('BlogController', blogController);
 
-blogController.$inject = ['$scope', '$stateParams','BlogService', '$state'];
-function blogController($scope, $stateParams, BlogService, $state) {
+blogController.$inject = ['$scope', '$stateParams','BlogService', '$state', '$sce'];
+function blogController($scope, $stateParams, BlogService, $state, $sce) {
   //read the project id from the state
   var vm = this;
   vm.requestUrl = $stateParams.postId;
+
+  vm.trustUrl = function trustUrl(url) {
+    return $sce.trustAsResourceUrl(url);
+  };
 
   if(!$stateParams.postId){
     $state.go('blog');
@@ -13,7 +17,6 @@ function blogController($scope, $stateParams, BlogService, $state) {
   BlogService.singlePost(vm.requestUrl)
     .then(function singlePostResponse(response){
       var pageTitle, pageDesc;
-      console.log(response);
 
       vm.post = response;
       pageTitle = !response.error ? vm.post.title : 'Sorry, this post does not exist';

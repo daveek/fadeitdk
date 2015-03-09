@@ -12,15 +12,15 @@
 <section class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row services-fluid">
     <section class="row-fluid outstanding-container" ng-if="!vm.post">
-      <h3 class="col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6 blog-error">
+      <h3 class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-error">
         <span translate>BLOG_POST_ERROR</span> <i class="fa fa-chain-broken"></i>
       </h3>
     </section>
 
     <section class="row-fluid outstanding-container blog-outstanding" style="background-image: url(src/assets/img/blog/{{vm.post.id}}/{{vm.post.cover}});" ng-if="vm.post">
-      <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">
+      <section class="default-inner-container col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
         <section class="row-fluid single-post blog-row">
-          <section class="col-xs-14 post-description">
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-offset-0 col-lg-24 post-description">
             <h2 ng-bind="vm.post.title"></h2>
             <p class="post-date">{{vm.post.date | date: 'd MMMM yyyy, H:m'}}</p>
             <p class="post-intro" ng-bind="vm.post.intro"></p>
@@ -35,7 +35,7 @@
 
     <section class="default-inner-container" id="post">
       <section class="row-fluid" ng-if="vm.post">
-        <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6 post-heading">
+        <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 post-heading">
           <p class="post-author">
             <span ng-bind="vm.post.author.name" class="author-name"></span>
             <span ng-bind="vm.post.author.job_title" class="author-title"></span>
@@ -46,11 +46,11 @@
         </section><!--end col-*-->
 
         <section class="post-content clearfix" ng-repeat="content in vm.post.content" ng-switch on="content.type">
-          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6 blog-type-p" ng-switch-when="p">
+          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-p" ng-switch-when="p">
             <p ng-bind-html="content.text"></p>
           </section>
 
-          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6 blog-type-h" ng-switch-when="h">
+          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-h" ng-switch-when="h">
             <section ng-switch on="content.number">
               <h2 ng-bind-html="content.text" ng-switch-when="2"></h2>
               <h3 ng-bind-html="content.text" ng-switch-when="3"></h3>
@@ -60,16 +60,31 @@
               <h2 ng-bind-html="content.text" ng-switch-default></h2>
             </section>
           </section>
+
+          <section class="row-fluid outstanding-container blog-type-cover" style="background-image: url({{vm.trustUrl(content.url)}}); min-height:{{content.height}}px;" ng-switch-when="cover">
+            <img class="normal-image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
+            <p class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6" ng-bind-html="content.caption" ng-if="content.caption"></p>
+          </section>
+
+          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="img">
+            <img ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
+            <p ng-bind-html="content.caption" ng-if="content.caption"></p>
+          </section>
+
+          <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-video" ng-switch-when="video">
+            <section ng-switch on="content.vendor">
+              <iframe width="100%" height="{{content.height}}" ng-src="{{vm.trustUrl(content.url)}}" frameborder="0" allowfullscreen ng-switch-when="youtube"></iframe>
+              <iframe ng-src="{{vm.trustUrl(content.url)}}" width="100%" height="{{content.height}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ng-switch-when="vimeo"></iframe>
+              <p ng-bind-html="content.caption" ng-if="content.caption"></p>
+            </section>
+          </section>
         </section>
       </section>
 
       <section class="default-inner-container">
-        <section id="disqus_thread" class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-12 col-xl-offset-6"></section>
+        <section id="disqus_thread" class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6"></section>
         <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES * * */
             var disqus_shortname = 'fadeit';
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
