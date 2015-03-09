@@ -1340,6 +1340,12 @@ a{
       .post-cover{
         .cover();
         .col(rgb(186, 186, 186), b);
+
+        .normal-image{
+          @media only screen and (min-width:@bp_md){
+            visibility:hidden;
+          }
+        }
       }
 
       .post-description{
@@ -1375,6 +1381,7 @@ a{
 
     &:nth-child(1){
       margin-top:0;
+      padding-top:0;
     }
 
     span{
@@ -1528,6 +1535,7 @@ a{
 .default-inner-container{
   .blog-type-cover{
     margin-bottom: 80px;
+    padding: 0;
 
     @media only screen and (max-width:@bp_md_max){
       background:@w!important;

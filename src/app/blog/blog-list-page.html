@@ -2,7 +2,7 @@
   <section class="row-fluid secondary-page-row services-fluid work-fluid">
 
     <section class="row-fluid outstanding-container">
-      <section class="default-inner-container col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
+      <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
         <section class="inner-text">
           <img ng-src="src/assets/img/brand/fadeit_logo_full.svg" alt="{{'SEO_LOGO_ALT' | translate}}" class="secondary-page-logo" />
           <p class="regular-text" translate>
@@ -14,15 +14,16 @@
 
     <section class="default-inner-container">
       <section class="row-fluid" ng-if="!vm.posts">
-        <h3 class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6" translate>BLOG_LIST_ERROR</h3>
+        <h3 class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6" translate>BLOG_LIST_ERROR</h3>
       </section>
 
       <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-16 col-xl-offset-4 col-xxl-12 col-xxl-offset-6">
         <section class="row-fluid table-fluid cover-fluid our-work-row blog-row fadeit-animate animated fadeIn" data-wow-duration="1000ms" ng-repeat="post in vm.posts">
           <a href ui-sref="blog-posts({postId: post.id})">
-            <section class="col-xs-10 post-cover" data-ng-style="{'background-image': 'url(src/assets/img/blog/{{post.id}}/{{post.cover}})'}">
+            <section class="col-xs-24 col-md-10 post-cover" data-ng-style="{'background-image': 'url(src/assets/img/blog/{{post.id}}/{{post.cover}})'}">
+              <img class="normal-image" ng-src="src/assets/img/blog/{{post.id}}/{{post.cover}}" alt="{{content.caption}}"/>
             </section>
-            <section class="col-xs-14 post-description">
+            <section class="col-xs-24 col-md-14 post-description">
               <h2 ng-bind="post.title"></h2>
               <p class="post-date">{{post.date | date: 'd MMMM yyyy, H:m'}}</p>
               <p class="post-intro" ng-bind="post.intro"></p>

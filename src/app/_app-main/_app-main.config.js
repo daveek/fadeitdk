@@ -26,7 +26,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
   });
 
   //TURN ON FOR PROD
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
   $urlRouterProvider.otherwise('/');
 
