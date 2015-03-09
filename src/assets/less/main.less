@@ -1574,10 +1574,14 @@ a{
 .read-post{
   .abs();
   font-size: 50px;
-  bottom: -60px;
+  bottom: -30px;
   .ta-c();
   width: 100%;
   .animateKey();
+
+  @media only screen and (min-width:@bp_md){
+    bottom: -60px;
+  }
 
   a{
     .col(@w);
@@ -1711,9 +1715,12 @@ a{
 }
 
 .blog-outstanding{
+  padding:50px 0 0 0;
+
   @media only screen and (min-width:@bp_md){
     margin-top:@top_nav_height;
-    padding-top:110px;
+    //padding-top:110px;
+    padding: 110px 30px 30px 30px;
   }
 }
 
