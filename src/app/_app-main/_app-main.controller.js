@@ -1,7 +1,7 @@
 angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
 
-rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state'];
-function rootController($scope, $window, $log, $translate, $filter, $state) {
+rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope'];
+function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope) {
   var vm = this,
       wow;
   vm.pageTitle = 'fadeit';
@@ -9,6 +9,9 @@ function rootController($scope, $window, $log, $translate, $filter, $state) {
   vm.pageDesc = $filter('translate')('SEO_META_DESC');
   vm.darkMode = false;
   vm.toolboxPage = false;
+
+  //setting fb app id
+  $rootScope.facebookAppId = 377735055715546;
 
   /*
    * Event callback on every route change

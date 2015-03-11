@@ -9,7 +9,7 @@ angular.module(fadeitConfig.appRootModuleName).config(rootConfig);
 
 rootConfig.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider', '$translateProvider'];
 function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $translateProvider){
-   $stateProvider.state('404', {
+  $stateProvider.state('404', {
     url: '/404',
     templateUrl: 'views/404.html',
     data:{
