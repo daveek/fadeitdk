@@ -6,7 +6,6 @@ function codeBlock($sanitize, $http, $q, $filter){
     function loadCodeFile(){
       var codeFileDefer = $q.defer();
       var codeFile = $http.get(attrs.codeBlock);
-      console.log(attrs.codeBlock);
 
       codeFile.then(function codeFileResponse(response){
         codeFileDefer.resolve(response.data);
@@ -20,7 +19,6 @@ function codeBlock($sanitize, $http, $q, $filter){
     loadCodeFile().then(function codeFileLoaded(response){
       //escape the shit of the response
       element[0].innerHTML = $sanitize($filter('htmlEscape')(response));
-      console.log(element);
     });
   }
 

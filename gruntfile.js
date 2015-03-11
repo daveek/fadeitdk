@@ -286,9 +286,11 @@ module.exports = function(grunt) {
       compile_module_js: {
         options: {
           wrap: 'moduleExports',
-          mangle: {
+          mangle: false
+          /*{
+            breaks injector in code-block.directive.js if mangled
             except: ['exceptionLoggingService']
-          }
+          }*/
         },
         src: [
           '<%= compile.vendor_js %>',

@@ -16,10 +16,10 @@ function blogController($scope, $stateParams, BlogService, $state, $sce, angular
 
   //load the prism script
   angularLoad.loadScript('src/assets/js/prism.js').then(function() {
-    console.log('loaded prism');
+    //loaded prism;
     Prism.highlightAll();
   }).catch(function() {
-    //TODO: how to handle this?
+    //TODO: how can we handle this?
     console.log('failed to load prism');
   });
 
