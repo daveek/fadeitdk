@@ -21,7 +21,7 @@
         "text": "Here's a heading"
       },
       {
-        "type": "cover", //a image that stretches to cover the entire screen width
+        "type": "cover", //a image that stretches to cover the entire screen width - ask Dan for covers, he has some prepared
         "height": 520,
         "url": "src/assets/img/blog/fadeit-blog-is-live/read.jpg", //you need to specify the full path
         "caption": "Here's a image" //optional
