@@ -1,7 +1,7 @@
 angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
 
-rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope'];
-function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope) {
+rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope', '$location'];
+function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope, $location) {
   var vm = this,
       wow;
   vm.pageTitle = 'fadeit';
@@ -9,6 +9,13 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
   vm.pageDesc = $filter('translate')('SEO_META_DESC');
   vm.darkMode = false;
   vm.toolboxPage = false;
+
+  //set the canonical URL
+  var port = $location.port();
+  if(port  === 80 || port === 443){
+      port = '';
+  }
+  vm.pageURL = $location.protocol() + "://" + $location.host() + $location.path(); //not using port
 
   //setting fb app id
   $rootScope.facebookAppId = 377735055715546;
@@ -47,6 +54,11 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
         });
       }
     }
+
+    /*
+     * update canonical url
+     */
+    vm.pageURL = $location.protocol() + "://" + $location.host() + $location.path();
 
     /*
      * if next state is home, turn dark mode on
