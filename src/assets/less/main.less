@@ -1087,7 +1087,11 @@ a{
 }
 
 .work-fluid{
-  padding-bottom:200px;
+  padding-bottom:10px;
+
+  @media only screen and (min-width:@bp_md){
+    padding-bottom:200px;
+  }
 }
 
 .apply-fluid{
@@ -1351,7 +1355,7 @@ a{
 
       .post-description{
         padding:30px;
-        .col(@ws, b);
+        .col(rgba(245, 245, 245, 0.9), b);
 
         h2{
           .col(@b);
@@ -1382,7 +1386,7 @@ a{
 
     &:nth-child(1){
       margin-top:0;
-      padding-top:0;
+      padding-top:10px;
     }
 
     span{
@@ -1529,14 +1533,21 @@ a{
   padding-bottom: 0;
 
   @media only screen and (min-width:@bp_md){
-    padding-bottom:20px;
+    padding-bottom:0px;
+    margin-bottom:-10px;
   }
+}
+
+.fb-like{
+  height:30px;
+  overflow:hidden;
 }
 
 .default-inner-container{
   .blog-type-cover{
     margin-bottom: 80px;
     padding: 0;
+    background-position-x: center;
 
     @media only screen and (max-width:@bp_md_max){
       background:@w!important;
@@ -1717,6 +1728,7 @@ a{
 
 .blog-outstanding{
   padding:50px 0 0 0;
+  background-position-x: center;
 
   @media only screen and (min-width:@bp_md){
     margin-top:@top_nav_height;
@@ -2156,7 +2168,7 @@ a{
 .blog-mode{
   .go-to-menu{
     span{
-      visibility:hidden;
+      .h();
     }
   }
 }
