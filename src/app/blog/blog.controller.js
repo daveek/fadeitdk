@@ -1,7 +1,7 @@
 angular.module('fadeit.blog').controller('BlogController', blogController);
 
-blogController.$inject = ['$scope', '$stateParams','BlogService', '$state', '$sce'];
-function blogController($scope, $stateParams, BlogService, $state, $sce) {
+blogController.$inject = ['$scope', '$stateParams','BlogService', '$state', '$sce', 'angularLoad'];
+function blogController($scope, $stateParams, BlogService, $state, $sce, angularLoad) {
   //read the project id from the state
   var vm = this;
   vm.requestUrl = $stateParams.postId;
@@ -14,13 +14,22 @@ function blogController($scope, $stateParams, BlogService, $state, $sce) {
     $state.go('blog');
   }
 
+  //load the prism script
+  angularLoad.loadScript('src/assets/js/prism.js').then(function() {
+    console.log('loaded prism');
+    Prism.highlightAll();
+  }).catch(function() {
+    //TODO: how to handle this?
+    console.log('failed to load prism');
+  });
+
   BlogService.singlePost(vm.requestUrl)
     .then(function singlePostResponse(response){
       var pageTitle, pageDesc;
 
       vm.post = response;
       pageTitle = !response.error ? vm.post.title : 'Sorry, this post does not exist';
-      pageDesc = !response.error ? vm.post.content.shortDescription : 'Sorry, this post does not exist';
+      pageDesc = !response.error ? vm.post.intro : 'Sorry, this post does not exist';
 
       $scope.$emit('changedPage', pageTitle);
       $scope.$emit('changedDesc', pageDesc);

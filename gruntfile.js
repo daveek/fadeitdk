@@ -151,6 +151,18 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true
       },
+      build_app_code: {
+        cwd: './src',
+        src: ['assets/**/*.code.txt'],
+        dest: '<%= build_dir %>src/',
+        expand: true
+      },
+      build_prism_js: {
+        cwd: './src/assets/js',
+        src: ['prism.js'],
+        dest: '<%= build_dir %>src/assets/js/',
+        expand: true
+      },
       compile_app_data: {
         cwd: '<%= build_dir %>',
         src: ['data/*.json'],
@@ -182,7 +194,13 @@ module.exports = function(grunt) {
       },
       compile_asset_js: {
         cwd: '<%= build_dir %>',
-        src: ['src/assets/js/assets.js'],
+        src: ['src/assets/js/**/*'],
+        dest: '<%= compile_dir %>',
+        expand: true
+      },
+      compile_app_code: {
+        cwd: '<%= build_dir %>',
+        src: ['src/assets/code/**/*'],
         dest: '<%= compile_dir %>',
         expand: true
       }
@@ -294,9 +312,14 @@ module.exports = function(grunt) {
      *
      */
     concat: {
-      build_asset_js: {
-        src: ['./src/assets/js/**/*.js'],
-        dest: '<%= build_dir %>/src/assets/js/assets.js'
+      build_toolbox_js: {
+        src: [
+          './src/assets/js/box-protoclass.js',
+          './src/assets/js/box2d.js',
+          './src/assets/js/Main.js'
+        ],
+        dest: '<%= build_dir %>/src/assets/js/toolbox.js',
+        //expand: true
       },
       compile_js: {
         src: [
@@ -478,7 +501,9 @@ module.exports = function(grunt) {
     'copy:build_protractor',
     'copy:build_karma',
     'copy:build_assets',
-    'concat:build_asset_js',
+    'copy:build_app_code',
+    'copy:build_prism_js',
+    'concat:build_toolbox_js',
     'less:build_less',
     'cssmin:build_css',
     'clean:build_css_clean',
@@ -498,7 +523,8 @@ module.exports = function(grunt) {
     'copy:compile_app_data',
     'copy:compile_app_assets',
     'copy:compile_index',
-    'copy:compile_asset_js'
+    'copy:compile_asset_js',
+    'copy:compile_app_code'
   ]);
   grunt.registerTask('test', ['karma:unit', 'protractor:build']);
   grunt.registerTask('test:unit', ['karma:unit']);

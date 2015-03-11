@@ -49,7 +49,7 @@ function toolboxController($scope, angularLoad, $rootScope, $window, ToolboxServ
   vm.initBalls = function initBalls(){
     var randomGravity = angular.element($window).innerWidth > 767 ? true : false;
     if(!$rootScope.ballsLoaded){
-      angularLoad.loadScript('src/assets/js/assets.js').then(function() {
+      angularLoad.loadScript('src/assets/js/toolbox.js').then(function() {
         init(randomGravity);
         vm.createBalls();
         play();
