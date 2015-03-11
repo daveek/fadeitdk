@@ -22,7 +22,7 @@
      * Ids should be at least 3 words long.
      * Place this file in ./src/app/blog/data for consistency.
      *
-     * The id also the default location for the post cover.
+     * The id is also the default location for the post cover.
      * Place you cover in /src/assets/img/blog/@id
      * You can rename it below.
      *
