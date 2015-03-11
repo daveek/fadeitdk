@@ -1087,7 +1087,11 @@ a{
 }
 
 .work-fluid{
-  padding-bottom:200px;
+  padding-bottom:10px;
+
+  @media only screen and (min-width:@bp_md){
+    padding-bottom:200px;
+  }
 }
 
 .apply-fluid{
@@ -2164,7 +2168,7 @@ a{
 .blog-mode{
   .go-to-menu{
     span{
-      visibility:hidden;
+      .h();
     }
   }
 }
