@@ -2794,6 +2794,13 @@ pre[class*='language-']{
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
   }
 }
+
+pre[class*='language-'] > code[data-language] {
+  overflow: auto;
+  max-height: 28em;
+  display: block;
+}
+
 pre[class*=language-]>code[data-language]::before {
   border-radius: 0;
   padding: 10px;
