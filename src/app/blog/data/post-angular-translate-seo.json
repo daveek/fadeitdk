@@ -18,7 +18,7 @@
       },
       {
         "type": "p",
-        "text": "Instant translations, this is what angular-translate brings to the table. While it is significantly more convenient than waiting another site load cycle for different language to load - especially on sites that are slow to begin with, it doesn't come without complications. If each translation language does not have a unique URL, search engines can not link search results to it, let alone crawl the site properly."
+        "text": "Instant translations, this is what <a href=\"http://angular-translate.github.io/\">angular-translate</a> brings to the table. While it is significantly more convenient than waiting another site load cycle for different language to load - especially on sites that are slow to begin with, it doesn't come without complications. If each translation language does not have a unique URL, search engines can not link search results to it, let alone crawl the site properly."
       },
       {
         "type": "p",
