@@ -1,0 +1,8 @@
+var absUrl = $location.absUrl();
+if(absUrl.indexOf('/en/') !== -1){
+  $scope.activeLang = 'en-us';
+}
+else{
+  $scope.activeLang = 'da-dk';
+}
+$translate.use($scope.activeLang);

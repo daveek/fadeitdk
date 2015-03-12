@@ -1,0 +1,3 @@
+location /en/ {
+    try_files $uri $uri/ $uri/index.html /en/index.html;
+} 
