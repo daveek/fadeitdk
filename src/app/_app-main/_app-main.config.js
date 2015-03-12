@@ -154,6 +154,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     //Sander
     "TEAM_SANDER_DESC": "Computer network and web development aficionado. Constantly brings fresh ideas to the table and stays ruthlessly pragmatic at the same time.",
     "TEAM_SANDER_ALT": "Sander Sink - the fadeit team",
+    //Baptiste
+    "TEAM_BAPTISTE_DESC": "Interested in web and software development in general. Here to learn and improve.",
+    "TEAM_BAPTISTE_ALT": "Baptiste Guillaume - the fadeit team",
     //New guy
     "TEAM_NEW_POSITION": "Impressive Person",
     "TEAM_NEW_NAME": "J. Wantsomework",
@@ -411,6 +414,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     //Sander
     "TEAM_SANDER_DESC": "Der findes ingen hindringer og ingen bjerge er for store - Han når altid toppen af bjerget. Der kommer altid nye ideer på bordet og stadig med samme hensynsløse pragmatiske indgangsvinkel.",
     "TEAM_SANDER_ALT": "Sander Sink",
+    //Baptiste
+    "TEAM_BAPTISTE_DESC": "Jeg brænder for web og softwareudvikling. Her for at lære og blive bedre.",
+    "TEAM_BAPTISTE_ALT": "Baptiste Guillaume - the fadeit team",
     //New guy
     "TEAM_NEW_POSITION": "Imponerende person",
     "TEAM_NEW_NAME": "J. Brugforetjob",

@@ -100,6 +100,7 @@
       "element": true,
       "by": true,
       "process": true,
-      "WOW": true
+      "WOW": true,
+      "Prism": true
     } // additional predefined global variables
 }

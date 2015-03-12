@@ -1,18 +1,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://fadeit.dk/apply</loc>
-  </url>
-  <url>
-    <loc>http://fadeit.dk/toolbox</loc>
-  </url>
-  <url>
-    <loc>http://fadeit.dk/project/gatesense</loc>
-  </url>
-  <url>
     <loc>http://fadeit.dk/project/ipvision</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/project/alexandra</loc>
+    <loc>http://fadeit.dk/about</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/apply</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/expertise</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/post/fadeit-blog-is-live</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/project/hopper</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/our-work</loc>
   </url>
   <url>
     <loc>http://fadeit.dk/contact</loc>
@@ -21,13 +27,22 @@
     <loc>http://fadeit.dk/team</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/about</loc>
+    <loc>http://fadeit.dk/post/what-we-like-on-the-web-this-year</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/our-work</loc>
+    <loc>http://fadeit.dk/blog</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/expertise</loc>
+    <loc>http://fadeit.dk/toolbox</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/post/whats-rotten-in-the-state-of-denmark</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/project/gatesense</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/project/alexandra</loc>
   </url>
   <url>
     <loc>http://fadeit.dk</loc>
