@@ -1750,6 +1750,13 @@ a{
     text-decoration: none;
     font-style:normal;
   }
+
+  a{
+    //MAX
+    @media only screen and (max-width:@bp_sm_max){
+      word-break: break-all;
+    }
+  }
 }
 
 .outstanding-container{
@@ -2804,7 +2811,7 @@ pre[class*='language-'] > code[data-language] {
 pre[class*=language-]>code[data-language]::before {
   border-radius: 0;
   padding: 10px;
-  background-color: #5F5F5F;
+  background-color: rgba(95, 95, 95, 0.74);
   color: white;
 }
 
