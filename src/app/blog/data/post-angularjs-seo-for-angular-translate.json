@@ -18,7 +18,7 @@
       },
       {
         "type": "p",
-        "text": "Instant translations, this is what <a href='http://angular-translate.github.io/'>angular-translate</a> brings to the table. While it is significantly more convenient than waiting another site load cycle for a different language to load (especially on sites that are slow to begin with), it doesn't come without complications. If each translation language does not have a unique URL, search engines can not link search results to it, let alone crawl the site properly."
+        "text": "Instant translations, this is what <a href='http://angular-translate.github.io/'>angular-translate</a> brings to the table. While it is significantly more convenient than waiting one more site load cycle for a different language to load (especially on sites that are slow to begin with), it doesn't come without complications. If each translation language does not have a unique URL, search engines can not link search results to it, let alone crawl the site properly."
       },
       {
         "type": "p",
@@ -37,11 +37,11 @@
       },
       {
         "type": "p",
-        "text": "Okay, perhaps it's a nice practice to have language in the URL, here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also ugliest. The other two are relatively similar and it boils down to personal preference. We went for the second option - keeping the language in a subdirectory."
+        "text": "Okay, perhaps it's a nice practice to have language in the URL. Here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also the ugliest. The other two are relatively similar and it boils down to your personal preference. We went for the second option - keeping the language in a subdirectory."
       },
       {
         "type": "p",
-        "text": "The preferred approach would be to introduce a path variable on a router base path and have all children be relative to it or escape the language before routing is performed. While it is possible, it seems that the only way to achieve it is to nest all states in a following manner:"
+        "text": "The preferred approach would be to introduce a path variable on a router base path and have all children be relative to it or escape the language before routing is performed. While it is possible, it seems that the only way to achieve it is to nest all states in the following manner:"
       },
       {
         "type": "code",
@@ -59,7 +59,7 @@
       },
       {
         "type": "p",
-        "text": "Hosting Angular application is just serving static files, where each URL maps to a directory/file by default. Therefore if we are to host the same application in a different directory for each language, we get SEO friendly URL's without a major overhaul of the code. If you are working on a big Angular project, the chances are that either Grunt or Gulp is in the mix. Grunt is our weapon of choice, so we need to add extra copy task at the end of build process that would copy all files into a subdirectory:"
+        "text": "Hosting Angular application is just serving static files, where each URL maps to a directory/file by default. Therefore, if we are to host the same application in a different directory for each language, we get SEO friendly URLs without a major overhaul of the code. If you are working on a big Angular project, the chances are that either Grunt or Gulp is in the mix. Grunt is our weapon of choice, so we need to add an extra copy task at the end of the build process that would copy all files into a subdirectory:"
       },
       {
         "type": "code",
@@ -68,7 +68,7 @@
       },
       {
         "type": "p",
-        "text": "<em>!en/**</em> tells Grunt not to copy itself every time that task is called.<br/>The folder structure should be following:<ul><li>/path/to/app/index.html (will default to Danish)</li><li>/path/to/app/other/files</li><li>/path/to/app/en/index.html</li><li>/path/to/app/en/other/files</li></ul><br/>Now we need to tell Angular to check for URL when determining language:"
+        "text": "<em>!en/**</em> tells Grunt not to copy itself every time that task is called.<br/>The directory structure should be following:<ul><li>/path/to/app/index.html (will default to Danish)</li><li>/path/to/app/other/files</li><li>/path/to/app/en/index.html</li><li>/path/to/app/en/other/files</li></ul><br/>Now we need to tell Angular to check for URL when determining language:"
       },
       {
         "type": "code",
@@ -86,7 +86,7 @@
       },
       {
         "type": "p",
-        "text": "The URL's need to be absolute, otherwise if this code was executed at example.com/en, it would calculate the 'en' URL to be a t exmple.com/en/en and so on.<br/>Next we need to display cross-links in the template using <em>ng-href</em> directive:"
+        "text": "The URLs need to be absolute, otherwise if this code was executed at example.com/en, it would calculate the 'en' URL to be at example.com/en/en and so on.<br/>Next we need to display our cross-links in the template using <em>ng-href</em> directive:"
       },
       {
         "type": "code",
@@ -95,7 +95,7 @@
       },
       {
         "type": "p",
-        "text": "<em>target='_self'</em> is used to tell Angular not to load this link in ajax but to navigate to it the Angular way. We need the browser to fetch appropriate index.html page and bootstrap the application (since we have one application per language).<br/>The application is now SEO friendly, but we are not quite done yet. We are also using html5 mode to have pretty URL's. By using html5 mode we must define base tag in the index file so Angular knows where application path starts from:"
+        "text": "<em>target='_self'</em> is used to tell Angular not to load this link in ajax but to navigate to it the Angular way. We need the browser to fetch appropriate index.html page and bootstrap the application (since we have one application per language).<br/>The application is now SEO friendly, but we are not quite done yet. We are also using HTML5 mode to have pretty URLs. When using HTML5 mode, we must define base tag in the index file so Angular knows where the application path starts from:"
       },
       {
         "type": "code",
@@ -104,7 +104,7 @@
       },
       {
         "type": "p",
-        "text": "However now we also have a copy of the site running at /en, so the base tag needs to be appropriate."
+        "text": "However, now we also have a copy of the site running at /en, so the base tag needs to be appropriate."
       },
       {
         "type": "h",
@@ -113,7 +113,7 @@
       },
       {
         "type": "p",
-        "text": "We need to update the base tag when making a copy of the site to match the path. Grunt's copy task features a process option that is called for each file copied. The process function enables us to transform the contents of the file:"
+        "text": "We need to update the base tag when making a copy of the site to match the path. Grunt's copy task features a process option that is called for each file copied. The process option enables us to transform the contents of the file:"
       },
       {
         "type": "code",
@@ -122,7 +122,7 @@
       },
       {
         "type": "p",
-        "text": "We are using older version of Grunt, so the option is called processContent instead of process.<br/>HTML5 mode also requires URL rewriting on the server side. If a request is made at example.com/about, the server should still return the index.html page and it is up to Angular router to figure out what to do with the 'about' path variable. In Nginx this is typically achieved with try_files directive:"
+        "text": "We are using older version of Grunt, so the option is called processContent instead of process.<br/>HTML5 mode also requires URL rewriting on the server side. If a request is made at example.com/about, the server should still return the index.html page and it is up to Angular router to figure out what to do with the 'about' path variable. In Nginx, this is typically achieved with try_files directive:"
       },
       {
         "type": "code",
@@ -131,7 +131,7 @@
       },
       {
         "type": "p",
-        "text": "If a request is made at example.com/en/about, the configuration above will result Nginx trying following files:<ul><li>en/about --> not found</li><li>en/about/ --> not found</li><li>en/about/index.html  --> not found</li><li>index.html --> found</li></ul>This results the server returning the index.html file of the root rather than of 'en' directory. Now the router is trying to figure out which state to match the <em>en/about</em> path to, which it will of course fail to do so. We need to define another location to load proper index.html if $uri is not a match:"
+        "text": "If a request is made at example.com/en/about, the configuration above will result in Nginx trying following files:<ul><li>en/about --> not found</li><li>en/about/ --> not found</li><li>en/about/index.html  --> not found</li><li>index.html --> found</li></ul>This results in the server returning the index.html file of the root rather than of 'en' directory. Now the router is trying to figure out which state to match the <em>en/about</em> path to, which it will of course fail to do accomplish. We need to define another location to load proper index.html, if $uri is not a match:"
       },
       {
         "type": "code",
@@ -140,7 +140,7 @@
       },
       {
         "type": "p",
-        "text": "Finally, SEO friendly multilingualr application!<br/>In the process of doing so we have jumped through several hoops in order to get rid of the comfort angular-translate provides. Fortunately we can bring some of it back - authenticated users are not crawlers, so we must only display SEO friendly cross-links to unauthenticated users:"
+        "text": "Finally, SEO friendly multilingual application!<br/>In the process of doing so, we have jumped through several hoops in order to get rid of the comfort angular-translate provides. Fortunately we can bring some of it back - authenticated users are not crawlers, so we must only display SEO friendly cross-links to unauthenticated users:"
       },
       {
         "type": "code",
@@ -154,7 +154,7 @@
       },
       {
         "type": "p",
-        "text": "By using this approach we've avoided coupling language detection with the router. While the potential drawback is that by having a higher language count and a relatively large application, making copy for each language could significantly increase build time. So far we don't see copying as a bottleneck, therefore currently we have neither practical need to make it more efficient, but we would not be out of options. It is possible to configure Nginx to only serve index.html file at different path and rest of the static files could be shared between different language applications, thus eliminating the need to make a full copy per language.<br/>At the end of day there is no good way to to play by SEO book, so hopefully AngularJS 2.0 will change this."
+        "text": "By using this approach we've avoided coupling language detection with the router. While the potential drawback is that by having a higher language count and a relatively large application, making copy for each language could significantly increase build time. So far we don't see copying as a bottleneck, therefore we don't have a practical need to make it more efficient. It is possible to configure Nginx to only serve index.html files at different path and rest of the static files could be shared between different language applications, thus eliminating the need to make a full copy per language.<br/>At the end of day there is no good way to to play by SEO rules, so hopefully AngularJS 2.0 will change this."
       }
     ]
   }
