@@ -153,7 +153,7 @@ module.exports = function(grunt) {
       },
       build_app_code: {
         cwd: './src',
-        src: ['assets/**/*.code.txt'],
+        src: ['assets/code/**/*.txt'],
         dest: '<%= build_dir %>src/',
         expand: true
       },

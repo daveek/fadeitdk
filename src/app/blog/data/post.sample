@@ -45,7 +45,7 @@
      * BEGIN POST CONTENT
      * A loop will evaluate each object in the content Array and create the appropriate HTML markup
      *
-     * Content can be: p (paragraph), h (heading), cover (stretching image), img (normal image), video and code
+     * Content can be: p (paragraph), h (heading), quote, cover (stretching image), img (normal image), video and code
      * Paragraphs can contain html elements
      *
      */
@@ -58,6 +58,12 @@
         "type": "h",
         "number": 2, //this will be a <h2>, also works with 2, 3, 4, 5, 6. Default is 2.
         "text": "Here's a heading" //HTML is allowed if *really* needed
+      },
+      {
+        "type": "quote",
+        "text": "Quote text,
+        "ref": "https://support.google.com/webmasters/answer/182192", //reference to your quote
+        "reverse": false //optional, will float elements to right
       },
       {
         "type": "cover", //a image that stretches to cover the entire screen width - ask Dan for cover images, he has some prepared

@@ -1355,6 +1355,8 @@ a{
       .post-cover{
         .cover();
         .col(rgb(186, 186, 186), b);
+        border: 2px solid @ws;
+        border-right: 0;
 
         .normal-image{
           @media only screen and (min-width:@bp_md){
@@ -1365,7 +1367,7 @@ a{
 
       .post-description{
         padding:30px;
-        .col(rgba(245, 245, 245, 0.9), b);
+        .col(rgba(245, 245, 245, 0.95), b);
 
         h2{
           .col(@b);
@@ -1536,12 +1538,16 @@ a{
   padding:15px 15px 10px 15px;
 
   @media only screen and (min-width:@bp_md){
-    padding:30px 30px 20px 30px;
+    padding: 15px 30px 15px 30px;
   }
 }
 
 .blog-type-h{
   padding-bottom: 0;
+
+  h2, h3, h4, h5, h6{
+    margin-top: 0;
+  }
 
   @media only screen and (min-width:@bp_md){
     padding-bottom:0px;
@@ -1603,6 +1609,14 @@ a{
   }
 }
 
+.blog-type-quote{
+  background-color: rgb(249, 249, 249);
+  margin-bottom:0;
+  font-size:@fs_body;
+  line-height:@lh_body;
+  margin-top: -20px;
+}
+
 .read-post{
   .abs();
   font-size: 50px;
@@ -1660,12 +1674,12 @@ a{
     .col(@w);
     .abs();
     bottom: -6px;
-    left: 30px;
+    left: 44px;
   }
 
   @media only screen and (min-width:@bp_md){
     padding-left:30px;
-    padding-righ:30px;
+    padding-right:30px;
   }
 
   @media only screen and (min-width:@bp_lg){
@@ -1708,6 +1722,31 @@ a{
     }
   }
 }//post author
+
+
+.post-content-fluid{
+  //element after the post heading has a padding
+  .post-content{
+    &:nth-child(2){
+      [class*="blog-type-"]{
+        padding-top:30px;
+      }
+    }
+  }
+
+  ol{
+    list-style-type: upper-roman;
+  }
+
+  em{
+    padding:5px;
+    background-color:@ws;
+    .inline-block();
+    font-weight: bold;
+    text-decoration: none;
+    font-style:normal;
+  }
+}
 
 .outstanding-container{
   background-color:@ws;
@@ -2733,6 +2772,37 @@ a{
 .fa-chain-broken{
   .fr();
 }
+
+/*prism code additions*/
+/*additions*/
+pre[class*='language-']{
+  margin-top:0;
+  margin-bottom:0;
+  border:1px solid #E4E4E4;
+  border-top:10px solid #E4E4E4;
+  border-bottom:10px solid #E4E4E4;
+  background-color:#F5F5F5;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: 15px;
+  word-wrap: break-word;
+
+  span{
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  }
+}
+pre[class*=language-]>code[data-language]::before {
+  border-radius: 0;
+  padding: 10px;
+  background-color: #5F5F5F;
+  color: white;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
 
 /*bulb*/
 #bulb {

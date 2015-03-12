@@ -1,6 +1,6 @@
 [
   {
-    "id": "angular-translate-seo",
+    "id": "angularjs-seo-for-angular-translate",
     "title": "SEO friendly angular-translate",
     "intro": "SEO is a weak spot for AngularJS to begin with, but the issue takes a different turn when angular-translate is thrown into the mix.",
     "cover": "cover_thumb.jpg",
