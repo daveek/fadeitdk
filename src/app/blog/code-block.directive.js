@@ -19,6 +19,7 @@ function codeBlock($sanitize, $http, $q, $filter){
     loadCodeFile().then(function codeFileLoaded(response){
       //escape the shit of the response
       element[0].innerHTML = $sanitize($filter('htmlEscape')(response));
+      Prism.highlightAll();
     });
   }
 
