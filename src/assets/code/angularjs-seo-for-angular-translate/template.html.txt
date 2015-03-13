@@ -1,6 +1,6 @@
 <a ng-href="{{enUrl}}" target="_self" ng-class="{'active': activeLang === 'en-us'}">
-    <img src="assets/images/gb.svg" alt="Change language to English"/>
+  <img src="assets/images/gb.svg" alt="Change language to English"/>
 </a>
 <a ng-href="{{daUrl}}" target="_self" ng-class="{'active': activeLang === 'da-dk'}">
-    <img src="assets/images/dk.svg" alt="Change language to Danish"/>
+  <img src="assets/images/dk.svg" alt="Change language to Danish"/>
 </a>
