@@ -104,7 +104,7 @@
       },
       {
         "type": "p",
-        "text": "However, now we also have a copy of the site running at /en, so the base tag needs to be appropriate."
+        "text": "In case <em>hreflang</em> caught your eye, you can read more about it <a href=\"https://support.google.com/webmasters/answer/189077?hl=en\">here</a>.<br/>However, now we also have a copy of the site running at /en, so the base tag needs to be appropriate."
       },
       {
         "type": "h",
@@ -154,7 +154,7 @@
       },
       {
         "type": "p",
-        "text": "By using this approach we've avoided coupling language detection with the router. While the potential drawback is that by having a higher language count and a relatively large application, making copy for each language could significantly increase build time. So far we don't see copying as a bottleneck, therefore we don't have a practical need to make it more efficient. It is possible to configure Nginx to only serve index.html files at different path and rest of the static files could be shared between different language applications, thus eliminating the need to make a full copy per language.<br/>At the end of day there is no good way to to play by SEO rules, so hopefully AngularJS 2.0 will change this."
+        "text": "With this approach we have tried to solve as much as possible with configuration, so we've managed not to entangle language awareness with every state in the application. While the potential drawback is that by having a higher language count and a relatively large site, making copy for each language could significantly increase build time. So far we don't see copying as a bottleneck, therefore we don't have a practical need to make it more efficient. It is possible to configure Nginx to only serve index.html files at different path and rest of the static files could be shared between different language applications, thus eliminating the need to make a full copy per language.<br/>At the end of day there is no good way to to play by SEO rules, so hopefully AngularJS 2.0 will change this."
       }
     ]
   }
