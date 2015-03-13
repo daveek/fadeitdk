@@ -37,7 +37,7 @@
       },
       {
         "type": "p",
-        "text": "Okay, perhaps it's a nice practice to have language in the URL. Here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also the ugliest. The other two are relatively similar in terms of looks and it boils down to your personal preference. We went for the second option - keeping the language in a subdirectory."
+        "text": "Okay, perhaps it's a nice practice to have language in the URL. Here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also the ugliest. The other two are relatively similar in terms of looks and it boils down to your personal preference. We went for the second option - having the language in a URL path."
       },
       {
         "type": "p",
