@@ -2794,11 +2794,35 @@ pre[class*='language-']{
   border-bottom:10px solid #E4E4E4;
   background-color:#F5F5F5;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  font-size: 15px;
+  font-size: 13px;
   word-wrap: break-word;
+
+  @media only screen and (min-width:@bp_md){
+    font-size:14px;
+  }
+
+  @media only screen and (min-width:@bp_lg){
+    font-size:14px;
+  }
+
+  @media only screen and (min-width:@bp_xl){
+    font-size:15px;
+  }
 
   span{
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
+
+    @media only screen and (min-width:@bp_md){
+      font-size:14px;
+    }
+
+    @media only screen and (min-width:@bp_lg){
+      font-size:14px;
+    }
+
+    @media only screen and (min-width:@bp_xl){
+      font-size:15px;
+    }
   }
 }
 
