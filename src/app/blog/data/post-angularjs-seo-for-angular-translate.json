@@ -37,7 +37,7 @@
       },
       {
         "type": "p",
-        "text": "Okay, perhaps it's a nice practice to have language in the URL. Here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also the ugliest. The other two are relatively similar and it boils down to your personal preference. We went for the second option - keeping the language in a subdirectory."
+        "text": "Okay, perhaps it's a nice practice to have language in the URL. Here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also the ugliest. The other two are relatively similar in terms of looks and it boils down to your personal preference. We went for the second option - keeping the language in a subdirectory."
       },
       {
         "type": "p",
@@ -122,7 +122,7 @@
       },
       {
         "type": "p",
-        "text": "We are using older version of Grunt, so the option is called processContent instead of process.<br/>HTML5 mode also requires URL rewriting on the server side. If a request is made at example.com/about, the server should still return the index.html page and it is up to Angular router to figure out what to do with the 'about' path variable. In Nginx, this is typically achieved with try_files directive:"
+        "text": "We are using older version of Grunt, so the option is called <em>processContent</em> instead of <em>process</em>.<br/>HTML5 mode also requires URL rewriting on the server side. If a request is made at example.com/about, the server should still return the index.html page and it is up to Angular router to figure out what to do with the 'about' path variable. In Nginx, this is typically achieved with try_files directive:"
       },
       {
         "type": "code",
