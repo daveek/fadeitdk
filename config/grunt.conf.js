@@ -35,7 +35,8 @@ module.exports = {
       './vendor/fingerprint/fingerprint.js',
       './vendor/angular-translate/angular-translate.js',
       './vendor/angular-sanitize/angular-sanitize.js',
-      './vendor/angulike/angulike.js'
+      './vendor/angulike/angulike.js',
+      './vendor/a0-angular-storage/dist/angular-storage.js'
     ],
     vendor_css: [
       //concatenated with 'assets' stylesheets in 'app.min.css'
@@ -64,7 +65,8 @@ module.exports = {
       './vendor/angular-load/angular-load.min.js',
       './vendor/angular-scroll/angular-scroll.min.js',
       './vendor/angular-translate/angular-translate.min.js',
-      './vendor/angular-sanitize/angular-sanitize.min.js'
+      './vendor/angular-sanitize/angular-sanitize.min.js',
+      './vendor/a0-angular-storage/dist/angular-storage.min.js'
     ],
     vendor_js: [
       //doesn't have a min files, will minify

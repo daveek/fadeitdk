@@ -15,38 +15,36 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     data:{
       pageTitle: '404_PAGE_TITLE'
     }
-  })
-  //if more languages will be added, it would make sense to add a separate controller
-   .state('en-us', {
-    url: '/en-us',
-    controller: 'RootController'
-  }).state('da-dk', {
-    url: '/da-dk',
+  });
+  $stateProvider.state('app', {
+    abstract: true,
+    url: '/{lang:(?:da|en)}',
+    template: '<ui-view/>',
     controller: 'RootController'
   });
+  $stateProvider.state('app.root', {
+  url: '',
+    templateUrl: 'views/home-page.html',
+    data:{
+      darkMode: true,
+      pageTitle: 'FRONT_PAGE_TITLE',
+      pageDesc: 'SEO_META_DESC'
+    }
+  });
+
+  $urlRouterProvider.when('/en-us', '/en');
+  $urlRouterProvider.otherwise('/da');
 
   //TURN ON FOR PROD
   $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
-  $urlRouterProvider.otherwise('/');
-
-  /*
-   * Set language, if no setting in localStorage then use da-dk
-   */
-  var retrievedLang = localStorage.getItem('langStore');
-
-  if(retrievedLang && JSON.parse(retrievedLang) && JSON.parse(retrievedLang).lang){
-    $translateProvider.preferredLanguage(JSON.parse(retrievedLang).lang);
-  } else {
-    $translateProvider.preferredLanguage('da-dk');
-  }
 
   /*
    * Translations
    */
-  $translateProvider.translations('en-us', {
-    "ID": 'en-us', //NEEDED for saving language pref.
-    "SWITCH": "da-dk", //NEEDED for switching the language.
+  $translateProvider.translations('en', {
+    "ID": 'en', //NEEDED for saving language pref.
+    "SWITCH": "da", //NEEDED for switching the language.
     "IN_LANGUAGE": "på dansk", //MENU button (switch)
 
     /*
@@ -109,21 +107,30 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * EXPERTISE PAGE
      */
     "EXPERTISE_PAGE_TITLE": "Our expertise",
+    "EXPERTISE_PAGE_TITLE_DRUPAL_DEVELOPMENT": "Drupal Development",
+    "EXPERTISE_PAGE_TITLE_PYTHON_DEVELOPMENT": "Python Development",
+    "EXPERTISE_PAGE_TITLE_ANGULARJS_DEVELOPMENT": "AngularJS Development",
+    "EXPERTISE_PAGE_TITLE_IT_AUTOMATION": "IT Automation",
+    "EXPERTISE_PAGE_TITLE_EXPERIENCE_DESIGN": "Experience Design",
+    "EXPERTISE_PAGE_TITLE_CKAN_DEVELOPMENT": "CKAN Development",
+    "EXPERTISE_PAGE_TITLE_NODEJS_DEVELOPMENT": "NodeJS development",
+    "EXPERTISE_PAGE_TITLE_WEB_CRAWLING": "Web Crawling",
+    "EXPERTISE_PAGE_TITLE_BACKEND_DEVELOPMENT": "Backend Development",
     "EXPERTISE_SUMMARY": "We've been developing a variety of web and mobile appications. We design cross-platform concepts and experiences. We automate systems and simplify processes.",
-    "EXPERTISE_DRUPAL": "Planning a medium to large size, highly-customizable modern website with awesome community support? Looks like you're talking about Drupal. We can build a custom installation profile, theme or module for you. Also, we can provide you with Drupal site maintenance, testing and support.",
-    "EXPERTISE_PYTHON": "Sometimes Content Management Systems just don't cut it. At fadeit, we love Python and its Web Stack and we can build custom web apps using Flask micro framework.",
-    "EXPERTISE_ANGULARJS": "Abstracting the front-end will allow you to develop scalable, maintainable and reusable applications. Single page apps will also drastically simplify the server side logic and improve the performance of the interface.",
-    "EXPERTISE_IT_AUTO_TITLE": "IT Automation",
-    "EXPERTISE_IT_AUTO": "Perhaps you've heard some legends about IT companies where new developers are able to commit code on their very first day and push to production on their first week? Well, it's not a miracle and it's possible to achieve this in your company too. We embrace DevOps and Infrastructure as Code mentality. Give us a call if you need a dedicated automation ninja to help you with Puppet, Docker or Vagrant.",
-    "EXPERTISE_XP_DESIGN_TITLE": "Experience Design",
-    "EXPERTISE_XP_DESIGN": "Our strong background in experience design will complement your innovation efforts and help you build a better product. We'll be happy to develop concepts together, responsive interfaces and try to push your brand strategy one step further.",
+    "EXPERTISE_DRUPAL_DEVELOPMENT": "Planning a medium to large size, highly-customizable modern website with awesome community support? Looks like you're talking about Drupal. We can build a custom installation profile, theme or module for you. Also, we can provide you with Drupal site maintenance, testing and support.",
+    "EXPERTISE_PYTHON_DEVELOPMENT": "Sometimes Content Management Systems just don't cut it. At fadeit, we love Python and its Web Stack and we can build custom web apps using Flask micro framework.",
+    "EXPERTISE_ANGULARJS_DEVELOPMENT": "Abstracting the front-end will allow you to develop scalable, maintainable and reusable applications. Single page apps will also drastically simplify the server side logic and improve the performance of the interface.",
+    "EXPERTISE_IT_AUTOMATION_TITLE": "IT Automation",
+    "EXPERTISE_IT_AUTOMATION": "Perhaps you've heard some legends about IT companies where new developers are able to commit code on their very first day and push to production on their first week? Well, it's not a miracle and it's possible to achieve this in your company too. We embrace DevOps and Infrastructure as Code mentality. Give us a call if you need a dedicated automation ninja to help you with Puppet, Docker or Vagrant.",
+    "EXPERTISE_EXPERIENCE_DESIGN_TITLE": "Experience Design",
+    "EXPERTISE_EXPERIENCE_DESIGN": "Our strong background in experience design will complement your innovation efforts and help you build a better product. We'll be happy to develop concepts together, responsive interfaces and try to push your brand strategy one step further.",
     "EXPERTISE_OPEN_DATA_TITLE": "Open Data",
-    "EXPERTISE_OPEN_DATA": "Openness and transparency is the key to the government that you want. If you are looking to build or extend an Open Data site, we’re here to help. We have experience with building large CKAN portals complete with Drupal integration.",
-    "EXPERTISE_NODEJS": "Javascript no longer runs in the browser - NodeJS offers concurrency model suitable for web applications dealing with data in real-time. We develop communications applications with socket.io, custom modules for most popular Internet of Things routing software Node-RED and lightweight express.js backends.",
-    "EXPERTISE_WEB_CRAWLERS_TITLE": "Web Crawlers",
-    "EXPERTISE_WEB_CRAWLERS": "Want to get some public data from the web into your database but can’t find an API endpoint? We build custom web spiders so pay us a call if you need help.",
-    "EXPERTISE_BACKENDS_TITLE": "Custom Back-ends",
-    "EXPERTISE_BACKENDS": " We offer expertise with various server backend systems. Some of the things that we can do:<br/><br/> - ElasticSearch/Solr server setup, configuration<br/> - Building RESTful APIs<br/> - PostgreSQL/MySQL server setup, configuration<br/> - Setting up Nginx and Varnish reverse proxies<br/>",
+    "EXPERTISE_CKAN_DEVELOPMENT": "Openness and transparency is the key to the government that you want. If you are looking to build or extend an Open Data site, we’re here to help. We have experience with building large CKAN portals complete with Drupal integration.",
+    "EXPERTISE_NODEJS_DEVELOPMENT": "Javascript no longer runs in the browser - NodeJS offers concurrency model suitable for web applications dealing with data in real-time. We develop communications applications with socket.io, custom modules for most popular Internet of Things routing software Node-RED and lightweight express.js backends.",
+    "EXPERTISE_WEB_CRAWLING_TITLE": "Web Crawlers",
+    "EXPERTISE_WEB_CRAWLING": "Want to get some public data from the web into your database but can’t find an API endpoint? We build custom web spiders so pay us a call if you need help.",
+    "EXPERTISE_BACKEND_TITLE": "Custom Back-ends",
+    "EXPERTISE_BACKEND_DEVELOPMENT": " We offer expertise with various server backend systems. Some of the things that we can do:<br/><br/> - ElasticSearch/Solr server setup, configuration<br/> - Building RESTful APIs<br/> - PostgreSQL/MySQL server setup, configuration<br/> - Setting up Nginx and Varnish reverse proxies<br/>",
     "EXPERTISE_TOOLBOX_LINK": "Looking for more? Take a look at our {{toolbox}} and have some fun with it!",
 
     /*
@@ -305,9 +312,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company"
   });
 
-  $translateProvider.translations('da-dk', {
-    "ID": 'da-dk', //NEEDED for saving language pref.
-    "SWITCH": "en-us", //NEEDED for switching the language.
+  $translateProvider.translations('da', {
+    "ID": 'da', //NEEDED for saving language pref.
+    "SWITCH": "en", //NEEDED for switching the language.
     "IN_LANGUAGE": "in english", //MENU button (switch)
         /*
      * 404
@@ -369,21 +376,30 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * EXPERTISE PAGE
      */
     "EXPERTISE_PAGE_TITLE": "Det vi gør",
+    "EXPERTISE_PAGE_TITLE_DRUPAL_DEVELOPMENT": "Drupal Udvikling",
+    "EXPERTISE_PAGE_TITLE_PYTHON_DEVELOPMENT": "Python Udvikling",
+    "EXPERTISE_PAGE_TITLE_ANGULARJS_DEVELOPMENT": "AngularJS Udvikling",
+    "EXPERTISE_PAGE_TITLE_IT_AUTOMATION": "IT Automatisering",
+    "EXPERTISE_PAGE_TITLE_EXPERIENCE_DESIGN": "Experience Design",
+    "EXPERTISE_PAGE_TITLE_CKAN_DEVELOPMENT": "CKAN Udvikling",
+    "EXPERTISE_PAGE_TITLE_NODEJS_DEVELOPMENT": "NodeJS Udvikling",
+    "EXPERTISE_PAGE_TITLE_WEB_CRAWLING": "Web Spider",
+    "EXPERTISE_PAGE_TITLE_BACKEND_DEVELOPMENT": "Backend Udvikling",
     "EXPERTISE_SUMMARY": "Vi har udviklet en stor vifte af forskellige web og mobil applikationer. Vi designer på tværs af platforme, koncepter og erfaringer. Vi automatiserer systemer og forenkle processer.",
-    "EXPERTISE_DRUPAL": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
-    "EXPERTISE_PYTHON": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
-      "EXPERTISE_ANGULARJS": "Angular JS tillader at vi kan udvikle skalerbare, vedligeholdelsesfrie og genbrugeligt software. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af dit software så brugerens oplevelse er flydende.",
-    "EXPERTISE_IT_AUTO_TITLE": "IT Automatisering",
-    "EXPERTISE_IT_AUTO": "Måske har du hørt legender om at udviklingsvirksomheder hvor nye udviklere kunne udgive deres applikationer på deres første dag? Tjaa, det er absolut ikke et mirakel og det er faktisk heller ikke umuligt at opnå. Vi arbejder med DevOps og Infrastructure som vores kode mentalitet. Giv os et kald hvis du har brug for en dedikeret kode ninja der kan hjælpe dig med Puppet, Docker eller Vagrant.",
-    "EXPERTISE_XP_DESIGN_TITLE": "Experience Design",
-    "EXPERTISE_XP_DESIGN": "Vores baggrund med experience design vil kunne udvikle dine tanker og hjælper dig til at bygge et langt bedre produkt. Vi elsker at udvikle koncepter sammen med vores kunder.",
+    "EXPERTISE_DRUPAL_DEVELOPMENT": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
+    "EXPERTISE_PYTHON_DEVELOPMENT": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
+      "EXPERTISE_ANGULARJS_DEVELOPMENT": "Angular JS tillader at vi kan udvikle skalerbare, vedligeholdelsesfrie og genbrugeligt software. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af dit software så brugerens oplevelse er flydende.",
+    "EXPERTISE_IT_AUTOMATION_TITLE": "IT Automatisering",
+    "EXPERTISE_IT_AUTOMATION": "Måske har du hørt legender om at udviklingsvirksomheder hvor nye udviklere kunne udgive deres applikationer på deres første dag? Tjaa, det er absolut ikke et mirakel og det er faktisk heller ikke umuligt at opnå. Vi arbejder med DevOps og Infrastructure som vores kode mentalitet. Giv os et kald hvis du har brug for en dedikeret kode ninja der kan hjælpe dig med Puppet, Docker eller Vagrant.",
+    "EXPERTISE_EXPERIENCE_DESIGN_TITLE": "Experience Design",
+    "EXPERTISE_EXPERIENCE_DESIGN": "Vores baggrund med experience design vil kunne udvikle dine tanker og hjælper dig til at bygge et langt bedre produkt. Vi elsker at udvikle koncepter sammen med vores kunder.",
     "EXPERTISE_OPEN_DATA_TITLE": "Open Data",
-    "EXPERTISE_OPEN_DATA": "Åbenhed og gennemsigtighed er nøglen til den regering du gerne vil have. Hvis du skal bygge eller udvide et Open Data software, står vi til rådighed. Vi har stor expertise i forbindelse med at udvikle større CKAN portaler integreret med bl.a. Drupal infrastruktur.",
-    "EXPERTISE_NODEJS": "Javascript afvikles ikke mere i din browser - NodeJS byder derimod på en model som er velegnet til web applikationer med data i real-time. Vi udvikler kommunikations applikationer med socket.io, custom moduler i forbindelse med Internet of Things routing software Node-RED og express.js backends.",
-    "EXPERTISE_WEB_CRAWLERS_TITLE": "Web Crawlers",
-    "EXPERTISE_WEB_CRAWLERS": "Har du brug for at få offentlig data ind i din database, men kan ikke finde en indgang? Vi bygger custom web spiders så giv os et kald, hvis du har brug for hjælp.",
-    "EXPERTISE_BACKENDS_TITLE": "Custom Back-ends",
-    "EXPERTISE_BACKENDS": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
+    "EXPERTISE_CKAN_DEVELOPMENT": "Åbenhed og gennemsigtighed er nøglen til den regering du gerne vil have. Hvis du skal bygge eller udvide et Open Data software, står vi til rådighed. Vi har stor expertise i forbindelse med at udvikle større CKAN portaler integreret med bl.a. Drupal infrastruktur.",
+    "EXPERTISE_NODEJS_DEVELOPMENT": "Javascript afvikles ikke mere i din browser - NodeJS byder derimod på en model som er velegnet til web applikationer med data i real-time. Vi udvikler kommunikations applikationer med socket.io, custom moduler i forbindelse med Internet of Things routing software Node-RED og express.js backends.",
+    "EXPERTISE_WEB_CRAWLING_TITLE": "Web Crawlers",
+    "EXPERTISE_WEB_CRAWLING": "Har du brug for at få offentlig data ind i din database, men kan ikke finde en indgang? Vi bygger custom web spiders så giv os et kald, hvis du har brug for hjælp.",
+    "EXPERTISE_BACKEND_TITLE": "Custom Back-ends",
+    "EXPERTISE_BACKEND_DEVELOPMENT": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
     "EXPERTISE_TOOLBOX_LINK": "Fandt du ikke det du kom efter? Tag et kig i vores {{toolbox}} og ha' lidt sjov med det!",
 
     /*

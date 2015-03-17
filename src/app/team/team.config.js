@@ -4,7 +4,7 @@ angular.module('fadeit.teamPage').config(teamPageConfig);
 
 teamPageConfig.$inject = ['$stateProvider'];
 function teamPageConfig($stateProvider){
-  $stateProvider.state('team', {
+  $stateProvider.state('app.team', {
     url: '/team',
     templateUrl: 'views/team-page.html',
     data:{

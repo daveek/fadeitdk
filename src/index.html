@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{root.langId}}" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="RootController as root">
+<html lang="{{activeLang}}" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="RootController as root">
 <head>
   <title data-ng-bind="root.htmlTitle">fadeit - software udviklingsvirksomhed</title>
 
@@ -10,7 +10,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <!-- Google hreflang -->
-  <link rel="alternate" hreflang="{{root.langId}}" href="http://fadeit.dk/{{'ID' | translate}}" />
+  <link rel="alternate" hreflang="en" href="http://fadeit.dk/en" />
+  <link rel="alternate" hreflang="da" href="http://fadeit.dk/da" />
   <base href="/">
   <meta name="fragment" content="!">
 

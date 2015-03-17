@@ -11,7 +11,8 @@ function toolboxConfig($stateProvider){
     templateUrl: 'views/toolbox-page.html',
     data:{
       pageTitle: 'TOOLBOX_PAGE_TITLE',
-      pageDesc: 'A software toolbox experiment'
+      pageDesc: 'A software toolbox experiment',
+      toolboxPage: true,
     }
   });
 }

@@ -11,7 +11,9 @@ function blogConfig($stateProvider){
     controllerAs: 'vm',
     data:{
       pageTitle: 'BLOG_PAGE_TITLE',
-      pageDesc: 'BLOG_SUMMARY'
+      pageDesc: 'BLOG_SUMMARY',
+      multiLang: false,
+      defaultLang: 'en',
     }
   }).state('blog-posts', {
     url: '/post/:postId',
@@ -20,7 +22,10 @@ function blogConfig($stateProvider){
     templateUrl: 'views/blog-page.html',
     data:{
       pageTitle: 'BLOG_PAGE_TITLE',
-      pageDesc: 'BLOG_SUMMARY'
+      pageDesc: 'BLOG_SUMMARY',
+      blogMode: true,
+      multiLang: false,
+      defaultLang: 'en',
     }
   });
 }

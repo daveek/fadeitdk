@@ -4,7 +4,7 @@ angular.module('fadeit.aboutUs').config(aboutUsConfig);
 
 aboutUsConfig.$inject = ['$stateProvider'];
 function aboutUsConfig($stateProvider){
-  $stateProvider.state('about-us', {
+  $stateProvider.state('app.about-us', {
     url: '/about',
     templateUrl: 'views/about-us-page.html',
     data:{

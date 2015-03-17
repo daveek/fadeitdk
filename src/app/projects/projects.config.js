@@ -4,7 +4,7 @@ angular.module('fadeit.projects').config(projectsConfig);
 
 projectsConfig.$inject = ['$stateProvider'];
 function projectsConfig($stateProvider){
-  $stateProvider.state('projects', {
+  $stateProvider.state('app.projects', {
     url: '/project/:projectId',
     controller: 'ProjectsController',
     controllerAs: 'vm',

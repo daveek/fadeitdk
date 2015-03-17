@@ -8,27 +8,27 @@
 
     <ul class="menu-link-list" ng-hide="root.toolboxPage" id="global-menu">
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="home" class="menu-anchor main-menu-anchor" translate>
+        <a href ui-sref="app.root({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
           NAV_STORY
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="expertise" class="menu-anchor main-menu-anchor" translate>
+        <a href ui-sref="app.expertise({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
           NAV_EXPERTISE
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="our-work" class="menu-anchor main-menu-anchor" translate>
+        <a href ui-sref="app.our-work({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
           NAV_OUR_WORK
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="team" class="menu-anchor main-menu-anchor" translate>
+        <a href ui-sref="app.team({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
           NAV_TEAM
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="contact" class="menu-anchor main-menu-anchor" translate>
+        <a href ui-sref="app.contact({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
           NAV_CONTACT
         </a>
       </li>
@@ -38,12 +38,12 @@
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="about-us" class="menu-anchor main-menu-anchor" translate>
+        <a href ui-sref="app.about-us({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
           NAV_ABOUT
         </a>
       </li>
-      <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href class="menu-anchor main-menu-anchor language-anchor" ng-click="root.changeLanguage('SWITCH', 'ID')" translate>
+      <li ng-if="root.multiLang" class="menu-link-item" ui-sref-active="activeMenu">
+        <a ng-href="{{otherLangURL}}" class="menu-anchor main-menu-anchor" translate>
           IN_LANGUAGE
         </a>
       </li>

@@ -4,7 +4,7 @@ angular.module('fadeit.apply').config(applyConfig);
 
 applyConfig.$inject = ['$stateProvider'];
 function applyConfig($stateProvider){
-  $stateProvider.state('apply', {
+  $stateProvider.state('app.apply', {
     url: '/apply',
     controller: 'ApplyController',
     controllerAs: 'vm',

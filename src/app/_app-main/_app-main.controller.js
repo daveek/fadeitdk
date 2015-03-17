@@ -1,21 +1,18 @@
 angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
 
-rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope', '$location'];
-function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope, $location) {
+rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope', '$location', 'store'];
+function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope, $location, store) {
   var vm = this,
       wow;
   vm.pageTitle = 'fadeit';
   vm.htmlTitle = $filter('translate')('SEO_TITLE_APPEND');
-  vm.pageDesc = $filter('translate')('SEO_META_DESC');
-  vm.darkMode = false;
+  vm.pageDesc = $filter('translate')('SEO_META_DESC').replace(/<[^>]+>/gm, '');
   vm.toolboxPage = false;
 
-  //set the canonical URL
   var port = $location.port();
-  if(port  === 80 || port === 443){
-      port = '';
-  }
-  vm.pageURL = $location.protocol() + "://" + $location.host() + $location.path(); //not using port
+  //Port can be omitted on 80 or 443
+  port = (port === 80 || port === 443) ? '' : ':' + port;
+  vm.pageURL = $location.protocol() + '://' + $location.host() + port;
 
   //setting fb app id
   $rootScope.facebookAppId = 377735055715546;
@@ -28,7 +25,49 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
    *
    */
   $scope.$on('$stateChangeSuccess', function rootStateChangeSuccess(event, toState){
+    var defaultState = {
+        multiLang: true,
+        scrollTop: true,
+        darkMode: false,
+        toolboxPage: false,
+        blogMode: false,
+    };
+    angular.extend(vm, defaultState);
+    angular.extend(vm, toState.data);
     wow.init();
+    var absUrl = $location.absUrl();
+    $scope.activeState = toState.name;
+    //NB! gotta look out for accidental match e.g fadeit.dk/end (would match /en)
+    if(absUrl.indexOf('/en') !== -1){
+        $rootScope.activeLang = 'en'; //Used in html head
+        $scope.otherLangURL = $location.absUrl().replace('/en', '/da');
+    }
+    else if(absUrl.indexOf('/da') !== -1){
+        $rootScope.activeLang = 'da';
+        $scope.otherLangURL = $location.absUrl().replace('/da', '/en');
+    }
+    else{
+        //default to danish, try localstorage & state default overrides
+        $rootScope.activeLang = 'da';
+        $scope.otherLangURL = $location.absUrl().replace('/da', '/en');
+        var storedLang = store.get('activeLang');
+        if(storedLang){
+            if(storedLang === 'en'){
+                $rootScope.activeLang = 'en';
+                $scope.otherLangURL = $location.absUrl().replace('/en', '/da');
+            }
+        }
+        else{
+            //fallback to default override
+            if(toState.data.defaultLang !== undefined){
+                $rootScope.activeLang = 'en';
+                $scope.otherLangURL = $location.absUrl().replace('/en', '/da');
+            }
+        }
+    }
+    $translate.use($scope.activeLang);
+    store.set('activeLang', $scope.activeLang);
+
     /*
      * updates the <title> and meta description tag if the new route has a pageTitle/pageDesc set
      * (vm.htmlTitle is binded to the title tag)
@@ -50,7 +89,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
         $scope.$watch(function(){
           return $filter('translate')(toState.data.pageDesc);
         }, function(newValue){
-          vm.pageDesc = newValue;
+          vm.pageDesc = newValue.replace(/<[^>]+>/gm, '');
         });
       }
     }
@@ -59,48 +98,9 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
      * update canonical url
      */
     vm.pageURL = $location.protocol() + "://" + $location.host() + $location.path();
-
-    /*
-     * if next state is home, turn dark mode on
-     */
-    if(toState.name === 'home'){
-      vm.darkMode = true;
-    } else {
-      vm.darkMode = false;
+    if(vm.scrollTop){
+      angular.element('html,body').animate({scrollTop: 0}, 1);
     }
-
-    /*
-     * if the state is toolbox, don't show footer
-     */
-    if(toState.name === 'toolbox'){
-      vm.toolboxPage = true;
-    } else {
-      vm.toolboxPage = false;
-    }
-
-    /*
-     * blog state add a class to 'nav-container'
-     */
-    if(toState.name === 'blog-posts'){
-      vm.blogMode = true;
-    } else {
-      vm.blogMode = false;
-    }
-
-    /*
-     * if the user navigates to one of the language-setting pages
-     */
-    if(toState.name === 'da-dk'){
-      vm.changeLanguage('da-dk', 'da-dk');
-      $state.go('home');
-    }
-
-    if(toState.name === 'en-us'){
-      vm.changeLanguage('en-us', 'en-us');
-      $state.go('home');
-    }
-
-    angular.element('html,body').animate({scrollTop: 0}, 1);
   });
 
   /*
@@ -119,7 +119,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
   });
 
   $scope.$on('changedDesc', function changedPage(event, pageDesc){
-    vm.pageDesc = $filter('translate')(pageDesc);
+    vm.pageDesc = $filter('translate')(pageDesc).replace(/<[^>]+>/gm, '');
   });
 
   /*
