@@ -27,7 +27,7 @@
       <section class="row-fluid post-content-fluid" ng-if="vm.post">
         <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 post-heading">
           <p class="post-author">
-            <span ng-bind="vm.post.author.name" class="author-name"></span>
+            <a ng-href="{{vm.post.author.gplus}}" class="author-name">{{vm.post.author.name}}</a>
             <span ng-bind="vm.post.author.job_title" class="author-title"></span>
             <span class="author-image">
               <img ng-src="{{vm.post.author.photo}}" alt="{{vm.post.author.name}} - {{vm.post.author.job_title}} at fadeit"/>
