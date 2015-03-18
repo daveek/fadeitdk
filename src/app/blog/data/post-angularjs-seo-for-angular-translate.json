@@ -159,7 +159,7 @@
       },
       {
         "type": "p",
-        "text": "We have jumped through several hoops in order to get rid of the comfort angular-translate provides. Fortunately we can bring some of it back - authenticated users are not crawlers, so we can display 'quick links' for them while displaying SEO friendly cross-links to unauthenticated users:"
+        "text": "We have jumped through several hoops in order to get rid of the comfort angular-translate provides. Fortunately we can bring some of it back - authenticated users are not crawlers, so we can display 'quick buttons' for them while displaying SEO friendly cross-links to unauthenticated users:"
       },
       {
         "type": "code",
