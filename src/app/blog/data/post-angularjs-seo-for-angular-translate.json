@@ -38,7 +38,7 @@
       },
       {
         "type": "p",
-        "text": "Okay, perhaps it's a nice practice to have language in the URL. Here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also the ugliest. The other two are relatively similar in terms of looks and it boils down to your personal preference. We went for the second option - having the language in a URL path."
+        "text": "Okay, perhaps it's a nice practice to have language in the URL. Here are the options:<br/><ol><li>Store the language in a GET parameter e.g: <b>example.com/about?lang=en</b></li><li>Store the language in a path e.g: <b>example.com/en/about</b></li><li>Store the language in a sub-domain e.g: <b>en.example.com/about</b></li></ol>While the first option would be the easiest to implement, it is also the ugliest. The other two are relatively similar in terms of appearance and it boils down to your personal preference. An important distincion to make is that if language is stored in a sub-domain, it excludes the possibility of handling the routing with angular as subdomain is out of application router scope. We decided to explore the second option - having the language in a URL path."
       },
       {
         "type": "p",
@@ -51,7 +51,7 @@
       },
       {
         "type": "p",
-        "text": "It is likely that by the time SEO becomes a priority, the application is already built and refactoring the code does not sound appealing. Changing state names and parameters requires us to go over all existing links. Since nesting all states does not seem like a good practice to begin with, we set out to find an alternative approach."
+        "text": "It is likely that by the time SEO becomes a priority, the application is already built and refactoring code does not sound appealing. To name a few, using ui-router has following downsides:<ul><li>Language slug becomes mandatory for each state, so example.com/about would become example.com/da/about</li><li>All child state names need to be changed<li>All links have to be refactored</li></ul>We'll be taking a closer look at ui-router in a separate post soon, while this article focuses on finding an alternative configuration-based approach."
       },
       {
         "type": "h",
@@ -141,7 +141,25 @@
       },
       {
         "type": "p",
-        "text": "Finally, SEO friendly multilingual application!<br/>In the process of doing so, we have jumped through several hoops in order to get rid of the comfort angular-translate provides. Fortunately we can bring some of it back - authenticated users are not crawlers, so we must only display SEO friendly cross-links to unauthenticated users:"
+        "text": "Finally, SEO friendly multilingual application!<br/>Now that we've established that there is no way around configuring web server, let's make most of it! Since the only file that actually changed is index.html, there is no real need to copy other resources. We start out by changing the grunt copy task to only copy index file to same directory and rename it to index.en.html:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "grunt-rename.js.txt"
+      },
+      {
+        "type": "p",
+        "text": "Now Nginx 'en' location needs to serve index.en.html instead of index.html, otherwise it should ignore /en/ part of the URL when serving static files. We will use regular expression to match /en and capture everything that comes after into $1. Then we use captured group in try_files directive:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "file": "nginx-regex.conf.txt"
+      },
+      {
+        "type": "p",
+        "text": "We have jumped through several hoops in order to get rid of the comfort angular-translate provides. Fortunately we can bring some of it back - authenticated users are not crawlers, so we can display 'quick links' for them while displaying SEO friendly cross-links to unauthenticated users:"
       },
       {
         "type": "code",
@@ -155,7 +173,7 @@
       },
       {
         "type": "p",
-        "text": "With this approach we have tried to solve as much as possible with configuration, so we've managed not to entangle language awareness with every state in the application. While the potential drawback is that by having a higher language count and a relatively large site, making copy for each language could significantly increase build time. So far we don't see copying as a bottleneck, therefore we don't have a practical need to make it more efficient. It is possible to configure Nginx to only serve index.html files at different path and rest of the static files could be shared between different language applications, thus eliminating the need to make a full copy per language.<br/>At the end of day there is no good way to to play by SEO rules, so hopefully AngularJS 2.0 will change this."
+        "text": "With this approach we have tried to solve as much as possible with configuration, so we've managed not to entangle language awareness with every state in the application. While ui-router configuration would be preferred, it does not come without limitations: ui-router can not be used for sub-domains and ui-router enforces using language in every url rather than having it as optional parameter.<br/>At the end of day there is no good way to to play by SEO rules, so hopefully AngularJS 2.0 will change this."
       }
     ]
   }

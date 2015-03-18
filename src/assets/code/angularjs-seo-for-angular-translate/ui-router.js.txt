@@ -1,14 +1,18 @@
 angular.module('app').config([
-  '$stateProvider', function($stateProvider) {
+  '$stateProvider', function ($stateProvider) {
     $stateProvider.state('app', {
       abstract: true,
-      url: '/{locale}'
+      url: '/{lang:(?:da|en)}',
+      template: '<ui-view/>',
+      controller: 'RootController'
     });
     $stateProvider.state('app.root', {
-      url: ''
+      url: '',
+      templateUrl: 'views/home.html',
     });
-    return $stateProvider.state('app.root.about', {
-      url: '/about'
+    $stateProvider.state('app.about', {
+      url: '',
+      templateUrl: 'views/about.html',
     });
   }
 ]); 
