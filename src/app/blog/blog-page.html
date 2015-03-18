@@ -6,7 +6,7 @@
       </h3>
     </section>
 
-    <section class="row-fluid outstanding-container blog-outstanding" style="background-image: url(src/assets/img/blog/{{vm.post.id}}/{{vm.post.cover}});" ng-if="vm.post">
+    <section class="row-fluid outstanding-container blog-outstanding" style="background-image: url(posts/{{vm.post.id}}/{{vm.post.cover}});" ng-if="vm.post">
       <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
         <section class="row-fluid single-post blog-row">
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-offset-0 col-lg-24 post-description">
@@ -73,7 +73,7 @@
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="code">
-            <pre class="code-toolbar"><code class="language-{{content.language}}" data-language="{{content.language}}" code-block="src/assets/code/{{vm.post.id}}/{{content.file}}"><br/>Loading code...</code></pre>
+            <pre class="code-toolbar"><code class="language-{{content.language}}" data-language="{{content.language}}" code-block="posts/{{vm.post.id}}/{{content.file}}"><br/>Loading code...</code></pre>
           </section>
         </section>
       </section>
