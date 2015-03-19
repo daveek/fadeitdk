@@ -27,7 +27,7 @@
       },
       {
         "type": "img",
-        "url": "src/assets/img/blog/what-we-like-on-the-web-this-year/giant-steps-medias-site.jpg",
+        "url": "posts/what-we-like-on-the-web-this-year/giant-steps-medias-site.jpg",
         "caption": "A screenshot of the Giant Steps Media website"
       },
       {
@@ -41,7 +41,7 @@
       },
       {
         "type": "img",
-        "url": "src/assets/img/blog/what-we-like-on-the-web-this-year/rally-interactive.jpg",
+        "url": "posts/what-we-like-on-the-web-this-year/rally-interactive.jpg",
         "caption": "A screenshot of the Rally Interactive website"
       },
       {
@@ -55,7 +55,7 @@
       },
       {
         "type": "img",
-        "url": "src/assets/img/blog/what-we-like-on-the-web-this-year/google-experiments.jpg",
+        "url": "posts/what-we-like-on-the-web-this-year/google-experiments.jpg",
         "caption": "A screenshot of the 1000th Chrome Experiment"
       },
       {
