@@ -1,0 +1,100 @@
+/*
+ * The data format is JSON
+ * Check if it's valid on http://jsonformatter.curiousconcept.com/
+ */
+[
+  {
+    /*
+     * BEGIN LIST DATA
+     *
+     * List data represents the post 'meta'.
+     * All the properties are required and can only be text.
+     * You need to duplicate the meta in post-list.json to display your post in the index.
+     * (feel free to implement a better solution if it gets rid of the duplicate data)
+     */
+
+    /*
+     * @id
+     *
+     * The JSON file holding the post content will be called 'content.json'
+     *
+     * Ids should be at least 3 words long.
+     * Place this file in src/posts/your-post-id/content.json for consistency.
+     *
+     * The id is also the default location for the post cover.
+     * Place you cover in src/posts/your-post-id/cover.jpg
+     * You can rename it below.
+     *
+     */
+    "id": "fadeit-blog-is-live", //The post id is also the url: fadeit.dk/post/@id
+    "title": "Blog: open for business", //Post title (<h1>) and meta title (<title>)
+    "intro": "We're super excited to launch a blog section on our website. We'll be writing about design, tech, code and everything in between.", //Post intro and meta description
+    "cover": "cover.jpg",
+    "date": "2015-03-07T19:28:14.465Z", //console.log(JSON.stringify(new Date()));
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg", //get your photo URL from the team page or hack the filename
+      "job_title": "Experience designer"
+    },
+    /*
+     * END LIST DATA
+     */
+
+    /*
+     * BEGIN POST CONTENT
+     * A loop will evaluate each object in the content Array and create the appropriate HTML markup
+     *
+     * Content can be: p (paragraph), h (heading), quote, cover (stretching image), img (normal image), video and code
+     * Paragraphs can contain html elements
+     *
+     */
+    "content": [
+      {
+        "type": "p",
+        "text": "Here's <b>text</b>" //HTML is allowed
+      },
+      {
+        "type": "h",
+        "number": 2, //this will be a <h2>, also works with 2, 3, 4, 5, 6. Default is 2.
+        "text": "Here's a heading" //HTML is allowed if *really* needed
+      },
+      {
+        "type": "quote",
+        "text": "Quote text,
+        "ref": "https://support.google.com/webmasters/answer/182192", //reference to your quote
+        "reverse": false //optional, will float elements to right
+      },
+      {
+        "type": "cover", //a image that stretches to cover the entire screen width - ask Dan for cover images, he has some prepared
+        "height": 520, //required
+        "url": "posts/your-post-id/read.jpg", //you need to specify the full path for images, that means they can also be hosted somewhere else
+        "caption": "Here's a image" //optional, but will be displayed as the 'alt' attribute. HTML NOT allowed
+      },
+      {
+        "type": "img", //a image that will not stretch outside the body of the post
+        "url": "posts/your-post-id/read.jpg", //same as cover
+        "caption": "Here's a image" //same as cover
+        //doesn't need height
+      },
+      {
+        "type": "video",
+        "vendor": "youtube", //a youtube video
+        "height": 520,
+        "url": "https://www.youtube.com/embed/z33tH-JdPDg",
+        "caption": "Here's a video" //optional
+      },
+      {
+        "type": "video",
+        "vendor": "vimeo", //a vimeo video
+        "height": 520,
+        "url": "https://player.vimeo.com/video/29469155?color=0fade1",
+        "caption": "Here's a video" //optional
+      },
+      {
+        "type": "code", //a code block
+        "language": "javascript", //language of the code, see http://prismjs.com/download.html#category-languages for a full list of languages
+        "file": "sample.code.txt" //the file to load the code block from. Place it in /posts/your-post-id/sample.code.txt
+      }
+    ]
+  }
+]

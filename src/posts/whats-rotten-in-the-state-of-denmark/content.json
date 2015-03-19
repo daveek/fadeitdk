@@ -1,0 +1,36 @@
+[
+  {
+    "id": "whats-rotten-in-the-state-of-denmark",
+    "title": "What's rotten in the state of Denmark?",
+    "intro": "We couldn't find what's rotten, but we have something better! We discovered Danish(tm) and it quickly became our new favorite place to read about danish design and architecture.",
+    "cover": "cover.jpg",
+    "date": "2015-02-28T21:16:14.465Z",
+    "author": {
+      "name": "Dan Mindru",
+      "gplus": "https://plus.google.com/+MindruDan?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": "A few months ago <a href='http://danish.tm' target='_blank'>Danish(tm)</a> released a major update of their website. Since 2012, they have been promoting danish design and frequently posting beautiful content on social media. Their aim is to reveal what makes Denmark one of the top countries when it comes to design. Moreover, they like to keep a list of the most influential local design companies, <a href='http://www.normann-copenhagen.com/' taget='_blank'>Norman Copenhagen</a>, <a href='http://www.cfmoller.com/' taget='_blank'>C.F. MØLLER</a> or even <a href='http://www.lego.com/' taget='_blank'>the Lego Group.</a>"
+      },
+      {
+        "type": "cover",
+        "height": 520,
+        "url": "src/assets/img/blog/whats-rotten-in-the-state-of-denmark/danish-tm.jpg",
+        "caption": "A screenshot of the Danish(tm) about page."
+      },
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Keep an eye out and you won't be disappointed"
+      },
+      {
+        "type": "p",
+        "text": "If you want to see some of the most inspiring desings in Denmark, we highly recommend that you follow their articles or some of the social media accounts."
+      }
+    ]
+  }
+]

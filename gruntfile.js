@@ -440,8 +440,8 @@ module.exports = function(grunt) {
         livereload: true
       },
       src_js: {
-        files: ['./src/**/*.js', './src/**/*.json'],
-        tasks: ['newer:jshint:src_js', 'newer:copy:build_app_js', 'newer:copy:build_app_data']
+        files: ['./src/**/*.js', './src/**/*.json', './src/**/*.txt'],
+        tasks: ['newer:jshint:src_js', 'newer:copy:build_app_js', 'newer:copy:build_app_data', 'newer:copy:build_blog_posts']
       },
       src_html: {
         files: ['./src/**/*.html', '!./src/index.html'],
@@ -469,7 +469,7 @@ module.exports = function(grunt) {
       tests: {
         files: ['src/**/*.spec.js', 'src/**/*.e2e.js', 'src/**/*.protractor.js'],
         tasks: ['newer:copy:build_karma', 'newer:copy:build_unit', 'newer:copy:build_protractor']
-      }
+      },
     }
   };
 

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sqlalchemy-postgresql-earthdistance",
+    "title": "SQLAlchemy with earthdistance extension",
+    "intro": "Postgresql has a handy extension for calculating distances between coordinates on earth, we are looking at how it all fits into SQLAlchemy ORM.",
+    "cover": "cover_wide.jpg",
+    "date": "2015-03-19T19:30:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": "The fact that Earth is round, but not a sphere makes calculating distances difficult. Fortunately PostgreSQL has an extension for just doing that - earthdistance. Doing the calculations in the database is superior as extensions are compiled and it enables us to build an index to reduce the amount of calculations needed to make at query time. I came across <a href=\"http://johanndutoit.net/searching-in-a-radius-using-postgres/\">this</a> article to get me started, however considering I spent more time on making earthdistance work with SQLAlchemy, I decided to share my solution. The example below assumes that you already have earthdistance set up and working with a ORM model class 'Company' that has 'lat' and 'lng' fields present."
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "file": "query.py.txt"
+      },
+      {
+        "type": "p",
+        "text": "To speed up things, we can pre-compute <em>ll_to_earth(Company.lat, Company.lng)</em> using an index:"
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "file": "index.py.txt"
+      }
+    ]
+  }
+]

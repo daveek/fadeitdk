@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sqlalchemy-postgresql-earthdistance",
+    "title": "SQLAlchemy with earthdistance",
+    "intro": "Postgresql has a handy extension for calculating distances between coordinates on earth, we are looking at how it all fits into SQLAlchemy ORM.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-03-19T19:30:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
+    "id": "angularjs-seo-for-angular-translate",
+    "title": "SEO friendly angular-translate",
+    "intro": "SEO is a weak spot for AngularJS to begin with, but the issue takes a different turn when angular-translate is thrown into the mix.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-03-12T19:30:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
+    "id": "whats-rotten-in-the-state-of-denmark",
+    "title": "What's rotten in the state of Denmark?",
+    "intro": "We couldn't find what's rotten, but we have something better! We discovered Danish(tm) and it quickly became our new favorite place to read about danish design and architecture.",
+    "cover": "cover.jpg",
+    "date": "2015-02-28T21:16:14.465Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
+    "id": "what-we-like-on-the-web-this-year",
+    "title": "What we liked on the web this year (so far)",
+    "intro": "We'll start our blogging operations with a relaxed article about some of the websites we liked this year. What are your favorites so far?",
+    "cover": "cover.jpg",
+    "date": "2015-02-12T12:30:18.101Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
+    "id": "fadeit-blog-is-live",
+    "title": "Blog: open for business",
+    "intro": "We're super excited to launch a blog section on our website. We'll be writing about design, tech, code and everything in between.",
+    "cover": "cover.jpg",
+    "date": "2015-01-17T19:28:14.465Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  }
+]
