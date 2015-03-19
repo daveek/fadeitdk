@@ -9,7 +9,7 @@ function blogService($http, $q){
 
   function postIndex(){
     var postListDefer = $q.defer();
-    var postList = $http.get('./data/post-list.json');
+    var postList = $http.get('./posts/post-list.json');
 
     postList.then(function postListResponse(response){
       postListDefer.resolve(response.data);
@@ -22,7 +22,7 @@ function blogService($http, $q){
 
   function singlePost(postId){
     var singlePostsDefer = $q.defer();
-    var availableProviders = $http.get('./data/post-'+postId+'.json');
+    var availableProviders = $http.get('./posts/'+postId+'/content.json');
 
     availableProviders.then(function singlePostResponse(response){
       var currentPost = {};

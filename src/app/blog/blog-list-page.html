@@ -20,8 +20,8 @@
       <section class="col-xs-24 col-lg-18 col-lg-offset-3 col-xl-16 col-xl-offset-4 col-xxl-12 col-xxl-offset-6">
         <section class="row-fluid table-fluid cover-fluid our-work-row blog-row fadeit-animate animated fadeIn" data-wow-duration="1000ms" ng-repeat="post in vm.posts">
           <a href ui-sref="blog-posts({postId: post.id})">
-            <section class="col-xs-24 col-md-10 post-cover" data-ng-style="{'background-image': 'url(src/assets/img/blog/{{post.id}}/{{post.cover}})'}">
-              <img class="normal-image" ng-src="src/assets/img/blog/{{post.id}}/{{post.cover}}" alt="{{content.caption}}"/>
+            <section class="col-xs-24 col-md-10 post-cover" data-ng-style="{'background-image': 'url(posts/{{post.id}}/{{post.cover}})'}">
+              <img class="normal-image" ng-src="posts/{{post.id}}/{{post.cover}}" alt="{{content.caption}}"/>
             </section>
             <section class="col-xs-24 col-md-14 post-description">
               <h2 ng-bind="post.title"></h2>

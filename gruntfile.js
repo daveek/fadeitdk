@@ -151,22 +151,16 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true
       },
-      build_app_code: {
+      build_blog_posts: {
         cwd: './src',
-        src: ['assets/code/**/*.txt'],
-        dest: '<%= build_dir %>src/',
+        src: ['posts/**/*'],
+        dest: '<%= build_dir %>',
         expand: true
       },
       build_prism_js: {
         cwd: './src/assets/js',
         src: ['prism.js'],
         dest: '<%= build_dir %>src/assets/js/',
-        expand: true
-      },
-      compile_app_data: {
-        cwd: '<%= build_dir %>',
-        src: ['data/*.json'],
-        dest: '<%= compile_dir %>',
         expand: true
       },
       compile_views: {
@@ -204,9 +198,9 @@ module.exports = function(grunt) {
         dest: '<%= compile_dir %>',
         expand: true
       },
-      compile_app_code: {
+      compile_blog_posts: {
         cwd: '<%= build_dir %>',
-        src: ['src/assets/code/**/*'],
+        src: ['posts/**/*'],
         dest: '<%= compile_dir %>',
         expand: true
       }
@@ -509,7 +503,7 @@ module.exports = function(grunt) {
     'copy:build_protractor',
     'copy:build_karma',
     'copy:build_assets',
-    'copy:build_app_code',
+    'copy:build_blog_posts',
     'copy:build_prism_js',
     'concat:build_toolbox_js',
     'less:build_less',
@@ -528,12 +522,11 @@ module.exports = function(grunt) {
     'uglify:compile_soft_uglify',
     'clean:compile_js_clean',
     'clean:compile_shared_views_clean',
-    'copy:compile_app_data',
     'copy:compile_app_assets',
     'copy:compile_index',
     'copy:compile_sitemap',
     'copy:compile_asset_js',
-    'copy:compile_app_code'
+    'copy:compile_blog_posts'
   ]);
   grunt.registerTask('test', ['karma:unit', 'protractor:build']);
   grunt.registerTask('test:unit', ['karma:unit']);
