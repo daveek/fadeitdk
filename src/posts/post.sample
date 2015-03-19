@@ -33,6 +33,7 @@
     "date": "2015-03-07T19:28:14.465Z", //console.log(JSON.stringify(new Date()));
     "author": {
       "name": "Dan Mindru",
+      "gplus": "https://plus.google.com/+MindruDan?rel=author",
       "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg", //get your photo URL from the team page or hack the filename
       "job_title": "Experience designer"
     },
