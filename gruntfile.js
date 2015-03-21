@@ -198,6 +198,12 @@ module.exports = function(grunt) {
         dest: '<%= compile_dir %>',
         expand: true
       },
+      compile_app_data: {
+        cwd: '<%= build_dir %>',
+        src: ['data/*.json'],
+        dest: '<%= compile_dir %>',
+        expand: true
+      },
       compile_blog_posts: {
         cwd: '<%= build_dir %>',
         src: ['posts/**/*'],
@@ -491,6 +497,7 @@ module.exports = function(grunt) {
    */
   grunt.registerTask('default', ['build', 'karma:unit', 'watch']);
   grunt.registerTask('build', [
+    'clean:build_clean',
     'jshint',
     'copy:build_app_js',
     'copy:build_app_data',
@@ -526,6 +533,7 @@ module.exports = function(grunt) {
     'copy:compile_index',
     'copy:compile_sitemap',
     'copy:compile_asset_js',
+    'copy:compile_app_data',
     'copy:compile_blog_posts'
   ]);
   grunt.registerTask('test', ['karma:unit', 'protractor:build']);
