@@ -25,7 +25,7 @@
               <img itemprop="image" class="normal-image" ng-src="posts/{{post.id}}/{{post.cover}}" alt="{{content.caption}}"/>
             </section>
             <section class="col-xs-24 col-md-14 post-description">
-              <h2 itemprop="heading" ng-bind="post.title"></h2>
+              <h2 itemprop="headline" ng-bind="post.title"></h2>
               <p itemprop="dateCreated" class="post-date">{{post.date | date: 'd MMMM yyyy, H:m'}}</p>
               <p itemprop="description" class="post-intro" ng-bind="post.intro"></p>
               <p class="read-more">

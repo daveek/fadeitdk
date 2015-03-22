@@ -54,7 +54,7 @@
           <h3 itemprop="headline" data-ng-style="{'color': vm.project.color.text}">
             {{vm.project.content.intro.heading | translate}}
           </h3>
-          <p itemprop="articleBody" class="regular-text" data-ng-style="{'color': vm.project.color.text}">
+          <p itemprop="text" class="regular-text" data-ng-style="{'color': vm.project.color.text}">
             {{vm.project.content.intro.text | translate}}
           </p>
         </section>
@@ -69,7 +69,7 @@
 
         <section class="paragraph-fluid clearfix"
         data-ng-repeat='text in vm.project.content.paragraphs'>
-          <p itemprop="articleBody" class="regular-text" data-ng-style="{'color': vm.project.color.darkText}" translate>{{text}}</p>
+          <p itemprop="text" class="regular-text" data-ng-style="{'color': vm.project.color.darkText}" translate>{{text}}</p>
         </section>
       </article>
 
@@ -79,7 +79,7 @@
 
         <section class="url-fluid clearfix" data-ng-if="vm.project.urls" data-ng-repeat="url in vm.project.urls">
           <p class="regular-text">
-            <span itemprop="articleBody" class="url-text" translate>{{url.text}}</span>
+            <span itemprop="text" class="url-text" translate>{{url.text}}</span>
             <a itemprop="url" href="{{url.link}}" target="_blank"
             data-ng-style="{'color': vm.project.color.links}" translate>
               {{url.title}}
@@ -95,7 +95,7 @@
           <img itemprop="image" data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title | translate}} {{'SEO_SCREENSHOT_ALT' |  translate}}" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>
           <figcaption data-ng-style="{'color': vm.project.color.darkText}">
             <h3 itemprop="headline" translate>{{screen.title}}</h3>
-            <p itemprop="articleBody" class="regular-text" translate>{{screen.desc}}</p>
+            <p itemprop="text" class="regular-text" translate>{{screen.desc}}</p>
           </figcaption>
         </figure>
       </section><!--end project-screens-->
