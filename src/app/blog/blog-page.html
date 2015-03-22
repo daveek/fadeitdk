@@ -1,4 +1,4 @@
-<section class="container-fluid main-container secondary-page-container">
+<section itemscope itemtype="http://schema.org/BlogPosting" class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row services-fluid">
     <section class="row-fluid outstanding-container" ng-if="!vm.post">
       <h3 class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-error">
@@ -10,9 +10,9 @@
       <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
         <section class="row-fluid single-post blog-row">
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-offset-0 col-lg-24 post-description">
-            <h2 ng-bind="vm.post.title"></h2>
-            <p class="post-date">{{vm.post.date | date: 'd MMMM yyyy, H:m'}}</p>
-            <p class="post-intro" ng-bind="vm.post.intro"></p>
+            <h2 itemprop="headline" ng-bind="vm.post.title"></h2>
+            <p itemprop="dateCreated" class="post-date">{{vm.post.date | date: 'd MMMM yyyy, H:m'}}</p>
+            <p itemprop="description" class="post-intro" ng-bind="vm.post.intro"></p>
             <div fb-like></div>
           </section>
         </section>
@@ -26,54 +26,54 @@
     <section class="default-inner-container" id="post">
       <section class="row-fluid post-content-fluid" ng-if="vm.post">
         <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 post-heading">
-          <p class="post-author">
-            <a ng-href="{{vm.post.author.gplus}}" class="author-name">{{vm.post.author.name}}</a>
-            <span ng-bind="vm.post.author.job_title" class="author-title"></span>
+          <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
+          <a itemprop="url" ng-href="{{vm.post.author.gplus}}" class="author-name"><span itemprop="name">{{vm.post.author.name}}</span></a>
+            <span itemprop="jobTitle" ng-bind="vm.post.author.job_title" class="author-title"></span>
             <span class="author-image">
-              <img ng-src="{{vm.post.author.photo}}" alt="{{vm.post.author.name}} - {{vm.post.author.job_title}} at fadeit"/>
+              <img itemprop="image" ng-src="{{vm.post.author.photo}}" alt="{{vm.post.author.name}} - {{vm.post.author.job_title}} at fadeit"/>
             </span>
           </p>
         </section><!--end col-*-->
 
         <section class="post-content clearfix" ng-repeat="content in vm.post.content" ng-switch on="content.type">
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-p" ng-switch-when="p">
-            <p ng-bind-html="content.text"></p>
+            <p itemprop="text" ng-bind-html="content.text"></p>
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-h" ng-switch-when="h">
             <section ng-switch on="content.number">
-              <h2 ng-bind-html="content.text" ng-switch-when="2"></h2>
-              <h3 ng-bind-html="content.text" ng-switch-when="3"></h3>
-              <h4 ng-bind-html="content.text" ng-switch-when="4"></h4>
-              <h5 ng-bind-html="content.text" ng-switch-when="5"></h5>
-              <h6 ng-bind-html="content.text" ng-switch-when="6"></h6>
-              <h2 ng-bind-html="content.text" ng-switch-default></h2>
+              <h2 itemprop="headline" ng-bind-html="content.text" ng-switch-when="2"></h2>
+              <h3 itemprop="headline" ng-bind-html="content.text" ng-switch-when="3"></h3>
+              <h4 itemprop="headline" ng-bind-html="content.text" ng-switch-when="4"></h4>
+              <h5 itemprop="headline" ng-bind-html="content.text" ng-switch-when="5"></h5>
+              <h6 itemprop="headline" ng-bind-html="content.text" ng-switch-when="6"></h6>
+              <h2 itemprop="headline" ng-bind-html="content.text" ng-switch-default></h2>
             </section>
           </section>
 
-          <blockquote class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-quote" ng-switch-when="quote" cite="{{content.ref}}" ng-bind-html="content.text" ng-class="{'blockquote-reverse': content.reverse}">
+          <blockquote itemprop="citation" class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-quote" ng-switch-when="quote" cite="{{content.ref}}" ng-bind-html="content.text" ng-class="{'blockquote-reverse': content.reverse}">
           </blockquote>
 
           <section class="row-fluid outstanding-container blog-type-cover" style="background-image: url({{vm.trustUrl(content.url)}}); min-height:{{content.height}}px;" ng-switch-when="cover">
-            <img class="normal-image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
+            <img itemprop="image" class="normal-image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
             <p class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6" ng-bind="content.caption" ng-if="content.caption"></p>
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="img">
-            <img ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
+            <img itemprop="image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
             <p ng-bind="content.caption" ng-if="content.caption"></p>
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-video" ng-switch-when="video">
             <section ng-switch on="content.vendor">
-              <iframe width="100%" height="{{content.height}}" ng-src="{{vm.trustUrl(content.url)}}" frameborder="0" allowfullscreen ng-switch-when="youtube"></iframe>
-              <iframe ng-src="{{vm.trustUrl(content.url)}}" width="100%" height="{{content.height}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ng-switch-when="vimeo"></iframe>
+              <iframe itemprop="video" width="100%" height="{{content.height}}" ng-src="{{vm.trustUrl(content.url)}}" frameborder="0" allowfullscreen ng-switch-when="youtube"></iframe>
+              <iframe itemprop="video" ng-src="{{vm.trustUrl(content.url)}}" width="100%" height="{{content.height}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ng-switch-when="vimeo"></iframe>
               <p ng-bind-html="content.caption" ng-if="content.caption"></p>
             </section>
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="code">
-            <pre class="code-toolbar"><code class="language-{{content.language}}" data-language="{{content.language}}" code-block="posts/{{vm.post.id}}/{{content.file}}"><br/>Loading code...</code></pre>
+            <pre class="code-toolbar"><code itemprop="text" class="language-{{content.language}}" data-language="{{content.language}}" code-block="posts/{{vm.post.id}}/{{content.file}}"><br/>Loading code...</code></pre>
           </section>
         </section>
       </section>
