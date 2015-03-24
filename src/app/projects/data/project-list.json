@@ -1,5 +1,33 @@
 [
   {
+    "id": "hopper",
+    "color": {
+      "links": "#4998DE",
+      "base": "#194F80",
+      "accent": "#1E619B",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#194F80"
+    },
+    "title": "PLIST_OLS_TITLE",
+    "shortDescription": "PLIST_OLS_DESC",
+    "link": "story/hopper",
+    "uiRoute": "/story/hopper",
+    "tags": {
+      "0": "Python",
+      "1": "Flask",
+      "2": "AngularJS",
+      "3": "IT Automation",
+      "4": "Puppet",
+      "5": "ElasticSearch"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  },
+  {
     "id": "ipvision",
     "color": {
       "links": "#A91400",
@@ -69,34 +97,6 @@
       "0": "IoT",
       "1": "Big Data",
       "2": "Node.js"
-    },
-    "images": {
-      "cover": "cover_sm@2x.jpg"
-    }
-  },
-  {
-    "id": "hopper",
-    "color": {
-      "links": "#6FC490",
-      "base": "#00552D",
-      "accent": "#003d21",
-      "text": "#FFFFFF",
-      "darkText": "#333333",
-      "light": "#F9F9F9",
-      "lightAccent": "#E7E8EA",
-      "coverBackground": "#42B673"
-    },
-    "title": "PLIST_OLS_TITLE",
-    "shortDescription": "PLIST_OLS_DESC",
-    "link": "story/hopper",
-    "uiRoute": "/story/hopper",
-    "tags": {
-      "0": "Python",
-      "1": "Flask",
-      "2": "AngularJS",
-      "3": "IT Automation",
-      "4": "Puppet",
-      "5": "ElasticSearch"
     },
     "images": {
       "cover": "cover_sm@2x.jpg"

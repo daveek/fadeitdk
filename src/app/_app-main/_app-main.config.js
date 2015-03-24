@@ -36,7 +36,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
   $urlRouterProvider.otherwise('/da');
 
   //TURN ON FOR PROD
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
 
   /*
@@ -259,8 +259,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_OLS_SCREEN_5_D": "In addition to services, providers can showcase their previous work.",
     "PDET_OLS_URL_1_T": "hopper.dk",
     "PDET_OLS_URL_1_D": "The prototype is available at ",
-    "PDET_OLS_URL_2_T": "here",
-    "PDET_OLS_URL_2_D": "A few design mock-ups are presented below. The design is constantly evolving, therefore they might be different from the prototype. The design manual is also available ",
+    "PDET_OLS_URL_2_D": "A few design mock-ups are presented below. The design is constantly evolving, therefore they might be different from the prototype.",
     "PDET_OLS_INTRO_T": "About Hopper",
     "PDET_OLS_INTRO_D": "Hopper is a fadeit in-house project started in 2013. The purpose of this project is to offer a powerful location-based search and a messaging/booking system.",
     "PDET_OLS_MAIN_T": "What we have been doing so far",
@@ -529,8 +528,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_OLS_SCREEN_5_D": "Ud over at liste hvad håndværkeren kan gøre for brugeren vises også eventuelle opgaver som håndværkeren allerede har lavet.",
     "PDET_OLS_URL_1_T": "hopper.dk",
     "PDET_OLS_URL_1_D": "Prototypen er tilgængelig på ",
-    "PDET_OLS_URL_2_T": "her",
-    "PDET_OLS_URL_2_D": "Vi har listet et par forskellige eksempler nedenfor. Designet af hopper.dk udvikles løbende så du skal forvente at der kan være forskel mellem prototypen og det du ser på hopper.dk ",
+    "PDET_OLS_URL_2_D": "Vi har listet et par forskellige eksempler nedenfor. Designet af hopper.dk udvikles løbende så du skal forvente at der kan være forskel mellem prototypen og det du ser på hopper.dk.",
     "PDET_OLS_INTRO_T": "Om Hopper",
     "PDET_OLS_INTRO_D": "Hopper er et projektet tænkt og udviklet af fadeit selv i starten af 2013. Formålet med hopper er at tilbyde en nem vej til at finde lige netop den håndværker du har brug for og naturligvis baseret på afstanden mellem dig og håndværkeren.",
     "PDET_OLS_MAIN_T": "Hvad vi har lavet indtil nu",
