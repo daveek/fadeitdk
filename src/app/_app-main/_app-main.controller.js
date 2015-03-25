@@ -40,11 +40,13 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     //NB! gotta look out for accidental match e.g fadeit.dk/end (would match /en)
     if(absUrl.indexOf('/en') !== -1){
         $rootScope.activeLang = 'en'; //Used in html head
-        $scope.otherLangURL = $location.absUrl().replace('/en', '/da');
+        $rootScope.otherLangURL = $location.absUrl().replace('/en', '/da');
+        console.log('url set');
     }
     else if(absUrl.indexOf('/da') !== -1){
         $rootScope.activeLang = 'da';
-        $scope.otherLangURL = $location.absUrl().replace('/da', '/en');
+        $rootScope.otherLangURL = $location.absUrl().replace('/da', '/en');
+        console.log('url set');
     }
     else{
         //default to danish, try localstorage & state default overrides
