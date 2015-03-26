@@ -1,7 +1,7 @@
 [
   {
     "id": "sqlalchemy-postgresql-earthdistance",
-    "title": "SQLAlchemy with earthdistance extension",
+    "title": "SQLAlchemy with PostgreSQL earthdistance extension",
     "intro": "Postgresql has a handy extension for calculating distances between coordinates on earth, we are looking at how it all fits into SQLAlchemy ORM.",
     "cover": "cover_wide.jpg",
     "date": "2015-03-19T19:30:16.125Z",
