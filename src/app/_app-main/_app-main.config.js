@@ -31,7 +31,6 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     }
   });
 
-  $urlRouterProvider.when('/en-us', '/en');
   $urlRouterProvider.otherwise('/da');
 
   //TURN ON FOR PROD
