@@ -209,7 +209,13 @@ module.exports = function(grunt) {
         src: ['posts/**/*'],
         dest: '<%= compile_dir %>',
         expand: true
-      }
+      },
+      compile_google_verification: {
+        src: ['src/google*.html'],
+        dest: '<%= compile_dir %>',
+        expand: true,
+        flatten: true
+      },
     },
     /*
      * The clean task is used to remove files / directories that
@@ -534,7 +540,8 @@ module.exports = function(grunt) {
     'copy:compile_sitemap',
     'copy:compile_asset_js',
     'copy:compile_app_data',
-    'copy:compile_blog_posts'
+    'copy:compile_blog_posts',
+    'copy:compile_google_verification'
   ]);
   grunt.registerTask('test', ['karma:unit', 'protractor:build']);
   grunt.registerTask('test:unit', ['karma:unit']);
