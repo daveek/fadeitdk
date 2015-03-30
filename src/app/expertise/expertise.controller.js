@@ -4,6 +4,7 @@ expertiseController.$inject = ['$rootScope', '$stateParams', '$state'];
 function expertiseController($rootScope, $stateParams, $state) {
   //Map english urls to danish & vice-versa
   var map = {
+      'software-development': 'software-udvikling',
       'drupal-development': 'drupal-udvikling',
       'python-development': 'python-udvikling',
       'angularjs-development': 'angularjs-udvikling',

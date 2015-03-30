@@ -105,6 +105,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * EXPERTISE PAGE
      */
     "EXPERTISE_PAGE_TITLE": "Our expertise",
+    "EXPERTISE_PAGE_TITLE_SOFTWARE_DEVELOPMENT": "Software Development",
     "EXPERTISE_PAGE_TITLE_DRUPAL_DEVELOPMENT": "Drupal Development",
     "EXPERTISE_PAGE_TITLE_PYTHON_DEVELOPMENT": "Python Development",
     "EXPERTISE_PAGE_TITLE_ANGULARJS_DEVELOPMENT": "AngularJS Development",
@@ -114,6 +115,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_PAGE_TITLE_NODEJS_DEVELOPMENT": "NodeJS development",
     "EXPERTISE_PAGE_TITLE_WEB_CRAWLING": "Web Crawling",
     "EXPERTISE_PAGE_TITLE_BACKEND_DEVELOPMENT": "Backend Development",
+    "EXPERTISE_PAGE_TITLE_SYSTEM_ADMINISTRATION": "System Administration",
     "EXPERTISE_SUMMARY": "We've been developing a variety of web and mobile appications. We design cross-platform concepts and experiences. We automate systems and simplify processes.",
     "EXPERTISE_DRUPAL_DEVELOPMENT": "Planning a medium to large size, highly-customizable modern website with awesome community support? Looks like you're talking about Drupal. We can build a custom installation profile, theme or module for you. Also, we can provide you with Drupal site maintenance, testing and support.",
     "EXPERTISE_PYTHON_DEVELOPMENT": "Sometimes Content Management Systems just don't cut it. At fadeit, we love Python and its Web Stack and we can build custom web apps using Flask micro framework.",
@@ -127,8 +129,10 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_NODEJS_DEVELOPMENT": "Javascript no longer runs in the browser - NodeJS offers concurrency model suitable for web applications dealing with data in real-time. We develop communications applications with socket.io, custom modules for most popular Internet of Things routing software Node-RED and lightweight express.js backends.",
     "EXPERTISE_WEB_CRAWLING_TITLE": "Web Crawlers",
     "EXPERTISE_WEB_CRAWLING": "Want to get some public data from the web into your database but can’t find an API endpoint? We build custom web crawlers (spiders) so pay us a call if you need help.",
-    "EXPERTISE_BACKEND_TITLE": "Custom Back-ends",
-    "EXPERTISE_BACKEND_DEVELOPMENT": " We offer expertise with various server backend systems. Some of the things that we can do:<br/><br/> - ElasticSearch/Solr server setup, configuration<br/> - Building RESTful APIs<br/> - PostgreSQL/MySQL server setup, configuration<br/> - Setting up Nginx and Varnish reverse proxies<br/>",
+    "EXPERTISE_BACKEND_TITLE": "Back-end development",
+    "EXPERTISE_BACKEND_DEVELOPMENT": "We offer expertise with various server backend systems. Some of the things that we can do:<br/><br/> - ElasticSearch/Solr server setup, configuration<br/> - Building RESTful APIs<br/> - PostgreSQL/MySQL server setup, configuration<br/> - Setting up Nginx and Varnish reverse proxies<br/>",
+    "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
     "EXPERTISE_TOOLBOX_LINK": "Looking for more? Take a look at our {{toolbox}} and have some fun with it!",
 
     /*
@@ -373,6 +377,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * EXPERTISE PAGE
      */
     "EXPERTISE_PAGE_TITLE": "Det vi gør",
+    "EXPERTISE_PAGE_TITLE_SOFTWARE_UDVIKLING": "Software Udvikling",
     "EXPERTISE_PAGE_TITLE_DRUPAL_UDVIKLING": "Drupal Udvikling",
     "EXPERTISE_PAGE_TITLE_PYTHON_UDVIKLING": "Python Udvikling",
     "EXPERTISE_PAGE_TITLE_ANGULARJS_UDVIKLING": "AngularJS Udvikling",
@@ -382,6 +387,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_PAGE_TITLE_NODEJS_UDVIKLING": "NodeJS Udvikling",
     "EXPERTISE_PAGE_TITLE_WEB_CRAWLING": "Web Crawler (Spider)",
     "EXPERTISE_PAGE_TITLE_BACKEND_UDVIKLING": "Backend Udvikling",
+    "EXPERTISE_PAGE_TITLE_SYSTEM_ADMINISTRATION": "System Administration",
     "EXPERTISE_SUMMARY": "Vi har udviklet en stor vifte af forskellige web og mobil applikationer. Vi designer på tværs af platforme, koncepter og erfaringer. Vi automatiserer systemer og forenkle processer.",
     "EXPERTISE_DRUPAL_UDVIKLING": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
     "EXPERTISE_PYTHON_UDVIKLING": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
@@ -395,8 +401,10 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_NODEJS_UDVIKLING": "Javascript afvikles ikke mere i din browser - NodeJS byder derimod på en model som er velegnet til web applikationer med data i real-time. Vi udvikler kommunikations applikationer med socket.io, custom moduler i forbindelse med Internet of Things routing software Node-RED og express.js backends.",
     "EXPERTISE_WEB_CRAWLING_TITLE": "Web Crawlers",
     "EXPERTISE_WEB_CRAWLING": "Har du brug for at få offentlig data ind i din database, men kan ikke finde en indgang? Vi bygger custom web crawlers (spiders) så giv os et kald, hvis du har brug for hjælp.",
-    "EXPERTISE_BACKEND_TITLE": "Custom Back-ends",
+    "EXPERTISE_BACKEND_TITLE": "Back-end Udvikling",
     "EXPERTISE_BACKEND_UDVIKLING": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
+    "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
     "EXPERTISE_TOOLBOX_LINK": "Fandt du ikke det du kom efter? Tag et kig i vores {{toolbox}} og ha' lidt sjov med det!",
 
     /*

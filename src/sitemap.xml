@@ -6,10 +6,10 @@
     <loc>http://fadeit.dk/da</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/en/expertise</loc>
+    <loc>http://fadeit.dk/en/expertise/software-development</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/da/expertise</loc>
+    <loc>http://fadeit.dk/da/expertise/software-udvikling</loc>
   </url>
   <url>
     <loc>http://fadeit.dk/en/expertise/drupal-development</loc>
@@ -52,6 +52,12 @@
   </url>
   <url>
     <loc>http://fadeit.dk/da/expertise/nodejs-udvikling</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/en/expertise/system-administration</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/da/expertise/system-administration</loc>
   </url>
   <url>
     <loc>http://fadeit.dk/en/expertise/web-crawling</loc>
@@ -139,5 +145,8 @@
   </url>
   <url>
     <loc>http://fadeit.dk/post/sqlalchemy-postgresql-earthdistance</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/post/angular-translate-ui-router-seo</loc>
   </url>
 </urlset>
