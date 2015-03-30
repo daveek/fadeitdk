@@ -1,7 +1,7 @@
 angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
 
-rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope', '$location', 'store'];
-function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope, $location, store) {
+rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope', '$location', 'store', '$stateParams'];
+function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope, $location, store, $stateParams) {
   var vm = this,
       wow;
   vm.pageTitle = 'fadeit';
@@ -35,18 +35,19 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     angular.extend(vm, defaultState);
     angular.extend(vm, toState.data);
     wow.init();
-    var absUrl = $location.absUrl();
-    $scope.activeState = toState.name;
+    //var absUrl = $location.absUrl();
+    //$scope.activeState = toState.name;
+    //console.log(toState.name);
+    //$scope.letsSee = toState.name + "({lang: '"+reverseMap[$stateParams.lang]+"'})";
+    //console.log('state changed!');
     //NB! gotta look out for accidental match e.g fadeit.dk/end (would match /en)
-    if(absUrl.indexOf('/en') !== -1){
-        $rootScope.activeLang = 'en'; //Used in html head
-        $rootScope.otherLangURL = $location.absUrl().replace('/en', '/da');
-        console.log('url set');
-    }
-    else if(absUrl.indexOf('/da') !== -1){
-        $rootScope.activeLang = 'da';
-        $rootScope.otherLangURL = $location.absUrl().replace('/da', '/en');
-        console.log('url set');
+    console.log('lang is:');
+    console.log($stateParams.lang);
+    if($stateParams.lang !== undefined){
+        var reverseMap = {'en': 'da', 'da': 'en'};
+        $rootScope.activeLang = $stateParams.lang; //Used in html head
+        $rootScope.otherLangURL = $location.absUrl().replace('/' + $stateParams.lang, '/' + reverseMap[$stateParams.lang]);
+        console.log('url set to ' + $rootScope.otherLangURL);
     }
     else{
         //default to danish, try localstorage & state default overrides
