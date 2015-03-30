@@ -42,7 +42,7 @@
       },
       {
         "type": "p",
-        "text": "Since the child states contain a language path variable, we need to alter the links pointing to the child states to pass in <em>lang</em> parameter. But before we do so, we need to set <em>activeLang</em> on <em>$rootScope</em> so we can read it from there when generating links with <em>ui-sref</em>. Due to the fact that <em>activeLang</em> can change at with state change, we need to subscribe to <em>stateChangeSuccess</em> event. While at it, we can also generate links for same page in other languages - 'In English' link at example.com/da/about should point to example.com/en/about. In this simple example we use only two languages, so we'll be using only one variable <em>otherLangURL</em>:"
+        "text": "Since the child states contain a language path variable, we need to alter the links pointing to the child states to pass in <em>lang</em> parameter. But before we do so, we need to set <em>activeLang</em> on <em>$rootScope</em> so we can read it from there when generating links with <em>ui-sref</em>. Due to the fact that <em>activeLang</em> can change at state change, we need to subscribe to <em>stateChangeSuccess</em> event. While at it, we can also generate links for the same page in other languages - 'In English' link at example.com/da/about should point to example.com/en/about. In this simple example we use only two languages, so we'll be using only one variable <em>otherLangURL</em>:"
       },
       {
         "type": "code",
