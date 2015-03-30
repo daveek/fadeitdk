@@ -13,6 +13,10 @@
     },
     "content": [
       {
+        "type": "p",
+        "text": "Update: I have written a follow-up post solving the same problem using ui-router <a href=\"http://fadeit.dk/post/angular-translate-ui-router-seo\">here</a>"
+      },
+      {
         "type": "h",
         "number": 2,
         "text": "Introduction"

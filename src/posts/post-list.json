@@ -1,5 +1,17 @@
 [
   {
+    "id": "angular-translate-ui-router-seo",
+    "title": "AngularJS SEO friendly translation URLs with ui-router",
+    "intro": "Making your multilingual AngularJS application properly crawlable by search engine bots.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-03-30T16:10:55.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
     "id": "sqlalchemy-postgresql-earthdistance",
     "title": "SQLAlchemy with earthdistance",
     "intro": "Postgresql has a handy extension for calculating distances between coordinates on earth, we are looking at how it all fits into SQLAlchemy ORM.",

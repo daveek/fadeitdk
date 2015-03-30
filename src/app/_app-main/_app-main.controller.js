@@ -35,41 +35,32 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     angular.extend(vm, defaultState);
     angular.extend(vm, toState.data);
     wow.init();
-    //var absUrl = $location.absUrl();
-    //$scope.activeState = toState.name;
-    //console.log(toState.name);
-    //$scope.letsSee = toState.name + "({lang: '"+reverseMap[$stateParams.lang]+"'})";
-    //console.log('state changed!');
-    //NB! gotta look out for accidental match e.g fadeit.dk/end (would match /en)
-    console.log('lang is:');
-    console.log($stateParams.lang);
     if($stateParams.lang !== undefined){
-        var reverseMap = {'en': 'da', 'da': 'en'};
+        var otherLang = $stateParams.lang === 'da' ? 'en' : 'da';
         $rootScope.activeLang = $stateParams.lang; //Used in html head
-        $rootScope.otherLangURL = $location.absUrl().replace('/' + $stateParams.lang, '/' + reverseMap[$stateParams.lang]);
-        console.log('url set to ' + $rootScope.otherLangURL);
+        $rootScope.otherLangURL = $location.absUrl().replace('/' + $stateParams.lang, '/' + otherLang);
     }
     else{
         //default to danish, try localstorage & state default overrides
         $rootScope.activeLang = 'da';
-        $scope.otherLangURL = $location.absUrl().replace('/da', '/en');
+        $rootScope.otherLangURL = $location.absUrl().replace('/da', '/en');
         var storedLang = store.get('activeLang');
         if(storedLang){
             if(storedLang === 'en'){
                 $rootScope.activeLang = 'en';
-                $scope.otherLangURL = $location.absUrl().replace('/en', '/da');
+                $rootScope.otherLangURL = $location.absUrl().replace('/en', '/da');
             }
         }
         else{
             //fallback to default override
             if(toState.data.defaultLang !== undefined){
                 $rootScope.activeLang = 'en';
-                $scope.otherLangURL = $location.absUrl().replace('/en', '/da');
+                $rootScope.otherLangURL = $location.absUrl().replace('/en', '/da');
             }
         }
     }
-    $translate.use($scope.activeLang);
-    store.set('activeLang', $scope.activeLang);
+    $translate.use($rootScope.activeLang);
+    store.set('activeLang', $rootScope.activeLang);
 
     /*
      * updates the <title> and meta description tag if the new route has a pageTitle/pageDesc set

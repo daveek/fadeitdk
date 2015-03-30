@@ -1,0 +1,4 @@
+$stateProvider.state('app.about', {
+  url: '/about',
+  templateUrl: 'views/about-page.html',
+});
