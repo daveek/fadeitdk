@@ -1963,7 +1963,18 @@ a{
 }
 
 .a-tag{
+  color:@col_gray_6;
   margin-right:20px;
+  .animate(@animation_time, @transition_default);
+
+  &:visited{
+    color:@col_gray_6;
+  }
+
+  &:hover, &:focus{
+    color:@b;
+    .animate(@animation_time, @transition_default);
+  }
 }
 
 .single-project-cover{
