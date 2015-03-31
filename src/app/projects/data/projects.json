@@ -15,9 +15,21 @@
     "link": "story/ipvision",
     "uiRoute": "/story/ipvision",
     "tags": {
-      "0": "VoIP",
-      "1": "Asterisk",
-      "2": "PHP"
+      "0": {
+        "name": "VoIP",
+        "srefen": "backend-development",
+        "srefdk": "backend-udvikling"
+      },
+      "1": {
+        "name": "Asterisk",
+        "srefen": "backend-development",
+        "srefdk": "backend-udvikling"
+      },
+      "2": {
+        "name": "PHP",
+        "srefen": "backend-development",
+        "srefdk": "backend-udvikling"
+      }
     },
     "images": {
       "heading": "PDET_IPVISION_IMG_H",
@@ -90,9 +102,21 @@
     "link": "story/alexandra",
     "uiRoute": "/story/alexandra",
     "tags": {
-      "0": "Open Data",
-      "1": "CKAN",
-      "2": "Drupal"
+      "0": {
+        "name": "Open Data",
+        "srefen": "ckan-development",
+        "srefdk": "ckan-udvikling"
+      },
+      "1": {
+        "name": "CKAN",
+        "srefen": "ckan-development",
+        "srefdk": "ckan-udvikling"
+      },
+      "2": {
+        "name": "Drupal",
+        "srefen": "drupal-development",
+        "srefdk": "drupal-udvikling"
+      }
     },
     "images": {
       "heading": "PDET_ALEX_IMG_H",
@@ -140,9 +164,21 @@
     "link": "story/gatesense",
     "uiRoute": "/story/gatesense",
     "tags": {
-      "0": "IoT",
-      "1": "Big Data",
-      "2": "Node.js"
+      "0": {
+        "name": "IoT",
+        "srefen": "it-automation",
+        "srefdk": "it-automation"
+      },
+      "1": {
+        "name": "Big Data",
+        "srefen": "backend-development",
+        "srefdk": "backend-udvikling"
+      },
+      "2": {
+        "name": "Node.js",
+        "srefen": "nodejs-development",
+        "srefdk": "nodejs-udvikling"
+      }
     },
     "images": {
       "heading": "PDET_GATE_IMG_H",
@@ -186,12 +222,36 @@
     "link": "story/hopper",
     "uiRoute": "/story/hopper",
     "tags": {
-      "0": "Python",
-      "1": "Flask",
-      "2": "AngularJS",
-      "3": "IT Automation",
-      "4": "Puppet",
-      "5": "ElasticSearch"
+      "0": {
+        "name": "Python",
+        "srefen": "python-development",
+        "srefdk": "python-udvikling"
+      },
+      "1": {
+        "name": "Flask",
+        "srefen": "python-development",
+        "srefdk": "python-udvikling"
+      },
+      "2": {
+        "name": "AngularJS",
+        "srefen": "angularjs-development",
+        "srefdk": "angularjs-udvikling"
+      },
+      "3": {
+        "name": "IT Automation",
+        "srefen": "it-automation",
+        "srefdk": "it-automation"
+      },
+      "3": {
+        "name": "Puppet",
+        "srefen": "it-automation",
+        "srefdk": "it-automation"
+      },
+      "4": {
+        "name": "ElasticSearch",
+        "srefen": "backend-development",
+        "srefdk": "backend-udvikling"
+      }
     },
     "images": {
       "heading": "PDET_OLS_IMG_H",

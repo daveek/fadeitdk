@@ -38,8 +38,9 @@
         <section class="col-xs-24">
           <h3 itemprop="headline" class="regular-title" translate>{{vm.project.content.shortDescription}}</h3>
           <p class="regular-text project-tags">
-            <span class="a-tag" ng-repeat="tag in vm.project.tags">
-            {{tag}}
+            <span ng-repeat="tag in vm.project.tags">
+              <a ng-if="activeLang =='en'" ui-sref="app.tech({tech: tag.srefen, lang: 'en'})" class="a-tag" ng-bind='tag.name' translate></a>
+              <a ng-if="activeLang =='da'" ui-sref="app.tech({tech: tag.srefdk, lang: 'da'})" class="a-tag"  ng-bind='tag.name' translate></a>
             </span>
           </p>
         </section>
