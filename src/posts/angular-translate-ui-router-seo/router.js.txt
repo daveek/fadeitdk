@@ -3,7 +3,7 @@ $stateProvider.state('app', {
   url: '/{lang:(?:da|en)}',
   template: '<ui-view/>'
 });
-$stateProvider.state('app.root', {
+$stateProvider.state('app.home', {
   url: '',
     templateUrl: 'views/home-page.html',
 });

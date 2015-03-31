@@ -23,7 +23,7 @@
       },
       {
         "type": "p",
-        "text": "Nested states is the key to introducing language as a URL variable to all states. We start off by creating the 'app' state that every other state will be child of. The app state is abstract, so that the state by itself can not be activated. Next we want the route to only match the languages we intend to support (in this example 'da' and 'en') to reduce possible false-positive matches e.g example.com/<b>da</b>ta. As ui-router injects the content of the child states into ui-view, we define it as an inline template for the parent route. We also define 'app.root' state that will handle example.com/en and example.com/da pages:"
+        "text": "Nested states is the key to introducing language as a URL variable to all states. We start off by creating the 'app' state that every other state will be child of. The app state is abstract, so that the state by itself can not be activated. Next we want the route to only match the languages we intend to support (in this example 'da' and 'en') to reduce possible false-positive matches e.g example.com/<b>da</b>ta. As ui-router injects the content of the child states into ui-view, we define it as an inline template for the parent route. We also define 'app.home' state that will handle example.com/en and example.com/da pages:"
 
       },
       {
