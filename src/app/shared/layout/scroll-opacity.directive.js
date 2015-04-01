@@ -19,8 +19,11 @@ function scrollOpacity($window){
     function opacityScrollAdjust(){
       elementOpacity = (this.pageYOffset / (bodyElement.height() - windowElement.height()) / attrs.slowDown).toFixed(1);
 
-      if(elementOpacity <= attrs.maxOpacity &&
-         currentOpacity !== elementOpacity &&
+      if(elementOpacity >= attrs.maxOpacity){
+        elementOpacity = attrs.maxOpacity;
+      }
+
+      if(currentOpacity !== elementOpacity &&
          elementOpacity >= 0 &&
          elementOpacity <= 1){
         currentOpacity = elementOpacity;
