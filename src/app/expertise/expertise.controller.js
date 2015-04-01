@@ -50,9 +50,9 @@ function expertiseController($rootScope, $stateParams, $state, $document, $trans
    */
   $timeout(function (){
     if($document[0].getElementById(vm.tech)){
-      $document.scrollTo(angular.element($document[0].getElementById(vm.tech)), 0, 500);
+      $document.scrollTo(angular.element($document[0].getElementById(vm.tech)), 80, 500);
     }
-  }, 1);
+  }, 200); //200ms to be on the safe side
 
   function remapOtherLangURL(tech){
     var mappedTech = map[tech];
