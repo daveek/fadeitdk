@@ -50,7 +50,7 @@ function expertiseController($rootScope, $stateParams, $state, $document, $trans
    */
   $timeout(function (){
     if($document[0].getElementById(vm.tech)){
-      $document.scrollTo(angular.element($document[0].getElementById(vm.tech)), 80, 500);
+      $document.scrollTo(angular.element($document[0].getElementById(vm.tech)), 90, 500);
     }
   }, 200); //200ms to be on the safe side
 
