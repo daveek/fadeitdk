@@ -33,7 +33,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
 
   $urlRouterProvider.otherwise('/da');
 
-  //TURN ON FOR PROD
+  //Turn ON 'html5mode' (true) for prod - if you forget you need to buy beers for everybody in the office
   $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
 
@@ -132,7 +132,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_BACKEND_TITLE": "Back-end development",
     "EXPERTISE_BACKEND_DEVELOPMENT": "We offer expertise with various server backend systems. Some of the things that we can do:<br/><br/> - ElasticSearch/Solr server setup, configuration<br/> - Building RESTful APIs<br/> - PostgreSQL/MySQL server setup, configuration<br/> - Setting up Nginx and Varnish reverse proxies<br/>",
     "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
-    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href='https://en.wikipedia.org/wiki/Heartbleed'>Heartbleed</a> and <a href='https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29'>Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
     "EXPERTISE_TOOLBOX_LINK": "Looking for more? Take a look at our {{toolbox}} and have some fun with it!",
 
     /*
@@ -203,6 +203,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     //ols
     "PLIST_OLS_TITLE": "Hopper",
     "PLIST_OLS_DESC": "Hopper helps people find, book and communicate with business providers close to their location.",
+    //dipped
+    "PLIST_DIP_TITLE": "Dipped & Dipshop",
+    "PLIST_DIP_DESC": "Passionate about 'dipping' cars and teaching people how to paint their own. The only authorized Plasti Dip reseller in Scandinavia.",
 
     /*
      * PROJECT DETAILS
@@ -267,6 +270,19 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_OLS_MAIN_T": "What we have been doing so far",
     "PDET_OLS_P_1": "We are still in the early stages of the project, with only core features implemented. However, we have automated the deployment process and have been building a design manual in parallel. For the past months we were able to make visible progress and launch our first prototype.",
     "PDET_OLS_P_2": "Our plans for Hopper include integrating it with accounting systems and introducing mobile applications to manage bookings easier.",
+    //dipped
+    "PDET_DIP_IMG_H": "Links & prototype",
+    "PDET_DIP_URL_1_T": "dipped.dk",
+    "PDET_DIP_URL_1_D": "The main dipped website is available at ",
+    "PDET_DIP_URL_2_T": "dipshop.dk",
+    "PDET_DIP_URL_2_D": "To view the e-Commerce counter part, go to ",
+    "PDET_DIP_URL_3_T": "prototype application",
+    "PDET_DIP_URL_3_D": "For a pre-release version of the web shop, take a look at the ",
+    "PDET_DIP_INTRO_T": "Dipped & Dipshop",
+    "PDET_DIP_INTRO_D": "'Dipping' cars, bikes, trucks or anything in between since 2013. Selling Plasti Dip to distributors and DIY enthusiasts.",
+    "PDET_DIP_MAIN_T": "Our contribution",
+    "PDET_DIP_P_1": "We helped design the 'dipped' brand and developed a responsive presentation website (dipped.dk) & e-shop (dipshop.dk).",
+    "PDET_DIP_P_2": "One of the challenges we faced was to create a streamlined shopping experience for this specific type of product (Plasti Dip paint). Our effort combined with the hard work of our customer have turned dipped into a great success, now having 'dip centers' in Copenhagen, Aarhus, Randers, Odense and many more.",
 
     /*
      * APPLY & THANK YOU PAGE
@@ -404,7 +420,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_BACKEND_TITLE": "Back-end Udvikling",
     "EXPERTISE_BACKEND_UDVIKLING": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
     "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
-    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href='https://en.wikipedia.org/wiki/Heartbleed'>Heartbleed</a> and <a href='https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29'>Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
     "EXPERTISE_TOOLBOX_LINK": "Fandt du ikke det du kom efter? Tag et kig i vores {{toolbox}} og ha' lidt sjov med det!",
 
     /*
@@ -475,6 +491,9 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     //ols
     "PLIST_OLS_TITLE": "Hopper",
     "PLIST_OLS_DESC": "Hopper hjælper dig med at finde, booke og kommunikere med kvalificerede håndværkere tæt på dig.",
+    //dipped
+    "PLIST_DIP_TITLE": "Dipped & Dipshop",
+    "PLIST_DIP_DESC": "Passionate about 'dipping' cars and teaching people how to paint their own. The only authorized Plasti Dip reseller in Scandinavia.",
 
     /*
      * PROJECT DETAILS
@@ -520,7 +539,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_GATE_MAIN_T": "Vores samarbejde",
     "PDET_GATE_P_1": "Vi spiller en stor rolle i forbindelse med research og udvikling af platformen. Projektet bliver drevet og funded af Grundfos og Alexandra Institute.",
     "PDET_GATE_P_2": "",
-        //ols
+    //ols
     "PDET_OLS_IMG_H": "Links og design eksempler",
     "PDET_OLS_SCREEN_1_T": "Forside",
     "PDET_OLS_SCREEN_1_D": "Forsiden holder fokus på det brugeren kommer efter.",
@@ -540,6 +559,19 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_OLS_MAIN_T": "Hvad vi har lavet indtil nu",
     "PDET_OLS_P_1": "Hopper er stadig ret nyt så vi har som udgangspunkt kun lanceret de mest grundlæggende funktionaliteter.",
     "PDET_OLS_P_2": "Strategien og formålet med Hopper er blandt andet integration til eksisterende økonomisystemer samt udvikling af APP’s for mobiler således kommunikation og bookning mellem bruger og håndværker bliver nemmere og mere intuitiv.",
+    //dipped
+    "PDET_DIP_IMG_H": "Links & prototype",
+    "PDET_DIP_URL_1_T": "dipped.dk",
+    "PDET_DIP_URL_1_D": "The main dipped website is available at ",
+    "PDET_DIP_URL_2_T": "dipshop.dk",
+    "PDET_DIP_URL_2_D": "To view the e-Commerce counter part, go to ",
+    "PDET_DIP_URL_3_T": "prototype application",
+    "PDET_DIP_URL_3_D": "For a pre-release version of the web shop, take a look at the ",
+    "PDET_DIP_INTRO_T": "Dipped & Dipshop",
+    "PDET_DIP_INTRO_D": "'Dipping' cars, bikes, trucks or anything in between since 2013. Selling Plasti Dip to distributors and DIY enthusiasts.",
+    "PDET_DIP_MAIN_T": "Our contribution",
+    "PDET_DIP_P_1": "We helped design the 'dipped' brand and developed a responsive presentation website (dipped.dk) & e-shop (dipshop.dk).",
+    "PDET_DIP_P_2": "One of the challenges we faced was to create a streamlined shopping experience for this specific type of product (Plasti Dip paint). Our effort combined with the hard work of our customer have turned dipped into a great success, now having 'dip centers' in Copenhagen, Aarhus, Randers, Odense and many more.",
 
     /*
      * APPLY & THANK YOU PAGE

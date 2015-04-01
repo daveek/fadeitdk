@@ -22,22 +22,15 @@ function projectsService($http, $q){
 
   function singleProject(projectId){
     var singleProjectsDefer = $q.defer();
-    var availableProviders = $http.get('./data/projects.json');
+    var singleProjectData = $http.get('./data/project-'+projectId+'.json');
 
-    availableProviders.then(function singleProjectResponse(response){
-      var currentProject = {},
-          projectExists = false;
+    singleProjectData.then(function singleProjectResponse(response){
+      var currentProject = {};
 
-      for (var key in response.data) {
-        if (response.data.hasOwnProperty(key)) {
-          if(projectId === response.data[key].id){
-            projectExists = true;
-            currentProject = response.data[key];
-          }
-        }
+      if(response.data){
+        currentProject = response.data;
       }
-
-      if(!projectExists) {
+      else {
         currentProject.error = true;
         currentProject.message = 'Could not find the project with id ' + projectId;
       }
