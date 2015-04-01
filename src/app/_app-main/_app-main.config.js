@@ -34,7 +34,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
   $urlRouterProvider.otherwise('/da');
 
   //TURN ON FOR PROD
-  //$locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
 
   /*
