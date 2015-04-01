@@ -16,8 +16,6 @@ function scrollOpacity($window){
         currentOpacity = 0,
         elementOpacity;
 
-    opacityScrollAdjust();
-
     function opacityScrollAdjust(){
       elementOpacity = (this.pageYOffset / (bodyElement.height() - windowElement.height()) / attrs.slowDown).toFixed(1);
 
@@ -30,8 +28,11 @@ function scrollOpacity($window){
       }
     }
 
-    windowElement.bind('scroll', opacityScrollAdjust);
+    windowElement.on('scroll', opacityScrollAdjust);
     scope.$watch('root.darkMode', opacityScrollAdjust);
+    scope.$watch(function pageYOffsetWatch(){
+      return this.pageYOffset;
+    }, opacityScrollAdjust);
   }
 
   return {
