@@ -2121,8 +2121,11 @@ a{
 }
 
 .binary-container{
-  margin-top:-(@top_nav_height + 30px);
   padding-bottom:60px;
+
+  @media only screen and (min-width:@bp_sm){
+    margin-top:-(@top_nav_height + 30px);
+  }
 
   .binary{
     font-family: Arial, sans-serif;
