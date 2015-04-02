@@ -1033,6 +1033,8 @@ a{
 .contact-fluid{
   margin-bottom:0;
 
+  /*
+   * not used atm
   .contact-block{
     @media only screen and (min-width:@bp_md){
       margin-top:60px;
@@ -1046,6 +1048,7 @@ a{
       margin-top:0px;
     }
   }
+  */
 }
 
 .services-fluid{
@@ -1147,6 +1150,12 @@ a{
       &:first-child{
         padding-top:100px;
       }
+    }
+  }
+
+  .row-fluid.contact-about-row{
+    &:first-child{
+      padding-top:0;
     }
   }
 
@@ -2812,6 +2821,36 @@ a{
     &:last-child{
       padding-bottom:30px;
     }
+  }
+}
+
+.address-link{
+  color:@col_text_gray;
+
+  &:visited{
+    color:@b;
+  }
+
+  &:hover{
+    color:@b;
+  }
+}
+
+#fadeit-map{
+  height:300px;
+  width:100%;
+
+  @media only screen and (min-width:@bp_lg){
+    height:400px;
+  }
+
+  @media only screen and (min-width:@bp_xl){
+    height:500px;
+  }
+
+  img{
+    width:auto;
+    max-width:none;
   }
 }
 
