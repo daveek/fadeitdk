@@ -279,7 +279,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_DIP_URL_3_T": "prototype application",
     "PDET_DIP_URL_3_D": "For a pre-release version of the web shop, take a look at the ",
     "PDET_DIP_INTRO_T": "Dipped & Dipshop",
-    "PDET_DIP_INTRO_D": "'Dipping' cars, bikes, trucks or anything in between since 2013. Selling Plasti Dip to distributors and DIY enthusiasts.",
+    "PDET_DIP_INTRO_D": "'Dipping' cars, bikes, trucks or anything in between since 2012. Selling Plasti Dip to distributors and DIY enthusiasts.",
     "PDET_DIP_MAIN_T": "Our contribution",
     "PDET_DIP_P_1": "We helped design the 'dipped' brand and developed a responsive presentation website (dipped.dk) & e-shop (dipshop.dk).",
     "PDET_DIP_P_2": "One of the challenges we faced was to create a streamlined shopping experience for this specific type of product (Plasti Dip paint). Our effort combined with the hard work of our customer have turned dipped into a great success, now having 'dip centers' in Copenhagen, Aarhus, Randers, Odense and many more.",
@@ -493,7 +493,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PLIST_OLS_DESC": "Hopper hjælper dig med at finde, booke og kommunikere med kvalificerede håndværkere tæt på dig.",
     //dipped
     "PLIST_DIP_TITLE": "Dipped & Dipshop",
-    "PLIST_DIP_DESC": "Passionate about 'dipping' cars and teaching people how to paint their own. The only authorized Plasti Dip reseller in Scandinavia.",
+    "PLIST_DIP_DESC": "Teamet bag dipped har arbejdet med Plasti Dip siden 2012. Dipped er den Danske distributør og så er de den eneste aut. installatør i Skandinavien af dipyourcar.com.",
 
     /*
      * PROJECT DETAILS
@@ -562,16 +562,16 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     //dipped
     "PDET_DIP_IMG_H": "Links & prototype",
     "PDET_DIP_URL_1_T": "dipped.dk",
-    "PDET_DIP_URL_1_D": "The main dipped website is available at ",
+    "PDET_DIP_URL_1_D": "Hovedsiden kan du finde her ",
     "PDET_DIP_URL_2_T": "dipshop.dk",
-    "PDET_DIP_URL_2_D": "To view the e-Commerce counter part, go to ",
+    "PDET_DIP_URL_2_D": "Hvis du vil se den danske distributions side for Plasti Dip, skal du gå til ",
     "PDET_DIP_URL_3_T": "prototype application",
-    "PDET_DIP_URL_3_D": "For a pre-release version of the web shop, take a look at the ",
+    "PDET_DIP_URL_3_D": "Se også ",
     "PDET_DIP_INTRO_T": "Dipped & Dipshop",
-    "PDET_DIP_INTRO_D": "'Dipping' cars, bikes, trucks or anything in between since 2013. Selling Plasti Dip to distributors and DIY enthusiasts.",
-    "PDET_DIP_MAIN_T": "Our contribution",
-    "PDET_DIP_P_1": "We helped design the 'dipped' brand and developed a responsive presentation website (dipped.dk) & e-shop (dipshop.dk).",
-    "PDET_DIP_P_2": "One of the challenges we faced was to create a streamlined shopping experience for this specific type of product (Plasti Dip paint). Our effort combined with the hard work of our customer have turned dipped into a great success, now having 'dip centers' in Copenhagen, Aarhus, Randers, Odense and many more.",
+    "PDET_DIP_INTRO_D": "Dipped har dipped biler, motorcykler, lastbiler og meget andet siden starten af 2012 og solgt Plasti Dip og dipyourcar.com produkter til dipcentre såvel som DIY folket.",
+    "PDET_DIP_MAIN_T": "Vores arbejde",
+    "PDET_DIP_P_1": "Vi hjalp med at designe branded “Dipped”, byggede deres corporate identity og efterfølgende deres distributør side (dipped.dk) & webshop (dipshop.dk).",
+    "PDET_DIP_P_2": "En af de udfordringer vi blev stillet overfor var ideen om at bygge en streamlinet købs oplevelse overfor de besøgende på webshoppen. Det rigtigt forretningskoncept, et godt brand og to strukturerede websites har været årsagen til success - dipped aps har i dag 5 dipcentre rundt omkring i Danmark.",
 
     /*
      * APPLY & THANK YOU PAGE
