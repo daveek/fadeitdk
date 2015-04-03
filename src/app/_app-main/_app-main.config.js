@@ -616,8 +616,8 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software og web udviklingsvirksomhed i Aarhus",
     "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software og web udviklingsvirksomhed i Aarhus",
     "SEO_PROJECT_ALT": " - project made by fadeit - software og web udviklingsvirksomhed i Aarhus",
-    "SEO_META_DESC": "fadeit is a software development company from Aarhus. We conceptualize, develop and design software, web or mobile applications. The technologies we have experienced with are Python, AngularJS, Drupal, node.js, CKAN just to name a few.",
-    "SEO_DESC_APPEND": "Software, web and mobile development in Aarhus, with technologies such as Python, Node.js or AngularJS.",
+    "SEO_META_DESC": "fadeit er en udviklingsvirksomhed i Århus. Vi bygger koncepter, udvikler og designer software, websider og mobil applikationer. Nogle af vores fortrukne teknologier er Python, AngularJS, Drupal, node.js og CKAN.",
+    "SEO_DESC_APPEND": "Software, web- og mobil udvikling i Århus - med teknologier som Python, Node.js og AngularJS.",
     "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software og web udviklingsvirksomhed i Aarhus",
     "SEO_META_TITLE_EMPTY": "fadeit - software og web udviklingsvirksomhed i Aarhus"
   });
