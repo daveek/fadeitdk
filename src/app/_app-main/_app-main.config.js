@@ -33,7 +33,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
 
   $urlRouterProvider.otherwise('/da');
 
-  //TURN ON FOR PROD
+  //Turn ON 'html5mode' (true) for prod - if you forget you need to buy beers for everybody in the office
   $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
 
@@ -79,18 +79,18 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "FRONT_BUTTON_CONTACT": "Get in touch",
 
     /*
-     * ABOUT PAGE
+     * (old) ABOUT PAGE - now used in CONTACT
      */
-    "ABOUT_PAGE_TITLE": "About us",
     "ABOUT_SUMMARY": "We are a software development company that started its voyage in 2013.  Since then we've been busy baking awesome software for companies from Aarhus and Copenhagen.",
     "ABOUT_OUR_CULTURE": "Our culture",
     "ABOUT_CULTURE_TEXT_1": "Here at fadeit, we try to have a different perspective on work. We want our projects to be enjoyable and rewarding, not only for us, but for our clients too. We want to grow together and build awesome software that'll make you and us happy for a long, long time.",
-    "ABOUT_CULTURE_TEXT_2": "We like to have fun as much as we like to be serious. One of fadeit's founding principles is to have fun while being part of it, no matter what fun means to you. It could be racing your chair, coding, drinking a beer or doing all at once.",
+    "ABOUT_CULTURE_TEXT_2": "We have worked with many technologies, such as AngularJS, CKAN, PHP, Python, Puppet, Node.js just to name a few. That’s not important to us, because the people at fadeit are not a cult, following a language or technology blindly. We are always trying out new ways to solve problems in software and we are not afraid to start working with a new technology or language. This is the reason why we also have knowledge in native mobile development, extending CMS systems or more ‘exotic’ server side technologies, such as web crawlers.",
+    "ABOUT_CULTURE_TEXT_3": "We like to have fun as much as we like to be serious. One of fadeit's founding principles is to have fun while being part of it, no matter what fun means to you. It could be racing your chair, coding, drinking a beer or doing all at once.",
 
     /*
      * CONTACT PAGE
      */
-    "CONTACT_PAGE_TITLE": "Contact us",
+    "CONTACT_PAGE_TITLE": "Contact",
     "CONTACT_NAME": "fadeit ApS",
     "CONTACT_ADDRESS": "Anelystparken 31 D, 8381 Tilst, Aarhus, Denmark",
     "CONTACT_BUSINESS": "For any business related matter",
@@ -132,7 +132,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_BACKEND_TITLE": "Back-end development",
     "EXPERTISE_BACKEND_DEVELOPMENT": "We offer expertise with various server backend systems. Some of the things that we can do:<br/><br/> - ElasticSearch/Solr server setup, configuration<br/> - Building RESTful APIs<br/> - PostgreSQL/MySQL server setup, configuration<br/> - Setting up Nginx and Varnish reverse proxies<br/>",
     "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
-    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href='https://en.wikipedia.org/wiki/Heartbleed'>Heartbleed</a> and <a href='https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29'>Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
     "EXPERTISE_TOOLBOX_LINK": "Looking for more? Take a look at our {{toolbox}} and have some fun with it!",
 
     /*
@@ -196,13 +196,16 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PLIST_IPVISION_DESC": "Integrating PBXs, Cloud services, mail clients and back-office servers",
     //alexandra inst.
     "PLIST_ALEX_TITLE": "Alexandra Institute",
-    "PLIST_ALEX_DESC": "Building bridges with research-based innovation, powered by Open Data",
+    "PLIST_ALEX_DESC": "Building bridges with research-based innovation, powered by Open Data.",
     //gatesense
     "PLIST_GATE_TITLE": "Gatesense",
-    "PLIST_GATE_DESC": "Unleashing creativity and creating significant value for society",
+    "PLIST_GATE_DESC": "Unleashing creativity and creating significant value for society.",
     //ols
     "PLIST_OLS_TITLE": "Hopper",
     "PLIST_OLS_DESC": "Hopper helps people find, book and communicate with business providers close to their location.",
+    //dipped
+    "PLIST_DIP_TITLE": "Dipped and Dipshop",
+    "PLIST_DIP_DESC": "Passionate about 'dipping' cars and teaching people how to paint their own. The only authorized Plasti Dip reseller in Scandinavia.",
 
     /*
      * PROJECT DETAILS
@@ -267,6 +270,19 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_OLS_MAIN_T": "What we have been doing so far",
     "PDET_OLS_P_1": "We are still in the early stages of the project, with only core features implemented. However, we have automated the deployment process and have been building a design manual in parallel. For the past months we were able to make visible progress and launch our first prototype.",
     "PDET_OLS_P_2": "Our plans for Hopper include integrating it with accounting systems and introducing mobile applications to manage bookings easier.",
+    //dipped
+    "PDET_DIP_IMG_H": "Links & prototype",
+    "PDET_DIP_URL_1_T": "dipped.dk",
+    "PDET_DIP_URL_1_D": "The main dipped website is available at ",
+    "PDET_DIP_URL_2_T": "dipshop.dk",
+    "PDET_DIP_URL_2_D": "To view the e-Commerce counter part, go to ",
+    "PDET_DIP_URL_3_T": "prototype application",
+    "PDET_DIP_URL_3_D": "For a pre-release version of the web shop, take a look at the ",
+    "PDET_DIP_INTRO_T": "Dipped and Dipshop",
+    "PDET_DIP_INTRO_D": "'Dipping' cars, bikes, trucks or anything in between since 2012. Selling Plasti Dip to distributors and DIY enthusiasts.",
+    "PDET_DIP_MAIN_T": "Our contribution",
+    "PDET_DIP_P_1": "We helped design the 'dipped' brand and developed a responsive presentation website (dipped.dk) & e-shop (dipshop.dk).",
+    "PDET_DIP_P_2": "One of the challenges we faced was to create a streamlined shopping experience for this specific type of product (Plasti Dip paint). Our effort combined with the hard work of our customer have turned dipped into a great success, now having 'dip centers' in Copenhagen, Aarhus, Randers, Odense and many more.",
 
     /*
      * APPLY & THANK YOU PAGE
@@ -304,13 +320,14 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * what the image represents, SEO comes after
      */
     "SEO_TITLE_APPEND": "fadeit, software development company in Aarhus",
-    "SEO_LOGO_ALT": "the fadeit logo - software development company",
-    "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software development company",
-    "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software development company",
-    "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software development company",
+    "SEO_LOGO_ALT": "the fadeit logo - software development company in Aarhus",
+    "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software development company in Aarhus",
+    "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software development company in Aarhus",
+    "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software development company in Aarhus",
     "SEO_PROJECT_ALT": " - project made by fadeit - software development company",
-    "SEO_META_DESC": "fadeit is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
-    "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company"
+    "SEO_META_DESC": "fadeit is a software development company from Aarhus. We conceptualize, develop and design software, web or mobile applications. The technologies we have experienced with are Python, AngularJS, Drupal, node.js, CKAN just to name a few.",
+    "SEO_DESC_APPEND": "Software, web and mobile development in Aarhus, with technologies such as Python, Node.js or AngularJS.",
+    "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software development company in Aarhus"
   });
 
   $translateProvider.translations('da', {
@@ -351,13 +368,13 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "FRONT_BUTTON_CONTACT": "Spørg løs",
 
     /*
-     * ABOUT PAGE
+     * (old) ABOUT PAGE - now used in CONTACT
      */
-    "ABOUT_PAGE_TITLE": "Om os",
     "ABOUT_SUMMARY": "Vi er en mindre udviklingsvirksomhed i Århus, hvis rejse startede tilbage i 2013 - Siden da har vi brugt vores tid på at bage lækkert software til vores kunder.",
     "ABOUT_OUR_CULTURE": "Kulturen",
     "ABOUT_CULTURE_TEXT_1": "Her, hos fadeit forsøger vi at se et lidt andet perspektiv end de fleste andre udviklingsvirksomheder. Vi vil have vores projekter er fornøjelige og af en meget høj kvalitet, ikke bare for kundens skyld, men ligeså meget for vores egen skyld. Vi vil udvikle os sammen med vores kunder og bygge software der kan skabe glæde for begge parter i lang tid.",
     "ABOUT_CULTURE_TEXT_2": "Vi vil også gerne have ligeså meget sjov som vi er alvorlige - En af vores grundværdier er at have det sjovt på arbejdspladsen og det er uanset hvad sjov betyder for den enkelte medarbejder - det kan være 24 timers lemans på kontorstolen, at skrive en lækker code, at drikke en shaker til fyraften ... eller alle tre ting på én gang.",
+    "ABOUT_CULTURE_TEXT_3": "", //Missing
 
     /*
      * CONTACT PAGE
@@ -404,7 +421,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_BACKEND_TITLE": "Back-end Udvikling",
     "EXPERTISE_BACKEND_UDVIKLING": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
     "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
-    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href='https://en.wikipedia.org/wiki/Heartbleed'>Heartbleed</a> and <a href='https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29'>Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
     "EXPERTISE_TOOLBOX_LINK": "Fandt du ikke det du kom efter? Tag et kig i vores {{toolbox}} og ha' lidt sjov med det!",
 
     /*
@@ -465,16 +482,19 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      */
     //ipvision
     "PLIST_IPVISION_TITLE": "Ipvision",
-    "PLIST_IPVISION_DESC": "Integration af telefonisystemer, cloud services, mail clients, back-office løsning og selvbetjeningsportal",
+    "PLIST_IPVISION_DESC": "Integration af telefonisystemer, cloud services, mail clients, back-office løsning og selvbetjeningsportal.",
     //alexandra inst.
     "PLIST_ALEX_TITLE": "Alexandra Institute",
-    "PLIST_ALEX_DESC": "Integration med research baseret innovation, powered by Open Data",
+    "PLIST_ALEX_DESC": "Integration med research baseret innovation, powered by Open Data.",
     //gatesense
     "PLIST_GATE_TITLE": "Gatesense",
-    "PLIST_GATE_DESC": "løslad kreativiteten og udvikling af værdi til samfundet",
+    "PLIST_GATE_DESC": "løslad kreativiteten og udvikling af værdi til samfundet.",
     //ols
     "PLIST_OLS_TITLE": "Hopper",
     "PLIST_OLS_DESC": "Hopper hjælper dig med at finde, booke og kommunikere med kvalificerede håndværkere tæt på dig.",
+    //dipped
+    "PLIST_DIP_TITLE": "Dipped & Dipshop",
+    "PLIST_DIP_DESC": "Teamet bag dipped har arbejdet med Plasti Dip siden 2012. Dipped er den Danske distributør og så er de den eneste aut. installatør i Skandinavien af dipyourcar.com.",
 
     /*
      * PROJECT DETAILS
@@ -520,7 +540,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_GATE_MAIN_T": "Vores samarbejde",
     "PDET_GATE_P_1": "Vi spiller en stor rolle i forbindelse med research og udvikling af platformen. Projektet bliver drevet og funded af Grundfos og Alexandra Institute.",
     "PDET_GATE_P_2": "",
-        //ols
+    //ols
     "PDET_OLS_IMG_H": "Links og design eksempler",
     "PDET_OLS_SCREEN_1_T": "Forside",
     "PDET_OLS_SCREEN_1_D": "Forsiden holder fokus på det brugeren kommer efter.",
@@ -540,6 +560,19 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "PDET_OLS_MAIN_T": "Hvad vi har lavet indtil nu",
     "PDET_OLS_P_1": "Hopper er stadig ret nyt så vi har som udgangspunkt kun lanceret de mest grundlæggende funktionaliteter.",
     "PDET_OLS_P_2": "Strategien og formålet med Hopper er blandt andet integration til eksisterende økonomisystemer samt udvikling af APP’s for mobiler således kommunikation og bookning mellem bruger og håndværker bliver nemmere og mere intuitiv.",
+    //dipped
+    "PDET_DIP_IMG_H": "Links & prototype",
+    "PDET_DIP_URL_1_T": "dipped.dk",
+    "PDET_DIP_URL_1_D": "Hovedsiden kan du finde her ",
+    "PDET_DIP_URL_2_T": "dipshop.dk",
+    "PDET_DIP_URL_2_D": "Hvis du vil se den danske distributions side for Plasti Dip, skal du gå til ",
+    "PDET_DIP_URL_3_T": "prototype application",
+    "PDET_DIP_URL_3_D": "Se også ",
+    "PDET_DIP_INTRO_T": "Dipped & Dipshop",
+    "PDET_DIP_INTRO_D": "Dipped har dipped biler, motorcykler, lastbiler og meget andet siden starten af 2012 og solgt Plasti Dip og dipyourcar.com produkter til dipcentre såvel som DIY folket.",
+    "PDET_DIP_MAIN_T": "Vores arbejde",
+    "PDET_DIP_P_1": "Vi hjalp med at designe branded “Dipped”, byggede deres corporate identity og efterfølgende deres distributør side (dipped.dk) & webshop (dipshop.dk).",
+    "PDET_DIP_P_2": "En af de udfordringer vi blev stillet overfor var ideen om at bygge en streamlinet købs oplevelse overfor de besøgende på webshoppen. Det rigtigt forretningskoncept, et godt brand og to strukturerede websites har været årsagen til success - dipped aps har i dag 5 dipcentre rundt omkring i Danmark.",
 
     /*
      * APPLY & THANK YOU PAGE
@@ -577,14 +610,15 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * Keep in mind - ALT tags should also describe
      * what the image represents, SEO comes after
      */
-    "SEO_TITLE_APPEND": "fadeit - software udviklingsvirksomhed",
-    "SEO_LOGO_ALT": "the fadeit logo - software udviklingsvirksomhed",
-    "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software udviklingsvirksomhed",
-    "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software udviklingsvirksomhed",
-    "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software udviklingsvirksomhed",
-    "SEO_PROJECT_ALT": " - project made by fadeit - software udviklingsvirksomhed",
-    "SEO_META_DESC": "fadeit is a software development agency founded in Aarhus, Denmark. We specialize in developing & designing software, web and mobile applications that optimize business processes.",
-    "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software udviklingsvirksomhed",
-    "SEO_META_TITLE_EMPTY": "fadeit - software udviklingsvirksomhed"
+    "SEO_TITLE_APPEND": "fadeit - software og web udviklingsvirksomhed i Aarhus",
+    "SEO_LOGO_ALT": "the fadeit logo - software og web udviklingsvirksomhed i Aarhus",
+    "SEO_LEGO_STRUCTURE_ALT": "the structure of the fadeit logo - software og web udviklingsvirksomhed i Aarhus",
+    "SEO_ARROW_DOWN_ALT": "continue reading about fadeit - software og web udviklingsvirksomhed i Aarhus",
+    "SEO_HEART_ALT": "Thanks for your time, lots of <3 from fadeit - software og web udviklingsvirksomhed i Aarhus",
+    "SEO_PROJECT_ALT": " - project made by fadeit - software og web udviklingsvirksomhed i Aarhus",
+    "SEO_META_DESC": "fadeit er en udviklingsvirksomhed i Århus. Vi bygger koncepter, udvikler og designer software, websider og mobil applikationer. Nogle af vores fortrukne teknologier er Python, AngularJS, Drupal, node.js og CKAN.",
+    "SEO_DESC_APPEND": "Software, web- og mobil udvikling i Århus - med teknologier som Python, Node.js og AngularJS.",
+    "SEO_SCREENSHOT_ALT": " - screenshot made by fadeit - software og web udviklingsvirksomhed i Aarhus",
+    "SEO_META_TITLE_EMPTY": "fadeit - software og web udviklingsvirksomhed i Aarhus"
   });
 }

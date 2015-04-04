@@ -102,6 +102,12 @@
     <loc>http://fadeit.dk/da/project/hopper</loc>
   </url>
   <url>
+    <loc>http://fadeit.dk/da/project/dipped</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/en/project/dipped</loc>
+  </url>
+  <url>
     <loc>http://fadeit.dk/en/team</loc>
   </url>
   <url>
@@ -112,12 +118,6 @@
   </url>
   <url>
     <loc>http://fadeit.dk/da/contact</loc>
-  </url>
-  <url>
-    <loc>http://fadeit.dk/en/about</loc>
-  </url>
-  <url>
-    <loc>http://fadeit.dk/da/about</loc>
   </url>
   <url>
     <loc>http://fadeit.dk/en/apply</loc>

@@ -7,9 +7,11 @@ function contactConfig($stateProvider){
   $stateProvider.state('app.contact', {
     url: '/contact',
     templateUrl: 'views/contact-page.html',
+    controller: 'ContactController',
+    controllerAs: 'vm',
     data:{
       pageTitle: 'CONTACT_PAGE_TITLE',
-      pageDesc: 'CONTACT_FULL'
+      pageDesc: 'ABOUT_SUMMARY'
     }
   });
 }

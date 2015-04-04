@@ -113,7 +113,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
    */
   $scope.$on('changedPage', function changedPage(event, pageTitle){
     var translatedValue = $filter('translate')(pageTitle);
-    vm.htmlTitle = translatedValue + ', ' + $filter('translate')('SEO_TITLE_APPEND');
+    vm.htmlTitle = translatedValue + ' - ' + $filter('translate')('SEO_TITLE_APPEND');
     vm.pageTitle = translatedValue;
   });
 

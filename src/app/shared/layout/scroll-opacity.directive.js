@@ -16,13 +16,14 @@ function scrollOpacity($window){
         currentOpacity = 0,
         elementOpacity;
 
-    opacityScrollAdjust();
-
     function opacityScrollAdjust(){
       elementOpacity = (this.pageYOffset / (bodyElement.height() - windowElement.height()) / attrs.slowDown).toFixed(1);
 
-      if(elementOpacity <= attrs.maxOpacity &&
-         currentOpacity !== elementOpacity &&
+      if(elementOpacity >= attrs.maxOpacity){
+        elementOpacity = attrs.maxOpacity;
+      }
+
+      if(currentOpacity !== elementOpacity &&
          elementOpacity >= 0 &&
          elementOpacity <= 1){
         currentOpacity = elementOpacity;
@@ -30,8 +31,11 @@ function scrollOpacity($window){
       }
     }
 
-    windowElement.bind('scroll', opacityScrollAdjust);
+    windowElement.on('scroll', opacityScrollAdjust);
     scope.$watch('root.darkMode', opacityScrollAdjust);
+    scope.$watch(function pageYOffsetWatch(){
+      return this.pageYOffset;
+    }, opacityScrollAdjust);
   }
 
   return {

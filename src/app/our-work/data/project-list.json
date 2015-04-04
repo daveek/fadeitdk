@@ -101,5 +101,30 @@
     "images": {
       "cover": "cover_sm@2x.jpg"
     }
+  },
+  {
+    "id": "dipped",
+    "color": {
+      "links": "#000000",
+      "base": "#212120",
+      "accent": "#565656",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#3C3C3C"
+    },
+    "title": "PLIST_DIP_TITLE",
+    "shortDescription": "PLIST_DIP_DESC",
+    "link": "story/dipped",
+    "uiRoute": "/story/dipped",
+    "tags": {
+      "0": "Web Shop",
+      "1": "E-Commerce",
+      "2": "Branding"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
   }
 ]

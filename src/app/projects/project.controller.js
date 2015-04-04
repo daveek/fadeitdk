@@ -1,9 +1,14 @@
 angular.module('fadeit.projects').controller('ProjectsController', projectsController);
 
-projectsController.$inject = ['$scope', '$stateParams','ProjectsService', '$state'];
-function projectsController($scope, $stateParams, ProjectsService, $state) {
+projectsController.$inject = ['$scope', '$stateParams','ProjectsService', '$state', '$translate', '$filter'];
+function projectsController($scope, $stateParams, ProjectsService, $state, $translate, $filter) {
   //read the project id from the state
-  var vm = this;
+  var vm = this,
+      pageTitle,
+      pageDesc,
+      pageTags = [];
+
+  vm.project = {};
   vm.requestUrl = $stateParams.projectId;
 
   if(!$stateParams.projectId){
@@ -13,13 +18,23 @@ function projectsController($scope, $stateParams, ProjectsService, $state) {
   //TODO: promise rejects are not handled
   ProjectsService.singleProject(vm.requestUrl)
     .then(function singleProjectResponse(response){
-      var pageTitle, pageDesc;
-
       vm.project = response;
-      pageTitle = !response.error ? vm.project.title : 'Sorry, this project does not exist';
-      pageDesc = !response.error ? vm.project.content.shortDescription : 'Sorry, this project does not exist';
+      pageTitle = vm.project.title;
+      pageDesc = vm.project.content.shortDescription;
+
+      for(var tag in vm.project.tags){
+        if(vm.project.tags.hasOwnProperty(tag)){
+          pageTags.push(vm.project.tags[tag].name);
+        }
+      }
 
       $scope.$emit('changedPage', pageTitle);
-      $scope.$emit('changedDesc', pageDesc);
+      $scope.$emit('changedDesc', $filter('translate')(pageDesc) + ' Tags: ' +pageTags.toString().replace(/,/g, ', '));
+  }, function singleProjectErrorResponse(error){
+    vm.project.error = error;
+    pageTitle = pageDesc = 'Sorry, this project does not exist';
+
+    $scope.$emit('changedPage', pageTitle);
+    $scope.$emit('changedDesc', pageDesc);
   });
 }
