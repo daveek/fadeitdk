@@ -25,6 +25,11 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
    *
    */
   $scope.$on('$stateChangeSuccess', function rootStateChangeSuccess(event, toState){
+    $rootScope.responseStatus = 200;
+    //give 404 on hashbang URL's (for some reason googlebot crawled them?)
+    if($location.absUrl().indexOf('#!') !== -1){
+        $rootScope.responseStatus = 404;
+    } 
     var defaultState = {
         multiLang: true,
         scrollTop: true,
