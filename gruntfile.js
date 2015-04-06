@@ -211,7 +211,7 @@ module.exports = function(grunt) {
         expand: true
       },
       compile_google_verification: {
-        src: ['src/google*.html'],
+        src: ['src/google*.html','src/robots.txt'],
         dest: '<%= compile_dir %>',
         expand: true,
         flatten: true
