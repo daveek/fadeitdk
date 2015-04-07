@@ -43,11 +43,13 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     if($stateParams.lang !== undefined){
         var otherLang = $stateParams.lang === 'da' ? 'en' : 'da';
         $rootScope.activeLang = $stateParams.lang; //Used in html head
+        $rootScope.otherLang = otherLang; //used in hreflang
         $rootScope.otherLangURL = $location.absUrl().replace('/' + $stateParams.lang, '/' + otherLang);
     }
     else{
         //default to danish, try localstorage & state default overrides
         $rootScope.activeLang = 'da';
+        $rootScope.otherLang = false;
         $rootScope.otherLangURL = $location.absUrl().replace('/da', '/en');
         var storedLang = store.get('activeLang');
         if(storedLang){
