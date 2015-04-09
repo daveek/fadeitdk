@@ -1,4 +1,16 @@
-[
+[  
+  {
+    "id": "preload-angular-translate-partial-loader",
+    "title": "Pre-loading partial loader translations",
+    "intro": "Finding the balance between eager loading and lazy loading translation tables",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-04-09T14:20:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
   {
     "id": "angular-translate-ui-router-seo",
     "title": "AngularJS SEO friendly translation URLs with ui-router",

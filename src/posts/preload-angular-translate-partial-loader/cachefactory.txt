@@ -1,0 +1,16 @@
+var app = angular.module('app', ['pascalprecht.translate']);
+app.config(function($translateProvider) {
+    $translateProvider.useLoader('$translatePartialLoader', {
+        urlTemplate: '/assets/translations/{lang}/{part}.json',
+        $http: { cache: true } //Enable caching for PartialLoader
+    });
+});
+app.run(function run ($cacheFactory) {
+    var httpCache = $cacheFactory.get('$http');
+    var putHttpCache = function putHttpCache(cacheKey, cacheValue){
+        var cacheObj = [200, cacheValue, {}, "OK"];
+        httpCache.put(cacheKey, cacheObj);
+    };
+    var cacheValue = angular.toJson({TEST_KEY: "Cached key test"});
+    templateCacheToHttp('/assets/translations/da-dk/common.json', cacheValue);
+});
