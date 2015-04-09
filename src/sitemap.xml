@@ -132,21 +132,24 @@
     <loc>http://fadeit.dk/blog</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/post/fadeit-blog-is-live</loc>
+    <loc>http://fadeit.dk/blog/post/fadeit-blog-is-live</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/post/what-we-like-on-the-web-this-year</loc>
+    <loc>http://fadeit.dk/blog/post/what-we-like-on-the-web-this-year</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/post/whats-rotten-in-the-state-of-denmark</loc>
+    <loc>http://fadeit.dk/blog/post/whats-rotten-in-the-state-of-denmark</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/post/angularjs-seo-for-angular-translate</loc>
+    <loc>http://fadeit.dk/blog/post/angularjs-seo-for-angular-translate</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/post/sqlalchemy-postgresql-earthdistance</loc>
+    <loc>http://fadeit.dk/blog/post/sqlalchemy-postgresql-earthdistance</loc>
   </url>
   <url>
-    <loc>http://fadeit.dk/post/angular-translate-ui-router-seo</loc>
+    <loc>http://fadeit.dk/blog/post/angular-translate-ui-router-seo</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/blog/post/preload-angular-translate-partial-loader</loc>
   </url>
 </urlset>

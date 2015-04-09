@@ -52,5 +52,8 @@
     "karma-safari-launcher": "^0.1.1",
     "protractor": "^1.4.0",
     "time-grunt": "^1.0.0"
+  },
+  "dependencies": {
+    "grunt-jsonlint": "^1.0.4"
   }
 }

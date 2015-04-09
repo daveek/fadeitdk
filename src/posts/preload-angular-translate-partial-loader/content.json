@@ -1,0 +1,58 @@
+[
+  {
+    "id": "preload-angular-translate-partial-loader",
+    "title": "Pre-loading partial loader translations",
+    "intro": "Finding the balance between eager loading and lazy loading translation tables",
+    "cover": "cover_wide.jpg",
+    "date": "2015-04-09T14:20:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Introduction"
+      },
+      {
+        "type": "p",
+        "text": "<a href=\"https://angular-translate.github.io/\">Angular-translate</a>, the de-facto internationalisation module for AngularJS applications. It works by replacing translation keys from the translation dictionary. The problem is that dictionary can become quite large, so it doesn't make sense to send the entire translations file to the client on initial page load. The solution is partial loading, and most of the heavy lifting is already done. Partial loader works as advertised - per each page we can define translation files that are required to load for that page, thus lowering the amount of data required to transfer. The downside to partial loading however is that on initial page load the browser must first load angular, which in turn starts loading required parts. That issue becomes apparent on slower connections, and can be a factor when making a first impression. What if we could pre-load the parts that are required on the landing page?<br/>Behind the scenes the partial loader uses angular's <em>$http</em> service to fetch a JSON file and store it in an array. Fortunately for us angular has a built-in caching mechanism for <em>$http</em> service that we could leverage for our purpose. We are going to store the parts we want to pre-load in the $http cache so when partial loader tries to fetch the files, it will hit cache.<br/>The caching mechanism for <em>$http</em> service can be overridden, but by default it's using <em>$cacheFactory</em>'s cache with <em>'$http'</em>. Cache key is the request URL and value is an array containing 4 items:<ol><li>response status - 200 for success</li><li>data - JSON for our needs</li><li>response headers - we leave it blank</li><li>status text - 'OK' for fulfilled request</li></ol>Assuming translation file we want to pre-load is available at http://example.com/assets/translations/da-dk/common.json, let's test out the concept by creating a function that fakes cache entry for us:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "cachefactory.txt"
+      },
+      {
+        "type": "p",
+        "text": "It works, however we have translation keys in code. Now we need to come up with a way to ship desired JSON files with initial application load. An approach would be to keep translations in a .js file instead which is angular service (returning JSON string on call), however that would require us to migrate the JSON files we want to pre-load into Javascript objects instead. But wait, Grunt already has a plugin for storing HTML templates the same way (<a href=\"https://github.com/karlgoldstein/grunt-html2js\">html2js</a>). The only difference is that the plugin uses <em>$templateCache</em> instead. Since we are already using <em>html2js</em> (and so should you), what we can do is to pass the JSON translations to angular app using the existing Grunt build task and once angular is bootstrapped, load translations from <em>$templateCache</em> and put them to <em>$http</em> cache as well. Grunt task for storing .json files in <em>$templateCache</em>:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "html2js.txt"
+      },
+      {
+        "type": "p",
+        "text": "Let's teach <em>putHttpCache</em> method to take translations from <em>$templateCache</em> instead:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "cachefactory2.txt"
+      },
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "p",
+        "text": "Now we can take the best of both worlds - preload most frequently used translations and lazy-load translations for less visited pages. Our html2js build process works in similar manner - all templates ending with *.tpl2js.html are stored in <em>$templateCache</em> whereas templates ending with *.tpl.html are only fetched on demand."
+      }
+    ]
+  }
+]

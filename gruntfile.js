@@ -388,6 +388,11 @@ module.exports = function(grunt) {
       src_js: ['./src/**/*.js'],
       gruntfiles: ['./gruntfile.js', 'grunt.conf.js']
     },
+    jsonlint: {
+        posts: {
+            src: [ 'src/**/*.json' ]
+        }
+    },
     /*
      * Karma is used to run unit tests.
      * It can run continiously (similar to the watch task).
@@ -453,7 +458,7 @@ module.exports = function(grunt) {
       },
       src_js: {
         files: ['./src/**/*.js', './src/**/*.json', './src/**/*.txt'],
-        tasks: ['newer:jshint:src_js', 'newer:copy:build_app_js', 'newer:copy:build_app_data', 'newer:copy:build_blog_posts']
+        tasks: ['newer:jsonlint', 'newer:jshint:src_js', 'newer:copy:build_app_js', 'newer:copy:build_app_data', 'newer:copy:build_blog_posts']
       },
       src_html: {
         files: ['./src/**/*.html', '!./src/index.html'],
@@ -505,6 +510,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:build_clean',
     'jshint',
+    'jsonlint',
     'copy:build_app_js',
     'copy:build_app_data',
     'copy:build_vendor_js',
@@ -525,8 +531,6 @@ module.exports = function(grunt) {
     'autoprefixer:build_autoprefix_css'
   ]);
   grunt.registerTask('compile', [
-    'jshint',
-    'clean:build_clean',
     'build',
     'copy:compile_views',
     'html2js:compile_shared_views',

@@ -16,7 +16,7 @@ function blogConfig($stateProvider){
       defaultLang: 'en',
     }
   }).state('blog-posts', {
-    url: '/post/:postId',
+    url: '/blog/post/:postId',
     controller: 'BlogController',
     controllerAs: 'vm',
     templateUrl: 'views/blog-page.html',
