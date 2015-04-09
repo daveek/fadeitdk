@@ -5,5 +5,5 @@ app.run(function run ($cacheFactory, $templateCache) {
         var cacheObj = [200, $templateCache.get(cacheKey), {}, "OK"];
         httpCache.put('/' + cacheKey, cacheObj); //prepend '/' to make url's match
     };
-    templateCacheToHttp('assets/translations/da-dk/common.json');
+    putHttpCache('assets/translations/da-dk/common.json');
 });

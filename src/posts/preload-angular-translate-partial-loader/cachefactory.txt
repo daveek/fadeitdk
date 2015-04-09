@@ -7,10 +7,11 @@ app.config(function($translateProvider) {
 });
 app.run(function run ($cacheFactory) {
     var httpCache = $cacheFactory.get('$http');
+
     var putHttpCache = function putHttpCache(cacheKey, cacheValue){
         var cacheObj = [200, cacheValue, {}, "OK"];
         httpCache.put(cacheKey, cacheObj);
     };
     var cacheValue = angular.toJson({TEST_KEY: "Cached key test"});
-    templateCacheToHttp('/assets/translations/da-dk/common.json', cacheValue);
+    putHttpCache('/assets/translations/da-dk/common.json', cacheValue);
 });
