@@ -42,7 +42,7 @@
           Blog
         </a>
       </li>
-      <li class="menu-link-item" ui-sref-active="activeMenu">
+      <li ng-if="root.multiLang" class="menu-link-item" ui-sref-active="activeMenu">
         <a ng-href="{{otherLangURL}}" class="menu-anchor main-menu-anchor" translate>
           IN_LANGUAGE
         </a>
