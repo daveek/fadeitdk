@@ -421,7 +421,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_BACKEND_TITLE": "Back-end Udvikling",
     "EXPERTISE_BACKEND_UDVIKLING": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
     "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
-    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href='https://en.wikipedia.org/wiki/Heartbleed'>Heartbleed</a> and <a href='https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29'>Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "En af de mest effektive måder at beskytte virksomhedens infrastruktur imod virus som bl.a. <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> og <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> er at holde dit software opdateret. Typisk ser vi at “modgiften” er tilgængelig blot få timer efter en ny virus rammer nettet. Det er bl.a. derfor vi, hos fadeit, ligger stor ære i at holde vores Linux installationer opdaterede, sikre og fri for infektioner.",
     "EXPERTISE_TOOLBOX_LINK": "Fandt du ikke det du kom efter? Tag et kig i vores {{toolbox}} og ha' lidt sjov med det!",
 
     /*
