@@ -29,7 +29,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     //give 404 on hashbang URL's (for some reason googlebot crawled them?)
     if($location.absUrl().indexOf('#!') !== -1){
         $rootScope.responseStatus = 404;
-    } 
+    }
     var defaultState = {
         multiLang: true,
         scrollTop: true,
@@ -40,6 +40,11 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     angular.extend(vm, defaultState);
     angular.extend(vm, toState.data);
     wow.init();
+
+    /*
+     * TODO: document this part
+     * TODO: revise
+     */
     if($stateParams.lang !== undefined){
         var otherLang = $stateParams.lang === 'da' ? 'en' : 'da';
         $rootScope.activeLang = $stateParams.lang; //Used in html head

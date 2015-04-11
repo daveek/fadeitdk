@@ -1404,7 +1404,6 @@ a{
   /*expertise-row*/
   .expertise-row{
     .col(@ws, b);
-    cursor:pointer;
     margin-bottom:0;
     margin-top:0;
     padding:15px 30px;
@@ -1429,6 +1428,20 @@ a{
       .col(lighten(@g7, 5%), b);
       .col(lighten(@b, 5%));
       .animate(@animation_time_short, @transition_default);
+    }
+
+    a{
+      h2{
+        .col(@b);
+      }
+    }
+
+    .active-row{
+      a{
+        h2{
+          .col(@col_text_gray);
+        }
+      }
     }
 
     span{

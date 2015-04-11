@@ -34,7 +34,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
   $urlRouterProvider.otherwise('/da');
 
   //Turn ON 'html5mode' (true) for prod - if you forget you need to buy beers for everybody in the office
-  $locationProvider.html5Mode(true);
+  //$locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
 
   /*
@@ -126,6 +126,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_EXPERIENCE_DESIGN": "Our strong background in experience design will complement your innovation efforts and help you build a better product. We'll be happy to develop concepts together, responsive interfaces and try to push your brand strategy one step further.",
     "EXPERTISE_OPEN_DATA_TITLE": "Open Data",
     "EXPERTISE_CKAN_DEVELOPMENT": "Openness and transparency is the key to the government that you want. If you are looking to build or extend an Open Data site, we’re here to help. We have experience with building large CKAN portals complete with Drupal integration.",
+    "EXPERTISE_NODEJS_TITLE": "NodeJS Development",
     "EXPERTISE_NODEJS_DEVELOPMENT": "Javascript no longer runs in the browser - NodeJS offers concurrency model suitable for web applications dealing with data in real-time. We develop communications applications with socket.io, custom modules for most popular Internet of Things routing software Node-RED and lightweight express.js backends.",
     "EXPERTISE_WEB_CRAWLING_TITLE": "Web Crawlers",
     "EXPERTISE_WEB_CRAWLING": "Want to get some public data from the web into your database but can’t find an API endpoint? We build custom web crawlers (spiders) so pay us a call if you need help.",
@@ -394,32 +395,33 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      * EXPERTISE PAGE
      */
     "EXPERTISE_PAGE_TITLE": "Det vi gør",
-    "EXPERTISE_PAGE_TITLE_SOFTWARE_UDVIKLING": "Software Udvikling",
-    "EXPERTISE_PAGE_TITLE_DRUPAL_UDVIKLING": "Drupal Udvikling",
-    "EXPERTISE_PAGE_TITLE_PYTHON_UDVIKLING": "Python Udvikling",
-    "EXPERTISE_PAGE_TITLE_ANGULARJS_UDVIKLING": "AngularJS Udvikling",
+    "EXPERTISE_PAGE_TITLE_SOFTWARE_DEVELOPMENT": "Software Udvikling",
+    "EXPERTISE_PAGE_TITLE_DRUPAL_DEVELOPMENT": "Drupal Udvikling",
+    "EXPERTISE_PAGE_TITLE_PYTHON_DEVELOPMENT": "Python Udvikling",
+    "EXPERTISE_PAGE_TITLE_ANGULARJS_DEVELOPMENT": "AngularJS Udvikling",
     "EXPERTISE_PAGE_TITLE_IT_AUTOMATION": "IT Automatisering",
     "EXPERTISE_PAGE_TITLE_EXPERIENCE_DESIGN": "Experience Design",
-    "EXPERTISE_PAGE_TITLE_CKAN_UDVIKLING": "CKAN Udvikling",
-    "EXPERTISE_PAGE_TITLE_NODEJS_UDVIKLING": "NodeJS Udvikling",
+    "EXPERTISE_PAGE_TITLE_CKAN_DEVELOPMENT": "CKAN Udvikling",
+    "EXPERTISE_PAGE_TITLE_NODEJS_DEVELOPMENT": "NodeJS Udvikling",
     "EXPERTISE_PAGE_TITLE_WEB_CRAWLING": "Web Crawler (Spider)",
-    "EXPERTISE_PAGE_TITLE_BACKEND_UDVIKLING": "Backend Udvikling",
+    "EXPERTISE_PAGE_TITLE_BACKEND_DEVELOPMENT": "Backend Udvikling",
     "EXPERTISE_PAGE_TITLE_SYSTEM_ADMINISTRATION": "System Administration",
     "EXPERTISE_SUMMARY": "Vi har udviklet en stor vifte af forskellige web og mobil applikationer. Vi designer på tværs af platforme, koncepter og erfaringer. Vi automatiserer systemer og forenkle processer.",
-    "EXPERTISE_DRUPAL_UDVIKLING": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
-    "EXPERTISE_PYTHON_UDVIKLING": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
-    "EXPERTISE_ANGULARJS_UDVIKLING": "Angular JS tillader at vi kan udvikle skalerbare, vedligeholdelsesfrie og genbrugeligt software. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af dit software så brugerens oplevelse er flydende.",
+    "EXPERTISE_DRUPAL_DEVELOPMENT": "Planlægger du at lave et moderne website som kan tilpasses ned i mindste detalje og som tilbyder lækker community support? Så er det nok Drupal du skal kigge på - vi bygger brugerdefinerede installations profiler, designer tema'er og udvikler moduler både til mindre opgaver, men også til de helt store opgaver. Vi tilbyder også Drupal vedligeholdelse, afprøvning og støtte.",
+    "EXPERTISE_PYTHON_DEVELOPMENT": "Nogle gange kan et standard CMS (Content Management System) bare ikke løse opgaven. Hos fadeit elsker vi Python Web Stacks - Vi bygger custom applikationer med Flask micro framework.",
+    "EXPERTISE_ANGULARJS_DEVELOPMENT": "Angular JS tillader at vi kan udvikle skalerbare, vedligeholdelsesfrie og genbrugeligt software. Måden hvorpå koden skrives simplificerer ydermere logikken og ydeevnen på serversiden af dit software så brugerens oplevelse er flydende.",
     "EXPERTISE_IT_AUTOMATION_TITLE": "IT Automatisering",
     "EXPERTISE_IT_AUTOMATION": "Måske har du hørt legender om at udviklingsvirksomheder hvor nye udviklere kunne udgive deres applikationer på deres første dag? Tjaa, det er absolut ikke et mirakel og det er faktisk heller ikke umuligt at opnå. Vi arbejder med DevOps og Infrastructure som vores kode mentalitet. Giv os et kald hvis du har brug for en dedikeret kode ninja der kan hjælpe dig med Puppet, Docker eller Vagrant.",
     "EXPERTISE_EXPERIENCE_DESIGN_TITLE": "Experience Design",
     "EXPERTISE_EXPERIENCE_DESIGN": "Vores baggrund med experience design vil kunne udvikle dine tanker og hjælper dig til at bygge et langt bedre produkt. Vi elsker at udvikle koncepter sammen med vores kunder.",
     "EXPERTISE_OPEN_DATA_TITLE": "Open Data",
-    "EXPERTISE_CKAN_UDVIKLING": "Åbenhed og gennemsigtighed er nøglen til den regering du gerne vil have. Hvis du skal bygge eller udvide et Open Data software, står vi til rådighed. Vi har stor expertise i forbindelse med at udvikle større CKAN portaler integreret med bl.a. Drupal infrastruktur.",
-    "EXPERTISE_NODEJS_UDVIKLING": "Javascript afvikles ikke mere i din browser - NodeJS byder derimod på en model som er velegnet til web applikationer med data i real-time. Vi udvikler kommunikations applikationer med socket.io, custom moduler i forbindelse med Internet of Things routing software Node-RED og express.js backends.",
+    "EXPERTISE_CKAN_DEVELOPMENT": "Åbenhed og gennemsigtighed er nøglen til den regering du gerne vil have. Hvis du skal bygge eller udvide et Open Data software, står vi til rådighed. Vi har stor expertise i forbindelse med at udvikle større CKAN portaler integreret med bl.a. Drupal infrastruktur.",
+    "EXPERTISE_NODEJS_TITLE": "NodeJS Udvikling",
+    "EXPERTISE_NODEJS_DEVELOPMENT": "Javascript afvikles ikke mere i din browser - NodeJS byder derimod på en model som er velegnet til web applikationer med data i real-time. Vi udvikler kommunikations applikationer med socket.io, custom moduler i forbindelse med Internet of Things routing software Node-RED og express.js backends.",
     "EXPERTISE_WEB_CRAWLING_TITLE": "Web Crawlers",
     "EXPERTISE_WEB_CRAWLING": "Har du brug for at få offentlig data ind i din database, men kan ikke finde en indgang? Vi bygger custom web crawlers (spiders) så giv os et kald, hvis du har brug for hjælp.",
     "EXPERTISE_BACKEND_TITLE": "Back-end Udvikling",
-    "EXPERTISE_BACKEND_UDVIKLING": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
+    "EXPERTISE_BACKEND_DEVELOPMENT": "Vi tilbyder vores ekspertise i forbindelse med forskellige server backend systemer. Nogle af de ting vi kan er:<br/><br/> - ElasticSearch/Solr server setup, konfiguration<br/> - Udvikler RESTful APIs<br/> - PostgreSQL/MySQL server setup, konfiguration<br/> - Opsætning af Nginx og Varnish reverse proxies<br/>",
     "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
     "EXPERTISE_SYSTEM_ADMINISTRATION": "En af de mest effektive måder at beskytte virksomhedens infrastruktur imod virus som bl.a. <a href=\"https://en.wikipedia.org/wiki/Heartbleed\">Heartbleed</a> og <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\">Shellshock</a> er at holde dit software opdateret. Typisk ser vi at “modgiften” er tilgængelig blot få timer efter en ny virus rammer nettet. Det er bl.a. derfor vi, hos fadeit, ligger stor ære i at holde vores Linux installationer opdaterede, sikre og fri for infektioner.",
     "EXPERTISE_TOOLBOX_LINK": "Fandt du ikke det du kom efter? Tag et kig i vores {{toolbox}} og ha' lidt sjov med det!",
