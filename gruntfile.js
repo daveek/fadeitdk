@@ -186,6 +186,12 @@ module.exports = function(grunt) {
         dest: '<%= compile_dir %>',
         expand: true,
       },
+      compile_feed: {
+        cwd: './src',
+        src: ['blog-feed.xml'],
+        dest: '<%= compile_dir %>',
+        expand: true,
+      },
       compile_app_assets: {
         cwd: '<%= build_dir %>',
         src: ['src/assets/**/*', '!src/assets/**/*.md'],
@@ -542,6 +548,7 @@ module.exports = function(grunt) {
     'copy:compile_app_assets',
     'copy:compile_index',
     'copy:compile_sitemap',
+    'copy:compile_feed',
     'copy:compile_asset_js',
     'copy:compile_app_data',
     'copy:compile_blog_posts',
