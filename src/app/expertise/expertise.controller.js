@@ -47,8 +47,6 @@ function expertiseController($rootScope, $stateParams, $state, $document, $trans
       if(vm.expertiseList[i].uisref.da === vm.tech || vm.expertiseList[i].uisref.en === vm.tech){
         pageTitle = vm.expertiseList[i].title;
         pageDesc = vm.expertiseList[i].description;
-        console.log(pageTitle);
-        console.log(pageDesc);
 
         pageFound = true;
 
