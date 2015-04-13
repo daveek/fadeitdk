@@ -357,7 +357,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
      */
     "FRONT_PAGE_TITLE": "Vi er et team at dedikerede udviklere",
     "FRONT_TIME_TO_DO": "Hvorfor har udviklere aldrig<br/>tid til at gøre det rigtigt ... <br/>men altid tid til at gøre det<br/>hele om igen!",
-    "FRONT_HERES_WHAT_WE_BELIEVE": "Software er for mange et sort område - vores kunder ved hvad de vil have og hvordan det skal se ud, men mange gange ved kunderne ikke hvordan vi udviklere når målet",
+    "FRONT_HERES_WHAT_WE_BELIEVE": "Software er for mange et sort område - vores kunder ved hvad de vil have og hvordan det skal se ud, men mange gange ved kunderne ikke hvordan vi udviklere når målet.",
     "FRONT_SOFTWARE_EASY": "Vi skaber software der skaber værdi for dig",
     "FRONT_SOFTWARE_EASY_TEXT": "Hjemmesider, portaler, e-shop løsninger, back-end løsninger, system <br/>automatisering og system integration er blot nogle af de opgaver vi har <br/>arbejdet med igennem de seneste mange år - Vi har erfaringen og en hånd-<br/>fuld dygtige udviklere som er med til at skabe software der skaber værdi <br/>for vores kunder og måske snart også for dig.",
     "FRONT_SOFTWARE_SECURE": "Hvorfor gå på kompromis",
@@ -365,7 +365,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "FRONT_SOFTWARE_OPEN": "Vi tænker anderledes",
     "FRONT_SOFTWARE_OPEN_TEXT": "Hos fadeit tænker vi en smule anderledes - vi har dygtige udviklere, udviklere som nok skal udvikle din <br/>idé, men ligeså vigtigt har vi de bedste system designere i Danmark - <br/>System designerens primære og ultimativ fornemste job er at hjælpe dig med at se <br/>muligheder, at udvikle dine tanker, at illustrerer hvad der er muligt og naturligvis <br/>at kunne tale med dig på et sprog du forstår.",
     "FRONT_SOFTWARE_FOR_YOU": "Lad os rådgive dig",
-    "FRONT_ARE_YOU_A_CLIENT": "Vi gir’ dig værdiskabende rådgivning uden varm luft - Har du store planer du vil have realiseret eller planer du gerne vil høre vores mening om, så kontakt os - det koster ikke noget ",
+    "FRONT_ARE_YOU_A_CLIENT": "Vi gir’ dig værdiskabende rådgivning uden varm luft - Har du store planer du vil have realiseret eller planer du gerne vil høre vores mening om, så kontakt os - det koster ikke noget.",
     "FRONT_BUTTON_CONTACT": "Spørg løs",
 
     /*
