@@ -20,7 +20,8 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     templateUrl: 'views/404.html',
     controller: 'NotFoundController',
     data:{
-      pageTitle: '404_PAGE_TITLE'
+      pageTitle: '404_PAGE_TITLE',
+      multiLang: false
     }
   });
   $stateProvider.state('app', {
