@@ -10,6 +10,16 @@
     <updated>2003-12-13T18:30:02Z</updated>
 
     <entry>
+        <title>Know your cascading stylesheets OR how should we organize CSS?</title>
+        <link href="http://fadeit.dk/blog/post/know-your-cascading-stylesheets-or-how-should-we-organize-css" />
+        <id>urn:uuid:33085a22-e432-11e4-8a00-1681e6b88ec1</id>
+        <updated>2015-04-16T12:10:00.000Z</updated>
+        <summary>How can we create maintainable, reusable, comprehensible CSS? Is there a formula that works for everybody, or is it just a matter of personal preference?</summary>
+        <author>
+            <name>Dan Mindru</name>
+        </author>
+    </entry>
+    <entry>
         <title>Pre-loading partial loader translations</title>
         <link href="http://fadeit.dk/blog/post/preload-angular-translate-partial-loader" />
         <id>urn:uuid:2c050909-0e8a-4e7b-aa2c-68db6c4239b3</id>

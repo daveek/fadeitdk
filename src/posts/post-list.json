@@ -1,4 +1,16 @@
-[  
+[
+  {
+    "id": "know-your-cascading-stylesheets-or-how-should-we-organize-css",
+    "title": "Know your cascading stylesheets OR how should we organize CSS?",
+    "intro": "How can we create maintainable, reusable, comprehensible CSS? Is there a formula that works for everybody, or is it just a matter of personal preference?",
+    "cover": "cover.jpg",
+    "date": "2015-04-16T12:10:00.000Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
   {
     "id": "preload-angular-translate-partial-loader",
     "title": "Pre-loading partial loader translations",

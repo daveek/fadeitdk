@@ -1,0 +1,3 @@
+p.red.red { color: red; }
+p.red { color: blue; }
+/* the color of p.red will be red */

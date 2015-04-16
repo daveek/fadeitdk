@@ -61,7 +61,7 @@
       },
       {
         "type": "quote",
-        "text": "Quote text,
+        "text": "Quote text",
         "ref": "https://support.google.com/webmasters/answer/182192", //reference to your quote
         "reverse": false //optional, will float elements to right
       },
