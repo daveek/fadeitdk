@@ -9,7 +9,7 @@ function expertiseConfig($stateProvider){
     templateUrl: 'views/expertise-page.html',
     data:{
       pageTitle: 'EXPERTISE_PAGE_TITLE',
-      pageDesc: 'EXPERTISE_SUMMARY',
+      pageDesc: 'EXPERTISE_SUMMARY'
     }
   })
   .state('app.tech', {
@@ -20,7 +20,7 @@ function expertiseConfig($stateProvider){
     data:{
       pageTitle: 'EXPERTISE_PAGE_TITLE',
       pageDesc: 'EXPERTISE_SUMMARY',
-      scrollTop: false,
+      scrollTop: false
     }
   });
 }

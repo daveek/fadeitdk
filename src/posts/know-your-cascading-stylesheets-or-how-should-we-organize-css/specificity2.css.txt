@@ -1,0 +1,9 @@
+/* Avoid */
+p.red { color: red!important; }
+p.red { color: blue; }
+
+/* If you really have to, use a trick */
+p.red.red { color: red; } /* -> specificity = 0,0,2,1 */
+p.red { color: blue; }    /* -> specificity = 0,0,1,1 */
+
+/* the color of p.red will be red in both cases */

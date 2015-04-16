@@ -1,74 +1,73 @@
 angular.module('fadeit.expertise').controller('ExpertiseConroller', expertiseController);
 
-expertiseController.$inject = ['$rootScope', '$stateParams', '$state', '$document', '$translate', '$filter', '$timeout'];
-function expertiseController($rootScope, $stateParams, $state, $document, $translate, $filter, $timeout) {
+expertiseController.$inject = ['$rootScope', '$stateParams', '$state', '$document', '$translate', '$filter', 'ExpertiseService', '$scope', '$rootScope'];
+function expertiseController($rootScope, $stateParams, $state, $document, $translate, $filter, ExpertiseService, $scope, $rootScope) {
   var vm = this,
       pageTitle,
-      pageDesc;
-  //Map english urls to danish & vice-versa
-  var map = {
-      'software-development': 'software-udvikling',
-      'drupal-development': 'drupal-udvikling',
-      'python-development': 'python-udvikling',
-      'angularjs-development': 'angularjs-udvikling',
-      'ckan-development': 'ckan-udvikling',
-      'nodejs-development': 'nodejs-udvikling',
-      'backend-development': 'backend-udvikling'
-  };
-  //Extend map with other-way-round mappings
-  map = angular.extend(map, invert(map));
+      pageDesc,
+      pageFound = false;
+
+  //Store the current URL
   vm.tech = $stateParams.tech;
 
-  pageTitle = 'EXPERTISE_PAGE_TITLE_' + vm.tech.replace('-','_').toUpperCase();
-  pageDesc = 'EXPERTISE_' + vm.tech.replace('-','_').toUpperCase();
-
-  remapOtherLangURL(vm.tech);
-
   /*
-   * If the translation of pageTitle/Desc will return a different string, use it
-   * otherwise default to the expertise meta's.
-   *
-   * This prevents the display of a key when no translation is available.
+   * The ExpertiseService will persistently store the expertise data
+   * (loaded from expertise.json)
+   * This is needed to avoid sending a request for new data which every
+   * state change. As a result, the ng-repeat in the template will only
+   * 'run once' (not really, but it won't loop through the entire data),
+   * therefore preventing 'page jumps' when switching routes.
    */
-  if($filter('translate')(pageTitle) !== pageTitle){
-    $state.current.data.pageTitle = pageTitle;
-  }
-  else {
-    $state.current.data.pageTitle = 'EXPERTISE_PAGE_TITLE';
-  }
+  //TODO: promise rejects are not handled
+  if(!ExpertiseService.expertiseData){
+    ExpertiseService.expertiseIndex().then(function projectListResponse(response){
+      //store the JSON data
+      ExpertiseService.expertiseData = response;
 
-  if($filter('translate')(pageDesc) !== pageDesc){
-    $state.current.data.pageDesc = pageDesc;
+      renderExpertiseList(response);
+    });
   }
-  else {
-    $state.current.data.pageDesc = 'EXPERTISE_SUMMARY';
+  else{
+    renderExpertiseList(ExpertiseService.expertiseData);
   }
 
 
   /*
-   * Scroll to the #id of the tech in the URL if available
+   * Loops through the expertise data to determine if a URL 'slug' (vm.tech)
+   * is found in the JSON.
+   * If found, the title and description will be updated.
+   * If not found, the default expertise page title and description will be
+   * used instead.
    */
-  $timeout(function (){
-    if($document[0].getElementById(vm.tech)){
-      $document.scrollTo(angular.element($document[0].getElementById(vm.tech)), 90, 500);
-    }
-  }, 200); //200ms to be on the safe side
+  function renderExpertiseList(response){
+    var i;
+    vm.expertiseList = response;
 
-  function remapOtherLangURL(tech){
-    var mappedTech = map[tech];
-    if(mappedTech !== undefined){
-      $rootScope.otherLangURL = $rootScope.otherLangURL.replace(tech, map[tech]);
-    }
-  }
+    for(i = 0; i < vm.expertiseList.length; i++){
+      if(vm.expertiseList[i].uisref.da === vm.tech || vm.expertiseList[i].uisref.en === vm.tech){
+        pageTitle = vm.expertiseList[i].title;
+        pageDesc = vm.expertiseList[i].description;
 
-  function invert(obj) {
-    var new_obj = {};
-    for (var prop in obj) {
-      if(obj.hasOwnProperty(prop)) {
-        new_obj[obj[prop]] = prop;
+        pageFound = true;
+
+        //building 'otherLangURLs': just match the JSON data for the opposite route
+        if($rootScope.activeLang === 'da'){
+          $rootScope.otherLangURL = $rootScope.otherLangURL.replace(vm.tech, vm.expertiseList[i].uisref.en);
+        }
+        else if($rootScope.activeLang === 'en'){
+          $rootScope.otherLangURL = $rootScope.otherLangURL.replace(vm.tech, vm.expertiseList[i].uisref.da);
+        }
+
+        break;
       }
     }
-    return new_obj;
+
+    if(!pageFound){
+      pageTitle = 'EXPERTISE_PAGE_TITLE';
+      pageDesc = 'EXPERTISE_SUMMARY';
+    }
+
+    $state.current.data.pageTitle = pageTitle;
+    $state.current.data.pageDesc = pageDesc;
   }
 }
-

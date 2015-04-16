@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>Fadeit Blog</title>
+    <subtitle>fadeit team on tech</subtitle>
+    <link href="http://fadeit.dk/blog-feed.xml" rel="self" />
+    <link href="http://fadeit.dk/" />
+    <id>urn:uuid:381e1e19-d2bb-4c99-8da1-7615624c89a6</id>
+    <updated>2003-12-13T18:30:02Z</updated>
+
+    <entry>
+        <title>Know your cascading stylesheets OR how should we organize CSS?</title>
+        <link href="http://fadeit.dk/blog/post/know-your-cascading-stylesheets-or-how-should-we-organize-css" />
+        <id>urn:uuid:33085a22-e432-11e4-8a00-1681e6b88ec1</id>
+        <updated>2015-04-16T12:10:00.000Z</updated>
+        <summary>How can we create maintainable, reusable, comprehensible CSS? Is there a formula that works for everybody, or is it just a matter of personal preference?</summary>
+        <author>
+            <name>Dan Mindru</name>
+        </author>
+    </entry>
+    <entry>
+        <title>Pre-loading partial loader translations</title>
+        <link href="http://fadeit.dk/blog/post/preload-angular-translate-partial-loader" />
+        <id>urn:uuid:2c050909-0e8a-4e7b-aa2c-68db6c4239b3</id>
+        <updated>2015-04-09T14:20:16.125Z</updated>
+        <summary>Finding the balance between eager loading and lazy loading translation tables.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
+    <entry>
+        <title>AngularJS SEO friendly translation URLs with ui-router</title>
+        <link href="http://fadeit.dk/blog/post/angular-translate-ui-router-seo" />
+        <id>urn:uuid:f27459f7-1070-49e3-b01f-3fffbb529fd9</id>
+        <updated>2015-03-30T16:10:55.125Z</updated>
+        <summary>Making your multilingual AngularJS application properly crawlable by search engine bots.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
+    <entry>
+        <title>SQLAlchemy with earthdistance</title>
+        <link href="http://fadeit.dk/blog/post/sqlalchemy-postgresql-earthdistance" />
+        <id>urn:uuid:f36a6ff8-b607-4d25-8ae1-e5ca986b49a6</id>
+        <updated>2015-03-19T19:30:16.125Z</updated>
+        <summary>Postgresql has a handy extension for calculating distances between coordinates on earth, we are looking at how it all fits into SQLAlchemy ORM.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
+    <entry>
+        <title>SEO friendly angular-translate</title>
+        <link href="http://fadeit.dk/blog/post/angularjs-seo-for-angular-translate" />
+        <id>urn:uuid:c5540799-9900-48e1-96ac-0c64ed9a3cc8</id>
+        <updated>2015-03-12T19:30:16.125Z</updated>
+        <summary>SEO is a weak spot for AngularJS to begin with, but the issue takes a different turn when angular-translate is thrown into the mix.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
+    <entry>
+        <title>What's rotten in the state of Denmark?</title>
+        <link href="http://fadeit.dk/blog/post/whats-rotten-in-the-state-of-denmark" />
+        <id>urn:uuid:93febc87-5376-45f4-bcfb-28e4e7f2631d</id>
+        <updated>2015-02-28T21:16:14.465Z</updated>
+        <summary>We couldn't find what's rotten, but we have something better! We discovered Danish(tm) and it quickly became our new favorite place to read about danish design and architecture.</summary>
+        <author>
+            <name>Dan Mindru</name>
+        </author>
+    </entry>
+    <entry>
+        <title>What we liked on the web this year (so far)</title>
+        <link href="http://fadeit.dk/blog/post/what-we-like-on-the-web-this-year" />
+        <id>urn:uuid:d0c85572-2308-4bf0-bcac-8bd77410b280</id>
+        <updated>2015-02-12T12:30:18.101Z</updated>
+        <summary>We'll start our blogging operations with a relaxed article about some of the websites we liked this year. What are your favorites so far?</summary>
+        <author>
+            <name>Dan Mindru</name>
+        </author>
+    </entry>
+    <entry>
+        <title>Blog: open for business</title>
+        <link href="http://fadeit.dk/blog/post/fadeit-blog-is-live" />
+        <id>urn:uuid:d48e59e3-1b71-4991-8cb8-93e55b1c72b7</id>
+        <updated>2015-01-17T19:28:14.465Z</updated>
+        <summary>We're super excited to launch a blog section on our website. We'll be writing about design, tech, code and everything in between.</summary>
+        <author>
+            <name>Dan Mindru</name>
+        </author>
+    </entry>
+
+</feed>

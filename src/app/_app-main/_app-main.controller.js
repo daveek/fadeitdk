@@ -41,8 +41,14 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
             $rootScope.responseStatus = 404;
             vm.multiLang = false;
         }
-    } 
+    }
     wow.init();
+
+
+    /*
+     * TODO: document this part
+     * TODO: revise -> what about the 'SWITCH' translation key?
+     */
     if($stateParams.lang !== undefined){
         var otherLang = $stateParams.lang === 'da' ? 'en' : 'da';
         $rootScope.activeLang = $stateParams.lang; //Used in html head

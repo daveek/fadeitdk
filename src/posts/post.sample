@@ -45,7 +45,7 @@
      * BEGIN POST CONTENT
      * A loop will evaluate each object in the content Array and create the appropriate HTML markup
      *
-     * Content can be: p (paragraph), h (heading), quote, cover (stretching image), img (normal image), video and code
+     * Content can be: p (paragraph), h (heading), quote, list, cover (stretching image), img (normal image), video and code
      * Paragraphs can contain html elements
      *
      */
@@ -61,7 +61,7 @@
       },
       {
         "type": "quote",
-        "text": "Quote text,
+        "text": "Quote text",
         "ref": "https://support.google.com/webmasters/answer/182192", //reference to your quote
         "reverse": false //optional, will float elements to right
       },
@@ -95,6 +95,14 @@
         "type": "code", //a code block
         "language": "javascript", //language of the code, see http://prismjs.com/download.html#category-languages for a full list of languages
         "file": "sample.code.txt" //the file to load the code block from. Place it in /posts/your-post-id/sample.code.txt
+      },
+      {
+        "type": "list", //ordered list
+        "items": { //list items, accepts HTML
+          "0": "Group by type",
+          "1": "Order by line length",
+          "2": "Alphabetise"
+        }
       }
     ]
   }
