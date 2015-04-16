@@ -7,11 +7,18 @@
 
 angular.module(fadeitConfig.appRootModuleName).config(rootConfig);
 
+angular.module(fadeitConfig.appRootModuleName).controller('NotFoundController', notFoundController);
+notFoundController.$inject = ['$rootScope'];
+function notFoundController($rootScope) {
+    $rootScope.responseStatus = 404;
+}
+
 rootConfig.$inject = ['$locationProvider', '$urlRouterProvider', '$stateProvider', '$translateProvider'];
 function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $translateProvider){
   $stateProvider.state('404', {
     url: '/404',
     templateUrl: 'views/404.html',
+    controller: 'NotFoundController',
     data:{
       pageTitle: '404_PAGE_TITLE'
     }
@@ -31,7 +38,8 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     }
   });
 
-  $urlRouterProvider.otherwise('/da');
+  $urlRouterProvider.when('', '/da');
+  $urlRouterProvider.otherwise('/404');
 
   //Turn ON 'html5mode' (true) for prod - if you forget you need to buy beers for everybody in the office
   $locationProvider.html5Mode(true);

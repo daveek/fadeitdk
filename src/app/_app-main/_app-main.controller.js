@@ -37,8 +37,8 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     angular.extend(vm, toState.data);
     //give 404 on hashbang URL's (for some reason googlebot crawled them?)
     if($location.absUrl().indexOf('#!') !== -1){
-        $rootScope.responseStatus = 404;
         if($location.host() !== 'localhost'){
+            $rootScope.responseStatus = 404;
             vm.multiLang = false;
         }
     } 
