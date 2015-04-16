@@ -22,7 +22,7 @@
       },
       {
         "type": "p",
-        "text": "Documentation, formatting, frameworks, pre-processors, specificity - they all are trouble makers. Any of these might force you to give up and sell your soul. I am looking at you, the so called developer that appended <em>!important</em> to a property. In the W3C spec, ‘important’ is documented as ‘you gave up and now a scrambled mess of selectors that nobody understands took control of your stylesheet’.<br/>In all seriousness now, you should never have to write it. However, there are many other things that show you lost your grip. For example, if you have the same selector in many places and you are not sure what exactly you’re changing when updating a property.<br/><br/>I am not writing this article because I have it all figured it out, but because I have some clues on how to improve CSS. I don’t want it to feel like a set of rules, but rather start a constructive dialog."
+        "text": "Documentation, formatting, frameworks, pre-processors, specificity - they all are trouble makers. Any of these might force you to give up and sell your soul. I am looking at you, the so called developer that appended <em>!important</em> to a property. In the W3C spec, ‘important’ is documented as ‘you gave up and now a scrambled mess of selectors that nobody understands took control of your stylesheet’.<br/>In all seriousness now, you should never have to write it. However, there are many other signs that show you lost your grip. For example, if you have the same selector in many places and you aren't sure what exactly you’re changing when updating a property.<br/><br/>I am not writing this article because I have it all figured it out, but because I have some clues on how to improve the quality of CSS. I don’t want it to feel like a set of rules, but rather the start of a constructive dialog."
       },
       {
         "type": "h",
@@ -44,7 +44,7 @@
       },
       {
         "type": "p",
-        "text": "Let’s start with the easy part.<br/>When it comes to properties, what works and what doesn’t? <br/> I’ve been going the random way until now and that’s why I would want to try something else. Here are the most popular options:"
+        "text": "Let’s start with the easy part.<br/>When it comes to properties, what works and what doesn’t? <br/> I’ve been going the 'random way' until now and everything turned out ok. I wouldn't say no to another approach. Here are the most popular options:"
       },
       {
         "type": "list",
@@ -61,7 +61,7 @@
       },
       {
         "type": "p",
-        "text": "This method was once (and maybe still is) the most popular method of writing properties. Nicolas Gallager’s <a href='https://github.com/necolas/idiomatic-css' target='_blank'>idiomatic CSS</a> recommends this style for smaller teams, but larger teams seem to be more comfortable with alphabetising.<br/>Here’s one how to do it:"
+        "text": "This method was once (and maybe still is) the most popular method of writing properties. Nicolas Gallager’s <a href='https://github.com/necolas/idiomatic-css' target='_blank'>idiomatic CSS</a> recommends this style for smaller teams, but suggests alphabetising for larger teams.<br/>Here’s one how to do it:"
       },
       {
         "type": "code",
@@ -70,7 +70,7 @@
       },
       {
         "type": "p",
-        "text": "Obviously you are free to add your own types, such as <em>Effects</em> (can be border-radius, box-shadow, etc), <em>Animations & Transitions</em> or <em>Transforms</em>. There aren’t really any rules, you can create your own as long as you are consistent. The downside is that the rest of the team has to learn your rules, which is not very efficient."
+        "text": "We are free to add our own types, such as <em>Effects</em> (can be border-radius, box-shadow, etc), <em>Animations & Transitions</em> or <em>Transforms</em>. There aren’t any rules, we can create our own as long as we are consistent. The downside is that the rest of the team has to learn these rules, which is not very efficient."
       },
       {
         "type": "h",
@@ -79,7 +79,7 @@
       },
       {
         "type": "p",
-        "text": "This is the old school method, which some developers like because it decreases the amount of lines and gives them a better overview of the stylesheet. I don’t think this method is realistic today, especially when we have to pile up a bunch of duplicate properties to support all browsers.<br/>Here’s why it worked before:"
+        "text": "This is the 'old school' method. Some developers like it because it decreases the amount of lines and gives them a better overview of the stylesheet. I don’t think this method is realistic today, especially when we have to pile up a bunch of duplicate properties to support all browsers.<br/>Here’s why it worked before:"
       },
       {
         "type": "code",
@@ -88,7 +88,7 @@
       },
       {
         "type": "p",
-        "text": "...and here is why it doesn’t work today:"
+        "text": "...and here's why it doesn’t work today:"
       },
       {
         "type": "code",
@@ -97,7 +97,7 @@
       },
       {
         "type": "p",
-        "text": "To be fair about it, I should point out that there is a solution. By using a task runner (such as <a href='http://gruntjs.com/' target='_blank'>Grunt</a> or <a href='http://gulpjs.com/' target='_blank'>Gulp</a>) to automatically prefix the properties that require a vendor prefix. This way we could remove much of the duplicate styles and get to:"
+        "text": "To be fair about it, I should point out that there is a way to make it better. By using a task runner (such as <a href='http://gruntjs.com/' target='_blank'>Grunt</a> or <a href='http://gulpjs.com/' target='_blank'>Gulp</a>) we can automatically prefix the properties that require a vendor prefix. This way we'll get rid of many of the duplicate styles:"
       },
       {
         "type": "code",
@@ -106,7 +106,7 @@
       },
       {
         "type": "p",
-        "text": "It’s better, but probably 1-2 properties away from being hard to read. Some developers used to argue that it also decreases the size of the CSS file, which is now a commodity. Again, by using a task runner we can eliminate all spaces and line breaks. This gives us the freedom of writing CSS however we like, with plenty of spaces and comments. (<a href='https://github.com/gruntjs/grunt-contrib-cssmin' target='_blank'>grunt-cssmin</a> and <a href='https://github.com/chilijung/gulp-cssmin' target='_blank'>gulp-cssmin</a>) <br/>I wonder if anybody is still following this approach today. I wouldn’t be surprised if it would become no more than a page in the history of web development in the near future.<br/><br/> By the way, what’s the deal with the autoprefixer? It’s a life saver. If you are not using one, head over to <a href='https://github.com/nDmitry/grunt-autoprefixer' target='_blank'>grunt autoprefixer</a> or <a href='https://github.com/sindresorhus/gulp-autoprefixer' target='_blank'>gulp autoprefixer</a> and expect to get your mind blown. You’ll drastically reduce the size of your CSS source and increase it's readability. If you are using a pre-processors you will also get rid of a huge chunk of mixins."
+        "text": "It’s better, but probably 1-2 properties away from being hard to read. Some developers used to argue that it also decreases the size of the CSS file, which is now a 'commodity'. Again, by using a task runner we can eliminate all spaces and line breaks. This gives us the freedom of writing CSS however we like, with plenty of spaces and comments. (<a href='https://github.com/gruntjs/grunt-contrib-cssmin' target='_blank'>grunt-cssmin</a> and <a href='https://github.com/chilijung/gulp-cssmin' target='_blank'>gulp-cssmin</a>) <br/>I wonder if anybody is still following the order by line approach today. I wouldn’t be surprised if today it's no more than a page in the history of web development.<br/><br/> By the way, what’s the deal with the autoprefixer? It’s very helpful. If you are not using one, head over to <a href='https://github.com/nDmitry/grunt-autoprefixer' target='_blank'>grunt autoprefixer</a> or <a href='https://github.com/sindresorhus/gulp-autoprefixer' target='_blank'>gulp autoprefixer</a> and expect to get your mind blown. You’ll drastically reduce the size of your CSS source and increase it's readability. If you are using a pre-processors you will also get rid of a huge chunk of mixins."
       },
       {
         "type": "h",
@@ -115,7 +115,7 @@
       },
       {
         "type": "p",
-        "text": "The last but not the least method is alphabetising properties. Many developers like the consistency that it brings, that’s why it works well for bigger teams. Any other method you might choose can vary depending on the developer’s mindset, but this one always stays the same. It’s efficient and also brings some of the advantages we gain from grouping by type. However, CSS properties have a strong relationship - for example absolute positioning with z-index, left or top. It’s hard to visualise these relationships when alphabetising.<br/>There’s more criticism: we certainly don’t write CSS alphabetically, therefore developers have to invest extra time to alphabetise declarations after they wrote them. What about for those using a pre-processor, how will we alphabetise mixins?<br/><br/> Should we actually follow any rules while writing properties? In all honesty, I never felt the need to add rules, random works just fine for me. At the same time, I haven’t worked in a large team of front-enders. Maybe there is a point to alphabetise, but it certainly doesn’t feel wrong to randomly write the properties for me."
+        "text": "The last but not the least method is alphabetising properties. Many developers like the consistency that it brings, that’s why it works well for bigger teams. Any other method you might choose is often adjusted to a developer’s mindset, but this one always stays the same. However, CSS properties have a strong relationship - for example absolute positioning with z-index, left or top. It’s hard to visualise these relationships when alphabetising.<br/>There’s more criticism: we certainly don’t write CSS alphabetically, therefore developers have to invest extra time to alphabetise declarations after they wrote them. What about for those using a pre-processor, how will we alphabetise mixins?<br/><br/> Should we actually follow any rules while writing properties? In all honesty, I never felt the need to add rules, random works just fine. At the same time, I haven’t worked in a large team of front-enders. Maybe there is a point to alphabetise, but it certainly doesn’t feel wrong to randomly write the properties for me."
       },
       {
         "type": "h",
@@ -124,7 +124,7 @@
       },
       {
         "type": "p",
-        "text": "To wrap up the properties, here’s another interesting topic. Should we use shorthand or write it all down? My opinion is: it depends. If you are talking about box model properties, it sometimes makes sense to use shorthand. I use it in the following circumstances:"
+        "text": "To wrap up the properties, here’s another interesting topic. Should we use shorthand or write it all down? The answer is: it depends. If you are talking about box-model properties, it sometimes makes sense to use shorthand. I use it in the following circumstances:"
       },
       {
         "type": "code",
@@ -133,7 +133,7 @@
       },
       {
         "type": "p",
-        "text": "The shorthand can force values to top, right, bottom and left. This can result in all kinds of conflicts, for example:"
+        "text": "The shorthand can force values to top, right, bottom and left. Sometimes we don't want all properties to be set. This can result in all kinds of conflicts, for example:"
       },
       {
         "type": "code",
@@ -142,7 +142,7 @@
       },
       {
         "type": "p",
-        "text": "In this case, I actually want to maintain the original margin-top, but the shorthand forces me to either repeat the declaration or even worse - set it to a different value without realizing. In this case I prefer not to use shorthand:"
+        "text": "In this case, I actually want to maintain the original margin-top, but the shorthand forces me to either repeat myself or even worse - set it to a different value without realizing. In this case I prefer not to use shorthand:"
       },
       {
         "type": "code",
@@ -151,7 +151,7 @@
       },
       {
         "type": "p",
-        "text": "For other properties is makes sense to generally use shorthand, like border-radius. There is no simple answer to ‘should I use shorthand’. My take is to think about each property and decide on the spot. I might start with shorthand and change it later when I notice redundant declarations."
+        "text": "For some properties it makes sense to generally use shorthand, like border-radius. There is no simple answer to ‘should I use shorthand’. My opinion is we have to think about each property and decide on the spot. I might start with shorthand and change it later when I notice some redundant properties."
       },
       {
         "type": "h",
@@ -160,7 +160,7 @@
       },
       {
         "type": "p",
-        "text": "This is were the ‘pro’ territory starts. It’s not because it’s hard to do (it used to be harder), but you have to know what you’re doing. You need to have a clear idea of what CSS you’ll write and how it’s going to be connected. Call if ‘CSS architecture’ if you will. <br/>One of the common ways to get started is to use the SMACSS principles. The idea is to split the rules into 5 categories:"
+        "text": "This is were the ‘pro’ territory begins. It’s not because it’s hard to do (it used to be harder), but you have to know what you’re doing. You need to have a clear idea of what CSS you’ll write and how it’s going to be connected. Call it ‘CSS architecture’ if you will. <br/>One of the common ways to get started is to use the SMACSS principles. The idea is to split the rules into 5 categories:"
       },
       {
         "type": "list",
@@ -174,7 +174,7 @@
       },
       {
         "type": "p",
-        "text": "Of course, there’s more to SMACSS than this - but I won’t get into details. This approach will introduce modularity to CSS (to some extent), which of course is what every developer dreams of. It’s the holy grail: flexibility, maintainability, extensibility, comprehensibility - it has it all. Sounds good, let’s all do it! Only… I don’t think it really works with CSS. It can work sure, but do you know any CSS architects which can design a modular stylesheet system? I believe that most modular systems work well because of the pre-analysis and thorough planning initially invested into them. Maybe we could do the same with CSS… but how? <br/><br/>I’ll leave this one open, but I have to add one more thing. This kind of structure has never worked for me. My team members weren’t either. It’s hard to find declarations and most importantly: it doesn’t align with the cascade. If you don’t believe me, fork Bootstrap and try to modify or extend it. You’ll be able to do it sure, but how much time did you spend pinpointing those declarations?"
+        "text": "Of course, there’s more to SMACSS than this - but I won’t get into details. This approach will introduce a sort of modularity to CSS, which of course is what every developer dreams of. It’s the holy grail: flexibility, maintainability, extensibility, comprehensibility - it has it all. Sounds good, let’s all do it! Only...  I don’t think it really works with CSS. It could work sure, but do you know any CSS architects which can design a modular stylesheet system? I believe that most modular systems work well because of the pre-analysis and thorough planning invested into them initially. I would like to think the same is possible with CSS, but do we ever do it? <br/><br/>I’ll leave this one open. However, I have to say that this kind of structure has never worked for me. My team members weren’t happy either. It’s hard to find declarations and most importantly: it doesn’t align with the cascade."
       },
       {
         "type": "h",
@@ -210,7 +210,7 @@
       },
       {
         "type": "p",
-        "text": "In this case, the specificity is the same for both declarations. Therefore, the selectors that is last in the file wins (‘p span’). You can imagine how splitting CSS into many files can be problematic. <br/> That’s the least of the problems though. Specificity can single-handedly ruin CSS for us. It's a frequent problem with frameworks, content management systems, style guides and of course pre-processors. The real issue is that when CSS is specific, it forces us to continue writing more and more specific selectors. We then easily end up with redundant, complicated and disorganized stylesheets."
+        "text": "The specificity is the same for both declarations. In this case, the selector that comes last in the file wins (‘p span’). You can imagine how splitting CSS into many files can be problematic. <br/> That’s the least of the problems though. Specificity can single-handedly ruin CSS for us. It's a frequent problem with frameworks, content management systems, style guides and of course pre-processors. The real issue is that when CSS is specific, it forces us to keep writing more and more specific selectors. We then easily end up with redundant, complicated and disorganized stylesheets."
       },
       {
         "type": "quote",
@@ -269,7 +269,7 @@
       },
       {
         "type": "p",
-        "text": "Specificity is not achieved by the naming conventions. What it lacks is the nesting of pre-processors, but nothing stops us from writing it like this:"
+        "text": "Specificity is now achieved by the naming conventions. What it lacks is the nesting of pre-processors, but nothing stops us from writing it like this:"
       },
       {
         "type": "code",
@@ -278,7 +278,7 @@
       },
       {
         "type": "p",
-        "text": "Keep in mind that there are several variations of BEM conventions, but the core concept is there in all of them. For some time now pre-processors introduced BEM support, which enables us to simulate the DOM structure and use proper nesting, without having specificity troubles. Both LESS and SASS support a form of the following:"
+        "text": "Keep in mind that there are several variations of BEM conventions, but the core concept is the same for all of them. For some time now pre-processors introduced BEM support, which enables us to simulate the DOM structure & use proper nesting - without having specificity troubles. Both LESS and SASS support a form of the following:"
       },
       {
         "type": "code",
@@ -295,7 +295,7 @@
       },
       {
         "type": "p",
-        "text": "There’s more to cover, but I feel it was too optimistic to do it all in 1 article. A particularly interesting subject are design style guides, which I plan to write about in a future post. Don’t forget: write meaningful names for your selectors and pay attention to your HTML structure, many CSS problems start there.<br/> What else do you use? Do you write a table of contents? Do you have global classes like ‘.hidden’ or ‘.disabled’? How do you organize media queries? What about tools like <a href='https://github.com/SlexAxton/css-colorguard' target='_blank'>colorguard</a>, <a href='https://github.com/Huddle/PhantomCSS' target='_blank'>PhantomCSS</a> or <a href='https://github.com/katiefenn/parker' target='_blank'>parker</a>, can they help us organize our CSS better? <br/>There’s more. Self contained components à la React or Polymer. Are they the future?<br/><br/> However, you scrolled this far to see a conclusion. My conclusion is: try out different methods until you and your team members are satisfied. There are many ways to organize stylesheets, but none of them are going to solve all our problems. Me? I can’t go back from LESS, autoprefixer, and cssmin. I try to write my stylesheets in a OOCSS-way, which sometimes works. Lastly, I think BEM is neat and will definitely push it more in my future projects."
+        "text": "There’s more to cover, but I feel it was too optimistic to do it all in 1 article. A particularly interesting subject are design style guides, which I plan to write about in a future post. Don’t forget: write meaningful names for your selectors and pay attention to your HTML structure, many CSS problems start there.<br/> What else do you use? Do you write a table of contents? Do you have global classes like ‘.hidden’ or ‘.disabled’? How do you organize media queries? What about tools like <a href='https://github.com/SlexAxton/css-colorguard' target='_blank'>colorguard</a>, <a href='https://github.com/Huddle/PhantomCSS' target='_blank'>PhantomCSS</a> or <a href='https://github.com/katiefenn/parker' target='_blank'>parker</a>, can they help us organize our CSS better? <br/>There’s more. Self contained components à la React or Polymer. Are they the future?<br/><br/> Those are many interesting questions, but you scrolled this far to see a conclusion. Here it is: try out different methods until you and your team members are satisfied. There are many ways to organize stylesheets, but none of them are going to solve all of our problems. Me? I can’t go back from LESS, autoprefixer, and cssmin. I try to write my stylesheets in a OOCSS-way, which sometimes works. Lastly, I think BEM is neat and will definitely push it more in my future projects."
       }
     ]
   }
