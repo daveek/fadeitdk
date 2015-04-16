@@ -61,7 +61,7 @@
       },
       {
         "type": "p",
-        "text": "This method was once (and maybe still is) the most popular method of writing properties. Nicolas Gallager’s (idiomatic CSS)[https://github.com/necolas/idiomatic-css] recommends this style for smaller teams, but larger teams seem to be more comfortable with alphabetising.<br/>Here’s one how to do it:"
+        "text": "This method was once (and maybe still is) the most popular method of writing properties. Nicolas Gallager’s <a href='https://github.com/necolas/idiomatic-css' target='_blank'>idiomatic CSS</a> recommends this style for smaller teams, but larger teams seem to be more comfortable with alphabetising.<br/>Here’s one how to do it:"
       },
       {
         "type": "code",
