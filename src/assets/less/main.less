@@ -1369,12 +1369,6 @@ a{
         .col(@col_text_gray);
       }
     }
-    a.fa-rss {
-        float: right;
-        display: inline-block;
-        width: auto;
-        font-size: 35px;
-    }
 
       .post-cover{
         .cover();
@@ -1406,6 +1400,19 @@ a{
           margin-bottom:40px;
         }
       }
+  }
+
+  //the rss icon
+  .blog-rss{
+    .col(@col_text_gray);
+
+    &:visited{
+      .col(@col_text_gray);
+    }
+
+    &:hover, &:focus{
+      .col(@b);
+    }
   }
 
   /*expertise-row*/
