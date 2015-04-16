@@ -14,7 +14,7 @@
     "content": [
       {
         "type": "p",
-        "text": "Here’s my experience: every time I start a new project I feel like re-thinking my CSS strategy. The reason? I never felt satisfied with the quality of the stylesheets at the end of a project.<br/> The main reason is that there are to types of CSS: the original pretty CSS and 'after a few months' CSS. Most of us start out ambitious, carefully writing properties and actually documenting the process. As it happens, when fixes or features need to be added after a few weeks, we just throw properties wherever to get it done, because deadlines. "
+        "text": "Here’s my experience: every time I start a new project I feel like re-thinking my CSS strategy. I never felt satisfied with the quality of the stylesheets at the end of a project.<br/> The main reason is that there are two types of CSS: the original pretty CSS and 'after a few months' CSS. Most of us start out ambitious, carefully writing properties and actually documenting the process. When fixes or features need to be added after a few weeks, we just throw properties wherever to get it done, because deadlines. "
       },
       {
         "type": "h",
@@ -22,7 +22,7 @@
       },
       {
         "type": "p",
-        "text": "Documentation, formatting, frameworks, pre-processors, specificity - they all are trouble makers. Any of these might force you to give up and sell your soul. I am looking at you, the so called developer that appended `!important` to a property. In the W3C spec, ‘important’ is documented as ‘you gave up and now a scrambled mess of selectors that you we have no freaking idea what they do anymore took control of your stylesheet’.<br/>In all seriousness now, you should never have to write it. However, there are many other things that show you lost it. For example, if you have the same selector in many places and you are not sure what exactly you’re changing when updating a property.<br/><br/>I am not writing this article because I have it all figured it out, but because I have some ideas on how to improve our CSS. I don’t want it to look like a set of rules, but rather start a constructive dialog where I share my experience so far."
+        "text": "Documentation, formatting, frameworks, pre-processors, specificity - they all are trouble makers. Any of these might force you to give up and sell your soul. I am looking at you, the so called developer that appended <em>!important</em> to a property. In the W3C spec, ‘important’ is documented as ‘you gave up and now a scrambled mess of selectors that nobody understands took control of your stylesheet’.<br/>In all seriousness now, you should never have to write it. However, there are many other things that show you lost your grip. For example, if you have the same selector in many places and you are not sure what exactly you’re changing when updating a property.<br/><br/>I am not writing this article because I have it all figured it out, but because I have some clues on how to improve CSS. I don’t want it to feel like a set of rules, but rather start a constructive dialog."
       },
       {
         "type": "h",
@@ -31,11 +31,11 @@
       {
         "type": "h",
         "number": 3,
-        "text": "Short on pre-processors"
+        "text": "Some pre-processor context"
       },
       {
         "type": "p",
-        "text": "We need to get some things straight. I am using a CSS pre-processors (LESS, have been using SASS too) and I can’t go back. It makes my stylesheets more consistent and enables me to write less (duh) code. It also makes it easy to change global properties that (ironically) truly cascade on all elements. This article is not about pre-processors and their are most certainly NOT a solution to CSS organization issues. While they might be helpful, they can create problems of their on. I will touch the subject here and there, because many front-enders rely on them to keep their sanity."
+        "text": "We need to get one thing straight. I am using a CSS pre-processors (LESS, have been using SASS too) and I can’t go back. It makes my stylesheets more consistent and enables me to write less (duh) code. It also makes it easy to change global properties that (ironically) truly cascade on all elements. This article is not about pre-processors and they are most certainly NOT a solution to CSS organization issues. While they might be helpful, they bring their own problems. I will touch the subject here and there, because many front-enders rely on pre-processors to keep their sanity."
       },
       {
         "type": "h",
