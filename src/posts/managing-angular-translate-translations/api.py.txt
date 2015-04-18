@@ -3,8 +3,9 @@ import json
 import urllib
 from flask import Flask, abort
 from collections import OrderedDict
-app = Flask(__name__)
 
+
+app = Flask(__name__)
 
 @app.route('/translation/<lang>/<filename>')
 def fetch_translation(lang, filename):
