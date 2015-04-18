@@ -1,0 +1,37 @@
+import os
+import json
+import urllib
+from flask import Flask, abort
+from collections import OrderedDict
+app = Flask(__name__)
+
+
+@app.route('/translation/<lang>/<filename>')
+def fetch_translation(lang, filename):
+    #  Mapping Google Docs page ID to the translation file
+    page_map = {
+        'common.json': 'od6',
+        'register.json': 'o14w8rc'
+    }
+
+    sheet_id = '1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk'
+    base = 'https://spreadsheets.google.com/feeds/list/{0}/{1}/public/values?alt=json'
+    if filename not in page_map:
+        abort(404)
+    page_id = page_map[filename]
+    url = base.format(sheet_id, page_id)
+
+    json_data = json.loads(urllib.request.urlopen(url).read().decode('utf8'))
+    #  We need to build different data structure
+    translation_map = OrderedDict()
+    for entry in json_data['feed']['entry']:
+        key = entry['gsx$key']['$t']
+        value = entry['gsx${0}'.format(lang)]['$t']
+        if value:
+            translation_map[key] = value
+
+    return json.dumps(translation_map)
+        
+if __name__ == '__main__':
+    app.run()
+ 
