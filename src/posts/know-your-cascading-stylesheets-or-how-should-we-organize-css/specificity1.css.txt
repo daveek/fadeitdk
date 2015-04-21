@@ -1,6 +1,7 @@
  *              {} /* -> specificity = 0,0,0,0 */
  p              {} /* -> specificity = 0,0,0,1 */
- p:first-child  {} /* -> specificity = 0,0,0,2 */
+ p:first-child  {} /* -> specificity = 0,0,1,1 */
+ p:first-letter {} /* -> specificity = 0,0,0,2 */
  p span         {} /* -> specificity = 0,0,0,2 */
  p span+i       {} /* -> specificity = 0,0,0,3 */
  p span i.red   {} /* -> specificity = 0,0,1,3 */
