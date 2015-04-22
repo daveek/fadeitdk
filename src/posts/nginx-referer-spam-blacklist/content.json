@@ -2,9 +2,9 @@
   {
     "id": "nginx-referer-spam-blacklist",
     "title": "Blacklist Referer Spam Bots with NGINX",
-    "intro": "Seeing weird things in your Google Analytics dashboard? Here's an easy approach for blacklisting Referer Spam Bots with NGINX.",
+    "intro": "Seeing weird things in your analytics dashboard? Here's an easy approach for blacklisting Referer Spam Bots with NGINX.",
     "cover": "cover_wide.jpg",
-    "date": "2015-04-20T15:10:00.000Z",
+    "date": "2015-04-22T16:51:00.000Z",
     "author": {
       "name": "Justas Azna",
       "gplus": "https://www.google.com/+JustasAzna?rel=author",

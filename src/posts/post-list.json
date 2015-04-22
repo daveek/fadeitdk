@@ -1,5 +1,17 @@
 [
   {
+    "id": "nginx-referer-spam-blacklist",
+    "title": "Blacklist Referer Spam Bots with NGINX",
+    "intro": "Seeing weird things in your analytics dashboard? Here's an easy approach for blacklisting Referer Spam Bots with NGINX.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-04-22T16:51:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
     "id": "know-your-cascading-stylesheets-or-how-should-we-organize-css",
     "title": "Know your cascading stylesheets OR how should we organize CSS?",
     "intro": "How can we create maintainable, reusable, comprehensible CSS? Is there a formula that works for everybody, or is it just a matter of personal preference?",

@@ -10,6 +10,17 @@
     <updated>2015-01-17T19:28:14.465Z</updated>
 
     <entry>
+        <title>Blacklist Referer Spam Bots with NGINX</title>
+        <link href="http://fadeit.dk/blog/post/nginx-referer-spam-blacklist" />
+        <id>urn:uuid:b084eddf-87f8-48ad-9cd3-398531a4259f</id>
+        <updated>2015-04-22T16:51:00.000Z</updated>
+        <summary>Seeing weird things in your analytics dashboard? Here's an easy approach for blacklisting Referer Spam Bots with NGINX.</summary>
+        <author>
+            <name>Justas Azna</name>
+        </author>
+    </entry>
+
+    <entry>
         <title>Know your cascading stylesheets OR how should we organize CSS?</title>
         <link href="http://fadeit.dk/blog/post/know-your-cascading-stylesheets-or-how-should-we-organize-css" />
         <id>urn:uuid:33085a22-e432-11e4-8a00-1681e6b88ec1</id>
