@@ -1,8 +1,8 @@
 [
   {
     "id": "managing-angular-translate-translations",
-    "title": "How to manage multilingual website translations",
-    "intro": "Managing translations in different languages, files and formats can become a mess, outsourcing translation management to the cloud can be easy way out.",
+    "title": "How to manage multilingual website translations?",
+    "intro": "Translations in different languages, files and formats have a tendency to become messy - outsourcing translation management to the cloud can be an easy way out.",
     "cover": "cover_wide.jpg",
     "date": "2015-04-18T18:35:44.132Z",
     "author": {

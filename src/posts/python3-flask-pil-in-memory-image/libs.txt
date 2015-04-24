@@ -1,0 +1,10 @@
+#Install dependencies
+sudo apt-get install virtualenv python3.4-dev
+#Create virtual environment
+virtualenv -p /usr/bin/python3.4 venv
+#Activate virtual environment
+source venv/bin/activate
+#Install libraries
+pip install flask Pillow 
+#Run server
+python server.py
