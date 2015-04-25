@@ -60,7 +60,7 @@
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="img">
-            <img itemprop="image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
+            <img class="blog-img" itemprop="image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
             <p ng-bind="content.caption" ng-if="content.caption"></p>
           </section>
 

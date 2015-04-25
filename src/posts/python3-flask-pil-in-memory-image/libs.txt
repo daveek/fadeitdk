@@ -8,3 +8,4 @@ source venv/bin/activate
 pip install flask Pillow 
 #Run server
 python server.py
+#http://localhost:5000/200x300
