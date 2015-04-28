@@ -1,19 +1,7 @@
 # with subdomain
  $ curl -k --referer http://www.social-buttons.com http://fadeit.dk/en
-<html>
-<head><title>403 Forbidden</title></head>
-<body bgcolor="white">
-<center><h1>403 Forbidden</h1></center>
-<hr><center>nginx/1.4.6 (Ubuntu)</center>
-</body>
-</html>
+curl: (52) Empty reply from server
 
 # without subdomain
- $ curl -k --referer http://social-buttons.com http://fadeit.dk/en 
-<html>
-<head><title>403 Forbidden</title></head>
-<body bgcolor="white">
-<center><h1>403 Forbidden</h1></center>
-<hr><center>nginx/1.4.6 (Ubuntu)</center>
-</body>
-</html>
+ $ curl -k --referer http://social-buttons.com http://fadeit.dk/en
+curl: (52) Empty reply from server
