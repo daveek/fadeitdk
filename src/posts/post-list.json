@@ -1,5 +1,17 @@
 [
   {
+    "id": "python3-flask-pil-in-memory-image",
+    "title": "Serving generated images from memory",
+    "intro": "Efficiently generating and serving images on-the-fly without the hassle of temporary files.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-04-30T12:15:00.000Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
     "id": "nginx-referer-spam-blacklist",
     "title": "Blacklist Referer Spam Bots with NGINX",
     "intro": "Seeing weird things in your analytics dashboard? Here's an easy approach for blacklisting Referer Spam Bots with NGINX.",

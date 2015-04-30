@@ -91,7 +91,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
         }, function(newValue){
           var translatedValue = $filter('translate')(newValue);
           vm.pageTitle = translatedValue;
-          vm.htmlTitle = translatedValue + ', ' + $filter('translate')('SEO_TITLE_APPEND');
+          vm.htmlTitle = translatedValue + ' - ' + $filter('translate')('SEO_TITLE_APPEND');
         });
       }
 
