@@ -158,4 +158,7 @@
   <url>
     <loc>http://fadeit.dk/blog/post/nginx-referer-spam-blacklist</loc>
   </url>
+  <url>
+    <loc>http://fadeit.dk/blog/post/python3-flask-pil-in-memory-image</loc>
+  </url>
 </urlset>

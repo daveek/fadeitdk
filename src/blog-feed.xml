@@ -10,6 +10,17 @@
     <updated>2015-01-17T19:28:14.465Z</updated>
 
     <entry>
+        <title>Serving generated images from memory</title>
+        <link href="http://fadeit.dk/blog/post/python3-flask-pil-in-memory-image" />
+        <id>urn:uuid:e4745f6b-8199-47cb-8aa6-44ec77ea03aa</id>
+        <updated>2015-04-30T12:15:00.000Z</updated>
+        <summary>Efficiently generating and serving images on-the-fly without the hassle of temporary files.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
+
+    <entry>
         <title>Blacklist Referer Spam Bots with NGINX</title>
         <link href="http://fadeit.dk/blog/post/nginx-referer-spam-blacklist" />
         <id>urn:uuid:b084eddf-87f8-48ad-9cd3-398531a4259f</id>
