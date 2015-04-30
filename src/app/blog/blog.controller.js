@@ -4,6 +4,8 @@ blogController.$inject = ['$scope', '$stateParams','BlogService', '$state', '$sc
 function blogController($scope, $stateParams, BlogService, $state, $sce) {
   //read the project id from the state
   var vm = this;
+  vm.next = undefined;
+  vm.previous = undefined;
   vm.requestUrl = $stateParams.postId;
 
   vm.trustUrl = function trustUrl(url) {
@@ -27,5 +29,19 @@ function blogController($scope, $stateParams, BlogService, $state, $sce) {
   }, function blogListError(error){
     vm.post = 'Sorry, we couldn\'t find this blog post. Will you ever forgive us?';
     vm.post += 'The server replied with the status: ' + error.status + ', ' + error.statusText + '.';
+  });
+  //Load next and previous post
+  BlogService.postIndex().then(function(response){
+      for(var i=0;i < response.length; i++){
+          if(response[i].id === $stateParams.postId){
+              vm.next = response[i-1];
+              vm.previous = response[i+1];
+              break;
+          }
+      }
+  },
+  function (error){
+      console.log('failed to load post index file');
+      console.log(error);
   });
 }

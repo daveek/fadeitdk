@@ -142,7 +142,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
     "EXPERTISE_BACKEND_TITLE": "Back-end development",
     "EXPERTISE_BACKEND_DEVELOPMENT": "We offer expertise with various server backend systems. Some of the things that we can do:<br/><br/> - ElasticSearch/Solr server setup, configuration<br/> - Building RESTful APIs<br/> - PostgreSQL/MySQL server setup, configuration<br/> - Setting up Nginx and Varnish reverse proxies<br/>",
     "EXPERTISE_SYSTEM_ADMINISTRATION_TITLE": "System Administration",
-    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\" target=\"_blank\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\" target=\"_blank\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against bots that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
+    "EXPERTISE_SYSTEM_ADMINISTRATION": "By far the easiest way to protect against dangerous bugs like <a href=\"https://en.wikipedia.org/wiki/Heartbleed\" target=\"_blank\">Heartbleed</a> and <a href=\"https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29\" target=\"_blank\">Shellshock</a> is to keep the system up-to-date. Typically fixes for critical bugs are out there within hours of discovery, therefore it is a race against hackers that will try to exploit the bug. We take pleasure of keeping Linux systems running safe and secure.",
     "EXPERTISE_TOOLBOX_LINK": "Looking for more? Take a look at our {{toolbox}} and have some fun with it!",
 
     /*
