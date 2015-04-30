@@ -1,12 +1,24 @@
 angular.module('fadeit.blog').service('BlogService', blogService);
 
-blogService.$inject = ['$http', '$q'];
-function blogService($http, $q){
+blogService.$inject = ['$http', '$q', 'angularLoad'];
+function blogService($http, $q, angularLoad){
   return {
     postIndex: postIndex,
-    singlePost: singlePost
+    singlePost: singlePost,
+    loadPrism: loadPrism
   };
 
+  function loadPrism(){
+    var prismDefer = $q.defer();
+    //load the prism script
+    angularLoad.loadScript('src/assets/js/prism.js').then(function() {
+      prismDefer.resolve();
+    }).catch(function() {
+      prismDefer.reject("Failed to load prism");
+    });
+
+    return prismDefer.promise;
+  }
   function postIndex(){
     var postListDefer = $q.defer();
     var postList = $http.get('./posts/post-list.json');

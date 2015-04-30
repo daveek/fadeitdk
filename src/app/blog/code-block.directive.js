@@ -1,16 +1,18 @@
 angular.module('fadeit.blog').directive('codeBlock', codeBlock);
 
-codeBlock.$injector = ['$sanitize', '$http', '$q', '$filter'];
-function codeBlock($sanitize, $http, $q, $filter){
+codeBlock.$injector = ['$sanitize', '$http', '$q', '$filter', 'BlogService'];
+function codeBlock($sanitize, $http, $q, $filter, BlogService){
   function codeBlockLink(scope, element, attrs){
     function loadCodeFile(){
       var codeFileDefer = $q.defer();
-      var codeFile = $http.get(attrs.codeBlock);
+      var codePromise = $http.get(attrs.codeBlock);
+      var prismPromise = BlogService.loadPrism();
 
-      codeFile.then(function codeFileResponse(response){
-        codeFileDefer.resolve(response.data);
-      }, function codeFileResponseError(error){
-        codeFileDefer.reject(error);
+      $q.all([codePromise, prismPromise]).then(function(results){
+          //results are mapped in order of the promise array
+          codeFileDefer.resolve(results[0].data);
+      }, function(error){
+          codeFileDefer.reject(error);
       });
 
       return codeFileDefer.promise;

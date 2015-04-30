@@ -43,7 +43,7 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider, $tran
   $urlRouterProvider.otherwise('/404');
 
   //Turn ON 'html5mode' (true) for prod - if you forget you need to buy beers for everybody in the office
-  $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(false);
   $locationProvider.hashPrefix('!');
 
   /*
