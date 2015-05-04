@@ -1,13 +1,13 @@
 <section itemscope itemtype="http://schema.org/BlogPosting" class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row services-fluid">
     <section class="row-fluid outstanding-container" ng-if="!vm.post">
-      <h3 class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-error">
+      <h3 class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-error">
         <span translate>BLOG_POST_ERROR</span> <i class="fa fa-chain-broken"></i>
       </h3>
     </section>
 
     <section class="row-fluid outstanding-container blog-outstanding" style="background-image: url(posts/{{vm.post.id}}/{{vm.post.cover}});" ng-if="vm.post">
-      <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
+      <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
         <section class="row-fluid single-post blog-row">
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-offset-0 col-lg-24 post-description">
             <h2 itemprop="headline" ng-bind="vm.post.title"></h2>
@@ -25,7 +25,7 @@
 
     <section class="default-inner-container" id="post">
       <section class="row-fluid post-content-fluid" ng-if="vm.post">
-        <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 post-heading">
+        <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 post-heading">
           <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
           <a itemprop="url" ng-href="{{vm.post.author.gplus}}" class="author-name"><span itemprop="name">{{vm.post.author.name}}</span></a>
             <span itemprop="jobTitle" ng-bind="vm.post.author.job_title" class="author-title"></span>
@@ -36,11 +36,11 @@
         </section><!--end col-*-->
 
         <section class="post-content clearfix" ng-repeat="content in vm.post.content" ng-switch on="content.type">
-          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-p" ng-switch-when="p">
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-p" ng-switch-when="p">
             <p itemprop="text" ng-bind-html="content.text"></p>
           </section>
 
-          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-h" ng-switch-when="h">
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-h" ng-switch-when="h">
             <section ng-switch on="content.number">
               <h2 itemprop="headline" ng-bind-html="content.text" ng-switch-when="2"></h2>
               <h3 itemprop="headline" ng-bind-html="content.text" ng-switch-when="3"></h3>
@@ -51,20 +51,20 @@
             </section>
           </section>
 
-          <blockquote itemprop="citation" class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-quote" ng-switch-when="quote" cite="{{content.ref}}" ng-bind-html="content.text" ng-class="{'blockquote-reverse': content.reverse}">
+          <blockquote itemprop="citation" class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-quote" ng-switch-when="quote" cite="{{content.ref}}" ng-bind-html="content.text" ng-class="{'blockquote-reverse': content.reverse}">
           </blockquote>
 
           <section class="row-fluid outstanding-container blog-type-cover" style="background-image: url({{vm.trustUrl(content.url)}}); min-height:{{content.height}}px;" ng-switch-when="cover">
             <img itemprop="image" class="normal-image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
-            <p class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6" ng-bind="content.caption" ng-if="content.caption"></p>
+            <p class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6" ng-bind="content.caption" ng-if="content.caption"></p>
           </section>
 
-          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="img">
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="img">
             <img class="blog-img" itemprop="image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{content.caption}}"/>
             <p ng-bind="content.caption" ng-if="content.caption"></p>
           </section>
 
-          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-video" ng-switch-when="video">
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-video" ng-switch-when="video">
             <section ng-switch on="content.vendor">
               <iframe itemprop="video" width="100%" height="{{content.height}}" ng-src="{{vm.trustUrl(content.url)}}" frameborder="0" allowfullscreen ng-switch-when="youtube"></iframe>
               <iframe itemprop="video" ng-src="{{vm.trustUrl(content.url)}}" width="100%" height="{{content.height}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ng-switch-when="vimeo"></iframe>
@@ -72,11 +72,11 @@
             </section>
           </section>
 
-          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="code">
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="code">
             <pre class="code-toolbar"><code itemprop="text" class="language-{{content.language}}" data-language="{{content.language}}" code-block="posts/{{vm.post.id}}/{{content.file}}"><br/>Loading code...</code></pre>
           </section>
 
-          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-list" ng-switch-when="list">
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-list" ng-switch-when="list">
             <ol>
               <li ng-repeat="item in content.items" ng-bind-html="item"></li>
             </ol>
@@ -84,8 +84,36 @@
         </section>
       </section>
 
+      <footer class="default-inner-container prev-next">
+        <section class="col-xs-24 col-md-11 col-md-offset-1 col-lg-4 col-lg-offset-0 col-xl-5 col-xxl-6 fadeit-animate animated fadeInLeft prev">
+          <a href ui-sref="blog-posts({postId: vm.previous.id})" class="prev-next-anchor" ng-if="vm.previous">
+            <header><i class="fa fa-chevron-left"></i> Previous Post</header>
+
+            <article>
+              <p class="title">
+                <span>{{vm.previous.title}}</span>
+              </p>
+              <figure class="post-image" data-ng-style="{'background-image': 'url(posts/{{vm.previous.id}}/{{vm.previous.cover}})'}"></figure>
+            </article>
+          </a>
+        </section>
+
+        <section class="col-xs-24 col-md-11 col-lg-4 col-lg-offset-16 col-xl-5 col-xl-offset-14 col-xxl-6 col-xxl-offset-12 fadeit-animate animated fadeInRight next">
+          <a href ui-sref="blog-posts({postId: vm.next.id})" class="prev-next-anchor" ng-if="vm.next">
+            <header>Next Post <i class="fa fa-chevron-right"></i></header>
+
+            <article>
+              <p class="title">
+                <span>{{vm.next.title}}</span>
+              </p>
+              <figure class="post-image" data-ng-style="{'background-image': 'url(posts/{{vm.next.id}}/{{vm.next.cover}})'}"></figure>
+            </article>
+          </a>
+        </section>
+      </footer>
+
       <section class="default-inner-container">
-        <section id="disqus_thread" class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6"></section>
+        <section id="disqus_thread" class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6"></section>
         <script type="text/javascript">
             var disqus_shortname = 'fadeit';
             (function() {
