@@ -30,6 +30,7 @@
     "title": "Blog: open for business", //Post title (<h1>) and meta title (<title>)
     "intro": "We're super excited to launch a blog section on our website. We'll be writing about design, tech, code and everything in between.", //Post intro and meta description
     "cover": "cover.jpg",
+    "no_related": "false", //Or don't include this property. If it's true, then the next and previous links won't be shown at the bottom of the post
     "date": "2015-03-07T19:28:14.465Z", //console.log(JSON.stringify(new Date()));
     "author": {
       "name": "Dan Mindru",
