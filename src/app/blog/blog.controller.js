@@ -1,7 +1,7 @@
 angular.module('fadeit.blog').controller('BlogController', blogController);
 
-blogController.$inject = ['$scope', '$stateParams','BlogService', '$state', '$sce'];
-function blogController($scope, $stateParams, BlogService, $state, $sce) {
+blogController.$inject = ['$scope', '$stateParams','BlogService', '$state', '$sce', '$timeout'];
+function blogController($scope, $stateParams, BlogService, $state, $sce, $timeout) {
   //read the project id from the state
   var vm = this;
   vm.next = undefined;
@@ -26,22 +26,31 @@ function blogController($scope, $stateParams, BlogService, $state, $sce) {
 
       $scope.$emit('changedPage', pageTitle);
       $scope.$emit('changedDesc', pageDesc);
+
+      //fire prev-next loader if the post doesn't have the property: 'no_related'
+      if(!response.no_related){
+        loadNextPrev();
+      }
   }, function blogListError(error){
     vm.post = 'Sorry, we couldn\'t find this blog post. Will you ever forgive us?';
     vm.post += 'The server replied with the status: ' + error.status + ', ' + error.statusText + '.';
   });
-  //Load next and previous post
-  BlogService.postIndex().then(function(response){
-      for(var i=0;i < response.length; i++){
-          if(response[i].id === $stateParams.postId){
-              vm.next = response[i-1];
-              vm.previous = response[i+1];
-              break;
+
+  //Load next and previous post after a while
+  function loadNextPrev(){
+    $timeout(function (){
+      BlogService.postIndex().then(function(response){
+          for(var i=0;i < response.length; i++){
+              if(response[i].id === $stateParams.postId){
+                  vm.next = response[i-1];
+                  vm.previous = response[i+1];
+                  break;
+              }
           }
-      }
-  },
-  function (error){
-      console.log('failed to load post index file');
-      console.log(error);
-  });
+      }, function (error){
+          console.log('failed to load post index file');
+          console.log(error);
+      });
+    }, 3000);
+  }
 }

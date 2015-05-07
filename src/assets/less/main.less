@@ -1601,6 +1601,10 @@ a{
   }
 }
 
+#discovery{
+  .h-i();
+}
+
 [class*="blog-type-"]{
   .col(@w, b);
   padding:15px 15px 10px 15px;
@@ -1837,6 +1841,119 @@ a{
     //MAX
     @media only screen and (max-width:@bp_sm_max){
       word-break: break-all;
+    }
+  }
+}
+
+//post footer (prev-next)
+.prev-next{
+  @media only screen and (min-width:@bp_lg){
+    pointer-events: none;
+    .abs();
+    overflow:hidden;
+    margin-top:-300px;
+    width:100%;
+  }
+
+  @media only screen and (min-width:@bp_xl){
+    margin-top:-370px;
+  }
+
+  a{
+    .col(@w);
+
+    &:hover, &:focus{
+      .col(@w);
+    }
+  }
+
+  header{
+    font-size:@fs_small;
+    line-height:@lh_small;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:@col_gray_6;
+    margin-bottom:5px;
+    .animate(@animation_time, @transition_default);
+  }
+
+  article{
+    background:@col_gray_9;
+  }
+
+  p.title{
+    margin:0 10px;
+    font-weight: 300;
+    line-height: 49px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    .ta-c();
+
+    span{
+      font-size:@fs_small;
+
+      @media only screen and (min-width:@bp_xl){
+        font-size:@fs_body;
+      }
+    }
+  }
+
+  .prev-next-anchor{
+    .inline-block();
+    .clearfix();
+    width: 100%;
+  }
+
+  .next, .prev{
+    padding:10px;
+    pointer-events: auto;
+  }
+
+  .next{
+    @media only screen and (min-width:@bp_lg){
+      header{
+        .ta-r();
+      }
+    }
+
+    @media only screen and (min-width:@bp_lg){
+      &:hover, &:focus{
+        a{
+          transform:translateX(30px);
+
+          header{
+            transform:translateX(-30px);
+          }
+        }
+      }
+    }
+  }
+
+  .prev{
+    @media only screen and (min-width:@bp_lg){
+      &:hover, &:focus{
+        a{
+          transform:translateX(-30px);
+
+          header{
+            transform:translateX(30px);
+          }
+        }
+      }
+    }
+  }
+
+  .post-image{
+    height: 178px;
+    .cover();
+    background-position-x: center;
+    background-position-y: center;
+    border:@bst @col_gray_6;
+    border-top:0;
+
+    @media only screen and (min-width:@bp_xl){
+      height:248px;
     }
   }
 }
