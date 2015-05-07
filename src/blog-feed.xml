@@ -7,7 +7,18 @@
     <link href="http://fadeit.dk/blog-feed.xml" rel="self" />
     <link href="http://fadeit.dk/" />
     <id>urn:uuid:381e1e19-d2bb-4c99-8da1-7615624c89a6</id>
-    <updated>2015-01-17T19:28:14.465Z</updated>
+    <updated>2015-05-08T10:25:54.132Z</updated>
+
+    <entry>
+        <title>How to manage multilingual website translations?</title>
+        <link href="http://fadeit.dk/blog/post/managing-angular-translate-translations" />
+        <id>urn:uuid:e4745f6b-8199-47cb-8aa6-55ec66ea03aa</id>
+        <updated>2015-05-08T10:25:54.132Z</updated>
+        <summary>Translations in different languages, files and formats have a tendency to become messy - outsourcing translation management to the cloud can be an easy way out.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
 
     <entry>
         <title>Serving generated images from memory</title>

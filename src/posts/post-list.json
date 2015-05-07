@@ -1,5 +1,17 @@
 [
   {
+    "id": "managing-angular-translate-translations",
+    "title": "How to manage multilingual website translations?",
+    "intro": "Translations in different languages, files and formats have a tendency to become messy - outsourcing translation management to the cloud can be an easy way out.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-05-08T10:25:54.132Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
     "id": "python3-flask-pil-in-memory-image",
     "title": "Serving generated images from memory",
     "intro": "Efficiently generating and serving images on-the-fly without the hassle of temporary files.",
