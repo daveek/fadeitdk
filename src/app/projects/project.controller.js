@@ -6,7 +6,8 @@ function projectsController($scope, $stateParams, ProjectsService, $state, $tran
   var vm = this,
       pageTitle,
       pageDesc,
-      pageTags = [];
+      pageTags = [],
+      pageImages = [];
 
   vm.project = {};
   vm.requestUrl = $stateParams.projectId;
@@ -21,6 +22,11 @@ function projectsController($scope, $stateParams, ProjectsService, $state, $tran
       vm.project = response;
       pageTitle = vm.project.title;
       pageDesc = vm.project.content.shortDescription;
+      pageImages = [{
+        'id': vm.project.id,
+        'image': vm.project.images.cover,
+        'slug': 'src/assets/img/projects'
+      }];
 
       for(var tag in vm.project.tags){
         if(vm.project.tags.hasOwnProperty(tag)){
@@ -30,6 +36,7 @@ function projectsController($scope, $stateParams, ProjectsService, $state, $tran
 
       $scope.$emit('changedTitle', pageTitle);
       $scope.$emit('changedDesc', $filter('translate')(pageDesc) + ' Tags: ' +pageTags.toString().replace(/,/g, ', '));
+      $scope.$emit('changedImages', pageImages);
   }, function singleProjectErrorResponse(error){
     vm.project.error = error;
     pageTitle = pageDesc = 'Sorry, this project does not exist';

@@ -27,7 +27,7 @@
   <meta property="og:description" content="{{root.pageDesc}}">
   <meta property="og:url" content="{{root.pageURL}}">
   <!-- Dynamic OG images -->
-  <meta property="og:image" content="http://fadeit.dk/src/posts/{{image.id}}/{{image.cover}}" ng-repeat="image in root.pageImages">
+  <meta property="og:image" content="http://fadeit.dk/{{img.slug}}/{{img.id}}/{{img.image}}" ng-repeat="img in root.pageImages">
   <meta property="og:image" content="http://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
   <meta property="og:type" content="website">
 
@@ -36,7 +36,7 @@
   <meta name="twitter:description" content="{{root.pageDesc}}">
   <meta name="twitter:url" content="{{root.pageURL}}">
   <!-- Dynamic Twitter images -->
-  <meta name="twitter:image" content="http://fadeit.dk/src/posts/{{image.id}}/{{image.cover}}" ng-repeat="image in root.pageImages">
+  <meta name="twitter:image" content="http://fadeit.dk/{{img.slug}}/{{img.id}}/{{img.image}}" ng-repeat="img in root.pageImages">
   <meta name="twitter:image" content="http://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
 
   <!-- Fav Icon -->

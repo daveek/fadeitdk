@@ -25,7 +25,8 @@ function blogController($scope, $stateParams, BlogService, $state, $sce, $timeou
       pageDesc = !response.error ? vm.post.intro : 'Sorry, this post does not exist';
       pageImages = [{
         'id': vm.post.id,
-        'cover': vm.post.cover
+        'image': vm.post.cover,
+        'slug': 'posts'
       }];
 
       $scope.$emit('changedTitle', pageTitle);
