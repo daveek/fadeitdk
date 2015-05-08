@@ -18,14 +18,19 @@ function blogController($scope, $stateParams, BlogService, $state, $sce, $timeou
 
   BlogService.singlePost(vm.requestUrl)
     .then(function singlePostResponse(response){
-      var pageTitle, pageDesc;
+      var pageTitle, pageDesc, pageImages;
 
       vm.post = response;
       pageTitle = !response.error ? vm.post.title : 'Sorry, this post does not exist';
       pageDesc = !response.error ? vm.post.intro : 'Sorry, this post does not exist';
+      pageImages = [{
+        'id': vm.post.id,
+        'cover': vm.post.cover
+      }];
 
       $scope.$emit('changedTitle', pageTitle);
       $scope.$emit('changedDesc', pageDesc);
+      $scope.$emit('changedImages', pageImages);
 
       //fire prev-next loader if the post doesn't have the property: 'no_related'
       if(!response.no_related){

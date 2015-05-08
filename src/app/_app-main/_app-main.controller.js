@@ -8,6 +8,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
   vm.htmlTitle = $filter('translate')('SEO_TITLE_APPEND');
   vm.pageDesc = $filter('translate')('SEO_META_DESC').replace(/<[^>]+>/gm, '');
   vm.toolboxPage = false;
+  vm.pageImages = [];
 
   var port = $location.port();
   //Port can be omitted on 80 or 443
@@ -105,7 +106,12 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     }
 
     /*
-     * update canonical url
+     * Reset vm.pageImages Array
+     */
+     vm.pageImages = [];
+
+    /*
+     * Update canonical url
      */
     vm.pageURL = $location.protocol() + "://" + $location.host() + $location.path();
     if(vm.scrollTop){
@@ -130,6 +136,10 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
 
   $scope.$on('changedDesc', function changedDesc(event, pageDesc){
     vm.pageDesc = $filter('translate')(pageDesc).replace(/<[^>]+>/gm, '');
+  });
+
+  $scope.$on('changedImages', function changedImages(event, changedImages){
+    vm.pageImages = changedImages;
   });
 
   /*
