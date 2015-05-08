@@ -24,7 +24,7 @@ function blogController($scope, $stateParams, BlogService, $state, $sce, $timeou
       pageTitle = !response.error ? vm.post.title : 'Sorry, this post does not exist';
       pageDesc = !response.error ? vm.post.intro : 'Sorry, this post does not exist';
 
-      $scope.$emit('changedPage', pageTitle);
+      $scope.$emit('changedTitle', pageTitle);
       $scope.$emit('changedDesc', pageDesc);
 
       //fire prev-next loader if the post doesn't have the property: 'no_related'

@@ -122,13 +122,13 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
    * E.g. on 'customers/:Id' -> the page title can be customer.name
    *
    */
-  $scope.$on('changedPage', function changedPage(event, pageTitle){
+  $scope.$on('changedTitle', function changedTitle(event, pageTitle){
     var translatedValue = $filter('translate')(pageTitle);
     vm.htmlTitle = translatedValue + ' - ' + $filter('translate')('SEO_TITLE_APPEND');
     vm.pageTitle = translatedValue;
   });
 
-  $scope.$on('changedDesc', function changedPage(event, pageDesc){
+  $scope.$on('changedDesc', function changedDesc(event, pageDesc){
     vm.pageDesc = $filter('translate')(pageDesc).replace(/<[^>]+>/gm, '');
   });
 

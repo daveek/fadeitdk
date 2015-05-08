@@ -28,13 +28,13 @@ function projectsController($scope, $stateParams, ProjectsService, $state, $tran
         }
       }
 
-      $scope.$emit('changedPage', pageTitle);
+      $scope.$emit('changedTitle', pageTitle);
       $scope.$emit('changedDesc', $filter('translate')(pageDesc) + ' Tags: ' +pageTags.toString().replace(/,/g, ', '));
   }, function singleProjectErrorResponse(error){
     vm.project.error = error;
     pageTitle = pageDesc = 'Sorry, this project does not exist';
 
-    $scope.$emit('changedPage', pageTitle);
+    $scope.$emit('changedTitle', pageTitle);
     $scope.$emit('changedDesc', pageDesc);
   });
 }
