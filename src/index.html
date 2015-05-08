@@ -69,13 +69,44 @@
 <body>
   <section app-shell></section>
   <noscript>
-    <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6" stretch amount="1">
-      <section class="inner-text">
-        <p class="regular-text">
-          Our website uses JavaScript. Please return once you've enabled it!
-        </p>
-        <img src="src/assets/img/icons/fadeit_penguin.svg" class="secondary-page-logo" />
+    <section class="outstanding-container row-fluid">
+      <section class="default-inner-container col-xs-24 col-sm-18 col-sm-offset-3 col-xl-12 col-xl-offset-6">
+        <section class="inner-text">
+          <p class="regular-text">
+            Our website uses JavaScript to render content. Please return once you've enabled it! <br/>
+            Sorry! Here's a penguin to cheer you up :(
+          </p>
+          <img src="src/assets/img/icons/fadeit_penguin.svg" class="secondary-page-logo" />
+        </section>
       </section>
+    </section>
+
+    <footer itemscope itemtype="http://schema.org/LocalBusiness" class="row-fluid footer-fluid">
+      <section class="col-xs-24 col-md-4 footer-logo-column">
+        <img itemprop="logo" src="src/assets/img/brand/fadeit_logo_full.svg" alt="fadeit Logo" class="fadeit-footer-logo"/>
+      </section>
+      <section class="col-xs-24 col-md-16">
+        <p class="footer-contact">
+          <span>Phone</span>
+          <span itemprop="telephone"> 81100200</span> &middot;
+          <a itemprop="email" href="mailto:info@fadeit.dk">info@fadeit.dk</a> &middot;
+          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">Anelystparken 31 D</span>, <span itemprop="postalCode">8381</span> <span itemprop="addressLocality">Tilst</span>, <span itemprop="addressRegion">Aarhus</span></span> &middot; CVR <span itemprop="vatID">35527192</span>
+        </p>
+      </section>
+
+      <section class="col-xs-24 col-md-4 footer-social">
+        <a itemprop="url" href="http://fadeit.dk" class="social-link" hidden target="_blank"></a>
+        <a itemprop="sameAs" href="http://twitter.com/fadeitdk" class="social-link" target="_blank"><i class="fa fa-twtr"></i></a>
+        <a itemprop="sameAs" href="https://github.com/fadeit" class="social-link" target="_blank"><i class="fa fa-gthb"></i></a>
+        <a itemprop="sameAs" href="https://www.linkedin.com/company/fadeit" class="social-link" target="_blank"><i class="fa fa-lnkdn"></i></a>
+      </section>
+      <!--<p>
+       © <span ng-bind="::vm.currentDate"></span> fadeit
+      </p>-->
+    </footer>
+
+    <section class="row-fluid custom-rows third-row dark-mode">
+      <figure class="fadeit-front-figure second-figure no-script-photo"></figure>
     </section>
   </noscript>
 </body>
