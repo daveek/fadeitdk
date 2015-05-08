@@ -5,7 +5,8 @@ virtualenv -p /usr/bin/python3.4 venv
 #Activate virtual environment
 source venv/bin/activate
 #Install libraries
-pip install flask Pillow 
+pip install flask
 #Run server
 python server.py
-#http://localhost:5000/200x300
+#Fetch translations
+http://localhost:5000/translation/en-us/register.json
