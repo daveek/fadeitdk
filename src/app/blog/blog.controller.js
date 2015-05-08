@@ -7,6 +7,7 @@ function blogController($scope, $stateParams, BlogService, $state, $sce, $timeou
   vm.next = undefined;
   vm.previous = undefined;
   vm.requestUrl = $stateParams.postId;
+  vm.post = [];
 
   vm.trustUrl = function trustUrl(url) {
     return $sce.trustAsResourceUrl(url);
@@ -38,8 +39,8 @@ function blogController($scope, $stateParams, BlogService, $state, $sce, $timeou
         loadNextPrev();
       }
   }, function blogListError(error){
-    vm.post = 'Sorry, we couldn\'t find this blog post. Will you ever forgive us?';
-    vm.post += 'The server replied with the status: ' + error.status + ', ' + error.statusText + '.';
+    vm.post.error = 'Sorry, we couldn\'t find this blog post. Will you ever forgive us?';
+    vm.post.error += 'The server replied with the status: ' + error.status + ', ' + error.statusText + '.';
   });
 
   //Load next and previous post after a while

@@ -1,12 +1,16 @@
 <section itemscope itemtype="http://schema.org/BlogPosting" class="container-fluid main-container secondary-page-container">
   <section class="row-fluid secondary-page-row services-fluid">
-    <section class="row-fluid outstanding-container" ng-if="!vm.post">
+    <section class="row-fluid outstanding-container" ng-if="vm.post.error">
       <h3 class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-error">
         <span translate>BLOG_POST_ERROR</span> <i class="fa fa-chain-broken"></i>
       </h3>
     </section>
 
-    <section class="row-fluid outstanding-container blog-outstanding" style="background-image: url(posts/{{vm.post.id}}/{{vm.post.cover}});" ng-if="vm.post">
+    <section class="spinner-block" ng-if="!vm.post.id && !vm.post.error">
+      <span class="fadeit-spinner"></span>
+    </section>
+
+    <section class="row-fluid outstanding-container blog-outstanding" style="background-image: url(posts/{{vm.post.id}}/{{vm.post.cover}});" ng-if="!vm.post.error && vm.post.id">
       <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
         <section class="row-fluid single-post blog-row">
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-offset-0 col-lg-24 post-description">
@@ -23,8 +27,8 @@
       </section>
     </section>
 
-    <section class="default-inner-container" id="post">
-      <section class="row-fluid post-content-fluid" ng-if="vm.post">
+    <section class="default-inner-container" id="post" ng-if="!vm.post.error && vm.post.id">
+      <section class="row-fluid post-content-fluid">
         <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 post-heading">
           <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
           <a itemprop="url" ng-href="{{vm.post.author.gplus}}" class="author-name"><span itemprop="name">{{vm.post.author.name}}</span></a>
