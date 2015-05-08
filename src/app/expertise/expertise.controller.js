@@ -65,6 +65,9 @@ function expertiseController($rootScope, $stateParams, $state, $document, $trans
     if(!pageFound){
       pageTitle = 'EXPERTISE_PAGE_TITLE';
       pageDesc = 'EXPERTISE_SUMMARY';
+
+      //Scroll to top when no expertise is matched
+      angular.element('html,body').animate({scrollTop: 0}, 1);
     }
 
     $state.current.data.pageTitle = pageTitle;
