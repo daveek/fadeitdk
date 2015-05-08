@@ -3128,9 +3128,16 @@ pre[class*=language-]>code[data-language]::before {
   width:16.6666667%;
   z-index:10;
   .h();
+  cursor:pointer;
 
   @media only screen and (min-width:@bp_md){
     .block();
+  }
+
+  &:hover{
+    .bulb-hover{
+      opacity:0.3;
+    }
   }
 }
 
@@ -3184,7 +3191,7 @@ pre[class*=language-]>code[data-language]::before {
   }
 }
 
-.bulb-light{
+.bulb-light, .bulb-hover{
   height: 0;
   opacity: 0;
   .animate(@animation_time_long, @transition_default);
