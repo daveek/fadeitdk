@@ -135,7 +135,9 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
   });
 
   $scope.$on('changedDesc', function changedDesc(event, pageDesc){
-    vm.pageDesc = $filter('translate')(pageDesc).replace(/<[^>]+>/gm, '');
+    if(pageDesc){
+      vm.pageDesc = $filter('translate')(pageDesc).replace(/<[^>]+>/gm, '');
+    }
   });
 
   $scope.$on('changedImages', function changedImages(event, changedImages){
