@@ -21,22 +21,28 @@ function blogController($scope, $stateParams, BlogService, $state, $sce, $timeou
     .then(function singlePostResponse(response){
       var pageTitle, pageDesc, pageImages;
 
-      vm.post = response;
-      pageTitle = !response.error ? vm.post.title : 'Sorry, this post does not exist';
-      pageDesc = !response.error ? vm.post.intro : 'Sorry, this post does not exist';
-      pageImages = [{
-        'id': vm.post.id,
-        'image': vm.post.cover,
-        'slug': 'posts'
-      }];
+      if(response.title){
+        vm.post = response;
 
-      $scope.$emit('changedTitle', pageTitle);
-      $scope.$emit('changedDesc', pageDesc);
-      $scope.$emit('changedImages', pageImages);
+        pageTitle = !response.error ? vm.post.title : 'Sorry, this post does not exist';
+        pageDesc = !response.error ? vm.post.intro : 'Sorry, this post does not exist';
+        pageImages = [{
+          'id': vm.post.id,
+          'image': vm.post.cover,
+          'slug': 'posts'
+        }];
 
-      //fire prev-next loader if the post doesn't have the property: 'no_related'
-      if(!response.no_related){
-        loadNextPrev();
+        $scope.$emit('changedTitle', pageTitle);
+        $scope.$emit('changedDesc', pageDesc);
+        $scope.$emit('changedImages', pageImages);
+
+        //fire prev-next loader if the post doesn't have the property: 'no_related'
+        if(!response.no_related){
+          loadNextPrev();
+        }
+      } else{
+        // Corrupt response
+        vm.post.error = 'Sorry, we couldn\'t find this blog post. Will you ever forgive us?';
       }
   }, function blogListError(error){
     vm.post.error = 'Sorry, we couldn\'t find this blog post. Will you ever forgive us?';
