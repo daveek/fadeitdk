@@ -55,6 +55,12 @@ module.exports = function(grunt) {
       },
       update_selenium: {
         command: './node_modules/protractor/bin/webdriver-manager update'
+      },
+      translations: {
+        options: {
+          stdout: true
+        },
+        command: 'python src/translations.py'
       }
     },
     /*
@@ -514,6 +520,7 @@ module.exports = function(grunt) {
    */
   grunt.registerTask('default', ['build', 'karma:unit', 'watch']);
   grunt.registerTask('build', [
+    'shell:translations',
     'clean:build_clean',
     'jshint',
     'jsonlint',
@@ -560,6 +567,7 @@ module.exports = function(grunt) {
   grunt.registerTask('test:e2e', ['protractor:build']);
   grunt.registerTask('dev', ['shell:dev_server']);
   grunt.registerTask('prod', ['shell:prod_server']);
+  grunt.registerTask('tr', ['shell:translations']);
 
   /*
    * Helper methods.

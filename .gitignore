@@ -3,3 +3,4 @@ node_modules
 build
 application
 .DS_Store
+src/app/_app-main/_app-main.translations.js
