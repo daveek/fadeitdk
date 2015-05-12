@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         options: {
           stdout: true
         },
-        command: 'python src/translations.py'
+        command: 'python3 src/translations.py'
       }
     },
     /*
