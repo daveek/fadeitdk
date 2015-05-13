@@ -2,6 +2,9 @@ angular.module('fadeit.blog').service('BlogService', blogService);
 
 blogService.$inject = ['$http', '$q', 'angularLoad'];
 function blogService($http, $q, angularLoad){
+  var prismDefer = $q.defer();
+  var loadTriggered = false;
+
   return {
     postIndex: postIndex,
     singlePost: singlePost,
@@ -9,13 +12,20 @@ function blogService($http, $q, angularLoad){
   };
 
   function loadPrism(){
-    var prismDefer = $q.defer();
-    //load the prism script
-    angularLoad.loadScript('src/assets/js/prism.js').then(function() {
-      prismDefer.resolve();
-    }).catch(function() {
-      prismDefer.reject("Failed to load prism");
-    });
+    if(!loadTriggered){
+      /*
+       * Set to 'true' before the promise is resolved.
+       * This is because DOM elements will be loaded before the promise
+       * resolved, which will result in multiple scripts injected.
+       */
+      loadTriggered = true;
+      //load the prism script
+      angularLoad.loadScript('src/assets/js/prism.js').then(function() {
+        prismDefer.resolve();
+      }).catch(function() {
+        prismDefer.reject("Failed to load prism");
+      });
+    }
 
     return prismDefer.promise;
   }
