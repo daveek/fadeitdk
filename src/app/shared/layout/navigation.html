@@ -12,6 +12,11 @@
           NAV_STORY
         </a>
       </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="app.our-work({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
+          NAV_OUR_WORK
+        </a>
+      </li>
       <li ng-if="activeLang == 'en'" class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="app.tech({lang: activeLang, tech: 'software-development'})" class="menu-anchor main-menu-anchor" translate>
           NAV_EXPERTISE
@@ -20,11 +25,6 @@
       <li ng-if="activeLang == 'da'" class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="app.tech({lang: activeLang, tech: 'software-udvikling'})" class="menu-anchor main-menu-anchor" translate>
           NAV_EXPERTISE
-        </a>
-      </li>
-      <li class="menu-link-item" ui-sref-active="activeMenu">
-        <a href ui-sref="app.our-work({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
-          NAV_OUR_WORK
         </a>
       </li>
       <li class="menu-link-item" ui-sref-active="activeMenu">
