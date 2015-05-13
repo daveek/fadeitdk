@@ -1,6 +1,14 @@
 /*
- * The data format is JSON
- * Check if it's valid on http://jsonformatter.curiousconcept.com/
+ * Use some kind of JavaScript/JSON syntax highlighter,
+ * otherwise you'll have a bad time.
+ *
+ * The data format for blog posts is JSON
+ * (no comments/break lines, etc allowed in a real post)
+ *
+ * Check/fix if it's not valid on:
+ * http://jsonformatter.curiousconcept.com/
+ *
+ * There's a Grunt task which will also validate the post JSON.
  */
 [
   {
@@ -46,8 +54,8 @@
      * BEGIN POST CONTENT
      * A loop will evaluate each object in the content Array and create the appropriate HTML markup
      *
-     * Content can be: p (paragraph), h (heading), quote, list, cover (stretching image), img (normal image), video and code
-     * Paragraphs can contain html elements
+     * Content can be: p (paragraph), h (heading), quote, list, cover (stretched/as wide as the article image), img (normal image), video, code and fake-table.
+     * Paragraphs can contain html elements (other )
      *
      */
     "content": [
@@ -103,6 +111,82 @@
           "0": "Group by type",
           "1": "Order by line length",
           "2": "Alphabetise"
+        }
+      },
+      /*
+       * Fake table is a column-based configurable grid.
+       * You can set the size of each column (24 total).
+       * The size of the header should match your column sizes.
+       */
+      {
+        "type": "fake-table",
+        /*
+         * Table
+         */
+        "largeCode": true, //displays larger code
+        "header": {
+          "0": {
+            "size": "12", //50% width
+            "text": "Table head 1"
+          },
+          "1": {
+            "size": "12", //50% width
+            "text": "Table head 2"
+          }
+        },
+        /*
+         * Rows are just a column wrapper.
+         * They act as a 'break' line for columns.
+         */
+        "rows": {
+          "0": {
+            /*
+             * Columns are where the content is inserted.
+             * Each column can have multiple content objects.
+             * (for example one column-content object contains a title, a code block and a block of text)
+             *
+             * Fake-table columns suppor 3 types of content:
+             * type: title -> a bolded title
+             * type: code  -> a block of code, same as the code block
+             *                described above
+             * type: p     -> a text block, accepts HTML elements
+             *
+             */
+            "columns": {
+              "0": {
+                "size": "12", //50% width, should match header
+                "content": {
+                  "0": {
+                    "type": "title",
+                    "text": "My title"
+                  },
+                  "1": {
+                    "type": "code",
+                    "language": "javascript",
+                    "file": "code.txt.sample"
+                  }
+                }
+              },
+              "1": {
+                "size": "12",
+                "content": {
+                  "0": {
+                    "type": "title",
+                    "text": "Another title"
+                  },
+                  "1": {
+                    "type": "code",
+                    "language": "python",
+                    "file": "python-code.txt.sample"
+                  },
+                  "2": {
+                    "type": "p",
+                    "text": "Text block..."
+                  }
+                }
+              }
+            }
+          }
         }
       }
     ]
