@@ -1,0 +1,10 @@
+myModule.directive('directiveName', function (injectables) {
+  return {
+    restrict: 'A',
+    template: '<div></div>',
+    controller: function() { ... },
+    compile: function() {...},
+    link: function() { ... }
+    //(other props excluded)
+  };
+});

@@ -1,0 +1,8 @@
+HTTP = (function() {
+  HTTP.prototype.get = function() {...};
+  HTTP.prototype.post = function(url, data) {...};
+  HTTP.prototype["delete"] = function(url) {...};
+  HTTP.prototype.patch = function(url, data) {...};
+
+  return HTTP;
+})();

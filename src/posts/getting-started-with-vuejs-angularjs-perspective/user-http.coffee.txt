@@ -1,0 +1,4 @@
+class UserHTTP extends HTTP
+  all: () -> @get("/v1/users")
+  remove: (id) -> @delete(“#{/v1/users/#{id}”)
+  #...

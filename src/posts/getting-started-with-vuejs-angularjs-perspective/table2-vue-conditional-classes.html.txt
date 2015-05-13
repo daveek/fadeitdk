@@ -1,0 +1,1 @@
+<div v-class="active: myVar"></div>
