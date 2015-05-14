@@ -1,5 +1,17 @@
 [
   {
+    "id": "getting-started-with-vuejs-angularjs-perspective",
+    "title": "Getting started with Vue.js: AngularJS perspective",
+    "intro": "Writing Vue.js applications after working with AngularJS will feel familiar. Vue won't pack as many out of the box goodies, but it will still give Angular a run for its money.",
+    "cover": "vuejs-angularjs-getting-started.jpg",
+    "date": "2015-05-14T13:14:03.000Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
     "id": "managing-angular-translate-translations",
     "title": "How to manage multilingual website translations?",
     "intro": "Translations in different languages, files and formats have a tendency to become messy - outsourcing translation management to the cloud can be an easy way out.",
