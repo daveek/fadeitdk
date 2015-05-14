@@ -2,7 +2,7 @@
   {
     "id": "getting-started-with-vuejs-angularjs-perspective",
     "title": "Getting started with Vue.js: AngularJS perspective",
-    "intro": "Writing Vue.js applications after working with AngularJS will feel familiar. Vue won't pack as many out of the box goodies, but it will still give Angular a run for its money.",
+    "intro": "Writing Vue.js applications after working with AngularJS will feel familiar. Vue won't pack as many goodies out of the box, but it will still give Angular a run for its money.",
     "cover": "vuejs-angularjs-getting-started.jpg",
     "date": "2015-05-14T13:14:03.000Z",
     "author": {
@@ -18,7 +18,7 @@
       },
       {
         "type": "p",
-        "text": "I jumped on the AngularJS train more than 1 year ago and had lots of fun working with it. From August to January 2015 I had the chance to research Angular application structures. The study was in relation to performance, but it touched on many other subjects, such as component reusability and learnability. <br/>I am new to Vue.js, therefore this article will be about my first encounter with the library. Later on I will try to make a more comprehensive analysis, but I found the first stages of working with it very intriguing (it was fun too!)."
+        "text": "I jumped on the AngularJS train more than 1 year ago and had lots of fun working with it. From August to January 2015 I had the chance to research Angular application structures. The study was in relation to performance, but it touched on many other subjects, such as component reusability and learnability. <br/>I am new to Vue.js, therefore this article will be about my first encounter with the library. Later on I will try to make a more comprehensive analysis."
       },
       {
         "type": "h",
@@ -26,7 +26,7 @@
       },
       {
         "type": "p",
-        "text": "I felt comfortable with it just after a few days. It might be because it resembles other frameworks. It might be because of its simplicity, I couldn’t tell. To better portray the similarities & differences between the two, I devised a brief comparison of some of the high-level concepts in Angular and Vue. Here's what I ended up with:"
+        "text": "I felt comfortable with Vue within a few days. It might be because it resembles other frameworks. It might be because of its simplicity, I couldn’t tell. To better portray the similarities & differences between the two, I devised a brief comparison of some of the high-level concepts in Angular and Vue. Here's what I ended up with:"
       },
       {
         "type": "fake-table",
@@ -84,7 +84,7 @@
                   },
                   "1": {
                     "type": "p",
-                    "text": "Modules are a wrapper in Angular. In Vue they will hold most component logic. <br/><br/>You can see much thought was put into Vue by noticing the small details. For example, one of the component options is ‘name’, a property that customises the component name (will be displayed in the console, great help for debug)"
+                    "text": "Modules are a wrapper in Angular. In Vue they will hold most component logic. <br/><br/>You can see much thought was put into Vue by noticing the small details. For example, one of the component options is ‘name’, a property that customizes the component name (will be displayed in the console, great help for debugging)"
                   }
                 }
               }
@@ -184,7 +184,7 @@
       },
       {
         "type": "p",
-        "text": "Because Vue will only help us manage the VM, it won’t tackle some of the challenges that Angular covers out of the box. Services / HTTP reqs, routing, promises (just to name a few) are not among Vue’s concerns. That’s good and bad. Perhaps bad is too much said; but it’s a negative aspect for someone that got used to Angular and didn't have to lift a finger for it. In other words, we have to mix and match libraries as we go to cover our needs. That can be quite a task, but some developers love having this kind of control (others think it’s a waste of time). However, once you find a few good libraries, you won’t have to do it again. I think this kind of flexibility is very empowering. Imagine building your own smaller, focused framework (like Angular), building on top of a good foundation: Vue. <br/><br/> Creating a personalized front-end stack is great fun too. The first stack I ended up with was made out of: Director (routing), Reqwest (you guessed it), Q (promises) and of course Vue. The best name I can make out of these is QRVD (kinda sounds like curved). For the rest of the article you could have this stack in mind, although it won’t change much if you don’t."
+        "text": "Because Vue will only help us manage the VM, it won’t tackle some of the challenges that Angular covers out of the box. Services / HTTP reqs, routing, promises (just to name a few) are not among Vue’s concerns. That’s good and bad. Perhaps \"bad\" is an exaggeration; but it’s a negative aspect for someone that got used to Angular and didn't have to lift a finger for it. In other words, we have to mix and match libraries as we go to cover our needs. That can be quite a task, but some developers love having this kind of control (others think it’s a waste of time). However, once you find a few good libraries, you won’t have to do it again. I think this kind of flexibility is very empowering. Imagine building your own smaller, focused framework (like Angular) on top of a good foundation: Vue. <br/><br/> Creating a personalized front-end stack is great fun too. The first stack I ended up with was made out of: Director (routing), Reqwest (you guessed it), Q (promises) and of course Vue. The best name I can make out of these is QRVD (kinda sounds like curved). For the rest of the article you could have this stack in mind, although it won’t change much if you don’t."
       },
       {
         "type": "h",
@@ -459,7 +459,7 @@
       },
       {
         "type": "p",
-        "text": "The list goes on. There’s even a v-cloak directive that hides the bindings before they are rendered (as ng-cloak does). <br/> However, there’s one directive that you won’t find in Angular: <em>v-with</em>. Attaching this directive and passing a data object will allow a child VM to inherit data from his parent. In my first encounter I though of it as a drastically simplified Angular Controller, managing the data flow across the application (without the need of an equivalent to <em>$scope</em>. By default, components will have an isolated scope. That makes this directive essential, although components also accept <em>inherit</em> as a property (see <a target='_blank' href='http://vuejs.org/guide/components.html#Scope_Inheritance'>more on scope inheritance</a>)."
+        "text": "The list goes on. There’s even a v-cloak directive that hides the bindings before they are rendered (as ng-cloak does). <br/> However, there’s one directive that you won’t find in Angular: <em>v-with</em>. Attaching this directive and passing a data object will allow a child VM to inherit data from his parent. In my first encounter, I though of it as a drastically simplified Angular Controller, managing the data flow across the application (without the need of an equivalent to <em>$scope</em>. By default, components will have an isolated scope. That makes this directive essential, although components also accept <em>inherit</em> as a property (see <a target='_blank' href='http://vuejs.org/guide/components.html#Scope_Inheritance'>more on scope inheritance</a>)."
       },
       {
         "type": "h",
@@ -467,7 +467,7 @@
       },
       {
         "type": "p",
-        "text": "As I mentioned, I researched this area in Angular. My conclusion was that Angular both nailed it and it didn’t. You can create great modular architectures that are indeed maintainable, reusable, comprehensible, etc. However, you’ll need a monster-build strategy to go with it, or perhaps use tools like <a href='http://requirejs.org/' target='_blank'>Require.js</a> or <a href='http://browserify.org/' target='_blank'>Browserify</a> to ease the pain. That's not even the worst part. If you are just starting with Angular, you won’t probably come across a good structuring guide, which is a shame. It’s only later (or maybe too late) that Angular developers decide to look into it. <br/><br/> So how does Vue.js perform? More or less the same. There's a very short section in the <a href='http://vuejs.org/guide/application.html' target='_blank'>Vue guide</a> about app structuring, but it's not enough. I believe developers are able to produce kick-ass modular architectures with Vue, but there are no comprehensive guides or suggestions on how to do it. I wasn't satisfied, so in the ‘Building larger applications’ section I tried to sketch out an example that maybe will help developers new to Vue."
+        "text": "As I mentioned, I researched this area in Angular. My conclusion was that Angular both nailed it and it didn’t. You can create great modular architectures that are indeed maintainable, reusable, comprehensible, etc. However, you’ll need a monster-build strategy to go with it, or perhaps use tools like <a href='http://requirejs.org/' target='_blank'>Require.js</a> or <a href='http://browserify.org/' target='_blank'>Browserify</a> to ease the pain. That's not even the worst part. If you are just starting with Angular, you probably won’t come across a good structuring guide, which is a shame. It’s only later (or maybe too late) that Angular developers decide to look into it. <br/><br/> So how does Vue.js perform? More or less the same. There's a very short section in the <a href='http://vuejs.org/guide/application.html' target='_blank'>Vue guide</a> about app structuring, but it's not enough. I believe developers are able to produce kick-ass modular architectures with Vue, but there are no comprehensive guides or suggestions on how to do it. I wasn't satisfied, so in the ‘Building larger applications’ section I tried to sketch out an example that may help developers new to Vue."
       },
       {
         "type": "h",
@@ -476,7 +476,7 @@
       },
       {
         "type": "p",
-        "text": "Before that, I have to add a comment on components. I think Vue managed to clearly separate components, which we can’t really say about Angular. It’s perhaps closer to Angular 2, which is great news in my mind. <br/> As a result, there's no need for a <em>$scope</em> equivalent."
+        "text": "Before that, I have to add a comment on components. I think, Vue managed to clearly separate components, which we can’t really say about Angular. It’s perhaps closer to Angular 2, which is great news in my mind. <br/> As a result, there's no need for a <em>$scope</em> equivalent."
       },
       {
         "type": "h",
@@ -485,7 +485,7 @@
       },
       {
         "type": "p",
-        "text": "I truly believe Vue is elegant when it comes to Data flow & control. It felt natural and there was no need for an emit/broadcast mechanism to communicate with parent components (although Vue supports such events). There is a downside to it: the components and views become even more coupled (but hey, it is called a VM). Sometimes it's tricky to understand which data is inherited from which <em>v-with</em>, so use sparingly. There are ways to prevent spaghetti code from creeping in. Services are one good method, but there’s also not much about how to design them in the docs."
+        "text": "I truly believe Vue is elegant when it comes to Data flow & control. It felt natural and there was no need for an emit/broadcast mechanism to communicate with parent components (although Vue supports such events). There is a downside to it: the components and views become even more coupled (but hey, it is called a VM). Sometimes it's tricky to understand which data is inherited from which <em>v-with</em>, so use it sparingly. There are ways to prevent spaghetti code from creeping in. Services are one good method, but there’s not much documentation about them."
       },
       {
         "type": "h",
@@ -635,7 +635,7 @@
       },
       {
         "type": "p",
-        "text": "Finally, in any component we can instantiate a service and call the methods that in turn will make a HTTP request."
+        "text": "Finally, in any component we can instantiate a service and call the methods that in turn will make an HTTP request."
       },
       {
         "type": "code",
@@ -674,7 +674,7 @@
       },
       {
         "type": "p",
-        "text": "I hope these sketches will be a good starting point/source of inspiration for devs that are starting out. <br/> In future posts I’ll probably write more about testing, maintainability or scalability, if I’ll discover something interesting. <br/> My final words are: try out Vue, you might find it useful for many of your projects. It’s a nice little library with as many super powers as Angular!"
+        "text": "I hope these sketches will be a good starting point/source of inspiration for devs that are starting out. <br/> In future posts I’ll probably write more about testing, maintainability and scalability, if I discover something interesting. <br/> My final words are: try out Vue, you might find it useful for many of your projects. It’s a nice little library with as many super powers as Angular!"
       }
     ]
   }
