@@ -14,7 +14,7 @@
         <link href="http://fadeit.dk/blog/post/getting-started-with-vuejs-angularjs-perspective" />
         <id>urn:uuid:b9c25aca-f97e-11e4-a322-1697f925ec7b</id>
         <updated>2015-05-14T13:14:03.000Z</updated>
-        <summary>See how it is to write applications with Vue.js: a library for building web interfaces that provides data-reactive components with a simple and flexible API.</summary>
+        <summary>Writing Vue.js applications after working with AngularJS will feel familiar. Vue won't pack as many out of the box goodies, but it will still give Angular a run for its money.</summary>
         <author>
             <name>Dan Mindru</name>
         </author>

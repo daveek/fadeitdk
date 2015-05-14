@@ -1375,6 +1375,7 @@ a{
         .col(rgb(186, 186, 186), b);
         border: 2px solid @ws;
         border-right: 0;
+        background-position: center;
 
         .normal-image{
           opacity:0;
@@ -1740,6 +1741,11 @@ a{
   pre[class*="language-"]:not(.large){
     margin-top:10px;
 
+    @media only screen and (min-width:@bp_sm){
+      font-size:10px;
+      line-height:14px;
+    }
+
     @media only screen and (min-width:@bp_md){
       font-size:10px;
       line-height:14px;
@@ -1756,6 +1762,11 @@ a{
     }
 
     span{
+      @media only screen and (min-width:@bp_sm){
+        font-size:10px;
+        line-height:14px;
+      }
+
       @media only screen and (min-width:@bp_md){
         font-size:10px;
         line-height:14px;
@@ -1890,6 +1901,10 @@ a{
       [class*="blog-type-"]{
         padding-top:30px;
       }
+    }
+
+    small{
+      .col(#B6B6B6);
     }
   }
 
@@ -3113,8 +3128,20 @@ a{
 
 .spinner-block{
   width:100%;
+  min-height: 500px;
   .ta-c();
   margin:120px 0 20px 0;
+
+  .logo{
+    .block();
+    margin-bottom:30px;
+
+    .logo-img{
+      width: 100px;
+      height: 30px;
+      .inline-block();
+    }
+  }
 }
 
 //spinner
@@ -3145,8 +3172,12 @@ pre[class*='language-']{
   border-bottom:10px solid #E4E4E4;
   background-color:#F5F5F5;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  font-size: 13px;
+  font-size: 12px;
   word-wrap: break-word;
+
+  @media only screen and (min-width:@bp_sm){
+    font-size:13px;
+  }
 
   @media only screen and (min-width:@bp_md){
     font-size:14px;
@@ -3497,4 +3528,22 @@ pre[class*=language-]>code[data-language]::before {
   @media only screen and (min-width:@bp_xl){
     .inline-block();
   }
+}
+
+/* Digital signange - must stay isolated and highly decoupled */
+//TODO: remove this when moved
+.digital-signage-container{
+  .go-to-menu{
+    .h();
+  }
+
+  .nav-container{
+    .h();
+  }
+}
+
+.digital-signange{
+  .cover();
+  background-image: url('../img/digital-signage/digital-signage-hero.jpg');
+  background-position-x: center;
 }
