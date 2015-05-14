@@ -15,8 +15,8 @@ var fadeitConfig = (function applicationInit(){
   var appRootModuleName = 'fadeit';
   var appMainVendorDependencies = ['ui.router', 'sharedViewsModule', 'angularLoad', 'duScroll', 'pascalprecht.translate', 'ngSanitize', 'angulike', 'angular-storage'];
 
-  var pushAfterBootstrap = function pushAfterBootstrap(lateModule){
-    angular.module(lateModule, []);
+  var pushAfterBootstrap = function pushAfterBootstrap(lateModule, dependencies){
+    angular.module(lateModule, dependencies || []);
     angular.module(appRootModuleName).requires.push(lateModule);
   };
 
