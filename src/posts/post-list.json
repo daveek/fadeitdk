@@ -2,7 +2,7 @@
   {
     "id": "getting-started-with-vuejs-angularjs-perspective",
     "title": "Getting started with Vue.js: AngularJS perspective",
-    "intro": "Writing Vue.js applications after working with AngularJS will feel familiar. Vue won't pack as many out of the box goodies, but it will still give Angular a run for its money.",
+    "intro": "Writing Vue.js applications after working with AngularJS will feel familiar. Vue won't pack as many goodies out of the box, but it will still give Angular a run for its money.",
     "cover": "vuejs-angularjs-getting-started.jpg",
     "date": "2015-05-14T13:14:03.000Z",
     "author": {
