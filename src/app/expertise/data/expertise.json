@@ -1,15 +1,5 @@
 [
   {
-    "id": "drupal-development",
-    "iconClass": "drupal",
-    "title": "Drupal",
-    "description": "EXPERTISE_DRUPAL_DEVELOPMENT",
-    "uisref": {
-      "da": "drupal-udvikling",
-      "en": "drupal-development"
-    }
-  },
-  {
     "id": "python-development",
     "iconClass": "server",
     "title": "Python + Flask",
@@ -20,6 +10,16 @@
     }
   },
   {
+    "id": "drupal-development",
+    "iconClass": "dpal",
+    "title": "Drupal",
+    "description": "EXPERTISE_DRUPAL_DEVELOPMENT",
+    "uisref": {
+      "da": "drupal-udvikling",
+      "en": "drupal-development"
+    }
+  },
+  {
     "id": "angularjs-development",
     "iconClass": "code",
     "title": "AngularJS",
@@ -27,6 +27,26 @@
     "uisref": {
       "da": "angularjs-udvikling",
       "en": "angularjs-development"
+    }
+  },
+  {
+    "id": "app-development",
+    "iconClass": "mobile",
+    "title": "EXPERTISE_APP_DEVELOPMENT_TITLE",
+    "description": "EXPERTISE_APP_DEVELOPMENT",
+    "uisref": {
+      "da": "ios-android-app-udvikling",
+      "en": "ios-android-app-development"
+    }
+  },
+  {
+    "id": "performance-optimization",
+    "iconClass": "bolt",
+    "title": "EXPERTISE_SPEED_OPTIMIZATIONS_TITLE",
+    "description": "EXPERTISE_SPEED_OPTIMIZATIONS",
+    "uisref": {
+      "da": "performance-boost-and-optimization",
+      "en": "performance-boost-and-optimization"
     }
   },
   {
