@@ -18,7 +18,16 @@
       },
       {
         "type": "p",
+        "text": "First and foremost, what is Vue.js and why should you use it? <br/> Vue is a library for developing interactive web interfaces. Its API is inspired by Angular & Backbone, but you can read more about it in <a href='http://vuejs.org/guide/' target='_blank'>this guide</a>.<br/><br/> What's more interesting is <u>why use it</u>, especially when you are familiar with Angular. First of all, it's very flexible. It allows mixing and matching all the libraries you love. That means you can create your own little front-end stack. Secondly, it's more snappy because it's simpler and doesn't use dirty checking to observe changes. On top of that, learning Vue doesn't take much time. This will make it easy to bring in new team members. <br/> You can read even more about it in Vue's <a href='http://vuejs.org/guide/faq.html' taregt='_blank'>FAQ page</a>, where Vue is compared to Angular, React and more. <br/> <small><b>Updated 15 May 2015</b></small>"
+      },
+      {
+        "type": "p",
         "text": "I jumped on the AngularJS train more than 1 year ago and had lots of fun working with it. From August to January 2015 I had the chance to research Angular application structures. The study was in relation to performance, but it touched on many other subjects, such as component reusability and learnability. <br/>I am new to Vue.js, therefore this article will be about my first encounter with the library. Later on I will try to make a more comprehensive analysis."
+      },
+      {
+        "type": "quote",
+        "text": "Angular <b>1.*</b> and Vue.js <b>0.11</b> are considered in the article. <br/> Breaking changes might come in <a href='https://github.com/vuejs/Discussion/issues/158' target='_blank'>Vue 0.12</a>. As for Angular, version 2 will be a completely different beast.",
+        "ref": "http://fadeit.dk/blog/post/getting-started-with-vuejs-angularjs-perspective#comment-2025945446"
       },
       {
         "type": "h",
