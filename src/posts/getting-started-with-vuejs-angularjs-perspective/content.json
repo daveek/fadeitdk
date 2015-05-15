@@ -259,7 +259,7 @@
                   },
                   "1": {
                     "type": "p",
-                    "text": "Unfortunately, if we try to output and object or array, Vue won’t be able to render it (we’ll see <em>[Object]</em>). I always found that useful in Angular."
+                    "text": "Unfortunately, if we try to output and object or array, Vue won’t be able to render it (we’ll see <em>[Object]</em>). I always found that useful in Angular. <br/><br/> <b>Update:</b> you can do the same in Vue with the built-in json filter. <em>{{someObject | json}}</em>"
                   }
                 }
               }
