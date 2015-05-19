@@ -1,3 +1,5 @@
+var fs = require('fs');
+var url = require('url');
 module.exports = function(grunt) {
   /*
    * Include grunt configuration
@@ -37,6 +39,52 @@ module.exports = function(grunt) {
         ' * Docs @ <%= pkg.repository.url %>\n' +
         ' */\n'
     },
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : 'build/**/*'
+        },
+        options: {
+          port: 8008,
+          server: {
+            baseDir: "./build",
+            middleware: function(req, res, next) {
+              //This middleware helps us enable html5 mode
+              var baseDir = './build';
+              var fileName = url.parse(req.url);
+              fileName = fileName.href.split(fileName.search).join("");
+              var fileExists = fs.existsSync(baseDir + fileName);
+              if (!fileExists && fileName.indexOf("browser-sync-client") < 0) {
+                  req.url = "/index.html";
+              }
+              return next();
+            }
+          }
+        }
+      },
+      prod: {
+        bsFiles: {
+          src : 'application/**/*'
+        },
+        options: {
+          port: 8009,
+          server: {
+            baseDir: "./application",
+            middleware: function(req, res, next) {
+              //This middleware helps us enable html5 mode
+              var baseDir = './application';
+              var fileName = url.parse(req.url);
+              fileName = fileName.href.split(fileName.search).join("");
+              var fileExists = fs.existsSync(baseDir + fileName);
+              if (!fileExists && fileName.indexOf("browser-sync-client") < 0) {
+                  req.url = "/index.html";
+              }
+              return next();
+            }
+          }
+        }
+      }
+    },
     /*
      * The shell task can run handy shell commands.
      * To configure the dev/prod server check out the 'sh' files
@@ -44,12 +92,6 @@ module.exports = function(grunt) {
      *
      */
     shell: {
-      dev_server: {
-        command: './server/build-server.sh'
-      },
-      prod_server: {
-        command: './server/production-server.sh'
-      },
       run_selenium: {
         command: './node_modules/protractor/bin/webdriver-manager start'
       },
@@ -465,9 +507,6 @@ module.exports = function(grunt) {
      *
      */
     watch: {
-      options: {
-        livereload: true
-      },
       src_js: {
         files: ['./src/**/*.js', './src/**/*.json', './src/**/*.txt'],
         tasks: ['newer:jsonlint', 'newer:jshint:src_js', 'newer:copy:build_app_js', 'newer:copy:build_app_data', 'newer:copy:build_blog_posts']
@@ -565,8 +604,8 @@ module.exports = function(grunt) {
   grunt.registerTask('test:unit', ['karma:unit']);
   grunt.registerTask('test:ci', ['karma:unit', 'protractor:ci_dev', 'protractor:ci_prod']);
   grunt.registerTask('test:e2e', ['protractor:build']);
-  grunt.registerTask('dev', ['shell:dev_server']);
-  grunt.registerTask('prod', ['shell:prod_server']);
+  grunt.registerTask('dev', ['browserSync:dev']);
+  grunt.registerTask('prod', ['browserSync:prod']);
   grunt.registerTask('tr', ['shell:translations']);
 
   /*
