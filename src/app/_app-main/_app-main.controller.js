@@ -33,6 +33,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
         darkMode: false,
         toolboxPage: false,
         blogMode: false,
+        noMenu: false
     };
     angular.extend(vm, defaultState);
     angular.extend(vm, toState.data);
@@ -43,8 +44,6 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
             vm.multiLang = false;
         }
     }
-    wow.init();
-
 
     /*
      * TODO: document this part

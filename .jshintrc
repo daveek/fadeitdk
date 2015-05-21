@@ -101,6 +101,7 @@
       "by": true,
       "process": true,
       "WOW": true,
-      "Prism": true
+      "Prism": true,
+      "vm": true
     } // additional predefined global variables
 }
