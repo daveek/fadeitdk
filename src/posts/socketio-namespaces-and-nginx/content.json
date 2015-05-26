@@ -1,0 +1,82 @@
+[
+  {
+    "id": "socketio-namespaces-and-nginx",
+    "title": "Proxy Custom Socket.IO Namespaces with NGINX",
+    "intro": "Proxying custom Socket.IO namespaces with NGINX is not straightforward. Hopefully this will save time for the next person attempting it.",
+    "cover": "cover.jpg",
+    "date": "2015-05-21T20:30:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "gplus": "https://www.google.com/+JustasAzna?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": "A while ago I implemented a chat server based on <a href=\"http://socket.io/\" target=\"_blank\">Socket.IO</a> for <a href=\"https://hopper.dk\" target=\"_blank\">hopper.dk</a>. In addition to the chat server, the system already had 2 HTTP servers: <a href=\"http://gunicorn.org/\" target=\"_blank\">Gunicorn</a> for our RESTful API and <a href=\"http://nginx.org/\" target=\"_blank\">NGINX</a> for serving <a href=\"https://angularjs.org/\" target=\"_blank\">AngularJS</a> frontend. To make SSL management easier I decided to put all 3 servers behind a single NGINX host. It all went pretty smoothly except for 1 thing- my chat server with a custom namespace was unreachable through NGINX."
+      },
+      {
+        "type": "p",
+        "text": "Let's illustrate this with some code"
+      },
+      {
+        "type": "h",
+        "text": "Socket.IO Server"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "server.js.txt"
+      },
+      {
+        "type": "h",
+        "text": "NGINX Host"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "file": "host.conf.txt"
+      },
+      {
+        "type": "h",
+        "text": "Connection attempts fail with HTTP 404"
+      },
+      {
+        "type": "img",
+        "url": "posts/socketio-namespaces-and-nginx/fail.png",
+        "caption": "Client connection attempts fail"
+      },
+      {
+        "type": "p",
+        "text": "This setup results in Socket.IO client trying to establish a connection to the server with no success. After a bit of furious <i>DuckDuckGoing</i> and <i>Googling</i>, I gave up and decided to look for answers in <a href=\"https://github.com/Automattic/socket.io\" target=\"_blank\">Socket.IO's code</a>."
+      },
+      {
+        "type": "p",
+        "text": "The solution is simple: in addition to proxying your custom namespace, you also have to proxy <em>/socket.io</em> resource to the Socket.IO server:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "file": "host-new.conf.txt"
+      },
+      {
+        "type": "h",
+        "text": "Success"
+      },
+      {
+        "type": "img",
+        "url": "posts/socketio-namespaces-and-nginx/success.png",
+        "caption": "Client connection successfully established"
+      },
+      {
+        "type": "p",
+        "text": ""
+      },
+      {
+        "type": "p",
+        "text": "I hope this helps."
+      }
+    ]
+  }
+]

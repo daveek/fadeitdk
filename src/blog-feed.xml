@@ -7,7 +7,18 @@
     <link href="http://fadeit.dk/blog-feed.xml" rel="self" />
     <link href="http://fadeit.dk/" />
     <id>urn:uuid:381e1e19-d2bb-4c99-8da1-7615624c89a6</id>
-    <updated>2015-05-14T13:14:03.000Z</updated>
+    <updated>2015-05-21T20:30:00.000Z</updated>
+
+    <entry>
+        <title>Proxy Custom Socket.IO Namespaces with NGINX</title>
+        <link href="http://fadeit.dk/blog/post/socketio-namespaces-and-nginx" />
+        <id>urn:uuid:fe017787-8e23-4752-b270-6ed855073d58</id>
+        <updated>2015-05-21T20:30:00.000Z</updated>
+        <summary>Proxying custom Socket.IO namespaces with NGINX is not straightforward. Hopefully this will save time for the next person attempting it.</summary>
+        <author>
+            <name>Justas Azna</name>
+        </author>
+    </entry>
 
     <entry>
         <title>Getting started with Vue.js: AngularJS perspective</title>
