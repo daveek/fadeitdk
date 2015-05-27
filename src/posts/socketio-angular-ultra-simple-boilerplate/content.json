@@ -1,0 +1,51 @@
+[
+  {
+    "id": "socketio-angular-ultra-simple-boilerplate",
+    "title": "Socket.io with AngularJS boilerplate",
+    "intro": "In this post we'll be looking at a smallest possible socket.io chat application to get you started.",
+    "cover": "cover_wide.jpg",
+    "date": "2015-05-29T11:18:15.000Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": "<a href=\"http://socket.io\" target=\"_blank\">Socket.io</a> has truly been a godsend to making realtime applicaions. What used to require writing complex code, ajax polling and other tricks of the trade is now a few lines of code. And it's fast too - in fact we have a situation where client sends a POST request to python server, which in turn is passed to node server via <a href=\"http://redis.io\" target=\"_blank\">redis</a> <a href=\"http://redis.io/topics/pubsub\" target=\"_blank\">pub/sub</a> and that in turn send a message to the client with socket.io. The interesting bit is that although the socket.io round-trip involves more components, it delivers the message back to client before the response is received. While pure HTTP implementation with network latency in the mix might win the race, it is still a valid contender. I often find myself experimenting on some concept where I need a quick and simple boilerplate to get me going - setting it all up takes time after-all. There are great demos out there, but they often cover more ground than necessary, what I am mostly interested in is the bare minimum working backbone that I can build my concept on. So here is my quick prototype chat to get you started in 2 just files, it doesn't even contain an http server!"
+      },
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Server.js"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "server.js.txt"
+      },
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Index.html"
+      },
+      {
+        "type": "code",
+        "language": "markup",
+        "file": "index.html.txt"
+      },
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Setup"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "file": "commands.txt"
+      }
+    ]
+  }
+]
