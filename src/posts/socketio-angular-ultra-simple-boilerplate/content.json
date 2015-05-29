@@ -32,6 +32,10 @@
         "text": "Index.html"
       },
       {
+        "type": "p",
+        "text": "Since Angular is not aware of socket receiving a message, we need to wrap the <em>$scope</em> update in an <em>$apply</em> function so that angular would pick it up."
+      },
+      {
         "type": "code",
         "language": "markup",
         "file": "index.html.txt"
