@@ -1,5 +1,18 @@
 [
   {
+    "id": "socketio-angular-ultra-simple-boilerplate",
+    "title": "Socket.io with AngularJS boilerplate",
+    "intro": "In this post we'll be looking at a smallest possible socket.io chat application to get you started.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-05-29T11:18:15.000Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
     "id": "socketio-namespaces-and-nginx",
     "title": "Proxy Custom Socket.IO Namespaces with NGINX",
     "intro": "Proxying custom socket.io namespaces with NGINX is not straightforward. Hopefully this will save time for the next person attempting it.",
