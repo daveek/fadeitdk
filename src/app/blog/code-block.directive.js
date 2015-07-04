@@ -20,8 +20,20 @@ function codeBlock($sanitize, $http, $q, $filter, BlogService){
           return codeFileDefer.promise;
         }
 
+        function isJSON(s){
+          try {
+            angular.fromJson(s);
+          }
+          catch (err){
+            return false;
+          }
+
+          return true;
+        }
+
         loadCodeFile().then(function codeFileLoaded(response){
-          //escape the shit of the response
+          // Escape the shit of the response, stringify if JSON
+          response = isJSON(response) ? JSON.stringify(response) : response;
           element[0].innerHTML = $sanitize($filter('htmlEscape')(response));
           Prism.highlightAll();
         });
