@@ -1,0 +1,42 @@
+gulp test
+
+  Sofas API
+    /sofas
+      1) should return all sofas with GET
+      2) should create a new sofa with POST
+    /sofas/:sofa
+      3) should return a particular sofa with GET
+      4) should update a particular sofa with PUT
+      5) should delete a particular sofa with DELETE
+
+
+  0 passing (28ms)
+  5 failing
+
+  1) Sofas API /sofas should return all sofas with GET:
+     AssertionError: expected false to be true
+    at Context.<anonymous> (specs/sofas.spec.coffee:8:7)
+  
+
+  2) Sofas API /sofas should create a new sofa with POST:
+     AssertionError: expected false to be true
+    at Context.<anonymous> (specs/sofas.spec.coffee:12:7)
+  
+
+  3) Sofas API /sofas/:sofa should return a particular sofa with GET:
+     AssertionError: expected false to be true
+    at Context.<anonymous> (specs/sofas.spec.coffee:17:7)
+  
+
+  4) Sofas API /sofas/:sofa should update a particular sofa with PUT:
+     AssertionError: expected false to be true
+    at Context.<anonymous> (specs/sofas.spec.coffee:21:7)
+  
+
+  5) Sofas API /sofas/:sofa should delete a particular sofa with DELETE:
+     AssertionError: expected false to be true
+    at Context.<anonymous> (specs/sofas.spec.coffee:25:7)
+  
+
+Message:
+    5 tests failed.

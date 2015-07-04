@@ -1,5 +1,17 @@
 [
   {
+    "id": "testing-express-couchdb-apps-with-mock-couch",
+    "title": "Testing Express.js+CouchDB Applications with mock-couch",
+    "intro": "There's a way to test Express.js+CouchDB web apps with confidence of end-to-end tests and speed of unit-tests. Meet mock-couch- a node.js module which pretends to be a CouchDB server for testing purposes.",
+    "cover": "thumb.jpg",
+    "date": "2015-07-04T20:30:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
     "id": "socketio-angular-ultra-simple-boilerplate",
     "title": "Socket.io with AngularJS boilerplate",
     "intro": "In this post we'll be looking at a smallest possible socket.io chat application to get you started.",
