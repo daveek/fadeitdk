@@ -3,15 +3,11 @@ index 98f1918..a0d30ce 100644
 --- a/server.coffee
 +++ b/server.coffee
 @@ -1,16 +1,27 @@
- bodyParser = require 'body-parser'
  express    = require 'express'
 +DAL        = require './dal'
  
 +dal = new DAL(process.env.COUCH_PORT, process.env.DATABASE)
  app = express()
- 
- app.use bodyParser.urlencoded
-   extended: true
  
  app.get '/sofas', (req, res) ->
 -  throw new Error 'not implemented'
