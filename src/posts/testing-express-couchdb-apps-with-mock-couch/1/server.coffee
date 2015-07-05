@@ -9,16 +9,7 @@ app.use bodyParser.urlencoded
 app.get '/sofas', (req, res) ->
   throw new Error 'not implemented'
 
-app.post '/sofas', (req, res) ->
-  throw new Error 'not implemented'
-
 app.get '/sofas/:sofa', (req, res) ->
-  throw new Error 'not implemented'
-
-app.put '/sofas/:sofa', (req, res) ->
-  throw new Error 'not implemented'
-
-app.delete '/sofas/:sofa', (req, res) ->
   throw new Error 'not implemented'
 
 

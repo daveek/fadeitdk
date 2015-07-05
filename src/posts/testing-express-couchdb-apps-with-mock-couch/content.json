@@ -80,6 +80,55 @@
         "type": "code",
         "language": "bash",
         "file": "1/test-run.txt"
+      },
+      {
+        "type": "h",
+        "text": "Database Model"
+      },
+      {
+        "type": "p",
+        "text": "Sofas will be stored in CouchDB with the following structure:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "sofa.json.txt"
+      },
+      {
+        "type": "p",
+        "text": "With this in mind, let's build a module for accessing the database."
+      },
+      {
+        "type": "code",
+        "language": "coffeescript",
+        "file": "2/dal.coffee"
+      },
+      {
+        "type": "p",
+        "text": "What's missing is the actual endpoints and tests for them. Let's start with the tests."
+      },
+      {
+        "type": "code",
+        "language": "coffeescript",
+        "file": "2/specs/sofas.spec.coffee"
+      },
+      {
+        "type": "p",
+        "text": "Now the endpoints:"
+      },
+      {
+        "type": "code",
+        "language": "coffeescript",
+        "file": "2/server.coffee"
+      },
+      {
+        "type": "p",
+        "text": "At this point we can execute <em>gulp test-int</em> command to run tests on real CouchDB:"
+      },
+      {
+        "type": "code",
+        "language": "coffeescript",
+        "file": "2/test-int-run.txt"
       }
     ]
   }
