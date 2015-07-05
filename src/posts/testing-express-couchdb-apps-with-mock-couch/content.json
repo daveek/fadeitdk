@@ -127,7 +127,7 @@
       },
       {
         "type": "code",
-        "language": "coffeescript",
+        "language": "bash",
         "file": "2/test-int-run.txt"
       },
       {
@@ -170,7 +170,7 @@
       },
       {
         "type": "code",
-        "language": "coffeescript",
+        "language": "bash",
         "file": "3/test-run.txt"
       },
       {
