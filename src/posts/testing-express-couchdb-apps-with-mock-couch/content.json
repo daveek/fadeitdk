@@ -109,7 +109,7 @@
       },
       {
         "type": "code",
-        "language": "coffeescript",
+        "language": "bash",
         "file": "2/specs/sofas.spec.coffee"
       },
       {
@@ -118,7 +118,7 @@
       },
       {
         "type": "code",
-        "language": "coffeescript",
+        "language": "bash",
         "file": "2/server.coffee"
       },
       {
@@ -148,7 +148,7 @@
       },
       {
         "type": "code",
-        "language": "coffeescript",
+        "language": "bash",
         "file": "3/gulpfile.coffee"
       },
       {
@@ -157,7 +157,7 @@
       },
       {
         "type": "code",
-        "language": "coffeescript",
+        "language": "bash",
         "file": "3/specs/sofas.spec.coffee"
       },
       {
@@ -192,8 +192,8 @@
       {
         "type": "list",
         "items": {
-            "0": "Code",
-            "1": "mock-couch"
+            "0": "<a href=\"https://github.com/reederz/express-mock-couch-showcase\" target=\"_blank\">Code on GitHub</a>",
+            "1": "<a href=\"https://github.com/chris-l/mock-couch\" target=\"_blank\">mock-couch</a>"
         }
       }
     ]

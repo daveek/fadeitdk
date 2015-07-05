@@ -9,7 +9,7 @@ sources =
 # Task to run tests with mock-couch backend
 gulp.task 'test', ->
   process.env.NODE_ENV = 'test'
-  process.env.PORT = 3001
+  process.env.PORT = 3010
   process.env.COUCH_PORT = 5987
   process.env.DATABASE = 'sofas_test'
   gulp.src(sources.tests)
@@ -17,8 +17,8 @@ gulp.task 'test', ->
 
 # Task to run integration tests (real CouchDB backend)
 gulp.task 'test-int', ->
-  process.env.NODE_ENV = 'test'
-  process.env.PORT = 3001
+  process.env.NODE_ENV = 'test-int'
+  process.env.PORT = 3010
   process.env.COUCH_PORT = 5984
   process.env.DATABASE = 'sofas_test'
   gulp.src(sources.tests)
