@@ -129,6 +129,72 @@
         "type": "code",
         "language": "coffeescript",
         "file": "2/test-int-run.txt"
+      },
+      {
+        "type": "h",
+        "text": "mock-couch tests"
+      },
+      {
+        "type": "p",
+        "text": "So how do we use mock-couch for this? Mock-couch is an HTTP server based on Restify. Note that Node.js runtime is single-threaded so we won't be able to run both express and mock-couch at the same time. However, it is possible to run mock-couch on another process."
+      },
+      {
+        "type": "p",
+        "text": "Node provides a couple of ways to create processes out of the box. We'll use one called <em>forking</em>: not only we'll be able to control the lifecycle of the forked child process we'll also be able to do send and receive messages between parent and the child."
+      },
+      {
+        "type": "p",
+        "text": "OK, less talk and more forking. We'll do the forking in \"gulp test\" task:"
+      },
+      {
+        "type": "code",
+        "language": "coffeescript",
+        "file": "3/gulpfile.coffee"
+      },
+      {
+        "type": "p",
+        "text": "And a slight change to the test setup:"
+      },
+      {
+        "type": "code",
+        "language": "coffeescript",
+        "file": "3/specs/sofas.spec.coffee"
+      },
+      {
+        "type": "h",
+        "text": "Moment of Truth"
+      },
+      {
+        "type": "p",
+        "text": "If you try running <em>gulp test</em> right now, you should see similar output:"
+      },
+      {
+        "type": "code",
+        "language": "coffeescript",
+        "file": "3/test-run.txt"
+      },
+      {
+        "type": "p",
+        "text": "As you can see the tests completed slightly faster than with real CouchDB. In a small code base like this, it's hardly worth switching to mock-couch, if execution speed is your only motivation. However, with bigger codebases, the speed improvement become very apparent."
+      },
+      {
+        "type": "p",
+        "text": "Besides speed, there's another benefit to this approach: you don't actually need CouchDB to test your project. The simplified build process is especially useful with Continuous Integration platforms like Travis-CI and Codeship."
+      },
+      {
+        "type": "h",
+        "text": "Resources"
+      },
+      {
+        "type": "p",
+        "text": ""
+      },
+      {
+        "type": "list",
+        "items": {
+            "0": "Code",
+            "1": "mock-couch"
+        }
       }
     ]
   }
