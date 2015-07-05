@@ -1,10 +1,10 @@
 [
   {
     "id": "testing-express-couchdb-apps-with-mock-couch",
-    "title": "Testing Express.js+CouchDB Applications with mock-couch",
-    "intro": "There's a way to test Express.js+CouchDB web apps with confidence of end-to-end tests and execution speed of unit-tests. Meet mock-couch- a node.js module which pretends to be a CouchDB server for testing purposes.",
+    "title": "Testing Express.js + CouchDB Applications with mock-couch",
+    "intro": "There's a way to test Express.js + CouchDB web apps with confidence of end-to-end tests and execution speed of unit-tests. Meet mock-couch- a node.js module which pretends to be a CouchDB server for testing purposes.",
     "cover": "cover.jpg",
-    "date": "2015-07-04T20:30:00.000Z",
+    "date": "2015-07-05T20:30:00.000Z",
     "author": {
       "name": "Justas Azna",
       "gplus": "https://www.google.com/+JustasAzna?rel=author",
@@ -18,7 +18,7 @@
       },
       {
         "type": "p",
-        "text": "The code in this post is based upon CoffeeScript, Mocha and Gulp but it should be easily adaptable to other stacks (e.g. JavaScript, Jasmine and Grunt)."
+        "text": "The code in this post is based upon <a href=\"http://coffeescript.org/\" target=\"_blank\">CoffeeScript</a>, <a href=\"http://mochajs.org/\" target=\"_blank\">Mocha</a> and <a href=\"http://gulpjs.com/\" target=\"_blank\">Gulp</a> but it should be easily adaptable to other stacks (e.g. <a href=\"https://www.javascript.com/\" target=\"_blank\">JavaScript</a>, <a href=\"https://jasmine.github.io/\" target=\"_blank\">Jasmine</a> and <a href=\"http://gruntjs.com/\" target=\"_blank\">Grunt</a>)."
       },
       {
         "type": "h",
@@ -26,7 +26,7 @@
       },
       {
         "type": "p",
-        "text": "Recently, I worked on a Express.js based RESTful API with CouchDB storage. For various reasons, I mostly had end-to-end tests (testing HTTP endpoints) and very few unit tests. In the tests, I would rebuild the database before every \"describe\" block. This worked quite well but at one point I noticed that my feedback loops were beginning to get tediously slow (~30 seconds to run the full test suite). Thankfully, I discovered mock-couch: in-memory storage with CouchDB API. The switch was rather easy and, as a result, my test suite would finish in less than 10 seconds (even when reseting test data before each test)."
+        "text": "Recently, I worked on a <a href=\"http://expressjs.com/\" taregt=\"_blank\">Express.js</a> based RESTful API with <a href=\"https://couchdb.apache.org/\" target=\"_blank\">CouchDB</a> storage. For various reasons, I mostly had end-to-end tests (testing HTTP endpoints) and very few unit tests. In the tests, I would rebuild the database before every <em>describe</em> block. This worked quite well but at one point I noticed that my feedback loops were beginning to get tediously slow (~30 seconds to run the full test suite). Thankfully, I discovered <a href=\"https://github.com/chris-l/mock-couch\" target=\"_blank\">mock-couch</a>: in-memory storage with CouchDB API. The switch was rather easy and, as a result, my test suite would finish in less than 10 seconds (even when reseting test data before each test)."
       },
       {
         "type": "h",
@@ -34,7 +34,7 @@
       },
       {
         "type": "p",
-        "text": "Our sample api will expose functionality to manipulate a database of sofa's. Let's set it up."
+        "text": "Our sample API will expose functionality to access a database of sofa's. Let's set it up."
       },
       {
         "type": "p",
@@ -105,7 +105,7 @@
       },
       {
         "type": "p",
-        "text": "What's missing is the actual endpoints and tests for them. Let's start with the tests."
+        "text": "What's missing is the endpoint and test implementation. Let's start with the tests."
       },
       {
         "type": "code",
@@ -136,15 +136,15 @@
       },
       {
         "type": "p",
-        "text": "So how do we use mock-couch for this? Mock-couch is an HTTP server based on Restify. Note that Node.js runtime is single-threaded so we won't be able to run both express and mock-couch at the same time. However, it is possible to run mock-couch on another process."
+        "text": "So how do we use mock-couch for this? Mock-couch is an HTTP server based on <a href=\"http://mcavage.me/node-restify/\" target=\"_blank\">Restify</a>. Note that <a href=\"https://nodejs.org/\" target=\"_blank\">Node.js</a> runtime is single-threaded therefore we won't be able to run both express and mock-couch at the same time. However, it is possible to run mock-couch on another process."
       },
       {
         "type": "p",
-        "text": "Node provides a couple of ways to create processes out of the box. We'll use one called <em>forking</em>: not only we'll be able to control the lifecycle of the forked child process we'll also be able to do send and receive messages between parent and the child."
+        "text": "Node provides a couple of ways to create processes out of the box. We'll use one called <a href=\"https://nodejs.org/api/child_process.html#child_process_child_process_fork_modulepath_args_options\" target=\"_blank\">forking</a>: not only we'll be able to control the lifecycle of the forked child process but we'll also have the ability to send and receive messages between parent and the child."
       },
       {
         "type": "p",
-        "text": "OK, less talk and more forking. We'll do the forking in \"gulp test\" task:"
+        "text": "OK, less talk and more forking. We'll do the forking in <em>gulp test</em> task:"
       },
       {
         "type": "code",
@@ -153,7 +153,7 @@
       },
       {
         "type": "p",
-        "text": "And a slight change to the test setup:"
+        "text": "Also, we need a slight change to the test setup:"
       },
       {
         "type": "code",
@@ -175,11 +175,11 @@
       },
       {
         "type": "p",
-        "text": "As you can see the tests completed slightly faster than with real CouchDB. In a small code base like this, it's hardly worth switching to mock-couch, if execution speed is your only motivation. However, with bigger codebases, the speed improvement become very apparent."
+        "text": "As you can see the tests completed slightly faster than with real CouchDB. In a small code base like this, it's hardly worth switching to mock-couch, if execution speed is your only motivation. However, with bigger codebases, the speed improvement can become very apparent."
       },
       {
         "type": "p",
-        "text": "Besides speed, there's another benefit to this approach: you don't actually need CouchDB to test your project. The simplified build process is especially useful with Continuous Integration platforms like Travis-CI and Codeship."
+        "text": "Besides speed, there's another benefit to this approach: you don't actually need CouchDB to test your project. The simplified build process is especially useful with Continuous Integration platforms like <a href=\"http://travis-ci.org/\" target=\"_blank\">Travis CI</a> and <a href=\"https://codeship.com\" target=\"_blank\">Codeship</a>."
       },
       {
         "type": "h",
