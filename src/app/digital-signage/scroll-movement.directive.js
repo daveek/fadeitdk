@@ -36,27 +36,33 @@ function scrollMovement($timeout, $state){
     }
 
     scope.elementScroll = function elementScroll($event, $delta){
-      console.log(vm.scrollPosition);
       if(vm.scrollPosition + $delta < 0 && vm.scrollPosition + $delta >= -vm.maxScroll){
         //Exactly as the normal scroll
         vm.scrollPosition += $delta;
-
-        //when there are only 50 pixels until the end display something
-        if(vm.scrollPosition < -vm.maxScroll + 50){
-          $state.transitionTo('app.info-display.features', {lang: scope.activeLang});
-        } else if(vm.currentState === 'app.info-display.features'){
-          $state.transitionTo('app.info-display', {lang: scope.activeLang});
-        }
       }
     };
 
-    scope.scrollToBottom = function scrollToBottom(){
+    scope.scrollToBottom = function scrollToBottom(e){
+      e.preventDefault();
       scrollTo(-vm.scrollPosition, vm.maxScroll, 500, 'scrollPosition');
     };
 
     scope.scrollToTop = function scrollToBottom(){
       scrollTo(-vm.scrollPosition, 0, 500, 'scrollPosition');
     };
+
+    //Watch for the scrollPostion and update the route on the intro page
+    scope.$watch(function(){
+      return vm.scrollPosition;
+    }, function scrollPosChanged(newValue, oldValue){
+      if(newValue !== oldValue){
+        if(vm.scrollPosition <= -vm.maxScroll){
+          $state.transitionTo('app.info-display.features', {lang: scope.activeLang});
+        } else if(vm.currentState === 'app.info-display.features'){
+          $state.transitionTo('app.info-display', {lang: scope.activeLang});
+        }
+      }
+    });
   }
 
   return {

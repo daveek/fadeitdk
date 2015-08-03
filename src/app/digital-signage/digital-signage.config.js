@@ -13,7 +13,7 @@ angular.module('fadeit.digitalSignage').config(digitalSignageConfig);
 digitalSignageConfig.$inject = ['$stateProvider'];
 function digitalSignageConfig($stateProvider){
   $stateProvider.state('app.info-display', {
-    url: '/info-display',
+    url: '/information-display',
     templateUrl: 'views/digital-signage-page.html',
     controller: 'IntroController',
     controllerAs: 'vm',

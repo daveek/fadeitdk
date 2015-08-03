@@ -30,6 +30,7 @@
     }
 
     .digital-signage .tv {
+      /* 3 => final scale = 1 */
       -webkit-transform: scale({{3 - (-vm.scrollPosition/vm.wHeight*2)}});
           -ms-transform: scale({{3 - (-vm.scrollPosition/vm.wHeight*2)}});
               transform: scale({{3 - (-vm.scrollPosition/vm.wHeight*2)}});
@@ -99,14 +100,14 @@
     </section>
 
     <section class="scroll-to-bottom fadeit-animate animated pulse" data-wow-delay="1s" data-wow-duration="0.3s">
-      <a ui-sref="app.info-display.features({lang: activeLang})" class="btn-pure" ng-click="scrollToBottom()">
+      <a ui-sref="app.info-display.features({lang: activeLang})" class="btn-pure" ng-click="scrollToBottom($event)">
         <span>Read more</span>
         <i class="fa fa-angle-down"></i>
       </a>
     </section>
   </section><!-- signage-inner -->
 
-  <section ui-view id="di-view"></section>
+  <section ui-view id="di-view" ng-class="{'feature-ready': vm.currentState !== 'app.info-display'}"></section>
 
   <nav ng-if="vm.currentState === 'app.info-display.features'" class="nav-bottom">
     <ul class="id-nav">
@@ -117,7 +118,22 @@
       </li>
       <li ui-sref-active="active">
         <a href ui-sref="app.info-display.features({lang: activeLang})">
-          End
+          Why us
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a href ui-sref="app.info-display.features.who({lang: activeLang})">
+          Who can use it
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a href ui-sref="app.info-display.features.media({lang: activeLang})">
+          Supported media
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a href ui-sref="app.info-display.features.pricing({lang: activeLang})">
+          Pricing
         </a>
       </li>
     </ul>
