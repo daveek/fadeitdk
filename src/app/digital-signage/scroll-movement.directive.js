@@ -36,19 +36,20 @@ function scrollMovement($timeout, $state){
     }
 
     scope.elementScroll = function elementScroll($event, $delta){
-      if(vm.scrollPosition + $delta < 0 && vm.scrollPosition + $delta >= -vm.maxScroll){
-        //Exactly as the normal scroll
-        vm.scrollPosition += $delta;
+      if($state.current.name === 'app.info-display.features' || $state.current.name === 'app.info-display'){
+        if(vm.scrollPosition + $delta < 0 && vm.scrollPosition + $delta >= -vm.maxScroll){
+          //Exactly as the normal scroll
+          vm.scrollPosition += $delta;
+        }
       }
     };
 
-    scope.scrollToBottom = function scrollToBottom(e){
-      e.preventDefault();
-      scrollTo(-vm.scrollPosition, vm.maxScroll, 500, 'scrollPosition');
+    scope.scrollToBottom = function scrollToBottom(duration){
+      scrollTo(-vm.scrollPosition, vm.maxScroll, duration || 500, 'scrollPosition');
     };
 
-    scope.scrollToTop = function scrollToBottom(){
-      scrollTo(-vm.scrollPosition, 0, 500, 'scrollPosition');
+    scope.scrollToTop = function scrollToBottom(duration){
+      scrollTo(-vm.scrollPosition, 0, duration || 500, 'scrollPosition');
     };
 
     //Watch for the scrollPostion and update the route on the intro page
@@ -63,6 +64,15 @@ function scrollMovement($timeout, $state){
         }
       }
     });
+
+
+    //Scrolls to bottom by default after 2s
+    setTimeout(function(){
+      //if(vm.scrollPosition > -vm.maxScroll){
+      if($state.current.name === 'app.info-display'){
+        scope.scrollToBottom(1500);
+      }
+    }, 3000);
   }
 
   return {
