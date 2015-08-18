@@ -18,9 +18,9 @@
     }
 
     .signage-inner{
-      -webkit-transform: translateY({{-vm.scrollPosition/6}}px);
-          -ms-transform: translateY({{-vm.scrollPosition/6}}px);
-              transform: translateY({{-vm.scrollPosition/6}}px);
+      -webkit-transform: translateY({{-vm.scrollPosition/8}}px);
+          -ms-transform: translateY({{-vm.scrollPosition/8}}px);
+              transform: translateY({{-vm.scrollPosition/8}}px);
     }
 
     .digital-signage .signage-inner .hero{
@@ -43,7 +43,7 @@
     }
   </style>
 
-  <section class="tv">
+  <section class="tv" ng-class="{'feature-ready': (vm.currentState !== 'app.info-display' && vm.currentState === 'app.info-display.features')}">
     <section class="img"></section>
   </section>
 
@@ -92,12 +92,13 @@
 
     <section class="hero">
       <h1 class="fadeit-animate animated fadeInUp" data-wow-delay="1s">
-        Simple information screen
+        Easy information screens.
       </h1>
       <p class="fadeit-animate animated fadeInUp" data-wow-delay="1.1s">
-        display presentations, videos, interactive pages and many more on any screen</p>
+        Display presentations, videos, interactive pages and many more on any screen.</p>
       <p class="fadeit-animate animated fadeIn" data-wow-delay="2s">
-        <button class="btn btn-success btn-lg btn-contact fadeit-animate animated pulse">Sign up for free</button>
+        <a href="https://informationscreen.com/register-free-account" class="btn btn-success btn-contact fadeit-animate animated pulse">Try now for free</a>
+        <a ui-sref="app.info-display.features.media({lang: activeLang})" class="btn btn-success btn-more btn-contact btn-more">Read more</a>
       </p>
     </section>
   </section><!-- signage-inner -->
@@ -106,14 +107,28 @@
 
   <nav ng-if="vm.currentState !== 'app.info-display'" class="nav-bottom">
     <ul class="id-nav">
+      <li class="logo">
+        <svg width="95px" height="41px" viewBox="0 0 95 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+          <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
+          <title>play-logo_play-logo-inverse copy 4</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g id="Logo-exports" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <g id="play-logo_play-logo-inverse-copy-3" sketch:type="MSLayerGroup" transform="translate(0.367811, 0.646288)">
+              <g id="Group" sketch:type="MSShapeGroup">
+                  <path d="M0,19.1412798 C0,13.0090725 4.76945763,7.99500331 10.6585657,7.99500331 C16.5476739,7.99500331 21.3171315,13.0090725 21.3171315,19.1412798 C21.3171315,25.3569302 16.5476739,30.3709994 10.6585657,30.3709994 C6.67701031,30.3709994 3.27659032,28.0915631 1.53433585,24.6939889 L1.53433585,39.3621411 L0,39.3621411 L0,19.1412798 L0,19.1412798 Z M10.6585657,28.8373721 C15.6768346,28.8373721 19.7822197,24.4862442 19.7822197,19.1407043 C19.7822197,13.8780321 15.6768346,9.56891349 10.6585657,9.56891349 C5.6402969,9.56891349 1.53433585,13.8786076 1.53433585,19.1412798 C1.53433585,24.4868197 5.6402969,28.8373721 10.6585657,28.8373721 L10.6585657,28.8373721 Z" id="Shape" fill="#E6E7E8"></path>
+                  <path d="M26.184501,0 L27.6819759,0 L27.6819759,29.8737934 L26.184501,29.8737934 L26.184501,0 L26.184501,0 Z" id="Shape" fill="#E6E7E8"></path>
+                  <path d="M53.8682047,29.8737934 L52.3338688,29.8737934 L52.3338688,24.7348472 C50.5921903,28.0909877 47.1911944,30.3704239 43.2096389,30.3704239 C37.3205308,30.3704239 32.5516491,25.3977885 32.5516491,19.2655813 C32.5516491,13.0499309 37.3205308,7.99442784 43.2096389,7.99442784 C49.099323,7.99442784 53.8682047,13.0499309 53.8682047,19.2655813 L53.8682047,29.8737934 L53.8682047,29.8737934 Z M43.2096389,9.56948896 C38.1913701,9.56948896 34.085985,13.9206169 34.085985,19.2661568 C34.085985,24.528829 38.1913701,28.8379476 43.2096389,28.8379476 C48.2279078,28.8379476 52.3338688,24.528829 52.3338688,19.2661568 C52.3338688,13.9200414 48.2279078,9.56948896 43.2096389,9.56948896 L43.2096389,9.56948896 Z" id="Shape" fill="#E6E7E8"></path>
+                  <path d="M76.1391125,28.3821754 C74.3185286,29.8737934 72.2911779,30.6190269 70.0564846,30.6190269 C67.1605984,30.6190269 64.6776698,29.6735299 62.6082747,27.7808094 C60.5394555,25.8892398 59.5050459,23.6443318 59.5050459,21.048387 L59.5050459,10.6070612 L61.37113,10.6070612 L61.37113,21.0725568 C61.37113,23.2046728 62.1981969,25.0312142 63.8529067,26.5539076 C65.5076165,28.0766009 67.5620369,28.8379476 70.0167439,28.8379476 C71.9749803,28.8379476 73.546753,28.324053 74.7332139,27.2956883 C75.3114697,26.7956049 75.8079402,26.3225687 76.2220496,25.8783059 C76.6355831,25.4334677 77.0352937,24.9466201 77.4211814,24.4183388 C78.0282347,23.5010398 78.3317614,22.7517779 78.3317614,22.1671005 L78.3317614,10.6070612 L80.1978455,10.6070612 L80.1978455,28.4644676 C80.1978455,31.3924585 79.1812904,33.8514414 77.1499081,35.8396899 C75.1179498,37.8290893 72.6505719,38.8229258 69.7471984,38.8229258 C67.8949371,38.8229258 66.3744241,38.5058419 65.1856594,37.8710986 C63.9968947,37.2352044 63.1813468,36.6683665 62.7390158,36.171736 C62.2961088,35.7568222 61.9367148,35.3701064 61.6608338,35.0115887 L60.7899945,33.6851306 L62.4447043,32.7735862 C64.0164771,35.618134 66.4164686,37.041271 69.6435271,37.041271 C72.1805952,37.041271 74.2626613,36.2442452 75.8903013,34.6496181 C77.5173654,33.0555665 78.3311854,30.9965352 78.3311854,28.4736752 L78.3311854,25.9795886 L77.2144147,27.3463296 L76.1391125,28.3821754 L76.1391125,28.3821754 Z" id="Shape" fill="#E6E7E8"></path>
+                  <path d="M87.8701007,24.9247523 L93.2834725,24.9247523 L93.2834725,29.8737934 L87.8701007,29.8737934 L87.8701007,24.9247523 L87.8701007,24.9247523 Z" id="Shape" fill="#00AEEF"></path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </li>
       <li ng-class="{'active': vm.currentState === 'app.info-display.features'}">
         <a href ui-sref="app.info-display.features({lang: activeLang})">
           Try now
-        </a>
-      </li>
-      <li ui-sref-active="active">
-        <a href ui-sref="app.info-display.features.supported({lang: activeLang})">
-          Supported devices
         </a>
       </li>
       <li ui-sref-active="active">
@@ -122,13 +137,18 @@
         </a>
       </li>
       <li ui-sref-active="active">
+        <a href ui-sref="app.info-display.features.supported({lang: activeLang})">
+          Usage & support
+        </a>
+      </li>
+      <li ui-sref-active="active">
         <a href ui-sref="app.info-display.features.pricing({lang: activeLang})">
           Pricing
         </a>
       </li>
-      <li ui-sref-active="active">
+      <li ui-sref-active="active" class="help">
         <a href ui-sref="app.info-display.features.contact({lang: activeLang})">
-          Help
+          <i class="fa fa-question-circle"></i>
         </a>
       </li>
     </ul>
