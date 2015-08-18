@@ -87,7 +87,7 @@
       },
       {
         "type": "p",
-        "text": "Now include the file the the http block of your <em>/etc/nginx/nginx.conf</em> file:"
+        "text": "Now include the file in the the http block of your <em>/etc/nginx/nginx.conf</em> file:"
       },
       {
         "type": "code",

@@ -182,4 +182,10 @@
   <url>
     <loc>http://fadeit.dk/blog/post/socketio-namespaces-and-nginx</loc>
   </url>
+  <url>
+    <loc>http://fadeit.dk/blog/post/socketio-angular-ultra-simple-boilerplate</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/blog/post/testing-express-couchdb-apps-with-mock-couch</loc>
+  </url>
 </urlset>

@@ -7,7 +7,29 @@
     <link href="http://fadeit.dk/blog-feed.xml" rel="self" />
     <link href="http://fadeit.dk/" />
     <id>urn:uuid:381e1e19-d2bb-4c99-8da1-7615624c89a6</id>
-    <updated>2015-05-21T20:30:00.000Z</updated>
+    <updated>2015-07-05T20:30:00.000Z</updated>
+
+    <entry>
+        <title>Testing Express.js + CouchDB Applications with mock-couch</title>
+        <link href="http://fadeit.dk/blog/post/testing-express-couchdb-apps-with-mock-couch" />
+        <id>urn:uuid:5b50c943-6ec2-4d2d-ba53-b40b3e68afd6</id>
+        <updated>2015-07-05T20:30:00.000Z</updated>
+        <summary>There's a way to test Express.js + CouchDB web apps with confidence of end-to-end tests and execution speed of unit-tests. Meet mock-couch- a node.js module which pretends to be a CouchDB server for testing purposes.</summary>
+        <author>
+            <name>Justas Azna</name>
+        </author>
+    </entry>
+
+    <entry>
+        <title>Socket.io with AngularJS boilerplate</title>
+        <link href="http://fadeit.dk/blog/post/socketio-angular-ultra-simple-boilerplate" />
+        <id>urn:uuid:ae014487-8e23-4752-b270-5dd855073d66</id>
+        <updated>2015-05-29T11:18:15.000Z</updated>
+        <summary>In this post we'll be looking at a smallest possible socket.io chat application to get you started.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
 
     <entry>
         <title>Proxy Custom Socket.IO Namespaces with NGINX</title>
