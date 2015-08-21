@@ -1,4 +1,4 @@
-angular.module('fadeit.coreLayout').directive('appShell', appShell);
+angular.module('play.coreLayout').directive('appShell', appShell);
 
 function appShell(){
   return {

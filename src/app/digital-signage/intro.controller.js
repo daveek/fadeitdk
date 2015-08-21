@@ -1,4 +1,4 @@
-angular.module('fadeit.digitalSignage').controller('IntroController', introController);
+angular.module('play.digitalSignage').controller('IntroController', introController);
 
 introController.$inject = ['$state', '$window', '$scope'];
 function introController($state, $window, $scope){
@@ -11,7 +11,6 @@ function introController($state, $window, $scope){
   vm.scrollPosition = 0;
 
   //$state.transitionTo(states.features);
-  console.log($state, 'nothing', vm);
   if($state.current.name === 'app.info-display'){
     vm.scrollPosition = 0;
   } else {

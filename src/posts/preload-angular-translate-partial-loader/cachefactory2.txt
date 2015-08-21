@@ -1,9 +1,0 @@
-app.run(function run ($cacheFactory, $templateCache) {
-    var httpCache = $cacheFactory.get('$http');
-    
-    var putHttpCache = function putHttpCache(cacheKey){
-        var cacheObj = [200, $templateCache.get(cacheKey), {}, "OK"];
-        httpCache.put('/' + cacheKey, cacheObj); //prepend '/' to make url's match
-    };
-    putHttpCache('assets/translations/da-dk/common.json');
-});

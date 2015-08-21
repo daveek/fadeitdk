@@ -23,7 +23,7 @@ for entry in json_data['feed']['entry']:
     da_translation_map[key] = da_value
 #Javascript for translations file we are generating
 config = """
-angular.module(fadeitConfig.appRootModuleName).config(translateConfig);
+angular.module(playConfig.appRootModuleName).config(translateConfig);
 translateConfig.$inject = ['$translateProvider'];
 function translateConfig($translateProvider){
 """

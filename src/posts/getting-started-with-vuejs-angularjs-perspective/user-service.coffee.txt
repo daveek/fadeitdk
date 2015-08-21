@@ -1,7 +1,0 @@
-class UserService
-  constructor: (@HTTP) ->
-  all: () -> @HTTP.all()
-  remove: (id) ->
-     # Here we can do some data processing
-     # ...
-     @HTTP.remove(id)

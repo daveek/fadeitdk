@@ -1,10 +1,3 @@
-<section class="container-fluid global-container" ng-class="{'dark-mode': root.darkMode, 'blog-mode': root.blogMode, 'digital-signage-container': root.digitalSignage}" id="top">
-  <!-- TODO: Remove digitalSignage class apply ^ (up) when moved -->
-  <section class="go-to-menu">
-    <span ng-bind="root.pageTitle"></span>
-    <a href="#global-menu" du-smooth-scroll><b translate>NAV_TO_MENU</b><i class="fa fa-level-down"></i></a>
-  </section>
+<section class="container-fluid global-container" ng-class="digital-signage-container" id="top">
   <section ui-view></section>
-  <section app-footer></section>
-  <section app-navigation></section>
 </section>

@@ -1,9 +1,0 @@
-Vue.extend({
-  data: function(){ return {...} },
-  created: function() {...},
-  ready: function() {...},
-  components: {...},
-  methods: {...},
-  watch: {...}
-  //(other props excluded)
-});

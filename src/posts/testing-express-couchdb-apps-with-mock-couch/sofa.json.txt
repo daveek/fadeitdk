@@ -1,6 +1,0 @@
-{
-    "_id": "CouchDB assigned id",
-    "_rev": "CouchDB assigned revision",
-    "name": "Name of the sofa",
-    "price": "Price of the sofa"
-}.

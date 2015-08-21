@@ -1,1 +1,1 @@
-fadeitConfig.pushAfterBootstrap('fadeit.coreLayout');
+playConfig.pushAfterBootstrap('play.coreLayout');

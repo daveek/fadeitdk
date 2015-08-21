@@ -1,10 +1,0 @@
-gulp test-int
-
-  Sofas API
-    /sofas
-      ✓ should return all sofas with GET
-    /sofas/:sofa
-      ✓ should return a particular sofa with GET
-
-
-  2 passing (204ms)

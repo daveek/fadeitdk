@@ -1,4 +1,4 @@
-angular.module(fadeitConfig.appRootModuleName).controller('RootController', rootController);
+angular.module(playConfig.appRootModuleName).controller('RootController', rootController);
 
 rootController.$inject = ['$scope', '$window', '$log', '$translate', '$filter', '$state', '$rootScope', '$location', 'store', '$stateParams'];
 function rootController($scope, $window, $log, $translate, $filter, $state, $rootScope, $location, store, $stateParams) {

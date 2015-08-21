@@ -1,3 +1,0 @@
-Vue.filter('reverse', function (value) {
-  return function(value){...};
-});

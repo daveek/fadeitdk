@@ -1,6 +1,0 @@
-section{
-   /* I use shorthand for the following cases */
-   margin: 15px 20px;
-   margin: 10px 15px 20px 35px;
-   margin: 30px auto;
-}

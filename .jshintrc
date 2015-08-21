@@ -89,7 +89,7 @@
       "angular": true,
       "module": true,
       "require": true,
-      "fadeitConfig": true,
+      "playConfig": true,
       "printStackTrace": true,
       "_LTracker": true,
       "glob": true,

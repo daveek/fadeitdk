@@ -1,11 +1,0 @@
-gulp test
-
-  Sofas API
-    /sofas
-      ✓ should return all sofas with GET (125ms)
-    /sofas/:sofa
-      ✓ should return a particular sofa with GET (41ms)
-
-
-  2 passing (178ms)
-

@@ -1,6 +1,0 @@
-.navigation {
-  &__logo {
-    &__image {}
-  }
-  &--collapsed {}
-}

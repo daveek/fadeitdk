@@ -1,3 +1,0 @@
-<li v-repeat="items" class="item-{{$index}}">
-  {{myProperty}}
-</li>

@@ -3,20 +3,20 @@ describe('Root Application Module:', function(){
       scope;
 
   beforeEach(function(){
-    module('fadeit');
+    module('play');
   });
 
   describe('Root Config:', function(){
     it('should expose a pushAfterBootstrap method', function(){
-      expect(fadeitConfig.pushAfterBootstrap).toBeTruthy();
+      expect(playConfig.pushAfterBootstrap).toBeTruthy();
     });
 
     it('should expose a appRootModuleName variable', function(){
-      expect(fadeitConfig.appRootModuleName).toBeTruthy();
+      expect(playConfig.appRootModuleName).toBeTruthy();
     });
 
     it('should expose a appMainVendorDependencies variable', function(){
-      expect(fadeitConfig.appMainVendorDependencies).toBeTruthy();
+      expect(playConfig.appMainVendorDependencies).toBeTruthy();
     });
   });
 

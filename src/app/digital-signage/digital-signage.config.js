@@ -3,17 +3,17 @@
  * - split LESS
  * - uninstall angular-mousewheel / remove it + hamster.js from grunt config
  * - clean-up the routes below
- * - remove ngAnimate from fadeit (grunt conf)
+ * - remove ngAnimate from play (grunt conf)
  */
 
-fadeitConfig.pushAfterBootstrap('fadeit.digitalSignage', ['monospaced.mousewheel', 'ngAnimate']);
+playConfig.pushAfterBootstrap('play.digitalSignage', ['monospaced.mousewheel', 'ngAnimate']);
 
-angular.module('fadeit.digitalSignage').config(digitalSignageConfig);
+angular.module('play.digitalSignage').config(digitalSignageConfig);
 
 digitalSignageConfig.$inject = ['$stateProvider'];
 function digitalSignageConfig($stateProvider){
   $stateProvider.state('app.info-display', {
-    url: '/information-screen',
+    url: '',
     templateUrl: 'views/digital-signage-page.html',
     controller: 'IntroController',
     controllerAs: 'vm',

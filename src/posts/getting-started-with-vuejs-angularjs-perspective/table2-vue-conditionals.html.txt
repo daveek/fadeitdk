@@ -1,2 +1,0 @@
-<div v-if="myVar"></div>
-<div v-show="myVar"></div>

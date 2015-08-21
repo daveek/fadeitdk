@@ -1,7 +1,0 @@
-reqwest({
-  url: url,
-  type: 'json',
-  method: 'patch',
-  data: JSON.stringify(data),
-  contentType: 'application/json'
-});
