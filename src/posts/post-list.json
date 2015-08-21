@@ -1,0 +1,183 @@
+[
+  {
+    "id": "testing-express-couchdb-apps-with-mock-couch",
+    "title": "Testing Express.js + CouchDB Applications with mock-couch",
+    "intro": "There's a way to test Express.js + CouchDB web apps with confidence of end-to-end tests and execution speed of unit-tests. Meet mock-couch- a node.js module which pretends to be a CouchDB server for testing purposes.",
+    "cover": "thumb.jpg",
+    "date": "2015-07-05T20:30:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
+    "id": "socketio-angular-ultra-simple-boilerplate",
+    "title": "Socket.io with AngularJS boilerplate",
+    "intro": "In this post we'll be looking at a smallest possible socket.io chat application to get you started.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-05-29T11:18:15.000Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
+    "id": "socketio-namespaces-and-nginx",
+    "title": "Proxy Custom Socket.IO Namespaces with NGINX",
+    "intro": "Proxying custom socket.io namespaces with NGINX is not straightforward. Hopefully this will save time for the next person attempting it.",
+    "cover": "thumb.jpg",
+    "date": "2015-05-21T20:30:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
+    "id": "getting-started-with-vuejs-angularjs-perspective",
+    "title": "Getting started with Vue.js: AngularJS perspective",
+    "intro": "Writing Vue.js applications after working with AngularJS will feel familiar. Vue won't pack as many goodies out of the box, but it will still give Angular a run for its money.",
+    "cover": "vuejs-angularjs-getting-started.jpg",
+    "date": "2015-05-14T13:14:03.000Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
+    "id": "managing-angular-translate-translations",
+    "title": "How to manage multilingual website translations?",
+    "intro": "Translations in different languages, files and formats have a tendency to become messy - outsourcing translation management to the cloud can be an easy way out.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-05-08T10:25:54.132Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
+    "id": "python3-flask-pil-in-memory-image",
+    "title": "Serving generated images from memory",
+    "intro": "Efficiently generating and serving images on-the-fly without the hassle of temporary files.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-04-30T12:15:00.000Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
+    "id": "nginx-referer-spam-blacklist",
+    "title": "Blacklist Referer Spam Bots with NGINX",
+    "intro": "Seeing weird things in your analytics dashboard? Here's an easy approach for blacklisting Referer Spam Bots with NGINX.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-04-22T16:51:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
+    "id": "know-your-cascading-stylesheets-or-how-should-we-organize-css",
+    "title": "Know your cascading stylesheets OR how should we organize CSS?",
+    "intro": "How can we create maintainable, reusable, comprehensible CSS? Is there a formula that works for everybody, or is it just a matter of personal preference?",
+    "cover": "cover.jpg",
+    "date": "2015-04-16T12:10:00.000Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
+    "id": "preload-angular-translate-partial-loader",
+    "title": "Pre-loading partial loader translations",
+    "intro": "Finding the balance between eager loading and lazy loading translation tables",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-04-09T14:20:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
+    "id": "angular-translate-ui-router-seo",
+    "title": "AngularJS SEO friendly translation URLs with ui-router",
+    "intro": "Making your multilingual AngularJS application properly crawlable by search engine bots.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-03-30T16:10:55.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
+    "id": "sqlalchemy-postgresql-earthdistance",
+    "title": "SQLAlchemy with earthdistance",
+    "intro": "Postgresql has a handy extension for calculating distances between coordinates on earth, we are looking at how it all fits into SQLAlchemy ORM.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-03-19T19:30:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
+    "id": "angularjs-seo-for-angular-translate",
+    "title": "SEO friendly angular-translate",
+    "intro": "SEO is a weak spot for AngularJS to begin with, but the issue takes a different turn when angular-translate is thrown into the mix.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-03-12T19:30:16.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
+    "id": "whats-rotten-in-the-state-of-denmark",
+    "title": "What's rotten in the state of Denmark?",
+    "intro": "We couldn't find what's rotten, but we have something better! We discovered Danish(tm) and it quickly became our new favorite place to read about danish design and architecture.",
+    "cover": "cover.jpg",
+    "date": "2015-02-28T21:16:14.465Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
+    "id": "what-we-like-on-the-web-this-year",
+    "title": "What we liked on the web this year (so far)",
+    "intro": "We'll start our blogging operations with a relaxed article about some of the websites we liked this year. What are your favorites so far?",
+    "cover": "cover.jpg",
+    "date": "2015-02-12T12:30:18.101Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
+    "id": "fadeit-blog-is-live",
+    "title": "Blog: open for business",
+    "intro": "We're super excited to launch a blog section on our website. We'll be writing about design, tech, code and everything in between.",
+    "cover": "cover.jpg",
+    "date": "2015-01-17T19:28:14.465Z",
+    "author": {
+      "name": "Dan Mindru",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  }
+]

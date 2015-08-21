@@ -1,4 +1,4 @@
-angular.module('play.digitalSignage').directive('scrollMovement', scrollMovement);
+angular.module('fadeit.digitalSignage').directive('scrollMovement', scrollMovement);
 
 scrollMovement.$inject = ['$timeout', '$state'];
 function scrollMovement($timeout, $state){

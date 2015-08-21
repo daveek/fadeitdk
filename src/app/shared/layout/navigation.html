@@ -1,0 +1,67 @@
+<section class="nav-container" ng-class="{'dark-mode': root.darkMode, 'blog-mode': root.blogMode}">
+  <nav class="main-menu">
+    <section class="transparent-whitebar" scroll-opacity max-opacity="{{root.darkMode ? 0.5 : 0.8}}" slow-down="0.2" rgb="{{root.darkMode ? '26, 27, 27' : '245, 245, 245'}}">
+      <section class="secondary-page-title">
+        <h1 class="page-title" translate>{{root.pageTitle}}</h1>
+      </section>
+    </section>
+
+    <ul class="menu-link-list" ng-hide="root.noMenu" id="global-menu">
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="app.root({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
+          NAV_STORY
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="app.our-work({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
+          NAV_OUR_WORK
+        </a>
+      </li>
+      <li ng-if="activeLang == 'en'" class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="app.tech({lang: activeLang, tech: 'software-development'})" class="menu-anchor main-menu-anchor" translate>
+          NAV_EXPERTISE
+        </a>
+      </li>
+      <li ng-if="activeLang == 'da'" class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="app.tech({lang: activeLang, tech: 'software-udvikling'})" class="menu-anchor main-menu-anchor" translate>
+          NAV_EXPERTISE
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="app.team({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
+          NAV_TEAM
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="app.contact({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
+          NAV_CONTACT
+        </a>
+      </li>
+      <li class="menu-link-item" ui-sref-active="activeMenu">
+        <a href ui-sref="blog" class="menu-anchor main-menu-anchor" translate>
+          Blog
+        </a>
+      </li>
+      <li ng-if="root.multiLang" class="menu-link-item" ui-sref-active="activeMenu">
+        <a ng-href="{{otherLangURL}}" class="menu-anchor main-menu-anchor" translate>
+          IN_LANGUAGE
+        </a>
+      </li>
+      <!-- use the class 'stretched-item' to stretch the last menu link - can be done just with css -->
+      <li class="menu-link-item">
+        <a href="#top" class="menu-anchor main-menu-anchor mobile-link-item" du-smooth-scroll>
+          <span translate>NAV_TO_TOP</span> <i class="fa fa-level-up"></i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- toolbox menu -->
+    <ul class="menu-link-list mobileMenuToolbox" ng-show="root.toolboxPage">
+      <li class="menu-link-item toolbox-home">
+        <a href ui-sref="app.root({lang: activeLang})" class="menu-anchor main-menu-anchor">
+          <span translate>NAV_BACK_HOME</span> <i class="fa fa-home"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</section>

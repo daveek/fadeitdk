@@ -1,0 +1,10 @@
+# /etc/nginx/nginx.conf
+ 
+http {
+# ...
+ 
+  include blacklist.conf;
+ 
+# ...
+ 
+}

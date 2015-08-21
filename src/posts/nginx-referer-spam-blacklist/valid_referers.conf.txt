@@ -1,0 +1,5 @@
+valid_referers none blocked server_names *.social-buttons.com social-buttons.com badreferer2.com;
+
+if ($invalid_referer) {
+  return   444;
+}

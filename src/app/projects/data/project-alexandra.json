@@ -1,0 +1,62 @@
+{
+  "id": "alexandra",
+  "color": {
+    "links": "#F26436",
+    "base": "#A9A7A8",
+    "accent": "#7C7B79",
+    "text": "#FFFFFF",
+    "darkText": "#333333",
+    "light": "#F9F9F9",
+    "lightAccent": "#E7E8EA",
+    "coverBackground": "#3F4040"
+  },
+  "title": "PLIST_ALEX_TITLE",
+  "link": "story/alexandra",
+  "uiRoute": "/story/alexandra",
+  "tags": {
+    "0": {
+      "name": "Open Data",
+      "srefen": "ckan-development",
+      "srefdk": "ckan-udvikling"
+    },
+    "1": {
+      "name": "CKAN",
+      "srefen": "ckan-development",
+      "srefdk": "ckan-udvikling"
+    },
+    "2": {
+      "name": "Drupal",
+      "srefen": "drupal-development",
+      "srefdk": "drupal-udvikling"
+    }
+  },
+  "images": {
+    "heading": "PDET_ALEX_IMG_H",
+    "cover": "cover_sm@2x.jpg",
+    "screens": {}
+  },
+  "urls": {
+    "0":{
+      "title": "PDET_ALEX_URL_1_T",
+      "link": "http://www.alexandra.dk/uk/",
+      "text": "PDET_ALEX_URL_1_D"
+    },
+    "1":{
+      "title": "PDET_ALEX_URL_2_T",
+      "link": "http://www.alexandra.dk/uk/labs/smart-city-lab/pages/smart-city-lab.aspx",
+      "text": "PDET_ALEX_URL_2_D"
+    }
+  },
+  "content": {
+    "shortDescription": "PLIST_ALEX_DESC",
+    "intro": {
+      "heading": "PDET_ALEX_INTRO_T",
+      "text": "PDET_ALEX_INTRO_D"
+    },
+    "mainHeading": "PDET_ALEX_MAIN_T",
+    "paragraphs": {
+      "0": "PDET_ALEX_P_1",
+      "1": "PDET_ALEX_P_2"
+    }
+  }
+}

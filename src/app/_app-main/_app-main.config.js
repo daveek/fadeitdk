@@ -5,9 +5,9 @@
  *
  */
 
-angular.module(playConfig.appRootModuleName).config(rootConfig);
+angular.module(fadeitConfig.appRootModuleName).config(rootConfig);
 
-angular.module(playConfig.appRootModuleName).controller('NotFoundController', notFoundController);
+angular.module(fadeitConfig.appRootModuleName).controller('NotFoundController', notFoundController);
 notFoundController.$inject = ['$rootScope'];
 function notFoundController($rootScope) {
     $rootScope.responseStatus = 404;
@@ -28,6 +28,15 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider){
     abstract: true,
     url: '/{lang:(?:da|en)}',
     template: '<ui-view/>'
+  });
+  $stateProvider.state('app.root', {
+  url: '',
+    templateUrl: 'views/home-page.html',
+    data:{
+      darkMode: true,
+      pageTitle: 'FRONT_PAGE_TITLE',
+      pageDesc: 'SEO_META_DESC'
+    }
   });
 
   $urlRouterProvider.when('/', '/da');

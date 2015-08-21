@@ -1,0 +1,5 @@
+Vue.directive('my-directive', {
+  bind: function () {...},
+  update: function (newValue, oldValue) {...},
+  unbind: function () {...}
+});

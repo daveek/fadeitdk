@@ -1,0 +1,2 @@
+section { display: inline; overflow-x: hidden; box-sizing: border-box; width: 15px; height: 15px; }
+section ul { background-color:red; }

@@ -1,0 +1,23 @@
+copy{
+  build_en_lang: {
+    options: {
+      processContent: function (contents) {
+        //note spaces around in order not to match 'hreflang' tag
+        contents = contents.replace(' lang="da" ', ' lang="en" ');
+        contents = contents.replace('<base href="/">', '<base href="/en/">');
+        return contents;
+      },
+    },
+    files: [
+      {
+        src: [ 'index.html'],
+        dest: '<%= build_dir %>/',
+        cwd: '<%= build_dir %>',
+        expand: true,
+        rename: function(dest, src){
+          return dest + src.replace('.html', '.en.html');
+        }
+      }
+    ]
+  }
+}

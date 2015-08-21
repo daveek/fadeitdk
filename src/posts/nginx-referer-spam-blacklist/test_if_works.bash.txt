@@ -1,0 +1,7 @@
+# with subdomain
+ $ curl --referer http://www.social-buttons.com http://fadeit.dk/en
+curl: (52) Empty reply from server
+
+# without subdomain
+ $ curl --referer http://social-buttons.com http://fadeit.dk/en
+curl: (52) Empty reply from server

@@ -1,0 +1,19 @@
+UserHTTP = (function(superClass) {
+  extend(UserHTTP, superClass);
+
+  function UserHTTP() {
+    return UserHTTP.__super__.constructor.apply(this, arguments);
+  }
+
+  UserHTTP.prototype.all = function() {
+    return this.get("/v1/users");
+  };
+
+  UserHTTP.prototype.remove = function(id) {
+    return this.get(“/v1/users/“ + id);
+  };
+
+  //...
+
+  return UserHTTP;
+})(HTTP);

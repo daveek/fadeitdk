@@ -1,0 +1,2 @@
+p:first-child  {}  /* -> specificity = 0,0,0,2 */
+p span         {}  /* -> specificity = 0,0,0,2 */

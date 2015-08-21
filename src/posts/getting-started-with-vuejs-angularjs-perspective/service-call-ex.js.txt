@@ -1,0 +1,16 @@
+...
+HTTP         = new HTTP();
+userService  = new UserService(HTTP.users);
+...
+
+
+// Inside a Vue component
+...
+ready: function(){
+  vm = this;
+
+  userService.all()
+      .then(function(users){
+        vm.$set('users', users);
+      });
+   ...

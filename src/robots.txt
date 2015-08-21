@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://tryplay.dk/sitemap.xml
+Sitemap: http://fadeit.dk/sitemap.xml

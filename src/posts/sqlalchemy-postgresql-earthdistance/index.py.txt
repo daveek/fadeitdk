@@ -1,0 +1,4 @@
+from sqlalchemy import func, Index
+from example.model import Company
+
+Index('company_distance', func.ll_to_earth(Company.lat, Company.lng), postgresql_using='gist')

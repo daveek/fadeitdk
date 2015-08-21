@@ -1,0 +1,1 @@
+section ul li {  animation:animationFrames linear 3s; animation-iteration-count: infinite; animation-fill-mode: forwards; }

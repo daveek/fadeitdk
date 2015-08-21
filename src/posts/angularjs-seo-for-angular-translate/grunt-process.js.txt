@@ -1,0 +1,13 @@
+copy: {
+  options: {
+    processContent: function (contents, srcpath) {
+      if(srcpath.indexOf('index.html') >= 0){
+        //note spaces around in order not to match 'hreflang' tag
+        contents = contents.replace(' lang="da" ', ' lang="en" ');
+        contents = contents.replace('<base href="/">', '<base href="/en/">');
+      }
+      return contents;
+    }
+  }
+  //build_en_lang omitted
+}

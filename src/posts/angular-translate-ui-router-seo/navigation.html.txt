@@ -1,0 +1,13 @@
+<ul class="menu-navigation">
+  ...
+  <li ui-sref-active="activeMenu">
+    <a href ui-sref="app.about({lang: activeLang})" translate>
+      NAV_ABOUT
+    </a>
+  </li>
+  <li>
+    <a ng-href="{{otherLangURL}}" translate>
+      IN_LANGUAGE
+    </a>
+  </li>
+</ul>

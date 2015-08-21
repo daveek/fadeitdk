@@ -1,8 +1,8 @@
 <img src="http://fadeit.dk/src/assets/img/brand/fadeit_logo_full.svg" alt="The fadeit logo" style="width:200px;"/><br/><br/>
-###infoscreen_land
+###fadeit.dk - website front-end source
 <hr/>
 
-infoscreen_land is built on top of [this AngularJS boilerplate](https://github.com/dandaniel/angular-boilerplate-study).
+The fadeit.dk website is built on top of [this AngularJS boilerplate](https://github.com/dandaniel/angular-boilerplate-study).
 
 ##Getting started
 

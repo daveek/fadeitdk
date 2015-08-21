@@ -1,0 +1,103 @@
+[
+  {
+    "id": "managing-angular-translate-translations",
+    "title": "How to manage multilingual website translations?",
+    "intro": "Translations in different languages, files and formats have a tendency to become messy - outsourcing translation management to the cloud can be an easy way out.",
+    "cover": "cover_wide.jpg",
+    "date": "2015-05-08T10:25:54.132Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+          "type": "h",
+          "number": 2,
+          "text": "Introduction"
+      },
+      {
+        "type": "p",
+        "text": "This article focuses on translation management for AngularJS, however it can be applied to any translation management process. Truth is... I haven't been a fan of the approach <a href=\"https://en.wikipedia.org/wiki/Gettext\" target=\"_blank\">gettext</a> takes, primarily because of the translation management process. I find the work-flow of having to extract translations from the code (.po file), send them to translator, compiling (.mo file) and deploying to consume significant amount of time. Key based translation like angular-translate may simplify certain aspects, but JSON files are still a limitation. They are uncomfortable to edit, prone to merge conflicts and have a strict format."
+      },
+      {
+          "type": "h",
+          "number": 2,
+          "text": "Our apporach"
+      },
+      {
+          "type": "p",
+          "text": "Fortunately there is a tool out there that offers flexible user interface, real-time editing, it fast and easy to integrate with - Google Sheets. You may know that it is possible to publish spreadsheet as HTML, however what they don't tell you is that there is also an endpoint for returning the data in JSON format."
+      },
+      {
+        "type": "img",
+        "url": "posts/managing-angular-translate-translations/publish.png",
+        "caption": "Publishing Google Sheets"
+      },
+      {
+        "type": "p",
+        "text": "Google will then give you a URL that looks like this:<br/><a href=\"https://docs.google.com/spreadsheets/d/1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk/pubhtml\" target=\"_blank\">https://docs.google.com/spreadsheets/d/1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk/pubhtml</a>.<br/>To access JSON variant, take the id of document - <em>1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk</em> and use it in spreadsheet feed service URL:<br/><a href=\"https://spreadsheets.google.com/feeds/list/1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk/od6/public/values?alt=json\" target=\"_blank\">https://spreadsheets.google.com/feeds/list/1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk/od6/public/values?alt=json</a>.<br/>That URL however will only display data for first page only - by default first page id in Google Docs is <em>od6</em>. In order to organize translations we want to store them on multiple pages (I have created Common & Register pages in the screenshot above), therefore we need to get IDs of other pages using yet another feed:<br/><a href=\"https://spreadsheets.google.com/feeds/worksheets/1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk/private/full\" target=\"_blank\">https://spreadsheets.google.com/feeds/worksheets/1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk/private/full</a>.<br/>From the XML we can search for <em>&lt;/id&gt;</em> to extract other sheet IDs. As we see, the ID for second sheet is no longer following any pattern - <a href=\"https://spreadsheets.google.com/feeds/list/1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk/o14w8rc/public/values?alt=json\" target=\"_blank\">o14w8rc</a>.<br/>Even more feeds are covered on the <a href=\"https://developers.google.com/google-apps/spreadsheets/\">Official API documentation</a>."
+      },
+      {
+        "type": "img",
+        "url": "posts/managing-angular-translate-translations/formatted.png",
+        "caption": "Formatted JSON from Google Spreadsheet feed"
+      },
+      {
+        "type": "p",
+        "text": "While JSON representation is good starting point, it is a serialized representation of the document that contains a lot of meta-data. We are only interesed in the nested values, so data-structure to be transformed into what i18n framework can read. For that we are going to implement an API endpoint that will fetch translations from Google Docs, transform the structure and return translations. As seen from the screenshot above, the pattern for extracting a value is <em>feed->entry->gsx${language}->$t</em>. The minimal example below utilizes <a href=\"http://flask.pocoo.org/\" target=\"_blank\">Flask microframework</a> written in Python"
+      },
+      {
+        "type": "code",
+        "language": "python",
+        "file": "api.py.txt"
+      },
+      {
+        "type": "p",
+        "text": "Now let's run the server and fetch translations at http://127.0.0.1:5000/translation/en-us/register.json"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "file": "response.json.txt"
+      },
+      {
+        "type": "p",
+        "text": "Fetching translations is convenient while developing and translating, however we wouldn't want production server to fetch translations from Google Docs every time it gets a request. Easiest solution would be to cache translations for certain amount of time, we also want to version control translations, therefore the strategy is a little different. Production server would be serving static JSON files from the disc, whereas on development instance NGINX will intercept any requests going to /translation and proxy them to the application server instead:"
+      },
+      {
+        "type": "img",
+        "url": "posts/managing-angular-translate-translations/flow.png",
+        "caption": "Translation loading flow"
+      },
+      {
+        "type": "p",
+        "text": "For development NGINX configuration we need to add a location block like so:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "file": "nginx.conf.txt"
+      },
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "p",
+        "text": "All translations now come from one consistent source, no more mismatches and conflicts.<br/>With Git we get:<ul><li>Accidental modifications in Google Docs don't automatically end up in production</li><li>Each translation has a revision history</li><li>Finding differences between edits is simple</li><li>Blame view helps finding wrongdoer</li></ul><br/>Google Docs brings to the table:<ul><li>Spotting missing translations is easy because all languages are visible on same sheet (.json files are separate for each language)<li>Access and control management of editors is simple</li><li>Multiple people can edit same document in realtime</li><li>Changes to translations are visible immediately (on development setup)</li><li>Sheets supports highlighting and commenting</li>."
+      },
+      {
+        "type": "p",
+        "text": "Dependencies needed to run the flask server:"
+      },
+      {
+        "type": "code",
+        "language": "bash",
+        "file": "libs.txt"
+      }
+    ]
+  }
+]

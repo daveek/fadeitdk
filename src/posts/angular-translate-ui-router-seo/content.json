@@ -1,0 +1,72 @@
+[
+  {
+    "id": "angular-translate-ui-router-seo",
+    "title": "AngularJS SEO friendly translation URLs with ui-router",
+    "intro": "Making your multilingual AngularJS application properly crawlable by search engine bots.",
+    "cover": "cover_wide.jpg",
+    "date": "2015-03-30T16:10:55.125Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Introduction"
+      },
+      {
+        "type": "p",
+        "text": "In <a href=\"http://fadeit.dk/blog/post/angularjs-seo-for-angular-translate\">previous</a> post we explored how to introduce unique URLs per language using primarily NGINX and Grunt configuration. To recap, that approach is reasonable if you already have a working application and prefer not to re-factor every state and view that links to it. While it may be easier to implement in an existing application, it forces users to perform a refresh when switching between languages - though not a big issue (how often do users switch back-and-forth anyway), having a Single Page Application (SPA) that forces users to reload pages is sub-optimal. In this article we will explore possibilities of implementing SEO friendly URLs using ui-router."
+      },
+      {
+        "type": "p",
+        "text": "Nested states is the key to introducing language as a URL variable to all states. We start off by creating the 'app' state that every other state will be child of. The app state is abstract, so that the state by itself can not be activated. Next we want the route to only match the languages we intend to support (in this example 'da' and 'en') to reduce possible false-positive matches e.g example.com/<b>da</b>ta. As ui-router injects the content of the child states into ui-view, we define it as an inline template for the parent route. We also define 'app.home' state that will handle example.com/en and example.com/da pages:"
+
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "router.js.txt"
+      },
+      {
+        "type": "p",
+        "text": "Now every state that we want to translate should be a child of app state:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "child.js.txt"
+      },
+      {
+        "type": "p",
+        "text": "Since the child states contain a language path variable, we need to alter the links pointing to the child states to pass in <em>lang</em> parameter. But before we do so, we need to set <em>activeLang</em> on <em>$rootScope</em> so we can read it from there when generating links with <em>ui-sref</em>. Due to the fact that <em>activeLang</em> can change at state change, we need to subscribe to <em>stateChangeSuccess</em> event. While at it, we can also generate links for the same page in other languages - 'In English' link at example.com/da/about should point to example.com/en/about. In this simple example we use only two languages, so we'll be using only one variable <em>otherLangURL</em>:"
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "statechange.js.txt"
+      },
+      {
+        "type": "p",
+        "text": "It would be nice to use <em>ui-sref</em> to dynamically generate the links to same page in other languages, but unfortunately <em>ui-sref</em> does not support variables in state names, therefore we have to fall back to <em>ng-href</em> for generating the links. Fortunately path variable substitution is supported, therefore we can generate menu links using <em>activeLang</em> variable we stored on <em>$rootScope</em>:"
+      },
+      {
+        "type": "code",
+        "language": "markup",
+        "file": "navigation.html.txt"
+      },
+      {
+        "type": "h",
+        "number": 2,
+        "text": "Conclusion"
+      },
+      {
+        "type": "p",
+        "text": "Incorporating language in the application routes from very start will save time in the long run as re-factoring hundreds of <em>ui-sref</em> links will take it's time. Ui-router fully supports nested sub-states, so there will not be any conflict if your application is already using nested states, just make sure that there is <em>ui-view</em> for each parent state to inject the content into. I was unable to make the lang parameter in the parent state optional, thus language will be enforced in every path (as opposed to <a href=\"http://fadeit.dk/post/angularjs-seo-for-angular-translate\">previous</a> post where we were able to use paths without language defined in them). Have a better approach? leave a comment!"
+      }
+    ]
+  }
+]

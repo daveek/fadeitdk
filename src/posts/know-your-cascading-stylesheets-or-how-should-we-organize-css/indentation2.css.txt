@@ -1,0 +1,11 @@
+header{
+  background-color: blue;
+}
+
+header .navigation {
+  width: 300px;
+}
+
+header .navigation .logo {
+  max-height: 20px;
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "image.py", line 10, in <module>
+    image.save(string_io, 'PNG')
+  File "~/.pyenv/versions/3.4.0/lib/python3.4/site-packages/PIL/Image.py", line 1685, in save
+    save_handler(self, fp, filename)
+  File "~/.pyenv/versions/3.4.0/lib/python3.4/site-packages/PIL/PngImagePlugin.py", line 631, in _save
+    fp.write(_MAGIC)
+TypeError: string argument expected, got 'bytes' 

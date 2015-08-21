@@ -1,0 +1,11 @@
+# /etc/nginx/sites-enabled/mysite.conf
+ 
+server {
+  # ...
+ 
+  if ($bad_referer) { 
+    return 444; 
+  } 
+ 
+  # ...
+}

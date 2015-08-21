@@ -1,0 +1,2 @@
+<input type="text" v-model="myVar">
+<p v-model="myVar"></p>

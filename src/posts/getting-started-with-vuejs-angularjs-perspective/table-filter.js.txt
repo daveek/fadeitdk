@@ -1,0 +1,4 @@
+myModule.angular.module(‘filterName', [])
+.filter('reverse', function() {
+  return function(input) {...};
+});

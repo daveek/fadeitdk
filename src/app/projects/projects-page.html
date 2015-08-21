@@ -1,0 +1,106 @@
+<section class="container-fluid main-container secondary-page-container">
+  <section class="row-fluid secondary-page-row project-fluid">
+    <section class="outstanding-container row-fluid binary-container" data-ng-if="vm.project.error">
+      <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
+        <section class="inner-text">
+          <img ng-src="/src/assets/img/brand/fadeit_logo_gray.svg" alt="fadeit logo" class="secondary-page-logo" />
+          <p class="regular-text">
+            <span translate translate-value-url="{{vm.requestUrl}}">PSINGLE_NOT_FOUND</span>
+            <br/><br/><br/><br/>
+
+            <span class="binary">
+            0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 1 0 1 0 0 1 0 0 0 0 1 1 1 0 0
+            </span>
+          </p>
+        </section>
+      </section>
+    </section>
+
+    <section class="row-fluid visible-row final-row" data-ng-if="vm.project.error">
+      <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6">
+        <figure class="image-container clearfix img-penguin">
+          <span class="rounded-border">
+            <img ng-src="/src/assets/img/icons/fadeit_penguin.svg" alt="a penguin to cheer you up" class="icon-image" />
+          </span>
+          <figcaption>
+            <h2 translate>PSINGLE_NOT_FOUND_PENGUIN</h2>
+            <p translate translate-value-contact="<a href='/contact'>{{'NAV_A_LINK' | translate}}</a>">
+              PSINGLE_NOT_FOUND_PENG_TEXT
+            </p>
+          </figcaption>
+        </figure>
+      </section>
+    </section>
+
+    <section itemscope itemtype="http://schema.org/Article" class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6" data-ng-if="!vm.project.error">
+
+      <section class="row-fluid project-intro-fluid">
+        <section class="col-xs-24">
+          <h3 itemprop="headline" class="regular-title" translate>{{vm.project.content.shortDescription}}</h3>
+          <p class="regular-text project-tags">
+            <span ng-repeat="tag in vm.project.tags">
+              <a ng-if="activeLang =='en'" ui-sref="app.tech({tech: tag.srefen, lang: 'en'})" class="a-tag" ng-bind='tag.name' translate></a>
+              <a ng-if="activeLang =='da'" ui-sref="app.tech({tech: tag.srefdk, lang: 'da'})" class="a-tag"  ng-bind='tag.name' translate></a>
+            </span>
+          </p>
+        </section>
+      </section>
+
+      <section class="row-fluid table-fluid cover-fluid">
+        <section class="col-xs-24 col-md-16 single-project-cover" data-ng-style="{'background': vm.project.color.coverBackground}">
+          <img itemprop="image" ng-src="/src/assets/img/projects/{{vm.project.id}}/{{vm.project.images.cover}}" alt="{{vm.project.title | translate}} {{'SEO_PROJECT_ALT' |  translate}}" />
+        </section>
+
+        <section class="col-xs-24 col-md-8 single-project-intro" data-ng-style="{'background': vm.project.color.base}">
+          <h3 itemprop="headline" data-ng-style="{'color': vm.project.color.text}">
+            {{vm.project.content.intro.heading | translate}}
+          </h3>
+          <p itemprop="text" class="regular-text" data-ng-style="{'color': vm.project.color.text}">
+            {{vm.project.content.intro.text | translate}}
+          </p>
+        </section>
+      </section>
+
+
+      <article class="project-details"
+      data-ng-style="{'background': vm.project.color.light, 'color': vm.project.color.darkText }">
+        <section class="paragraph-fluid clearfix">
+          <h3 itemprop="headline" translate>{{vm.project.content.mainHeading}}</h3>
+        </section>
+
+        <section class="paragraph-fluid clearfix"
+        data-ng-repeat='text in vm.project.content.paragraphs'>
+          <p itemprop="text" class="regular-text" data-ng-style="{'color': vm.project.color.darkText}" translate>{{text}}</p>
+        </section>
+      </article>
+
+
+      <article class="project-details project-extras" data-ng-if='vm.project.url || vm.project.images.screens'>
+        <h3 itemprop="headline" translate>{{vm.project.images.heading}}</h3>
+
+        <section class="url-fluid clearfix" data-ng-if="vm.project.urls" data-ng-repeat="url in vm.project.urls">
+          <p class="regular-text">
+            <span itemprop="text" class="url-text" translate>{{url.text}}</span>
+            <a itemprop="url" href="{{url.link}}" target="_blank"
+            data-ng-style="{'color': vm.project.color.links}" translate>
+              {{url.title}}
+            </a>
+          </p>
+        </section>
+      </article>
+
+      <section class="project-screens" data-ng-if="vm.project.images.screens">
+        <figure class="project-screen fadeit-animate animated fadeIn" data-wow-delay="1s" data-wow-offset="50"
+        data-ng-repeat="screen in vm.project.images.screens"
+        data-ng-style="{'background': vm.project.color.light}">
+          <img itemprop="image" data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title | translate}} {{'SEO_SCREENSHOT_ALT' |  translate}}" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>
+          <figcaption data-ng-style="{'color': vm.project.color.darkText}">
+            <h3 itemprop="headline" translate>{{screen.title}}</h3>
+            <p itemprop="text" class="regular-text" translate>{{screen.desc}}</p>
+          </figcaption>
+        </figure>
+      </section><!--end project-screens-->
+    </section>
+
+  </section>
+</section>

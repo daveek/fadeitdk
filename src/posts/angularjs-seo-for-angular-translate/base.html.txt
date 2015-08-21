@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+  <html lang="da" ng-app="example" ng-controller="AppCtrl">
+    <head>
+    <base href="/">
+    <link rel="alternate" hreflang="en" href="http://example.com/en"/>
+    <link rel="alternate" hreflang="da" href="http://example.com"/>
+    ...
