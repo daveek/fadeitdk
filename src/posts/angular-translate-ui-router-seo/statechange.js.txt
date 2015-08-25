@@ -6,5 +6,5 @@ function navigationController($scope, $rootScope, $stateParams, $translate){
         $rootScope.otherLangURL = $location.absUrl().replace('/' + $stateParams.lang, '/' +otherLang);
         $translate.use($stateParams.lang);
     }
-  }
+  });
 }
