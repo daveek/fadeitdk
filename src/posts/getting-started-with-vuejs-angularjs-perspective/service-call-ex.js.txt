@@ -1,6 +1,6 @@
 ...
 HTTP         = new HTTP();
-UserService  = new services. UserService(HTTP.users);
+userService  = new UserService(HTTP.users);
 ...
 
 
@@ -9,7 +9,7 @@ UserService  = new services. UserService(HTTP.users);
 ready: function(){
   vm = this;
 
-  us.all()
+  userService.all()
       .then(function(users){
         vm.$set('users', users);
       });

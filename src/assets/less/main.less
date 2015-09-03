@@ -481,11 +481,13 @@
 @bp_md: 992px;
 @bp_lg: 1200px;
 @bp_xl: 1600px;
+@bp_xxl: 1920px;
 
 @bp_sm_max: 767px;
 @bp_md_max: 991px;
 @bp_lg_max: 1199px;
 @bp_xl_max: 1599px;
+@bp_xxl_max: 1919px;
 
 /*other sizes*/
 @bst:               1px solid; //border-size-type
@@ -1329,17 +1331,6 @@ a{
     margin-bottom:20px;
     padding:0;
 
-    .read-more{
-      opacity:0.5;
-      font-weight: bold;
-
-      i.fa{
-        .rel();
-        margin-left:5px;
-        margin-bottom:15px;
-      }
-    }
-
     a{
       .inline-block();
       .stretch();
@@ -2046,13 +2037,10 @@ a{
 .outstanding-container{
   background-color:@ws;
   color:@col_text_gray;
-  //border-bottom: 10px solid rgba(210, 210, 210, 1);
   border-bottom:8px solid #EAEAEA;
   padding: 50px 30px 30px 30px;
   margin-bottom:0;
   .cover();
-  //background-size: 100%;
-  background-attachment: fixed;
 
   @media only screen and (min-width:@bp_md){
     padding: 160px 0 30px 0px;
@@ -2610,11 +2598,11 @@ a{
   }
 
   @media only screen and (min-width:@bp_lg){
-    font-size: 41px;
+    font-size: 38px;
     line-height: 50px;
   }
 
-  @media only screen and (min-width:@bp_xl){
+  @media only screen and (min-width:@bp_xxl){
     font-size:48px;
     line-height:60px;
   }
@@ -3047,7 +3035,7 @@ a{
 
 .btn-contact{
   padding: 15px 25px;
-  margin-top:40px;
+  margin-top:20px;
   .animate(@animation_time_short, @transition_default);
   .border-radius(5px);
 
@@ -3512,98 +3500,5 @@ pre[class*=language-]>code[data-language]::before {
 
   @media only screen and (min-width:@bp_xl){
     .inline-block();
-  }
-}
-
-/* Digital signange - must stay isolated and highly decoupled */
-//TODO: remove this when moved
-.digital-signage-container{
-  .go-to-menu{
-    .h();
-  }
-
-  .nav-container{
-    .h();
-  }
-
-  footer{
-    .h();
-  }
-}
-
-.digital-signage{
-  @top_logo_margin: 75px;
-  @top_logo_height: 31px;
-  @bg: #F9F9F9;
-
-  .col(@bg, b);
-  .abs();
-  height:100%;
-  width:100%;
-
-  .tv{
-    .fix();
-    width:100%;
-    height:100%;
-    .ta-c();
-    z-index:2;
-    pointer-events: none;
-    transform: scale(2);
-
-    .img{
-      .abs();
-      height:100%;
-      width:100%;
-      background-image:url("../img/digital-signage/sp-tv.png");
-      .cover();
-      background-position: center;
-    }
-  }
-
-  .signage-inner{
-    .abs();
-    height:100%;
-    width:100%;
-    background-image:url("../img/digital-signage/digital-signage-hero.jpg");
-    .cover();
-    background-position: center center;
-    overflow:hidden;
-
-    .top-logo{
-      margin-top:@top_logo_margin;
-      text-align: center;
-    }
-
-    h1, p{
-      font-weight: 300;
-    }
-
-    span{
-      font-size:inherit;
-    }
-
-    .hero{
-      .abs();
-      height:100%;
-      width:100%;
-      font-size:60px;
-      line-height:70px;
-      transform: translateY(50%);
-      margin-top: -(@top_logo_margin + @top_logo_height);
-
-      h1{
-        font-size:1em;
-        .ta-c();
-      }
-
-      h2{
-        visibility:hidden;
-        .ta-c();
-      }
-
-      p{
-        .ta-c();
-      }
-    }
   }
 }

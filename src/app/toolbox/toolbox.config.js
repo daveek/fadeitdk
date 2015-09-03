@@ -13,6 +13,7 @@ function toolboxConfig($stateProvider){
       pageTitle: 'TOOLBOX_PAGE_TITLE',
       pageDesc: 'A software toolbox experiment',
       toolboxPage: true,
+      noMenu: true
     }
   });
 }

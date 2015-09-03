@@ -6,7 +6,7 @@
       </section>
     </section>
 
-    <ul class="menu-link-list" ng-hide="root.toolboxPage" id="global-menu">
+    <ul class="menu-link-list" ng-hide="root.noMenu" id="global-menu">
       <li class="menu-link-item" ui-sref-active="activeMenu">
         <a href ui-sref="app.root({lang: activeLang})" class="menu-anchor main-menu-anchor" translate>
           NAV_STORY
@@ -58,7 +58,7 @@
     <!-- toolbox menu -->
     <ul class="menu-link-list mobileMenuToolbox" ng-show="root.toolboxPage">
       <li class="menu-link-item toolbox-home">
-        <a href ui-sref="home" class="menu-anchor main-menu-anchor">
+        <a href ui-sref="app.root({lang: activeLang})" class="menu-anchor main-menu-anchor">
           <span translate>NAV_BACK_HOME</span> <i class="fa fa-home"></i>
         </a>
       </li>

@@ -13,6 +13,15 @@ function applyConfig($stateProvider){
       pageTitle: 'APPLY_PAGE_TITLE',
       pageDesc: 'APPLY_TEXT_1'
     }
+  }).state('app.apply-sales', {
+    url: '/apply-sales',
+    controller: 'ApplyController',
+    controllerAs: 'vm',
+    templateUrl: 'views/apply-sales-page.html',
+    data:{
+      pageTitle: 'APPLY_PAGE_TITLE',
+      pageDesc: 'APPLY_TEXT_1'
+    }
   }).state('thanks', {
     url: '/thanks',
     controller: 'ApplyController',
