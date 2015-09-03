@@ -30,6 +30,16 @@
     }
   },
   {
+    "id": "webshop-development",
+    "iconClass": "mobile",
+    "title": "EXPERTISE_WEBSHOP_DEVELOPMENT_TITLE",
+    "description": "EXPERTISE_WEBSHOP_DEVELOPMENT",
+    "uisref": {
+      "da": "ecommerce-webshop-development",
+      "en": "ecommerce-webshop-development"
+    }
+  },
+  {
     "id": "app-development",
     "iconClass": "mobile",
     "title": "EXPERTISE_APP_DEVELOPMENT_TITLE",
