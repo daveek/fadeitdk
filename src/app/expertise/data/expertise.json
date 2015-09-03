@@ -31,7 +31,7 @@
   },
   {
     "id": "webshop-development",
-    "iconClass": "mobile",
+    "iconClass": "shopping-cart",
     "title": "EXPERTISE_WEBSHOP_DEVELOPMENT_TITLE",
     "description": "EXPERTISE_WEBSHOP_DEVELOPMENT",
     "uisref": {
