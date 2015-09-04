@@ -26,7 +26,7 @@ gulp.task('translations', function (cb) {
 
 function writeTranslations(translations, file, cb){
   var contents = "var appModule = angular.module('fadeit');\n";
-  contents += "appModule.config(function ($translateProvider) {\n";
+  contents += "appModule.config(function($translateProvider){\n";
   for(var property in translations){
     var lang = translations[property];
     contents += "$translateProvider.translations('" + property + "',\n";

@@ -78,7 +78,12 @@
       },
       {
         "type": "p",
-        "text": "Since grunt executes tasks synchronously, all there is left to do is call this task in the beginning of the build process."
+        "text": "Since grunt executes tasks synchronously, all there is left to do is call this task in the beginning of the build process and it'll generate a following file."
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "file": "translations.js.txt"
       },
       {
           "type": "h",
