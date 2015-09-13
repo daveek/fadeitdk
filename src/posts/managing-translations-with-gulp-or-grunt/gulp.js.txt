@@ -1,0 +1,44 @@
+var gulp = require('gulp');
+var request = require('request');
+var fs = require('fs');
+
+gulp.task('translations', function (cb) {
+  var uuid = '1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk';
+  var page = 'od6'
+  var url = 'https://spreadsheets.google.com/feeds/list/' + uuid + '/' + page + '/public/values?alt=json';
+  request(url, function(err, res, body){
+    var json = JSON.parse(body);
+    var translations = {
+      'en': {},
+      'da': {}
+    };
+    for(var i = 0; i < json.feed.entry.length; i++){
+      var entry = json.feed.entry[i];
+      var key = entry.gsx$key.$t;
+      var enValue = entry.gsx$en.$t;
+      var daValue = entry.gsx$da.$t;
+      translations.en[key] = enValue;
+      translations.da[key] = daValue;
+    }
+    writeTranslations(translations, options.src + '/app/translations.js', cb);
+  });
+});
+
+function writeTranslations(translations, file, cb){
+  var contents = "var appModule = angular.module('fadeit');\n";
+  contents += "appModule.config(function($translateProvider){\n";
+  for(var property in translations){
+    var lang = translations[property];
+    contents += "$translateProvider.translations('" + property + "',\n";
+    contents += JSON.stringify(lang);
+    contents += ");\n";
+  }
+  contents += "});";
+  fs.writeFile(file, contents, function(err){
+    if(err){
+      console.error('Writing translations failed:');
+      console.error(err);
+    }
+    cb();
+  });
+}

@@ -1,5 +1,18 @@
 [
   {
+    "id": "managing-translations-with-gulp-or-grunt",
+    "title": "Loading translations from Google Spreadsheets",
+    "intro": "Improving our cloud translation management workflow.",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-09-04T09:16:30.132Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
     "id": "testing-express-couchdb-apps-with-mock-couch",
     "title": "Testing Express.js + CouchDB Applications with mock-couch",
     "intro": "There's a way to test Express.js + CouchDB web apps with confidence of end-to-end tests and execution speed of unit-tests. Meet mock-couch- a node.js module which pretends to be a CouchDB server for testing purposes.",

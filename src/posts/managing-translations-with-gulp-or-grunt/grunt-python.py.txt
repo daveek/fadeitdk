@@ -1,0 +1,32 @@
+import json
+import urllib.request
+from collections import OrderedDict
+
+sheet_id = '1FsVuRLbtgxMZvWd4mpnKiAhqVYap-ZAx08LBeZ9HFJk';
+page_id = 'od6'
+base = 'https://spreadsheets.google.com/feeds/list/{0}/{1}/public/values?alt=json'
+translation_config = 'src/app/translations.js'
+
+url = base.format(sheet_id, page_id)
+json_data = json.loads(urllib.request.urlopen(url).read().decode('utf8'))
+#we need to build different data structure
+en_translation_map = OrderedDict()
+da_translation_map = OrderedDict()
+for entry in json_data['feed']['entry']:
+    key = entry['gsx$key']['$t']
+    en_value = entry['gsx$en']['$t']
+    da_value = entry['gsx$da']['$t']
+    en_translation_map[key] = en_value
+    da_translation_map[key] = da_value
+#Javascript for translations file we are generating
+config = """
+var appModule = angular.module('fadeit');
+appModule.config(function($translateProvider){
+"""
+en_translations = json.dumps(en_translation_map, indent=4)
+da_translations = json.dumps(da_translation_map, indent=4)
+config = config + "\n$translateProvider.translations('en'," + en_translations + ');'
+config = config + "\n$translateProvider.translations('da'," + da_translations + ');'
+config = config + "\n});" #close function
+with open(translation_config, 'w') as outfile:
+    outfile.write(config)
