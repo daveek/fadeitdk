@@ -40,6 +40,16 @@
     }
   },
   {
+    "id": "responsive-websites",
+    "iconClass": "laptop",
+    "title": "EXPERTISE_RESPONSIVE_WEBSITES_TITLE",
+    "description": "EXPERTISE_RESPONSIVE_WEBSITES",
+    "uisref": {
+      "da": "responsive-hjemmesider-udvikling",
+      "en": "responsive-website-development"
+    }
+  },
+  {
     "id": "app-development",
     "iconClass": "mobile",
     "title": "EXPERTISE_APP_DEVELOPMENT_TITLE",
