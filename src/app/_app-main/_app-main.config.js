@@ -42,7 +42,6 @@ function rootConfig($locationProvider, $urlRouterProvider, $stateProvider){
   $urlRouterProvider.when('/', '/da');
   $urlRouterProvider.otherwise('/404');
 
-  //Turn ON 'html5mode' (true) for prod - if you forget you need to buy beers for everybody in the office
   $locationProvider.html5Mode(true);
   $locationProvider.hashPrefix('!');
 }
