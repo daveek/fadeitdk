@@ -25,6 +25,34 @@ function toolboxService() {
       bold : false
     },
     {
+      name : 'CKAN',
+      size : 225,
+      circles : 2,
+      font : 35,
+      bold : false
+    },
+    {
+      name : 'Vue.js',
+      size : 190,
+      circles : 2,
+      font : 34,
+      bold : false
+    },
+    {
+      name : 'Node.js',
+      size : 210,
+      circles : 2,
+      font : 27,
+      bold : false
+    },
+    {
+      name : 'CouchDB',
+      size : 150,
+      circles : 2,
+      font : 28,
+      bold : false
+    },
+    {
       name : 'nginx',
       size : 170,
       circles : 4,
