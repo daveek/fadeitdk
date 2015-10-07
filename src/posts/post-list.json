@@ -1,5 +1,17 @@
 [
   {
+    "id": "aarhus-mini-maker-faire",
+    "title": "Aarhus Mini Maker Faire - Open Data",
+    "intro": "Aarhus' makers are going to have a party this weekend- Aarhus Mini Maker Faire! Come see our presentation about Open Data and say hi :)",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-10-09T07:10:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software Engineer"
+    }
+  },
+  {
     "id": "managing-translations-with-gulp-or-grunt",
     "title": "Loading translations from Google Spreadsheets",
     "intro": "Improving our cloud translation management workflow.",
