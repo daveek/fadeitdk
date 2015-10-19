@@ -7,7 +7,29 @@
     <link href="http://fadeit.dk/blog-feed.xml" rel="self" />
     <link href="http://fadeit.dk/" />
     <id>urn:uuid:381e1e19-d2bb-4c99-8da1-7615624c89a6</id>
-    <updated>2015-09-04T09:16:30.132Z</updated>
+    <updated>2015-10-12T09:00:00.000Z</updated>
+
+    <entry>
+        <title>Python logging handler for Mailgun</title>
+        <link href="http://fadeit.dk/blog/post/mailgun-python-log-handler" />
+        <id>urn:uuid:4b50c943-8ec2-6d2a-fb53-b40b3e68afd6</id>
+        <updated>2015-10-12T11:25:30.132Z</updated>
+        <summary>Sending application exception notifications via Mailgun.</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
+
+    <entry>
+        <title>Aarhus Mini Maker Faire - Open Data</title>
+        <link href="http://fadeit.dk/blog/post/aarhus-mini-maker-faire" />
+        <id>urn:uuid:569ab3c6-5859-4f27-9f64-1070ed09b43a</id>
+        <updated>2015-10-09T07:10:00.000Z</updated>
+        <summary>Aarhus' makers are going to have a party this weekend- Aarhus Mini Maker Faire! Come see our presentation about Open Data and say hi :)</summary>
+        <author>
+            <name>Justas Azna</name>
+        </author>
+    </entry>
 
     <entry>
         <title>Loading translations from Google Spreadsheets</title>

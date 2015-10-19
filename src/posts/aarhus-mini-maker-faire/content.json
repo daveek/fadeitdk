@@ -1,0 +1,61 @@
+[
+  {
+    "id": "aarhus-mini-maker-faire",
+    "title": "Aarhus Mini Maker Faire - Open Data",
+    "intro": "Aarhus' makers are going to have a party this weekend- Aarhus Mini Maker Faire! Come see our presentation about Open Data and say hi :)",
+    "cover": "cover_wide.jpg",
+    "date": "2015-10-09T07:10:00.000Z",
+    "author": {
+      "name": "Justas Azna",
+      "gplus": "https://www.google.com/+JustasAzna?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_justas_azna.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": "Among other things, Aarhus is famous for it’s vibrant maker community. We have things like <a href=\"http://osaa.dk/\" target=\"_blank\">Open Space Aarhus</a>, <a href=\"http://internetweekdenmark.com/\" target=\"_blank\">Internet Week Denmark</a>, <a href=\"http://gotocon.com/\" target=\"_blank\">GOTO conference</a> and more. This weekend, <a href=\"http://www.euregme.com/pre/aarhus-city-of-smiles/\" target=\"_blank\">City of Smiles</a> is hosting yet another maker event - <a href=\"http://makerfaireaarhus.dk/\" target=\"_blank\">Aarhus Mini Maker Fair</a>. While the original Maker Fair of San Matteo, California is celebrating its 10 year anniversary this year, our city is relatively new to this, having started in 2014. Regardless, the first event was a huge success and we want more!"
+      },
+      {
+        "type": "p",
+        "text": "One of the hot things in Aarhus maker movement is <a href=\"https://en.wikipedia.org/wiki/Open_data\" target=\"_blank\">Open Data</a> and we’ve gotten an honor to come to talk about it. To the people unfamiliar with the concept: Open Data is a thing similar to <a href=\"https://en.wikipedia.org/wiki/Free_and_open-source_software\" target=\"_blank\">Free and Open Source Software (FOSS)</a>- it’s just that instead of software, we have data which is trasparent, open and free (<a href=\"https://en.wikipedia.org/wiki/Gratis_versus_libre\" target=\"_blank\">as in \"free speech\" and not as in \"free beer\"</a>). To quote <a href=\"http://opendefinition.org/\" target=\"_blank\">Open Knowlege Foundation</a>:"
+      },
+      {
+        "type": "quote",
+        "text": "Open data and content can be freely used, modified, and shared by anyone for any purpose",
+        "ref": "http://opendefinition.org/",
+        "reverse": true
+      },
+      {
+        "type": "p",
+        "text": "Long story short, I hope this catches your interest and you’ll want to learn more about it. If it doesn’t, see this <a href=\"https://www.ted.com/talks/tim_berners_lee_the_year_open_data_went_worldwide?language=en\" target=\"_blank\">talk by</a> Tim Berners-Lee (dude who gave us Web) about Open Data and read about some projections of reduced public spending when Open Data is employed in <a href=\"http://www.theguardian.com/public-leaders-network/blog/2012/jul/10/european-governments-race-open-data\" target=\"_blank\">this article</a>."
+      },
+      {
+        "type": "p",
+        "text": "If you happen to come to the event this weekend, come see the talk about practical stuff related to working with open data by our own <a href=\"https://twitter.com/d4m1n\" target=\"_blank\">Dan Mindru</a>."
+      },
+      {
+        "type": "p",
+        "text": "Thanks to <a href=\"http://www.odaa.dk/\" target=\"_blank\">Open Data Aarhus</a> for inviting us!"
+      },
+      {
+        "type": "h",
+        "text": "Additional Resources to learn about Open Data in Denmark and abroad"
+      },
+      {
+        "type": "p",
+        "text": ""
+      },
+      {
+        "type": "list",
+        "items": {
+          "0": "<a href=\"http://www.odaa.dk/\" target=\"_blank\">Open Data Aarhus</a>",
+          "1": "<a href=\"http://data.kk.dk/\" target=\"_blank\">Copenhagen Data</a>",
+          "2": "<a href=\"https://okfn.org/\" target=\"_blank\">Open Knowledge Foundation</a>",
+          "3": "<a href=\"http://ckan.org/\" target=\"_blank\">CKAN Open Data Portal Software</a>",
+          "4": "<a href=\"https://data.gov.uk/\" target=\"_blank\">DATA.GOV.UK - one of the world’s leading open data initiatives</a>"
+        }
+      }
+    ]
+  }
+]

@@ -203,4 +203,10 @@
   <url>
     <loc>http://fadeit.dk/blog/post/managing-translations-with-gulp-or-grunt</loc>
   </url>
+  <url>
+    <loc>http://fadeit.dk/blog/post/aarhus-mini-maker-faire</loc>
+  </url>
+  <url>
+    <loc>http://fadeit.dk/blog/post/mailgun-python-log-handler</loc>
+  </url>
 </urlset>
