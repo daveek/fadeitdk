@@ -1,4 +1,4 @@
-<img src="http://fadeit.dk/src/assets/img/brand/fadeit_logo_full.svg" alt="The fadeit logo" style="width:200px;"/><br/><br/>
+<a href="http:fadeit.dk"><img src="http://fadeit.dk/src/assets/img/brand/fadeit_logo_full.svg" alt="The fadeit logo" style="width:200px;"/></a><br/><br/>
 ###fadeit.dk - website front-end source
 <hr/>
 
@@ -47,7 +47,8 @@ You can use the following command to start the build http server (port 8009 defa
 $ grunt prod
 ```
 
+===================
 ####About fadeit
 We love and are really good at designing &amp; developing beautiful software, web and mobile applications.
 
-See this site live at [fadeit.dk](http://fadeit.dk/about)
+See more at [fadeit.dk](http://fadeit.dk)
