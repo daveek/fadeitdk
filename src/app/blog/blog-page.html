@@ -102,7 +102,9 @@
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-img" ng-switch-when="img">
-            <img class="blog-img" itemprop="image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{::content.caption}}"/>
+            <a href="{{vm.trustUrl(content.url)}}" target="_blank">
+              <img class="blog-img" itemprop="image" ng-src="{{vm.trustUrl(content.url)}}" alt="{{::content.caption}}"/>
+            </a>
             <p ng-bind="::content.caption" ng-if="content.caption"></p>
           </section>
 
@@ -122,6 +124,12 @@
             <ol>
               <li ng-repeat="item in content.items" ng-bind-html="::item"></li>
             </ol>
+          </section>
+
+          <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-list" ng-switch-when="unordered-list">
+            <ul>
+              <li ng-repeat="item in content.items" ng-bind-html="::item"></li>
+            </ul>
           </section>
 
           <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6 blog-type-fake-table" ng-switch-when="fake-table">

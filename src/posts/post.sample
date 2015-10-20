@@ -113,6 +113,14 @@
           "2": "Alphabetise"
         }
       },
+      {
+        "type": "unordered-list",
+        "items": { //list items, accepts HTML
+          "0": "Group by type",
+          "1": "Order by line length",
+          "2": "Alphabetise"
+        }
+      },
       /*
        * Fake table is a column-based configurable grid.
        * You can set the size of each column (24 total).
