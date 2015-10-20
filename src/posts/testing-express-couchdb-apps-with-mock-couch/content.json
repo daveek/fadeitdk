@@ -26,7 +26,7 @@
       },
       {
         "type": "p",
-        "text": "Recently, I worked on a <a href=\"http://expressjs.com/\" taregt=\"_blank\">Express.js</a> based RESTful API with <a href=\"https://couchdb.apache.org/\" target=\"_blank\">CouchDB</a> storage. For various reasons, I mostly had end-to-end tests (testing HTTP endpoints) and very few unit tests. In the tests, I would rebuild the database before every <em>describe</em> block. This worked quite well but at one point I noticed that my feedback loops were beginning to get tediously slow (~30 seconds to run the full test suite). Thankfully, I discovered <a href=\"https://github.com/chris-l/mock-couch\" target=\"_blank\">mock-couch</a>: in-memory storage with CouchDB API. The switch was rather easy and, as a result, my test suite would finish in less than 10 seconds (even when reseting test data before each test)."
+        "text": "Recently, I worked on a <a href=\"http://expressjs.com/\" target=\"_blank\">Express.js</a> based RESTful API with <a href=\"https://couchdb.apache.org/\" target=\"_blank\">CouchDB</a> storage. For various reasons, I mostly had end-to-end tests (testing HTTP endpoints) and very few unit tests. In the tests, I would rebuild the database before every <em>describe</em> block. This worked quite well but at one point I noticed that my feedback loops were beginning to get tediously slow (~30 seconds to run the full test suite). Thankfully, I discovered <a href=\"https://github.com/chris-l/mock-couch\" target=\"_blank\">mock-couch</a>: in-memory storage with CouchDB API. The switch was rather easy and, as a result, my test suite would finish in less than 10 seconds (even when reseting test data before each test)."
       },
       {
         "type": "h",
