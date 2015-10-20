@@ -1,0 +1,145 @@
+[
+  {
+    "id": "html-emails-and-email-signatures-how-hard-can-it-be",
+    "title": "HTML emails & email signatures, how hard can it be?!",
+    "intro": "Maybe it's about time to fix HTML email templates. Can we make writing CSS easier? What about ditching templates? Are we doomed forever?",
+    "cover": "cover.jpg",
+    "date": "2015-10-21T10:23:32.966Z",
+    "author": {
+      "name": "Dan Mindru",
+      "gplus": "https://plus.google.com/+MindruDan?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    },
+    "content": [
+      {
+        "type": "h",
+        "number": 4,
+        "text": "TL;DR"
+      },
+      {
+        "type": "p",
+        "text": "I put together some gulp stuff to generate simple HTML email signatures / templates & hope other will contribute. Check out <a href='https://github.com/fadeit/responsive-html-email-signature' target='_blank'>the repo</a>. There's plenty to do to improve it, so fork away! The current samples look like this:"
+      },
+      {
+        "type": "img",
+        "url": "posts/html-emails-and-email-signatures-how-hard-can-it-be/html-responsive-email-template-signature-light.png"
+      },
+      {
+        "type": "img",
+        "url": "posts/html-emails-and-email-signatures-how-hard-can-it-be/html-responsive-email-template-signature-dark.png"
+      },
+      {
+        "type": "h",
+        "text": "Intro"
+      },
+      {
+        "type": "p",
+        "text": "A few weeks ago I was listening to the the JavaScript Jabber <a href='https://devchat.tv/js-jabber/177-jsj-ui-validation-with-oren-rubin/mini_player' target='_blank' tar>episode 177</a> with <a href='https://twitter.com/shexman' target='_blank'>Oren Rubin</a>. For those that know nothing about Oren, he's been developing stuff for the past 20 years. In his career he worked with machine learning, distributed computing and compilers, just to name a few. He moved on to web development afterwards which he admits in the podcast was 'the really hard stuff'. I know many of you would be tempted to close this article, run outside and burst into tears of joy... but wait! Web development <b>is</b> hard. It also seems like it's not going to get easier soon. Hell, the next generation of web developers won't be able to work on a so called 'web application' without using a transpiler. You will be the laughing stock of the web if you are still writing in ES5 or not using some variation of Flux. <br/> So... you need to know all the new stuff, but that's not enough. You also need to know all the old stuff, because the web is not your colleague with a MacBook Pro using the latest version of Chrome. The web is any device with an internet connection, so we have to develop accordingly. I'll say it again:<br/><br/>"
+      },
+      {
+        "type": "quote",
+        "text": "Damn, developing for the web is hard."
+      },
+      {
+        "type": "p",
+        "text": "I believe the web today is not different from the web 10 years ago (in a philosophical sense), however the 'what' and 'how' of web development have changed quite a lot. I am not talking about JS frameworks here, but the stuff 'under the hood': the way we think of progressive enhancement (after all, we should learn from past mistakes), mobile-first designs, developing responsive layouts, back-end APIs, etc. My opinion is that one of the biggest web revolutions is 'layout'. A revolution is probably happening as we speak. We moved from tables, wacky flash sites that nobody could navigate, grids, now (almost) flexbox, tomorrow CSS shapes / multi columns layouts and who knows... as VR enters mainstream - some kind of 3D layout that we can't even imagine."
+      },
+      {
+        "type": "p",
+        "text": "(I get it, I'm bad at intros but I'll make my point super soon, promise.)"
+      },
+      {
+        "type": "p",
+        "text": "Before we look ahead, we need to take a good look back. We need to focus on place forgotten by the web... a dark and scary box that gives me shivers when I think about it. I am of course talking about <em>email</em>, the last medium on the web were table layouts are the norm. It's so bad that various business try to take advantage a make a good dollar, like <a href='https://litmus.com/' target='_blank'>Litmus</a>. By the way, its cheapest price level costs 79$/mo, which is probably more than a lot of us pay for our servers."
+      },
+      {
+        "type": "p",
+        "text": "Don't get me wrong, there has been progress, but in general email clients still suck. If there were some 'html email standards' the story might have been similar to the browser story, but there aren't. Everybody is free to do whatever they want."
+      },
+      {
+        "type": "p",
+        "text": "I am not thinking about crazy things here. It would be enough if we could ditch table layouts and inline styles. I would also be happy if email clients would have some basic support for media queries. Sure, it would be nice if we were able to do CSS3 animations or whatnot, but that's not what I really care about."
+      },
+      {
+        "type": "p",
+        "text": "It's hard enough to work with nested tables as it is. When you throw a sausage of inline CSS in the mix, various techniques to punch your computer will suddenly become appealing to you."
+      },
+      {
+        "type": "h",
+        "text": "The bad news"
+      },
+      {
+        "type": "p",
+        "text": "There's now way to get rid of tables / nested tables. But there might still be a way, which I'll point out later in the article."
+      },
+      {
+        "type": "h",
+        "text": "The good news - In your face, inline CSS"
+      },
+      {
+        "type": "p",
+        "text": "As you probably figured out from the intro, I got fed up with all of this. That inline s*** is impossible to maintain too. So I started on (I thought) a very basic gulp build system to reduce my increasingly high blood pressure. About 10 npm modules later, I realized this entire business could take a couple of hours."
+      },
+      {
+        "type": "p",
+        "text": "My attempt to destroy inline styles and attributes was fairly successful. I used <a href='https://github.com/jonkemp/gulp-inline-css' target='_blank'>gulp-inline-css</a>, thanks to <a href='https://twitter.com/jonkemp' target='_blank'>@jonkemp</a>.<br/> <small>By the way, inlining CSS is the new black (performance benefits), check out <a href='https://github.com/addyosmani/critical' target='_blank'>this cool lib</a></small>."
+      },
+      {
+        "type": "p",
+        "text": "Unfortunately, you can't get rid of all of them. I learned that if you wish to be on the safe side, you should use attributes whenever you can (progressive enhancement, remember?)."
+      },
+      {
+        "type": "unordered-list",
+        "items": {
+          "0": "can't use percentages for <b>width</b>",
+          "1": "<b>height</b> won't be added as an attribute",
+          "2": "<b>background-color</b> won't become <b>bgcolor</b>",
+          "3": "<b>text-align</b> won't become <b>align</b>",
+          "4": "<b>vertical-align</b> won't become <b>valign<b>",
+          "5": "etc. See <a href='https://github.com/jonkemp/inline-css/issues/8' target='_blank'>this issue</a> for more."
+        }
+      },
+      {
+        "type": "p",
+        "text": "On the flip side, <b>border</b>, <b>cellpadding</b> & <b>cellspacing</b> will work just fine."
+      },
+      {
+        "type": "h",
+        "text": "Re-using templates"
+      },
+      {
+        "type": "p",
+        "text": "It's common that footers or headers are redundant across templates. I figured that the ability to include templates would come in handy, so I installed the awesome <a href='https://github.com/jas/gulp-preprocess' target='_blank'>gulp-preprocess</a> plugin."
+      },
+      {
+        "type": "p",
+        "text": "I could then include HTML files with comments (e.g. <em><!-- @include head.inc.html —></em> and that's about it. There are other useful comment directives, for displaying stuff from a configuration file you can use <em><!-- @echo foo --></em>."
+      },
+      {
+        "type": "p",
+        "text": "If pre-process was a dependency anyway, I figured might as well go deeper and do a configuration-based setup. Fast-forward a few npm modules and I ended up with a build system that can take multiple templates & can handle contact info for a team (if you want it too). Here's how it works:"
+      },
+      {
+        "type": "img",
+        "url": "posts/html-emails-and-email-signatures-how-hard-can-it-be/html-responsive-email-template-build-diagram.png"
+      },
+      {
+        "type": "h",
+        "text": "Going forward"
+      },
+      {
+        "type": "p",
+        "text": "Having gulp around also helped me clear the <em>/dist</em> directory before every build, watch the html & css for changes and all that classic stuff. I went further and minified HTML & inline styles (<em><style></em>), embedded images in the template (base64) for local assets and some other misc. tasks."
+      },
+      {
+        "type": "p",
+        "text": "But why stop here? Let's throw everything we have at it... hell, let's even make a HTML email 'transpiler', which converts semantic HTML into a table layout & adds schema.org attributes automagically. Let's generate screenshots of tests on the popular email clients, all at the convenience of our terminal. Let's add pre-processor support... How will <b>you</b> make writing email templates easier?"
+      },
+      {
+        "type": "p",
+        "text": "<a href='https://github.com/fadeit/responsive-html-email-signature/issues' href='_blank'>Let's get this over with!</a>"
+      }
+    ]
+  }
+]

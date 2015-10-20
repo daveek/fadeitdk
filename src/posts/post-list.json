@@ -1,5 +1,18 @@
 [
   {
+    "id": "html-emails-and-email-signatures-how-hard-can-it-be",
+    "title": "HTML emails & email signatures, how hard can it be?!",
+    "intro": "Maybe it's about time to fix HTML email templates. Can we make writing CSS easier? What about ditching templates? Are we doomed forever?",
+    "cover": "cover.jpg",
+    "date": "2015-10-21T10:23:32.966Z",
+    "author": {
+      "name": "Dan Mindru",
+      "gplus": "https://plus.google.com/+MindruDan?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_dan_mindru.jpg",
+      "job_title": "Experience designer"
+    }
+  },
+  {
     "id": "mailgun-python-log-handler",
     "title": "Python logging handler for Mailgun",
     "intro": "Sending application exception notifications via Mailgun.",
