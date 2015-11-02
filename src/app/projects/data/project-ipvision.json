@@ -1,5 +1,5 @@
 {
-  "id": "ipvision",
+  "id": "telco",
   "color": {
     "links": "#A91400",
     "base": "#A91400",
@@ -11,8 +11,8 @@
     "coverBackground": "#E7E8EA"
   },
   "title": "PLIST_IPVISION_TITLE",
-  "link": "story/ipvision",
-  "uiRoute": "/story/ipvision",
+  "link": "story/telco",
+  "uiRoute": "/story/telco",
   "tags": {
     "0": {
       "name": "VoIP",
