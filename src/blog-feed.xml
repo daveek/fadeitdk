@@ -7,10 +7,21 @@
     <link href="http://fadeit.dk/blog-feed.xml" rel="self" />
     <link href="http://fadeit.dk/" />
     <id>urn:uuid:381e1e19-d2bb-4c99-8da1-7615624c89a6</id>
-    <updated>2015-10-21T00:23:32.966Z</updated>
+    <updated>2015-11-03T16:23:32.966Z</updated>
 
     <entry>
-        <title>HTML emails & email signatures, how hard can it be?!</title>
+        <title>Digital Ocean DNS setup for Mailgun</title>
+        <link href="http://fadeit.dk/blog/post/mailgun-dns-setup-digital-ocean" />
+        <id>urn:uuid:4b50c94a-5ec3-7d2a-fb53-b40b3e68afd6</id>
+        <updated>2015-11-03T10:22:30.132Z</updated>
+        <summary>Making Digital Ocean and Mailgun play nice</summary>
+        <author>
+            <name>Sander Sink</name>
+        </author>
+    </entry>
+
+    <entry>
+        <title>HTML emails and email signatures, how hard can it be?!</title>
         <link href="http://fadeit.dk/blog/post/html-emails-and-email-signatures-how-hard-can-it-be" />
         <id>urn:uuid:4b50c943-8ec2-6d2a-fb53-b40b3e68afd6</id>
         <updated>2015-10-21T00:23:32.966Z</updated>
