@@ -14,7 +14,7 @@
     "content": [
       {
         "type": "p",
-        "text": "I came across quite some gotchas when setting up Mailgun (MG) & Digital Ocean (DO). The problem with DNS setup is that feedback l<font size=\"4\">&infin;</font>p takes long time (as DNS settings propagate), so it ended taking me some days just to try couple configurations."
+        "text": "When setting up Mailgun (MG) & Digital Ocean (DO) I ran into unexpected complications. Unfortunately DNS configuration feedback l<font size=\"4\">&infin;</font>p takes long time (as DNS settings propagate), so it ended taking me some days just to try couple configurations. There are some misleading tutorials out there as-well, so hopefully I can clear it once for all."
       },
       {
         "type": "p",
