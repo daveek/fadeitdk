@@ -135,7 +135,7 @@
       },
       {
         "type": "p",
-        "text": "<a href='https://github.com/fadeit/responsive-html-email-signature/issues' href='_blank'>Let's get this over with, once and for all!</a>"
+        "text": "<a href='https://github.com/fadeit/responsive-html-email-signature/issues' target='_blank'>Let's get this over with, once and for all!</a>"
       }
     ]
   }
