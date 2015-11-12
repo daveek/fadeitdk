@@ -212,4 +212,7 @@
   <url>
     <loc>http://fadeit.dk/blog/post/html-emails-and-email-signatures-how-hard-can-it-be</loc>
   </url>
+  <url>
+    <loc>http://fadeit.dk/blog/post/mailgun-dns-setup-digital-ocean</loc>
+  </url>
 </urlset>

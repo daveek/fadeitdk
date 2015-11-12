@@ -1,5 +1,18 @@
 [
   {
+    "id": "mailgun-dns-setup-digital-ocean",
+    "title": "Digital Ocean DNS setup for Mailgun",
+    "intro": "Making Digital Ocean and Mailgun play nice",
+    "cover": "cover_thumb.jpg",
+    "date": "2015-11-03T10:22:30.132Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    }
+  },
+  {
     "id": "html-emails-and-email-signatures-how-hard-can-it-be",
     "title": "HTML emails & email signatures, how hard can it be?!",
     "intro": "Maybe it's about time to fix HTML email templates. Can we make writing CSS easier? What about ditching templates? Are we doomed forever?",

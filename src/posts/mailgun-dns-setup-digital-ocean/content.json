@@ -1,0 +1,57 @@
+[
+  {
+    "id": "mailgun-dns-setup-digital-ocean",
+    "title": "Digital Ocean DNS setup for Mailgun",
+    "intro": "Making Digital Ocean and Mailgun play nice",
+    "cover": "cover_wide.jpg",
+    "date": "2015-11-03T10:22:30.132Z",
+    "author": {
+      "name": "Sander Sink",
+      "gplus": "https://plus.google.com/+sander_sink_ozooner?rel=author",
+      "photo": "src/assets/img/team/fadeit_team_sander_sink.jpg",
+      "job_title": "Software engineer"
+    },
+    "content": [
+      {
+        "type": "p",
+        "text": "When setting up Mailgun (MG) & Digital Ocean (DO) I ran into unexpected complications. Unfortunately DNS configuration feedback l<font size=\"4\">&infin;</font>p takes long time (as DNS settings propagate), so it ended taking me some days just to try couple configurations. There are some misleading tutorials out there as-well, so hopefully I can clear it once for all."
+      },
+      {
+        "type": "p",
+        "text": "So the first gotcha with DO is that the domain name is automatically added to the DNS records, therefore if MG setting says <em>email.fadeit.dk</em>, then that means only <em>email</em> should be entered in DO:"
+      },
+      {
+        "type": "img",
+        "url": "posts/mailgun-dns-setup-digital-ocean/cname.jpg",
+        "caption": "Domain is automatically appended"
+      },
+      {
+        "type": "p",
+        "text": "Second gotcha requires us to wrap TXT record value in quotes:"
+      },
+      {
+        "type": "img",
+        "url": "posts/mailgun-dns-setup-digital-ocean/quotes.jpg",
+        "caption": "TXT records need to be wrapped in quotes"
+      },
+      {
+        "type": "p",
+        "text": "So-far we've looked at the setup as it is for primary domain, however MG suggests configuring a subdomain instead. While it is possible to set the TXT & CNAME records for a subdomain, MX records can not be configured for a subdomain that way. Fortunately there is a (non-obvious) solution - subdomain should be added as a domain in DO panel:"
+      },
+      {
+        "type": "img",
+        "url": "posts/mailgun-dns-setup-digital-ocean/subdomain.jpg",
+        "caption": "Subdomain should be added as a domain"
+      },
+      {
+        "type": "p",
+        "text": "Now we can configure MX records for that subdomain, and while at it...move other records to the subdomain configuration aswell. Keep in mind that now DO appends entire subdomain to TXT & CNAME records:"
+      },
+      {
+        "type": "img",
+        "url": "posts/mailgun-dns-setup-digital-ocean/conf.jpg",
+        "caption": "Subdomain should be added as a domain"
+      }
+    ]
+  }
+]
