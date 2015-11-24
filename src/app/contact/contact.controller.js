@@ -13,7 +13,7 @@ function contactController($window){
 
     $window.initializeMaps = function initializeMaps(){ // jshint ignore:line
       var mapCanvas = document.getElementById('fadeit-map');
-      var fadeitLocation = new google.maps.LatLng(56.182175, 10.097238);
+      var fadeitLocation = new google.maps.LatLng(56.379600, 10.493373);
       var mapOptions = {
         scrollwheel: false,
         panControl: true,
