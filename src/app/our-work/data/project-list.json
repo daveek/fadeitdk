@@ -1,5 +1,33 @@
 [
   {
+    "id": "play",
+    "hide": true,
+    "color": {
+      "links": "#4998DE",
+      "base": "#194F80",
+      "accent": "#1E619B",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#194F80"
+    },
+    "title": "PLIST_PLAY_TITLE",
+    "shortDescription": "PLIST_PLAY_DESC",
+    "link": "story/play",
+    "uiRoute": "/story/play",
+    "tags": {
+      "0": "Python",
+      "1": "Flask",
+      "2": "AngularJS",
+      "3": "IT Automation",
+      "4": "Puppet"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  },
+  {
     "id": "hopper",
     "color": {
       "links": "#4998DE",
