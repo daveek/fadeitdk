@@ -1,0 +1,52 @@
+{
+  "id": "messiproff",
+  "color": {
+    "links": "#4998DE",
+    "base": "#194F80",
+    "accent": "#1E619B",
+    "text": "#FFFFFF",
+    "darkText": "#333333",
+    "light": "#F9F9F9",
+    "lightAccent": "#E7E8EA",
+    "coverBackground": "#194F80"
+  },
+  "title": "PLIST_MESSIPROFF_TITLE",
+  "shortDescription": "PLIST_MESSIPROFF_DESC",
+  "link": "story/messiproff",
+  "uiRoute": "/story/messiproff",
+  "website": "http://messiproff.ee/stendijoonis",
+  "tags": {
+    "0": {
+      "name": "AngularJS",
+      "srefen": "angularjs-development",
+      "srefdk": "angularjs-udvikling"
+    },
+    "1": {
+      "name": "Experience design",
+      "srefen": "experience-design",
+      "srefdk": "experience-design"
+    }
+  },
+  "images": {
+    "heading": "PDET_MESSIPROFF_IMG_H",
+    "cover": "cover_sm@2x.jpg",
+    "screens": {
+      "0": {
+        "filename": "0.png",
+        "title": "PDET_MESSIPROFF_SCREEN_1_T",
+        "desc": "PDET_MESSIPROFF_SCREEN_1_D"
+      }
+    }
+  },
+  "content": {
+    "shortDescription": "PLIST_MESSIPROFF_DESC",
+    "intro": {
+      "heading": "PDET_MESSIPROFF_INTRO_T",
+      "text": "PDET_MESSIPROFF_INTRO_D"
+    },
+    "mainHeading": "PDET_MESSIPROFF_MAIN_T",
+    "paragraphs": {
+      "0": "PDET_MESSIPROFF_P_1"
+    }
+  }
+}
