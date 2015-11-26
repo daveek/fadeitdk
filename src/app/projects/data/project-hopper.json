@@ -12,6 +12,7 @@
   },
   "title": "PLIST_OLS_TITLE",
   "shortDescription": "PLIST_OLS_DESC",
+  "website": "https://hopper.dk",
   "link": "story/hopper",
   "uiRoute": "/story/hopper",
   "tags": {
@@ -51,40 +52,25 @@
     "cover": "cover_sm@2x.jpg",
     "screens": {
       "0": {
-        "filename": "0.png",
+        "filename": "0.jpg",
         "title": "PDET_OLS_SCREEN_1_T",
         "desc": "PDET_OLS_SCREEN_1_D"
       },
       "1": {
-        "filename": "1.png",
+        "filename": "1.jpg",
         "title": "PDET_OLS_SCREEN_2_T",
         "desc": "PDET_OLS_SCREEN_2_D"
       },
       "2": {
-        "filename": "2.png",
+        "filename": "2.jpg",
         "title": "PDET_OLS_SCREEN_3_T",
         "desc": "PDET_OLS_SCREEN_3_D"
       },
       "3": {
-        "filename": "3.png",
+        "filename": "3.jpg",
         "title": "PDET_OLS_SCREEN_4_T",
         "desc": "PDET_OLS_SCREEN_4_D"
-      },
-      "4": {
-        "filename": "4.png",
-        "title": "PDET_OLS_SCREEN_5_T",
-        "desc": "PDET_OLS_SCREEN_5_D"
       }
-    }
-  },
-  "urls": {
-    "0": {
-      "title": "PDET_OLS_URL_1_T",
-      "link": "https://hopper.dk/",
-      "text": "PDET_OLS_URL_1_D"
-    },
-    "1": {
-      "text": "PDET_OLS_URL_2_D"
     }
   },
   "content": {
