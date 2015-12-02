@@ -1,5 +1,33 @@
 [
   {
+    "id": "play",
+    "hide": true,
+    "color": {
+      "links": "#4998DE",
+      "base": "#194F80",
+      "accent": "#1E619B",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#194F80"
+    },
+    "title": "PLIST_PLAY_TITLE",
+    "shortDescription": "PLIST_PLAY_DESC",
+    "link": "story/play",
+    "uiRoute": "/story/play",
+    "tags": {
+      "0": "Python",
+      "1": "Flask",
+      "2": "AngularJS",
+      "3": "IT Automation",
+      "4": "Puppet"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  },
+  {
     "id": "hopper",
     "color": {
       "links": "#4998DE",
@@ -122,6 +150,33 @@
       "0": "Web Shop",
       "1": "E-Commerce",
       "2": "Branding"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  },
+  {
+    "id": "messiproff",
+    "hide": true,
+    "color": {
+      "links": "#4998DE",
+      "base": "#194F80",
+      "accent": "#1E619B",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#F9F9F9",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#194F80"
+    },
+    "title": "PLIST_MESSIPROFF_TITLE",
+    "shortDescription": "PLIST_MESSIPROFF_DESC",
+    "link": "story/messiproff",
+    "uiRoute": "/story/messiproff",
+    "tags": {
+      "2": "AngularJS",
+      "3": "FabricJS",
+      "4": "Interactive",
+      "5": "Drag & Drop"
     },
     "images": {
       "cover": "cover_sm@2x.jpg"

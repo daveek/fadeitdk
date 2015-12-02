@@ -13,6 +13,7 @@
   "title": "PLIST_GATE_TITLE",
   "link": "story/gatesense",
   "uiRoute": "/story/gatesense",
+  "website": "http://gatesense.com/",
   "tags": {
     "0": {
       "name": "IoT",

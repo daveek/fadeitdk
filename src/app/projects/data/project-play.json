@@ -1,0 +1,92 @@
+{
+  "id": "play",
+  "color": {
+    "links": "#4998DE",
+    "base": "#194F80",
+    "accent": "#1E619B",
+    "text": "#FFFFFF",
+    "darkText": "#333333",
+    "light": "#F9F9F9",
+    "lightAccent": "#E7E8EA",
+    "coverBackground": "#194F80"
+  },
+  "title": "PLIST_PLAY_TITLE",
+  "shortDescription": "PLIST_PLAY_DESC",
+  "website": "https://informationscreen.com",
+  "link": "story/play",
+  "uiRoute": "/story/play",
+  "tags": {
+    "0": {
+      "name": "Python",
+      "srefen": "python-development",
+      "srefdk": "python-udvikling"
+    },
+    "1": {
+      "name": "Flask",
+      "srefen": "python-development",
+      "srefdk": "python-udvikling"
+    },
+    "2": {
+      "name": "AngularJS",
+      "srefen": "angularjs-development",
+      "srefdk": "angularjs-udvikling"
+    },
+    "3": {
+      "name": "IT Automation",
+      "srefen": "it-automation",
+      "srefdk": "it-automation"
+    },
+    "3": {
+      "name": "Puppet",
+      "srefen": "it-automation",
+      "srefdk": "it-automation"
+    }
+  },
+  "images": {
+    "heading": "PDET_PLAY_IMG_H",
+    "cover": "cover_sm@2x.jpg",
+    "screens": {
+      "0": {
+        "filename": "play_1.jpg",
+        "title": "PDET_PLAY_SCREEN_1_T",
+        "desc": "PDET_PLAY_SCREEN_1_D"
+      },
+      "1": {
+        "filename": "play_2.jpg",
+        "title": "PDET_PLAY_SCREEN_2_T",
+        "desc": "PDET_PLAY_SCREEN_2_D"
+      },
+      "2": {
+        "filename": "play_3.jpg",
+        "title": "PDET_PLAY_SCREEN_3_T",
+        "desc": "PDET_PLAY_SCREEN_3_D"
+      },
+      "3": {
+        "filename": "play_4.jpg",
+        "title": "PDET_PLAY_SCREEN_4_T",
+        "desc": "PDET_PLAY_SCREEN_4_D"
+      },
+      "4": {
+        "filename": "play_5.jpg",
+        "title": "PDET_PLAY_SCREEN_5_T",
+        "desc": "PDET_PLAY_SCREEN_5_D"
+      },
+      "5": {
+        "filename": "play_6.jpg",
+        "title": "PDET_PLAY_SCREEN_6_T",
+        "desc": "PDET_PLAY_SCREEN_6_D"
+      }
+    }
+  },
+  "content": {
+    "shortDescription": "PLIST_PLAY_DESC",
+    "intro": {
+      "heading": "PDET_PLAY_INTRO_T",
+      "text": "PDET_PLAY_INTRO_D"
+    },
+    "mainHeading": "PDET_PLAY_MAIN_T",
+    "paragraphs": {
+      "0": "PDET_PLAY_P_1"
+    }
+  }
+}
