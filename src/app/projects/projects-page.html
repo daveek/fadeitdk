@@ -37,7 +37,9 @@
       <section class="row-fluid project-intro-fluid">
         <section class="col-xs-24">
           <h3 itemprop="headline" class="regular-title" translate>{{vm.project.content.shortDescription}}</h3>
-          <h3 ng-if="vm.project.website"><a ng-href="{{vm.project.website}}" target="_blank">{{::vm.project.website}}</a></h3>
+          <h5  ng-if="vm.project.website" class="project-url">
+            <a itemprop="url" ng-href="{{vm.project.website.href}}" target="_blank" data-ng-style="{'color': vm.project.color.links}">{{::vm.project.website.text}} <i class="fa fa-external-link"></i></a>
+          </h5>
           <p class="regular-text project-tags">
             <span ng-repeat="tag in vm.project.tags">
               <a ng-if="activeLang =='en'" ui-sref="app.tech({tech: tag.srefen, lang: 'en'})" class="a-tag" ng-bind='tag.name' translate></a>

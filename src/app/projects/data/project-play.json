@@ -1,18 +1,22 @@
 {
   "id": "play",
+  "hide": "true",
   "color": {
     "links": "#4998DE",
-    "base": "#194F80",
-    "accent": "#1E619B",
+    "base": "#1A1B1B",
+    "accent": "#3C80BC",
     "text": "#FFFFFF",
     "darkText": "#333333",
     "light": "#F9F9F9",
     "lightAccent": "#E7E8EA",
-    "coverBackground": "#194F80"
+    "coverBackground": "#1A1B1B"
   },
   "title": "PLIST_PLAY_TITLE",
   "shortDescription": "PLIST_PLAY_DESC",
-  "website": "https://informationscreen.com",
+  "website": {
+    "href": "https://informationscreen.com",
+    "text": "informationscreen.com"
+  },
   "link": "story/play",
   "uiRoute": "/story/play",
   "tags": {
