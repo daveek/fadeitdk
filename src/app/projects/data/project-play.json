@@ -13,10 +13,16 @@
   },
   "title": "PLIST_PLAY_TITLE",
   "shortDescription": "PLIST_PLAY_DESC",
-  "website": {
-    "href": "https://informationscreen.com",
-    "text": "informationscreen.com"
-  },
+  "websites": [
+    {
+      "href": "https://informationscreen.com",
+      "text": "informationscreen.com"
+    },
+    {
+      "href": "http://tryplay.dk",
+      "text": "tryplay.dk"
+    }
+  ],
   "link": "story/play",
   "uiRoute": "/story/play",
   "tags": {

@@ -2262,16 +2262,29 @@ a{
     top:1px;
     margin-left:5px;
   }
+
+  &__inner{
+    &:not(:first-child){
+      &:before{
+        content:"/";
+        color:@col_gray_5;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+.project-tags{
+  a{
+    color: #B3B3B2;
+    font-weight: 300;
+  }
 }
 
 .project-details{
   .clearfix();
   margin: -65px 0 0 0;
   padding: 30px 35px 20px 35px;
-
-  @media only screen and (min-width:@bp_sm){
-    //margin-left: 15px;
-  }
 
   .paragraph-fluid{
     margin:0;
