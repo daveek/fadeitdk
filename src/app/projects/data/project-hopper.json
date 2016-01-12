@@ -12,7 +12,12 @@
   },
   "title": "PLIST_OLS_TITLE",
   "shortDescription": "PLIST_OLS_DESC",
-  "website": "https://hopper.dk",
+    "websites": [
+    {
+      "href": "http://hopper.dk/",
+      "text": "hopper.dk"
+    }
+  ],
   "link": "story/hopper",
   "uiRoute": "/story/hopper",
   "tags": {

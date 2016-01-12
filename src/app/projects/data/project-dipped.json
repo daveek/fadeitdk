@@ -13,7 +13,16 @@
   "title": "PLIST_DIP_TITLE",
   "link": "story/dipped",
   "uiRoute": "/story/dipped",
-  "website": "http://dipshop.dk/",
+  "websites": [
+    {
+      "href": "http://dipshop.dk/",
+      "text": "dipshop.dk"
+    },
+    {
+      "href": "http://dipped.dk",
+      "text": "dipped.dk"
+    }
+  ],
   "tags": {
     "0": {
       "name": "Web Shop",

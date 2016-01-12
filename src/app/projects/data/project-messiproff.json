@@ -14,7 +14,12 @@
   "shortDescription": "PLIST_MESSIPROFF_DESC",
   "link": "story/messiproff",
   "uiRoute": "/story/messiproff",
-  "website": "http://messiproff.ee/stendijoonis",
+  "websites": [
+    {
+      "href": "http://messiproff.ee/stendijoonis",
+      "text": "messiproff.ee/stendijoonis"
+    }
+  ],
   "tags": {
     "0": {
       "name": "AngularJS",
