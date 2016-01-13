@@ -1,6 +1,7 @@
 [
   {
     "id": "play",
+    "hide": true,
     "color": {
       "links": "#4998DE",
       "base": "#1A1B1B",
@@ -156,15 +157,16 @@
   },
   {
     "id": "messiproff",
+    "hide": true,
     "color": {
-      "links": "#4998DE",
-      "base": "#194F80",
-      "accent": "#1E619B",
+      "links": "#63CDA2",
+      "base": "#4DCDA4",
+      "accent": "#259471",
       "text": "#FFFFFF",
       "darkText": "#333333",
       "light": "#F9F9F9",
       "lightAccent": "#E7E8EA",
-      "coverBackground": "#194F80"
+      "coverBackground": "#4DCDA4"
     },
     "title": "PLIST_MESSIPROFF_TITLE",
     "shortDescription": "PLIST_MESSIPROFF_DESC",
