@@ -39,7 +39,7 @@
           <h3 itemprop="headline" class="regular-title" translate>{{vm.project.content.shortDescription}}</h3>
           <h5 ng-if="vm.project.websites" class="project-url">
             <span class="project-url__inner"  ng-repeat="website in vm.project.websites">
-              <a itemprop="url" ng-href="{{website.href}}" target="_blank" data-ng-style="{'color': color.links}">{{::website.text}}</a>
+              <a itemprop="url" ng-href="{{website.href}}" target="_blank" data-ng-style="{'color': vm.project.color.links}">{{::website.text}}</a>
             </span>
           </h5>
           <p class="regular-text project-tags">
