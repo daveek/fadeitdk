@@ -2320,42 +2320,50 @@ a{
       &:last-child{
         margin-bottom:0;
       }
+
+      &:nth-child(odd){
+        .project-screen__figcaption{
+          &:before{
+            content: "";
+            top:0;
+            position:absolute;
+            height:100%;
+            width:5px;
+            background-color:inherit;
+            margin-right:-5px;
+          }
+        }
+      }
+
+      &:nth-child(even){
+        .project-screen__img{
+          order:2;
+        }
+
+        .project-screen__figcaption{
+          &:after{
+            content: "";
+            top:0;
+            position:absolute;
+            height:100%;
+            width:5px;
+            background-color:inherit;
+            margin-left:-5px;
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width:@bp_xl){
+      margin-top:45px;
+    }
+
+    @media only screen and (min-width:@bp_xxl){
+      margin-top:60px;
     }
 
     &:first-child{
       margin-top:0px;
-    }
-
-    &:nth-child(odd){
-      .project-screen__figcaption{
-        &:before{
-          content: "";
-          top:0;
-          position:absolute;
-          height:100%;
-          width:5px;
-          background-color:inherit;
-          margin-right:-5px;
-        }
-      }
-    }
-
-    &:nth-child(even){
-      .project-screen__img{
-        order:2;
-      }
-
-      .project-screen__figcaption{
-        &:after{
-          content: "";
-          top:0;
-          position:absolute;
-          height:100%;
-          width:5px;
-          background-color:inherit;
-          margin-left:-5px;
-        }
-      }
     }
 
     img{
@@ -2364,17 +2372,24 @@ a{
     }
 
     &__img{
-      flex-basis:70%;
-      flex-grow:0;
-      flex-shrink:0;
+      flex-basis:100%;
+
+      @media only screen and (min-width:@bp_sm){
+        flex-basis:70%;
+        flex-grow:0;
+        flex-shrink:0;
+      }
     }
 
     &__figcaption{
       height:100%;
-      flex-basis:30%;
-      flex-grow:0;
-      flex-shrink:0;
-      display:flex;
+
+      @media only screen and (min-width:@bp_sm){
+        flex-basis:30%;
+        flex-grow:0;
+        flex-shrink:0;
+        display:flex;
+      }
 
       &__inner{
         padding:15px 30px;
