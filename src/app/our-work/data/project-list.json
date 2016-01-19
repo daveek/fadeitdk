@@ -1,14 +1,13 @@
 [
   {
     "id": "play",
-    "hide": true,
     "color": {
       "links": "#4998DE",
       "base": "#1A1B1B",
       "accent": "#3C80BC",
       "text": "#FFFFFF",
       "darkText": "#333333",
-      "light": "#F9F9F9",
+      "light": "#FAFAFA",
       "lightAccent": "#E7E8EA",
       "coverBackground": "#1A1B1B"
     },
@@ -157,7 +156,6 @@
   },
   {
     "id": "messiproff",
-    "hide": true,
     "color": {
       "links": "#63CDA2",
       "base": "#4DCDA4",

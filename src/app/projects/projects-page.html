@@ -99,6 +99,7 @@
         data-ng-repeat="screen in vm.project.images.screens"
         data-ng-style="{'background': vm.project.color.light}">
           <img itemprop="image" data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title | translate}} {{'SEO_SCREENSHOT_ALT' |  translate}}" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>
+
           <figcaption data-ng-style="{'color': vm.project.color.darkText}">
             <h3 itemprop="headline" translate>{{screen.title}}</h3>
             <p itemprop="text" class="regular-text" translate>{{screen.desc}}</p>
