@@ -57,32 +57,32 @@
     "cover": "cover_sm@2x.jpg",
     "screens": {
       "0": {
-        "filename": "play_1.jpg",
+        "filename": "play-information-screen-and-digital-signage-1.jpg",
         "title": "PDET_PLAY_SCREEN_1_T",
         "desc": "PDET_PLAY_SCREEN_1_D"
       },
       "1": {
-        "filename": "play_2.jpg",
+        "filename": "play-information-screen-and-digital-signage-2.jpg",
         "title": "PDET_PLAY_SCREEN_2_T",
         "desc": "PDET_PLAY_SCREEN_2_D"
       },
       "2": {
-        "filename": "play_3.jpg",
+        "filename": "play-information-screen-and-digital-signage-3.jpg",
         "title": "PDET_PLAY_SCREEN_3_T",
         "desc": "PDET_PLAY_SCREEN_3_D"
       },
       "3": {
-        "filename": "play_4.jpg",
+        "filename": "play-information-screen-and-digital-signage-4.jpg",
         "title": "PDET_PLAY_SCREEN_4_T",
         "desc": "PDET_PLAY_SCREEN_4_D"
       },
       "4": {
-        "filename": "play_5.jpg",
+        "filename": "play-information-screen-and-digital-signage-5.jpg",
         "title": "PDET_PLAY_SCREEN_5_T",
         "desc": "PDET_PLAY_SCREEN_5_D"
       },
       "5": {
-        "filename": "play_6.jpg",
+        "filename": "play-information-screen-and-digital-signage-6.jpg",
         "title": "PDET_PLAY_SCREEN_6_T",
         "desc": "PDET_PLAY_SCREEN_6_D"
       }
