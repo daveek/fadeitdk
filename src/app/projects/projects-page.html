@@ -95,14 +95,16 @@
       </article>
 
       <section class="project-screens" data-ng-if="vm.project.images.screens">
-        <figure class="project-screen fadeit-animate animated fadeIn" data-wow-delay="1s" data-wow-offset="50"
-        data-ng-repeat="screen in vm.project.images.screens"
-        data-ng-style="{'background': vm.project.color.light}">
-          <img itemprop="image" data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title | translate}} {{'SEO_SCREENSHOT_ALT' |  translate}}" data-ng-style="{'border-color': '{{vm.project.color.lightAccent}}'}"/>
+        <figure class="project-screen fadeit-animate animated fadeIn" data-wow-delay="1s" data-wow-offset="50" data-ng-style="{'background': vm.project.color.light}" data-ng-repeat="screen in vm.project.images.screens">
+          <section class="project-screen__img">
+            <img itemprop="image" data-ng-src="/src/assets/img/projects/{{vm.project.id}}/screens/{{screen.filename}}" alt="{{vm.project.title | translate}} {{'SEO_SCREENSHOT_ALT' |  translate}}"/>
+          </section>
 
-          <figcaption data-ng-style="{'color': vm.project.color.darkText}">
-            <h3 itemprop="headline" translate>{{screen.title}}</h3>
-            <p itemprop="text" class="regular-text" translate>{{screen.desc}}</p>
+          <figcaption data-ng-style="{'color': vm.project.color.darkText, 'background-color': '{{vm.project.color.lightAccent}}'}" class="project-screen__figcaption">
+            <section class="project-screen__figcaption__inner" data-ng-style="{'background': vm.project.color.light}">
+              <h3 itemprop="headline" translate>{{screen.title}}</h3>
+              <p itemprop="text" class="regular-text" translate>{{screen.desc}}</p>
+            </section>
           </figcaption>
         </figure>
       </section><!--end project-screens-->
