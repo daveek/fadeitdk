@@ -79,6 +79,29 @@
         </section>
       </article>
 
+      <section class="project-videos" ng-if="vm.project.videos">
+        <h3 class="project-videos__headline" itemprop="headline" translate>{{vm.project.videos.heading}}</h3>
+
+        <section class="video" ng-repeat="video in vm.project.videos.content" data-ng-style="{'background': vm.project.color.coverBackground, 'color': vm.project.color.lightAccent }">
+          <h3 class="video__name" itemprop="name">
+            {{video.title}}
+          </h3>
+
+          <p class="video__desc" itemprop="description">
+            {{video.description}}
+          </p>
+
+          <meta itemprop="duration" content="{{video.duration}}" />
+          <meta itemprop="thumbnailUrl"
+              content="https://img.youtube.com/vi/{{video.id}}/maxresdefault.jpg" />
+          <meta itemprop="URL"
+              content="https://www.youtube.com/watch?v={{video.id}}" />
+          <meta itemprop="embedURL"
+              content="https://www.youtube.com/watch?v={{video.id}}" />
+
+          <iframe width="100%" height="100%" ng-src="{{vm.getVideoUrl(video.id)}}" frameborder="0" allowfullscreen></iframe>
+        </section>
+      </section>
 
       <article class="project-details project-extras" data-ng-if='vm.project.url || vm.project.images.screens'>
         <h3 itemprop="headline" translate>{{vm.project.images.heading}}</h3>

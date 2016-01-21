@@ -2297,6 +2297,48 @@ a{
   }
 }
 
+.project-videos{
+  margin-top:30px;
+
+  &__headline{
+    padding: 30px 35px 10px 35px;
+  }
+}
+
+.video{
+  padding:30px 1px 1px 1px;
+
+  iframe{
+    min-height:200px;
+
+    @media only screen and (min-width:@bp_sm){
+      min-height:400px;
+    }
+
+    @media only screen and (min-width:@bp_md){
+      min-height:500px;
+    }
+
+    @media only screen and (min-width:@bp_lg){
+      min-height:550px;
+    }
+
+    @media only screen and (min-width:@bp_xl){
+      min-height:600px;
+    }
+  }
+
+  &__name{
+    margin-bottom:0;
+    padding: 0 35px;
+  }
+
+  &__desc{
+    margin-top:0;
+    padding: 0 35px;
+  }
+}
+
 .project-screens{
   padding-left:15px;
   margin-bottom:30px;

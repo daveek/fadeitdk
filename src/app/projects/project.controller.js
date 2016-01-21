@@ -1,7 +1,7 @@
 angular.module('fadeit.projects').controller('ProjectsController', projectsController);
 
-projectsController.$inject = ['$scope', '$stateParams','ProjectsService', '$state', '$translate', '$filter'];
-function projectsController($scope, $stateParams, ProjectsService, $state, $translate, $filter) {
+projectsController.$inject = ['$scope', '$stateParams','ProjectsService', '$state', '$translate', '$filter', '$sce'];
+function projectsController($scope, $stateParams, ProjectsService, $state, $translate, $filter, $sce) {
   //read the project id from the state
   var vm = this,
       pageTitle,
@@ -50,4 +50,9 @@ function projectsController($scope, $stateParams, ProjectsService, $state, $tran
     $scope.$emit('changedTitle', pageTitle);
     $scope.$emit('changedDesc', pageDesc);
   });
+
+  //Generate youtube URL
+  vm.getVideoUrl = function getVideoUrl(videoId){
+    return $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + videoId + '?autoplay=0&showinfo=0&theme=light&color=white&rel=0');
+  };
 }
