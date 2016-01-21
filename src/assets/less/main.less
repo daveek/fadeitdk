@@ -2287,15 +2287,18 @@ a{
 }
 
 .project-video-container{
-  margin-top:30px;
+  border-bottom:10px solid;
 }
 
 .video{
   padding:30px 0 0 0;
 
   iframe{
+    float: left;
     margin-top:15px;
     min-height:250px;
+    border-radius: 5px;
+    overflow: hidden;
 
     @media only screen and (min-width:@bp_sm){
       min-height:350px;
@@ -2322,6 +2325,14 @@ a{
   &__desc{
     margin-top:0;
     padding: 0 35px;
+  }
+
+  &__credits{
+    margin-top: 10px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    opacity:0.8;
   }
 }
 
