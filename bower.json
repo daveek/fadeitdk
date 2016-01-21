@@ -14,7 +14,7 @@
     "angular-scroll": "~0.6.4",
     "angular-translate": "~2.6.0",
     "angular-ui-utils": "~0.2.1",
-    "a0-angular-storage": "~0.0.6",
+    "a0-angular-storage": "~0.0.13",
     "bootstrap-fadeit": "fadeit/bootstrap#v3.5.2",
     "fingerprint": "~0.5.4",
     "font-awesome": "fadeit/Font-Awesome#v4.4.0",

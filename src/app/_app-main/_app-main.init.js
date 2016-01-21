@@ -1,3 +1,25 @@
+/* Bugfix for Safari's private window */
+function isLocalStorageNameSupported()
+{
+  var testKey = 'test', storage = window.sessionStorage;
+  try
+  {
+    storage.setItem(testKey, '1');
+    storage.removeItem(testKey);
+    return localStorageName in win && win[localStorageName];
+  }
+  catch (error)
+  {
+    //Prevent "QUOTA_EXCEEDED_ERR: DOM Exception 22" error that will break the app.
+    Storage.prototype._setItem = Storage.prototype.setItem;
+    Storage.prototype.setItem = function() {};
+    return false;
+  }
+}
+
+isLocalStorageNameSupported();
+
+
 /*
  * This variable contains the root module name, root vendor dependecies and
  * exposes the pushAfterBootstrap method.
@@ -11,7 +33,7 @@
  * See more in ./gruntfile.js, 'html2js' task.
  *
  */
-var fadeitConfig = (function applicationInit(){
+ var fadeitConfig = (function applicationInit(){
   var appRootModuleName = 'fadeit';
   var appMainVendorDependencies = ['ui.router', 'sharedViewsModule', 'angularLoad', 'duScroll', 'pascalprecht.translate', 'ngSanitize', 'angulike', 'angular-storage'];
 
@@ -36,7 +58,7 @@ var fadeitConfig = (function applicationInit(){
  * performance is not the target in the build phase.
  *
  */
-angular.module('sharedViewsModule', []);
+ angular.module('sharedViewsModule', []);
 
 
 /*
@@ -44,13 +66,13 @@ angular.module('sharedViewsModule', []);
  * bootstrapped on 'angular.ready'.
  *
  */
-angular.module(fadeitConfig.appRootModuleName, fadeitConfig.appMainVendorDependencies);
+ angular.module(fadeitConfig.appRootModuleName, fadeitConfig.appMainVendorDependencies);
 
-angular.element(document).ready(function applicationBootstrap() {
+ angular.element(document).ready(function applicationBootstrap() {
     //Fixing facebook bug with redirect
     if (window.location.hash === '#_=_') {
       window.location.hash = '#!';
     }
 
     angular.bootstrap(document, [fadeitConfig.appRootModuleName]);
-});
+  });
