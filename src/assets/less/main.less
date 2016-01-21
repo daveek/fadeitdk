@@ -1300,6 +1300,8 @@ a{
 
     .expertise-inner{
       margin-top:30px;
+      border-top: 1px solid whitesmoke;
+      padding-top: 10px;
     }
 
     @media only screen and (min-width:@bp_md){
@@ -1392,7 +1394,7 @@ a{
 
   /*expertise-row*/
   .expertise-row{
-    .col(@ws, b);
+    .col(rgba(234, 234, 234, 0.63), b);
     margin-bottom:0;
     margin-top:0;
     padding:15px 30px;
@@ -1401,7 +1403,6 @@ a{
     .inline-block();
     width:100%;
     .fl();
-    .animate(@animation_time_short, @transition_default);
     .col(@b);
 
     &:nth-child(1){
@@ -1410,37 +1411,33 @@ a{
     }
 
     &:nth-child(odd){
-      .col(@w, b);
-    }
-
-    &:hover, &:focus{
-      .col(lighten(@g7, 5%), b);
-      .col(lighten(@b, 5%));
-      .animate(@animation_time_short, @transition_default);
+      .col(rgba(255, 255, 255, 0.6), b);
     }
 
     a{
-      h2{
-        .col(@b);
-      }
-    }
+      outline: 0;
+      transition: color @animation_time_short ease-in-out;
 
-    .active-row{
-      a{
-        h2{
+      h2, i{
+        .col(@b);
+        transition: all @animation_time ease-in-out;
+      }
+
+      &:hover, &:focus{
+        h2, i{
           .col(@col_text_gray);
+          transition: all @animation_time ease-in-out;
+        }
+
+        i{
+          transform: scale(1.2);
         }
       }
     }
 
     span{
-      font-size:@m_fs_h3;
-      line-height:@m_fs_h3;
-
-      @media only screen and (min-width:@bp_md){
-        font-size:@fs_h3;
-        line-height:@fs_h3;
-      }
+      font-size:inherit;
+      line-height:inherit;
     }
 
     @media only screen and (min-width:@bp_md){
@@ -1459,26 +1456,39 @@ a{
     }
 
     h2{
-      font-size:@m_fs_h3;
-      line-height:@m_lh_h3;
       margin-bottom:15px;
-
-      @media only screen and (min-width:@bp_sm){
-        font-size:@fs_h3;
-        line-height:@lh_h3;
-      }
+      padding-right:30px;
     }
 
     i.fa{
+      z-index:-1;
+      position: absolute;
       margin-left:10px;
       line-height:@m_lh_h3;
       .col(@g3);
       .fr();
       width: 30px;
       text-align: center;
+      right: 0;
+      transition: all @animation_time_v_short ease-in-out;
 
       @media only screen and (min-width:@bp_sm){
         line-height:@lh_h3;
+      }
+    }
+
+    .active-row{
+      overflow:hidden;
+
+      a{
+        h2{
+          color:#999999;
+        }
+      }
+
+      .fa{
+        color:@b;
+        transform:scale(1.2);
       }
     }
   }
