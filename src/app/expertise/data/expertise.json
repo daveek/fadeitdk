@@ -30,6 +30,16 @@
     }
   },
   {
+    "id": "react-development",
+    "iconClass": "connectdevelop",
+    "title": "EXPERTISE_REACT_DEVELOPMENT_TITLE",
+    "description": "EXPERTISE_REACT_DEVELOPMENT",
+    "uisref": {
+      "da": "react-udvikling",
+      "en": "react-development"
+    }
+  },
+  {
     "id": "webshop-development",
     "iconClass": "shopping-cart",
     "title": "EXPERTISE_WEBSHOP_DEVELOPMENT_TITLE",

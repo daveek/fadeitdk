@@ -149,6 +149,13 @@ function toolboxService() {
       circles : 4,
       font : 30,
       bold : false
+    },
+    {
+      name : 'React',
+      size : 190,
+      circles : 2,
+      font : 34,
+      bold : false
     }];
 
     return technologies;

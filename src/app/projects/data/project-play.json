@@ -88,6 +88,18 @@
       }
     }
   },
+  "videos": {
+    "heading": "PDET_PLAY_VID_H",
+    "content": [
+      {
+        "id": "dCkXVqrPi7s",
+        "title": "PDET_PLAY_V1_TITLE",
+        "description": "PDET_PLAY_V1_DESC",
+        "duration": "PT1M21S",
+        "uploadDate": "2015-12-01T10:20:50.39Z"
+      }
+    ]
+  },
   "content": {
     "shortDescription": "PLIST_PLAY_DESC",
     "intro": {

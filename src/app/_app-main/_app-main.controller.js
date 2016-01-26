@@ -147,7 +147,7 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
   vm.changeLanguage = function changeLanguage(lang, langId){
     $translate.use($filter('translate')(lang));
 
-    localStorage.setItem('langStore', JSON.stringify({
+    store.set('langStore', JSON.stringify({
       'lang': $filter('translate')(langId)
     }));
 

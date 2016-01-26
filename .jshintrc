@@ -102,6 +102,9 @@
       "process": true,
       "WOW": true,
       "Prism": true,
-      "vm": true
+      "vm": true,
+      "Storage": true,
+      "localStorageName": true,
+      "win": true
     } // additional predefined global variables
 }

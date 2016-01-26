@@ -1,5 +1,5 @@
 <section class="container-fluid main-container secondary-page-container">
-  <section class="row-fluid secondary-page-row project-fluid">
+  <section class="row-fluid secondary-page-row project-fluid" itemscope itemtype="http://schema.org/Article">
     <section class="outstanding-container row-fluid binary-container" data-ng-if="vm.project.error">
       <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5">
         <section class="inner-text">
@@ -32,7 +32,7 @@
       </section>
     </section>
 
-    <section itemscope itemtype="http://schema.org/Article" class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5" data-ng-if="!vm.project.error">
+    <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5" data-ng-if="!vm.project.error">
 
       <section class="row-fluid project-intro-fluid">
         <section class="col-xs-24">
@@ -67,8 +67,7 @@
       </section>
 
 
-      <article class="project-details"
-      data-ng-style="{'background': vm.project.color.light, 'color': vm.project.color.darkText }">
+      <article class="project-details" data-ng-style="{'background': vm.project.color.light, 'color': vm.project.color.darkText }">
         <section class="paragraph-fluid clearfix">
           <h3 itemprop="headline" translate>{{vm.project.content.mainHeading}}</h3>
         </section>
@@ -78,8 +77,40 @@
           <p itemprop="text" class="regular-text" data-ng-style="{'color': vm.project.color.darkText}" translate>{{text}}</p>
         </section>
       </article>
+    </section>
+
+    <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 project-videos" data-ng-if="!vm.project.error && vm.project.videos">
+      <h3 class="project-videos__headline" itemprop="headline" translate>{{vm.project.videos.heading}}</h3>
+    </section>
+
+    <section class="col-xs-24 project-video-container project-videos fadeit-animate animated fadeIn" data-wow-delay="1s" data-wow-offset="50" ng-if="!vm.project.error && vm.project.videos" data-ng-style="{'background': vm.project.color.coverBackground, 'color': vm.project.color.lightAccent, 'border-color': vm.project.color.lightAccent }">
+      <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5 video" ng-repeat="video in vm.project.videos.content">
+        <h3 class="video__name" itemprop="name" translate>
+          {{video.title}}
+        </h3>
+
+        <p class="video__desc" itemprop="description" translate>
+          {{video.description}}
+        </p>
+
+        <meta itemprop="duration" content="{{video.duration}}" />
+        <meta itemprop="thumbnailUrl"
+            content="https://img.youtube.com/vi/{{video.id}}/maxresdefault.jpg" />
+        <meta itemprop="URL"
+            content="https://www.youtube.com/watch?v={{video.id}}" />
+        <meta itemprop="embedURL"
+            content="https://www.youtube.com/watch?v={{video.id}}" />
+
+        <iframe width="100%" height="100%" ng-src="{{vm.getVideoUrl(video.id)}}" frameborder="0" allowfullscreen></iframe>
+
+        <p class="video__credits" ng-if="video.credits">
+          <small translate>{{video.credits}}</small>
+        </p>
+      </section>
+    </section>
 
 
+    <section class="default-inner-container col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5" data-ng-if="!vm.project.error">
       <article class="project-details project-extras" data-ng-if='vm.project.url || vm.project.images.screens'>
         <h3 itemprop="headline" translate>{{vm.project.images.heading}}</h3>
 

@@ -78,6 +78,19 @@
       }
     }
   },
+  "videos": {
+    "heading": "PDET_OLS_VID_H",
+    "content": [
+      {
+        "id": "TXBbaotJxGk",
+        "title": "PDET_OLS_V1_TITLE",
+        "description": "PDET_OLS_V1_DESC",
+        "duration": "PT1M",
+        "uploadDate": "2016-01-19T10:20:50.39Z",
+        "credits": "PDET_OLS_VID_CRED"
+      }
+    ]
+  },
   "content": {
     "shortDescription": "PLIST_OLS_DESC",
     "intro": {
