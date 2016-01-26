@@ -158,8 +158,14 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
   //set current language id on first load
   vm.langId = $filter('translate')('ID');
 
-  if (!/PhantomJS/.test($window.navigator.userAgent)) {
-    //skip wow init if running prerender
+  if (/PhantomJS/.test($window.navigator.userAgent)) {
+    //running prerender, we need to remove noscript as google indexes it :/
+    var body = document.getElementsByTagName('body')[0];
+    var noscript = document.getElementsByTagName('noscript')[0];
+    body.removeChild(noscript);
+  }
+  else{
+    //not running prerender, we can init wow.js
     wow = new WOW(
       {
         boxClass:     'fadeit-animate',
