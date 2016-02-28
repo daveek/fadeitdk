@@ -19,7 +19,7 @@
       },
       {
         "type": "p",
-        "text": "This is a follow-up post to our <a href=\"http://fadeit.dk/blog/post/managing-angular-translate-translations\" target=\"blank\">previous</a> translation management article. To recap - in that article we solved the issue of loading 'fresh' translation on development server using nginx and proxying translation requests to the api which in turn will fetch new translations from Google Spreadsheets. It can be seen as overkill - this flow complicates nginx configuration, slows down translation loading on every refresh and will make a ton of (unnecessary) requests while developing. While it's nice to always get the latest translations, truth is that most of the time you don't need to fetch translations from the cloud. In this post we'll explore loading translations only during the build process, thus eliminating the need to proxy requests and write api endpoint in the first place."
+        "text": "This is a follow-up post to our <a href=\"https://fadeit.dk/blog/post/managing-angular-translate-translations\" target=\"blank\">previous</a> translation management article. To recap - in that article we solved the issue of loading 'fresh' translation on development server using nginx and proxying translation requests to the api which in turn will fetch new translations from Google Spreadsheets. It can be seen as overkill - this flow complicates nginx configuration, slows down translation loading on every refresh and will make a ton of (unnecessary) requests while developing. While it's nice to always get the latest translations, truth is that most of the time you don't need to fetch translations from the cloud. In this post we'll explore loading translations only during the build process, thus eliminating the need to proxy requests and write api endpoint in the first place."
       },
       {
           "type": "h",
@@ -28,7 +28,7 @@
       },
       {
           "type": "p",
-          "text": "Since writing previous post, I have also changed my mind about lazy-loading translations using partial loader. This is primarily due to the lengths I had to go to cloak translations while they're loading, especially considering that the size of the translations file is marginal for most applications. By packaging translations in the same minified file as the application I don't have to worry about <a href=\"http://fadeit.dk/blog/post/preload-angular-translate-partial-loader\" target=\"blank\">pre-loading</a> translations or flickering as they are being loaded. So we will introduce an extra task to our workflow that will fetch translations from Google Spreadsheets and converts it to a javascript file ready to be used by angular-translate."
+          "text": "Since writing previous post, I have also changed my mind about lazy-loading translations using partial loader. This is primarily due to the lengths I had to go to cloak translations while they're loading, especially considering that the size of the translations file is marginal for most applications. By packaging translations in the same minified file as the application I don't have to worry about <a href=\"https://fadeit.dk/blog/post/preload-angular-translate-partial-loader\" target=\"blank\">pre-loading</a> translations or flickering as they are being loaded. So we will introduce an extra task to our workflow that will fetch translations from Google Spreadsheets and converts it to a javascript file ready to be used by angular-translate."
       },
       {
           "type": "h",
