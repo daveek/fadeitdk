@@ -189,6 +189,8 @@
         <section id="disqus_thread" class="col-xs-24 col-md-22 col-md-offset-1 col-lg-16 col-lg-offset-4 col-xl-14 col-xl-offset-5 col-xxl-12 col-xxl-offset-6"></section>
         <script type="text/javascript">
             var disqus_shortname = 'fadeit';
+            var disqus_identifier = window.location.pathname.split("/").pop();
+
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
