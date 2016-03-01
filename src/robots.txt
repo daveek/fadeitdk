@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://fadeit.dk/sitemap.xml
+Sitemap: https://fadeit.dk/sitemap.xml

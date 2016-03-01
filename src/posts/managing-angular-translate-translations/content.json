@@ -14,7 +14,7 @@
     "content": [
       {
         "type": "p",
-        "text": "<b>Update</b>: I have written a <a href=\"http://fadeit.dk/blog/post/managing-translations-with-gulp-or-grunt\">follow-up post</a> where I load translations during gulp/grunt build process instead of nginx proxy."
+        "text": "<b>Update</b>: I have written a <a href=\"https://fadeit.dk/blog/post/managing-translations-with-gulp-or-grunt\">follow-up post</a> where I load translations during gulp/grunt build process instead of nginx proxy."
       },
       {
           "type": "h",

@@ -14,7 +14,7 @@
     "content": [
       {
         "type": "p",
-        "text": "<b>Update</b>: I have written a follow-up post solving the same problem using ui-router <a href=\"http://fadeit.dk/blog/post/angular-translate-ui-router-seo\">here</a>"
+        "text": "<b>Update</b>: I have written a follow-up post solving the same problem using ui-router <a href=\"https://fadeit.dk/blog/post/angular-translate-ui-router-seo\">here</a>"
       },
       {
         "type": "h",

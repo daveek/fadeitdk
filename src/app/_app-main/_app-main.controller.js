@@ -158,17 +158,25 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
   //set current language id on first load
   vm.langId = $filter('translate')('ID');
 
-  //init wow
-  wow = new WOW(
-    {
-      boxClass:     'fadeit-animate',
-      animateClass: 'animated',
-      offset:       0,
-      mobile:       false,
-      live:         true
-    }
-  );
-  wow.init();
+  if (/PhantomJS/.test($window.navigator.userAgent)) {
+    //running prerender, we need to remove noscript as google indexes it :/
+    var body = document.getElementsByTagName('body')[0];
+    var noscript = document.getElementsByTagName('noscript')[0];
+    body.removeChild(noscript);
+  }
+  else{
+    //not running prerender, we can init wow.js
+    wow = new WOW(
+      {
+        boxClass:     'fadeit-animate',
+        animateClass: 'animated',
+        offset:       0,
+        mobile:       false,
+        live:         true
+      }
+    );
+    wow.init();
+  }
 
   /*
    * Hackers gotta hack

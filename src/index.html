@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+ ███████╗ █████╗ ██████╗ ███████╗██╗████████╗
+ ██╔════╝██╔══██╗██╔══██╗██╔════╝██║╚══██╔══╝
+ █████╗  ███████║██║  ██║█████╗  ██║   ██║
+ ██╔══╝  ██╔══██║██║  ██║██╔══╝  ██║   ██║
+ ██║     ██║  ██║██████╔╝███████╗██║   ██║
+ ╚═╝     ╚═╝  ╚═╝╚═════╝ ╚══════╝╚═╝   ╚═╝
+-->
 <html lang="{{activeLang}}" xmlns="http://www.w3.org/1999/xhtml" data-ng-controller="RootController as root">
 <head>
   <title data-ng-bind="root.htmlTitle">fadeit - software udviklingsvirksomhed</title>
@@ -27,8 +35,8 @@
   <meta property="og:description" content="{{root.pageDesc}}">
   <meta property="og:url" content="{{root.pageURL}}">
   <!-- Dynamic OG images -->
-  <meta property="og:image" content="http://fadeit.dk/{{img.slug}}/{{img.id}}/{{img.image}}" ng-repeat="img in root.pageImages">
-  <meta property="og:image" content="http://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
+  <meta property="og:image" content="https://fadeit.dk/{{img.slug}}/{{img.id}}/{{img.image}}" ng-repeat="img in root.pageImages">
+  <meta property="og:image" content="https://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
   <meta property="og:type" content="website">
 
   <!-- Twitter META -->
@@ -36,8 +44,8 @@
   <meta name="twitter:description" content="{{root.pageDesc}}">
   <meta name="twitter:url" content="{{root.pageURL}}">
   <!-- Dynamic Twitter images -->
-  <meta name="twitter:image" content="http://fadeit.dk/{{img.slug}}/{{img.id}}/{{img.image}}" ng-repeat="img in root.pageImages">
-  <meta name="twitter:image" content="http://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
+  <meta name="twitter:image" content="https://fadeit.dk/{{img.slug}}/{{img.id}}/{{img.image}}" ng-repeat="img in root.pageImages">
+  <meta name="twitter:image" content="https://fadeit.dk/src/assets/img/brand/fadeit_logo_square.png">
 
   <!-- Fav Icon -->
   <link href="/src/assets/img/brand/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -95,8 +103,8 @@
       </section>
 
       <section class="col-xs-24 col-md-4 footer-social">
-        <a itemprop="url" href="http://fadeit.dk" class="social-link" hidden target="_blank"></a>
-        <a itemprop="sameAs" href="http://twitter.com/fadeitdk" class="social-link" target="_blank"><i class="fa fa-twtr"></i></a>
+        <a itemprop="url" href="https://fadeit.dk" class="social-link" hidden target="_blank"></a>
+        <a itemprop="sameAs" href="https://twitter.com/fadeitdk" class="social-link" target="_blank"><i class="fa fa-twtr"></i></a>
         <a itemprop="sameAs" href="https://github.com/fadeit" class="social-link" target="_blank"><i class="fa fa-gthb"></i></a>
         <a itemprop="sameAs" href="https://www.linkedin.com/company/fadeit" class="social-link" target="_blank"><i class="fa fa-lnkdn"></i></a>
       </section>
