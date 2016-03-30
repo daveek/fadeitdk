@@ -49,6 +49,5 @@ $ grunt prod
 
 ===================
 ####About fadeit
-We love and are really good at designing &amp; developing beautiful software, web and mobile applications.
-
+We build awesome software, web and mobile applications.
 See more at [fadeit.dk](http://fadeit.dk)
