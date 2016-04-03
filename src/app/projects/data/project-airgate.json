@@ -1,0 +1,82 @@
+{
+  "id": "airgate",
+  "color": {
+    "links": "#5477AE",
+    "base": "#5477AE",
+    "accent": "#259471",
+    "text": "#FFFFFF",
+    "darkText": "#333333",
+    "light": "#F9F9F9",
+    "lightAccent": "#E7E8EA",
+    "coverBackground": "#9980AE"
+  },
+  "title": "PLIST_AIRGATE_TITLE",
+  "shortDescription": "PLIST_AIRGATE_DESC",
+  "link": "story/airgate",
+  "uiRoute": "/story/airgate",
+  "websites": [
+    {
+      "href": "http://my.airgate.dk",
+      "text": "my.airgate.dk"
+    }
+  ],
+  "tags": {
+    "0": {
+      "name": "ReactJS",
+      "srefen": "react-development",
+      "srefdk": "react-udvikling"
+    },
+    "1": {
+      "name": "NodeJS",
+      "srefen": "nodejs-development",
+      "srefdk": "nodejs-udvikling"
+    },
+    "2": {
+      "name": "Redux",
+      "srefen": "react-development",
+      "srefdk": "react-udvikling"
+    },
+    "3": {
+      "name": "Webpack",
+      "srefen": "it-automation",
+      "srefdk": "it-automation"
+    },
+    "4": {
+      "name": "Puppet",
+      "srefen": "it-automation",
+      "srefdk": "it-automation"
+    }
+  },
+  "images": {
+    "heading": "PDET_AIRGATE_IMG_H",
+    "cover": "cover_sm@2x.jpg",
+    "screens": {
+      "0": {
+        "filename": "dashboard.png",
+        "title": "PDET_AIRGATE_DASHBOARD_T",
+        "desc": "PDET_AIRGATE_DASHBOARD_D"
+      },
+      "1": {
+        "filename": "users.png",
+        "title": "PDET_AIRGATE_COMPANY_T",
+        "desc": "PDET_AIRGATE_COMPANY_D"
+      },
+      "2": {
+        "filename": "iot.png",
+        "title": "PDET_AIRGATE_IOT_T",
+        "desc": "PDET_AIRGATE_IOT_D"
+      }
+    }
+  },
+  "content": {
+    "shortDescription": "PLIST_AIRGATE_DESC",
+    "intro": {
+      "heading": "PDET_AIRGATE_INTRO_T",
+      "text": "PDET_AIRGATE_INTRO_D"
+    },
+    "mainHeading": "PDET_AIRGATE_MAIN_T",
+    "paragraphs": {
+      "0": "PDET_AIRGATE_P_1"
+    }
+  }
+}

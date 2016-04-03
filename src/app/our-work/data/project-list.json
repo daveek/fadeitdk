@@ -27,6 +27,33 @@
     }
   },
   {
+    "id": "airgate",
+    "color": {
+      "links": "#4998DE",
+      "base": "#5477AE",
+      "accent": "#3C80BC",
+      "text": "#FFFFFF",
+      "darkText": "#333333",
+      "light": "#FAFAFA",
+      "lightAccent": "#E7E8EA",
+      "coverBackground": "#1A1B1B"
+    },
+    "title": "PLIST_AIRGATE_TITLE",
+    "shortDescription": "PLIST_AIRGATE_DESC",
+    "link": "story/airgate",
+    "uiRoute": "/story/airgate",
+    "tags": {
+      "0": "NodeJS",
+      "1": "ReactJS",
+      "2": "Redux",
+      "3": "Webpack",
+      "4": "Puppet"
+    },
+    "images": {
+      "cover": "cover_sm@2x.jpg"
+    }
+  },
+  {
     "id": "hopper",
     "color": {
       "links": "#4998DE",
