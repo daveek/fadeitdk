@@ -557,7 +557,7 @@ module.exports = function(grunt) {
    * application into the './application' directory.
    *
    */
-  grunt.registerTask('default', ['build', 'karma:unit', 'watch']);
+  grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('build', [
     'shell:translations',
     'clean:build_clean',

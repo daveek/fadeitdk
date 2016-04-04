@@ -1,14 +1,14 @@
 {
   "id": "airgate",
   "color": {
-    "links": "#5477AE",
+    "links": "#9980AE",
     "base": "#5477AE",
-    "accent": "#259471",
+    "accent": "#48699C",
     "text": "#FFFFFF",
     "darkText": "#333333",
     "light": "#F9F9F9",
     "lightAccent": "#E7E8EA",
-    "coverBackground": "#9980AE"
+    "coverBackground": "#5477AE"
   },
   "title": "PLIST_AIRGATE_TITLE",
   "shortDescription": "PLIST_AIRGATE_DESC",
@@ -18,6 +18,10 @@
     {
       "href": "http://my.airgate.dk",
       "text": "my.airgate.dk"
+    },
+    {
+      "href": "http://airgate.dk",
+      "text": "airgate.dk"
     }
   ],
   "tags": {

@@ -29,14 +29,14 @@
   {
     "id": "airgate",
     "color": {
-      "links": "#4998DE",
+      "links": "#9980AE",
       "base": "#5477AE",
-      "accent": "#3C80BC",
+      "accent": "#48699C",
       "text": "#FFFFFF",
       "darkText": "#333333",
-      "light": "#FAFAFA",
+      "light": "#F9F9F9",
       "lightAccent": "#E7E8EA",
-      "coverBackground": "#1A1B1B"
+      "coverBackground": "#5477AE"
     },
     "title": "PLIST_AIRGATE_TITLE",
     "shortDescription": "PLIST_AIRGATE_DESC",
