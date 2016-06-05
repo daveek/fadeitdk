@@ -162,7 +162,12 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
     //running prerender, we need to remove noscript as google indexes it :/
     var body = document.getElementsByTagName('body')[0];
     var noscript = document.getElementsByTagName('noscript')[0];
-    body.removeChild(noscript);
+    try{
+      body.removeChild(noscript);
+    }
+    catch(err){
+      //Quick hack around tests being run in PhantomJS as well and resulting DomNotFoundException
+    }
   }
   else{
     //not running prerender, we can init wow.js

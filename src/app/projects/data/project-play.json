@@ -15,12 +15,8 @@
   "shortDescription": "PLIST_PLAY_DESC",
   "websites": [
     {
-      "href": "https://informationscreen.com",
-      "text": "informationscreen.com"
-    },
-    {
-      "href": "http://tryplay.dk",
-      "text": "tryplay.dk"
+      "href": "https://playsignage.com",
+      "text": "playsignage.com"
     }
   ],
   "link": "story/play",
