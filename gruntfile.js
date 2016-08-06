@@ -230,7 +230,7 @@ module.exports = function(grunt) {
       },
       compile_sitemap: {
         cwd: './src',
-        src: ['sitemap.xml'],
+        src: ['sitemap.xml', 'sitemap-main.xml'],
         dest: '<%= compile_dir %>',
         expand: true,
       },
