@@ -46,6 +46,7 @@ module.exports = function(grunt) {
         },
         options: {
           port: 8008,
+          startPath: '/da',
           server: {
             baseDir: "./build",
             middleware: function(req, res, next) {
@@ -68,6 +69,7 @@ module.exports = function(grunt) {
         },
         options: {
           port: 8009,
+          startPath: '/da',
           server: {
             baseDir: "./application",
             middleware: function(req, res, next) {
