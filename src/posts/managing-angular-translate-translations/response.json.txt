@@ -1,2 +1,0 @@
-curl http://127.0.0.1:5000/translation/en-us/register.json
-{"WELCOME": "Welcome"}

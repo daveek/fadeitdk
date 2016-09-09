@@ -1,2 +1,0 @@
-<div ng-if="myVar"></div>
-<div ng-show="myVar"></div>

@@ -199,12 +199,6 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true
       },
-      build_blog_posts: {
-        cwd: './src',
-        src: ['posts/**/*'],
-        dest: '<%= build_dir %>',
-        expand: true
-      },
       build_prism_js: {
         cwd: './src/assets/js',
         src: ['prism.js'],
@@ -234,12 +228,6 @@ module.exports = function(grunt) {
         dest: '<%= compile_dir %>',
         expand: true,
       },
-      compile_feed: {
-        cwd: './src',
-        src: ['blog-feed.xml'],
-        dest: '<%= compile_dir %>',
-        expand: true,
-      },
       compile_app_assets: {
         cwd: '<%= build_dir %>',
         src: ['src/assets/**/*', '!src/assets/**/*.md'],
@@ -255,12 +243,6 @@ module.exports = function(grunt) {
       compile_app_data: {
         cwd: '<%= build_dir %>',
         src: ['data/*.json'],
-        dest: '<%= compile_dir %>',
-        expand: true
-      },
-      compile_blog_posts: {
-        cwd: '<%= build_dir %>',
-        src: ['posts/**/*'],
         dest: '<%= compile_dir %>',
         expand: true
       },
@@ -509,7 +491,7 @@ module.exports = function(grunt) {
     watch: {
       src_js: {
         files: ['./src/**/*.js', './src/**/*.json', './src/**/*.txt'],
-        tasks: ['newer:jsonlint', 'newer:jshint:src_js', 'newer:copy:build_app_js', 'newer:copy:build_app_data', 'newer:copy:build_blog_posts']
+        tasks: ['newer:jsonlint', 'newer:jshint:src_js', 'newer:copy:build_app_js', 'newer:copy:build_app_data']
       },
       src_html: {
         files: ['./src/**/*.html', '!./src/index.html'],
@@ -574,7 +556,6 @@ module.exports = function(grunt) {
     'copy:build_protractor',
     'copy:build_karma',
     'copy:build_assets',
-    'copy:build_blog_posts',
     'copy:build_prism_js',
     'concat:build_toolbox_js',
     'less:build_less',
@@ -594,10 +575,8 @@ module.exports = function(grunt) {
     'copy:compile_app_assets',
     'copy:compile_index',
     'copy:compile_sitemap',
-    'copy:compile_feed',
     'copy:compile_asset_js',
     'copy:compile_app_data',
-    'copy:compile_blog_posts',
     'copy:compile_google_verification'
   ]);
   grunt.registerTask('test', ['karma:unit', 'protractor:build']);

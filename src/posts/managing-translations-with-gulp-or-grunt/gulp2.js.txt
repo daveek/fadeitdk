@@ -1,2 +1,0 @@
-var gulpsync = require('gulp-sync')(gulp);
-gulp.task('build', gulpsync.sync([['translations', 'clean'], ['html', 'scripts']]));

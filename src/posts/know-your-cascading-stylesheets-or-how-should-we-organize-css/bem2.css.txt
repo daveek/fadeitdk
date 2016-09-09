@@ -1,4 +1,0 @@
-.navigation {}
-  .navigation__logo {}
-     .navigation__logo__image {}
-  .navigation--collapsed {}

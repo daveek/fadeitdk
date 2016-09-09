@@ -1,8 +1,0 @@
-shell: {
-  translations: {
-    options: {
-      stdout: true
-    },
-    command: 'python3 src/translations.py'
-  }                                                                                                                                                   
-}
