@@ -45,6 +45,9 @@ function rootController($scope, $window, $log, $translate, $filter, $state, $roo
         }
     }
 
+    //send pageview event to google analytics
+    ga('send', 'pageview', $location.url()); // jshint ignore:line
+
     /*
      * TODO: document this part
      * TODO: revise -> what about the 'SWITCH' translation key?

@@ -143,7 +143,9 @@
       'clientId': new Fingerprint().get()
     });
     ga('set', 'anonymizeIp', true);
-    ga('send', 'pageview');
+
+    // This is done by the router, on every route change
+    //ga('send', 'pageview');
 
   </script>
 </html>
