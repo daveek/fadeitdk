@@ -21,7 +21,6 @@ function applyController($scope, $rootScope, $state){
     // attach the rest of the data to form
     formData.append('name', application.name);
     formData.append('email', application.email);
-    formData.append('education', application.education);
     formData.append('message', application.message);
 
     // send the application to backend
