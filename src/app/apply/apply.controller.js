@@ -1,13 +1,14 @@
 angular.module('fadeit.apply').controller('ApplyController', applyController);
 
-applyController.$inject = ['$scope'];
-function applyController($scope){
-  $scope.application = {};
-  $scope.apply = function (application) {
-    /* TODO:
-     - Make sure that email and name is present
-     - add success and failure feedback in frontend
-    */
+applyController.$inject = ['$scope', '$rootScope', '$state'];
+function applyController($scope, $rootScope, $state){
+  var vm = this;
+  vm.application = {};
+  vm.submitting = null;
+  vm.applyError = null;
+
+  vm.submitApplyForm = function (application) {
+    vm.submitting = true;
     var formData = new FormData();
 
     // attach CV to form, if found
@@ -28,9 +29,11 @@ function applyController($scope){
     xhr.open('POST', '/application', true);
     xhr.onload = function () {
       if (xhr.status === 200) {
-        alert('Success!');
+        $state.go('app.thanks', {lang: $rootScope.activeLang});
       } else {
-        alert('An error occurred!');
+        vm.applyError = 'APPLY_FORM_ERROR';
+        vm.submitting = false;
+        $scope.$apply();
       }
     };
     xhr.send(formData);

@@ -28,35 +28,61 @@
           </h5>
         </section>
 
-        <section id="formWrapper" ng-controller="ApplyController" class="col-xs-24 col-sm-24 col-md-12 col-md-offset-3 col-lg-10 col-xl-8 col-xl-offset-6">
-          <form id="application-form"><div><div class="form-group form-item">
-                <label for="edit-submitted-name">name <span class="form-required" title="This field is required.">*</span></label>
-                <input class="form-control form-text required" id="edit-submitted-name" ng-model="application.name" value="" size="60" maxlength="128" type="text">
-              </div>
-              <div class="form-group form-item">
-                <label for="edit-submitted-email">email <span class="form-required" title="This field is required.">*</span></label>
-                <input class="email form-control form-text form-email required" id="edit-submitted-email" ng-model="application.email" value="" size="60" type="email">
-              </div>
-              <div class="form-group form-item">
-                <label for="edit-submitted-education">education </label>
-                <input class="form-control form-text" id="edit-submitted-education" ng-model="application.education" value="" size="60" maxlength="128" type="text">
-              </div>
-              <div id="edit-submitted-cv-ajax-wrapper"><div class="form-group clearfix form-item">
-                  <label for="edit-submitted-cv-upload">CV </label>
-                  <div id="edit-submitted-cv" class="form-control form-managed-file">
-                    <input accept="application/pdf,text/html,text/plain" id="cv-upload" size="22" class="form-file" type="file">
-                  </div>
-                  <div class="description">Files must be less than <strong>10 MB</strong>.<br>Allowed file types: <strong>html pdf txt</strong>.</div>
+        <section id="formWrapper" ng-controller="ApplyController" class="col-xs-24 col-md-11 col-md-offset-1 col-lg-9 col-lg-offset-3 col-xl-7 col-xl-offset-5">
+          <div class="alert alert-danger" ng-if="vm.applyError" translate>
+            {{vm.applyError}}
+          </div>
+
+          <form id="application-form" name="applyForm" ng-submit="vm.submitApplyForm(vm.application)" ng-show="!submitting">
+            <div class="form-group form-item">
+              <label for="edit-submitted-name" translate>APPLY_NAME</label>
+              <input class="form-control form-text" ng-model="vm.application.name" type="text" name="name" required>
+            </div>
+
+            <div ng-messages="applyForm.name.$error" ng-if="applyForm.name.$dirty">
+              <div class="alert alert-warning" ng-message="required" translate>APPLY_NAME_REQUIRED</div>
+            </div>
+
+            <div class="form-group form-item">
+              <label for="edit-submitted-email" translate>APPLY_EMAIL</label>
+              <input class="email form-control form-text form-email" id="edit-submitted-email" ng-model="vm.application.email" type="email" name="email" required>
+            </div>
+
+            <div ng-messages="applyForm.email.$error" ng-if="applyForm.email.$dirty">
+              <div class="alert alert-warning" ng-message="required" translate>APPLY_EMAIL_REQUIRED</div>
+
+              <div class="alert alert-warning" ng-message="email" translate>APPLY_EMAIL_INVALID</div>
+            </div>
+
+            <div class="form-group form-item">
+              <label for="edit-submitted-education" translate>APPLY_EDUCATION</label>
+              <input class="form-control form-text" id="edit-submitted-education" ng-model="vm.application.education" type="text">
+            </div>
+            <div id="edit-submitted-cv-ajax-wrapper">
+              <div class="form-group clearfix form-item">
+                <label for="edit-submitted-cv-upload" translate>APPLY_CV</label>
+                <div id="edit-submitted-cv" class="form-control form-managed-file">
+                  <input accept="application/pdf,text/html,text/plain" id="cv-upload" size="22" class="form-file" type="file">
                 </div>
-              </div><div class="form-group form-item">
-                <label for="edit-submitted-thoughts">message </label>
-                <div class="form-textarea-wrapper resizable"><textarea ng-model="application.message" value="" placeholder="Short introduction" class="form-control form-textarea" id="edit-submitted-thoughts" cols="60" rows="5"></textarea></div>
-              </div>
-              <div class="form-actions">
-                <input ng-click="apply(application)" class="webform-submit button-primary form-submit" value="Submit" type="submit">
+                <div class="description" translate>APPLY_FILES_INFO</div>
               </div>
             </div>
+
+            <div class="form-group form-item">
+              <label for="edit-submitted-thoughts" translate>APPLY_MESSAGE</label>
+              <div class="form-textarea-wrapper resizable">
+                <textarea ng-model="vm.application.message" placeholder="Type a short introduction" class="form-control form-textarea" id="edit-submitted-thoughts" cols="60" rows="5"></textarea></div>
+            </div>
+
+            <div class="form-actions">
+              <button class="webform-submit btn btn-primary button-primary form-submit" type="submit" ng-disabled="applyForm.$invalid" translate>APPLY_SUBMIT</button>
+            </div>
           </form>
+
+          <section ng-show="submitting">
+            <h3><span translate>APPLY_LOAD_TITLE</span> <i class='fa fa-cog fa-spin'></i></h3>
+            <p translate>APPLY_LOAD_DESC</p>
+          </section>
         </section>
       </section>
 

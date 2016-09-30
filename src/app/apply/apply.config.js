@@ -22,7 +22,7 @@ function applyConfig($stateProvider){
       pageTitle: 'APPLY_PAGE_TITLE',
       pageDesc: 'APPLY_TEXT_1'
     }
-  }).state('thanks', {
+  }).state('app.thanks', {
     url: '/thanks',
     controller: 'ApplyController',
     controllerAs: 'vm',
