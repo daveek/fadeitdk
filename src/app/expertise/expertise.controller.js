@@ -1,7 +1,7 @@
 angular.module('fadeit.expertise').controller('ExpertiseConroller', expertiseController);
 
-expertiseController.$inject = ['$rootScope', '$stateParams', '$state', '$document', '$translate', '$filter', 'ExpertiseService', '$scope', '$rootScope'];
-function expertiseController($rootScope, $stateParams, $state, $document, $translate, $filter, ExpertiseService, $scope, $rootScope) {
+expertiseController.$inject = ['$rootScope', '$stateParams', '$state', '$document', '$translate', '$filter', 'ExpertiseService'];
+function expertiseController($rootScope, $stateParams, $state, $document, $translate, $filter, ExpertiseService) {
   var vm = this,
       pageTitle,
       pageDesc,
