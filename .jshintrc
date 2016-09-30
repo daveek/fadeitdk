@@ -102,6 +102,7 @@
       "process": true,
       "WOW": true,
       "Prism": true,
+      "ngMessages": true,
       "vm": true,
       "Storage": true,
       "localStorageName": true,

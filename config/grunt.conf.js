@@ -39,7 +39,8 @@ module.exports = {
       './vendor/a0-angular-storage/dist/angular-storage.js',
       './vendor/hamsterjs/hamster.js',
       './vendor/angular-mousewheel/mousewheel.js',
-      './vendor/angular-animate/angular-animate.js'
+      './vendor/angular-animate/angular-animate.js',
+      './vendor/angular-messages/angular-messages.js'
     ],
     vendor_css: [
       //concatenated with 'assets' stylesheets in 'app.min.css'
@@ -70,7 +71,8 @@ module.exports = {
       './vendor/angular-translate/angular-translate.min.js',
       './vendor/angular-sanitize/angular-sanitize.min.js',
       './vendor/a0-angular-storage/dist/angular-storage.min.js',
-      './vendor/angular-animate/angular-animate.min.js'
+      './vendor/angular-animate/angular-animate.min.js',
+      './vendor/angular-messages/angular-messages.min.js'
     ],
     vendor_js: [
       //doesn't have a min files, will minify
