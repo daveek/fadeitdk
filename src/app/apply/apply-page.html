@@ -6,17 +6,17 @@
         <section class="col-xs-24 col-md-22 col-md-offset-1 col-lg-18 col-lg-offset-3 col-xl-14 col-xl-offset-5">
           <h1 class="regular-title" translate>APPLY_WELCOME</h1>
           <p class="regular-text" translate>
-            APPLY_TEXT_1
+          APPLY_TEXT_1
           </p>
 
           <h3 class="regular-title apply-space" translate>APPLY_HEADING_1</h3>
           <p class="regular-text" translate translate-value-toolbox="<a href='/toolbox'>{{'NAV_TOOLBOX' | translate}}</a>">
-            APPLY_TEXT_2
+          APPLY_TEXT_2
           </p>
 
           <h3 class="regular-title" translate>APPLY_HEADING_2</h3>
           <p class="regular-text" translate>
-            APPLY_TEXT_3
+          APPLY_TEXT_3
           </p>
         </section>
       </section>
@@ -29,7 +29,34 @@
         </section>
 
         <section id="formWrapper" ng-controller="ApplyController" class="col-xs-24 col-sm-24 col-md-12 col-md-offset-3 col-lg-10 col-xl-8 col-xl-offset-6">
-          Loading form...
+          <form id="application-form"><div><div class="form-group form-item">
+                <label for="edit-submitted-name">name <span class="form-required" title="This field is required.">*</span></label>
+                <input class="form-control form-text required" id="edit-submitted-name" ng-model="application.name" value="" size="60" maxlength="128" type="text">
+              </div>
+              <div class="form-group form-item">
+                <label for="edit-submitted-email">email <span class="form-required" title="This field is required.">*</span></label>
+                <input class="email form-control form-text form-email required" id="edit-submitted-email" ng-model="application.email" value="" size="60" type="email">
+              </div>
+              <div class="form-group form-item">
+                <label for="edit-submitted-education">education </label>
+                <input class="form-control form-text" id="edit-submitted-education" ng-model="application.education" value="" size="60" maxlength="128" type="text">
+              </div>
+              <div id="edit-submitted-cv-ajax-wrapper"><div class="form-group clearfix form-item">
+                  <label for="edit-submitted-cv-upload">CV </label>
+                  <div id="edit-submitted-cv" class="form-control form-managed-file">
+                    <input accept="application/pdf,text/html,text/plain" id="cv-upload" size="22" class="form-file" type="file">
+                  </div>
+                  <div class="description">Files must be less than <strong>10 MB</strong>.<br>Allowed file types: <strong>html pdf txt</strong>.</div>
+                </div>
+              </div><div class="form-group form-item">
+                <label for="edit-submitted-thoughts">message </label>
+                <div class="form-textarea-wrapper resizable"><textarea ng-model="application.message" value="" placeholder="Short introduction" class="form-control form-textarea" id="edit-submitted-thoughts" cols="60" rows="5"></textarea></div>
+              </div>
+              <div class="form-actions">
+                <input ng-click="apply(application)" class="webform-submit button-primary form-submit" value="Submit" type="submit">
+              </div>
+            </div>
+          </form>
         </section>
       </section>
 
