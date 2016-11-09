@@ -30,6 +30,16 @@
     }
   },
   {
+    "id": "vuejs-development",
+    "iconClass": "code",
+    "title": "Vue.js",
+    "description": "EXPERTISE_VUEJS_DEVELOPMENT",
+    "uisref": {
+      "da": "vuejs-udvikling",
+      "en": "vuejs-development"
+    }
+  },
+  {
     "id": "react-development",
     "iconClass": "connectdevelop",
     "title": "EXPERTISE_REACT_DEVELOPMENT_TITLE",
