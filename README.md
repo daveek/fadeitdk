@@ -1,10 +1,10 @@
 <a href="http:fadeit.dk"><img src="http://fadeit.dk/src/assets/img/brand/fadeit_logo_full.svg" alt="The fadeit logo" style="width:200px;"/></a><br/><br/>
-###fadeit.dk - website front-end source
+### fadeit.dk - website front-end source
 <hr/>
 
 The fadeit.dk website is built on top of [this AngularJS boilerplate](https://github.com/dandaniel/angular-boilerplate-study).
 
-##Getting started
+## Getting started
 
 Install `npm` and `bower` dependencies and run `grunt`, that's it. You are good to go.
 
@@ -22,7 +22,7 @@ When the app is ready for production, compile the app into `./application` by ru
 $ grunt compile
 ```
 
-###Build
+### Build
 The build task will do all the work for development and create files in -> `./build`
 
 ```
@@ -35,7 +35,7 @@ $ grunt dev
 ```
 
 
-###Compile
+### Compile
 The compile task will do all the work for production and create files in -> `./application`
 
 ```
@@ -47,7 +47,7 @@ You can use the following command to start the build http server (port 8009 defa
 $ grunt prod
 ```
 
-===================
-####About fadeit
+---------------------
+#### About fadeit
 We build awesome software, web and mobile applications.
 See more at [fadeit.dk](http://fadeit.dk)
